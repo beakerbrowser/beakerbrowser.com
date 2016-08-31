@@ -41,7 +41,10 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
 
   &.btn-primary {
     color: #fff;
-    background: #016fde;
+    background: linear-gradient(to bottom, #016fde, #0364c5);
+    &:hover {
+      background: #016fde;
+    }
   }
   &.btn-secondary {
   }
@@ -129,12 +132,25 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
   }
 
   .desc {
-    font-size: 20px;
-    line-height: 27px;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: 31px;
     text-align: justify;
-    color: #555;
-    margin: 0 160px;
+    color: #333;
+    margin: 0px 180px;
+
+    font-weight: 300;
+    strong {
+      font-weight: 400;
+    }
   }
+}
+
+.definition {
+  text-align: center;
+  background: #eee;
+  padding: 10px;
+  margin: 0 150px;
 }
 
 /*****************************************************************************/
