@@ -1,0 +1,249 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body { height: 100%; }
+body { color: #555; font-family: 'Roboto', sans-serif; font-weight: 300; font-size: 18px; }
+pre, code { font-family: Consolas, "Courier New", monospace; color: #5E5E5E; background: #f5f2f0; }
+
+h1 { margin-bottom: 1em; }
+p { margin: 1em 0; }
+ol, ul { margin: 1em 2.35em 1.5em }
+ul ul { margin-top: 0; margin-bottom: 0; }
+
+a { color: #016fde; text-decoration: none; }
+a:hover { color: #0D57B7; }
+
+blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
+
+.flex-spacer {
+  flex: 1;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid #016fde;
+  border-radius: 2px;
+  padding: 5px 10px;
+
+  &.btn-primary {
+    color: #fff;
+    background: #016fde;
+  }
+  &.btn-secondary {
+  }
+}
+
+
+.hero-btns {
+  margin: 2em 0;
+  font-size: 21px;
+  .btn {
+    width: 280px;
+    margin: 0 5px;
+    padding: 5px 0;
+  }
+}
+
+.orb {
+  display: inline-block;
+  background: #016fde;
+  border-radius: 35px;
+  width: 70px;
+  height: 70px;
+  font-size: 48px;
+  color: #fff;
+  text-align: center;
+  line-height: 68px;
+
+  .fa-share-alt {
+    font-size: 41px;
+    position: relative;
+    left: -1px;
+    top: 0px;
+  }
+  .fa-desktop {
+    font-size: 38px;
+    line-height: 74px;
+  }
+  .fa-database {
+    font-size: 38px;
+    position: relative;
+    left: 1px;
+    top: -1px;
+  }
+}
+
+/*****************************************************************************/
+/*
+/* Layout
+/*
+/*****************************************************************************/
+
+.site {
+}
+
+.home {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.section {
+  margin: 100px 0 140px;
+  text-align: center;
+
+  h3 {
+    color: #333;
+    font-size: 62px;
+    margin: 0 200px 30px;
+    font-weight: normal;
+  }
+
+  h4 {
+    color: #555;
+    font-size: 40px;
+    margin: 0 200px 30px;
+    font-weight: normal;
+  }
+
+  h5 {
+    font-size: 26px;
+  }
+
+  img.bordered {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+  }
+
+  .desc {
+    font-size: 20px;
+    line-height: 27px;
+    text-align: justify;
+    color: #555;
+    margin: 0 160px;
+  }
+}
+
+/*****************************************************************************/
+/*
+/* Header
+/*
+/*****************************************************************************/
+
+.header {
+  display: flex;
+  margin: 1em auto;
+  max-width: 960px;
+  height: 32px;
+
+  img {
+    vertical-align: bottom;
+  }
+  h1 {
+    font-weight: 100;
+    font-size: 21px;
+    margin: 0 0 0 4px;
+    line-height: 32px;
+  }
+  a {
+    line-height: 32px;
+    font-size: 16px;
+
+    &.nav-link {
+      margin-left: 2em;
+    }
+  }
+}
+
+/*****************************************************************************/
+/*
+/* Hero
+/*
+/*****************************************************************************/
+
+.hero-wrapper {
+  width: 960px;
+  padding: 4em 0 2em;
+
+  .hero {
+    text-align: center;
+    color: #333;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 78px;
+      font-weight: 100;
+      margin-bottom: 10px;
+    }
+
+    h3 {    
+      padding-bottom: 10px;
+      font-size: 45px;
+      font-weight: 100;
+      color: #555;
+    }
+  }
+
+  #hero-animated-bg {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+}
+
+/*****************************************************************************/
+/*
+/* APIs
+/*
+/*****************************************************************************/
+
+.apis {
+  position: relative;
+  display: flex;
+  margin: 0 160px;
+
+  &:before {
+    content: '';
+    border-top: 1px solid #555;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 100%;
+  }
+
+  .api {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    margin-bottom: 20px;    
+    z-index: 10;
+
+    .orb {
+      margin-bottom: 16px;
+      border: 5px solid #fff;
+      border-radius: 50px;
+    }
+  }
+}
+
+
+

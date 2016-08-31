@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+
+        <!-- social woo woo -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:creator" content="@pfrazee">
+        <meta name="twitter:title" content="{{ page.title }}">
+        <meta name="twitter:description" content="{{ page.desc }}">
+        {% if page.thumb %}
+          <meta name="twitter:image" content="{{ site.url }}/img/{{ page.thumb }}">
+        {% endif %}
+
+    </head>
+    <body class="layout-{{ page.layout }}">
+
+      <div class="site">
+        <div class="header">
+          <a href="/"><img src="/img/logo/32x32.png"></a>
+          <a href="/"><h1 class="title">{{ site.title }}</h1></a>
+          <div class="flex-spacer"></div>
+          <a class="nav-link" href="https://github.com/pfrazee/beaker">View on GitHub</a>
+          <a class="nav-link" href="/docs">Docs</a>
+          <a class="nav-link" href="/blog">Blog</a>
+          <a class="nav-link" href="/download">Download</a>
+        </div>
+
+        {{ content }}
+
+      </div>
+
+    </body>
+</html>
