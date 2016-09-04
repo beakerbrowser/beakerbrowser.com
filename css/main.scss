@@ -213,7 +213,7 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
     }
 
     h2 {
-      font-size: 68px;
+      font-size: 52px;
       font-weight: 100;
     }
 
@@ -263,4 +263,21 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
 }
 
 
+.mini-faq {
+  margin: 60px auto 80px;
+  max-width: 680px;
+
+  .mini-faq-row {
+    display: flex;
+    .mini-faq-col {
+      flex: 1;
+      padding: 16px;
+      margin: 5px;
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      font-size: 15px;
+      vertical-align: top;
+    }
+  }
+}
 
