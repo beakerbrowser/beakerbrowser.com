@@ -195,12 +195,36 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
 
 /*****************************************************************************/
 /*
+/* Footer
+/*
+/*****************************************************************************/
+
+.footer {
+  display: flex;
+  margin: 6em auto 1em;
+  padding-top: 1em;
+  max-width: 960px;
+  height: 32px;
+  border-top: 1px solid #3f9efd;
+
+  a {
+    line-height: 32px;
+    font-size: 16px;
+
+    &.nav-link {
+      margin-left: 2em;
+    }
+  }
+}
+
+/*****************************************************************************/
+/*
 /* Hero
 /*
 /*****************************************************************************/
 
 .hero-wrapper {
-  padding: 3em 0 4em;
+  padding: 4em 0 5em;
   border-bottom: 1px solid #bbb;
   margin-bottom: 2em;
 
