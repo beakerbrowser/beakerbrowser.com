@@ -51,6 +51,7 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
     }
   }
   &.btn-secondary {
+    background: #fff;
   }
 }
 
@@ -224,9 +225,11 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
 /*****************************************************************************/
 
 .hero-wrapper {
-  padding: 4em 0 5em;
+  padding: 4em 0;
   border-bottom: 1px solid #bbb;
+  border-top: 1px solid #bbb;
   margin-bottom: 2em;
+  background: #f5f5f5;
 
   .hero {
     text-align: center;
@@ -243,13 +246,14 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
     }
 
     h3 {
-      font-size: 30px;
+      font-size: 34px;
       font-weight: 100;
-      color: gray;
+      color: #777;
       line-height: 60px;
     }
   }
   .hero-btns {
+    margin-top: 20px;
   }
 }
 
