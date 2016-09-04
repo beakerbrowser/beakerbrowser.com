@@ -33,6 +33,10 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
   flex: 1;
 }
 
+.breakable {
+  word-break: break-all;
+}
+
 .btn {
   display: inline-block;
   border: 1px solid #016fde;
