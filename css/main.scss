@@ -200,8 +200,9 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
 /*****************************************************************************/
 
 .hero-wrapper {
-  width: 960px;
-  padding: 4em 0 0;
+  padding: 3em 0 4em;
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 2em;
 
   .hero {
     text-align: center;
@@ -223,6 +224,8 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
       color: gray;
       line-height: 60px;
     }
+  }
+  .hero-btns {
   }
 }
 
