@@ -4,4 +4,68 @@ order:    2
 category: Documentation
 ---
 
-todo
+Beaker's primary technology is the [Dat Protocol](http://dat-data.com), created by a [team of open-source engineers](http://dat-data.com/team) and funded with a grant by the Knight Foundation.
+Their mission is to improve the infrastructure of the Internet, and provide tools for sharing scientific data.
+
+Beaker also browses the [InterPlanetary FileSystem](https://ipfs.io), which you can read about in detail [here](https://github.com/ipfs/specs/tree/master/architecture).
+
+### Dat Protocol
+
+Dat is most easily described as "Git meets BitTorrent."
+It uses DNS and DHTs to connect users together, and a signed merkle-tree to distribute the data safely.
+The tree is abstracted to behave like a flat log of changes, providing a full version history of the files.
+
+When you browse to a `dat://` site, this is what happens:
+
+**Phase 1: Source discovery**
+
+First, Beaker asks discovery networks for sources that have a copy of the data you requested.
+It receives the IP and port of all the known data sources online. 
+Beaker can then connect to them and begin exchanging data.
+
+By introducing this discovery phase, Dat creates a network where data can be found, even if the original data source disappears.
+The discovery protocols that Dat uses are <a href="https://en.wikipedia.org/wiki/Name_server">DNS name servers</a>, <a href="https://en.wikipedia.org/wiki/Multicast_DNS">Multicast DNS</a> and the <a href="https://en.wikipedia.org/wiki/Mainline_DHT">Kademlia Mainline Distributed Hash Table</a> (DHT).
+Each one has pros and cons, so Dat combines all three to increase the speed and reliability of discovering data sources.
+
+The Dat-Project Team runs a <a href="https://www.npmjs.com/package/dns-discovery">custom DNS server</a> and a <a href="https://github.com/bittorrent/bootstrap-dht">DHT bootstrap</a> server that Beaker uses.
+These discovery servers are the only centralized infrastructure we need for Dat to work over the Internet, but they are redundant, interchangeable, never see the actual data being shared, and anyone can run their own.
+
+**Phase 2: Source connections**
+
+Now that Beaker knows who to talk to, it has to connect to them.
+The Dat network allows both <a href="https://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP</a> and <a href="https://en.wikipedia.org/wiki/Micro_Transport_Protocol">UTP</a> sockets for the actual peer to peer connections.
+UTP is nice because it is designed to <em>not</em> take up all available bandwidth on a network (e.g. so that other people sharing your wifi can still use the Internet).
+
+When Beaker gets the IP and port for a potential source, it tries to connect using all available protocols and hopes one works.
+If one connects first, Beaker aborts the other ones.
+If none connect, Beaker tries again until it decides that source is offline or unavailable to use and it stops trying to connect to them.
+
+If Beaker gets a lot of potential sources, it picks a handful at random and keeps the rest around as additional sources to use later, in case it decides it needs more sources.
+
+**Phase 3: Data exchange**
+
+So now Beaker has found data sources and connected to them.
+This is where the file transfer protocol <a href="https://www.npmjs.com/package/hyperdrive">Hyperdrive</a> comes in.
+The short version of how Hyperdrive works is: It breaks file contents up in to pieces, hashes each piece and then constructs a <a href="https://en.wikipedia.org/wiki/Merkle_tree">Merkle tree</a> out of all of the pieces.
+
+Here's the long version:
+
+Hyperdrive shares and synchronizes a set of files, similar to rsync or Dropbox.
+For each file it uses a technique called [Rabin fingerprinting](https://en.wikipedia.org/wiki/Rabin_fingerprint) to break the file up into pieces.
+The Dat Team has configured the Rabin chunker to produce chunks that are around 16KB on average.
+So if you share a site containing a single 1MB JPG you will get around 64 chunks.
+
+After feeding the file contents through the chunker, Hyperdrive takes the chunks and calculates the SHA256 hash of each one.
+It then arranges these hashes into a special data structure called the Flat In-Order Merkle Tree.
+
+When two peers connect to each other and begin speaking the Hyperdrive protocol they can efficiently determine if they have chunks the other one wants, and begin exchanging those chunks directly.
+Hyperdrive gives us the flexibility to have random access to any portion of a file while still verifying the other side isn't sending us bad data.
+Beaker can also download different sections of files in parallel across all of the sources simultaneously, which increases overall download speed dramatically.
+
+**Phase 4: Site archival**
+
+Beaker keeps the downloaded sites indefinitely<sup>&dagger;</sup>, and will serve them from disk on reload.
+That means you can open them offline.
+In the background, it continues to sync new changes from the network, to make sure you have the most recent version of the site.
+
+<sup>&dagger;</sup> In the future, a garbage collector will clean up the sites which haven't been explicitly saved by the user.

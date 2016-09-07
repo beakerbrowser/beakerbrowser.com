@@ -144,8 +144,11 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
     max-width: 670px;
 
     h2, h3, h4, p {
-      margin: 1.5em 0;
+      margin: 22.5px 0;
+      font-weight: normal;
     }
+    h2 { font-size: 2em; }
+    h3 { font-size: 1.5em; }
     h2:first-child {
       margin-top: 0;
     }
