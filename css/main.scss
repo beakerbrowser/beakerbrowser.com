@@ -18,6 +18,9 @@
 html, body { height: 100%; }
 body { color: #555; font-family: 'Roboto', sans-serif; font-weight: 300; font-size: 18px; }
 pre, code { font-family: Consolas, "Courier New", monospace; color: #5E5E5E; background: #f5f2f0; }
+pre { padding: 7px 12px; border: 1px solid #ddd; }
+code { padding: 0 2px; }
+hr { border: 0; border: 1px solid #eee; margin: 4em 0; }
 
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
@@ -109,6 +112,52 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
   margin: 0 auto;
 }
 
+.doc {
+  display: flex;
+  margin: 3em auto;
+  max-width: 960px;
+  min-height: 340px;
+
+  .doc-nav {
+    flex: 0 0 150px;
+    font-size: 15px;
+
+    .doc-nav-section {
+      margin-bottom: 1em;
+    }
+
+    p {
+      margin: 0 0 0.25em;
+    }
+    
+    a.current {
+      color: #555;
+
+      &:before {
+        content: '\0203A ';
+        margin-right: 5px;
+      }
+    }
+  }
+  .doc-body {
+    font-size: 15px;
+    max-width: 670px;
+
+    h2, h3, h4, p {
+      margin: 1.5em 0;
+    }
+    h2:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+/*****************************************************************************/
+/*
+/* Common Blocks
+/*
+/*****************************************************************************/
+
 .section {
   margin: 60px 0 80px;
   text-align: center;
@@ -160,6 +209,48 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
     .desc {
       text-align: center;
     }
+  }
+}
+
+.technical-explanation {
+  position: relative;
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  padding: 1em;
+  margin: 2em;
+  box-shadow: 0px 2px 2px rgba(0,0,0,.05);
+  color: gray;
+
+  &:before {
+    content: 'Tech In-depth';
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 6px 14px 5px;
+
+    font-size: 11px;
+    color: gray;
+    font-weight: bold;
+    background: #f5f2f0;
+  }
+
+  .icon {
+    flex: 0 0 45px;
+    padding: 20px 0 0 5px;
+    font-size: 32px;
+    color: #aaa;
+  }
+
+  .body > :last-child {
+    margin-bottom: 0 !important;
+  }
+
+  &.single-line .body {
+    padding-top: 8px;
   }
 }
 

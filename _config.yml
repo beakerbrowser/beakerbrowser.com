@@ -1,3 +1,4 @@
+# Site settings
 title: Beaker Browser
 email: pfrazee@gmail.com
 description:
@@ -9,3 +10,15 @@ github_username:  pfrazee
 # Build settings
 markdown: kramdown
 theme: minima
+
+# Site data
+collections:
+  docs:
+    output: true
+defaults:
+  -
+    scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "doc"

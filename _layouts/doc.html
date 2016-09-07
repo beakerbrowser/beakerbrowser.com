@@ -1,0 +1,16 @@
+---
+layout: default 
+---
+
+<div class="doc">
+  {% include docs-nav.html %}
+  <div class="doc-body">
+    <h2>{{ page.title }}</h2>
+    {{ content }}
+  </div>
+</div>
+
+<script src="/js/anchor.min.js"></script>
+<script>
+anchors.add('h3')
+</script>
