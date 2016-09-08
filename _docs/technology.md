@@ -12,7 +12,7 @@ Beaker also browses the [IPFS Network](https://ipfs.io), which you can read abou
 
 <hr>
 
-<h3>Dat Protocol <small>Advanced Documentation</small></h3>
+<h3>Dat Protocol</h3>
 
 Dat is most easily described as "Git meets BitTorrent."
 It uses DNS and DHTs to connect users together, and a signed merkle-tree to distribute the data safely.

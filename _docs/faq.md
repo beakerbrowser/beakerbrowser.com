@@ -15,7 +15,7 @@ dat://54f74fe89d7779946343ec6db9618631e4dbf43bece2a125d0099103741963c9/
 They work just like regular URLs, except that the 'hostname' is a 64-character hex number.
 You can reference specific files by putting the path at the end.
 
-<div class="technical-explanation">
+<div class="technical-explanation" data-title="Tech In-depth">
   <div class="icon"><span class="fa fa-info-circle"></span></div>
   <div class="body">
     <p>
@@ -26,7 +26,7 @@ You can reference specific files by putting the path at the end.
   </div>
 </div>
 
-<hr>
+---
 
 ### Can I use DNS to create short URLs?
 
@@ -35,7 +35,7 @@ We'll need to integrate DNSSEC or TLS certificates before it's safe to use.
 
 If you are curious, see <a href="dat://hostless.website">dat://hostless.website</a> for a working example. Run `dig txt hostless.website` to see the records behind it.
 
-<hr>
+---
 
 ### Is the network anonymous?
 
@@ -44,7 +44,7 @@ This is very important to understand:
 If any other user has the link to a P2P site, they'll be able to see your requests for it, and they'll know your IP.
 Browsing P2P sites is therefore not anonymous.
 
-<div class="technical-explanation single-line">
+<div class="technical-explanation single-line" data-title="Beware!">
   <div class="icon"><span class="fa fa-exclamation-triangle"></span></div>
   <div class="body">
     <p>Browsing P2P Sites is <strong>not anonymous</strong>.</p>
@@ -68,7 +68,47 @@ Unlike regular websites, web pages on P2P sites are not allowed to access the ne
 That means they can't leak personal information, such as your contact-list, photos, messages, or documents.
 Other users know you're there, but they won't know what data you put into the page.
 
-<hr>
+---
+
+### Is the Hyperdrive Protocol encrypted?
+
+Yes, the connection is encrypted.
+The files are not encrypted, but you can encrypt them with another tool prior to creating the site.
+
+---
+
+### How does a P2P site differ from a normal site?
+
+Other than the diference in protocols, P2P sites are more tightly "sandboxed."
+They are not allowed to access the network at all.
+That means you can't embed YouTube videos, use Google Analytics, or make Ajax requests home.
+This is to protect the privacy of users.
+
+Over time, we'll add features for P2P sites to request extra privileges.
+Right now, your site will just need to be self-contained.
+
+---
+
+### Who is allowed to change a P2P site?
+
+When a site is created, a "keypair" is generated
+The first key, called the "private" key, gives you the power to change the site.
+Beaker keeps that secret inside a database, on your device.
+The second key, called the "public" key, gives other users the power to find and download the site.
+The public key is used to create the site's URL.
+
+Only the user with the private key can change the site.
+If the private key is lost, the site can never be changed.
+
+<div class="technical-explanation" data-title="Beware!">
+  <div class="icon"><span class="fa fa-exclamation-triangle"></span></div>
+  <div class="body">
+    <p>Don't try to copy the private key onto multiple devices, except as a backup precaution.
+    The Dat protocol doesn't yet have a way to handle conflicting updates, which might happen if you make changes from 2 devices.</p>
+  </div>
+</div>
+
+---
 
 ### Why P2P instead of Client/Server?
 
@@ -94,14 +134,21 @@ With the Hyperdrive protocol, you can run a site from your laptop, and scale up 
 Peer-to-Peer makes computing resources fungible, by eliminating the hard-dependencies on specific computers.
 And, it makes setup easy by cutting down on the amount of configuration involved.
 
-<hr>
+---
 
 ### Can I browse regular HTTP/S sites?
 
 Yes, Beaker browses the normal Web.
 It doesn't make any changes to Web platform, except for its added Peer-to-Peer features.
 
-<hr>
+---
+
+### Will P2P ever be adopted by other browsers?
+
+We have no idea, but our mission is to reach as many people as possible.
+We'll work with standards bodies to make that happen.
+
+---
 
 ### Is Beaker built entirely from scratch?
 

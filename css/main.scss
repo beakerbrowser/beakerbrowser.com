@@ -17,7 +17,7 @@
 
 html, body { height: 100%; }
 body { color: #555; font-family: 'Roboto', sans-serif; font-weight: 300; font-size: 18px; }
-pre, code { font-family: Consolas, "Courier New", monospace; color: #5E5E5E; background: #f5f2f0; }
+pre, code { font-family: Consolas, "Courier New", monospace; color: #5E5E5E; background: #f5f2f0; white-space: pre-wrap }
 pre { padding: 7px 12px; border: 1px solid #ddd; }
 code { padding: 0 2px; }
 hr { border: 0; border: 1px solid #eee; margin: 4em 0; }
@@ -140,11 +140,14 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
     }
   }
   .doc-body {
-    font-size: 15px;
-    max-width: 670px;
+    font-size: 16px;
+    max-width: 720px;
 
     h2, h3, h4, p {
       margin: 22.5px 0;
+    }
+    p {
+      line-height: 1.4;
     }
     li {
       margin: 0 0 1em;
@@ -226,15 +229,14 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
 .technical-explanation {
   position: relative;
   display: flex;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   border-radius: 2px;
   padding: 1em;
   margin: 2em;
   box-shadow: 0px 2px 2px rgba(0,0,0,.05);
-  color: gray;
 
   &:before {
-    content: 'Tech In-depth';
+    content: attr(data-title);
     display: block;
     box-sizing: border-box;
     position: absolute;
@@ -263,6 +265,11 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
   &.single-line .body {
     padding-top: 8px;
   }
+}
+
+.doc-gif {
+  width: 500px;
+  border: 1px solid #555;
 }
 
 /*****************************************************************************/
