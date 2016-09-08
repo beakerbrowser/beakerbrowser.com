@@ -5,15 +5,18 @@ category: Documentation
 ---
 
 Beaker's primary technology is the [Dat Protocol](http://dat-data.com), created by a [team of open-source engineers](http://dat-data.com/team) and funded with a grant by the Knight Foundation.
-Their mission is to improve the infrastructure of the Internet, and provide tools for sharing scientific data.
+Their mission is to provide the infrastructure and tools to share data, with a special focus on the sciences.
+[Read more at their website](http://dat-data.com).
 
-Beaker also browses the [InterPlanetary FileSystem](https://ipfs.io), which you can read about in detail [here](https://github.com/ipfs/specs/tree/master/architecture).
+Beaker also browses the [IPFS Network](https://ipfs.io), which you can read about in detail [here](https://github.com/ipfs/specs/tree/master/architecture).
 
-### Dat Protocol
+<hr>
+
+<h3>Dat Protocol <small>Advanced Documentation</small></h3>
 
 Dat is most easily described as "Git meets BitTorrent."
 It uses DNS and DHTs to connect users together, and a signed merkle-tree to distribute the data safely.
-The tree is abstracted to behave like a flat log of changes, providing a full version history of the files.
+The merkle-tree is abstracted to behave like a flat log of changes, providing a full version history of the files.
 
 When you browse to a `dat://` site, this is what happens:
 

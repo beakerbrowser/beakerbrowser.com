@@ -145,12 +145,20 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
 
     h2, h3, h4, p {
       margin: 22.5px 0;
-      font-weight: normal;
     }
-    h2 { font-size: 2em; }
-    h3 { font-size: 1.5em; }
+    li {
+      margin: 0 0 1em;
+    }
+    ol, ul {
+    }
+    h2 { font-size: 2em; font-weight: normal; }
+    h3 { font-size: 1.5em; font-weight: normal; }
     h2:first-child {
       margin-top: 0;
+    }
+    h3 small {
+      font-size: 0.5em;
+      font-weight: bold;
     }
   }
 }
