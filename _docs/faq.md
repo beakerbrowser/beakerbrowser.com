@@ -30,10 +30,14 @@ You can reference specific files by putting the path at the end.
 
 ### Can I use DNS to create short URLs?
 
-There is experimental DNS support in development, but it's not secure &mdash; so we don't recommend you use it.
-We'll need to integrate DNSSEC or TLS certificates before it's safe to use.
+Yes!
+You can [read the guide here](/docs/p2p/dns.html). 
 
-If you are curious, see <a href="dat://hostless.website">dat://hostless.website</a> for a working example. Run `dig txt hostless.website` to see the records behind it.
+This is experimental support, and it's not secure yet.
+Until we've integrated DNSSEC or TLS certificates, or something similar, it will be possible to [Man in the Middle attack](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) your DNS lookup.
+
+If you are curious, see <a href="dat://hostless.website">dat://hostless.website</a> for a working example.
+Run `dig txt hostless.website` to see the records behind it.
 
 ---
 
