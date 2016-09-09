@@ -27,6 +27,8 @@ h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 ol, ul { margin: 1em 2.35em 1.5em }
 ul ul { margin-top: 0; margin-bottom: 0; }
+ul li { margin-bottom: 5px }
+ul.spaced li { margin-bottom: 1em; }
 
 a { color: #016fde; text-decoration: none; }
 a:hover { color: #0D57B7; }
