@@ -17,10 +17,11 @@
 
 html, body { height: 100%; }
 body { color: #555; font-family: 'Roboto', sans-serif; font-weight: 300; font-size: 18px; }
-pre, code { font-family: Consolas, "Courier New", monospace; color: #5E5E5E; background: #f5f2f0; white-space: pre-wrap }
+pre, code { font-family: Consolas, "Courier New", monospace; color: #5E5E5E; background: #f5f2f0; white-space: pre-wrap; word-break: break-all }
 pre { padding: 7px 12px; border: 1px solid #ddd; }
 code { padding: 0 2px; }
 hr { border: 0; border: 1px solid #eee; margin: 4em 0; }
+img { max-width: 100% }
 
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
@@ -110,11 +111,13 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
 .home {
   max-width: 960px;
   margin: 0 auto;
+  padding: 0 25px;
 }
 
 .doc {
   display: flex;
   margin: 3em auto;
+  padding: 0 25px;
   max-width: 960px;
   min-height: 340px;
 
@@ -161,6 +164,23 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
   }
 }
 
+@media(max-width: 740px) {
+  .doc {
+    display: block;
+    .doc-nav {
+      display: flex;
+      .doc-nav-section {
+        padding: 0 20px;
+        .doc-link {
+          display: inline-block;
+          padding: 10px;
+          background: #eee;
+        }
+      }
+    }
+  }
+}
+
 /*****************************************************************************/
 /*
 /* Common Blocks
@@ -200,7 +220,8 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
     line-height: 31px;
     text-align: justify;
     color: #333;
-    margin: 0px 180px;
+    margin: 0px auto;
+    max-width: 600px;
 
     font-weight: 300;
     strong {
@@ -217,6 +238,14 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
   &.center {
     .desc {
       text-align: center;
+    }
+  }
+}
+
+@media(max-width: 740px) {
+  .section {
+    .desc {
+      margin: 0 10%;
     }
   }
 }
@@ -263,7 +292,8 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
 }
 
 .doc-gif {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   border: 1px solid #555;
 }
 
@@ -276,6 +306,7 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
 .header {
   display: flex;
   margin: 1em auto;
+  padding: 0 25px;
   max-width: 960px;
   height: 32px;
 

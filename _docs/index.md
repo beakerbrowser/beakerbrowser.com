@@ -11,3 +11,4 @@ Understanding how Hyperdrive works will help you get the most out of it, so we'v
  - [Add Webpages](/docs/p2p/add-webpages.html). Like any good Website, you can add HTML/JS/CSS to create customized experiences.
  - [Share Secretly](/docs/p2p/share-secretly.html). Hyperdrive uses encryption to keep each site secret. This makes it great for personal sharing, but you should also understand that the [network is not anonymous](/docs/faq.html#is-the-network-anonymous).
  - [Additional Tools](/docs/p2p/additional-tools.html). You can view and copy the files of any Hyperdrive site. You can also save other peoples' sites, and "seed" (that is, rehost) them.
+ - [Use DNS](/docs/p2p/dns.html). You can use DNS to give your Hyperdrive site a nice, human-readable name. This has the added benefit of making a Hyperdrive site reconfigurable.
