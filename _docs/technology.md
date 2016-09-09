@@ -4,7 +4,7 @@ order:    2
 category: Documentation
 ---
 
-Beaker's primary technology is the [Dat Protocol](http://dat-data.com), created by a [team of open-source engineers](http://dat-data.com/team) and funded with a grant by the Knight Foundation.
+Beaker's primary technology is the [Hyperdrive Protocol](https://github.com/datproject/docs/blob/master/docs/hyperdrive_spec.md), created by the [Dat Project's team of open-source engineers](http://dat-data.com/team) and funded with a grant by the Knight Foundation.
 Their mission is to provide the infrastructure and tools to share data, with a special focus on the sciences.
 [Read more at their website](http://dat-data.com).
 
@@ -12,12 +12,20 @@ Beaker also browses the [IPFS Network](https://ipfs.io), which you can read abou
 
 <hr>
 
-<h3>Dat Protocol</h3>
+<h3>Hyperdrive Protocol</h3>
 
-Dat is most easily described as "Git meets BitTorrent."
+Hyperdrive is most easily described as "Git meets BitTorrent."
 It uses DNS and DHTs to connect users together, and a signed merkle-tree to distribute the data safely.
 The merkle-tree is abstracted to behave like a flat log of changes, providing a full version history of the files.
 
+**Summary**
+
+ - A Hyperdrive "archive" behaves like a self-contained folder of files.
+ - The archive is addressed by a public key, and all updates are signed. The files are referenced by content-hash. This ensures all users receive the same data, regardless of the source.
+ - The full history of changes is retained in the "metadata feed." The history is append-only, and can not be modified after it's distributed.
+ - As in BitTorrent, multiple peers can be used simultaneously to download data. Hyperdrive deduplicates data to make syncing as efficient as possible.
+
+Because Hyperdrive was built for the [Dat Project](http://dat-data.com), its links start with `dat://`.
 When you browse to a `dat://` site, this is what happens:
 
 **Phase 1: Source discovery**
@@ -26,17 +34,17 @@ First, Beaker asks discovery networks for sources that have a copy of the data y
 It receives the IP and port of all the known data sources online. 
 Beaker can then connect to them and begin exchanging data.
 
-By introducing this discovery phase, Dat creates a network where data can be found, even if the original data source disappears.
-The discovery protocols that Dat uses are <a href="https://en.wikipedia.org/wiki/Name_server">DNS name servers</a>, <a href="https://en.wikipedia.org/wiki/Multicast_DNS">Multicast DNS</a> and the <a href="https://en.wikipedia.org/wiki/Mainline_DHT">Kademlia Mainline Distributed Hash Table</a> (DHT).
-Each one has pros and cons, so Dat combines all three to increase the speed and reliability of discovering data sources.
+By introducing this discovery phase, we create a network where data can be found, even if the original data source disappears.
+The discovery protocols that Beaker uses are <a href="https://en.wikipedia.org/wiki/Name_server">DNS name servers</a>, <a href="https://en.wikipedia.org/wiki/Multicast_DNS">Multicast DNS</a> and the <a href="https://en.wikipedia.org/wiki/Mainline_DHT">Kademlia Mainline Distributed Hash Table</a> (DHT).
+Each one has pros and cons, so we combine all three to increase the speed and reliability of discovering data sources.
 
 The Dat-Project Team runs a <a href="https://www.npmjs.com/package/dns-discovery">custom DNS server</a> and a <a href="https://github.com/bittorrent/bootstrap-dht">DHT bootstrap</a> server that Beaker uses.
-These discovery servers are the only centralized infrastructure we need for Dat to work over the Internet, but they are redundant, interchangeable, never see the actual data being shared, and anyone can run their own.
+These discovery servers are the only centralized infrastructure we need, but they are redundant, interchangeable, never see the actual data being shared, and anyone can run their own.
 
 **Phase 2: Source connections**
 
 Now that Beaker knows who to talk to, it has to connect to them.
-The Dat network allows both <a href="https://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP</a> and <a href="https://en.wikipedia.org/wiki/Micro_Transport_Protocol">UTP</a> sockets for the actual peer to peer connections.
+We support both <a href="https://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP</a> and <a href="https://en.wikipedia.org/wiki/Micro_Transport_Protocol">UTP</a> sockets for the actual peer to peer connections.
 UTP is nice because it is designed to <em>not</em> take up all available bandwidth on a network (e.g. so that other people sharing your wifi can still use the Internet).
 
 When Beaker gets the IP and port for a potential source, it tries to connect using all available protocols and hopes one works.
@@ -48,7 +56,7 @@ If Beaker gets a lot of potential sources, it picks a handful at random and keep
 **Phase 3: Data exchange**
 
 So now Beaker has found data sources and connected to them.
-This is where the file transfer protocol <a href="https://www.npmjs.com/package/hyperdrive">Hyperdrive</a> comes in.
+This is where Hyperdrive comes in.
 The short version of how Hyperdrive works is: It breaks file contents up in to pieces, hashes each piece and then constructs a <a href="https://en.wikipedia.org/wiki/Merkle_tree">Merkle tree</a> out of all of the pieces.
 
 Here's the long version:

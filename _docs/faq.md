@@ -104,7 +104,7 @@ If the private key is lost, the site can never be changed.
   <div class="icon"><span class="fa fa-exclamation-triangle"></span></div>
   <div class="body">
     <p>Don't try to copy the private key onto multiple devices, except as a backup precaution.
-    The Dat protocol doesn't yet have a way to handle conflicting updates, which might happen if you make changes from 2 devices.</p>
+    The Hyperdrive protocol doesn't yet have a way to handle conflicting updates, which might happen if you make changes from 2 devices.</p>
   </div>
 </div>
 
