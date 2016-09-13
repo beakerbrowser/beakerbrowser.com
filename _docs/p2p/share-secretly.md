@@ -5,8 +5,8 @@ order:    3
 ---
 
 Sites shared with the Hyperdrive protocol are, by default, secret.
-Their URLs are unguessable keys which are used to encrypt the peer-to-peer traffic, including during the "discovery phase."
-This means, if you only share the URL with your target recipients, then nobody else will have access to the files, or know what you are transferring.
+Their URLs are unguessable keys which are used to encrypt the peer-to-peer traffic.
+This means, if you only share the URL with your friends, then nobody else will have access to the files, or know what you are transferring.
 
 ---
 
