@@ -11,6 +11,11 @@ github_username:  pfrazee
 markdown: kramdown
 theme: minima
 
+# Sass
+sass:
+  style: :compressed
+  sass_dir: css
+
 # Site data
 collections:
   docs:
