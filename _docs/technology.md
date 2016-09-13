@@ -4,8 +4,7 @@ order:    2
 category: Documentation
 ---
 
-Beaker's primary technology is the [Hyperdrive Protocol](https://github.com/datproject/docs/blob/master/docs/hyperdrive_spec.md), created by the [Dat Project's team of open-source engineers](http://dat-data.com/team) and funded with a grant by the Knight Foundation.
-Their mission is to provide the infrastructure and tools to share data, with a special focus on the sciences.
+Beaker's primary technology is the [Hyperdrive Protocol](https://github.com/datproject/docs/blob/master/docs/hyperdrive_spec.md), created by the [Dat Project](http://dat-data.com) and funded with a grant by the Knight Foundation.
 [Read more at their website](http://dat-data.com).
 
 Beaker also browses the [IPFS Network](https://ipfs.io), which you can read about in detail [here](https://github.com/ipfs/specs/tree/master/architecture).
@@ -15,14 +14,13 @@ Beaker also browses the [IPFS Network](https://ipfs.io), which you can read abou
 <h3>Hyperdrive Protocol</h3>
 
 Hyperdrive is most easily described as "Git meets BitTorrent."
-It uses DNS and DHTs to connect users together, and a signed merkle-tree to distribute the data safely.
-The merkle-tree is abstracted to behave like a flat log of changes, providing a full version history of the files.
+It connects users in a P2P system, and distributes archives and their change-histories.
 
 **Summary**
 
  - A Hyperdrive "archive" behaves like a self-contained folder of files.
  - The archive is addressed by a public key, and all updates are signed. The files are referenced by content-hash. This ensures all users receive the same data, regardless of the source.
- - The full history of changes is retained in the "metadata feed." The history is append-only, and can not be modified after it's distributed.
+ - The full history of changes is retained in a metadata log. This can be used by peers to lookup specific versions of a file. The log is append-only, and can not be modified after it's distributed.
  - As in BitTorrent, multiple peers can be used simultaneously to download data. Hyperdrive deduplicates data to make syncing as efficient as possible.
 
 Because Hyperdrive was built for the [Dat Project](http://dat-data.com), its links start with `dat://`.

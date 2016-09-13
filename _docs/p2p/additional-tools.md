@@ -20,12 +20,11 @@ You can save any P2P site to "Your Sites."
 
 ---
 
-### Open Folder
+### Export Zip
 
-You can view the downloaded files for a site by clicking the "Open Folder" button.
-Don't edit or delete those files directly: it's best just to copy them, and leave the originals alone.
+You can export the downloaded files for a site by clicking the "Export Zip" button.
 
-<img class="doc-gif" title="Open folder" src="/img/docs/open-folder.gif">
+<img class="doc-gif" title="Export zip" src="/img/docs/export-zip.gif">
 
 ---
 

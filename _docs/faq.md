@@ -76,20 +76,29 @@ Other users know you're there, but they won't know what data you put into the pa
 
 ### Is the Hyperdrive Protocol encrypted?
 
-Yes, the connection is encrypted.
-The files are not encrypted, but you can encrypt them with another tool prior to creating the site.
+Yes, like in HTTPS, the connection is encrypted.
 
 ---
 
 ### How does a P2P site differ from a normal site?
 
 Other than the diference in protocols, P2P sites are more tightly "sandboxed."
-They are not allowed to access the network at all.
+They are not allowed to access the network directly.
 That means you can't embed YouTube videos, use Google Analytics, or make Ajax requests home.
 This is to protect the privacy of users.
 
 Over time, we'll add features for P2P sites to request extra privileges.
 Right now, your site will just need to be self-contained.
+
+---
+
+### Does the P2P network automatically host my content?
+
+No, there is no magic hosting.
+To make sure your files are available, you need to make sure a computer is sharing them.
+
+"Public Peer" services should be available soon.
+They will allow you to "push" your sites to them, ensuring their availability.
 
 ---
 
