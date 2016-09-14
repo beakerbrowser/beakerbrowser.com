@@ -94,11 +94,19 @@ Right now, your site will just need to be self-contained.
 
 ### Does the P2P network automatically host my content?
 
-No, there is no magic hosting.
-To make sure your files are available, you need to make sure a computer is sharing them.
+No, there is no automatic hosting.
+To make sure your files are available, you need to have a computer share them.
 
 "Public Peer" services should be available soon.
 They will allow you to "push" your sites to them, ensuring their availability.
+
+---
+
+### Do I automatically host sites that I've visited or downloaded?
+
+No.
+Unlike many P2P networks, Beaker does not automatically upload the files you've downloaded.
+If you want to "seed" a site (that is, host its files), you can [view the site files](/docs/p2p/additional-tools.html#view-files-button) and then [click the seed button](/docs/p2p/additional-tools.html#seed-site).
 
 ---
 
