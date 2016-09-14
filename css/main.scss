@@ -60,8 +60,28 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
   &.btn-secondary {
     background: #fff;
   }
+
+  &.btn-block {
+    display: inline-block;
+    margin: 3px 2px;
+    padding: 8px 16px 6px 12px;
+    border-color: #999;
+
+    .fa {
+      width: 20px;
+      text-align: center;
+      padding-right: 2px;
+    }
+  }
 }
 
+@media(max-width: 740px) {
+  .btn.btn-block {
+    margin: 16px;
+    width: auto;
+    display: block;
+  }
+}
 
 .hero-btns {
   margin: 30px 0;
@@ -125,7 +145,7 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
   min-height: 340px;
 
   .doc-nav {
-    flex: 0 0 150px;
+    flex: 0 0 160px;
     font-size: 15px;
 
     .doc-nav-section {

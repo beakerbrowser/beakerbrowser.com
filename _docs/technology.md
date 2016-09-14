@@ -14,14 +14,14 @@ Beaker also browses the [IPFS Network](https://ipfs.io), which you can read abou
 <h3>Hyperdrive Protocol</h3>
 
 Hyperdrive is most easily described as "Git meets BitTorrent."
-It connects users in a P2P system, and distributes archives and their change-histories.
+It connects users in a P2P system, and distributes archives with their change-logs.
 
 **Summary**
 
  - A Hyperdrive "archive" behaves like a self-contained folder of files.
- - The archive is addressed by a public key, and all updates are signed. The files are referenced by content-hash. This ensures all users receive the same data, regardless of the source.
- - The full history of changes is retained in a metadata log. This can be used by peers to lookup specific versions of a file. The log is append-only, and can not be modified after it's distributed.
- - As in BitTorrent, multiple peers can be used simultaneously to download data. Hyperdrive deduplicates data to make syncing as efficient as possible.
+ - The archive is addressed by a public key. All updates are signed, and the files are referenced by content-hash. This ensures all users receive the same data, regardless of the source.
+ - The full history of changes is retained in a metadata log. This can be used by peers to lookup specific versions of a file. The log is append-only, and can not be modified after it has been distributed.
+ - As in BitTorrent, multiple peers can be used simultaneously to download data. Users connect to "discovery networks" to look up peers with the files they need. Hyperdrive deduplicates data to make syncing as efficient as possible.
 
 Because Hyperdrive was built for the [Dat Project](http://dat-data.com), its links start with `dat://`.
 When you browse to a `dat://` site, this is what happens:

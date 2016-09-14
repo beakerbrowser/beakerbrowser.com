@@ -1,6 +1,6 @@
 ---
-title:    CLI Tools
-category: Advanced
+title:    Command Line
+category: Dev Tools
 order:    1
 ---
 

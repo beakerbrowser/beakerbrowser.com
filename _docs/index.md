@@ -4,13 +4,19 @@ order:    1
 category: Documentation
 ---
 
-Beaker browses with ["Hyperdrive,"](/docs/technology.html) a peer-to-peer protocol that combines concepts from [Git](https://en.wikipedia.org/wiki/Git_(software)) and [BitTorrent](https://en.wikipedia.org/wiki/BitTorrent) to let users share websites without servers.
-Understanding how Hyperdrive works will help you get the most out of it, so we've created a quick guide to get you started:
+Understanding how Beaker works will help you get the most out of it, so we've created a quick guide to get you started:
 
-<ul class="spaced">
- <li><a href="/docs/p2p/create-a-site.html">Create a Site</a>. You can host files directly from your browser, using a convenient drag &amp; drop interface. Power users can also take advantage of the <a href="/docs/advanced/cli-tools.html">command-line tools</a>.
- <li><a href="/docs/p2p/add-webpages.html">Add Webpages</a>. Like any good Website, you can add HTML/JS/CSS to create customized experiences.
- <li><a href="/docs/p2p/share-secretly.html">Share Secretly</a>. Hyperdrive uses encryption to keep each site secret. This makes it great for personal sharing, but you should also understand that the <a href="/docs/faq.html#is-the-network-anonymous">network is not anonymous</a>.
- <li><a href="/docs/p2p/additional-tools.html">Additional Tools</a>. You can view and copy the files of any Hyperdrive site. You can also save other peoples' sites, and "seed" (that is, rehost) them.
- <li><a href="/docs/p2p/dns.html">Use DNS</a>. You can use DNS to give your Hyperdrive site a nice, human-readable name. This has the added benefit of making a Hyperdrive site reconfigurable.
-</ul>
+<a class="btn btn-block" href="/docs/p2p/share-files.html"><i class="fa fa-share-alt" aria-hidden="true"></i> Share Files</a>
+<a class="btn btn-block" href="/docs/p2p/create-a-website.html"><i class="fa fa-file-code-o" aria-hidden="true"></i> Create a Website</a>
+<a class="btn btn-block" href="/docs/p2p/confidential-sharing.html"><i class="fa fa-shield" aria-hidden="true"></i> Confidential Sharing</a>
+<a class="btn btn-block" href="/docs/p2p/export-to-zip.html"><i class="fa fa-file-archive-o" aria-hidden="true"></i> Export Site to .Zip</a>
+
+#### Developer Tools
+
+<a class="btn btn-block" href="/docs/devtools/cli.html"><i class="fa fa-terminal" aria-hidden="true"></i> Command Line Tools</a>
+<a class="btn btn-block" href="/docs/devtools/dns.html"><i class="fa fa-globe" aria-hidden="true"></i> Domain Names</a>
+
+#### Documentation
+
+<a class="btn btn-block" href="/docs/technology.html"><i class="fa fa-info-circle" aria-hidden="true"></i> About the Technology</a>
+<a class="btn btn-block" href="/docs/faq.html"><i class="fa fa-question-circle" aria-hidden="true"></i> Frequently Asked Questions</a>
