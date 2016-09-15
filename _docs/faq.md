@@ -59,7 +59,7 @@ This is a natural characteristic of a P2P network; because there is no individua
 
 This isn't ideal, but it's not all bad. There are some things which make the situation better:
 
-**1. Only users on the site can see you.**
+**1. Only users who possess the URL can see you.**
 
 Network traffic is encrypted using the site's URLs.
 Only users that possess the URL can track requests for it, which means you can share sites privately by keeping the URL secret.

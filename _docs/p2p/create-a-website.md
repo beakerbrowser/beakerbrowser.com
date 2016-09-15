@@ -5,8 +5,6 @@ order:    2
 ---
 
 Just like [sharing files](./share-files.html), you can host a Website directly from Beaker.
-In fact, it's the exact same toolset!
-The difference is, in a Website, you add HTML, CSS, and Javascript.
 
 ### Step 1. Create a New Site
 
