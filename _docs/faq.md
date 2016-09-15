@@ -133,27 +133,45 @@ If the private key is lost, the site can never be changed.
 
 ### Why P2P instead of Client/Server?
 
-Beaker launched with Peer-to-Peer sites, and we're going to keep expanding until almost every server can be replaced with a protocol.
+Beaker launched with Peer-to-Peer sites, and we're going to keep expanding until almost every Web silo can be replaced with a protocol.
 Here's why:
 
 **Creative Freedom**
 
-P2P sites are free and easy to create.
-They have no gatekeepers, since anyone can host from home.
-They're also user-modifiable: it's easy to copy the files and rewrite features to fit your needs.
-With more free and open tools, we can lower the barrier to creating new software.
+P2P sites are costless and quick to create, and they can be pushed up to a cloud server without ceding any control over the content. 
+That will change the way we publish content: instead of posting to somebody else's .com, a creator can just make their own site.
+With a mature platform, we'll be able to create decentralized networks that work as well as YouTube or Spotify, but doesn't sacrifice publishers' independence.
+
+**"Forkability"** 
+
+Peer-to-peer sites are self-contained bundles of files, that depend on the browser's Web APIs instead of a hard-wired server.
+That makes it easy to copy the files and rewrite the software to fit your needs.
 
 **Data-Security**
 
 Servers make valuable hacking targets, and allow businesses to sell personal information to advertisers.
-With Peer-to-Peer, we stop depending on centralized cloud services.
-User-data is stored on-device and synced directly, and safely, between users.
+In a Peer-to-Peer system, the user data is stored on-device and synced directly between users.
 
 **Convenience**
 
 With the Hyperdrive protocol, you can run a site from your laptop, and scale up your resources by adding new devices to the swarm.
 Peer-to-Peer makes computing resources fungible, by eliminating the hard-dependencies on specific computers.
 And, it makes setup easy by cutting down on the amount of configuration involved.
+
+---
+
+### Why Hyperdrive instead of IPFS?
+
+Beaker currently supports IPFS, but only as a secondary protocol.
+This is due to some technical advantages that Hyperdrive currently holds over IPFS.
+
+Hyperdrives advantages are:
+
+ - It retains a complete change-history in its metadata log, which allows file-versioning, similar to Git. IPFS' mutable archives don't retain a changelog.
+ - Encryption features which enable confidential sharing. IPFS does not currently support this feature.
+ - A more conventional URL spec. Hyperdrive URLs retain the standard format, while IPFS breaks from the standard.
+
+Both protocols are powerful tools, and we'll update our support as they mature.
 
 ---
 
@@ -174,3 +192,9 @@ We'll work with standards bodies to make that happen.
 ### Is Beaker built entirely from scratch?
 
 No, it's a fork of the Chrome browser.
+
+---
+
+### Who is behind Beaker?
+
+Beaker was created by [Paul Frazee](https://twitter.com/pfrazee) using technology by [The Dat Project](http://dat-data.com), GitHub's [Electron](http://electron.atom.io/), and many others.
