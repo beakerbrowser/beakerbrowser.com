@@ -352,6 +352,23 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
   }
 }
 
+@media(max-width: 735px) {
+  .header .title {
+    display: none;
+  }
+}
+
+@media(max-width: 590px) {
+  .header {
+    .nav-link {
+      font-size: 24px;
+    }
+    .hidable {
+      display: none;
+    }
+  }
+}
+
 /*****************************************************************************/
 /*
 /* Footer
