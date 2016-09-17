@@ -4,7 +4,7 @@ category: Peer-to-Peer
 order:    2
 ---
 
-Just like [sharing files](./share-files.html), you can host a Website directly from Beaker.
+Just like [sharing files](/docs/p2p/share-files.html), you can host a Website directly from Beaker.
 
 ### Step 1. Create a New Site
 

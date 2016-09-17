@@ -31,7 +31,7 @@ You can reference specific files by putting the path at the end.
 ### Can I use DNS to create short URLs?
 
 Yes!
-You can [read the guide here](/docs/p2p/dns.html). 
+You can [read the guide here](/docs/devtools/dns.html). 
 
 This is experimental support, and it's not secure yet.
 Until we've integrated DNSSEC or TLS certificates, or something similar, it will be possible to [Man in the Middle attack](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) your DNS lookup.
@@ -106,7 +106,7 @@ They will allow you to "push" your sites to them, ensuring their availability.
 
 No.
 Unlike many P2P networks, Beaker does not automatically upload the files you've downloaded.
-If you want to "seed" a site (that is, host its files), you can [view the site files](/docs/p2p/additional-tools.html#view-files-button) and then [click the seed button](/docs/p2p/additional-tools.html#seed-site).
+If you want to "seed" a site (that is, host its files), you can do so manually.
 
 ---
 

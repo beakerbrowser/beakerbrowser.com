@@ -18,7 +18,7 @@ This means, if you only share the URL with your friends, then nobody else will h
   </div>
 </div>
 
-**[Follow this guide to create a P2P Site](http://localhost:4000/docs/p2p/share-files.html)**, and then share the URL in secret to keep it confidential.
+**[Follow this guide to create a P2P Site](/docs/p2p/share-files.html)**, and then share the URL in secret to keep it confidential.
 
 #### See also
 
