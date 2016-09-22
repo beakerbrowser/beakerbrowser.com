@@ -14,7 +14,7 @@ layout: default
   <div class="section">
     <div class="desc">
       <p>
-        Beaker adds APIs for Files, SQLite, and Peer-to-Peer.
+        Beaker adds APIs for downloading and publishing files on the network.
         Here's a few examples of what you can do:
       </p>
     </div>
@@ -28,7 +28,7 @@ layout: default
       <div>
         <h5><span class="fa fa-pencil"></span> Self-hosted Blogging</h5>
         <p>
-          Use <a href="https://jekyllrb.com/">your static site generator</a> to produce your blog, then publish from your device.
+          Generate your site using <a href="https://jekyllrb.com/">a popular blogging tool</a>, or write a Beaker app to generate in-browser, then publish from your device.
         </p>
       </div>
     </div>
@@ -37,9 +37,10 @@ layout: default
   <div class="section">
     <div class="desc desc-with-img">
       <div>
-        <h5><span class="fa fa-feed"></span> P2P Social Feeds</h5>
+        <h5><span class="fa fa-feed"></span> Social Feeds</h5>
         <p>
-          Use the <a href="/docs/apis/hypercore.html">Hypercore API</a> to produce social feeds that users can share directly, without a host.
+          Write and aggregate feed-files over the network.
+          Use existing standards such as RSS and Atom, or write your own with JSON or YAML.
         </p>
       </div>
       <div>
@@ -56,13 +57,15 @@ layout: default
       <div>
         <h5><span class="fa fa-file-code-o"></span> Integrated Editor</h5>
         <p>
-          Use the <a href="/docs/apis/files.html">Files</a> and <a href="/docs/apis/hyperdrive.html">Hyperdrive APIs</a> to create a complete IDE.
+          Create a files editor with the <a href="/docs/apis/dat.html">Dat API</a>.
           Write the HTML in one tab, and view your site in the other.
+          Serve the files from the browser when its ready to go.
         </p>
       </div>
     </div>
   </div>
 
+  {% comment %}
   <div class="section">
     <div class="desc desc-with-img">
       <div>
@@ -76,6 +79,7 @@ layout: default
       </div>
     </div>
   </div>
+  {% endcomment %}
 
   {% include bottom-callout.html %}
 </div>
