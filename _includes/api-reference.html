@@ -1,5 +1,7 @@
 {% for item in include.items %}
   <h3 id="{{ item.name | slugify }}">{{ item.name }}</h3>
+  {% if item.signature %}
   <p><code>{{ item.signature }}</code></p>
+  {% endif %}
   <div>{{ item.desc | markdownify }}</div>
 {% endfor %}

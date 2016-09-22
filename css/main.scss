@@ -41,6 +41,9 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
   flex: 1;
 }
 
+.unbreakable, .unbreakable * {
+  white-space: pre;
+}
 .breakable {
   word-break: break-all;
 }
@@ -422,6 +425,15 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
 ul.doc-toc,
 ul.doc-toc ul {
   margin-left: 1.5em;
+}
+
+table.doc-table {
+  border-collapse: collapse;
+  td {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    vertical-align: top;
+  } 
 }
 
 table.comparison {

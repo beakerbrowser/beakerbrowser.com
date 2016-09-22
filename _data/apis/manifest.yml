@@ -1,0 +1,38 @@
+attributes:
+  -
+    name: ".title"
+    desc: "A short but descriptive human friendly title."
+  -
+    name: ".description"
+    desc: "A one- or two-line description of the archive."
+  -
+    name: ".author"
+    desc: |
+      The archive's author - the packager, not necessarily the data's author as well. Can be either an object with any of those keys:
+
+      ```json
+      {
+        "name": "Bob Roberts",
+        "email": "bob@roberts.com",
+        "web": "https://roberts.com/bob"
+      }
+      ```
+
+      or a string with at least the name and any of the segments email and web:
+
+      ```js
+      "NAME <EMAIL> (WEB)"
+      ```
+
+      like for example:
+
+      - `"Bob Roberts"`
+      - `"Bob Roberts <bob@roberts.com>"`
+      - `"Bob Roberts (https://roberts.com/bob)"`
+      - `"Bob Roberts <bob@roberts.com> (https://roberts.com/bob)"`
+  -
+    name: ".permissions"
+    desc: |
+      A list of additional permissions that the application requires.
+      Should be an array of strings.
+      For a list of valid permission names, **[see the documentation on Permissions](/docs/apis/permissions.html)**.

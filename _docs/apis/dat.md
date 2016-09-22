@@ -1,11 +1,12 @@
 ---
 title:    Dat API
 category: Web APIs
-order:    2
+order:    3
 ---
 
 <div class="card">
   <p><strong>Summary.</strong> Read and write versioned files to archives on the user's local hard-drive, and share the archives over the network.</p>
+  <p><strong><span class="fa fa-warning"></span> This API is under development and subject to change. It has not yet been enabled.</strong></p>
 </div>
 
 Only apps served over `dat://` are able to access this API.

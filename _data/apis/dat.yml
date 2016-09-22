@@ -9,7 +9,7 @@ toplevel_methods:
       Requires `datWrite` permission.
 
       - opts.versioned. Boolean. Should the archive retain old versions of files? Default false.
-        - If true, `readFile` and `readDirectory` will be able to read previous versions of the false.
+        - If true, `readFile` and `readDirectory` will be able to read previous versions of the archive.
         - If false, `getHistory()` will still show the history of changes. However, checkpoints will be disabled, and old versions of the files will not be available.
   -
     name: "dat.openArchive()"
