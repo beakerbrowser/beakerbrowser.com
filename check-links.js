@@ -20,6 +20,6 @@ function htmlLinkCheck (file) {
 }
 
 var siteDir = jetpack.cwd(__dirname).cwd('_site')
-var sitefilePaths = siteDir.find({ matching: '*.html' })
+var sitefilePaths = (process.argv[2]) ? [process.argv[2]] : siteDir.find({ matching: '*.html' })
 var siteFiles = sitefilePaths.map(p => { return { path: p, text: siteDir.read(p, 'utf8') } })
 siteFiles.forEach(htmlLinkCheck)

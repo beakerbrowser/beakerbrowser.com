@@ -3,6 +3,7 @@
 ---
 @charset "utf-8";
 @import "fonts";
+@import "syntax-highlight";
 
 /*****************************************************************************/
 /*
@@ -18,8 +19,8 @@
 
 html, body { height: 100%; }
 body { color: #555; font-family: 'Roboto', sans-serif; font-weight: 300; font-size: 18px; }
-pre, code { font-family: Consolas, "Courier New", monospace; color: #5E5E5E; background: #f5f2f0; white-space: pre-wrap; word-break: break-all }
-pre { padding: 7px 12px; border: 1px solid #ddd; }
+pre, code { font-family: Consolas, "Courier New", monospace; color: #5E5E5E; background: #fafafa; white-space: pre-wrap; word-break: break-all }
+pre { padding: 12px 16px; border-left: 5px solid #4aa4ff; }
 code { padding: 0 2px; }
 hr { border: 0; border: 1px solid #eee; margin: 4em 0; }
 img { max-width: 100% }
@@ -42,6 +43,9 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
 
 .breakable {
   word-break: break-all;
+}
+.noborder {
+  border: 0 !important;
 }
 
 .btn {
@@ -119,6 +123,18 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
     position: relative;
     left: 1px;
     top: -1px;
+  }
+  .fa-file-code-o {
+    font-size: 39px;
+    position: relative;
+    left: 1px;
+    top: -2px;
+  }
+  .fa-feed {
+    font-size: 40px;
+    position: relative;
+    left: 2px;
+    top: 0px;
   }
 }
 
@@ -210,6 +226,29 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
 /*
 /*****************************************************************************/
 
+.card {
+  border: 1px solid #ccc;
+  padding: 1em;
+  margin: 1em 0;
+
+  & > :first-child { margin-top: 0 !important; }
+  & > :last-child { margin-bottom: 0 !important; }
+}
+
+.card-group {
+  display: flex;
+  clear: both;
+  .card {
+    flex: 1;
+    &.halfwidth {
+      flex: 0.5;
+    }
+    &:first-child {
+      border-right: 0;
+    }
+  }
+}
+
 .section {
   margin: 60px 0 80px;
   text-align: center;
@@ -223,13 +262,14 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
 
   h4 {
     color: #555;
-    font-size: 40px;
-    margin: 0 200px 30px;
+    font-size: 27px;
     font-weight: normal;
   }
 
   h5 {
-    font-size: 26px;
+    color: #555;
+    font-size: 24px;
+    font-weight: normal;
   }
 
   img.bordered {
@@ -249,6 +289,25 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
     font-weight: 300;
     strong {
       font-weight: 400;
+    }
+
+    &.desc-with-img {
+      display: flex;
+      max-width: 800px;
+
+      & > div {
+        padding: 0 20px;
+      }
+    }
+  }
+
+  .card-group {
+    margin: 0px auto;
+    max-width: 700px;
+    font-size: 16px;
+  
+    h4 {
+      font-size: 21px;
     }
   }
 
@@ -273,6 +332,45 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
   }
 }
 
+.sections-group {
+  margin: 60px 0 80px;
+
+  h3 {
+    color: #333;
+    font-size: 36px;
+    margin: 0 0 30px;
+    font-weight: normal;
+    text-align: center;
+  }
+  
+
+  .sections-group-inner {
+    display: flex;
+    margin: 0 auto;
+    max-width: 800px;
+
+    .section {
+      flex: 1;
+      margin: 0 10px;
+
+      &.halfwidth {
+        flex: 0.5;
+        margin-left: 20px;
+        font-size: 16px;
+      }
+
+      h3 {
+        font-size: 24px;
+      }
+      .desc {
+        font-size: 16px;
+        line-height: 23px;
+        text-align: center;
+      }
+    }
+  }
+}
+
 .technical-explanation {
   position: relative;
   display: flex;
@@ -281,6 +379,7 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
   padding: 1em;
   margin: 2em;
   box-shadow: 0px 2px 2px rgba(0,0,0,.05);
+  text-align: left;
 
   &:before {
     content: attr(data-title);
@@ -318,6 +417,39 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
   width: 100%;
   max-width: 500px;
   border: 1px solid #555;
+}
+
+ul.doc-toc,
+ul.doc-toc ul {
+  margin-left: 1.5em;
+}
+
+table.comparison {
+  position: relative;
+  left: -8%;
+  width: 100%;
+  max-width: 580px;
+  margin: 3em auto;
+  border-collapse: collapse;
+
+  thead {
+    font-weight: bold;
+  }
+  td {
+    border: 1px solid #ccc;
+    padding: 10px;
+
+    &:first-child {
+      text-align: right;
+      border: 0;
+    }
+  }
+  .fa-check {
+    color: #11a211;
+  }
+  .fa-times {
+    color: #f57373;
+  }
 }
 
 /*****************************************************************************/
@@ -412,7 +544,8 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
 
     img {
       display: block;
-      margin: 0 auto;
+      margin: 0 auto 10px;
+      width: 200px;
     }
 
     h2 {
@@ -441,7 +574,8 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
 .apis {
   position: relative;
   display: flex;
-  margin: 0 160px;
+  margin: 0px auto;
+  max-width: 600px;
 
   &:before {
     content: '';

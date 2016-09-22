@@ -20,3 +20,9 @@ Understanding how Beaker works will help you get the most out of it, so we've cr
 
 <a class="btn btn-block" href="/docs/technology.html"><i class="fa fa-info-circle" aria-hidden="true"></i> About the Technology</a>
 <a class="btn btn-block" href="/docs/faq.html"><i class="fa fa-question-circle" aria-hidden="true"></i> Frequently Asked Questions</a>
+
+Need more help getting started?
+Check out these docs:
+
+ - <a href="/what-can-i-build-with-beaker.html">What can I build with Beaker?</a>
+ - <a href="/what-makes-beaker-different.html">What makes Beaker different?</a>

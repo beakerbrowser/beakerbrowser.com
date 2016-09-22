@@ -1,0 +1,5 @@
+<ul>
+{% for item in include.items %}
+  <li><a href="#{{ item.name | slugify }}">{{ item.name }}</a></li>
+{% endfor %}
+</ul>

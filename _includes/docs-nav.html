@@ -1,10 +1,9 @@
 <div class="doc-nav">
 {% assign doc_groups = site.docs | group_by: 'category' | sort: 'name' %}
 {% for doc_group in doc_groups %}
+  {% if doc_group.name != '' %}
   <div class="doc-nav-section">
-    {% if doc_group.name != '' %}
-      <p><strong>{{ doc_group.name }}</strong></p>
-    {% endif %}
+    <p><strong>{{ doc_group.name }}</strong></p>
 
     {% assign docs = doc_group.items | sort: 'order' %}
     {% for doc in docs %}
@@ -13,5 +12,6 @@
       </p>
     {% endfor %}
   </div>
+  {% endif %}
 {% endfor %}
 </div>
