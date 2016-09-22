@@ -7,7 +7,7 @@ category: Documentation
 Beaker's primary technology is the [Hyperdrive Protocol](https://github.com/datproject/docs/blob/master/docs/hyperdrive_spec.md), created by the [Dat Project](http://dat-data.com) and funded with a grant by the Knight Foundation, to distribute scientific data around the world.
 [Read more at their website](http://dat-data.com).
 
-Beaker also browses the [IPFS Network](https://ipfs.io), which you can read about in detail [here](https://github.com/ipfs/specs/tree/master/architecture).
+Beaker also browses the [IPFS Network](https://ipfs.io) if the daemon is running at startup.
 
 <hr>
 
