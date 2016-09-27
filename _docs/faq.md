@@ -4,7 +4,16 @@ order:    3
 category: Documentation
 ---
 
-### What do Peer-to-Peer URLs look like?
+### What are Archives?
+
+Dat Archives are bundles of files that are shared in a Peer-to-Peer network.
+They are similar to BitTorrents, except that they are changeable, versioned, and privately shareable.
+
+[You can read more about Dat's protocol, Hyperdrive, here.](/docs/technology.html)
+
+---
+
+### What do Dat URLs look like?
 
 Like this:
 
@@ -45,17 +54,17 @@ Run `dig txt hostless.website` to see the records behind it.
 
 **No!**
 This is very important to understand:
-If any other user has the link to a P2P site, they'll be able to see your requests for it, and they'll know your IP.
-Browsing P2P sites is therefore not anonymous.
+If any other user has the link to a Dat site, they'll be able to see your requests for it, and they'll know your IP.
+Browsing Dat sites is therefore not anonymous.
 
 <div class="technical-explanation single-line" data-title="Beware!">
   <div class="icon"><span class="fa fa-exclamation-triangle"></span></div>
   <div class="body">
-    <p>Browsing P2P Sites is <strong>not anonymous</strong>.</p>
+    <p>Browsing Dat Sites is <strong>not anonymous</strong>.</p>
   </div>
 </div>
 
-This is a natural characteristic of a P2P network; because there is no individual server in charge, the browser must ask the entire network for files.
+This is a natural characteristic of a Dat network; because there is no individual server in charge, the browser must ask the entire network for files.
 
 This isn't ideal, but it's not all bad. There are some things which make the situation better:
 
@@ -64,11 +73,11 @@ This isn't ideal, but it's not all bad. There are some things which make the sit
 Network traffic is encrypted using the site's URLs.
 Only users that possess the URL can track requests for it, which means you can share sites privately by keeping the URL secret.
 
-Conversely, a publicly-shared P2P site will be open for everyone to watch.
+Conversely, a publicly-shared Dat site will be open for everyone to watch.
 
 **2. The sites can't access the network.**
 
-Unlike regular websites, web pages on P2P sites are not allowed to access the network without your permission.
+Unlike regular websites, web pages on Dat sites are not allowed to access the network without your permission.
 That means they can't leak personal information, such as your contact-list, photos, messages, or documents.
 Other users know you're there, but they won't know what data you put into the page.
 
@@ -80,14 +89,14 @@ Yes, like in HTTPS, the connection is encrypted.
 
 ---
 
-### How does a P2P site differ from a normal site?
+### How does a Dat site differ from a normal site?
 
-Other than the diference in protocols, P2P sites are more tightly "sandboxed."
+Other than the diference in protocols, Dat sites are more tightly "sandboxed."
 They are not allowed to access the network directly.
 That means you can't embed YouTube videos, use Google Analytics, or make Ajax requests home.
 This is to protect the privacy of users.
 
-Over time, we'll add features for P2P sites to request extra privileges.
+Over time, we'll add features for Dat sites to request extra privileges.
 Right now, your site will just need to be self-contained.
 
 ---
@@ -96,9 +105,7 @@ Right now, your site will just need to be self-contained.
 
 No, there is no automatic hosting.
 To make sure your files are available, you need to have a computer share them.
-
-"Public Peer" services should be available soon.
-They will allow you to "push" your sites to them, ensuring their availability.
+[See the "Cloud Hosting" guide](/docs/guides/cloud-hosting.html) for advice about doing this reliably.
 
 ---
 
@@ -110,7 +117,7 @@ If you want to "seed" a site (that is, host its files), you can do so manually.
 
 ---
 
-### Who is allowed to change a P2P site?
+### Who is allowed to change a Dat site?
 
 When a site is created, a "keypair" is generated
 The first key, called the "private" key, gives you the power to change the site.
