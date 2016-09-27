@@ -22,7 +22,7 @@ Run `dig txt hostless.website` to see the records behind it.
 
 #### See also
 
-<a class="btn btn-block" href="/docs/p2p/create-a-website.html"><i class="fa fa-file-code-o" aria-hidden="true"></i> Create a Website</a>
+<a class="btn btn-block" href="/docs/guides/create-a-website.html"><i class="fa fa-file-code-o" aria-hidden="true"></i> Create a Website</a>
 <a class="btn btn-block" href="/docs/devtools/cli.html"><i class="fa fa-terminal" aria-hidden="true"></i> Command Line Tools</a>
 
 ---

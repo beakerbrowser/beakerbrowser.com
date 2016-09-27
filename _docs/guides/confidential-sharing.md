@@ -1,6 +1,6 @@
 ---
 title:    Confidential Sharing
-category: Peer-to-Peer
+category: Guides
 order:    3
 ---
 
@@ -8,25 +8,12 @@ Sites shared with the Hyperdrive protocol are, by default, secret.
 Their URLs are unguessable keys which are used to encrypt the peer-to-peer traffic.
 This means, if you only share the URL with your friends, then nobody else will have access to the files, or know what you are transferring.
 
-<div class="technical-explanation" data-title="Secret URLs">
-  <div class="icon"><span class="fa fa-info-circle"></span></div>
-  <div class="body">
-    <p>
-      A peer-to-peer URL is unguessable.
-      If you keep it secret, then only the people who know the URL can access the site. 
-    </p>
-  </div>
-</div>
-
-**[Follow this guide to create a P2P Site](/docs/p2p/share-files.html)**, and then share the URL in secret to keep it confidential.
+[Follow the Sharing Files guide to create a files archive](/docs/guides/share-files.html), and then share the URL in secret to share the files confidentially.
 
 #### See also
 
-<a class="btn btn-block" href="/docs/p2p/create-a-website.html"><i class="fa fa-file-code-o" aria-hidden="true"></i> Create a Website</a>
-<a class="btn btn-block" href="/docs/p2p/share-files.html"><i class="fa fa-share-alt" aria-hidden="true"></i> Share Files</a>
-<a class="btn btn-block" href="/docs/p2p/export-to-zip.html"><i class="fa fa-file-archive-o" aria-hidden="true"></i> Export Site to .Zip</a>
-
----
+<a class="btn btn-block" href="/docs/guides/create-a-website.html"><i class="fa fa-file-code-o" aria-hidden="true"></i> Create a Website</a>
+<a class="btn btn-block" href="/docs/guides/share-files.html"><i class="fa fa-share-alt" aria-hidden="true"></i> Share Files</a>
 
 ### Mini FAQ
 

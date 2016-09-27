@@ -6,10 +6,9 @@ category: Documentation
 
 Understanding how Beaker works will help you get the most out of it, so we've created a quick guide to get you started:
 
-<a class="btn btn-block" href="/docs/p2p/share-files.html"><i class="fa fa-share-alt" aria-hidden="true"></i> Share Files</a>
-<a class="btn btn-block" href="/docs/p2p/create-a-website.html"><i class="fa fa-file-code-o" aria-hidden="true"></i> Create a Website</a>
-<a class="btn btn-block" href="/docs/p2p/confidential-sharing.html"><i class="fa fa-shield" aria-hidden="true"></i> Confidential Sharing</a>
-<a class="btn btn-block" href="/docs/p2p/export-to-zip.html"><i class="fa fa-file-archive-o" aria-hidden="true"></i> Export Site to .Zip</a>
+<a class="btn btn-block" href="/docs/guides/share-files.html"><i class="fa fa-share-alt" aria-hidden="true"></i> Share Files</a>
+<a class="btn btn-block" href="/docs/guides/create-a-website.html"><i class="fa fa-file-code-o" aria-hidden="true"></i> Create a Website</a>
+<a class="btn btn-block" href="/docs/guides/confidential-sharing.html"><i class="fa fa-shield" aria-hidden="true"></i> Confidential Sharing</a>
 
 #### Developer Tools
 
