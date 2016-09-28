@@ -51,6 +51,11 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
   border: 0 !important;
 }
 
+img.bordered {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
 .btn {
   display: inline-block;
   border: 1px solid #016fde;
@@ -253,14 +258,19 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
 }
 
 .section {
-  margin: 60px 0 80px;
+  margin: 140px 0;
   text-align: center;
 
   h3 {
     color: #333;
     font-size: 36px;
+    line-height: 31px;
     margin: 0 0 30px;
     font-weight: normal;
+
+    small {
+      font-size: 16px;
+    }
   }
 
   h4 {
@@ -275,15 +285,13 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
     font-weight: normal;
   }
 
-  img.bordered {
-    border: 1px solid #ccc;
-    border-radius: 2px;
-  }
-
-  .desc {
+  p {
     font-family: 'Lato', sans-serif;
     font-size: 18px;
     line-height: 31px;
+  }
+
+  .desc {
     text-align: justify;
     color: #333;
     margin: 0px auto;
@@ -374,6 +382,23 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
   }
 }
 
+.columns {
+  display: flex;
+
+  &.vcenter {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .column {
+    flex: 1;
+
+    p {
+      padding: 0 3em;
+    }
+  }
+}
+
 .technical-explanation {
   position: relative;
   display: flex;
@@ -419,7 +444,13 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
 .doc-gif {
   width: 100%;
   max-width: 500px;
-  border: 1px solid #555;
+  border: 1px solid #ccc;
+}
+
+.intro-screenshot {
+   border-bottom: 1px solid #ccc;
+   max-width: 800px;
+   margin-bottom: 30px;
 }
 
 ul.doc-toc,
