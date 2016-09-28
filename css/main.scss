@@ -511,29 +511,37 @@ table.comparison {
   img {
     vertical-align: bottom;
   }
-  h1 {
-    font-weight: 100;
-    font-size: 21px;
-    margin: 0 0 0 4px;
-    line-height: 32px;
-  }
   a {
     line-height: 32px;
     font-size: 16px;
+    color: #555;
 
     &.nav-link {
       margin-left: 2em;
     }
+    &:hover {
+      color: #016fde;
+    }
+    .fa {
+      margin-right: 5px;
+    }
+  }
+  h1 {
+    font-weight: 100;
+    font-size: 21px;
+    margin: 0 0 0 4px;
+    line-height: 32px;    
+    color: #016fde;
   }
 }
 
-@media(max-width: 735px) {
+@media(max-width: 745px) {
   .header .title {
     display: none;
   }
 }
 
-@media(max-width: 590px) {
+@media(max-width: 600px) {
   .header {
     .nav-link {
       font-size: 24px;
