@@ -21,7 +21,7 @@ Like this:
 dat://54f74fe89d7779946343ec6db9618631e4dbf43bece2a125d0099103741963c9/
 ```
 
-They work just like regular URLs, except that the 'hostname' is a 64-character hex number.
+They work just like regular URLs, except that the "hostname" is a 64-character hex number.
 You can reference specific files by putting the path at the end.
 
 <div class="technical-explanation" data-title="Tech In-depth">
@@ -29,7 +29,7 @@ You can reference specific files by putting the path at the end.
   <div class="body">
     <p>
       Every site has an ECC keypair which is used to sign the file-listing.
-      The URL is the keypair's public key, in hex-encoding.
+      The URL is the keypair's hex-encoded public key.
       This is how the Hyperdrive protocol verifies files from the network.
     </p>
   </div>
@@ -43,9 +43,11 @@ Yes!
 You can [read the guide here](/docs/devtools/dns.html). 
 
 This is experimental support, and it's not secure yet.
-Until we've integrated DNSSEC or TLS certificates, or something similar, it will be possible to [Man in the Middle attack](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) your DNS lookup.
+Until we've integrated DNSSEC or TLS certificates, or something
+similar, it will be possible to execute a [Man in the Middle
+attack](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) on your DNS lookup.
 
-If you are curious, see <a href="dat://hostless.website">dat://hostless.website</a> for a working example.
+See <a href="dat://hostless.website">dat://hostless.website</a> for a working example.
 Run `dig txt hostless.website` to see the records behind it.
 
 ---
@@ -54,7 +56,8 @@ Run `dig txt hostless.website` to see the records behind it.
 
 **No!**
 This is very important to understand:
-If any other user has the link to a Dat site, they'll be able to see your requests for it, and they'll know your IP.
+If any other user has the link to a Dat site, they'll be able to see
+your requests for it, and they'll know your IP.
 Browsing Dat sites is therefore not anonymous.
 
 <div class="technical-explanation single-line" data-title="Beware!">
@@ -73,7 +76,7 @@ This isn't ideal, but it's not all bad. There are some things which make the sit
 Network traffic is encrypted using the site's URLs.
 Only users that possess the URL can track requests for it, which means you can share sites privately by keeping the URL secret.
 
-Conversely, a publicly-shared Dat site will be open for everyone to watch.
+Conversely, a publicly-shared Dat site will be open for anyone to watch.
 
 **2. The sites can't access the network.**
 
@@ -97,14 +100,15 @@ That means you can't embed YouTube videos, use Google Analytics, or make Ajax re
 This is to protect the privacy of users.
 
 Over time, we'll add features for Dat sites to request extra privileges.
-Right now, your site will just need to be self-contained.
+Right now, your site will need to be self-contained.
 
 ---
 
 ### Does the P2P network automatically host my content?
 
-No, there is no automatic hosting.
-To make sure your files are available, you need to have a computer share them.
+No, files are not hosted on the network automatically.
+To make sure your files are available, you must configue a computer in
+the network to share them.
 [See the "Cloud Hosting" guide](/docs/guides/cloud-hosting.html) for advice about doing this reliably.
 
 ---
@@ -147,12 +151,12 @@ Here's why:
 
 P2P sites are costless and quick to create, and they can be pushed up to a cloud server without ceding any control over the content. 
 That will change the way we publish content: instead of posting to somebody else's .com, a creator can just make their own site.
-With a mature platform, we'll be able to create decentralized networks that work as well as YouTube or Spotify, but doesn't sacrifice publishers' independence.
+With a mature platform, we'll be able to create decentralized networks that work as well as YouTube or Spotify, but don't sacrifice publishers' independence.
 
 **"Forkability"** 
 
-Peer-to-peer sites are self-contained bundles of files, that depend on the browser's Web APIs instead of a hard-wired server.
-That makes it easy to copy the files and rewrite the software to fit your needs.
+Peer-to-peer sites are self-contained bundles of files that depend on the browser's Web APIs instead of a hard-wired server.
+This makes it easy to copy the files and rewrite the software to fit your needs.
 
 **Data-Security**
 
@@ -170,7 +174,7 @@ And, it makes setup easy by cutting down on the amount of configuration involved
 ### Why Hyperdrive instead of IPFS?
 
 Beaker currently supports IPFS, but only as a secondary protocol.
-This is due to some technical advantages that Hyperdrive currently holds over IPFS.
+This is because Hyperdrive currently holds some technical advantages over IPFS.
 
 Hyperdrives advantages are:
 

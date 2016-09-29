@@ -8,7 +8,7 @@ Sites shared with the Hyperdrive protocol are, by default, secret.
 Their URLs are unguessable keys which are used to encrypt the peer-to-peer traffic.
 This means, if you only share the URL with your friends, then nobody else will have access to the files, or know what you are transferring.
 
-[Follow the Sharing Files guide to create a files archive](/docs/guides/share-files.html), and then share the URL in secret to share the files confidentially.
+[Follow the Sharing Files guide to create a files archive](/docs/guides/share-files.html), then share the URL in secret to share the files confidentially.
 
 #### See also
 
@@ -30,7 +30,7 @@ You shouldn't use Beaker for extremely sensitive material, or for anything illeg
 
 The connection is encrypted, but the files themselves are not.
 Once received, they are visible in plaintext.
-If somebody is given the URL to your site, they will be able to access the site's files.
+If somebody has the URL to your site, they will be able to access the site's files.
 
 **Q: Am I anonymous on the network?**
 
