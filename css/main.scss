@@ -20,9 +20,12 @@
 html, body { height: 100%; }
 body { color: #555; font-family: 'Roboto', sans-serif; font-weight: 300; font-size: 18px; }
 pre, code { font-family: Consolas, "Courier New", monospace; color: #5E5E5E; background: #fafafa; white-space: pre-wrap; }
-pre { padding: 12px 16px; border-left: 5px solid #4aa4ff; word-break: break-all }
+pre { padding: 12px 16px; word-break: break-all }
 code { padding: 0 2px; }
+pre code { padding: 0 }
+pre.highlight { border-left: 5px solid #4aa4ff; }
 hr { border: 0; border: 1px solid #eee; margin: 4em 0; }
+hr.nomargin { margin: 2em 0; }
 img { max-width: 100% }
 
 h1 { margin-bottom: 1em; }
@@ -40,7 +43,9 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
 .flex-spacer {
   flex: 1;
 }
-
+.muted {
+  color: #999;
+}
 .unbreakable, .unbreakable * {
   white-space: pre;
 }
@@ -54,6 +59,43 @@ blockquote { padding: 5px 2em; border-left: 1em solid #eee; }
 img.bordered {
   border: 1px solid #ccc;
   border-radius: 2px;
+}
+
+.label {
+  display: inline-block;
+  position: relative;
+  top: -1px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 2px;
+  padding: 3px 5px;
+
+  &.label-black {
+    background: #555;
+    border: 1px solid #444;
+    color: #fff;
+  }
+  &.label-gray {
+    background: #ccc;
+    border: 1px solid #c5c5c5;
+  }
+  &.label-yellow {
+    background: #ffe500;
+    border: 1px solid #ffd600;
+  }
+}
+.label-group {
+  .label {
+    border-radius: 0;
+    &:first-child {
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+    }
+    &:last-child {
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+  }
 }
 
 .btn {

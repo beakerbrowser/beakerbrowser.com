@@ -9,6 +9,7 @@ Understanding how Beaker works will help you get the most out of it, so we've cr
 <a class="btn btn-block" href="/docs/guides/share-files.html"><i class="fa fa-share-alt" aria-hidden="true"></i> Share Files</a>
 <a class="btn btn-block" href="/docs/guides/create-a-website.html"><i class="fa fa-file-code-o" aria-hidden="true"></i> Create a Website</a>
 <a class="btn btn-block" href="/docs/guides/confidential-sharing.html"><i class="fa fa-shield" aria-hidden="true"></i> Confidential Sharing</a>
+<a class="btn btn-block" href="/docs/guides/cloud-hosting.html"><i class="fa fa-cloud" aria-hidden="true"></i> Cloud Hosting</a>
 
 #### Developer Tools
 
