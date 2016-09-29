@@ -5,7 +5,7 @@ order:    1
 ---
 
 The Hyperdrive protocol is part of an ecosystem of tools created around [The Dat Project](http://dat-data.com).
-Here are some useful commandline programs:
+Here are some useful command line programs:
 
 ---
 

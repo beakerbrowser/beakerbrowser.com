@@ -36,12 +36,16 @@ By introducing this discovery phase, we create a network where data can be found
 The discovery protocols that Beaker uses are <a href="https://en.wikipedia.org/wiki/Name_server">DNS name servers</a>, <a href="https://en.wikipedia.org/wiki/Multicast_DNS">Multicast DNS</a> and the <a href="https://en.wikipedia.org/wiki/Mainline_DHT">Kademlia Mainline Distributed Hash Table</a> (DHT).
 Each one has pros and cons, so we combine all three to increase the speed and reliability of discovering data sources.
 
-The Dat-Project Team runs a <a href="https://www.npmjs.com/package/dns-discovery">custom DNS server</a> and a <a href="https://github.com/bittorrent/bootstrap-dht">DHT bootstrap</a> server that Beaker uses.
+Beaker uses a <a
+href="https://www.npmjs.com/package/dns-discovery">custom DNS
+server</a> and a <a
+href="https://github.com/bittorrent/bootstrap-dht">DHT bootstrap</a>
+server run by the Dat-Project Team.
 These discovery servers are the only centralized infrastructure we need, but they are redundant, interchangeable, never see the actual data being shared, and anyone can run their own.
 
 **Phase 2: Source connections**
 
-Now that Beaker knows who to talk to, it has to connect to them.
+Now that Beaker knows who to talk to, the next step is to connect to them.
 We support both <a href="https://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP</a> and <a href="https://en.wikipedia.org/wiki/Micro_Transport_Protocol">UTP</a> sockets for the actual peer to peer connections.
 UTP is nice because it is designed to <em>not</em> take up all available bandwidth on a network (e.g. so that other people sharing your wifi can still use the Internet).
 
@@ -57,11 +61,11 @@ So now Beaker has found data sources and connected to them.
 This is where Hyperdrive comes in.
 The short version of how Hyperdrive works is: It breaks file contents up in to pieces, hashes each piece and then constructs a <a href="https://en.wikipedia.org/wiki/Merkle_tree">Merkle tree</a> out of all of the pieces.
 
-Here's the long version:
+The long version:
 
 Hyperdrive shares and synchronizes a set of files, similar to rsync or Dropbox.
 For each file it uses a technique called [Rabin fingerprinting](https://en.wikipedia.org/wiki/Rabin_fingerprint) to break the file up into pieces.
-The Dat Team has configured the Rabin chunker to produce chunks that are around 16KB on average.
+The Dat Team configured the Rabin chunker to produce chunks that are 16KB on average.
 So if you share a site containing a single 1MB JPG you will get around 64 chunks.
 
 After feeding the file contents through the chunker, Hyperdrive takes the chunks and calculates the SHA256 hash of each one.

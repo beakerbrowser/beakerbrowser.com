@@ -66,12 +66,12 @@ archive.serve()
 ### Permissions 
 
 This API is only available to apps served over `dat://`.
-By default, any `dat://` app can read other dat-archives, using HTML embeds, Ajax, or the `dat` read commands.
+By default, any `dat://` app can read other dat-archives via HTML embeds, Ajax, or the `dat` read commands.
 
 To write and upload archives, the app must include a `dat.json` manifest file with the appropriate permissions specified.
 The user will be prompted whether to allow these permissions.
 
-Here is an example manifest:
+An example manifest:
 
 ```json
 {
@@ -104,7 +104,7 @@ Behind the scenes, archives have "claims" against them by applications.
 Calling `openArchive()` adds a claim by the calling app, while `deleteArchive()` removes that claim.
 An archive with no claims is temporary, and subject to cleanup.
 
-Apps are, by default, limited to 100MB of storage.
+By default, apps are limited to 100MB of storage.
 Their claimed archives - that is, archives that are created or opened by `dat` - count against this quota.
 When the limit is reached, the user will be prompted to allow more disk-usage.
 Until this is granted, all writes will fail, and all downloads will pause.
@@ -120,14 +120,14 @@ By default, only the latest versions of the files are retained.
 If an archive is created with `versioned: true` specified, then the archive's `getCheckpoints()` and `writeCheckpoint()` methods will be made available.
 When a checkpoint is written, the state of the archive is captured, allowing the files to be restored from the checkpoint.
 
-Checkpoint names must be unique (the can not be reused).
+Checkpoint names must be unique and cannot be reused.
 It's recommended that you follow [semantic versioning](http://semver.org/), but this is not required.
 
 ---
 
 ### Networked Archives
 
-All dat archives have URLs, and can be distributed over the network.
+All dat archives have URLs and can be distributed over the network.
 
 By default, the archives are offline.
 They can be shared between apps on your computer using the URL, but they are not accessible from outside your device.

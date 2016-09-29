@@ -29,7 +29,7 @@ Run `dig txt hostless.website` to see the records behind it.
 
 ### Security
 
-This is an experimental feature, and it's not secure yet.
+This is an experimental feature and it's not secure yet.
 Until we've integrated DNSSEC or TLS certificates, or something similar, it may be possible to <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">Man in the Middle attack</a> your DNS lookup.
 
 If you're unsure about the risk, don't use this DNS feature.
