@@ -4,6 +4,11 @@ category: Guides
 order:    1
 ---
 
+<span class="label label-gray">Guide</span>
+<span class="label label-green">Difficulty: Easy</span>
+
+<hr class="nomargin">
+
 You can share files directly from Beaker.
 As long as the browser stays open, you'll share the files with the network.
 
@@ -35,7 +40,10 @@ As long as the browser stays open, you'll share the files with the network.
 
 <img class="doc-gif" title="Share the link" src="/img/docs/share-link.png">
 
+<hr class="nomargin">
+
 #### See also
 
 <a class="btn btn-block" href="/docs/guides/create-a-website.html"><i class="fa fa-file-code-o" aria-hidden="true"></i> Create a Website</a>
 <a class="btn btn-block" href="/docs/guides/confidential-sharing.html"><i class="fa fa-shield" aria-hidden="true"></i> Confidential Sharing</a>
+<a class="btn btn-block" href="/docs/guides/cloud-hosting.html"><i class="fa fa-cloud" aria-hidden="true"></i> Cloud Hosting</a>

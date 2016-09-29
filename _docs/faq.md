@@ -40,7 +40,7 @@ You can reference specific files by putting the path at the end.
 ### Can I use DNS to create short URLs?
 
 Yes!
-You can [read the guide here](/docs/devtools/dns.html). 
+You can [read the guide here](/docs/guides/dns.html). 
 
 This is experimental support, and it's not secure yet.
 Until we've integrated DNSSEC or TLS certificates, or something

@@ -1,8 +1,14 @@
 ---
 title:    Domain Names
-category: Dev Tools
-order:    2
+category: Guides
+order:    5
 ---
+
+<span class="label label-gray">Guide</span>
+<span class="label label-yellow">Difficulty: Intermediate</span>
+&nbsp;<small class="muted">You will need to know how to create DNS records.</small>
+
+<hr class="nomargin">
 
 You can use DNS to give your Hyperdrive site a nice, human-readable name.
 This has the added benefit of making a Hyperdrive site reconfigurable.
@@ -20,12 +26,7 @@ Beaker will grab the URL and fetch that.
 See <a href="dat://hostless.website">dat://hostless.website</a> for a working example.
 Run `dig txt hostless.website` to see the records behind it.
 
-#### See also
-
-<a class="btn btn-block" href="/docs/guides/create-a-website.html"><i class="fa fa-file-code-o" aria-hidden="true"></i> Create a Website</a>
-<a class="btn btn-block" href="/docs/devtools/cli.html"><i class="fa fa-terminal" aria-hidden="true"></i> Command Line Tools</a>
-
----
+<hr class="nomargin">
 
 ### Security
 
@@ -36,3 +37,10 @@ If you're unsure about the risk, don't use this DNS feature.
 
 **Note**: If you put your URL in a DNS record, it will no longer be confidential.
 Don't give a domain name to any site you want to keep secret.
+
+<hr class="nomargin">
+
+#### See also
+
+<a class="btn btn-block" href="/docs/guides/create-a-website.html"><i class="fa fa-file-code-o" aria-hidden="true"></i> Create a Website</a>
+<a class="btn btn-block" href="/docs/cli.html"><i class="fa fa-terminal" aria-hidden="true"></i> Command Line Tools</a>

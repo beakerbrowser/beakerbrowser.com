@@ -135,6 +135,6 @@ You can learn more about the commands via their documentation:
 
 #### See also
 
-<a class="btn btn-block" href="/docs/devtools/cli.html"><i class="fa fa-terminal" aria-hidden="true"></i> Command Line Tools</a>
+<a class="btn btn-block" href="/docs/cli.html"><i class="fa fa-terminal" aria-hidden="true"></i> Command Line Tools</a>
 <a class="btn btn-block" href="/docs/guides/create-a-website.html"><i class="fa fa-file-code-o" aria-hidden="true"></i> Create a Website</a>
 <a class="btn btn-block" href="/docs/guides/share-files.html"><i class="fa fa-share-alt" aria-hidden="true"></i> Share Files</a>
