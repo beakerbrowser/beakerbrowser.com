@@ -17,6 +17,15 @@ For public archives, you should host from a device that's always online.
 Cloud computing makes that easy to do.
 In this guide, we'll setup a cloud peer which you can push your archives to.
 
+**TL;DR**
+
+On a cloud host:
+
+```bash
+npm install -g dat-publish
+dat-publish -du
+```
+
 <hr class="nomargin">
 
 ### Install Software
