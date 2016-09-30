@@ -772,8 +772,15 @@ table.comparison {
       border: 1px solid #bbb;
       border-radius: 4px;
       font-size: 15px;
+      line-height: 22px;
       vertical-align: top;
     }
+  }
+}
+
+@media(max-width: 500px) {
+  .mini-faq .mini-faq-row {
+    display: block;
   }
 }
 
