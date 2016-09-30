@@ -42,7 +42,7 @@ dat-push $SERVER_KEY
 **2.** On the cloud computer:
 
  - Install Node.js 4 or above. ([Guide for Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04)).
- - Install build dependencies: `sudo apt-get install build-essential libtool`
+ - Install build dependencies: `sudo apt-get install build-essential libtool automake autotools-dev`
  - Install [pm2](https://github.com/Unitech/pm2): `sudo npm install -g pm2`
  - Install [dat-publish](https://github.com/joehand/dat-publish): `sudo npm install -g dat-publish`
 
