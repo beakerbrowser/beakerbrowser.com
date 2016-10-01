@@ -203,9 +203,3 @@ We'll work with standards bodies to make that happen.
 ### Is Beaker built entirely from scratch?
 
 No, it's a fork of the Chrome browser.
-
----
-
-### Who is behind Beaker?
-
-Beaker was created by [Paul Frazee](https://twitter.com/pfrazee) using technology by [The Dat Project](http://dat-data.com), GitHub's [Electron](http://electron.atom.io/), and many others.
