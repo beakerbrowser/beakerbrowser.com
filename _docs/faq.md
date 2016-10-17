@@ -171,21 +171,6 @@ And, it makes setup easy by cutting down on the amount of configuration involved
 
 ---
 
-### Why Hyperdrive instead of IPFS?
-
-Beaker currently supports IPFS, but only as a secondary protocol.
-This is because Hyperdrive currently holds some technical advantages over IPFS.
-
-Hyperdrives advantages are:
-
- - It retains a complete change-history in its metadata log, which allows file-versioning, similar to Git. IPFS' mutable archives don't retain a changelog.
- - Encryption features which enable confidential sharing. IPFS does not currently support this feature.
- - A more conventional URL spec. Hyperdrive URLs retain the standard format, while IPFS breaks from the standard.
-
-Both protocols are powerful tools, and we'll update our support as they mature.
-
----
-
 ### Can I browse regular HTTP/S sites?
 
 Yes, Beaker browses the normal Web.
