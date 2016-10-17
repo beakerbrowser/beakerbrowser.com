@@ -360,7 +360,7 @@ img.bordered {
     text-align: justify;
     color: #333;
     margin: 0px auto;
-    max-width: 600px;
+    max-width: 500px;
 
     font-weight: 300;
     strong {
@@ -577,13 +577,13 @@ table.doc-table {
     border: 1px solid #ccc;
     vertical-align: top;
   } 
+  td:first-child {
+    font-weight: bold;
+    white-space: pre;
+  }
 
-  &.bold-headings {
+  .heading {
     td:first-child {
-      font-weight: bold;
-      white-space: pre;
-    }
-    thead td:first-child {
       background: #fafafa;
       font-weight: normal;
     }
@@ -754,7 +754,7 @@ table.comparison {
       font-size: 34px;
       font-weight: 100;
       color: #777;
-      line-height: 46px;
+      line-height: 60px;
     }
   }
   .hero-btns {
