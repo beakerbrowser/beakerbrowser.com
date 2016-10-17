@@ -1,10 +1,12 @@
 ---
-title:    Getting Started
-order:    1
-category: Documentation
+title:    Documentation
 ---
 
-Understanding how Beaker works will help you get the most out of it, so we've created a quick guide to get you started:
+<a class="btn btn-block" href="/docs/technology.html"><i class="fa fa-info-circle" aria-hidden="true"></i> About the Technology</a>
+<a class="btn btn-block" href="/docs/faq.html"><i class="fa fa-question-circle" aria-hidden="true"></i> Frequently Asked Questions</a>
+<a class="btn btn-block" href="/docs/cli.html"><i class="fa fa-terminal" aria-hidden="true"></i> Command Line Tools</a>
+
+#### Guides
 
 <a class="btn btn-block" href="/docs/guides/share-files.html"><i class="fa fa-share-alt" aria-hidden="true"></i> Share Files</a>
 <a class="btn btn-block" href="/docs/guides/create-a-website.html"><i class="fa fa-file-code-o" aria-hidden="true"></i> Create a Website</a>
@@ -17,9 +19,3 @@ Understanding how Beaker works will help you get the most out of it, so we've cr
 <a class="btn btn-block" href="/docs/apis/manifest.html"><i class="fa fa-map-o" aria-hidden="true"></i> App Manifest</a>
 <a class="btn btn-block" href="/docs/apis/permissions.html"><i class="fa fa-key" aria-hidden="true"></i> Permissions</a>
 <a class="btn btn-block" href="/docs/apis/dat.html"><i class="fa fa-share-alt" aria-hidden="true"></i> Dat API</a>
-
-#### Documentation
-
-<a class="btn btn-block" href="/docs/cli.html"><i class="fa fa-terminal" aria-hidden="true"></i> Command Line Tools</a>
-<a class="btn btn-block" href="/docs/technology.html"><i class="fa fa-info-circle" aria-hidden="true"></i> About the Technology</a>
-<a class="btn btn-block" href="/docs/faq.html"><i class="fa fa-question-circle" aria-hidden="true"></i> Frequently Asked Questions</a>

@@ -577,6 +577,17 @@ table.doc-table {
     border: 1px solid #ccc;
     vertical-align: top;
   } 
+
+  &.bold-headings {
+    td:first-child {
+      font-weight: bold;
+      white-space: pre;
+    }
+    thead td:first-child {
+      background: #fafafa;
+      font-weight: normal;
+    }
+  }
 }
 
 table.comparison {
@@ -743,7 +754,7 @@ table.comparison {
       font-size: 34px;
       font-weight: 100;
       color: #777;
-      line-height: 60px;
+      line-height: 40px;
     }
   }
   .hero-btns {
