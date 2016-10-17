@@ -380,6 +380,13 @@ img.bordered {
     }
   }
 
+  .doc-table {
+    margin: 0 auto;
+    td:nth-child(2) {
+      text-align: left;
+    }
+  }
+
   .card-group {
     margin: 0px auto;
     max-width: 700px;
@@ -583,6 +590,9 @@ table.doc-table {
   td:first-child {
     font-weight: bold;
     white-space: pre;
+  }
+  .blank td {
+    border: 0;
   }
 
   .heading {

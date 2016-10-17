@@ -9,29 +9,15 @@ Beaker integrates two new P2P hypermedia protocols:
  - The [Dat Protocol](http://dat-data.com), called "Hyperdrive".
  - The [IPFS Protocol](https://ipfs.io) (requires the external daemon).
 
-<table class="doc-table bold-headings">
-  <tbody>
-    <tr class="heading"><td colspan="2">Features</td></tr>
-    <tr><td>Peer-to-Peer</td><td>Users can author and host sites directly from Beaker.</td></tr>
-    <tr><td>Offline-First</td><td>Sites can be saved permanently and run without the network.</td></tr>
-    <tr><td>Builtin Forking</td><td>Duplicate any site with one click.</td></tr>
-    <tr><td>Shortnames</td><td>DNS gives human-readable names.</td></tr>
-    <tr><td>Live-Reloading</td><td>Automatically refresh the page as you work.</td></tr>
-    <tr class="heading"><td colspan="2">Coming Soon:</td></tr>
-    <tr><td>Versioning</td><td>Lookup old versions with URL tags: <code>foo.js@2.1.0</code>.</td></tr>
-    <tr><td>APIs</td><td>Programmatically store and share files on the P2P networks.</td></tr>
-  </tbody>
-</table>
-
 <hr class="nomargin">
 
-<h3>About the IPFS Protocol</h3>
+<h3>IPFS</h3>
 
 [You can read about IPFS here.](https://ipfs.io/#how)
 
 <hr class="nomargin">
 
-<h3>About the Dat Protocol</h3>
+<h3>Dat</h3>
 
 Dat's protocol, Hyperdrive, is most easily described as "Git meets BitTorrent."
 It connects users in a P2P system, and distributes archives with their change-logs.
