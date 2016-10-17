@@ -151,8 +151,11 @@ img.bordered {
   }
 }
 @media(max-width: 400px) {
-  .hero-btns .btn {
+  .hero-btns a {
+    display: block;
     margin-bottom: 5px;
+    margin: 5px auto !important;
+    padding: 15px 0;
   }
 }
 
@@ -649,6 +652,9 @@ table.comparison {
     .fa {
       margin-right: 5px;
     }
+    .showable {
+      display: none;
+    }
   }
   h1 {
     font-weight: 100;
@@ -669,6 +675,9 @@ table.comparison {
   .header {
     .nav-link {
       font-size: 24px;
+    }
+    .showable {
+      display: inherit !important;
     }
     .hidable {
       display: none;
