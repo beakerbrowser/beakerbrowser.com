@@ -662,6 +662,10 @@ table.comparison {
     .fa {
       margin-right: 5px;
     }
+    .fa-book {
+      position: relative;
+      top: 3px;
+    }
     .showable {
       display: none;
     }
@@ -716,6 +720,12 @@ table.comparison {
     &.nav-link {
       margin-left: 2em;
     }
+    .fa {
+      margin-right: 5px;
+    }
+  }
+  .showable {
+    display: none;
   }
 }
 
@@ -727,6 +737,9 @@ table.comparison {
     .hidable {
       display: none;
     }
+    .showable {
+      display: inherit !important;
+    }
   }
 }
 
@@ -734,9 +747,6 @@ table.comparison {
   .footer {
     a {
       font-size: 23px;
-    }
-    .hidable {
-      display: none;
     }
   }
 }
