@@ -654,15 +654,14 @@ table.comparison {
     color: #555;
 
     &.nav-link {
-      margin-left: 2em;
+      margin-left: 2.5em;
     }
     &:hover {
       color: #016fde;
     }
     .fa {
       margin-right: 5px;
-    }
-    .fa-book {
+      font-size: 24px;
       position: relative;
       top: 3px;
     }
@@ -687,8 +686,11 @@ table.comparison {
 
 @media(max-width: 600px) {
   .header {
-    .nav-link {
-      font-size: 24px;
+    a.nav-link {
+      margin-left: 3em;
+    }
+    .fa {
+      font-size: 24px !important;
     }
     .showable {
       display: inherit !important;
