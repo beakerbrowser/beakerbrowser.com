@@ -34,7 +34,7 @@ Here is an example `index.html` to get you started:
 And here are the images that it references (place them at the top-level of the archive):
 
  - [favicon.png](/img/favicon.png)
- - [logo.png](/img/logo/256x256.png)
+ - [beaker.png](/img/logo/256x256.png)
 
 <hr class="nomargin">
 
