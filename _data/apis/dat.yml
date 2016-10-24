@@ -1,55 +1,70 @@
 toplevel_methods:
   -
-    name: "dat.createArchive()"
-    signature: "dat.createArchive(opts?: Object): DatArchive"
+    name: "dat.readFile()"
+    signature: |
+      dat.readFile(url: string, opts?: String|Object):
+        Promise&lt;string|ArrayBuffer&gt;
+    experimental: true
     desc: |
-      Create a new dat archive, and return the instance.
+      Reads the file's contents.
+
+      - url. The URL of the file to read. This must be a dat:// URL.
+      - opts.version. String. Which version of the file to read? Refers to the name of a checkpoint. If unspecified, defaults to latest.
+      - opts.encoding
+        - 'utf8' / 'utf-8' (default). Return value will be a string.
+        - 'base64'. Return value will be a string.
+        - 'hex'. Return value will be a string.
+        - 'binary'. Return value will be an ArrayBuffer.
+        - If `opts` is a string, it is specifying the encoding.
+      - opts.timeout. Number. How long, in ms, to wait for a response? Default 5000.
+
+      ```js
+      archive.readFile('dat://.../picture.png').then(arrayBuf => {
+        var blob = new Blob([arrayBuf], {type: 'image/png'})
+        document.querySelector('img').src = URL.createObjectURL(blob)
+      })
+      
+      archive.readFile('dat:/.../picture.png', 'base64').then(str => {
+        document.querySelector('img').src = 'data:image/png;base64,'+str
+      })
+      ```
+  -
+    name: "dat.readDirectory()"
+    signature: "dat.readDirectory(url: string, opts?: Object): Promise&lt;Array&lt;String&gt;&gt;"
+    experimental: true
+    desc: |
+      Reads the contents of a directory.
+      Returns an object listing the files and folders in the directory, excluding '.' and '..'.
+
+      - url. The URL of the directory to read. This must be a dat:// URL.
+      - opts.version. String. Which version of the file to read? Refers to the name of a checkpoint. If unspecified, defaults to latest.
+      - opts.timeout. Number. How long, in ms, to wait for a response? Default 5000.
+  -
+    name: "dat.createArchive()"
+    signature: "dat.createArchive(): Promise&lt;string&gt;"
+    notyet: true
+    desc: |
+      Create a new dat archive, and return the URL.
       The archive is sandboxed to only access to files within it.
 
       Requires `datWrite` permission.
-
-      - opts.versioned. Boolean. Should the archive retain old versions of files? Default false.
-        - If true, `readFile` and `readDirectory` will be able to read previous versions of the archive.
-        - If false, `getHistory()` will still show the history of changes. However, checkpoints will be disabled, and old versions of the files will not be available.
-  -
-    name: "dat.openArchive()"
-    signature: "dat.openArchive(url: string): DatArchive"
-    desc: |
-      Open an existing dat archive by its URL, and return the instance.
-      The archive is sandboxed to only access to files within it.
-      The browser will automatically download updates to the archive from the network, if they are available.
   -
     name: "dat.deleteArchive()"
     signature: "dat.deleteArchive(url: string): void"
+    notyet: true
     desc: |
       Mark the given archive for deletion.
-      Destroys any open `DatArchive` instances of the archive.
-
       The archive will not be deleted immediately, but put into the cache system where it can be cleaned.
-      Calling `openArchive()` on the archive's URL will "undelete" the archive.
-datarchive_properties:
   -
-    name: "archive.url"
-    signature: "archive.url: string readonly"
-    desc: The base URL of the archive.
-  -
-    name: "archive.isVersioned"
-    signature: "archive.isVersioned: boolean readonly"
-    desc: |
-      Does this archive retain old versions of files?
-      If true, `readFile` and `readDirectory` will support the `version` parameter, and the checkpoint methods will be available.
-datarchive_methods:
-  -
-    name: "archive.stat()"
-    signature: "archive.stat(path: string, opts?: Object): Promise&lt;Object&gt;"
+    name: "dat.stat()"
+    signature: "dat.stat(url: string, opts?: Object): Promise&lt;Object&gt;"
+    notyet: true
     desc: |
       Fetches information about the file or directory at 'path'.
       The promise will reject if no file or directory is found.
 
-      - path. Where to write the data. This is a relative path to the archive root.
-      - opts.version. String or Number. Which version of the file to read? Defaults to latest.
-        - String: refers to the name of a checkpoint
-        - Number: refers to the index of an entry in history
+      - url. The URL of the file/directory to stat. This must be a dat:// URL.
+      - opts.version. String. Which version of the file to read? Refers to the name of a checkpoint. If unspecified, defaults to latest.
       - opts.downloadedBlocks. Boolean. Count how many blocks are downloaded? Causes the `downloadedBlocks` attribute to be populated. Default false.
       - opts.timeout. Number. How long, in ms, to wait for a response? Default 5000. 
 
@@ -67,40 +82,13 @@ datarchive_methods:
       }
       ```
   -
-    name: "archive.readFile()"
-    signature: "archive.readFile(path: string, opts?: String|Object): Promise&lt;string|ArrayBuffer&gt;"
-    desc: |
-      Reads the file's contents.
-
-      - path. Where to read the data. This is a relative path to the archive root.
-      - opts.version. String or Number. Which version of the file to read? Defaults to latest.
-        - String: refers to the name of a checkpoint
-        - Number: refers to the index of an entry in history
-        - Only available if archive.isVersioned is true.
-      - opts.encoding
-        - 'utf8' / 'utf-8' (default). Return value will be a string.
-        - 'base64'. Return value will be a string.
-        - 'hex'. Return value will be a string.
-        - 'binary'. Return value will be an ArrayBuffer.
-        - If `opts` is a string, it is specifying the encoding.
-      - opts.timeout. Number. How long, in ms, to wait for a response? Default 5000.
-
-      ```js
-      archive.readFile('picture.png').then(arrayBuf => {
-        var blob = new Blob([arrayBuf], {type: 'image/png'})
-        document.querySelector('img').src = URL.createObjectURL(blob)
-      })
-      archive.readFile('picture.png', 'base64').then(str => {
-        document.querySelector('img').src = 'data:image/png;base64,'+str
-      })
-      ```
-  -
-    name: "archive.writeFile()"
-    signature: "archive.writeFile(path: string, data: string|ArrayBuffer, opts?: Object|String): Promise&lt;void&gt;"
+    name: "dat.writeFile()"
+    signature: "dat.writeFile(url: string, data: string|ArrayBuffer, opts?: Object|String): Promise&lt;void&gt;"
+    notyet: true
     desc: |
       Replaces the file's contents with 'data'.
 
-      - path. Where to write the data. This is a relative path to the archive root.
+      - url. The URL of the file to write. This must be a dat:// URL.
       - data. The data to be written.
       - opts.encoding
         - 'utf8' / 'utf-8'. Data must be a string. (This is the default value if data is a string.)
@@ -112,87 +100,61 @@ datarchive_methods:
       Requires `datWrite` permission, and the app must be the creator of the archive.
 
       ```js
-      archive.writeFile('hello.txt', 'world', 'utf8').then(...)
+      archive.writeFile('dat://.../hello.txt', 'world', 'utf8').then(...)
       ```
   -
-    name: "archive.deleteFile()"
-    signature: "archive.deleteFile(path: string): Promise&lt;void&gt;"
+    name: "dat.deleteFile()"
+    signature: "dat.deleteFile(url: string): Promise&lt;void&gt;"
+    notyet: true
     desc: |
-      Deletes the file at 'path'.
+      Deletes the file at 'url'.
       The promise will reject if no file is found, or if the target path is a directory.
       
-      - path. Which file to delete. This is a relative path to the archive root.
+      - url. The URL of the file to delete. This must be a dat:// URL.
 
       Requires `datWrite` permission, and the app must be the creator of the archive.
   -
-    name: "archive.readDirectory()"
-    signature: "archive.readDirectory(path: string, opts?: Object): Promise&lt;Array&lt;String&gt;&gt;"
+    name: "dat.createDirectory()"
+    signature: "dat.createDirectory(url: string): Promise&lt;void&gt;"
+    notyet: true
     desc: |
-      Reads the contents of a directory.
-      Returns an array of the names of the files in the directory, excluding '.' and '..'.
+      Creates a new directory at 'url'.
+      The promise will reject if there is already a file or directory at 'url', or if the containing directory-tree does not yet exist.
 
-      - path. Which directory to read. This is a relative path to the archive root.
-      - opts.version. String or Number. Which version of the file to read? Defaults to latest.
-        - String: refers to the name of a checkpoint
-        - Number: refers to the index of an entry in history
-        - Only available if archive.isVersioned is true.
-      - opts.timeout. Number. How long, in ms, to wait for a response? Default 5000.
-  -
-    name: "archive.createDirectory()"
-    signature: "archive.createDirectory(path: string): Promise&lt;void&gt;"
-    desc: |
-      Creates a new directory at 'path'.
-      The promise will reject if there is already a file or directory at 'path', or if the containing directory-tree does not yet exist.
-
-      - path. Which directory to create. This is a relative path to the archive root.
+      - url. The URL of the directory to create. This must be a dat:// URL.
 
       Requires `datWrite` permission, and the app must be the creator of the archive.
   -
-    name: "archive.deleteDirectory()"
-    signature: "archive.deleteDirectory(path: string): Promise&lt;void&gt;"
+    name: "dat.deleteDirectory()"
+    signature: "dat.deleteDirectory(url: string): Promise&lt;void&gt;"
+    notyet: true
     desc: |
-      Deletes the directory at 'path'.
-      The promise will reject if there is not a directory at 'path', or if the directory is not empty.
+      Deletes the directory at 'url'.
+      The promise will reject if there is not a directory at 'url', or if the directory is not empty.
 
-      - path. Which directory to create. This is a relative path to the archive root.
+      - url. The URL of the directory to delete. This must be a dat:// URL.
 
       Requires `datWrite` permission, and the app must be the creator of the archive.
   -
-    name: "archive.getURL()"
-    signature: "archive.getURL(path?: string): string"
-    desc: |
-      Returns the URL of the archive.
-      If a file-path is included, it will be included in the URL.
-      
-      - path. The file-path to include in the url. Defaults to '/'. Can also include a specific version, at the end.
-
-      ```js
-      // Get the URL of the archive or files
-      archive.getURL() // => 'dat://{hash}'
-      archive.getURL('hello.txt') // => 'dat://{hash}/hello.txt'
-
-      // Get a versioned URL for the archive or files
-      archive.getURL('@1.0.0') // => 'dat://{hash}@1.0.0'
-      archive.getURL('hello.txt@1.0.1') // => 'dat://{hash}/hello.txt@1.0.1'
-      ```
-  -
-    name: "archive.getHistory()"
-    signature: "archive.getHistory(opts?: Object): Promise&lt;Array&lt;Object&gt;&gt;"
+    name: "dat.getHistory()"
+    signature: "dat.getHistory(url: string, opts?: Object): Promise&lt;Array&lt;Object&gt;&gt;"
+    notyet: true
     desc: |
       Fetch the history of changes to this archive.
 
+      - url. The URL of the archive to read. This must be a dat:// URL.
       - opts.offset. Optional number, where in the history to start reading.
       - opts.limit. Optional number, how many entries to include.
   -
-    name: "archive.getCheckpoints()"
-    signature: "archive.getCheckpoints(opts?: Object): Promise&lt;Array&lt;Object&gt;&gt;"
+    name: "dat.getCheckpoints()"
+    signature: "dat.getCheckpoints(url: string, opts?: Object): Promise&lt;Array&lt;Object&gt;&gt;"
+    notyet: true
     desc: |
       Fetch the checkpoints in this archives history.
 
+      - url. The URL of the archive to read. This must be a dat:// URL.
       - opts.offset. Optional number, where in the history to start reading.
       - opts.limit. Optional number, how many entries to include.
-
-      Only available if archive.isVersioned is true.
 
       Return objects:
 
@@ -205,31 +167,40 @@ datarchive_methods:
       }
       ```
   -
-    name: "archive.writeCheckpoint()"
-    signature: "archive.writeCheckpoint(name: string, description?: string): Promise&lt;void&gt;"
+    name: "dat.writeCheckpoint()"
+    signature: "dat.writeCheckpoint(url: string, name: string, description?: string): Promise&lt;void&gt;"
+    notyet: true
     desc: |
       Writes a version checkpoint to the archive's history.
 
+      - url. The URL of the archive to update. This must be a dat:// URL.
       - name. The version-name of the checkpoint. Can be any string. If the name has been used before, checkpoint() will fail.
       - description. Optional, a message to accompany the checkpoint.
 
-      Only available if archive.isVersioned is true.
       Requires `datWrite` permission, and the app must be the creator of the archive.
 
       ```js
       // Write new versions
-      archive.writeCheckpoint('1.0.0')
-        .then(() => archive.writeFile('hello.txt', 'web!!', 'utf8'))
-        .then(() => archive.writeCheckpoint('1.0.1'))
+      archive.writeCheckpoint('dat://.../', '1.0.0')
+        .then(() => archive.writeFile('dat://.../hello.txt', 'web!!', 'utf8'))
+        .then(() => archive.writeCheckpoint('dat://.../', '2.0.0'))
       ```
   -
-    name: "archive.serve()"
-    signature: "archive.serve(): Promise&lt;void&gt;"
+    name: "dat.serve()"
+    signature: "dat.serve(url: string): Promise&lt;void&gt;"
+    notyet: true
     desc: |
       Begin uploading the archive's contents to the network.
 
+      - url. The URL of the archive to serve. This must be a dat:// URL.
+
       Requires `datUpload` permission, and the app must be the creator of the archive.
   -
-    name: "archive.unserve()"
-    signature: "archive.unserve(): Promise&lt;void&gt;"
-    desc: Stop uploading the archive's contents.
+    name: "dat.unserve()"
+    signature: "dat.unserve(url: string): Promise&lt;void&gt;"
+    notyet: true
+    desc: |
+    
+      Stop uploading the archive's contents.
+
+      - url. The URL of the archive to unserve. This must be a dat:// URL.

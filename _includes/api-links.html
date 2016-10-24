@@ -1,5 +1,10 @@
 <ul>
 {% for item in include.items %}
-  <li><a href="#{{ item.name | slugify }}">{{ item.name }}</a></li>
+  <li>
+    <a href="#{{ item.name | slugify }}" {% if item.notyet %}class="muted"{% endif %}>
+      {% if item.experimental %}<i class="fa fa-flask" title="Experimental. API may change"></i>{% endif %}
+      {{ item.name }}
+    </a>
+  </li>
 {% endfor %}
 </ul>
