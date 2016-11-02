@@ -30,9 +30,3 @@ attributes:
       - `"Bob Roberts <bob@roberts.com>"`
       - `"Bob Roberts (https://roberts.com/bob)"`
       - `"Bob Roberts <bob@roberts.com> (https://roberts.com/bob)"`
-  -
-    name: ".permissions"
-    desc: |
-      A list of additional permissions that the application requires.
-      Should be an array of strings.
-      For a list of valid permission names, **[see the documentation on Permissions](/docs/apis/permissions.html)**.

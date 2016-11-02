@@ -17,5 +17,4 @@ title:    Documentation
 #### Web APIs
 
 <a class="btn btn-block" href="/docs/apis/manifest.html"><i class="fa fa-map-o" aria-hidden="true"></i> App Manifest</a>
-<a class="btn btn-block" href="/docs/apis/permissions.html"><i class="fa fa-key" aria-hidden="true"></i> Permissions</a>
 <a class="btn btn-block" href="/docs/apis/dat.html"><i class="fa fa-share-alt" aria-hidden="true"></i> Dat API</a>

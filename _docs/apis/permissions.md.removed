@@ -1,7 +1,5 @@
 ---
 title:    Permissions
-category: Web APIs
-order:    2
 ---
 
 Some APIs require additional permissions for the application to use them.

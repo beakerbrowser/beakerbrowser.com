@@ -33,19 +33,18 @@ Dat archives can be used to save data locally for an application, or to publish 
 
 ```javascript
 // Create a new archive
-var archiveURL = dat.createArchive()
+var archiveURL = await dat.createArchive({ title: 'My Dat' })
 archiveURL // => 'dat://{hash}/'
 
 // Read/write files
-dat.writeFile(archiveURL + 'hello.txt', 'world')
-dat.readFile(archiveURL + 'hello.txt').then(str => {
-  console.log(str) // => 'world'
-})
+await dat.writeFile(archiveURL + 'hello.txt', 'world')
+var str = await dat.readFile(archiveURL + 'hello.txt')
+console.log(str) // => 'world'
 
 // Write new versions
-dat.writeCheckpoint(archiveURL, '1.0.0')
-  .then(() => dat.writeFile(archiveURL + 'hello.txt', 'web!!'))
-  .then(() => dat.writeCheckpoint(archiveURL, '2.0.0'))
+await dat.writeCheckpoint(archiveURL, '1.0.0')
+await dat.writeFile(archiveURL + 'hello.txt', 'web!!')
+await dat.writeCheckpoint(archiveURL, '2.0.0')
 
 // Serve the archive on the network
 // (by default, the archive is not served)
@@ -59,28 +58,8 @@ dat.serve(archiveURL)
 This API is only available to apps served over `dat://`.
 By default, any `dat://` app can read other dat-archives via HTML embeds, Ajax, or the `dat` read commands.
 
-To write and upload archives, the app must include a `dat.json` manifest file with the appropriate permissions specified.
-The user will be prompted whether to allow these permissions.
-
-An example manifest:
-
-```json
-{
-  "title": "My App",
-  "description": "A simple example application",
-  "permissions": ["datWrite", "datUpload"]
-}
-```
-
-The `dat` permissions include the following:
-
- - `datWrite`: Can use createArchive, writeFile, writeCheckpoint, and other write methods. 
- - `datUpload`: Can use serve and unserve.
-
-They will be presented to the user as the following requests:
-
- - `datWrite`: "Save files to your hard-drive"
- - `datUpload`: "Serve files on the network" 
+An app can only write to archives that it created.
+The user will be prompted to confirm every dat creation, and may deny the site's request.
 
 <hr class="nomargin">
 
@@ -89,14 +68,13 @@ They will be presented to the user as the following requests:
 Archives are either permanent or temporary.
 Archives that are created or opened via `dat` are permanent.
 All other archives (downloaded by browsing, HTML embeds, or Ajax) are temporary and may be automatically deleted.
-A permanent archive can be made temporary by calling `dat.deleteArchive()` on it, and a temporary archive can be made permanent by calling `dat.openArchive()` on it.
+A permanent archive can be made temporary by calling `dat.deleteArchive()` on it.
 
 Behind the scenes, archives have "claims" against them by applications.
-Calling `openArchive()` adds a claim by the calling app, while `deleteArchive()` removes that claim.
+Calling `createArchive()` adds a claim by the calling app, while `deleteArchive()` removes that claim.
 An archive with no claims is temporary, and subject to cleanup.
 
-By default, apps are limited to 100MB of storage.
-Their claimed archives - that is, archives that are created or opened by `dat` - count against this quota.
+By default, apps are limited to 100MB of storage per archive.
 When the limit is reached, the user will be prompted to allow more disk-usage.
 Until this is granted, all writes will fail, and all downloads will pause.
 Files that are downloaded by Ajax or HTTP embeds do not count against this quota.
