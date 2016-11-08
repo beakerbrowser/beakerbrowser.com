@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Beaker | {{ page.title | default: "If it ain't P2P, it ain't free." }}</title>
+        <title>Beaker | {{ page.title | default: "An experimental P2P browser" }}</title>
         <meta name="viewport" content="width=device-width">
 
         <!-- Custom CSS -->
@@ -25,13 +25,13 @@
 
       <div class="site">
         <div class="header">
-          <a href="/"><img src="/img/logo/32x32.png"></a>
-          <a href="/"><h1 class="title">Beaker Browser</h1></a>
           <div class="flex-spacer"></div>
-          <a class="nav-link" href="/docs"><span class="fa fa-book showable"></span> <span class="hidable">Docs</span></a>
+          <a class="nav-link {% if page.url == '/' %}current{% endif %}" href="/"><span class="fa fa-home showable"></span> <span class="hidable">Home</span></a>
+          <a class="nav-link {% if page.url != '/' %}current{% endif %}" href="/docs"><span class="fa fa-book showable"></span> <span class="hidable">Docs</span></a>
           <a class="nav-link hidable" href="https://community.beakerbrowser.com/"><span>Discuss</span></a>
           <a class="nav-link" href="https://github.com/beakerbrowser/beaker"><span class="fa fa-github"></span></a>
           <a class="nav-link" href="https://twitter.com/beakerbrowser"><span class="fa fa-twitter"></span></a>
+          <div class="flex-spacer"></div>
         </div>
 
         {{ content }}
