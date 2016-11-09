@@ -1,20 +1,14 @@
 ---
 title:    Domain Names
-category: Guides
-order:    5
+order:    4
+category: Dat
 ---
 
-<span class="label label-gray">Guide</span>
-<span class="label label-yellow">Difficulty: Intermediate</span>
-&nbsp;<small class="muted">You will need to know how to create DNS records.</small>
-
-<hr class="nomargin">
-
-You can use DNS to give your Hyperdrive site a nice, human-readable name.
-This has the added benefit of making a Hyperdrive site reconfigurable.
+You can use DNS to give your Dat site a nice, human-readable name.
+This has the added benefit of making a Dat site reconfigurable.
 If (for instance) you lose your site's private key, you can create a new copy of the site with a new keypair, and update the DNS record.
 
-To use DNS, add a TXT record to your domain name with the full URL of your Hyperdrive site.
+To use DNS, add a TXT record to your domain name with the full URL of your Dat site.
 For example:
 
 ```
@@ -37,10 +31,3 @@ If you're unsure about the risk, don't use this DNS feature.
 
 **Note**: If you put your URL in a DNS record, it will no longer be confidential.
 Don't give a domain name to any site you want to keep secret.
-
-<hr class="nomargin">
-
-#### See also
-
-<a class="btn btn-block" href="/docs/guides/create-a-website.html"><i class="fa fa-file-code-o" aria-hidden="true"></i> Create a Website</a>
-<a class="btn btn-block" href="/docs/cli.html"><i class="fa fa-terminal" aria-hidden="true"></i> Command Line Tools</a>

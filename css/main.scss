@@ -222,8 +222,8 @@ img.bordered {
   min-height: 340px;
 
   .doc-nav {
-    flex: 0 0 160px;
-    font-size: 15px;
+    flex: 0 0 180px;
+    font-size: 16px;
 
     .doc-nav-section {
       margin-bottom: 1em;
@@ -246,14 +246,14 @@ img.bordered {
     display: none;
   }
   .doc-body {
-    font-size: 16px;
+    font-size: 18px;
     max-width: 720px;
 
     h2, h3, h4, p {
       margin: 22.5px 0;
     }
     p, li {
-      line-height: 1.4;
+      line-height: 1.75;
     }
     h2 { font-size: 2em; font-weight: normal; }
     h3 { font-size: 1.5em; font-weight: normal; }
@@ -649,7 +649,7 @@ table.comparison {
 
 .header {
   display: flex;
-  background: #fafafa;
+  background: #eee;
 
   a {
     line-height: 32px;

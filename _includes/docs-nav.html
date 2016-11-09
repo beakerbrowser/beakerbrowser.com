@@ -3,13 +3,19 @@
 {% for doc_group in doc_groups %}
   {% if doc_group.name != '' %}
   <div class="doc-nav-section">
-    <p><strong>{{ doc_group.name }}</strong></p>
-
     {% assign docs = doc_group.items | sort: 'order' %}
+    {% assign hasTitled = false %}
     {% for doc in docs %}
+      {% assign extension = doc.url | slice: -5, 5 %}
+      {% if extension == '.html' %}
+      {% if hasTitled == false %}
+        <p><strong>{{ doc_group.name }}</strong></p>
+        {% assign hasTitled = true %}
+      {% endif %}
       <p>
-        <a class="doc-link {% if doc.url == page.url %}current{% endif %}" href="{{ doc.url | prepend: site.baseurl }}">{{ doc.title | escape }}</a>
+        <a class="doc-link {% if doc.url == page.url %}current{% endif %}" href="{{ doc.url | prepend: site.baseurl }}">{{ doc.short_title | default: doc.title | escape }}</a>
       </p>
+      {% endif %}
     {% endfor %}
   </div>
   {% endif %}
