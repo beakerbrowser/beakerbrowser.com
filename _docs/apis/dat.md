@@ -6,10 +6,15 @@ order:    3
 
 <div class="card">
   <p><strong>Summary.</strong> Read and write versioned files to archives on the user's local hard-drive, and share the archives over the network.</p>
-  <p><i class="fa fa-flask"></i> This API is under development and subject to change.</p>
 </div>
 
-Only apps served over `dat://` are able to access this API.
+
+**Note**
+
+- Only apps served over dat:// are able to access this API.
+- <i class="fa fa-flask"></i> This API is under development and subject to change.
+
+**Table of Contents**
 
 <ul class="doc-toc">
   <li>Dat API
