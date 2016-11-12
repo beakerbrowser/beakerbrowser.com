@@ -6,7 +6,7 @@ category: Dat
 ---
 
 Dat is a Peer-to-Peer Hypermedia Protocol for publishing content from any device.
-It is **Versioned, P2P, and Secure**.
+It is **versioned, P2P, and secure**.
 
 Dat enables users to generate Web sites at no cost.
 Users can host content from home, or push the files to public peers.
@@ -18,7 +18,7 @@ var archiveURL = await dat.createArchive({ title: 'My Site' })
 dat.writeFile(archiveURL + 'index.html', '<h1>Hello!</h1>')
 ```
 
-Because of Dat's unique properties, Beaker can view the files behind a site, host from the browser, or even fork the content:
+Beaker leverages Dat's unique properties to allow you to view the files behind a site, host your own content from the browser, or even fork a site.
 
 <img src="/img/screenshot-dat-viewer.png">
 <br>
@@ -31,12 +31,13 @@ Because of Dat's unique properties, Beaker can view the files behind a site, hos
   </div>
 </div>
 
-Dat is most easily described as "Git meets BitTorrent."
-It connects users in a P2P system, and distributes archives between the devices.
+Dat distributes content between users in a BitTorrent-like swarm.
+Users don't automatically share sites they download, but can opt-in to becoming a rehoster at any time.
 
-Sites are addressed by public keys, and behave like static sites with no backend.
-Dat distributes sites in a BitTorrent-like swarm.
+Sites are addressed by public keys and behave like static sites with no backend.
 If the network drops, a downloaded site will stay available from the hard-drive.
+Hosting can even happen over the WiFi.
+Cloud optional!
 <br>
 <br>
 
@@ -128,6 +129,15 @@ Checkpoints will manifest as a 'version' tag in URLs, which look like this: `dat
 Dat does not use a global blockchain or Proof-of-Work consensus.
 It is an eventually-consistent network, where each archive is controlled by its private-key holder.
 
+#### Compaction
+
+Decentralized protocols often have a problem with "unbounded growth."
+Without a way to decide what information can be deleted, the dataset grows in size indefinitely.
+
+In Dat, [Compaction](https://en.wikipedia.org/wiki/Data_compaction) will be implemented with an automatic milestone that's written every N messages.
+When the milestone is reached, the full current state of the Dat will be rewritten to the log.
+This will enable peers to seek to a modulo-N position to read the current state, thereby avoiding unbounded growth.
+
 <hr class="nomargin">
 
 ### Security Properties
@@ -170,17 +180,17 @@ Dat sites are able to access the [Dat Web API](/docs/apis/dat.html) to read and 
 As each archive behaves as an independent website, this makes it cheap and easy to publish content independently of a parent application.
 Rather than posting to a site, users can self-publish their content.
 
-#### Offline-first
+#### Offline-First
 
 Dat applications are thick-client: they run on the device, not on a host.
 Web-services are an optional dependency instead of a requirement.
-Developers are encouraged to use device APIs to store data, and P2P APIs to share, whenever possible.
+Developers are encouraged to use device APIs to store data and P2P APIs to share data whenever possible.
 
-#### Public Peering
+#### Public Peers
 
-The Dat network does not try to automatically guarantee availability.
-Publishers are in charge of hosting their archives on the network, though downloaders are empowered to rehost as well.
-Subscription-based Public Peer services should be used to help with distribution.
+The Dat network does not automatically guarantee availability.
+Publishers are in charge of hosting their archives on the network, though downloaders are empowered to rehost content as well.
+Subscription-based Public Peer services can be used to help distribute archives and provide guaranteed availability.
 
 <hr class="nomargin">
 
@@ -191,12 +201,6 @@ Subscription-based Public Peer services should be used to help with distribution
 Dat implements shortnames by writing TXT entries that contain the unshorted Dat URL.
 This is experimental, as there is currently no authentication, and so a MITM is trivial to execute.
 [Read more about how to use Dat DNS](/docs/dat/dns.html).
-
-#### Compaction
-
-Compaction will be implemented with an automatic milestone that's written every N messages.
-When the milestone is reached, the full current state of the Dat will be rewritten to the log.
-This will enable peers to seek to a modulo-N position to read the current state, thereby avoiding unbounded growth.
 
 <div class="card" style="margin: 4em 0; font-size: 105%">
   <p>
