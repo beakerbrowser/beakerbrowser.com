@@ -9,6 +9,7 @@ toplevel_methods:
 
       - opts.title. String. The title of the new archive.
       - opts.description. String. The description of the new archive.
+      - opts.serve. Boolean. If true, the archive will be hosted on the network at creation. Default false.
   -
     name: "dat.deleteArchive()"
     signature: "dat.deleteArchive(url: string): void"
@@ -41,6 +42,8 @@ toplevel_methods:
         mtime: number (timestamp) the last modification time
       }
       ```
+
+      If the archive is not found on the network, or in the local cache, this call will timeout.
   -
     name: "dat.readFile()"
     signature: |
@@ -70,6 +73,8 @@ toplevel_methods:
         document.querySelector('img').src = 'data:image/png;base64,'+str
       })
       ```
+
+      If the archive is not found on the network, or in the local cache, this call will timeout.
   -
     name: "dat.readDirectory()"
     signature: "dat.readDirectory(url: string, opts?: Object): Promise&lt;Array&lt;String&gt;&gt;"
