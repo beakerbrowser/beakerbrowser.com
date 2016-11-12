@@ -61,6 +61,11 @@ img.bordered {
   border-radius: 2px;
 }
 
+.centered {
+  display: block;
+  margin: 0 auto;
+}
+
 .label {
   display: inline-block;
   position: relative;
@@ -184,6 +189,12 @@ img.bordered {
     position: relative;
     left: 1px;
     top: -1px;
+  }
+  .fa-at, 
+  .fa-lock {
+    font-size: 42px;
+    position: relative;
+    top: 0px;
   }
   .fa-file-code-o {
     font-size: 39px;
@@ -828,8 +839,8 @@ table.comparison {
 .apis {
   position: relative;
   display: flex;
-  margin: 0px auto;
-  max-width: 600px;
+  max-width: 400px;
+  margin: 0 auto;
 
   &:before {
     content: '';
@@ -845,7 +856,7 @@ table.comparison {
     position: relative;
     flex: 1;
     text-align: center;
-    margin-bottom: 20px;    
+    margin: 0 20px;    
     z-index: 10;
 
     .orb {

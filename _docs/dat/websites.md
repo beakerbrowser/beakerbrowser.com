@@ -4,6 +4,10 @@ order:    2
 category: Dat
 ---
 
+<div class="card">
+  <p>Dat enables you to host sites instantly and for free. <a href="/docs/dat/intro.html">Read more</a>.</p>
+</div>
+
 Dat Archives behave almost exactly like HTTP/S Sites, but without dynamic backends.
 The `index.html` file acts as the front page, and other files in the archive can be referenced with relative paths.
 

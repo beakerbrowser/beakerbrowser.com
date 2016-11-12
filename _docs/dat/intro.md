@@ -5,21 +5,84 @@ order:    1
 category: Dat
 ---
 
-The Dat protocol was created with grants from the Knight and Sloan Foundations.
-It is developed by a non-profit team with a mission to advance scientific, journalistic, and civic publishing.
-Read more at [the Dat organization's website](http://datproject.org/).
+Dat is a Peer-to-Peer Hypermedia Protocol for publishing content from any device.
+It is **Versioned, P2P, and Secure**.
+
+Dat enables users to generate Web sites at no cost.
+Users can host content from home, or push the files to public peers.
+Publishing is as simple as:
+
+```javascript
+// Create a site with the Web API
+var archiveURL = await dat.createArchive({ title: 'My Site' })
+dat.writeFile(archiveURL + 'index.html', '<h1>Hello!</h1>')
+```
+
+Because of Dat's unique properties, Beaker can view the files behind a site, host from the browser, or even fork the content:
+
+<img src="/img/screenshot-dat-viewer.png">
+<br>
+<br>
+
+<div class="apis">
+  <div class="api">
+    <div class="orb"><i class="fa fa-share-alt" aria-hidden="true"></i></div>
+    <h5>P2P</h5>
+  </div>
+</div>
 
 Dat is most easily described as "Git meets BitTorrent."
-It connects users in a P2P system, and distributes archives between them.
-It is:
+It connects users in a P2P system, and distributes archives between the devices.
 
- - Versioned
- - Hostless
- - and Secure
+Sites are addressed by public keys, and behave like static sites with no backend.
+Dat distributes sites in a BitTorrent-like swarm.
+If the network drops, a downloaded site will stay available from the hard-drive.
+<br>
+<br>
 
+<div class="apis">
+  <div class="api">
+    <div class="orb"><i class="fa fa-lock" aria-hidden="true"></i></div>
+    <h5>Secure</h5>
+  </div>
+</div>
+
+Dat sites are secret, and their network traffic is encrypted.
+Only users that possess a site's URL can access the files or metadata.
+This makes it very easy for users to share personal files with each other.
+[Read more.](#security-properties)
+
+For extra security, Dat sites are sandboxed away from the network.
+Their code can't access remote hosts, unless they request special permission.
+
+<br>
+<img class="bordered centered" src="/img/screenshot-request-network.png">
+<br>
+<br>
+
+<div class="apis">
+  <div class="api">
+    <div class="orb"><i class="fa fa-at" aria-hidden="true"></i></div>
+    <h5>Versioned</h5>
+  </div>
+</div>
+
+Internally, Dats use the same concepts behind [Certificate Transparency](https://www.certificate-transparency.org/) to create an cryptographically-auditable change-log.
+Checkpoints let authors specify points in the log where the version has changed.
+Along with DNS, this will enable human-readable, versioned Dat URLs, such as: `dat://beakerbrowser.com@2.1.0/index.html`
+
+This is especially useful for publishing javascript modules:
+
+```javascript
+import jquery from 'dat://code.jquery.com@3.1.1/jquery.min.js'
+```
+
+<br>
 <hr class="nomargin">
 
 ### The Protocol
+
+#### Archives
 
 A Dat "archive" behaves like a self-contained folder of files.
 The archive is addressed by a public key.
@@ -134,3 +197,10 @@ This is experimental, as there is currently no authentication, and so a MITM is 
 Compaction will be implemented with an automatic milestone that's written every N messages.
 When the milestone is reached, the full current state of the Dat will be rewritten to the log.
 This will enable peers to seek to a modulo-N position to read the current state, thereby avoiding unbounded growth.
+
+<div class="card" style="margin: 4em 0; font-size: 105%">
+  <p>
+    Dat was created with grants from the Knight and Sloan Foundations.
+    Read more at <a href="http://datproject.org/">the Dat organization's website</a>.
+  </p>
+</div>

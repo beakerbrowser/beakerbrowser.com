@@ -4,6 +4,10 @@ order:    3
 category: Dat
 ---
 
+<div class="card">
+  <p>Dat enables you to host sites instantly and for free. <a href="/docs/dat/intro.html">Read more</a>.</p>
+</div>
+
 Sites shared with the Dat protocol are, by default, secret.
 Their URLs are unguessable keys which are used to encrypt the peer-to-peer traffic.
 This means, if you only share the URL with your friends, then nobody else will have access to the files, or know what you are transferring.
