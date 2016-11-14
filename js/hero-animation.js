@@ -27,15 +27,36 @@ function init() {
   scene.add( light );
 
   var material = new THREE.MeshLambertMaterial( {color: 0x016fde, shading: THREE.SmoothShading, reflectivity: 0} );
-  object = new THREE.Mesh( new THREE.SphereGeometry( 360, 30, 15 ), material );
+  object = new THREE.Mesh( new THREE.SphereGeometry( 360, 40, 20 ), material );
   object.position.set( 0, 0, 0 );
   scene.add( object );
 
-  var material = new THREE.MeshBasicMaterial( {color: 0xffffff, wireframe: true, opacity: 0.25, transparent: true} );
-  object = new THREE.Mesh( new THREE.SphereGeometry( 368, 20, 10 ), material );
+  var material = new THREE.MeshBasicMaterial( {color: 0xffffff, wireframe: true, opacity: 0.1, transparent: true} );
+  object = new THREE.Mesh( new THREE.SphereGeometry( 368, 50, 25 ), material );
   wiremeshObjs.push(object)
   object.position.set( 0, 0, 0 );
   scene.add( object );
+
+  // var geometrySphere = new THREE.SphereGeometry( 368, 20, 10 )
+  // geometrySphere.computeLineDistances()
+  // object =  new THREE.LineSegments( geometrySphere, new THREE.LineDashedMaterial( { color: 0xffffff, dashSize: 50, gapSize: 20, linewidth: 2 } ) );//new THREE.Mesh( wireGeometry, material );
+  // wiremeshObjs.push(object)
+  // object.position.set( 0, 0, 0 );
+  // scene.add( object );
+
+  var material = new THREE.MeshBasicMaterial( {color: 0x016fde, wireframe: true, opacity: 0.05, transparent: true} );
+  object = new THREE.Mesh( new THREE.SphereGeometry( 390, 50, 25 ), material );
+  wiremeshObjs.push(object)
+  object.position.set( 0, 0, 0 );
+  scene.add( object );
+
+  // var geometrySphere = new THREE.SphereGeometry( 368, 50, 25 )
+  // geometrySphere.computeLineDistances()
+  // object =  new THREE.LineSegments( geometrySphere, new THREE.LineDashedMaterial( { color: 0xffffff, dashSize: 5, gapSize: 50, linewidth: 5 } ) );//new THREE.Mesh( wireGeometry, material );
+  // wiremeshObjs.push(object)
+  // object.position.set( 0, 0, 0 );
+  // scene.add( object );
+
 
   var textureLoader = new THREE.TextureLoader();
   var texture = textureLoader.load( "/img/logo/256x256-icon.png" );
@@ -69,7 +90,7 @@ function render() {
   var timer = Date.now() * 0.00005;
 
   // camera.position.x = 600;
-  camera.position.z = 1000;
+  camera.position.z = 1100;
 
   camera.lookAt( scene.position );
 
