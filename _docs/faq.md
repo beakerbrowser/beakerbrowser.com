@@ -4,6 +4,9 @@ order:    4
 category: Documentation
 ---
 
+Is your question not answered here?
+**[Open an issue](https://github.com/beakerbrowser/FAQ/issues)** and let us know.
+
 ### What are Archives?
 
 Dat Archives are bundles of files that are shared in a Peer-to-Peer network.

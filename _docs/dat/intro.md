@@ -200,12 +200,11 @@ Subscription-based Public Peer services can be used to help distribute archives 
 The Beaker team chose the Dat protocol for the following reasons:
 
 <table class="doc-table">
-  <tr><td>Versioning</td><td>Dat Archives have versioning built-in with a crytpographically-auditable changelog, inspired by <a href="https://www.certificate-transparency.org/">Certificate Transparency</a>. Despite claims in the whitepaper, IPFS does not appear to have versioning implemented in the protocol.</td></tr>
+  <tr><td>Versioning</td><td>Dat Archives have versioning built-in with a crytpographically-auditable changelog, inspired by <a href="https://www.certificate-transparency.org/">Certificate Transparency</a>. IPFS does not appear to have versioning implemented in the protocol.</td></tr>
   <tr><td>Secrecy</td><td>Dat encrypts the network, such that archives can be shared secretly without additional work by the user.</td></tr>
   <tr><td>URL Format</td><td>Dat URLs are designed to work like HTTP/S URLs, with the public-key acting as a 1:1 replacement for the hostname. IPFS uses a non-standard URL format, <code>fs:/ipfs/{hash}</code>, which we think is an unnecessary deviation that will confuse users.</td></tr>
   <tr><td>Embedded</td><td>Dat's implementation can be embedded in Beaker, whereas IPFS requires an external daemon.</td></tr>
-  <tr><td>No Blockchain</td><td>IPFS has plans to integrate a <a href="https://www.reddit.com/r/ethereum/comments/53rdjx/ipfs_filecoin_to_be_built_on_ethereum/">crypto-currency payments protocol using Ethereum</a>. We think this is unnecessarily complex, both for the user and for the network, and we don't plan to integrate a Blockchain into Beaker.</td></tr>
-  <tr><td>Non-profit</td><td>The Dat organization is a grant-funded non-profit.</td></tr>
+  <tr><td>No Blockchain</td><td>IPFS has plans to integrate a <a href="https://www.reddit.com/r/ethereum/comments/53rdjx/ipfs_filecoin_to_be_built_on_ethereum/">crypto-currency payments protocol using Ethereum</a>. We believe that there are simpler ways to achieve the same goals, without the overhead of Proof-of-Work.</td></tr>
 </table>
 
 We'll keep this list updated, and reconsider our decision, as IPFS evolves.
