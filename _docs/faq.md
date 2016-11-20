@@ -106,8 +106,8 @@ It doesn't make any changes to Web platform, except for its added Peer-to-Peer f
 
 ### Will P2P ever be adopted by other browsers?
 
-We have no idea, but our mission is to reach as many people as possible.
-We'll work with standards bodies to make that happen.
+We hope so.
+Our mission is to create working proofs that will influence standards bodies and push these features out to mainstream browsers.
 
 <hr class="nomargin">
 
