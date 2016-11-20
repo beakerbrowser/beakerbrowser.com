@@ -23,29 +23,7 @@
     </head>
     <body class="layout-{{ page.layout }}">
 
-      <div class="site">
-        <div class="header">
-          <div class="flex-spacer"></div>
-          <a class="nav-link {% if page.url == '/' %}current{% endif %}" href="/"><span class="fa fa-home showable"></span> <span class="hidable">Home</span></a>
-          <a class="nav-link {% if page.url != '/' %}current{% endif %}" href="/docs"><span class="fa fa-book showable"></span> <span class="hidable">Docs</span></a>
-          <a class="nav-link emergency-hidable" href="https://community.beakerbrowser.com/"><span class="fa fa-comments showable"></span> <span class="hidable">Discuss</span></a>
-          <a class="nav-link" href="https://github.com/beakerbrowser/beaker"><span class="fa fa-github"></span></a>
-          <a class="nav-link" href="https://twitter.com/beakerbrowser"><span class="fa fa-twitter"></span></a>
-          <div class="flex-spacer"></div>
-        </div>
-
         {{ content }}
-
-        <div class="footer">
-          <div class="flex-spacer"></div>
-          <a href="/"><span class="fa fa-home showable"></span> <span class="hidable">Home</span></a>
-          <a class="nav-link" href="/docs"><span class="fa fa-book showable"></span> <span class="hidable">Docs</span></a>
-          <a class="nav-link hidable" href="https://community.beakerbrowser.com/"><span>Discuss</span></a>
-          <a class="nav-link" href="https://github.com/beakerbrowser/beaker"><span class="fa fa-github"></span></a>
-          <a class="nav-link" href="https://twitter.com/beakerbrowser"><span class="fa fa-twitter"></span></a>
-          <div class="flex-spacer"></div>
-        </div>
-      </div>
 
     </body>
 </html>

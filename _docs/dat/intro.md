@@ -6,17 +6,10 @@ category: Dat
 ---
 
 Dat is a Peer-to-Peer Hypermedia Protocol for publishing content from any device.
-It is **versioned, P2P, and secure**.
+It is **Versioned, P2P, and Secure**.
 
 Dat enables users to generate Web sites at no cost.
 Users can host content from home, or push the files to public peers.
-Publishing is as simple as:
-
-```javascript
-// Create a site with the Web API
-var archiveURL = await dat.createArchive({ title: 'My Site' })
-dat.writeFile(archiveURL + 'index.html', '<h1>Hello!</h1>')
-```
 
 Beaker leverages Dat's unique properties to allow you to view the files behind a site, host your own content from the browser, or even fork a site.
 
@@ -37,7 +30,13 @@ Users don't automatically share sites they download, but can opt-in to becoming 
 Sites are addressed by public keys and behave like static sites with no backend.
 If the network drops, a downloaded site will stay available from the hard-drive.
 Hosting can even happen over the WiFi.
-Cloud optional!
+
+```javascript
+// Create a site with the Web API
+var archiveURL = await dat.createArchive({ title: 'My Site' })
+dat.writeFile(archiveURL + 'index.html', '<h1>Hello!</h1>')
+```
+
 <br>
 <br>
 
