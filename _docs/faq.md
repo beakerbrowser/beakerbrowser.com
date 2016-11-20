@@ -1,7 +1,6 @@
 ---
 title:    FAQ
-order:    4
-category: Documentation
+order:    2
 ---
 
 Is your question not answered here?

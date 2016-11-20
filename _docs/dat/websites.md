@@ -5,7 +5,7 @@ category: Dat
 ---
 
 <div class="card">
-  <p>Dat enables you to host sites instantly and for free. <a href="/docs/dat/intro.html">Read more</a>.</p>
+  <p>Dat enables you to host sites instantly and for free. <a href="/docs/intro.html">Read more</a>.</p>
 </div>
 
 Dat Archives behave almost exactly like HTTP/S Sites, but without dynamic backends.

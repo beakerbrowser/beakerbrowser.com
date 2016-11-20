@@ -1,7 +1,7 @@
 <div class="doc-nav">
+  <a href="/"><img src="/img/logo/48x48.png"></a>
 {% assign doc_groups = site.docs | group_by: 'category' | sort: 'name' %}
 {% for doc_group in doc_groups %}
-  {% if doc_group.name != '' %}
   <div class="doc-nav-section">
     {% assign docs = doc_group.items | sort: 'order' %}
     {% assign hasTitled = false %}
@@ -18,7 +18,6 @@
       {% endif %}
     {% endfor %}
   </div>
-  {% endif %}
 {% endfor %}
   <div class="doc-nav-section">
     <p><strong>Links</strong></p>
