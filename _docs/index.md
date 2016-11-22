@@ -22,7 +22,7 @@ Get involved: <a href="https://github.com/beakerbrowser/beaker">On GitHub</a>, i
 #### Learn more:
 
 <a class="btn btn-block" href="/docs/dat/intro.html"><i class="fa fa-share-alt" aria-hidden="true"></i> Dat P2P Protocol</a>
-<a class="btn btn-block" href="/docs/api/dat.html"><i class="fa fa-folder" aria-hidden="true"></i> Dat Web API</a>
+<a class="btn btn-block" href="/docs/apis/dat.html"><i class="fa fa-folder" aria-hidden="true"></i> Dat Web API</a>
 <a class="btn btn-block" href="/docs/faq.html"><i class="fa fa-question-circle" aria-hidden="true"></i> Frequently Asked Questions</a>
 
 <img src="/img/screenshot-banner.png">
