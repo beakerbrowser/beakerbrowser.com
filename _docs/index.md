@@ -11,12 +11,11 @@ order:    1
 
 <ul class="icon-discs">
   <li><span class="fa fa-bullhorn"></span> Sites can be hosted for free by the user.</li>
-  <li><span class="fa fa-cube"></span> Apps can publish new sites using new Web APIs.</li>
+  <li><span class="fa fa-cube"></span> Apps can publish new sites using Web APIs.</li>
   <li><span class="fa fa-code-fork"></span> App-code can be forked from the browser.</li>
 </ul>
 
 We believe P2P hypermedia will end the dependence on hosts, and enable independent publishing for all users.
-Join our experiment and enjoy a little P2P.
 
 Get involved: <a href="https://github.com/beakerbrowser/beaker">On GitHub</a>, in the <a href="https://groups.google.com/forum/#!forum/beaker-browser">Mailing List</a>.
 
