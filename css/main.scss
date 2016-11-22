@@ -210,6 +210,18 @@ img.bordered {
   }
 }
 
+ul.icon-discs {
+  list-style: none;
+  margin-left: 1.5em;
+
+  .fa {
+    display: inline-block;
+    width: 25px;
+    text-align: center;
+    margin-right: 5px;
+  }
+}
+
 /*****************************************************************************/
 /*
 /* Layout

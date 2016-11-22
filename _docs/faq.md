@@ -31,7 +31,7 @@ You can reference specific files by putting the path at the end.
 ### Can I use DNS to create short URLs?
 
 Yes!
-You can [read the guide here](/docs/dat/dns.html).
+You can [read the guide here](/docs/dat/intro.html#experimental-behaviors).
 
 <hr class="nomargin">
 
