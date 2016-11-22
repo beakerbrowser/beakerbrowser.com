@@ -13,6 +13,7 @@ order:    1
   <li><span class="fa fa-bullhorn"></span> Sites can be hosted for free by the user.</li>
   <li><span class="fa fa-cube"></span> Apps can publish new sites using Web APIs.</li>
   <li><span class="fa fa-code-fork"></span> App-code can be forked from the browser.</li>
+  <li><span class="fa fa-history"></span> Versioned URLs can reference file history (coming soon).</li>
 </ul>
 
 We believe P2P hypermedia will end the dependence on hosts, and enable independent publishing for all users.
