@@ -16,6 +16,7 @@ order:    1
   <li><span class="fa fa-history"></span> Versioned URLs can reference file history (coming soon).</li>
 </ul>
 
+Beaker is an experimental browser with two new protocols, [IPFS](https://ipfs.io)&nbsp;and&nbsp;[Dat](/docs/dat/intro.html), which have similar features, but very different philosophies.
 We believe P2P hypermedia will end the dependence on hosts, and enable independent publishing for all users.
 
 Get involved: <a href="https://github.com/beakerbrowser/beaker">On GitHub</a>, in the <a href="https://groups.google.com/forum/#!forum/beaker-browser">Mailing List</a>.
