@@ -1,30 +1,30 @@
 ---
-title:    Beaker Browser
+title: Beaker Browser
 short_title: Introduction
-order:    1
+order: 1
 ---
 
 <a class="btn btn-primary" href="https://download.beakerbrowser.net/download/latest/osx"><i class="fa fa-apple" aria-hidden="true"></i> Download for Mac</a>
 &nbsp; <a href="https://github.com/beakerbrowser/beaker">View the Source</a>
 
-**Beaker uses Peer-to-Peer Hypermedia Protocols to decentralize the Web.**<br>
+#### Beaker uses Peer-to-Peer Hypermedia Protocols to distribute the Web.
 
+<div>
 <ul class="icon-discs">
-  <li><span class="fa fa-bullhorn"></span> Sites can be hosted for free by the user.</li>
-  <li><span class="fa fa-cube"></span> Apps can publish new sites using Web APIs.</li>
-  <li><span class="fa fa-code-fork"></span> App-code can be forked from the browser.</li>
-  <li><span class="fa fa-history"></span> Versioned URLs can reference file history (coming soon).</li>
+  <li><span class="fa fa-code-fork"></span> Forkable Sites</li>
+  <li><span class="fa fa-share-alt"></span> Independent Publishing</li>
+  <li><span class="fa fa-floppy-o"></span> Offline-first Applications</li>
+  <li><span class="fa fa-history"></span> Versioned URLs</li>
 </ul>
+</div>
 
-Beaker is an experimental browser with two new protocols, [IPFS](https://ipfs.io)&nbsp;and&nbsp;[Dat](/docs/dat/intro.html), which have similar features, but very different philosophies.
-We believe P2P hypermedia will end the dependence on hosts, and enable independent publishing for all users.
+Sites can move from peer-to-peer without interruption.
+Anybody can be a server, multiple computers can serve the same site, and there is no back end.
 
 Get involved: <a href="https://github.com/beakerbrowser/beaker">On GitHub</a>, in the <a href="https://groups.google.com/forum/#!forum/beaker-browser">Mailing List</a>.
 
-#### Learn more:
+<hr class="nomargin">
 
-<a class="btn btn-block" href="/docs/dat/intro.html"><i class="fa fa-share-alt" aria-hidden="true"></i> Dat P2P Protocol</a>
-<a class="btn btn-block" href="/docs/apis/dat.html"><i class="fa fa-folder" aria-hidden="true"></i> Dat Web API</a>
-<a class="btn btn-block" href="/docs/faq.html"><i class="fa fa-question-circle" aria-hidden="true"></i> Frequently Asked Questions</a>
-
-<img src="/img/screenshot-banner.png">
+Beaker supports the [Dat Protocol](/docs/dat/intro.html) under the `dat://` scheme, and the [IPFS Protocol](https://ipfs.io) under the `fs:/` scheme.
+Dat is built-in, and will run automatically at startup.
+IPFS requires the daemon to be active to run.

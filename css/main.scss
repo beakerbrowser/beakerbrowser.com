@@ -213,12 +213,34 @@ img.bordered {
 ul.icon-discs {
   list-style: none;
   margin-left: 1.5em;
+  margin-right: 0;
 
   .fa {
     display: inline-block;
     width: 25px;
     text-align: center;
     margin-right: 5px;
+  }
+}
+
+.team-member {
+  display: inline-flex;
+  margin-right: 50px;
+  div {
+    margin: 10px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  img {
+    width: 160px;
+    border-radius: 5px;
+  }
+  h4 {
+    margin: 10px 0 !important;
+  }
+  p {
+    margin: 0 !important;
   }
 }
 
@@ -545,10 +567,6 @@ ul.icon-discs {
 
   .column {
     flex: 1;
-
-    p {
-      padding: 0 3em;
-    }
   }
 }
 @media(max-width: 720px) {
