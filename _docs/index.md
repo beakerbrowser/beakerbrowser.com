@@ -9,16 +9,10 @@ order: 1
 
 #### Beaker uses Peer-to-Peer Hypermedia Protocols to distribute the Web.
 
-<div>
-<ul class="icon-discs">
-  <li><span class="fa fa-code-fork"></span> Forkable Sites</li>
-  <li><span class="fa fa-share-alt"></span> Independent Publishing</li>
-  <li><span class="fa fa-floppy-o"></span> Offline-first Applications</li>
-  <li><span class="fa fa-history"></span> Versioned URLs</li>
-</ul>
-</div>
-
-Sites can move from peer-to-peer without interruption.
+Free, independent sites.&nbsp;
+<span class="fa fa-code-fork"></span> Forkable.&nbsp;
+<span class="fa fa-floppy-o"></span> Offline-first.&nbsp;
+<span class="fa fa-history"></span> Versioned.&nbsp;
 Anybody can be a server, multiple computers can serve the same site, and there is no back end.
 
 Get involved: <a href="https://github.com/beakerbrowser/beaker">On GitHub</a>, in the <a href="https://groups.google.com/forum/#!forum/beaker-browser">Mailing List</a>.
