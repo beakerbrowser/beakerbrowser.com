@@ -23,7 +23,7 @@ order:    3
       <li><a href="#permissions">Permissions</a></li>
       <li><a href="#disk-usage-and-quotas">Disk Usage and Quotas</a></li>
       <li><a href="#versioning">Versioning</a></li>
-      <li><a href="#networked-archives">Networked Archives</a></li>
+      <li><a href="#networking">Networking</a></li>
       <li><a href="#special-files">Special Files</a></li>
       <li>Toplevel Methods {% include api-links.html items=site.data.apis.dat.toplevel_methods %}</li>
     </ul>
@@ -50,10 +50,6 @@ console.log(str) // => 'world'
 await dat.writeCheckpoint(archiveURL, '1.0.0')
 await dat.writeFile(archiveURL + 'hello.txt', 'web!!')
 await dat.writeCheckpoint(archiveURL, '2.0.0')
-
-// Serve the archive on the network
-// (by default, the archive is not served)
-dat.serve(archiveURL)
 ```
 
 <hr class="nomargin">
@@ -63,26 +59,26 @@ dat.serve(archiveURL)
 This API is only available to apps served over `dat://`.
 By default, any `dat://` app can read other dat-archives via HTML embeds, Ajax, or the `dat` read commands.
 
-An app can only write to archives that it created.
-The user will be prompted to confirm every dat creation, and may deny the site's request.
+An app can write to archives that it created.
+The user will be prompted to confirm permission to:
+
+ 1. Create a new dat archive
+ 2. Modify a dat archive created by another site
+
+The user must be the owner of a dat archive to modify it.
 
 <hr class="nomargin">
 
 ### Disk Usage and Quotas
 
 Archives are either permanent or temporary.
-Archives that are created or opened via `dat` are permanent.
+Archives that are created via the `dat` api are permanent.
 All other archives (downloaded by browsing, HTML embeds, or Ajax) are temporary and may be automatically deleted.
 A permanent archive can be made temporary by calling `dat.deleteArchive()` on it.
 
-Behind the scenes, archives have "claims" against them by applications.
-Calling `createArchive()` adds a claim by the calling app, while `deleteArchive()` removes that claim.
-An archive with no claims is temporary, and subject to cleanup.
-
-By default, apps are limited to 100MB of storage per archive.
+By default, archives are limited to 100MB of storage.
 When the limit is reached, the user will be prompted to allow more disk-usage.
-Until this is granted, all writes will fail, and all downloads will pause.
-Files that are downloaded by Ajax or HTTP embeds do not count against this quota.
+Until this is granted, all writes will fail.
 
 <hr class="nomargin">
 
@@ -97,13 +93,9 @@ It's recommended that you follow [semantic versioning](http://semver.org/), but 
 
 <hr class="nomargin">
 
-### Networked Archives
+### Networking
 
 All dat archives have URLs and can be distributed over the network.
-
-By default, the archives are offline.
-They can be shared between apps on your computer using the URL, but they are not accessible from outside your device.
-An archive must have `.serve()` called to be network-accessible.
 
 An archive which is opened from the network is downloaded and stored locally, and then updated in the background.
 The archive's contents may not always be findable on the network.
@@ -115,7 +107,7 @@ You can configure the timeout length in the call arguments.
 
 ### Special Files
 
-The `dat.json` file is special, and can not be read or written by the application.
+The `dat.json` file is special, and can not be read or written directly by the application.
 It is a manifest file that includes metadata and configuration.
 
 <hr class="nomargin">
