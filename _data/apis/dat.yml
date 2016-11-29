@@ -9,7 +9,6 @@ toplevel_methods:
 
       - opts.title. String. The title of the new archive.
       - opts.description. String. The description of the new archive.
-      - opts.serve. Boolean. If true, the archive will be hosted on the network at creation. Default false.
   -
     name: "dat.deleteArchive()"
     signature: "dat.deleteArchive(url: string): void"
@@ -119,23 +118,6 @@ toplevel_methods:
       - url. The URL of the directory to create. This must be a dat:// URL.
 
       The app must be the creator of the archive to be granted permission.
-  -
-    name: "dat.serve()"
-    signature: "dat.serve(url: string): Promise&lt;void&gt;"
-    experimental: true
-    desc: |
-      Begin uploading the archive's contents to the network.
-
-      - url. The URL of the archive to serve. This must be a dat:// URL.
-  -
-    name: "dat.unserve()"
-    signature: "dat.unserve(url: string): Promise&lt;void&gt;"
-    experimental: true
-    desc: |
-    
-      Stop uploading the archive's contents.
-
-      - url. The URL of the archive to unserve. This must be a dat:// URL.
   -
     name: "dat.deleteFile()"
     signature: "dat.deleteFile(url: string): Promise&lt;void&gt;"
