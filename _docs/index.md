@@ -47,13 +47,9 @@ dat://fdad0febf3ca58a7d115c622218838b48c3f093b33fe2798010c94bb7847e880/ # your U
 
 This URL is now hosted from your device.
 It can be shared with anyone in the world.
-Open it in Beaker to see what you get.
 
-<img src="/img/getting-started-screen-justcreated.png" class="bordered">
-
-As you can see, there's one file, the `dat.json` manifest.
-This file is similar to a `package.json`.
-It includes metadata about the site.
+<br>
+### Publish changes
 
 Let's add an index.html:
 
@@ -68,7 +64,7 @@ Publishing 1.0.0 of dat://fdad0f..80
 2 added, 0 updated
 ```
 
-Refresh the site and you'll see your page:
+Open the site and you'll see your page:
 
 <img src="/img/getting-started-screen-helloworld.png" class="bordered">
 
