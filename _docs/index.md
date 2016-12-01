@@ -17,30 +17,21 @@ Anybody can be a server, multiple computers can serve the same site, and there i
 
 Get involved: <a href="https://github.com/beakerbrowser/beaker">On GitHub</a>, in the <a href="https://groups.google.com/forum/#!forum/beaker-browser">Mailing List</a>.
 
-<hr class="nomargin">
-
-<div class="screenshots">
-  <div>
-    <a href="/img/intro-screenshot-4.png" target="_blank"><img src="/img/intro-screenshot-4.png"></a>
-    <div class="caption"><span class="fa fa-cloud-upload"></span> Publish from your computer</div>
-  </div>
-  <div>
-    <a href="/img/intro-screenshot-3.png" target="_blank"><img src="/img/intro-screenshot-3.png"></a>
-    <div class="caption"><span class="fa fa-code-fork"></span> Fork any application</div>
-  </div>
-</div>
-<div class="screenshots">
-  <div>
-    <a href="/img/intro-screenshot-2.png" target="_blank"><img src="/img/intro-screenshot-2.png"></a>
-    <div class="caption"><span class="fa fa-floppy-o"></span> Save sites permanently</div>
-  </div>
-  <div>
-    <a href="/img/intro-screenshot-1.png" target="_blank"><img src="/img/intro-screenshot-1.png"></a>
-    <div class="caption"><span class="fa fa-paper-plane-o"></span> Browse the traditional Web</div>
-  </div>
+<div class="screenshot dark">
+  <div><a href="/img/intro-screenshot-4.png" target="_blank"><img src="/img/intro-screenshot-4-cropped.png"></a></div>
+  <div><span class="fa fa-cloud-upload"></span> Publish for free</div>
 </div>
 
-<hr class="nomargin">
+<div class="screenshot">
+  <div><span class="fa fa-code-fork"></span> Fork any application</div>
+  <div> <a href="/img/intro-screenshot-3.png" target="_blank"><img src="/img/intro-screenshot-3-cropped.png"></a></div>
+</div>
+
+<div class="screenshot dark">
+  <div><a href="/img/intro-screenshot-2.png" target="_blank"><img src="/img/intro-screenshot-2-cropped.png"></a></div>
+  <div><span class="fa fa-floppy-o"></span> Save sites permanently</div>
+</div>
+
 
 Beaker mixes features from BitTorrent into the Web.
 Anybody can publish a site immediately, independently, and for free.

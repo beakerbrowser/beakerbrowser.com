@@ -244,20 +244,22 @@ ul.icon-discs {
   }
 }
 
-.screenshots {
+.screenshot {
   display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 23px;
+  padding: 10px;
+  &.dark { background: #fafafa; color: #333; img { border: 1px solid #ccc; } }
+
   & > div {
     flex: 1;
     margin: 5px;
-    border: 3px solid #eee;
-    background: #eee;
+    margin-right: 20px;
 
     img {
       display: block;
-    }
-    .caption {
-      padding: 7px 8px 5px;
-      font-size: 14px;
+      border: 1px solid #ccc;
     }
   }
 }
