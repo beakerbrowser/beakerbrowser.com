@@ -244,6 +244,24 @@ ul.icon-discs {
   }
 }
 
+.screenshots {
+  display: flex;
+  & > div {
+    flex: 1;
+    margin: 5px;
+    border: 3px solid #eee;
+    background: #eee;
+
+    img {
+      display: block;
+    }
+    .caption {
+      padding: 7px 8px 5px;
+      font-size: 14px;
+    }
+  }
+}
+
 /*****************************************************************************/
 /*
 /* Layout
