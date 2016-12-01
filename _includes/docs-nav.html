@@ -1,5 +1,5 @@
 <div class="doc-nav">
-  <a href="/"><img src="/img/logo/48x48.png"></a>
+  <a class="logo" href="/"><img src="/img/logo/48x48.png"></a>
 {% assign doc_groups = site.docs | group_by: 'category' | sort: 'name' %}
 {% for doc_group in doc_groups %}
   <div class="doc-nav-section">
@@ -25,7 +25,4 @@
     <p><a class="doc-link" href="https://github.com/beakerbrowser/beaker">GitHub</a></p>
     <p><a class="doc-link" href="https://twitter.com/beakerbrowser">Twitter</a></p>
   </div>
-</div>
-<div class="doc-mininav">
-  <a href="/docs/">Documentation</a>
 </div>
