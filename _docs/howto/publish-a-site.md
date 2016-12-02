@@ -1,6 +1,8 @@
 ---
-title:    Publish a Site
+title:    "Howto: Publish a Site"
+short_title: Publish a Site
 category: Howto
+
 order:    1
 ---
 

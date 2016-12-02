@@ -1,8 +1,15 @@
 ---
-title:    Fork a Site
+title:    "Howto: Fork a Site"
+short_title: Fork a Site
 category: Howto
 order:    2
 ---
+
+"Forking" means to make a new copy of a site.
+It puts the copy into new URL, and gives you control over the files, so that you can make changes.
+
+
+### How to fork
 
 Navigate to the site you want to fork, then click on the title in the navbar.
 
