@@ -10,30 +10,29 @@ order: 1
 #### Beaker uses Peer-to-Peer Hypermedia Protocols to distribute the Web.
 
 Free, independent sites.&nbsp;
-<span class="fa fa-code-fork"></span> Forkable.&nbsp;
-<span class="fa fa-floppy-o"></span> Offline-first.&nbsp;
-<span class="fa fa-history"></span> Versioned.&nbsp;
+<span class="unbreakable"><span class="fa fa-code-fork"></span> Forkable.</span>&nbsp;
+<span class="unbreakable"><span class="fa fa-floppy-o"></span> Offline-first.</span>&nbsp;
+<span class="unbreakable"><span class="fa fa-history"></span> Versioned.</span>&nbsp;
 Anybody can be a server, multiple computers can serve the same site, and there is no back end.
 
 Get involved: <a href="https://github.com/beakerbrowser/beaker">On GitHub</a>, in the <a href="https://groups.google.com/forum/#!forum/beaker-browser">Mailing List</a>.
 
 <div class="screenshot dark">
-  <div><a href="/img/intro-screenshot-4.png" target="_blank"><img src="/img/intro-screenshot-4-cropped.png"></a></div>
+  <div><a href="/img/intro-screenshot-2.png" target="_blank"><img src="/img/intro-screenshot-2-cropped.png"></a></div>
   <div><span class="fa fa-cloud-upload"></span> Publish for free</div>
 </div>
 
 <div class="screenshot">
-  <div><span class="fa fa-code-fork"></span> Fork any application</div>
-  <div> <a href="/img/intro-screenshot-3.png" target="_blank"><img src="/img/intro-screenshot-3-cropped.png"></a></div>
+  <div><span class="fa fa-floppy-o"></span> Save sites permanently</div>
+  <div><a href="/img/intro-screenshot-4.png" target="_blank"><img src="/img/intro-screenshot-4-cropped.png"></a></div>
 </div>
 
 <div class="screenshot dark">
-  <div><a href="/img/intro-screenshot-2.png" target="_blank"><img src="/img/intro-screenshot-2-cropped.png"></a></div>
-  <div><span class="fa fa-floppy-o"></span> Save sites permanently</div>
+  <div> <a href="/img/intro-screenshot-3.png" target="_blank"><img src="/img/intro-screenshot-3-cropped.png"></a></div>
+  <div><span class="fa fa-code-fork"></span> Fork any application</div>
 </div>
 
-
-Beaker mixes features from BitTorrent into the Web.
+Beaker mixes concepts from BitTorrent into the Web.
 Anybody can publish a site immediately, independently, and for free.
 Sites stay available when the network drops, and developers can write apps that publish on the peer-to-peer network.
 
