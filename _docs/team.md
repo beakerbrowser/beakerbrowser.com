@@ -1,6 +1,6 @@
 ---
 title:    Contributors
-order:    2
+order:    3
 ---
 
 <div class="team-member">

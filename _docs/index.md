@@ -35,15 +35,10 @@ Our vision is to create a community of social hacking, where users can freely mo
 Beaker was forked from Chrome.
 It is free and open-source.
 
+**Further Reading: [The Dat P2P Protocol](/docs/dat/intro.html)**
+
 <a class="btn btn-primary" href="https://download.beakerbrowser.net/download/latest/osx"><i class="fa fa-apple" aria-hidden="true"></i> Download for Mac</a>
 &nbsp; <a href="https://github.com/beakerbrowser/beaker">View the Source</a>
-
-<br>
-### Further Reading
-
- - **Howtos**: [ [Publish a site](/docs/howto/publish-a-site.html) \| [Fork a site](/docs/howto/fork-a-site.html) ]
- - **Articles**: [The Dat P2P Protocol](/docs/dat/intro.html)
- - **Docs**: [The Dat Web API](/docs/apis/dat.html)
 
 <hr>
 

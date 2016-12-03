@@ -1,6 +1,6 @@
 ---
-title:    Dat Protocol
-order:    3
+title:    Dat P2P Protocol
+order:    2
 ---
 
 The Dat Protocol browses versioned, static sites.

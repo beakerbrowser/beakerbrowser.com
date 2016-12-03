@@ -280,6 +280,18 @@ ul.icon-discs {
   }
 }
 
+#mailing-list-link {
+  position: fixed;
+  right: -70px;
+  top: -20px;
+  transform: rotate(45deg);
+  background: #016fde;
+  color: #fff;
+  padding: 75px 0 8px;
+  text-align: center;
+  width: 200px;
+}
+
 /*****************************************************************************/
 /*
 /* Layout
