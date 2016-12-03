@@ -246,12 +246,11 @@ ul.icon-discs {
 
 .screenshot {
   display: flex;
+  flex-direction: column;
   margin: 40px;
   align-items: center;
   text-align: center;
-  font-size: 23px;
-  background: #eee;
-  border: 1px solid gray;
+  color: gray;
 
   & > div {
     flex: 1;
@@ -259,6 +258,10 @@ ul.icon-discs {
     img {
       display: block;
       border: 1px solid #ccc;
+    }
+
+    &:last-child {
+      margin-top: 10px;
     }
   }
 }
