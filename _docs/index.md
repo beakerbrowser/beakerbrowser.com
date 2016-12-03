@@ -16,7 +16,7 @@ Anybody can be a server, and hosting is free.
 Beaker mixes concepts from BitTorrent into the Web.
 Anybody can publish a site immediately, independently, and for free.
 
-<div class="screenshot dark">
+<div class="screenshot dark reverse">
   <div><span class="fa fa-floppy-o"></span> Save sites offline</div>
   <div><img src="/img/intro-screenshot-4-cropped.png"></div>
 </div>

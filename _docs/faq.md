@@ -6,14 +6,17 @@ order:    4
 Is your question not answered here?
 **[Open an issue](https://github.com/beakerbrowser/FAQ/issues)** and let us know.
 
+<br>
+
 ### What are Archives?
 
 Dat Archives are bundles of files that are shared in a Peer-to-Peer network.
-They are similar to BitTorrents, except that they are changeable, versioned, and privately shareable.
+They are similar to Torrents, except that they are changeable, versioned, and privately shareable.
+In Beaker, they act as web-sites.
 
 [You can read more about the Dat protocol here.](/docs/dat/intro.html)
 
-<hr class="nomargin">
+<br>
 
 ### What do Dat URLs look like?
 
@@ -26,14 +29,14 @@ dat://54f74fe89d7779946343ec6db9618631e4dbf43bece2a125d0099103741963c9/
 They work just like regular URLs, except that the "hostname" is a 64-character hex number.
 You can reference specific files by putting the path at the end.
 
-<hr class="nomargin">
+<br>
 
 ### Can I use DNS to create short URLs?
 
 Yes!
 You can [read the guide here](/docs/dat/intro.html#experimental-behaviors).
 
-<hr class="nomargin">
+<br>
 
 ### Is the network anonymous?
 
@@ -44,13 +47,13 @@ your requests for it, and they'll know your IP.
 Browsing Dat sites is therefore not anonymous.
 [Read more about this here.](/docs/dat/intro.html#security-properties)
 
-<hr class="nomargin">
+<br>
 
 ### Is the Dat Protocol encrypted?
 
 Yes, like in HTTPS, the connection is encrypted.
 
-<hr class="nomargin">
+<br>
 
 ### How does a Dat site differ from a normal site?
 
@@ -59,14 +62,14 @@ Without explicit permission, they are not allowed to access the network directly
 That means you can't embed YouTube videos, use Google Analytics, or make Ajax requests home.
 This is to protect the privacy of users.
 
-<hr class="nomargin">
+<br>
 
 ### Does the P2P network automatically host my content?
 
 No, files are not hosted on the network automatically.
 To make sure your files are available, you must setup a computer in the network to share them.
 
-<hr class="nomargin">
+<br>
 
 ### Do I automatically host sites that I've visited or downloaded?
 
@@ -74,7 +77,7 @@ No.
 Unlike many P2P networks, Beaker does not automatically upload the files you've downloaded.
 If you want to rehost a site, you can do so manually with Beaker.
 
-<hr class="nomargin">
+<br>
 
 ### Who is allowed to change a Dat site?
 
@@ -95,21 +98,21 @@ If the private key is lost, the site can never be changed.
   </div>
 </div>
 
-<hr class="nomargin">
+<br>
 
 ### Can I browse regular HTTP/S sites?
 
 Yes, Beaker browses the normal Web.
 It doesn't make any changes to Web platform, except for its added Peer-to-Peer features.
 
-<hr class="nomargin">
+<br>
 
 ### Will P2P ever be adopted by other browsers?
 
 We hope so.
 Our mission is to create working proofs that will influence standards bodies and push these features out to mainstream browsers.
 
-<hr class="nomargin">
+<br>
 
 ### Is Beaker built entirely from scratch?
 
