@@ -5,31 +5,29 @@ order: 1
 ---
 
 Beaker is a **Peer-to-Peer Web Browser.**
-It is an active FOSS experiment, designed for site-creators and app-hackers to build websites as a community.
-Anybody can be a server, and hosting is free, because it's P2P.
+It is an experiment, created by hackers and for hackers, to rapidly build, deploy, and share applications.
+Using P2P hypermedia, Beaker separates the frontend app from backend hosts, so that users are completely in control of their application software and data.
 
 <div class="screenshot">
   <div><img src="/img/intro-screenshot-2-cropped.png"></div>
-  <div>Hosting is immediate and free.</div>
+  <div>Self-Hosting is immediate and free.</div>
 </div>
 
-Beaker mixes concepts from BitTorrent into the Web.
-Anybody can publish a site immediately, independently, and for free.
+At a high level, Beaker introduces concepts from BitTorrent into the Web.
+Anybody can publish a site immediately, independently, and for free, using only their browser.
 
-As the tooling matures, we'll create Public Peer services for reliable cloud hosting.
-The public peers will be optional, and, because the network is P2P, there's no lock-in.
-You can switch cloud-hosts quickly, or go back to self-hosting, without anybody ever noticing.
+Sites can contain HTML docs, fully-featured applications, data, or media.
+Using them, users can publish content without ceding control of the content to either an app or service.
+There is no walled garden.
+The keys that control each site remain in the user's browser.
 
 <div class="screenshot">
   <div><img src="/img/intro-screenshot-4-cropped.png"></div>
   <div>Sites can be saved for offline.</div>
 </div>
 
-The P2P network lets users create decentralized, hostless applications.
-Data is stored on the user's device and published on the network, so users stay in control of their content.
-
-Rather than publishing content to somebody else's site, the apps can allocate and publish new sites at no cost.
-There's no binding between the content and the web application, so you can publish with one site, and then switch to another at any time.
+Public Peer services provide optional cloud hosting, so users don't have to keep their devices online to self-host.
+These services provide the uptime of a traditional host, but with no lockin; a user can migrate from one service to another without any disruption.
 
 <div class="screenshot">
   <div><img src="/img/intro-screenshot-3-cropped.png"></div>
@@ -38,7 +36,7 @@ There's no binding between the content and the web application, so you can publi
 
 With forking, you can modify any site, and deploy it instantly.
 Our hope is to create a community of social hacking, where users can freely modify FOSS software and share their work.
-It will be weird, chaotic, and creative -- and it might actually be useful, too!
+It will be weird, chaotic, and creative -- just like the Web should be!
 
 Beaker was forked from Chrome.
 It is free and open-source.
