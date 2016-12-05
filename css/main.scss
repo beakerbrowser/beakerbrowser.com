@@ -153,13 +153,22 @@ img.bordered {
     margin: 0 5px;
     padding: 8px 14px;
   }
+  iframe {
+    position: relative;
+    top: 7px;
+  }
 }
 @media(max-width: 400px) {
-  .hero-btns a {
-    display: block;
-    margin-bottom: 5px;
-    margin: 5px auto !important;
-    padding: 15px 0;
+  .hero-btns {
+    a {
+      display: block;
+      margin-bottom: 5px;
+      margin: 5px auto !important;
+      padding: 15px 0;
+    }
+    iframe {
+      top: 0;
+    }
   }
 }
 
