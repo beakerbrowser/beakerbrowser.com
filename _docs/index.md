@@ -10,7 +10,7 @@ Using P2P hypermedia, Beaker separates the frontend app from backend hosts, so t
 
 <div class="screenshot">
   <div><img src="/img/intro-screenshot-2-cropped.png"></div>
-  <div>Self-Hosting is immediate and free.</div>
+  <div>Hosting is instant and free.</div>
 </div>
 
 At a high level, Beaker introduces concepts from BitTorrent into the Web.
