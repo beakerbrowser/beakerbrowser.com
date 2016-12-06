@@ -1,7 +1,7 @@
 ---
 title:    Dat API
 category: Web APIs
-order:    3
+order:    4
 ---
 
 <div class="card">
@@ -115,3 +115,10 @@ It is a manifest file that includes metadata and configuration.
 ### Toplevel Methods
 
 {% include api-reference.html items=site.data.apis.dat.toplevel_methods %}
+
+<br>
+## Further reading
+
+### [The Dat P2P Protocol](/docs/dat/intro.html)
+### [Permissions API](/docs/apis/permissions.html)
+### [Howto Publish a Site](/docs/howto/publish-a-site.html)

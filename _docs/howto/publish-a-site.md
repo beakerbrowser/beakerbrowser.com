@@ -85,3 +85,10 @@ Now when you make changes, the page will automatically reload itself.
 ```bash
 ~/my-site echo "<p>How are you?</p>" >> index.html
 ```
+
+<br>
+## Further reading
+
+### [Howto Fork a Site](/docs/howto/fork-a-site.html)
+### [The Dat P2P Protocol](/docs/dat/intro.html)
+### [bkr readme](https://github.com/beakerbrowser/bkr)

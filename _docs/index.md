@@ -41,8 +41,6 @@ It will be weird, chaotic, and creative -- just like the Web should be!
 Beaker was forked from Chrome.
 It is free and open-source.
 
-**Further Reading: [The Dat P2P Protocol](/docs/dat/intro.html)**
-
 <a class="btn btn-primary" href="https://download.beakerbrowser.net/download/latest/osx"><i class="fa fa-apple" aria-hidden="true"></i> Download for Mac</a>
 &nbsp; <a href="https://github.com/beakerbrowser/beaker">View the Source</a>
 
@@ -51,3 +49,10 @@ It is free and open-source.
 Beaker supports the [Dat Protocol](/docs/dat/intro.html) under the `dat://` scheme, and the [IPFS Protocol](https://ipfs.io) under the `fs:/` scheme.
 Dat is built-in, and will run automatically at startup.
 IPFS requires the daemon to be active to run.
+
+<br>
+## Further reading
+
+### [The Dat P2P Protocol](/docs/dat/intro.html)
+### [Frequently Asked Questions](/docs/faq.html)
+### [Howto Publish a Site](/docs/howto/publish-a-site.html)

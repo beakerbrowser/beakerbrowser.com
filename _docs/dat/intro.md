@@ -198,3 +198,9 @@ Beaker will grab the URL and fetch that.
 See <a href="dat://hostless.website">dat://hostless.website</a> for a working example.
 Run `dig txt hostless.website` to see the records behind it.
 
+<br>
+## Further reading
+
+### [Introduction](/docs/index.html)
+### [Frequently Asked Questions](/docs/faq.html)
+### [Howto Publish a Site](/docs/howto/publish-a-site.html)

@@ -36,3 +36,11 @@ Checking out into /Users/bob/my-new-fork
 2 files created
 New url: dat://1322af7a09027ff2b80b250ae410e33873a788000066a9996365095838d02069
 ```
+```
+
+<br>
+## Further reading
+
+### [Howto Publish a Site](/docs/howto/publish-a-site.html)
+### [The Dat P2P Protocol](/docs/dat/intro.html)
+### [bkr readme](https://github.com/beakerbrowser/bkr)

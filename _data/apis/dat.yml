@@ -63,12 +63,12 @@ toplevel_methods:
       - opts.timeout. Number. How long, in ms, to wait for a response? Default 5000.
 
       ```js
-      archive.readFile('dat://.../picture.png').then(arrayBuf => {
+      dat.readFile('dat://.../picture.png').then(arrayBuf => {
         var blob = new Blob([arrayBuf], {type: 'image/png'})
         document.querySelector('img').src = URL.createObjectURL(blob)
       })
       
-      archive.readFile('dat:/.../picture.png', 'base64').then(str => {
+      dat.readFile('dat:/.../picture.png', 'base64').then(str => {
         document.querySelector('img').src = 'data:image/png;base64,'+str
       })
       ```
@@ -105,7 +105,7 @@ toplevel_methods:
       The app must be the creator of the archive to be granted permission.
 
       ```js
-      archive.writeFile('dat://.../hello.txt', 'world', 'utf8').then(...)
+      dat.writeFile('dat://.../hello.txt', 'world', 'utf8').then(...)
       ```
   -
     name: "dat.createDirectory()"
@@ -186,7 +186,7 @@ toplevel_methods:
 
       ```js
       // Write new versions
-      archive.writeCheckpoint('dat://.../', '1.0.0')
-        .then(() => archive.writeFile('dat://.../hello.txt', 'web!!', 'utf8'))
-        .then(() => archive.writeCheckpoint('dat://.../', '2.0.0'))
+      dat.writeCheckpoint('dat://.../', '1.0.0')
+        .then(() => dat.writeFile('dat://.../hello.txt', 'web!!', 'utf8'))
+        .then(() => dat.writeCheckpoint('dat://.../', '2.0.0'))
       ```

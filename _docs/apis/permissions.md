@@ -1,7 +1,7 @@
 ---
 title:    Permissions API
 category: Web APIs
-order:    2
+order:    3
 ---
 
 <div class="card">
@@ -51,3 +51,10 @@ res.status // => 'prompt'
 The page must be refreshed for the policy-change to take effect.
 Multiple hosts can be requested; subsequent requests add hosts, rather than replacing the current allowed hosts.
 A wildcard string ('*') can be used to request or revoke access to all hosts.
+
+<br>
+## Further reading
+
+### [Dat API](/docs/apis/dat.html)
+### [The Dat P2P Protocol](/docs/dat/intro.html)
+### [Howto Publish a Site](/docs/howto/publish-a-site.html)
