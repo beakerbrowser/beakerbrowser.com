@@ -1,12 +1,10 @@
 ---
-title: Beaker Browser
-short_title: Introduction
+title: Introduction
 order: 1
 ---
 
-Beaker is a **Peer-to-Peer Web Browser.**
-It is an experiment, made for users to rapidly build, deploy, and share applications.
-Using P2P hypermedia, Beaker separates the frontend app from backend hosts, so that users are completely in control of their application software and data.
+Beaker is a **Peer-to-Peer Web Browser** which lets users build&nbsp;socially and publish&nbsp;independently.
+Using P2P web-hosting, Beaker separates the frontend app from backend servers, so that users are completely in control of their applications.
 
 <div class="screenshot">
   <div><img src="/img/intro-screenshot-2-cropped.png"></div>
@@ -35,7 +33,8 @@ These services provide the uptime of a traditional host, but with no lockin; a u
 </div>
 
 With forking, you can modify any site, and deploy it instantly.
-Our hope is to create a community of social hacking, where users can freely modify FOSS software and share their work.
+Users can rebuild applications to work exactly how they like.
+Our mission is to put the tools of creation back into the users' hands.
 It will be weird, chaotic, and creative -- just like the Web should be!
 
 Beaker was forked from Chrome.

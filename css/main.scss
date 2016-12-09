@@ -22,8 +22,7 @@ body { color: #555; font-family: 'Roboto', sans-serif; font-weight: 300; font-si
 pre, code { font-family: Consolas, "Courier New", monospace; color: #5E5E5E; background: #fafafa; white-space: pre-wrap; }
 pre { padding: 12px 16px; word-break: break-all }
 code { padding: 0 2px; }
-pre code { padding: 0 }
-pre.highlight { border-left: 5px solid #4aa4ff; line-height: 1.4; background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjZmFmYWZhIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPC9zdmc+"); }
+pre code { padding: 0; background: none; }
 hr { border: 0; border: 1px solid #eee; margin: 4em 0; }
 hr.nomargin { margin: 2em 0; }
 .layout-default hr { border-color: #aaa; border-bottom: 0; }
@@ -356,6 +355,7 @@ ul.icon-discs {
     flex: 0 0 180px;
     font-size: 16px;
     padding: 1em 0;
+    font-family: 'Lato', sans-serif;
 
     &.rightside {
       flex: 1;
@@ -410,6 +410,7 @@ ul.icon-discs {
       font-size: 0.5em;
       font-weight: bold;
     }
+    pre.highlight { border-left: 5px solid #4aa4ff; line-height: 1.4; background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjZmFmYWZhIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPC9zdmc+"); }
   }
 }
 
