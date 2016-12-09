@@ -235,17 +235,16 @@ ul.icon-discs {
 }
 
 .team-member {
-  display: inline-flex;
+  display: flex;
   margin-right: 50px;
   div {
-    margin: 10px;
+    margin: 10px 10px 0;
     &:first-child {
       margin-left: 0;
     }
   }
   img {
     width: 160px;
-    border-radius: 5px;
   }
   h4 {
     margin: 10px 0 !important;
