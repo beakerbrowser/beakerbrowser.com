@@ -14,22 +14,6 @@ order:    4
 - Only apps served over dat:// are able to access this API.
 - <i class="fa fa-flask"></i> This API is under development and subject to change.
 
-**Table of Contents**
-
-<ul class="doc-toc">
-  <li>Dat API
-    <ul>
-      <li><a href="#example-usage">Example Usage</a></li>
-      <li><a href="#permissions">Permissions</a></li>
-      <li><a href="#disk-usage-and-quotas">Disk Usage and Quotas</a></li>
-      <li><a href="#versioning">Versioning</a></li>
-      <li><a href="#networking">Networking</a></li>
-      <li><a href="#special-files">Special Files</a></li>
-      <li>Toplevel Methods {% include api-links.html items=site.data.apis.dat.toplevel_methods %}</li>
-    </ul>
-  </li>
-</ul>
-
 <hr class="nomargin">
 
 ### Example Usage
@@ -45,11 +29,6 @@ archiveURL // => 'dat://{hash}/'
 await dat.writeFile(archiveURL + 'hello.txt', 'world')
 var str = await dat.readFile(archiveURL + 'hello.txt')
 console.log(str) // => 'world'
-
-// Write new versions
-await dat.writeCheckpoint(archiveURL, '1.0.0')
-await dat.writeFile(archiveURL + 'hello.txt', 'web!!')
-await dat.writeCheckpoint(archiveURL, '2.0.0')
 ```
 
 <hr class="nomargin">
@@ -115,10 +94,3 @@ It is a manifest file that includes metadata and configuration.
 ### Toplevel Methods
 
 {% include api-reference.html items=site.data.apis.dat.toplevel_methods %}
-
-<br>
-## Further reading
-
-### [The Dat P2P Protocol](/docs/dat/intro.html)
-### [Permissions API](/docs/apis/permissions.html)
-### [Howto Publish a Site](/docs/howto/publish-a-site.html)

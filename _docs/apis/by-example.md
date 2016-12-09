@@ -5,8 +5,10 @@ category: Web APIs
 order:    1
 ---
 
-<br>
-## <span class="label label-yellow">dat</span> Create a site
+This is a collection of snippets to help you get familiar with Beaker's APIs.
+You can read about the APIs here: [dat](./dat.html), [permissions](./permissions.html)
+
+### Create a site
 
 ```js
 var datUrl = await dat.createSite({
@@ -17,16 +19,18 @@ console.log(datUrl)
 // => dat://da2ce4..dc/
 ```
 
-<br>
-## <span class="label label-yellow">dat</span> Write a file
+<hr class="nomargin">
+
+### Write a file
 
 ```js
 var fileUrl = datUrl + '/hello.txt'
 await dat.writeFile(fileURL, 'world')
 ```
 
-<br>
-## <span class="label label-yellow">dat</span> Read a file
+<hr class="nomargin">
+
+### Read a file
 
 ```js
 var fileUrl = datUrl + '/hello.txt'
@@ -35,8 +39,9 @@ console.log(helloTxt)
 // => 'world'
 ```
 
-<br>
-## <span class="label label-yellow">dat</span> Create a subdirectory 
+<hr class="nomargin">
+
+### Create a subdirectory 
 
 ```js
 var dirUrl = datUrl + '/subdir'
@@ -44,8 +49,9 @@ var exists = await dat.exists(dirUrl)
 if (!exists) await dat.createDirectory(dirUrl))
 ```
 
-<br>
-## <span class="label label-yellow">dat</span> List files
+<hr class="nomargin">
+
+### List files
 
 ```js
 var files = await dat.listFiles(datUrl)
@@ -58,8 +64,9 @@ console.log(files)
 */
 ```
 
-<br>
-## <span class="label label-yellow">dat</span> Get the last-modified time of a file
+<hr class="nomargin">
+
+### Get the last-modified time of a file
 
 The `ctime` is the file creation-time, and `mtime` is the last-modified time.
 Note: the ctime and mtime may not be correct.
@@ -77,8 +84,9 @@ console.log(fileInfo)
 } */
 ```
 
-<br>
-## <span class="label label-yellow">dat</span> Read a binary file
+<hr class="nomargin">
+
+### Read a binary file
 
 ```js
 var picUrl = datUrl + '/picture.png'
@@ -95,8 +103,9 @@ var src = 'data:image/png;base64,'+base64
 document.querySelector('img').src = src
 ```
 
-<br>
-## <span class="label label-yellow">dat</span> Write a binary file
+<hr class="nomargin">
+
+### Write a binary file
 
 ```js
 var orgUrl = datUrl + '/picture.png'
@@ -112,8 +121,9 @@ var base64 = convertBufToBase64(arrayBuf)
 await dat.writeFile(dstUrl, base64, 'base64')
 ```
 
-<br>
-## <span class="label label-yellow">perms</span> Request network access to a host
+<hr class="nomargin">
+
+### Request network access to a host
 
 ```js
 var res = await navigator.permissions.request({ 
@@ -124,8 +134,9 @@ console.log(res.status)
 // => 'granted'
 ```
 
-<br>
-## <span class="label label-yellow">perms</span> Request network access to all hosts
+<hr class="nomargin">
+
+### Request network access to all hosts
 
 ```js
 var res = await navigator.permissions.request({ 
@@ -135,10 +146,3 @@ var res = await navigator.permissions.request({
 console.log(res.status)
 // => 'granted'
 ```
-
-<br>
-## Further reading
-
-### [Permissions API](/docs/apis/permissions.html)
-### [Dat API](/docs/apis/dat.html)
-### [The Dat P2P Protocol](/docs/dat/intro.html)

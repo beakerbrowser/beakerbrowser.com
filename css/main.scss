@@ -295,6 +295,7 @@ ul.icon-discs {
 
 #mailing-list-link {
   position: fixed;
+  z-index: 1;
   right: -70px;
   top: -20px;
   transform: rotate(45deg);
@@ -303,6 +304,12 @@ ul.icon-discs {
   padding: 75px 0 8px;
   text-align: center;
   width: 200px;
+}
+
+@media (min-width: 740px) and (max-width: 1300px) {
+  #mailing-list-link  {
+    display: none;
+  }
 }
 
 /*****************************************************************************/
@@ -322,14 +329,23 @@ ul.icon-discs {
 
 .doc {
   display: flex;
-  margin: 3em auto;
   padding: 0 25px;
-  max-width: 960px;
   min-height: 340px;
 
   .doc-nav {
     flex: 0 0 180px;
     font-size: 16px;
+    padding: 1em 0;
+
+    &.rightside {
+      flex: 1;
+      padding-left: 2em;
+      min-width: 180px;
+    }
+
+    .doc-nav-inner {
+      position: fixed;
+    }
 
     .hidable {
       display: none;
@@ -355,6 +371,7 @@ ul.icon-discs {
   .doc-body {
     font-size: 18px;
     max-width: 720px;
+    padding: 0 20px;
 
     h2, h3, h4, p {
       margin: 22.5px 0;
@@ -366,16 +383,12 @@ ul.icon-discs {
     h3 { font-size: 1.5em; font-weight: normal; }
     h2:first-child {
       margin-top: 0;
+      margin-left: -20px;
+      margin-right: -20px;
       position: relative;
-      border-bottom: 5px solid;
-      &:before {
-        position: absolute;
-        content: '';
-        height: 5px;
-        width: 80px;
-        background: #555;
-        bottom: -10px;
-      }
+      background: #016fde;
+      color: #fff;
+      padding: 100px 20px 10px;
     }
     h3 small {
       font-size: 0.5em;
@@ -384,22 +397,28 @@ ul.icon-discs {
   }
 }
 
-@media(max-width: 740px) {
+@media(max-width: 1024px) {
   .doc {
     display: block;
     .doc-nav {
-      display: flex;
-      flex-wrap: wrap;
+      display: block;
+
+      &.rightside {
+        padding-left: 0;
+      }
+
+      .doc-nav-inner {
+        position: relative;
+      }
 
       .logo {
         display: none;
       }
 
       .doc-nav-section {
-        padding: 0 20px 0 0;
-        flex: 1;
+        padding: 0;
         .doc-link {
-          display: inline-block;
+          display: block;
           padding: 10px;
           background: #eee;
         }
@@ -413,6 +432,17 @@ ul.icon-discs {
     .doc-nav .hidable {
       display: block;
     }
+  }
+}
+
+#toc {
+  .from-h2 {
+    font-weight: bold;
+    color: #555;
+  }
+  .from-h4 {
+    padding-left: 10px;
+    color: gray;
   }
 }
 

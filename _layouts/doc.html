@@ -3,14 +3,16 @@ layout: default
 ---
 
 <div class="doc">
-  {% include docs-nav.html %}
+  {% include docs-nav-left.html %}
   <div class="doc-body">
     <h2>{{ page.title }}</h2>
     {{ content }}
   </div>
+  {% include docs-nav-right.html %}
 </div>
 
 <script src="/js/anchor.min.js"></script>
 <script>
 anchors.add('h2', 'h3')
 </script>
+<script src="/js/toc.js"></script>

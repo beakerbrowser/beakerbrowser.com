@@ -117,10 +117,3 @@ Our mission is to create working proofs that will influence standards bodies and
 ### Is Beaker built entirely from scratch?
 
 No, it's a fork of the Chrome browser.
-
-<br>
-## Further reading
-
-### [Introduction](/docs/index.html)
-### [The Dat P2P Protocol](/docs/dat/intro.html)
-### [bkr readme](https://github.com/beakerbrowser/bkr)

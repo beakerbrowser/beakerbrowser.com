@@ -5,7 +5,7 @@ order: 1
 ---
 
 Beaker is a **Peer-to-Peer Web Browser.**
-It is an experiment, created by hackers and for hackers, to rapidly build, deploy, and share applications.
+It is an experiment, made for users to rapidly build, deploy, and share applications.
 Using P2P hypermedia, Beaker separates the frontend app from backend hosts, so that users are completely in control of their application software and data.
 
 <div class="screenshot">
@@ -16,7 +16,7 @@ Using P2P hypermedia, Beaker separates the frontend app from backend hosts, so t
 At a high level, Beaker introduces concepts from BitTorrent into the Web.
 Anybody can publish a site immediately, independently, and for free, using only their browser.
 
-Sites can contain HTML docs, fully-featured applications, data, or media.
+Sites can contain files, data, media, and fully-featured applications.
 Using them, users can publish content without ceding control of the content to either an app or service.
 There is no walled garden.
 The keys that control each site remain in the user's browser.
@@ -49,10 +49,3 @@ It is free and open-source.
 Beaker supports the [Dat Protocol](/docs/dat/intro.html) under the `dat://` scheme, and the [IPFS Protocol](https://ipfs.io) under the `fs:/` scheme.
 Dat is built-in, and will run automatically at startup.
 IPFS requires the daemon to be active to run.
-
-<br>
-## Further reading
-
-### [The Dat P2P Protocol](/docs/dat/intro.html)
-### [Frequently Asked Questions](/docs/faq.html)
-### [Howto Publish a Site](/docs/howto/publish-a-site.html)

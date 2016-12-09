@@ -1,12 +1,14 @@
 {% for item in include.items %}
-  <h3 id="{{ item.name | slugify }}">
+{% if item.notyet != true %}
+  <h4 id="{{ item.name | slugify }}">
     {% if item.experimental %}<i class="fa fa-flask" title="Experimental. API may change"></i>{% endif %}
     <span {% if item.notyet %}class="muted"{% endif %}>{{ item.name }}</span>
     {% if item.notyet %}<small>Not yet available.</small>{% endif %}
-  </h3>
+  </h4>
   {% if item.signature %}
   <pre><code>{{ item.signature }}</code></pre>
   {% endif %}
   <div>{{ item.desc | markdownify }}</div>
   <hr class="nomargin">
+{% endif %}
 {% endfor %}

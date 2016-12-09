@@ -1,0 +1,24 @@
+<div class="doc-nav leftside">
+  <div class="doc-nav-inner">
+    <a class="logo" href="/"><img src="/img/logo/48x48.png"></a>
+    {% assign doc_groups = site.docs | group_by: 'category' | sort: 'name' %}
+    {% for doc_group in doc_groups %}
+    <div class="doc-nav-section">
+      {% assign docs = doc_group.items | sort: 'order' %}
+      {% assign hasTitled = false %}
+      {% for doc in docs %}
+        {% assign extension = doc.url | slice: -5, 5 %}
+        {% if extension == '.html' %}
+        {% if hasTitled == false %}
+          <p><strong>{{ doc_group.name }}</strong></p>
+          {% assign hasTitled = true %}
+        {% endif %}
+        <p>
+          <a class="doc-link {% if doc.url == page.url %}current{% endif %}" href="{{ doc.url | prepend: site.baseurl }}">{{ doc.short_title | default: doc.title | escape }}</a>
+        </p>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</div>

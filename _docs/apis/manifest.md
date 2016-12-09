@@ -26,10 +26,3 @@ Beaker automatically manages the manifest for archives created via the Dat Web A
 <hr class="nomargin">
 
 {% include api-reference.html items=site.data.apis.manifest.attributes %}
-
-<br>
-## Further reading
-
-### [The Dat P2P Protocol](/docs/dat/intro.html)
-### [Permissions API](/docs/apis/permissions.html)
-### [Dat API](/docs/apis/dat.html)
