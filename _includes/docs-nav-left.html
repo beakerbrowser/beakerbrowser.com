@@ -1,6 +1,5 @@
 <div class="doc-nav leftside">
-  <div class="doc-nav-inner">
-    <a class="logo" href="/"><img src="/img/logo/48x48.png"></a>
+  <div class="doc-nav-inner sticky">
     {% assign doc_groups = site.docs | group_by: 'category' | sort: 'name' %}
     {% for doc_group in doc_groups %}
     <div class="doc-nav-section">

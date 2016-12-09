@@ -23,7 +23,7 @@ pre, code { font-family: Consolas, "Courier New", monospace; color: #5E5E5E; bac
 pre { padding: 12px 16px; word-break: break-all }
 code { padding: 0 2px; }
 pre code { padding: 0 }
-pre.highlight { border-left: 5px solid #4aa4ff; line-height: 1.4; }
+pre.highlight { border-left: 5px solid #4aa4ff; line-height: 1.4; background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjZmFmYWZhIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPC9zdmc+"); }
 hr { border: 0; border: 1px solid #eee; margin: 4em 0; }
 hr.nomargin { margin: 2em 0; }
 .layout-default hr { border-color: #aaa; border-bottom: 0; }
@@ -295,7 +295,7 @@ ul.icon-discs {
 
 #mailing-list-link {
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   right: -70px;
   top: -20px;
   transform: rotate(45deg);
@@ -310,6 +310,23 @@ ul.icon-discs {
   #mailing-list-link  {
     display: none;
   }
+}
+
+.banner-grid {
+  // OLD GRID BG: background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj4KPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiMwMTZmZGUiPjwvcmVjdD4KPGcgZmlsbD0iIzJhODRkZSI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMSIgeT0iMjAiPjwvcmVjdD4KPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxIiB5PSI0MCI+PC9yZWN0Pgo8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEiIHk9IjYwIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMSIgeT0iODAiPjwvcmVjdD4KPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTAwIiB4PSIyMCI+PC9yZWN0Pgo8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxMDAiIHg9IjQwIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEwMCIgeD0iNjAiPjwvcmVjdD4KPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTAwIiB4PSI4MCI+PC9yZWN0Pgo8L2c+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZT0iIzYyYjBmZiI+PC9yZWN0Pgo8L3N2Zz4=");
+  background: #5570a7;
+  height: 110px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+#logo {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  z-index: 5;
 }
 
 /*****************************************************************************/
@@ -329,8 +346,13 @@ ul.icon-discs {
 
 .doc {
   display: flex;
-  padding: 0 25px;
-  min-height: 340px;
+  margin-top: 50px;
+  padding: 10px 25px;
+  min-height: 100%;
+  background: #fff;
+  z-index: 2;
+  position: relative;
+  box-shadow: 0 -5px 35px rgba(0,0,0,0.25);
 
   .doc-nav {
     flex: 0 0 180px;
@@ -341,10 +363,6 @@ ul.icon-discs {
       flex: 1;
       padding-left: 2em;
       min-width: 180px;
-    }
-
-    .doc-nav-inner {
-      position: fixed;
     }
 
     .hidable {
@@ -371,7 +389,7 @@ ul.icon-discs {
   .doc-body {
     font-size: 18px;
     max-width: 720px;
-    padding: 0 20px;
+    padding: 40px 20px;
 
     h2, h3, h4, p {
       margin: 22.5px 0;
@@ -382,13 +400,13 @@ ul.icon-discs {
     h2 { font-size: 2em; font-weight: normal; }
     h3 { font-size: 1.5em; font-weight: normal; }
     h2:first-child {
-      margin-top: 0;
+      position: absolute;
+      top: -60px;
       margin-left: -20px;
       margin-right: -20px;
-      position: relative;
-      background: #016fde;
       color: #fff;
-      padding: 100px 20px 10px;
+      background: #346;
+      padding: 20px;
     }
     h3 small {
       font-size: 0.5em;

@@ -2,6 +2,8 @@
 layout: default 
 ---
 
+<a id="logo" href="/"><img src="/img/logo/48x48.png"></a>
+<div class="banner-grid"></div>
 <div class="doc">
   {% include docs-nav-left.html %}
   <div class="doc-body">
@@ -11,8 +13,15 @@ layout: default
   {% include docs-nav-right.html %}
 </div>
 
+<script>
+var $ = document.querySelector.bind(document)
+var $$ = function (selector) {
+  return Array.prototype.slice.call(document.querySelectorAll(selector))
+}
+</script>
 <script src="/js/anchor.min.js"></script>
 <script>
 anchors.add('h2', 'h3')
 </script>
 <script src="/js/toc.js"></script>
+<script src="/js/sticky.js"></script>
