@@ -66,6 +66,16 @@ console.log(files)
 
 <hr class="nomargin">
 
+### Check if a file exists
+
+```js
+var fileUrl = datUrl + '/subdir/hello.txt'
+var exists = await dat.exists(fileUrl)
+console.log(exists) // => true
+```
+
+<hr class="nomargin">
+
 ### Get the last-modified time of a file
 
 The `ctime` is the file creation-time, and `mtime` is the last-modified time.
@@ -73,7 +83,7 @@ Note: the ctime and mtime may not be correct.
 
 ```js
 var fileUrl = datUrl + '/subdir/hello.txt'
-var fileInfo = await dat.info(fileUrl)
+var fileInfo = await dat.stat(fileUrl)
 console.log(fileInfo)
 /* => {
   type: 'file',

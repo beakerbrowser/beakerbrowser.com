@@ -8,6 +8,7 @@
   {% if item.signature %}
   <pre><code>{{ item.signature }}</code></pre>
   {% endif %}
+  {% if item.alias %}<p class="muted">Alias: {{ item.alias }}</p>{% endif %}
   <div>{{ item.desc | markdownify }}</div>
   <hr class="nomargin">
 {% endif %}

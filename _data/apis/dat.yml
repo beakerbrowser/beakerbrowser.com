@@ -1,8 +1,9 @@
 toplevel_methods:
   -
-    name: "dat.createArchive()"
-    signature: "dat.createArchive(opts?: Object): Promise&lt;string&gt;"
+    name: "dat.createSite()"
+    signature: "dat.createSite(opts?: Object): Promise&lt;string&gt;"
     experimental: true
+    alias: dat.createArchive
     desc: |
       Create a new dat archive, and return the URL.
       The archive is sandboxed to only access to files within it.
@@ -10,9 +11,10 @@ toplevel_methods:
       - opts.title. String. The title of the new archive.
       - opts.description. String. The description of the new archive.
   -
-    name: "dat.deleteArchive()"
-    signature: "dat.deleteArchive(url: string): void"
+    name: "dat.deleteSite()"
+    signature: "dat.deleteSite(url: string): void"
     experimental: true
+    alias: dat.deleteArchive
     desc: |
       Mark the given archive for deletion.
       The archive will not be deleted immediately, but put into the cache system where it can be cleaned.
@@ -41,6 +43,16 @@ toplevel_methods:
         mtime: number (timestamp) the last modification time
       }
       ```
+
+      If the archive is not found on the network, or in the local cache, this call will timeout.
+  -
+    name: "dat.exists()"
+    signature: "dat.stat(url: string): Promise&lt;Boolean&gt;"
+    experimental: true
+    desc: |
+      Returns true/false if the given file is known to exist.
+
+      - url. The URL of the file/directory to look for. This must be a dat:// URL.
 
       If the archive is not found on the network, or in the local cache, this call will timeout.
   -
@@ -75,9 +87,10 @@ toplevel_methods:
 
       If the archive is not found on the network, or in the local cache, this call will timeout.
   -
-    name: "dat.readDirectory()"
-    signature: "dat.readDirectory(url: string, opts?: Object): Promise&lt;Array&lt;String&gt;&gt;"
+    name: "dat.listFiles()"
+    signature: "dat.listFiles(url: string, opts?: Object): Promise&lt;Array&lt;String&gt;&gt;"
     experimental: true
+    alias: dat.readDirectory
     desc: |
       Reads the contents of a directory.
       Returns an object listing the files and folders in the directory, excluding '.' and '..'.
