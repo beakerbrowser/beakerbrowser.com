@@ -1,10 +1,11 @@
 var OFFSET = 10
+var HARDCODED_STICK_POINT = 80
 
 $$('.sticky').forEach(makeSticky)
 
 function makeSticky (h) {
   var stuck = false;
-  var stickPoint = getDistance();
+  var stickPoint = HARDCODED_STICK_POINT//getDistance();
 
   function getDistance() {
     var topDist = h.getClientRects()[0].top;
