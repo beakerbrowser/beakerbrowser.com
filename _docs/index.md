@@ -45,6 +45,12 @@ It is free and open-source.
 
 <hr>
 
+<h2 style="text-align: center">Talks</h2>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pi-kreA52oI" frameborder="0" allowfullscreen style="margin: 0 auto; display: block"></iframe>
+
+<hr>
+
 Beaker supports the [Dat Protocol](/docs/dat/intro.html) under the `dat://` scheme, and the [IPFS Protocol](https://ipfs.io) under the `fs:/` scheme.
 Dat is built-in, and will run automatically at startup.
 IPFS requires the daemon to be active to run.
