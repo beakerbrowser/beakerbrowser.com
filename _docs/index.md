@@ -43,13 +43,15 @@ It is free and open-source.
 <a class="btn btn-primary" href="https://download.beakerbrowser.net/download/latest/osx"><i class="fa fa-apple" aria-hidden="true"></i> Download for Mac</a>
 &nbsp; <a href="https://github.com/beakerbrowser/beaker">View the Source</a>
 
-<hr>
+---
 
-<h2 style="text-align: center">Talks</h2>
+## Talks
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pi-kreA52oI" frameborder="0" allowfullscreen style="margin: 0 auto; display: block"></iframe>
+<div class="card" style="width: 560px; display: block">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pi-kreA52oI" frameborder="0" allowfullscreen></iframe>
+</div>
 
-<hr>
+---
 
 Beaker supports the [Dat Protocol](/docs/dat/intro.html) under the `dat://` scheme, and the [IPFS Protocol](https://ipfs.io) under the `fs:/` scheme.
 Dat is built-in, and will run automatically at startup.
