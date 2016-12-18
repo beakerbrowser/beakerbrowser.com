@@ -21,7 +21,7 @@ html, body { height: 100%; }
 body { color: #555; font-family: 'Roboto', sans-serif; font-weight: 300; font-size: 18px; }
 pre, code { font-family: Consolas, "Courier New", monospace; color: #5E5E5E; background: #fafafa; white-space: pre-wrap; }
 pre { padding: 12px 16px; word-break: break-all }
-code { padding: 0 2px; }
+code { padding: 0 2px; word-wrap: break-word; }
 pre code { padding: 0; background: none; }
 hr { border: 0; border: 1px solid #eee; margin: 4em 0; }
 hr.nomargin { margin: 2em 0; }
@@ -150,22 +150,26 @@ img.bordered {
 .hero-btns {
   margin: 30px 0;
   font-size: 21px;
-  .btn {
+  a {
     margin: 0 5px;
+  }
+  .btn {
     padding: 8px 14px;
   }
   iframe {
     position: relative;
     top: 7px;
+    margin: 0 5px;
   }
 }
-@media(max-width: 400px) {
+@media(max-width: 420px) {
   .hero-btns {
+    padding: 0 20px;
     a {
       display: block;
-      margin-bottom: 5px;
       margin: 5px auto !important;
-      padding: 15px 0;
+      padding: 15px;
+      background: #eee;
     }
     iframe {
       top: 0;
@@ -326,6 +330,29 @@ ul.icon-discs {
   z-index: 5;
 }
 
+.yt-video {
+  display: block;
+  width: 560px;
+  border: 1px solid #ccc;
+
+  &.centered {
+    margin: 0 auto;
+  }
+
+  iframe {
+    display: block;
+    width: 560px;
+    height: 315px;
+  }
+}
+@media(max-width: 560px) {
+  .yt-video, .yt-video iframe {
+    width: 320px;
+    height: 180px;
+  }
+}
+
+
 /*****************************************************************************/
 /*
 /* Layout
@@ -442,7 +469,7 @@ ul.icon-discs {
       }
     }
     .doc-body {
-      padding-top: 0;
+      padding: 0;
       h2:first-child {
         position: relative;
         top: 0;
@@ -538,7 +565,7 @@ ul.icon-discs {
 
 @media(max-width: 740px) {
   .section {
-    margin: 100px 0;
+    margin: 50px 20px;
     h3 {
       font-size: 31px;
       line-height: 28px;
@@ -634,6 +661,14 @@ ul.icon-discs {
     padding-top: 8px;
   }
 }
+
+@media(max-width: 420px) {
+  .technical-explanation {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 
 .doc-gif {
   width: 100%;

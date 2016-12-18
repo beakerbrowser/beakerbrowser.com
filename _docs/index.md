@@ -47,8 +47,8 @@ It is free and open-source.
 
 ## Talks
 
-<div class="card" style="width: 560px; display: block">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pi-kreA52oI" frameborder="0" allowfullscreen></iframe>
+<div class="yt-video">
+  <iframe src="https://www.youtube.com/embed/pi-kreA52oI" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ---
