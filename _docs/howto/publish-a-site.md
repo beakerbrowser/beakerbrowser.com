@@ -2,10 +2,10 @@
 title:    "Howto: Publish a Site"
 short_title: Publish a Site
 category: Howto
-order:    1
+order:    2
 ---
 
-After downloading Beaker, install the [bkr command-line tool](https://github.com/beakerbrowser/bkr):
+After downloading Beaker, install the [bkr command-line tool](/docs/howto/use-bkr.html):
 
 ```
 npm install -g bkr

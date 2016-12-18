@@ -2,7 +2,7 @@
 title:    "Howto: Fork a Site"
 short_title: Fork a Site
 category: Howto
-order:    2
+order:    3
 ---
 
 "Forking" means to make a new copy of a site.
