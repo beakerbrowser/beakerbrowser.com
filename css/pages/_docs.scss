@@ -1,0 +1,149 @@
+.doc {
+  display: flex;
+  margin-top: 50px;
+  padding: 10px 25px;
+  min-height: 100%;
+  background: #fff;
+  z-index: 2;
+  position: relative;
+  box-shadow: 0 -5px 35px rgba(0,0,0,0.25);
+
+  .doc-nav {
+    flex: 0 0 180px;
+    font-size: 16px;
+    padding: 1em 0;
+    font-family: 'Lato', sans-serif;
+
+    &.rightside {
+      flex: 1;
+      padding-left: 2em;
+      min-width: 180px;
+    }
+
+    .hidable {
+      display: none;
+    }
+
+    .doc-nav-section {
+      margin-bottom: 1em;
+    }
+
+    p {
+      margin: 0 0 0.25em;
+    }
+
+    a.current {
+      color: #555;
+
+      &:before {
+        content: '\0203A ';
+        margin-right: 5px;
+      }
+    }
+  }
+  .doc-body {
+    font-size: 18px;
+    max-width: 720px;
+    padding: 40px 20px;
+
+    h2, h3, h4, p {
+      margin: 22.5px 0;
+    }
+    p, li {
+      line-height: 1.75;
+    }
+    h2 { font-size: 2em; font-weight: normal; }
+    h3 { font-size: 1.5em; font-weight: normal; }
+    h2:first-child {
+      position: absolute;
+      top: -60px;
+      margin-left: -20px;
+      margin-right: -20px;
+      color: #fff;
+      background: #015dba;
+      padding: 20px;
+    }
+    h3 small {
+      font-size: 0.5em;
+      font-weight: bold;
+    }
+    pre.highlight { border-left: 5px solid #4aa4ff; line-height: 1.4; background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjZmFmYWZhIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPC9zdmc+"); }
+  }
+}
+
+@media(max-width: 1024px) {
+  .doc {
+    display: block;
+    .doc-nav {
+      display: block;
+
+      &.rightside {
+        padding-left: 0;
+      }
+
+      .doc-nav-inner {
+        position: relative;
+      }
+
+      .logo {
+        display: none;
+      }
+
+      .doc-nav-section {
+        padding: 0;
+        .doc-link {
+          display: block;
+          padding: 10px;
+          background: #eee;
+        }
+      }
+    }
+    .doc-body {
+      padding: 0;
+      h2:first-child {
+        position: relative;
+        top: 0;
+      }
+    }
+  }
+}
+@media(max-width: 740px) {
+  .doc {
+    display: block;
+    .doc-nav .hidable {
+      display: block;
+    }
+  }
+}
+
+.apis {
+  position: relative;
+  display: flex;
+  max-width: 400px;
+  margin: 0 auto;
+
+  &:before {
+    content: '';
+    border-top: 1px solid #555;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 100%;
+  }
+
+  .api {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    margin: 0 20px;    
+    z-index: 10;
+
+    .orb {
+      margin-bottom: 16px;
+      border: 5px solid #fff;
+      border-radius: 50px;
+    }
+  }
+}
+

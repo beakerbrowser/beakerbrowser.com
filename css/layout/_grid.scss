@@ -1,0 +1,24 @@
+.columns {
+  display: flex;
+
+  &.vcenter {
+    align-items: center;
+    justify-content: center;
+  }
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .column {
+    flex: 1;
+  }
+}
+@media(max-width: 720px) {
+  .columns {
+    display: block;
+    .column p {
+      padding: 0 1em;
+    }
+  }
+}
+

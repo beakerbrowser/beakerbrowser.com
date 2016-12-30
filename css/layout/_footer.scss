@@ -1,0 +1,46 @@
+.footer {
+  display: flex;
+  margin: 6em auto 1em;
+  padding-top: 1em;
+  max-width: 960px;
+  height: 32px;
+  border-top: 1px solid gray;
+
+  a {
+    line-height: 32px;
+    font-size: 16px;
+
+    &.nav-link {
+      margin-left: 2em;
+    }
+    .fa {
+      margin-right: 5px;
+    }
+  }
+  .showable {
+    display: none;
+  }
+}
+
+@media(max-width: 600px) {
+  .footer {
+    a {
+      font-size: 28px;
+    }
+    .hidable {
+      display: none;
+    }
+    .showable {
+      display: inherit !important;
+    }
+  }
+}
+
+@media(max-width: 400px) {
+  .footer {
+    a {
+      font-size: 23px;
+    }
+  }
+}
+
