@@ -57,7 +57,7 @@ Yes, like in HTTPS, the connection is encrypted.
 
 ### How does a Dat site differ from a normal site?
 
-Other than the diference in protocols, Dat sites are more tightly "sandboxed."
+Other than the difference in protocols, Dat sites are more tightly "sandboxed."
 Without explicit permission, they are not allowed to access the network directly.
 That means you can't embed YouTube videos, use Google Analytics, or make Ajax requests home.
 This is to protect the privacy of users.
