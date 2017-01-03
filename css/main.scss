@@ -669,6 +669,30 @@ ul.icon-discs {
   }
 }
 
+.btn-grid {
+  max-width: 520px;
+  padding: 1rem;
+  margin: 0 auto 3rem;
+  background: #fafafa;
+  border-radius: 5px;
+
+  .btn {
+    display: inline-block;
+    width: 200px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    margin: 0.8rem 0.6rem;
+    background: #fff;
+  }
+}
+@media(max-width: 600px) {
+  .btn-grid {
+    .btn {
+      display: block;
+      width: auto;
+    }
+  }
+}
 
 .doc-gif {
   width: 100%;

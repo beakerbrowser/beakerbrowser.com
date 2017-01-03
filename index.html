@@ -11,7 +11,7 @@ layout: default
     <div class="hero-btns">
       <a class="github-button" href="https://github.com/beakerbrowser/beaker" data-icon="octicon-star" data-style="mega" data-count-href="/beakerbrowser/beaker/stargazers" data-count-api="/repos/beakerbrowser/beaker#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star beakerbrowser/beaker on GitHub">Star</a>
       <a class="btn btn-primary" href="https://download.beakerbrowser.net/download/latest/osx"><i class="fa fa-apple" aria-hidden="true"></i> Download for Mac</a>
-      <a href="/docs/index.html">Introduction</a>
+      <a href="https://github.com/beakerbrowser/beaker"><i class="fa fa-linux" aria-hidden="true"></i> Build Linux</a>
     </div>
   </div>
 </div>
@@ -42,19 +42,23 @@ layout: default
   <div class="yt-video centered">
     <iframe src="https://www.youtube.com/embed/Bem9nRpyPEs" frameborder="0" allowfullscreen style="display:block"></iframe>
   </div>
-  <p style="color: gray; text-align: center;">
-    See Beaker in action
-  </p>
 </div>
 
-<div class="hero-wrapper">
-  <div class="hero">
-    <div class="hero-btns">
-      <a href="/docs/"><span class="fa fa-book"></span> Docs</a>
-      <a class="doc-link" href="https://twitter.com/beakerbrowser"><span class="fa fa-twitter"></span> Twitter</a>
-      <a class="doc-link" href="https://github.com/beakerbrowser/beaker"><span class="fa fa-github"></span> GitHub</a>
-      <a class="doc-link" href="https://groups.google.com/forum/#!forum/beaker-browser"><span class="fa fa-envelope"></span> Mailing List</a>
-    </div>
+<div class="btn-grid">
+  <a class="btn" href="/docs/"><span class="fa fa-book"></span> Documentation</a>
+  <a class="btn" href="https://groups.google.com/forum/#!forum/beaker-browser"><span class="fa fa-envelope"></span> Mailing List</a>
+  <a class="btn" href="https://twitter.com/beakerbrowser"><span class="fa fa-twitter"></span> Twitter</a>
+  <a class="btn" href="https://github.com/beakerbrowser/beaker"><span class="fa fa-github"></span> GitHub</a>
+</div>
+
+<div class="section centered">
+  <div class="desc">
+    <p style="font-size: 120%"><strong>Latest Posts</strong></p>
+    <p style="font-size: 110%; line-height: 2">
+    {% for doc in site.data.news %}
+      <a class="doc-link" href="{{ doc.url }}">{{ doc.title | escape }}</a><br>
+    {% endfor %}
+    </p>
   </div>
 </div>
 
