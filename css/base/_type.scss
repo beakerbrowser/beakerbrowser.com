@@ -1,21 +1,6 @@
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src:
-    url(/fonts/OpenSans-Regular.woff2) format('woff2'),
-    url(/fonts/OpenSans-Regular.woff) format('woff');
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: 
-    url(/fonts/OpenSans-Bold.woff2) format('woff2'),
-    url(/fonts/OpenSans-Bold.woff), format('woff');
-}
-
 body {
-  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial
+sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.5;
+  color: black;
 }
