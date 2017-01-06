@@ -15,6 +15,7 @@
   width: 100%;
   display: block;
   margin: auto;
+  text-align: center;
 }
 
 %col-1-2 {
@@ -22,5 +23,6 @@
 
   @include respond-to(show-grid-2) {
     flex-basis: 50%;
+    text-align: left;
   }
 }
