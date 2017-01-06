@@ -1,0 +1,22 @@
+.nav {
+  position: absolute;
+  top: 11px;
+  right: 0;
+
+  &__link {
+    @extend %transition;
+    transition-property: color;
+    margin-right: 1em; 
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: $text--dark-bg-hover;
+    }
+  }
+}
+
+
+
