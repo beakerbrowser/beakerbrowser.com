@@ -10,6 +10,21 @@
 
   &__intro {
     @extend %col-1-2;
+    margin: 0 auto;
+    padding-right: 4em;
+  }
+
+  &__divider {
+    margin: 2em auto;
+
+    @include respond-to(show-grid-2) {
+      margin: 2em 0;
+    }
+  }
+
+  &__description {
+    margin-bottom: 3em;
+    font-size: 1.1em;
   }
 
   &__demo {
@@ -21,7 +36,7 @@
   }
 
   &__tagline {
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-weight: bold;
   }
 
