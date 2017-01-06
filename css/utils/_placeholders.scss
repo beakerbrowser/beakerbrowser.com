@@ -7,3 +7,7 @@
 %transition {
   transition-duration: .15s;
 }
+
+%box-shadow {
+  box-shadow: 1px 1px 5px 1.5px transparentize($black, .85);
+}
