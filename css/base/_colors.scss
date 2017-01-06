@@ -19,7 +19,7 @@ $gray: mix($black, $white, 20%);
 $gray--light: mix($black, $white, 5%);
 
 // text colors
-$text--dark-bg: transparentize($white, .06);
+$text--dark-bg: transparentize($white, .03);
 $text--dark-bg-hover: transparentize($white, .4);
 $text--light-bg: transparentize($black, .1);
 
