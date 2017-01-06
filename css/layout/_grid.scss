@@ -1,24 +1,26 @@
-.columns {
-  display: flex;
-
-  &.vcenter {
-    align-items: center;
-    justify-content: center;
-  }
-  &.reverse {
-    flex-direction: row-reverse;
-  }
-
-  .column {
-    flex: 1;
-  }
+%grid {
+  @extend %flex-container;
+  flex-direction: column;
 }
-@media(max-width: 720px) {
-  .columns {
-    display: block;
-    .column p {
-      padding: 0 1em;
-    }
+
+%grid-2 {
+  @extend %grid;
+
+  @include respond-to(show-grid-2) {
+    flex-direction: row;
   }
 }
 
+%col {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+%col-1-2 {
+  @extend %col;
+
+  @include respond-to(show-grid-2) {
+    flex-basis: 50%;
+  }
+}
