@@ -1,0 +1,29 @@
+$beaker-blue: #246fde;
+$orange: #ff9800;
+$white: #fff;
+$black: #000;
+
+$primary: $beaker-blue;
+$accent: $orange;
+
+$primary--dark: shade($primary, 70%);
+$primary--dark-mid: shade($primary, 35%);
+$primary--light-mid: tint($primary, 35%);
+$primary--light: tint($primary, 70%);
+
+$accent--mid: tint($accent, 35%);
+$accent--light: tint($accent, 65%);
+
+$gray--dark: mix($black, $white, 35%);
+$gray: mix($black, $white, 20%);
+$gray--light: mix($black, $white, 5%);
+
+// text colors
+$text--dark-bg: transparentize($white, .06);
+$text--dark-bg-hover: transparentize($white, .4);
+$text--light-bg: transparentize($black, .1);
+
+// background colors
+$header-bg: $primary;
+$hero-bg: $primary;
+$download-bg: $gray--light;
