@@ -6,14 +6,16 @@
   &__link {
     @extend %transition;
     transition-property: color;
-    margin-right: 1em; 
+    margin-right: 1em;
+    padding: .6em;
+    border-radius: .2em;
 
     &:last-of-type {
       margin-right: 0;
     }
 
     &:hover {
-      color: $text--dark-bg-hover;
+      background: $button-bg-hover;
     }
   }
 }
