@@ -16,14 +16,22 @@ $accent--light: tint($accent, 65%);
 
 $gray--dark: mix($black, $white, 35%);
 $gray: mix($black, $white, 20%);
-$gray--light: mix($black, $white, 5%);
+$gray--light: mix($black, $white, 3%);
 
 // text colors
 $text--dark-bg: transparentize($white, .03);
 $text--dark-bg-hover: transparentize($white, .4);
 $text--light-bg: transparentize($black, .1);
+$text--light-bg-muted: transparentize($black, .4);
+$text--button-action: $primary;
+$text--link: $primary;
 
 // background colors
 $header-bg: $primary;
 $hero-bg: $primary;
-$download-bg: $gray--light;
+$latest-bg: $gray--light;
+$download-bg: $primary;
+$button-bg: transparentize($white, .8);
+$button-bg-hover: transparentize($white, .7);
+$button-bg--action: transparentize($white, .03);
+$button-bg--action-hover: $white; 
