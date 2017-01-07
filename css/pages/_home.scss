@@ -77,6 +77,10 @@
     padding: 3em 0 4em 0;
     color: $text--dark-bg;
   }
+
+  &--latest {
+    background: $latest-bg;
+  }
 }
 
 .explainer {
