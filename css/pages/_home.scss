@@ -27,6 +27,15 @@
     font-size: 1.1em;
   }
 
+  &__github {
+    margin-top: 1.5em;
+    font-size: .85em;
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
   &__demo {
     @extend %col-1-2;
     width: 100%;
@@ -65,6 +74,8 @@
 
   &--download {
     background: $download-bg;
+    padding: 3em 0 4em 0;
+    color: $text--dark-bg;
   }
 }
 
