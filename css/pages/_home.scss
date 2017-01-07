@@ -133,6 +133,10 @@
 
     h3 {
       margin-bottom: .5em;
+
+      a {
+        color: $text--light-bg; 
+      }
     }
 
     p {
@@ -157,7 +161,7 @@
   @extend %grid-5;
 
   a {
-    margin: 0 .75em 1em 0;
+    margin: 0 1em 1em 0;
   }
 
   &__title {
