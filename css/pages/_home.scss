@@ -87,3 +87,66 @@
     margin-bottom: 1em;
   }
 }
+
+.posts {
+  @extend %grid-5;
+  margin-bottom: 3em;
+
+  &__title {
+    @extend %col-1-5;
+    margin-bottom: 1.5em;
+  }
+
+  &__preview {
+    @extend %col-2-5;
+    margin-right: 2.5em;
+
+    h3 {
+      margin-bottom: .5em;
+    }
+
+    p {
+      color: $text--light-bg-muted;
+      font-style: italic;
+      font-size: .9em;
+      margin-bottom: 1em;
+    }
+  }
+
+  &__list {
+    @extend %col-2-5;
+    list-style: none;
+  }
+
+  a {
+    @extend %link;
+  }
+}
+
+.videos {
+  @extend %grid-5;
+
+  a {
+    margin: 0 .75em 1em 0;
+  }
+
+  &__title {
+    @extend %col-1-5;
+    margin-bottom: 1.5em;
+  }
+
+  &__list {
+    @extend %col-4-5;
+    @extend %flex-container;
+
+    span {
+      display: block;
+    }
+
+    a {
+      @extend %link;
+      display: inline-block;
+      flex-basis: 10%;
+    }
+  }
+}

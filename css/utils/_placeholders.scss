@@ -11,3 +11,16 @@
 %box-shadow {
   box-shadow: 1px 1px 5px 1.5px transparentize($black, .85);
 }
+
+%pill {
+  border-radius: 10px;
+  padding: 0 .5em;
+}
+
+%link {
+  color: $text--link;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
