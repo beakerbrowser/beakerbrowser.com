@@ -14,7 +14,7 @@
     padding-right: 4em;
   }
 
-  &__divider {
+  .divider {
     margin: 2em auto;
 
     @include respond-to(show-grid-2) {
@@ -54,14 +54,6 @@
     font-size: 1.7em;
     font-weight: bold;
   }
-
-  .divider {
-    content: '';
-    height: 3px;
-    width: 55px;
-    border-radius: 3px;
-    background: $text--dark-bg;
-  }
 }
 
 .section {
@@ -76,6 +68,10 @@
     background: $download-bg;
     padding: 3em 0 4em 0;
     color: $text--dark-bg;
+
+    .divider {
+      margin: 4em auto 0 auto;
+    }
   }
 
   &--latest {
