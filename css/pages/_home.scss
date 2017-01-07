@@ -69,15 +69,24 @@
 }
 
 .explainer {
-  @extend %flex-container;
-  flex-direction: column;
+  @extend %grid-3;
   padding: 1em 0;
 
   &__item {
+    @extend %col-1-3;
     @extend %flex-container;
     flex-direction: column;
-    max-width: 400px;
     margin: 0 auto 4em auto;
+    max-width: 400px;
+    text-align: center;
+
+    @include respond-to(show-grid-3) {
+      margin: 0 3em 0 0;
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
 
     &:last-of-type {
       margin-bottom: 0;
