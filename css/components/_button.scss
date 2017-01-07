@@ -23,5 +23,15 @@
       color: $primary;
     }
   }
+
+  &--outline {
+    color: $primary;
+    border: 2px solid $primary;
+    background: $white;
+
+   &:hover {
+     background: $white;
+   }
+  }
 }
 
