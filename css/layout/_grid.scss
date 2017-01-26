@@ -54,6 +54,16 @@
   }
 }
 
+%col-2-3 {
+  @extend %col;
+
+  @include respond-to(show-grid-3) {
+    flex-basis: 66.7%;
+    text-align: left;
+    margin: 0;
+  }
+}
+
 %col-1-5 {
   @extend %col;
 
