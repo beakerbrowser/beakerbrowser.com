@@ -13,23 +13,14 @@
   }
 
   &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparentize($white, .3);
+    @extend %transparent-overlay;
     font-weight: bold;
     color: $primary;
     text-align: center;
 
-    &:hover {
-      background: transparentize($white, .6);
-
-      i {
-        margin-right: -7px;
-        margin-left: 9px;
-      }
+    &:hover i {
+      margin-right: -7px;
+      margin-left: 9px;
     }
   }
 
@@ -42,6 +33,6 @@
   i {
     @extend %transition;
     transition-property: margin;
-    margin-left: 3px; 
+    margin-left: 3px;
   }
 }
