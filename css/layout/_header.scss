@@ -7,6 +7,16 @@
   padding: 15px 0;
   font-weight: bold;
 
+  &:after {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    content: '';
+    width: 100%;
+    height: 60px;
+    background: linear-gradient($header-bg, transparent);
+  }
+
   &__logo {
     @extend %transition;
     transition-property: color;
