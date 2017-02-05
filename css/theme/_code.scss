@@ -1,4 +1,8 @@
 %code-block {
+  background: $gray--light;
+  border: 1px solid shade($gray--light, 7%);
+  padding: 1em;
+  white-space: pre-wrap;
 }
 
 .highlight .hll { background-color: #ffffcc }
