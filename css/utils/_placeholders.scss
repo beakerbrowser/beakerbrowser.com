@@ -43,3 +43,19 @@
     background: transparentize($white, .6);
   }
 }
+
+%rounded {
+  border-radius: 3px;
+}
+
+%content-paragraph {
+  margin: 1.25em 0;
+}
+
+%content-heading {
+ margin: 1.25em 0;
+}
+
+%content-list {
+  margin-left: 1.5em;
+}

@@ -22,7 +22,6 @@ You'll be presented with a file-listing, and tools to host or fork the site.
 
 If you want to work on the fork afterwards from the CLI, use [bkr co](https://github.com/beakerbrowser/bkr#checkout).
 
-<br>
 ### Using the CLI
 
 You can also fork with the [bkr fork command](https://github.com/beakerbrowser/bkr#fork).
