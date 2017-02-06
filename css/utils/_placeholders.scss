@@ -68,3 +68,12 @@
 .nobreak {
   white-space: pre;
 }
+
+%figure {
+  margin: 3em 0;
+
+  figcaption {
+    font-size: .8em;
+    color: $text--light-bg-muted;
+  }
+}
