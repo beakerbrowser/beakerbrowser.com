@@ -19,11 +19,8 @@
       max-width: 700px;
     }
 
-    // TODO: see issue #6 -tbv
-    .screenshot {
-      margin: 1em 0;
-      font-size: .8em;
-      color: $text--light-bg-muted;
+    figure {
+      @extend %figure;
     }
 
     // TODO: revisit these -tbv

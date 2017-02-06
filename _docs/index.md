@@ -6,10 +6,10 @@ order: 1
 Beaker is a **Peer-to-Peer Web Browser** which lets users build&nbsp;socially and publish&nbsp;independently.
 Using P2P web-hosting, Beaker separates the frontend app from backend servers, so that users are completely in control of their applications.
 
-<div class="screenshot">
-  <div><img src="/img/intro-screenshot-2-cropped.png"></div>
-  <div>Hosting is instant and free.</div>
-</div>
+<figure>
+  <img src="/img/intro-screenshot-2-cropped.png">
+  <figcaption>Hosting is instant and free.</figcaption>
+</figure>
 
 At a high level, Beaker introduces concepts from BitTorrent into the Web.
 Anybody can publish a site immediately, independently, and for free, using only their browser.
@@ -19,18 +19,18 @@ Using them, users can publish content without ceding control of the content to e
 There is no walled garden.
 The keys that control each site remain in the user's browser.
 
-<div class="screenshot">
-  <div><img src="/img/intro-screenshot-4-cropped.png"></div>
-  <div>Sites can be saved for offline.</div>
-</div>
+<figure>
+  <img src="/img/intro-screenshot-4-cropped.png">
+  <figcaption>Sites can be saved for offline use.</figcaption>
+</figure>
 
 Public Peer services provide optional cloud hosting, so users don't have to keep their devices online to self-host.
 These services provide the uptime of a traditional host, but with no lockin; a user can migrate from one service to another without any disruption.
 
-<div class="screenshot">
-  <div><img src="/img/intro-screenshot-3-cropped.png"></div>
-  <div>You can fork any site.</div>
-</div>
+<figure>
+  <img src="/img/intro-screenshot-3-cropped.png">
+  <figcaption>You can fork any site.</figcaption>
+</figure>
 
 With forking, you can modify any site, and deploy it instantly.
 Users can rebuild applications to work exactly how they like.
