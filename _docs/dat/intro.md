@@ -9,8 +9,6 @@ It is similar to BitTorrent, but adds a secure changelog inspired by [Certificat
 Beaker leverages Dat's unique properties to allow you to view the files behind a site, host your own content from the browser, or even fork a site.
 
 <img src="/img/screenshot-dat-viewer.png">
-<br>
-<br>
 
 Dat distributes content between users in a BitTorrent-like swarm.
 Users don't automatically share sites they download, but can opt-in to becoming a rehoster at any time.
@@ -25,9 +23,6 @@ var archiveURL = await dat.createArchive({ title: 'My Site' })
 dat.writeFile(archiveURL + 'index.html', '<h1>Hello!</h1>')
 ```
 
-<br>
-<br>
-
 Dat sites are secret, and their network traffic is encrypted.
 Only users that possess a site's URL can access the files or metadata.
 This makes it very easy for users to share personal files with each other.
@@ -36,10 +31,7 @@ This makes it very easy for users to share personal files with each other.
 For extra security, Dat sites are sandboxed away from the network.
 Their code can't access remote hosts, unless they request special permission.
 
-<br>
 <img class="bordered centered" src="/img/screenshot-request-network.png">
-<br>
-<br>
 
 Internally, Dats use the same concepts behind [Certificate Transparency](https://www.certificate-transparency.org/) to create an cryptographically-auditable change-log.
 Checkpoints (**coming soon**) let authors specify points in the log where the version has changed.
@@ -51,16 +43,12 @@ This is especially useful for publishing javascript modules:
 import jquery from 'dat://code.jquery.com@3.1.1/jquery.min.js'
 ```
 
-<br>
-
 <div class="card">
   <p>
     Dat was created with grants from the Knight and Sloan Foundations.
     Read more at <a href="http://datproject.org/">the Dat organization's website</a>.
   </p>
 </div>
-
-<br>
 
 ### Dat In-Depth
 
@@ -120,9 +108,6 @@ In Dat, [Compaction](https://en.wikipedia.org/wiki/Data_compaction) will be impl
 When the milestone is reached, the full current state of the Dat will be rewritten to the log.
 This will enable peers to seek to a modulo-N position to read the current state, thereby avoiding unbounded growth.
 
-<br>
-<br>
-
 ### Security Properties
 
 The Dat protocol carries unique properties which make it suitable for delivering sensitive data and software.
@@ -153,9 +138,6 @@ Peers who possess a Dat URL will be able to look up all other peers who are swar
 This means that Dat is not anonymous: any other user that possesses a Dat URL will know if you downloaded the archive.
 
 
-<br>
-<br>
-
 ### In Application
 
 #### Independent Publishing
@@ -175,9 +157,6 @@ Developers are encouraged to use device APIs to store data and P2P APIs to share
 The Dat network does not automatically guarantee availability.
 Publishers are in charge of hosting their archives on the network, though downloaders are empowered to rehost content as well.
 Subscription-based Public Peer services can be used to help distribute archives and provide guaranteed availability.
-
-<br>
-<br>
 
 ### Experimental Behaviors
 

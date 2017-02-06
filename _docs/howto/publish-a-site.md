@@ -13,7 +13,6 @@ npm install -g bkr
 
 You can do everything in this guide from Beaker's builtin GUI, but we'll use the CLI.
 
-<br>
 ### Create the domain
 
 Make sure Beaker is running, then run these commands:
@@ -32,7 +31,6 @@ dat://fdad0febf3ca58a7d115c622218838b48c3f093b33fe2798010c94bb7847e880/ # your U
 This URL is now hosted from your device.
 It can be shared with anyone in the world.
 
-<br>
 ### Publish changes
 
 Let's add an index.html:
@@ -52,7 +50,6 @@ Open the site and you'll see your page:
 
 <img src="/img/getting-started-screen-helloworld.png" class="bordered">
 
-<br>
 ### Start a dev server
 
 Publishing with bkr is similar to publishing on NPM.
@@ -72,7 +69,6 @@ This dat will stay in sync with the folder.
 
 When you close `bkr dev`, the temporary site will be deleted.
 
-<br>
 ### Turn on live-reloading
 
 While you work, it can be convenient to turn on live-reloading in Beaker.

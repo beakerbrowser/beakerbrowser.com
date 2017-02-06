@@ -1,0 +1,11 @@
+@mixin respond-to($name) {
+  @if map-has-key($breakpoints, $name) {
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "`#{$name}` does not exist in ``$breakpoints`."
+  }
+};

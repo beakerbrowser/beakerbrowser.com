@@ -1,0 +1,112 @@
+.layout-doc {
+  .header {
+    position: fixed;
+    z-index: 3;
+  }
+
+  .header .container {
+    border-bottom: none;
+  }
+}
+
+.doc {
+  padding-bottom: 1em;
+
+  &__content {
+
+    // TODO: add class to all docs images -tbv
+    img {
+      max-width: 700px;
+    }
+
+    // TODO: see issue #6 -tbv
+    .screenshot {
+      margin: 1em 0;
+      font-size: .8em;
+      color: $text--light-bg-muted;
+    }
+
+    // TODO: revisit these -tbv
+    h3, h4, h5, h6 {
+      @extend %content-heading;
+    }
+
+    p {
+      @extend %content-paragraph;
+    }
+
+    ul, ol {
+      @extend %content-list;
+    }
+
+    @include respond-to(contain-90) {
+      padding-left: 220px;
+    }
+
+    @include respond-to(expand-doc-nav-wide) {
+      max-width: 800px;
+      padding-left: 0
+    }
+
+    padding-top: calc(2em + 80px);
+
+    pre.highlight {
+      @extend %code-block !optional;
+    }
+  }
+
+  &__nav {
+    position: fixed;
+    height: 100%;
+    background: $doc-nav-bg;
+    border-right: 1px solid shade($doc-nav-bg, 5%);
+    font-size: .95em;
+    padding: calc(1em + 80px) 1.5em 1em 1.5em;
+    text-align: right;
+
+    @include respond-to(contain-90) {
+      min-width: 220px;
+    }
+
+    @include respond-to(expand-doc-nav-wide) {
+      width: 300px;
+    }
+  }
+
+  &__nav-section {
+    list-style: none;
+
+    &:not(:first-child) {
+      margin-top: 1em;
+    }
+  }
+
+  &__link {
+    position: relative;
+    padding-right: 1em;
+
+    &:after {
+      position: absolute;
+      right: 0;
+      display: inline-block;
+      content: '\203A';
+    }
+
+    &.current, &.current a {
+      color: $primary;
+    }
+
+    a {
+      @extend %link;
+      color: $text--light-bg-muted;
+    }
+  }
+
+  &__group-name {
+    text-transform: uppercase;
+    font-size: .85em;
+    font-weight: bold;
+    padding-right: 1em;
+  }
+}
+

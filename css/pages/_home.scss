@@ -1,0 +1,290 @@
+.hero {
+  position: relative;
+  background: $hero-bg;
+  color: $text--dark-bg;
+  padding: 3em 0 4em 0;
+
+  &:before {
+    display: block;
+    position: absolute;
+    top: -5px;
+    z-index: 1;
+    content: '';
+    width: 100%;
+    height: 60px;
+    background: linear-gradient($header-bg, transparent);
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: 100%;
+  }
+
+  .container {
+    @extend %grid-2;
+    position: relative;
+    z-index: 1;
+
+
+    // override default media query for %grid-2
+    @include respond-to(show-grid-2) {
+      flex-direction: column;
+    }
+
+    @include respond-to(expand-hero) {
+      flex-direction: row;
+    }
+  }
+
+
+  &__intro {
+    @extend %col-1-2;
+    margin: 0 auto;
+
+    @include respond-to(show-grid-2) {
+      padding-right: 4em;
+    }
+  }
+
+  .divider {
+    margin: 2em auto;
+
+    @include respond-to(show-grid-2) {
+      margin: 2em 0;
+    }
+  }
+
+  &__description {
+    margin-bottom: 3em;
+    font-size: 1.1em;
+  }
+
+  &__github {
+    margin-top: 1.5em;
+    font-size: .85em;
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__demo {
+    @extend %col-1-2;
+    width: 100%;
+    max-width: 700px;
+    margin: 3em auto 0 auto;
+
+    @include respond-to(expand-hero) {
+      margin: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__tagline {
+    font-size: 2em;
+    font-weight: bold;
+  }
+}
+
+.section {
+  text-align: center;
+  padding: 3em 0;
+
+  &--explainer {
+    font-size: .95em;
+    background: $explainer-bg;
+  }
+
+  &--download {
+    background: $download-bg;
+    padding: 3em 0 4em 0;
+    color: $text--dark-bg;
+
+    .divider {
+      margin: 4em auto 0 auto;
+    }
+  }
+
+  &--latest {
+    background: $latest-bg;
+
+    .divider {
+      margin: 4em auto 0 auto;
+    }
+  }
+
+  &--community {
+    padding: 0 0 4em 0;
+    background: $community-bg;
+  }
+}
+
+.explainer {
+  @extend %grid-3;
+
+ &__item {
+    @extend %col-1-3;
+    @extend %flex-container;
+    @extend %card;
+    flex-direction: column;
+    margin: 0 auto 4em auto;
+    max-width: 400px;
+    font-size: .9em;
+    text-align: center;
+
+    @include respond-to(show-grid-3) {
+      margin: 0 3em 0 0;
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  img {
+    display: block;
+    margin: 0 auto 1em auto;
+  }
+
+  img.cursor {
+    padding: 1.25em 1.25em 0 0;
+  }
+  h3 {
+    margin-bottom: 1em;
+  }
+}
+
+.posts {
+  @extend %grid-5;
+  margin-bottom: 3em;
+
+  &__title {
+    @extend %col-1-5;
+    margin-bottom: 1.5em;
+  }
+
+  &__preview {
+    @extend %col-2-5;
+    // @extend %card;
+    margin-right: 2.5em;
+    text-align: left;
+
+    h3 {
+      margin-bottom: .5em;
+
+      a {
+        color: $text--light-bg;
+      }
+    }
+
+    p {
+      color: $text--light-bg-muted;
+      font-style: italic;
+      font-size: .9em;
+      margin-bottom: 1em;
+    }
+  }
+
+  &__list {
+    @extend %col-2-5;
+    font-size: .9em;
+    padding: 2em 2em 2em 3.5em;
+    margin: auto;
+    text-align: left;
+  }
+
+  a {
+    @extend %link;
+  }
+}
+
+.videos {
+  @extend %grid-5;
+
+  a {
+    margin: 0 1em 1em 0;
+  }
+
+  &__title {
+    @extend %col-1-5;
+    margin-bottom: 1.5em;
+  }
+
+  &__list {
+    @extend %col-4-5;
+    @extend %flex-container;
+
+    span {
+      display: block;
+    }
+
+    a {
+      @extend %link;
+      display: inline-block;
+      flex-basis: 10%;
+      font-size: .9em;
+    }
+  }
+}
+
+.community {
+  .testimonials {
+    @extend %grid-3;
+    list-style: none;
+    font-size: .8em;
+  }
+
+  .testimonial {
+    @extend %col-1-3;
+
+    &:not(:last-child) {
+      margin-bottom: 3.5em;
+
+      @include respond-to(show-grid-3) {
+        margin-right: 3.5em;
+        margin-bottom: 0;
+      }
+    }
+
+    &__quote {
+      display: block;
+      color: $text--light-bg-muted;
+      font-style: italic;
+      margin-bottom: .75em;
+
+      a {
+        @extend %link;
+      }
+    }
+
+    &__avatar {
+      @extend %circle;
+      width: 40px;
+      height: 40px;
+    }
+
+    &__link {
+      @extend %link;
+
+     &:before {
+       display: inline-block;
+       content: '—';
+     }
+    }
+  }
+
+  .mailing-list {
+    @extend %col-1-3;
+  }
+
+}

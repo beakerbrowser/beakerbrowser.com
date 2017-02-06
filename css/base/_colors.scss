@@ -1,0 +1,45 @@
+$beaker-blue: #246fde;
+$orange: #ff9800;
+$vermillion: #dc493a;
+$white: #fff;
+$black: mix($beaker-blue, #000, 10%);
+
+$primary: $beaker-blue;
+$accent: $orange;
+
+$primary--dark: shade($primary, 70%);
+$primary--dark-mid: shade($primary, 35%);
+$primary--light-mid: tint($primary, 35%);
+$primary--light: tint($primary, 70%);
+$primary--very-light: tint($primary, 95%);
+
+$accent--mid: tint($accent, 35%);
+$accent--light: tint($accent, 65%);
+
+$gray--dark: mix($black, $white, 35%);
+$gray: mix($black, $white, 20%);
+$gray--light: mix($black, $white, 3.5%);
+
+// text colors
+$text--dark-bg: transparentize($white, .03);
+$text--dark-bg-hover: transparentize($white, .4);
+$text--light-bg: transparentize($black, .1);
+$text--light-bg-muted: transparentize($black, .3);
+$text--light-bg-transparent: transparentize($black, .75);
+$text--button-action: $primary;
+$text--link: $primary;
+
+// background colors
+$header-bg: $primary;
+$footer-bg: $primary;
+$hero-bg: $primary;
+$intro-bg: $white;
+$explainer-bg: $white;
+$latest-bg: $gray--light;
+$community-bg: $gray--light;
+$download-bg: $primary;
+$doc-nav-bg: $gray--light;
+$button-bg: transparentize($white, .8);
+$button-bg-hover: transparentize($white, .7);
+$button-bg--action: transparentize($white, .03);
+$button-bg--action-hover: $white;

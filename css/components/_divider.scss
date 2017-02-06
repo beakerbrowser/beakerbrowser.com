@@ -1,0 +1,11 @@
+.divider {
+  content: '';
+  height: 3px;
+  width: 55px;
+  border-radius: 3px;
+  background: $text--dark-bg;
+
+  &--light-bg {
+    background: $primary;
+  }
+}

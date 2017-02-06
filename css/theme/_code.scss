@@ -1,3 +1,10 @@
+%code-block {
+  background: $gray--light;
+  border: 1px solid shade($gray--light, 7%);
+  padding: 1em;
+  white-space: pre-wrap;
+}
+
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #aaa; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */

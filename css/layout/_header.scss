@@ -1,0 +1,37 @@
+.header {
+  position: relative;
+  background: $header-bg;
+  color: $text--dark-bg;
+  width: 100%;
+  font-weight: bold;
+
+  &__logo {
+    @extend %transition;
+    transition-property: color;
+    display: inline-block;
+    font-size: 1.5em;
+    height: 100%;
+
+    img, span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    img {
+      height: 100%;
+      margin: 0 5px 5px 0;
+    }
+
+    &:hover {
+      color: $text--dark-bg-hover;
+    }
+  }
+
+  .container {
+    position: relative;
+    padding: 25px 0;
+    height: 80px;
+    border-bottom: 1px solid;
+  }
+}
+
