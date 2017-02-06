@@ -1,17 +1,52 @@
 .hero {
+  position: relative;
   background: $hero-bg;
   color: $text--dark-bg;
   padding: 3em 0 4em 0;
 
+  &:before {
+    display: block;
+    position: absolute;
+    top: -5px;
+    z-index: 1;
+    content: '';
+    width: 100%;
+    height: 60px;
+    background: linear-gradient($header-bg, transparent);
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: 100%;
+  }
+
   .container {
     @extend %grid-2;
+    position: relative;
+    z-index: 1;
+
+
+    // override default media query for %grid-2
+    @include respond-to(show-grid-2) {
+      flex-direction: column;
+    }
+
+    @include respond-to(expand-hero) {
+      flex-direction: row;
+    }
   }
 
 
   &__intro {
     @extend %col-1-2;
     margin: 0 auto;
-    padding-right: 4em;
+
+    @include respond-to(show-grid-2) {
+      padding-right: 4em;
+    }
   }
 
   .divider {
@@ -39,10 +74,11 @@
   &__demo {
     @extend %col-1-2;
     width: 100%;
-    margin-top: 3em;
+    max-width: 700px;
+    margin: 3em auto 0 auto;
 
-    @include respond-to(show-grid-2) {
-      margin-top: 0;
+    @include respond-to(expand-hero) {
+      margin: 0;
     }
 
     img {

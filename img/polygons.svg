@@ -1,0 +1,6 @@
+<svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(-1100, -1000)" fill="#fff" fill-opacity=".05">
+    <rect transform="translate(1032, 1683) rotate(-316) translate(-1032, -1683)" x="318" y="1046" width="1428" height="1273"/>
+    <rect transform="translate(862, 1333) rotate(-344) translate(-862, -1333)" x="147" y="697" width="1428" height="1273"/>
+  </g>
+</svg>
