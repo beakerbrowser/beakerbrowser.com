@@ -74,8 +74,11 @@
   }
 
   &__nav-section {
-    margin-top: 1.5em;
     list-style: none;
+
+    &:not(:first-child) {
+      margin-top: 1em;
+    }
   }
 
   &__link {
@@ -103,10 +106,7 @@
     text-transform: uppercase;
     font-size: .85em;
     font-weight: bold;
-
-    &:not(:first-child) {
-      padding-right: 1em;
-    }
+    padding-right: 1em;
   }
 }
 
