@@ -18,3 +18,10 @@
   }
 }
 
+.team-members {
+  display: flex;
+
+  @media (max-width: 950px) {
+    display: block;
+  }
+}

@@ -157,22 +157,3 @@ Developers are encouraged to use device APIs to store data and P2P APIs to share
 The Dat network does not automatically guarantee availability.
 Publishers are in charge of hosting their archives on the network, though downloaders are empowered to rehost content as well.
 Subscription-based Public Peer services can be used to help distribute archives and provide guaranteed availability.
-
-### Experimental Behaviors
-
-#### DNS
-
-Dat implements shortnames by writing TXT entries that contain the unshorted Dat URL.
-This is experimental, as there is currently no authentication, and so a MITM is trivial to execute.
-
-To use DNS, add a TXT record to your domain name with the full URL of your Dat site.
-For example:
-
-```
-dat://54f74fe89d7779946343ec6db9618631e4dbf43bece2a125d0099103741963c9/
-```
-
-Beaker will grab the URL and fetch that.
-
-See <a href="dat://hostless.website">dat://hostless.website</a> for a working example.
-Run `dig txt hostless.website` to see the records behind it.

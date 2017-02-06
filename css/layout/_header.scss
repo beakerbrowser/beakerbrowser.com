@@ -7,6 +7,8 @@
 
   &__logo {
     @extend %transition;
+    position: relative;
+    top: -6px;
     transition-property: color;
     display: inline-block;
     font-size: 1.5em;
@@ -18,8 +20,8 @@
     }
 
     img {
-      height: 100%;
-      margin: 0 5px 5px 0;
+      height: 30px;
+      margin: 0 5px 0 0;
     }
 
     &:hover {

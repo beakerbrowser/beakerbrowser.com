@@ -36,3 +36,19 @@
     margin-left: 3px;
   }
 }
+
+.yt-video {
+  display: block;
+  width: 560px;
+  border: 1px solid $gray;
+
+  &.centered {
+    margin: 0 auto
+  }
+
+  iframe {
+    display: block;
+    width: 560px;
+    height: 315px
+  }
+}

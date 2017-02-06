@@ -72,7 +72,7 @@ The public key is used to create the site's URL.
 Only the user with the private key can change the site.
 If the private key is lost, the site can never be changed.
 
-<div class="technical-explanation" data-title="Beware!">
+<div class="detailed-card" data-title="Beware!">
   <div class="icon"><span class="fa fa-exclamation-triangle"></span></div>
   <div class="body">
     <p>Don't try to copy the private key onto multiple devices, except as a backup precaution.

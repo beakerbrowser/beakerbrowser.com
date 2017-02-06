@@ -1,6 +1,6 @@
 .layout-doc {
   .header {
-    position: fixed;
+    position: relative;
     z-index: 3;
   }
 
@@ -36,8 +36,12 @@
       @extend %content-list;
     }
 
+    a {
+      color: $text--link;
+    }
+
     @include respond-to(contain-90) {
-      padding-left: 220px;
+      padding-left: 210px;
     }
 
     @include respond-to(expand-doc-nav-wide) {
@@ -45,7 +49,7 @@
       padding-left: 0
     }
 
-    padding-top: calc(2em + 80px);
+    padding-top: 22px;
 
     pre.highlight {
       @extend %code-block !optional;
@@ -54,12 +58,24 @@
 
   &__nav {
     position: fixed;
+    left: 0;
+    top: 0;
     height: 100%;
     background: $doc-nav-bg;
     border-right: 1px solid shade($doc-nav-bg, 5%);
     font-size: .95em;
-    padding: calc(1em + 80px) 1.5em 1em 1.5em;
+    padding: calc(1em + 14px) 1.5em 1em 1.5em;
     text-align: right;
+
+    &__logo {
+      position: relative;
+      top: -6px;
+      transition-property: color;
+      display: inline-block;
+      font-size: 1.5em;
+      font-weight: bold;
+      padding-bottom: 8px;
+    }
 
     @include respond-to(contain-90) {
       min-width: 220px;
@@ -96,6 +112,14 @@
     a {
       @extend %link;
       color: $text--light-bg-muted;
+    }
+
+    &.outbound{
+      padding-right: 0;
+
+      &:after {
+        content: '';
+      }
     }
   }
 
