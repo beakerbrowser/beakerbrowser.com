@@ -36,6 +36,10 @@
       @extend %content-list;
     }
 
+    a {
+      color: $text--link;
+    }
+
     @include respond-to(contain-90) {
       padding-left: 210px;
     }
