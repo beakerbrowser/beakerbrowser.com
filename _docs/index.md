@@ -40,9 +40,6 @@ It will be weird, chaotic, and creative -- just like the Web should be!
 Beaker was forked from Chrome.
 It is free and open-source.
 
-<a class="btn btn-primary" href="https://download.beakerbrowser.net/download/latest/osx"><i class="fa fa-apple" aria-hidden="true"></i> Download for Mac</a>
-&nbsp; <a href="https://github.com/beakerbrowser/beaker">View the Source</a>
-
 ---
 
 ## Talks

@@ -3,3 +3,45 @@
   border: 1px solid;
   padding: 2em;
 }
+
+.detailed-card {
+  @extend %card;
+  border-color: $gray;
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.05);
+  position: relative;
+  display: flex;
+  padding: 1em;
+  margin: 2em;
+
+  // title
+  &:before {
+    content: attr(data-title);
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 6px 14px 5px;
+    font-size: 11px;
+    color: $gray--dark;
+    background: $gray--light;
+  }
+
+  .icon {
+    flex: 0 0 45px;
+    padding-top: 20px;
+    font-size: 32px;
+    color: $gray--dark;
+  }
+
+  .body>:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  @media (max-width: 800px) {
+    .icon {
+      display: none;
+    }
+  }
+}
