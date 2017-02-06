@@ -1,23 +1,25 @@
-<div class="doc-nav leftside">
-  <div class="doc-nav-inner sticky">
+<nav class="doc__nav">
+  <div class="doc-nav-inner">
     {% assign doc_groups = site.docs | group_by: 'category' | sort: 'name' %}
     {% for doc_group in doc_groups %}
-    <div class="doc-nav-section">
+    <ul class="doc__nav-section">
       {% assign docs = doc_group.items | sort: 'order' %}
       {% assign hasTitled = false %}
       {% for doc in docs %}
         {% assign extension = doc.url | slice: -5, 5 %}
         {% if extension == '.html' %}
         {% if hasTitled == false %}
-          <p><strong>{{ doc_group.name }}</strong></p>
+        <span class="doc__group-name">{{ doc_group.name }}</span>
           {% assign hasTitled = true %}
         {% endif %}
-        <p>
-          <a class="doc-link {% if doc.url == page.url %}current{% endif %}" href="{{ doc.url | prepend: site.baseurl }}">{{ doc.short_title | default: doc.title | escape }}</a>
-        </p>
+        <li class="doc__link {% if doc.url == page.url %}current{%endif %}">
+          <a href="{{ doc.url | prepend: site.baseurl }}">
+            {{ doc.short_title | default: doc.title | escape }}
+          </a>
+        </li>
         {% endif %}
       {% endfor %}
-    </div>
+    </ul>
     {% endfor %}
   </div>
-</div>
+</nav>

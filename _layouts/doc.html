@@ -1,16 +1,15 @@
 ---
-layout: default 
+layout: default-no-footer
 ---
 
-<a id="logo" href="/"><img src="/img/logo/48x48.png"></a>
-<div class="banner-grid"></div>
 <div class="doc">
-  {% include docs-nav-left.html %}
-  <div class="doc-body">
-    <h2>{{ page.title }}</h2>
-    {{ content }}
+  {% include docs-nav.html %}
+  <div class="container">
+    <div class="doc__content">
+      <h2>{{ page.title }}</h2>
+      {{ content }}
+    </div>
   </div>
-  {% include docs-nav-right.html %}
 </div>
 
 <script>

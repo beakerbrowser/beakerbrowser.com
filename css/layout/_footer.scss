@@ -1,0 +1,19 @@
+.footer {
+  background: $footer-bg;
+  color: $text--dark-bg;
+  display: flex;
+  padding: 1em 0;
+
+  &__links {
+    @extend %flex-container;
+    justify-content: center;
+
+    a {
+      margin-right: 2em;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}

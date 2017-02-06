@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="85">
+<polyline points="30 65 30 35 80 35 80 65" stroke="black" stroke-width="2.5"
+stroke-linecap="round" fill="none" stroke-linejoin="round"/>
+
+<polyline points="35 65 35 40 75 40 75 65" stroke="black" stroke-width="2.5"
+stroke-linecap="round" fill="none" stroke-linejoin="round"/>
+
+<polyline points="30 65 25 80 85 80 80 65 30 65" stroke="black" stroke-width="2.5" stroke-linecap="round" fill="none" stroke-linejoin="round"/>
+
+<polyline points="48.5 80 48.5 75 60.5 75 60.5 80" stroke="black" stroke-width="2.5" stroke-linecap="round" fill="none" stroke-linejoin="round"/>
+
+<rect x="12" y="10" width="16" height="13" rx="1" ry="1" fill="none" stroke="black" stroke-width="2.5"/>
+
+<rect x="82" y="10" width="16" height="13" rx="1" ry="1" fill="none" stroke="#000" stroke-width="2.5"/>
+
+<rect x="47" y="2" width="16" height="13" rx="1" ry="1" fill="none" stroke="#000" stroke-width="2.5"/>
+
+<path d="M42 28 34 24" stroke-width="2.5" stroke="#000" stroke-linecap="round"/>
+<path d="M55 28 55 20" stroke-width="2.5" stroke="#000" stroke-linecap="round"/>
+<path d="M68 28 76 24" stroke-width="2.5" stroke="#000" stroke-linecap="round"/>
+</svg>
