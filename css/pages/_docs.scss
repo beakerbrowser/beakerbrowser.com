@@ -116,15 +116,12 @@
       color: $text--light-bg-muted;
     }
 
-    &.outbound:after {
-      // outbound-link icon
-      content: '\f08e';
-      font: normal normal normal 9px/1 FontAwesome;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      top: 8px;
-      right: -2px;
+    &.outbound{
+      padding-right: 0;
+
+      &:after {
+        content: '';
+      }
     }
   }
 
