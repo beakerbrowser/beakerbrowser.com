@@ -1,4 +1,7 @@
 <nav class="doc__nav">
+  <a href="/" class="doc__nav__logo">
+    <span>Beaker</span>
+  </a>
   <div class="doc-nav-inner">
     {% assign doc_groups = site.docs | group_by: 'category' | sort: 'name' %}
     {% for doc_group in doc_groups %}
