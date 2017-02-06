@@ -1,23 +1,5 @@
-.card {
-  border: 1px solid #ccc;
-  padding: 1em;
-  margin: 1em 0;
-
-  & > :first-child { margin-top: 0 !important; }
-  & > :last-child { margin-bottom: 0 !important; }
+%card {
+  @extend %rounded;
+  border: 1px solid;
+  padding: 2em;
 }
-
-.card-group {
-  display: flex;
-  clear: both;
-  .card {
-    flex: 1;
-    &.halfwidth {
-      flex: 0.5;
-    }
-    &:first-child {
-      border-right: 0;
-    }
-  }
-}
-
