@@ -12,6 +12,10 @@
   box-shadow: 1px 1px 5px 1.5px transparentize($black, .85);
 }
 
+%box-shadow--light {
+  box-shadow: 1px 1px 5px 1.5px transparentize($gray, .85);
+}
+
 %pill {
   border-radius: 10px;
   padding: 0 .5em;
@@ -19,6 +23,7 @@
 
 %link {
   color: $text--link;
+  cursor: pointer;
 
   &:hover {
     text-decoration: underline;
@@ -58,4 +63,8 @@
 
 %content-list {
   margin-left: 1.5em;
+}
+
+.nobreak {
+  white-space: pre;
 }
