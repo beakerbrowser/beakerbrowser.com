@@ -103,7 +103,10 @@
     text-transform: uppercase;
     font-size: .85em;
     font-weight: bold;
-    padding-right: 1em;
+
+    &:not(:first-child) {
+      padding-right: 1em;
+    }
   }
 }
 
