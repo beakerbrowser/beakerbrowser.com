@@ -43,6 +43,11 @@
   width: 100%;
   height: 100%;
   background: transparentize($white, .3);
+  transition: background .15s ease;
+}
+
+%transparent-overlay--hover {
+  background: transparentize($white, .45);
 }
 
 %rounded {

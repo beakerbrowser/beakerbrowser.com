@@ -17,11 +17,20 @@
     font-weight: bold;
     color: $primary;
     text-align: center;
+
+    &:hover {
+      @extend %transparent-overlay--hover;
+
+      .btn {
+        background: $white;
+      }
+    }
   }
 
   &__text {
     margin: 25% auto 0 auto;
     font-size: 1em;
+    background: transparentize($white, .25);
 
     &:after {
       content: '\203A';
