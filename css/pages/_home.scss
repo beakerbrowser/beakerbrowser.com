@@ -11,8 +11,12 @@
     z-index: 1;
     content: '';
     width: 100%;
-    height: 60px;
+    height: 40px;
     background: linear-gradient($header-bg, transparent);
+
+    @include respond-to(tall-gradient-hero) {
+      height: 60px;
+    }
   }
 
   &__bg {
