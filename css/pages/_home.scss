@@ -281,6 +281,16 @@
       }
     }
 
+    .wrapper {
+      @extend %flex-container;
+    }
+
+    @include respond-to(show-grid-3) {
+      span {
+        padding-top: 8px;
+      }
+    }
+
     &__quote {
       display: block;
       color: $text--light-bg-muted;
@@ -296,6 +306,8 @@
       @extend %circle;
       width: 40px;
       height: 40px;
+      vertical-align: middle;
+      margin-right: .75em;
     }
 
     &__link {
