@@ -283,12 +283,11 @@
 
     .wrapper {
       @extend %flex-container;
+      justify-content: center;
     }
 
-    @include respond-to(show-grid-3) {
-      span {
-        padding-top: 8px;
-      }
+    span {
+      padding-top: 8px;
     }
 
     &__quote {
