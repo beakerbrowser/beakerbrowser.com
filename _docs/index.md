@@ -7,3 +7,4 @@ Beaker aims to become a **social hacking experience** built into a next-generati
 
 Beaker was forked from Chrome. It's alpha software and still in active development. [See the source](https://github.com/beakerbrowser/beaker).
 
+Beaker is built in collaboration with the [Dat Project](https://datproject.org), a non-profit funded by the Knight and Sloan Foundations.
