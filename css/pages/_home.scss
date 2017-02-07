@@ -99,6 +99,7 @@
   &--explainer {
     font-size: .95em;
     background: $explainer-bg;
+    padding: 4em 0;
   }
 
   &--download {
@@ -131,23 +132,39 @@
  &__item {
     @extend %col-1-3;
     @extend %flex-container;
-    @extend %card;
     flex-direction: column;
-    margin: 0 auto 4em auto;
     max-width: 400px;
     font-size: .9em;
     text-align: center;
+    padding: 3em 2em;
 
-    @include respond-to(show-grid-3) {
-      margin: 0 3em 0 0;
-
-      &:last-of-type {
-        margin: 0;
-      }
+    &:first-of-type {
+      padding-top: 0;
     }
 
     &:last-of-type {
-      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    &:not(:last-of-type) {
+      border-bottom: 2px solid $gray--light;
+    }
+
+    @include respond-to(show-grid-3) {
+      padding: 0 2.5em;
+
+      &:not(:last-of-type) {
+        border-bottom: none;
+        border-right: 2px solid $gray--light;
+      }
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:last-of-type{
+        padding-right: 0;
+      }
     }
   }
 
@@ -157,7 +174,7 @@
   }
 
   img.cursor {
-    padding: 1.25em 1.25em 0 0;
+    padding: 0 1.25em 1.25em 0 0;
   }
   h3 {
     margin-bottom: 1em;
