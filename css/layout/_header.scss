@@ -34,7 +34,9 @@
     position: relative;
     padding: 25px 0;
     height: 80px;
-    border-bottom: 1px solid;
+    @include respond-to(tablet) {
+      border-bottom: 1px solid;
+    }
   }
 }
 
