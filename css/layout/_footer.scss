@@ -1,4 +1,5 @@
 .footer {
+  @extend %shrink-text-phone;
   background: $footer-bg;
   color: $text--dark-bg;
   display: flex;

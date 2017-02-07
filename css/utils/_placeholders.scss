@@ -78,3 +78,11 @@
     color: $text--light-bg-muted;
   }
 }
+
+%shrink-text-phone {
+  font-size: .85em;
+
+  @include respond-to(tablet) {
+    font-size: 1em;
+  }
+}

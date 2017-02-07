@@ -2,6 +2,11 @@
   width: 98%;
   max-width: 1200px;
   margin: auto;
+  padding: 0 10px;
+
+  @include respond-to(tablet) {
+    padding: 0; 
+  }
 
   @include respond-to(contain-95) {
     width: 95%;
@@ -9,5 +14,13 @@
 
   @include respond-to(contain-90) {
     width: 90%;
+  }
+}
+
+.header .container {
+  padding: 25px 10px !important;
+
+  @include respond-to(tablet) {
+    padding: 25px 0;
   }
 }
