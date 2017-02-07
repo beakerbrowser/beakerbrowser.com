@@ -66,6 +66,14 @@
     margin-top: 1.5em;
     font-size: .85em;
 
+    * {
+      vertical-align: middle;
+    }
+
+    iframe {
+      margin-left: .25em;
+    }
+
     a:hover {
       text-decoration: underline;
     }
