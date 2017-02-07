@@ -1,14 +1,40 @@
 .nav {
   position: absolute;
-  top: 28px;
-  right: 0;
+  top: 25px;
+  right: 10px;
+
+  @include respond-to(tablet) {
+    right: 0;
+  }
+
+  .phone-text {
+    display: inline-block;
+  }
+
+  .tablet-text {
+    display: none;
+  }
+
+  @include respond-to(tablet) {
+    .tablet-text {
+      display: block;
+    }
+
+    .phone-text {
+      display: none;
+    }
+  }
 
   &__link {
     @extend %transition;
     transition-property: color;
-    margin-right: 1em;
+    margin-right: .25em;
     padding: .6em;
     border-radius: .2em;
+
+    @include respond-to(tablet) {
+      margin-right: 1em;
+    }
 
     &:last-of-type {
       margin-right: 0;

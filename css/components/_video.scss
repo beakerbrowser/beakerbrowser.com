@@ -18,22 +18,23 @@
     color: $primary;
     text-align: center;
 
-    &:hover i {
-      margin-right: -7px;
-      margin-left: 9px;
+    &:hover {
+      @extend %transparent-overlay--hover;
+
+      .btn {
+        background: $white;
+      }
     }
   }
 
   &__text {
-    display: block;
     margin: 25% auto 0 auto;
-    max-width: 190px;
-  }
+    font-size: 1em;
+    background: transparentize($white, .25);
 
-  i {
-    @extend %transition;
-    transition-property: margin;
-    margin-left: 3px;
+    &:after {
+      content: '\203A';
+    }
   }
 }
 

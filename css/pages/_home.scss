@@ -3,6 +3,11 @@
   background: $hero-bg;
   color: $text--dark-bg;
   padding: 3em 0 4em 0;
+  @extend %shrink-text-phone;
+
+  @include respond-to(tablet) {
+    font-size: 1em;
+  }
 
   &:before {
     display: block;
@@ -11,8 +16,12 @@
     z-index: 1;
     content: '';
     width: 100%;
-    height: 60px;
+    height: 40px;
     background: linear-gradient($header-bg, transparent);
+
+    @include respond-to(tall-gradient-hero) {
+      height: 60px;
+    }
   }
 
   &__bg {
@@ -66,6 +75,21 @@
     margin-top: 1.5em;
     font-size: .85em;
 
+    * {
+      vertical-align: middle;
+    }
+
+    iframe {
+      display: block;
+      margin: .5em auto 0 auto;
+
+      @include respond-to(tablet) {
+        display: inline-block;
+        margin-left: .25em;
+        margin-top: 0;
+      }
+    }
+
     a:hover {
       text-decoration: underline;
     }
@@ -87,7 +111,7 @@
   }
 
   &__tagline {
-    font-size: 2em;
+    font-size: 1.75em;
     font-weight: bold;
   }
 }
@@ -99,20 +123,32 @@
   &--explainer {
     font-size: .95em;
     background: $explainer-bg;
+    padding: 4em 0;
   }
 
   &--download {
     background: $download-bg;
     padding: 3em 0 4em 0;
     color: $text--dark-bg;
+    @extend %shrink-text-phone;
 
     .divider {
       margin: 4em auto 0 auto;
+    }
+
+    // TODO: find a way to get rid of this special container style -tbv
+    .container {
+      padding: 0 3px;
+
+      @include respond-to(tablet) {
+        padding: 0;
+      }
     }
   }
 
   &--latest {
     background: $latest-bg;
+    @extend %shrink-text-phone;
 
     .divider {
       margin: 4em auto 0 auto;
@@ -131,23 +167,39 @@
  &__item {
     @extend %col-1-3;
     @extend %flex-container;
-    @extend %card;
     flex-direction: column;
-    margin: 0 auto 4em auto;
     max-width: 400px;
     font-size: .9em;
     text-align: center;
+    padding: 3em 2em;
 
-    @include respond-to(show-grid-3) {
-      margin: 0 3em 0 0;
-
-      &:last-of-type {
-        margin: 0;
-      }
+    &:first-of-type {
+      padding-top: 0;
     }
 
     &:last-of-type {
-      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    &:not(:last-of-type) {
+      border-bottom: 2px solid $gray--light;
+    }
+
+    @include respond-to(show-grid-3) {
+      padding: 0 2.5em;
+
+      &:not(:last-of-type) {
+        border-bottom: none;
+        border-right: 2px solid $gray--light;
+      }
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:last-of-type{
+        padding-right: 0;
+      }
     }
   }
 
@@ -157,8 +209,9 @@
   }
 
   img.cursor {
-    padding: 1.25em 1.25em 0 0;
+    padding: 0 1.25em .75em 0;
   }
+
   h3 {
     margin-bottom: 1em;
   }
@@ -256,6 +309,19 @@
       }
     }
 
+    .wrapper {
+      @extend %flex-container;
+      justify-content: center;
+
+      @include respond-to(tablet) {
+        justify-content: flex-start;
+      }
+    }
+
+    span {
+      padding-top: 8px;
+    }
+
     &__quote {
       display: block;
       color: $text--light-bg-muted;
@@ -271,6 +337,8 @@
       @extend %circle;
       width: 40px;
       height: 40px;
+      vertical-align: middle;
+      margin-right: .75em;
     }
 
     &__link {

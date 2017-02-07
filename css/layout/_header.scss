@@ -1,4 +1,5 @@
 .header {
+  @extend %shrink-text-phone;
   position: relative;
   background: $header-bg;
   color: $text--dark-bg;

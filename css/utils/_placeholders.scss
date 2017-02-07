@@ -43,10 +43,11 @@
   width: 100%;
   height: 100%;
   background: transparentize($white, .3);
+  transition: background .15s ease;
+}
 
-  &:hover {
-    background: transparentize($white, .6);
-  }
+%transparent-overlay--hover {
+  background: transparentize($white, .45);
 }
 
 %rounded {
@@ -75,5 +76,13 @@
   figcaption {
     font-size: .8em;
     color: $text--light-bg-muted;
+  }
+}
+
+%shrink-text-phone {
+  font-size: .85em;
+
+  @include respond-to(tablet) {
+    font-size: 1em;
   }
 }

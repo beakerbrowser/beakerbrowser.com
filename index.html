@@ -46,10 +46,9 @@ layout: default
         target="_blank">
         <img src="/img/ss/demo-beaker.jpg" />
         <span class="video__overlay">
-          <span class="video__text btn btn--outline">
+          <button class="video__text btn btn--outline">
             <span>Watch the demo</span>
-            <i class="fa fa-play"></i>
-          </span>
+          </button>
         </span>
       </a>
     </div>
@@ -59,6 +58,16 @@ layout: default
 <div class="section section--explainer">
   <div class="container">
     <div class="explainer">
+      <div class="explainer__item">
+        <img src="/img/icon/host-site.svg" width="100" height="85"/>
+        <h3>Browse</h3>
+        <p>
+        Save sites to your library for offline browsing. Beaker uses
+        peer-to-peer networks to make the cloud&nbsp;optional, while still
+        browsing the traditional Web.
+        </p>
+      </div>
+
       <div class="explainer__item">
         <img src="/img/icon/cursor.svg" class="cursor" width="70" height="85"/>
         <h3>Build</h3>
@@ -77,16 +86,7 @@ layout: default
         and tailor it to be your own with Beaker's builtin&nbsp;tools.
         </p>
       </div>
-
-      <div class="explainer__item">
-        <img src="/img/icon/host-site.svg" width="100" height="85"/>
-        <h3>Browse</h3>
-        <p>
-        Save sites to your library for offline browsing. Beaker uses
-        peer-to-peer networks to make the cloud&nbsp;optional.
-        </p>
-      </div>
-    </div>
+   </div>
   </div>
 </div>
 
@@ -160,17 +160,37 @@ layout: default
     <ul class="testimonials">
       <li class="testimonial">
         <q class="testimonial__quote">
+          Very exciting work being done on
+          <a href="https://twitter.com/beakerbrowser">@BeakerBrowser</a>!
+        </q>
+        <div class="wrapper">
+          <img class="testimonial__avatar" src="/img/webtorrentapp.jpg" />
+          <span>
+            <a class="testimonial__link"
+               href="https://twitter.com/WebTorrentApp/status/814577481273528320">
+              the WebTorrent team
+            </a>
+          </span>
+        </div>
+      </li>
+
+      <li class="testimonial">
+        <q class="testimonial__quote">
           Save some time and get properly excited now about
           <a href="https://twitter.com/beakerbrowser">@BeakerBrowser</a>
           and <a href="https://twitter.com/dat_project">@dat_project</a>; they
           are going to be huge in 2017.
         </q>
-        <img class="testimonial__avatar" src="/img/jermolene.jpg" />
-        <a class="testimonial__link"
-           href="https://twitter.com/Jermolene/status/811582543107592192">
-          Jeremy Ruston,
-        </a>
-        creator of <a href="http://tiddlywiki.com">TiddlyWiki</a>
+        <div class="wrapper">
+          <img class="testimonial__avatar" src="/img/jermolene.jpg" />
+          <span>
+            <a class="testimonial__link"
+              href="https://twitter.com/Jermolene/status/811582543107592192">
+              Jeremy Ruston,
+            </a>
+            creator of <a href="http://tiddlywiki.com">TiddlyWiki</a>
+          </span>
+        </div>
       </li>
 
       <li class="testimonial">
@@ -178,24 +198,16 @@ layout: default
           Beaker is making the P2P decentralized web user-friendly. Pretty cool
           to watch.
         </q>
-        <img class="testimonial__avatar" src="/img/rauchg.jpg" />
-        <a class="testimonial__link"
-           href="https://twitter.com/rauchg/status/816361204721385472">
-           Guillermo Rauch,
-        </a>
-        of <a href="https://socket.io">Socket.IO and <a href="https://zeit.com">▲ZEIT</a>
-      </li>
-
-      <li class="testimonial">
-        <q class="testimonial__quote">
-          Very exciting work being done on
-          <a href="https://twitter.com/beakerbrowser">@BeakerBrowser</a>!
-        </q>
-        <img class="testimonial__avatar" src="/img/webtorrentapp.jpg" />
-        <a class="testimonial__link"
-           href="https://twitter.com/WebTorrentApp/status/814577481273528320">
-           the WebTorrent team
-        </a>
+        <div class="wrapper">
+          <img class="testimonial__avatar" src="/img/rauchg.jpg" />
+          <span>
+            <a class="testimonial__link"
+               href="https://twitter.com/rauchg/status/816361204721385472">
+              Guillermo Rauch,
+            </a>
+            of <a href="http://socket.io">Socket.IO and <a href="https://zeit.com">▲ZEIT</a>
+          </span>
+        </div>
       </li>
     </ul>
   </div>
