@@ -42,3 +42,11 @@
     </ul>
   </div>
 </nav>
+
+<script>
+  var docNav = document.getElementById('doc-nav');
+  var docNavBtns = document.querySelectorAll('.doc__nav-menu-btn');
+  docNavBtns.forEach(function (el) {
+      el.addEventListener('click', function () { docNav.classList.toggle('visible') });
+  });
+</script>
