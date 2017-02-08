@@ -23,8 +23,6 @@ redirect_from:
 
 For MacOS, follow the instructions in [the installer](https://download.beakerbrowser.net/download/latest/osx). For Linux, follow the instructions on the [GitHub readme](https://github.com/beakerbrowser/beaker).
 
----
-
 Additional command-line tools (**recommended**):
 
 ```

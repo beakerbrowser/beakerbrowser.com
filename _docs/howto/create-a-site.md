@@ -50,4 +50,4 @@ This is your site's URL. You can open it in Beaker, and you'll see the manifest 
 
 ---
 
-Next: [Host from Home](./host-from-home.html)
+Next: [Publish files](./publish-files.html)
