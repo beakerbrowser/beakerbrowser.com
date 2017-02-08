@@ -2,7 +2,8 @@
   <a href="/" class="doc__nav__logo">
     <span><i class="fa fa-flask"></i> Beaker</span>
   </a>
-  <div class="doc-nav-inner">
+
+  <div>
     {% assign doc_groups = site.docs | group_by: 'category' | sort: 'name' %}
     {% for doc_group in doc_groups %}
     <ul class="doc__nav-section">
