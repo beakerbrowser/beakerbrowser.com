@@ -1,9 +1,7 @@
 ---
-title:    "Howto: Publish a site"
-short_title: Publish a site
-category: Howto
-order:    2
 ---
+
+TODO REMOVE ME
 
 After downloading Beaker, install the [bkr command-line tool](/docs/howto/use-bkr.html):
 

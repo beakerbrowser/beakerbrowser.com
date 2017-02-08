@@ -11,6 +11,8 @@ github_username:  pfrazee
 markdown: kramdown
 theme: minima
 exclude: ["node_modules"]
+gems:
+ - jekyll-redirect-from
 
 # Sass
 sass:

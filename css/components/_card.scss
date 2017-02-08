@@ -31,6 +31,10 @@
     background: $gray--light;
   }
 
+  &.thin {
+    max-width: 400px;
+  }
+
   .icon {
     flex: 0 0 45px;
     padding-top: 20px;
