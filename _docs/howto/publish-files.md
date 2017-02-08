@@ -24,12 +24,7 @@ dat://344c140462779e2737987c706e16840662a9deafa620996bb6638058b5fa4c07/
     new file:  /Users/paulfrazee/mysite/index.html
 
 Publishing dat://344c14..07
-? Publish? (y/N)
-```
-
-Press `y` and enter, and you should see this:
-
-```bash
+? Publish? (y/N) y
 2 files (332 B)
 1 added, 0 updated
 ```
