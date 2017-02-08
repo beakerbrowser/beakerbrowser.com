@@ -1,7 +1,7 @@
 ---
 title:    The site manifest
 category: Howto
-order:    5
+order:    4
 ---
 
 todo

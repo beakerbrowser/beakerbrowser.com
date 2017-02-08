@@ -43,7 +43,7 @@ When it is done, you will receive a URL like this:
 
 ```bash
 Created new site
-dat://fdad0febf3ca58a7d115c622218838b48c3f093b33fe2798010c94bb7847e880/ # your URL will differ
+dat://ff34725120b2f3c5bd5028e4f61d14a45a22af48a7b12126d5d588becde88a93/ # your URL will differ
 ```
 
 This is your site's URL. You can open it in Beaker, and you'll see the manifest you created during init.

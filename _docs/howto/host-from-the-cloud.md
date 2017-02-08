@@ -20,4 +20,4 @@ Cloud-hosting is recommended for public sites that need reliable uptime and a me
 
 ---
 
-Next: [Work on a site](./clone-a-site.html)
+Next: [Work on a site](./work-on-a-site.html)

@@ -1,7 +1,7 @@
 ---
 title:    Use .datignore
 category: Howto
-order:    4
+order:    3
 ---
 
 todo
