@@ -50,4 +50,4 @@ The rules of .datignore are the same as .gitignore or .npmignore.
 
 ---
 
-Next: [The site manifest](./site-manifest.html)
+Next: [Web APIs by example](/docs/apis/by-example.html)

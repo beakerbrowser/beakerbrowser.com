@@ -14,7 +14,9 @@ order:    4
 - Only apps served over dat:// are able to access this API.
 - <i class="fa fa-flask"></i> This API is under development and subject to change.
 
-<hr class="nomargin">
+
+---
+
 
 ### Example usage
 
@@ -31,7 +33,6 @@ var str = await dat.readFile(datUrl + 'hello.txt')
 console.log(str) // => 'world'
 ```
 
-<hr class="nomargin">
 
 ### Permissions 
 
@@ -46,7 +47,6 @@ The user will be prompted to confirm permission to:
 
 The user must be the owner of a dat site to modify it.
 
-<hr class="nomargin">
 
 ### Disk usage and quotas
 
@@ -59,7 +59,6 @@ By default, sites are limited to 100MB of storage.
 When the limit is reached, the user will be prompted to allow more disk-usage.
 Until this is granted, all writes will fail.
 
-<hr class="nomargin">
 
 ### Versioning
 
@@ -70,7 +69,6 @@ When a checkpoint is written, the files' contents are captured and retained.
 Checkpoint names must be unique and cannot be reused.
 It's recommended that you follow [semantic versioning](http://semver.org/), but this is not required.
 
-<hr class="nomargin">
 
 ### Networking
 
@@ -82,14 +80,12 @@ The connection may fail, or the server could go offline.
 This will manifest as timeouts to the read calls.
 You can configure the timeout length in the call arguments.
 
-<hr class="nomargin">
 
 ### Special files
 
 The `dat.json` file is special, and can not be read or written directly by the application.
 It is a manifest file that includes metadata and configuration.
 
-<hr class="nomargin">
 
 ### Toplevel methods
 

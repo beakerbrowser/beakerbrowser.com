@@ -19,7 +19,6 @@ console.log(datUrl)
 // => dat://da2ce4..dc/
 ```
 
-<hr class="nomargin">
 
 ### Write a file
 
@@ -28,7 +27,6 @@ var fileUrl = datUrl + '/hello.txt'
 await dat.writeFile(fileURL, 'world')
 ```
 
-<hr class="nomargin">
 
 ### Read a file
 
@@ -39,7 +37,6 @@ console.log(helloTxt)
 // => 'world'
 ```
 
-<hr class="nomargin">
 
 ### Create a subdirectory 
 
@@ -49,7 +46,6 @@ var exists = await dat.exists(dirUrl)
 if (!exists) await dat.createDirectory(dirUrl))
 ```
 
-<hr class="nomargin">
 
 ### List files
 
@@ -64,7 +60,6 @@ console.log(files)
 */
 ```
 
-<hr class="nomargin">
 
 ### Check if a file exists
 
@@ -74,7 +69,6 @@ var exists = await dat.exists(fileUrl)
 console.log(exists) // => true
 ```
 
-<hr class="nomargin">
 
 ### Get the last-modified time of a file
 
@@ -94,7 +88,6 @@ console.log(fileInfo)
 } */
 ```
 
-<hr class="nomargin">
 
 ### Read a binary file
 
@@ -113,7 +106,6 @@ var src = 'data:image/png;base64,'+base64
 document.querySelector('img').src = src
 ```
 
-<hr class="nomargin">
 
 ### Write a binary file
 
@@ -131,7 +123,6 @@ var base64 = convertBufToBase64(arrayBuf)
 await dat.writeFile(dstUrl, base64, 'base64')
 ```
 
-<hr class="nomargin">
 
 ### Request network access to a host
 
@@ -144,7 +135,6 @@ console.log(res.status)
 // => 'granted'
 ```
 
-<hr class="nomargin">
 
 ### Request network access to all hosts
 
