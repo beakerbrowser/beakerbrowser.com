@@ -34,4 +34,4 @@ Now, as you make changes, the page will automatically refresh for you. When you'
 
 ---
 
-Next: [Use .datignore](./use-datignore.md)
+Next: [Use .datignore](./use-datignore.html)
