@@ -1,5 +1,5 @@
 ---
-title:    Clone a site
+title:    Work on a site
 category: Howto
 order:    1
 ---
