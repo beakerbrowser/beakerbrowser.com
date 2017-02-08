@@ -10,9 +10,10 @@
 }
 
 .doc {
-  padding-bottom: 1em;
+  min-height: 100%;
 
   &__content {
+    padding-bottom: 3em;
 
     // TODO: add class to all docs images -tbv
     img {
