@@ -6,8 +6,9 @@ $breakpoints: (
   'show-grid-3': (min-width: 800px),
   'show-grid-5': (min-width: 750px),
   'expand-hero': (min-width: 990px),
-  'expand-doc-nav-wide': (min-width: 1500px),
   'show-gradient-hero': (min-width: 650px),
   'tablet': (min-width: 700px),
 );
+
+$docs-nav-width: 225px;
 

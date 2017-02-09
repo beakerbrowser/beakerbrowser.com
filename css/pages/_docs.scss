@@ -10,9 +10,15 @@
 }
 
 .doc {
-  padding-bottom: 1em;
+  min-height: 100%;
 
   &__content {
+    padding: 25px 0 3em 0;
+    max-width: 850px;
+
+    @include respond-to(tablet) {
+      margin-left: $docs-nav-width;
+    }
 
     // TODO: add class to all docs images -tbv
     img {
@@ -40,49 +46,72 @@
       color: $text--link;
     }
 
-    @include respond-to(contain-90) {
-      padding-left: 210px;
-    }
-
-    @include respond-to(expand-doc-nav-wide) {
-      max-width: 800px;
-      padding-left: 0
-    }
-
-    padding-top: 22px;
-
     pre.highlight {
       @extend %code-block !optional;
     }
   }
 
+  &__nav-menu-btn {
+    display: block;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1.2em;
+    cursor: pointer;
+
+    @include respond-to(tablet) {
+      display: none;
+    }
+
+    &--close {
+      position: absolute;
+      top: 0;
+      right: 1.25em;
+      padding: 1em 0;
+      margin-right: 0;
+    }
+
+    &--open {
+      padding-top: 1em;
+    }
+  }
+
   &__nav {
     position: fixed;
-    left: 0;
+    transition: left .4s ease-in-out;
+    left: -100%;
     top: 0;
+    width: $docs-nav-width;
     height: 100%;
+    padding: 25px 1.5em;
     background: $doc-nav-bg;
     border-right: 1px solid shade($doc-nav-bg, 5%);
     font-size: .95em;
-    padding: calc(1em + 14px) 1.5em 1em 1.5em;
     text-align: right;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
+
+    @include respond-to(tablet) {
+      left: 0;
+    }
+
+    &.visible {
+      left: 0;
+    }
 
     &__logo {
-      position: relative;
-      top: -6px;
       transition-property: color;
-      display: inline-block;
+      display: block;
       font-size: 1.5em;
       font-weight: bold;
-      padding-bottom: 8px;
-    }
+      margin-top: 1.25em;
 
-    @include respond-to(contain-90) {
-      min-width: 220px;
-    }
-
-    @include respond-to(expand-doc-nav-wide) {
-      width: 300px;
+      @include respond-to(tablet) {
+        margin-top: 0;
+      }
     }
   }
 

@@ -1,8 +1,19 @@
-<nav class="doc__nav">
+<div class="container">
+  <button class="doc__nav-menu-btn doc__nav-menu-btn--open" aria-label="Open navigation">
+    <i class="fa fa-bars"></i>
+  </button>
+</div>
+
+<nav id="doc-nav" class="doc__nav">
+  <button class="doc__nav-menu-btn doc__nav-menu-btn--close btn" aria-label="Close navigation">
+    <i aria-hidden="true" class="fa fa-bars"></i>
+  </button>
+
   <a href="/" class="doc__nav__logo">
     <span><i class="fa fa-flask"></i> Beaker</span>
   </a>
-  <div class="doc-nav-inner">
+
+  <div>
     {% assign doc_groups = site.docs | group_by: 'category' | sort: 'name' %}
     {% for doc_group in doc_groups %}
     <ul class="doc__nav-section">
@@ -41,3 +52,11 @@
     </ul>
   </div>
 </nav>
+
+<script>
+  var docNav = document.getElementById('doc-nav');
+  var docNavBtns = document.querySelectorAll('.doc__nav-menu-btn');
+  docNavBtns.forEach(function (el) {
+      el.addEventListener('click', function () { docNav.classList.toggle('visible') });
+  });
+</script>
