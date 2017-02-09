@@ -113,14 +113,6 @@
         margin-top: 0;
       }
     }
-
-    @include respond-to(contain-90) {
-      min-width: 220px;
-    }
-
-    @include respond-to(expand-doc-nav-wide) {
-      width: 300px;
-    }
   }
 
   &__nav-section {
