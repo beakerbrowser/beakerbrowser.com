@@ -13,7 +13,12 @@
   min-height: 100%;
 
   &__content {
-    padding-bottom: 3em;
+    padding: 25px 0 3em 0;
+    max-width: 850px;
+
+    @include respond-to(tablet) {
+      margin-left: $docs-nav-width;
+    }
 
     // TODO: add class to all docs images -tbv
     img {
