@@ -21,8 +21,10 @@
     }
 
     // TODO: add class to all docs images -tbv
-    img {
-      max-width: 700px;
+    @include respond-to(tablet) {
+      img {
+        max-width: 700px;
+      }
     }
 
     figure {
@@ -44,6 +46,10 @@
 
     a {
       color: $text--link;
+    }
+
+    code {
+      white-space: pre-wrap;
     }
 
     pre.highlight {

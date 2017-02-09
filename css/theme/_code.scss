@@ -2,7 +2,12 @@
   background: $gray--light;
   border: 1px solid shade($gray--light, 7%);
   padding: 1em;
-  white-space: pre-wrap;
+  white-space: pre;
+  overflow: scroll;
+
+  code {
+    white-space: pre;
+  }
 }
 
 .highlight .hll { background-color: #ffffcc }
