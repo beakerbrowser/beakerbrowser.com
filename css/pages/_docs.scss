@@ -88,6 +88,11 @@
     border-right: 1px solid shade($doc-nav-bg, 5%);
     font-size: .95em;
     text-align: right;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
 
     @include respond-to(tablet) {
       left: 0;
