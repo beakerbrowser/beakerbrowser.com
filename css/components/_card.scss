@@ -11,7 +11,10 @@
   position: relative;
   display: flex;
   padding: 1em;
-  margin: 2em;
+
+  @include respond-to(tablet) {
+    margin: 2em;
+  }
 
   // title
   &:before {
