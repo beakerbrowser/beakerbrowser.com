@@ -1,6 +1,6 @@
 ---
 title:    Install Beaker
-category: Get Started
+category: Get started
 order:    1
 redirect_from:
  - /docs/howto/use-bkr.html

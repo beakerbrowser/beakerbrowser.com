@@ -1,6 +1,6 @@
 ---
 title:    Publish files
-category: Get Started
+category: Get started
 order:    3
 ---
 

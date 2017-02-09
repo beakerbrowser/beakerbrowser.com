@@ -1,13 +1,13 @@
 ---
-title:    Host from the Cloud
-category: Get Started
+title:    Host from the cloud
+category: Get started
 order:    5
 ---
 
 For advanced users, cloud-hosting has several advantages over [hosting from home](./host-from-home.html):
 
- - DNS shortnames.
- - Hosting via HTTPS and Dat.
+ - DNS shortnames,
+ - Hosting via HTTPS and Dat, and
  - Better reliability.
 
 Cloud-hosting is recommended for public sites that need reliable uptime and a memorable URL.

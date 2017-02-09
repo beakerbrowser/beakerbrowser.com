@@ -36,10 +36,10 @@ Cannot write: not the archive owner
 To solve this, you must fork the site. "Forking" means to make a new copy at a new URL which you control.
 
 ```bash
-bkr fork <url> # give the url of the target site
+bkr fork <URL> # give the url of the target site
 ```
 
-If you're in the directory of a site you want to fork, you don't need to give the url:
+If you're in the directory of a site you want to fork, you don't need to give the URL:
 
 ```bash
 bkr fork
