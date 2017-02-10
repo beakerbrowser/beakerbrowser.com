@@ -1,5 +1,5 @@
 ---
-title:    Dat P2P Protocol
+title:    Dat Protocol
 order:    2
 ---
 
