@@ -1,5 +1,5 @@
 ---
-title:    App Manifest
+title:    App manifest
 category: Web APIs
 order:    2
 ---

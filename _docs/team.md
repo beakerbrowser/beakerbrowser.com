@@ -3,7 +3,7 @@ title: Team
 order: 3
 ---
 
-Beaker is built by a team Decentralizated-Web enthusiasists with a history of making Web apps, FOSS software, and peer-to-peer networks. We work in tandem with the [Dat Project](https://datproject.org).
+Beaker is built by a team of decentralizated Web enthusiasists with a history of making Web apps, FOSS software, and peer-to-peer networks. We work in tandem with the [Dat Project](https://datproject.org).
 
 <div class="team-members">
   <div class="team-member">

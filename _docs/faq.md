@@ -6,7 +6,7 @@ order:    4
 Is your question not answered here?
 **[Open an issue](https://github.com/beakerbrowser/FAQ/issues)** and let us know.
 
-### What are Archives?
+### What are archives?
 
 Dat Archives are bundles of files that are shared in a Peer-to-Peer network.
 They are similar to Torrents, except that they are changeable, versioned, and privately shareable.
