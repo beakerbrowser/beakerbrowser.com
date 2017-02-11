@@ -16,7 +16,7 @@ order:    4
 
 <hr class="nomargin">
 
-### Example Usage
+### Example usage
 
 Dat sites can be used to save data locally for an application, or to publish on the network.
 
@@ -48,7 +48,7 @@ The user must be the owner of a dat site to modify it.
 
 <hr class="nomargin">
 
-### Disk Usage and Quotas
+### Disk usage and quotas
 
 Sites are either permanent or temporary.
 Sites that are created via the `dat` api are permanent.
@@ -84,13 +84,13 @@ You can configure the timeout length in the call arguments.
 
 <hr class="nomargin">
 
-### Special Files
+### Special files
 
 The `dat.json` file is special, and can not be read or written directly by the application.
 It is a manifest file that includes metadata and configuration.
 
 <hr class="nomargin">
 
-### Toplevel Methods
+### Toplevel methods
 
 {% include api-reference.html items=site.data.apis.dat.toplevel_methods %}

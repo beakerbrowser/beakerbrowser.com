@@ -1,5 +1,5 @@
 ---
-title:    Dat P2P Protocol
+title:    Dat Protocol
 order:    2
 ---
 
@@ -50,7 +50,7 @@ import jquery from 'dat://code.jquery.com@3.1.1/jquery.min.js'
   </p>
 </div>
 
-### Dat In-Depth
+### Dat in-depth
 
 #### Archives
 
@@ -71,7 +71,7 @@ The most common discovery networks are the BitTorrent Mainline DHT, modified DNS
 
 Multicast UDP enables peers to sync directly over the LAN, so that Internet connectivity is not a requirement for application distribution.
 
-#### Caching & Resharing
+#### Caching and resharing
 
 When a Dat site is visited, Beaker downloads the metadata log, and then refers to the log to download any requested files.
 The files are cached offline for a period, and then garbage-collected.
@@ -119,41 +119,41 @@ Because the hashes include the log history, it is trivial to check for differenc
 Receiving peers will reject updates to an archive if they detect a branch in history.
 This makes it difficult to deliver a targeted payload, as peers can gossip with each other about the current state of an archive.
 
-#### Content Sandboxing
+#### Content sandboxing
 
 Sites opened on the Dat protocol do not have network hosts, and are disallowed from accessing the network directly.
 By default, they are only allowed to issue fetches to `dat://` sites.
 Access to the network via Ajax or HTML embeds must be explicitly requested to the user, and will never include scripts, styles, or objects.
 
-#### Network Confidentiality
+#### Network confidentiality
 
 Network traffic is encrypted using the public key of the archive, in this case as a symmetric key.
 The key is HMACed before it is broadcasted to the discovery networks.
 Therefore, peers must have prior knowledge of a Dat URL in order to decrypt its network traffic.
 The Dat URL behaves as a read-capability.
 
-#### Weaknesses in the Confidentiality
+#### Weaknesses in the confidentiality
 
 Peers who possess a Dat URL will be able to look up all other peers who are swarming the archive on their discovery-network.
 This means that Dat is not anonymous: any other user that possesses a Dat URL will know if you downloaded the archive.
 
 
-### In Application
+### In application
 
-#### Independent Publishing
+#### Independent publishing
 
 Dat sites are able to access the [Dat Web API](/docs/apis/dat.html) to read and publish new archives.
 As each archive behaves as an independent website, this makes it cheap and easy to publish content independently of a parent application.
 Rather than posting to a site, users can self-publish their content.
 
-#### Offline-First
+#### Offline-first
 
 Dat applications are thick-client: they run on the device, not on a host.
 Web-services are an optional dependency instead of a requirement.
 Developers are encouraged to use device APIs to store data and P2P APIs to share data whenever possible.
 
-#### Public Peers
+#### Public peers
 
 The Dat network does not automatically guarantee availability.
 Publishers are in charge of hosting their archives on the network, though downloaders are empowered to rehost content as well.
-Subscription-based Public Peer services can be used to help distribute archives and provide guaranteed availability.
+Subscription-based public peer services can be used to help distribute archives and provide guaranteed availability.

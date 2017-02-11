@@ -1,6 +1,6 @@
 ---
-title:    "Howto: Publish a Site"
-short_title: Publish a Site
+title:    "Howto: Publish a site"
+short_title: Publish a site
 category: Howto
 order:    2
 ---
@@ -69,9 +69,9 @@ This dat will stay in sync with the folder.
 
 When you close `bkr dev`, the temporary site will be deleted.
 
-### Turn on live-reloading
+### Turn on live reloading
 
-While you work, it can be convenient to turn on live-reloading in Beaker.
+While you work, it can be convenient to turn on live reloading in Beaker.
 This can be done by the dropdown menu at the top right:
 
 <img src="/img/getting-started-screen-livereload.png" class="bordered">

@@ -1,6 +1,6 @@
 ---
-title:    Web APIs By Example
-short_title: By Example
+title:    Web APIs by example
+short_title: By example
 category: Web APIs
 order:    1
 ---

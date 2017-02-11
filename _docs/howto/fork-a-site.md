@@ -1,6 +1,6 @@
 ---
-title:    "Howto: Fork a Site"
-short_title: Fork a Site
+title:    "Howto: Fork a site"
+short_title: Fork a site
 category: Howto
 order:    3
 ---
