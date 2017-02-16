@@ -1,6 +1,7 @@
 ---
-title:    Dat Protocol
-order:    2
+title: Dat Protocol
+redirect_from:
+ - /docs/dat/intro.html
 ---
 
 The Dat Protocol browses versioned, static sites.

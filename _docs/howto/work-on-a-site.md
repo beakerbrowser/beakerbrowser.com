@@ -4,59 +4,120 @@ category: Howto
 order:    1
 ---
 
-Beaker stores all Dat sites in an internal database. To work on a site, you "clone" it into a folder, then publish updates back into Beaker.
-
-### How to clone
-
-Create the folder you want to clone the site into, then run this command:
+In the directory of the [site you created](/docs/howto/create-a-site.html), run these commands:
 
 ```bash
-bkr clone <url> # give the url of the target site
+echo "<h1>Hello, world</h1>" > index.html
+bkr publish
 ```
 
-You will see output similar to this:
-
-```bash
-Checking out dat://ff3472..93 into /Users/paulfrazee/mysite
-7 files created
-```
-
-You can now edit the files and [publish changes](./publish-files).
-
-### How to fork
-
-If you do not own a site, you will see a prompt similar to this when you try to publish changes:
+You'll see similar output to this:
 
 ```bash
 Running a diff...
-dat://316a27810b2886a2b2cb8c9d0e57a0b1b07aa9f47a000c61de47e2f87b6cddfe
-Cannot write: not the archive owner
+dat://344c140462779e2737987c706e16840662a9deafa620996bb6638058b5fa4c07/
+
+1 new file, 0 updates.
+
+    new file:  /Users/paulfrazee/mysite/index.html
+
+Publishing dat://344c14..07
+? Publish? (y/N) y
+2 files (332 B)
+1 added, 0 updated
 ```
 
-To solve this, you must fork the site. "Forking" means to make a new copy at a new URL which you control.
+Your site now says "Hello World" when you visit it in Beaker.
+
+Using this flow, you can add many more files, and update the existing files as well.
+
+### Live reloading
+
+Development will be slow if you have to manually publish files every time you make a change. To solve this, use `bkr dev` and live-reloading.
+
+In a working directory, run the following command:
 
 ```bash
-bkr fork <URL> # give the url of the target site
+bkr dev
 ```
 
-If you're in the directory of a site you want to fork, you don't need to give the URL:
+You'll see output similar to this:
 
 ```bash
-bkr fork
+  Building '/Users/paulfrazee/mysite'...
+  Ready. Sharing at:
+
+  dat://76cb2b757c9707fea78b38e667aa58b0a1df72defb303d97a50af515c6d0ecc2
 ```
 
-You will see output similar to this:
+This creates a *temporary* dat site which will watch the source directory and automatically publish changes. You can not share this dat, and it will be automatically deleted when you close `bkr dev`.
+
+Next, turn on live-reloading by clicking the <span class="fa fa-bolt"></span> icon in the URL bar.
+
+<figure>
+  <img class="bordered" src="/img/screenshot-live-reload-btn.png">
+  <figcaption>Turn on live-reloading.</figcaption>
+</figure>
+
+Now, as you make changes, the page will automatically refresh for you. When you're done, close `bkr dev` and publish the updated site.
 
 ```bash
-Forking dat://fdad0f..80, please be patient...
+$ bkr publish
+Running a diff...
+dat://344c140462779e2737987c706e16840662a9deafa620996bb6638058b5fa4c07/
 
-Checking out into /Users/pfrazee/mysite
-2 files created
-New url: dat://1322af7a09027ff2b80b250ae410e33873a788000066a9996365095838d02069
+0 new files, 1 update.
+
+    updated file:  /Users/paulfrazee/mysite/index.html
+
+Publishing dat://344c14..07
+? Publish? (y/N) y
+2 files (332 B)
+1 added, 0 updated
 ```
 
-You can now make changes to the new site.
+### Using .datignore
 
----
+There are times when there are files in your working directory that you need to keep, but don't want to publish, as in this example:
 
-Next: [Live-reloading](./live-reloading.html)
+```bash
+bkr status
+
+Running a diff...
+dat://c8e29ae95586898986a8691b5804e7dddf4af624df22789fc5c9378a13667d63/
+
+14 new files, 0 updates.
+
+    new file:  /Users/paulfrazee/mysite/.DS_Store
+    new file:  /Users/paulfrazee/mysite/dat.json
+    new file:  /Users/paulfrazee/mysite/index.html
+    new file:  /Users/paulfrazee/mysite/index.html~
+    new file:  /Users/paulfrazee/mysite/node_modules/left-pad/index.js
+    new file:  /Users/paulfrazee/mysite/node_modules/left-pad/package.json
+```
+
+All I want to publish, in this case, is the `dat.json` and `index.html`. To solve this, write a `.datignore` file to specify which files should not be included:
+
+```bash
+echo "\
+.DS_Store
+node_modules
+*~" > .datignore
+```
+
+Now we'll only publish what we want:
+
+```bash
+bkr status
+
+Running a diff...
+dat://c8e29ae95586898986a8691b5804e7dddf4af624df22789fc5c9378a13667d63/
+
+3 new files, 0 updates.
+
+    new file:  /Users/paulfrazee/mysite/.datignore
+    new file:  /Users/paulfrazee/mysite/dat.json
+    new file:  /Users/paulfrazee/mysite/index.html
+```
+
+The rules of .datignore are the same as .gitignore or .npmignore.

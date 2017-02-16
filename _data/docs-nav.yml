@@ -1,0 +1,42 @@
+- title: Learn
+  baseurl: /docs/learn/
+  url: /docs/learn/dat.html
+  children:
+  - title: Dat Protocol
+    url: /docs/learn/dat.html
+  - title: FAQ
+    url: /docs/learn/faq.html
+- title: Howto
+  baseurl: /docs/howto/
+  url: /docs/howto/create-a-site.html
+  children:
+  - title: Create a site
+    url: /docs/howto/create-a-site.html
+  - title: Work on a site
+    url: /docs/howto/work-on-a-site.html
+- title: Hosting
+  baseurl: /docs/hosting/
+  url: /docs/hosting/host-from-home.html
+  children:
+  - title: From home
+    url: /docs/hosting/host-from-home.html
+  - title: From the cloud
+    url: /docs/hosting/host-from-the-cloud.html
+- title: Web APIs
+  baseurl: /docs/apis/
+  url: /docs/apis/by-example.html
+  children:
+    - title: By example
+      url: /docs/apis/by-example.html
+    - title: App manifest
+      url: /docs/apis/manifest.html
+    - title: Permissions API
+      url: /docs/apis/permissions.html
+    - title: Dat API
+      url: /docs/apis/dat.html
+- title: About us
+  baseurl: /docs/about-us/
+  url: /docs/about-us/team.html
+  children:
+  - title: Team
+    url: /docs/about-us/team.html

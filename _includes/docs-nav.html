@@ -14,27 +14,38 @@
   </a>
 
   <div>
-    {% assign doc_groups = site.docs | group_by: 'category' | sort: 'name' %}
-    {% for doc_group in doc_groups %}
     <ul class="doc__nav-section">
-      {% assign docs = doc_group.items | sort: 'order' %}
-      {% assign hasTitled = false %}
-      {% for doc in docs %}
-        {% assign extension = doc.url | slice: -5, 5 %}
-        {% if extension == '.html' %}
-        {% if hasTitled == false %}
-        <span class="doc__group-name">{{ doc_group.name }}</span>
-          {% assign hasTitled = true %}
-        {% endif %}
-        <li class="doc__link {% if doc.url == page.url %}current{%endif %}">
-          <a href="{{ doc.url | prepend: site.baseurl }}">
-            {{ doc.short_title | default: doc.title | escape }}
-          </a>
-        </li>
-        {% endif %}
-      {% endfor %}
+      <li class="doc__link {% if '/docs/install.html' == page.url %}current{%endif %}">
+        <a href="{{ '/docs/install.html' | prepend: site.baseurl }}">
+          Install
+        </a>
+      </li>
+      <li class="doc__link {% if '/docs/index.html' == page.url %}current{%endif %}">
+        <a href="{{ '/docs/index.html' | prepend: site.baseurl }}">
+          Documentation
+        </a>
+      </li>
+    </ul>
+
+    {% for section in site.data.docs-nav %}
+    <ul class="doc__nav-section">
+      <span class="doc__group-name">
+        <a href="{{ section.url }}">
+          {{ section.title }}
+        </a>
+      </span>
+      {% if page.url contains section.baseurl %}
+        {% for doc in section.children %}
+          <li class="doc__link {% if doc.url == page.url %}current{%endif %}">
+            <a href="{{ doc.url | prepend: site.baseurl }}">
+              {{ doc.short_title | default: doc.title | escape }}
+            </a>
+          </li>
+        {% endfor %}
+      {% endif %}
     </ul>
     {% endfor %}
+
     <hr>
     <ul class="doc__nav-section">
       <li class="doc__link outbound">
@@ -47,7 +58,7 @@
         <a href="https://groups.google.com/forum/#!forum/beaker-browser">Mailing list</a>
       </li>
       <li class="doc__link outbound">
-        <a href="/docs/howto/install.html">Install Now <span class="fa fa-download"></span></a>
+        <a href="/docs/howto/install.html">Install Now</a>
       </li>
     </ul>
   </div>

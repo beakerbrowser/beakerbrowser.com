@@ -55,11 +55,6 @@
     pre.highlight {
       @extend %code-block !optional;
     }
-
-    @include respond-to(expand-doc-nav-wide) {
-      max-width: 920px;
-      padding-left: 270px;
-    }
   }
 
   &__nav-menu-btn {
@@ -129,8 +124,12 @@
   &__nav-section {
     list-style: none;
 
-    &:not(:first-child) {
+    &:first-child {
       margin-top: 1em;
+    }
+
+    li:last-child {
+      margin-bottom: 1em;
     }
   }
 

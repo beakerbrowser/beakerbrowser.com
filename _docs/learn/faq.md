@@ -1,6 +1,7 @@
 ---
-title:    FAQ
-order:    4
+title: FAQ
+redirect_from:
+ - /docs/faq.html
 ---
 
 Is your question not answered here?
