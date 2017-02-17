@@ -1,0 +1,13 @@
+.card-group {
+  display: flex;
+  flex-wrap: wrap;
+
+  .card-inline-block {
+    margin: 0.25rem;
+    flex: 0 0 45%;
+
+    @include respond-to(netbook) {
+      flex: 1;
+    }
+  }
+}

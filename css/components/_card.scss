@@ -1,7 +1,47 @@
 %card {
   @extend %rounded;
-  border: 1px solid;
-  padding: 2em;
+  border: 1px solid $gray--dark;
+}
+
+.card {
+  @extend %card;
+
+  &-inline-block {
+    display: inline-block;
+    margin-bottom: 4px;
+
+    span {
+      display: block;
+    }
+  }
+
+  &-with-icon {
+    width: 180px;
+
+    .card-icon {
+      display: block;
+      padding: 2rem 0;
+      font-size: 4rem;
+      text-align: center;
+      border-bottom: 1px solid $gray--dark;
+
+      &:hover {
+        background: $gray--light;
+      }
+    }
+  }
+
+  &-header {
+    font-size: 2rem;
+  }
+
+  &-body {
+    @extend %rounded-bottom;
+    
+    background: $gray--light;
+    color: $gray--very-dark;
+    padding: 1rem;
+  }
 }
 
 .detailed-card {

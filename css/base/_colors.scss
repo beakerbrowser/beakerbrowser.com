@@ -16,6 +16,7 @@ $primary--very-light: tint($primary, 95%);
 $accent--mid: tint($accent, 35%);
 $accent--light: tint($accent, 65%);
 
+$gray--very-dark: mix($black, $white, 65%);
 $gray--dark: mix($black, $white, 35%);
 $gray: mix($black, $white, 20%);
 $gray--light: mix($black, $white, 3.5%);
