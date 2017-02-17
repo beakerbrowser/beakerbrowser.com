@@ -14,16 +14,8 @@
   children:
   - title: Create a site
     url: /docs/howto/create-a-site.html
-  - title: Work on a site
-    url: /docs/howto/work-on-a-site.html
-- title: Hosting
-  baseurl: /docs/hosting/
-  url: /docs/hosting/host-from-home.html
-  children:
-  - title: From home
-    url: /docs/hosting/host-from-home.html
-  - title: From the cloud
-    url: /docs/hosting/host-from-the-cloud.html
+  - title: Host a site
+    url: /docs/howto/host.html
 - title: Web APIs
   baseurl: /docs/apis/
   url: /docs/apis/by-example.html

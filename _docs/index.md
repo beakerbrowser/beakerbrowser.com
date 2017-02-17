@@ -32,7 +32,7 @@ Beaker is made by software enthusiasts who want a better Web; one that's decentr
     <span class="card-body">Web APIs</span>
   </div>
   <div class="card card-with-icon card-inline-block">
-    <a href="./hosting/host-from-home.html" class="fa fa-server card-icon"></a>
+    <a href="./howto/host.html" class="fa fa-server card-icon"></a>
     <span class="card-body">Hosting</span>
   </div>
 </div>
