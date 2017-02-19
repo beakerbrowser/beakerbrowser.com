@@ -6,9 +6,7 @@ redirect_from:
  - /docs/howto/publish-a-site.html
 ---
 
-<small>Prerequisite: [Install Beaker and Bkr](/docs/howto/install.html)</small>
-
-Make sure Beaker is running, then run these commands:
+Make sure Beaker is running and that you have installed [bkr](https://github.com/beakerbrowser/bkr), then run these commands:
 
 ```bash
 mkdir ~/mysite

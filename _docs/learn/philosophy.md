@@ -2,13 +2,40 @@
 title: Beaker's Philosophy
 ---
 
-Beaker is made by software enthusiasts who want a better Web; one that's decentralized, easy to hack, and safe to use. So we started a new browser, with these goals in mind:
+Beaker holds these ideals:
 
- - Apply the Unix philosophy of small, interoperable programs.
- - Separate the frontend from the backend of Web apps.
- - Make every site [forkable](./howto/create-a-site.html) and user-programmable.
- - Lock Javascript behind a network-restricted sandbox by default.
+<table class="basic-table">
 
-**At the heart of Beaker** is the [Dat Protocol](./learn/dat.html), a peer-to-peer file transport which strongly guarantees uniform distribution of static packages. Beaker uses Dat to distribute sites, applications, user files, and security certificates. It is exposed to applications as a site-transport, networked files API, and networked feeds API.
+  <tr>
+    <th>Host-free</th><td>Applications should not be bound to a remote service.</td>
+  </tr>
+  
+  <tr>
+    <th>User-programmable</th><td>Applications should be easy to modify.</td>
+  </tr>
 
-Dat decentralizes authority in Beaker's network of users and servers. Each archive is signed by the authors and identified by public key, therefore rehosting does not change the URL. Applications can use Dat as a decentralized and offline-first backend to their user-data.
+  <tr>
+    <th>Configurable</th><td>Applications should read configuration from the browser.</td>
+  </tr>
+
+  <tr>
+    <th>Open-data</th><td>Applications should share data at the user's request.</td>
+  </tr>
+
+  <tr>
+    <th>Automated builds</th><td>Applications should be easy to build.</td>
+  </tr>
+
+  <tr>
+    <th>Private by default</th><td>Applications should use end-to-end encryption.</td>
+  </tr>
+</table>
+
+We want the Web to be elegant. We want view-source to tell you everything, and builds to be automatic. We want small applications that intoperate, not monolithic applications that dominate.
+
+We want the Web to be open-source. The PC revolution is about democratized computation, not convenient consumption. We want social applications to be built by users, from the ground up, so they respond to the user's needs.
+
+### Further reading
+
+ - [Architecture](./architecture.html). How Beaker works.
+ - [Dat protocol](./dat.html). About the Decentralized Archive Transport.

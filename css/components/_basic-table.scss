@@ -1,0 +1,18 @@
+table.basic-table {
+  border-collapse: collapse;
+  border-radius: 2px;
+
+  th {
+    background: $gray--light;
+    border: 1px solid $gray;
+    padding: 0.5em 1em;
+    text-align: right;
+    vertical-align: top;
+    white-space: pre;
+  }
+  td {
+    padding: 0.5em 1em;
+    border: 1px solid $gray;
+    vertical-align: top;
+  }
+}

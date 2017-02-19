@@ -31,9 +31,7 @@ npm install -g bkr
 
 <small>Requires [node 6](https://nodejs.org/) or later. If you have a problem with permissions, <a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions" target="_blank">see this guide</a>.</small>
 
----
-
-## Get started
+### Guides
 
 <div class="card-group">
   <div class="card card-with-icon card-inline-block">
