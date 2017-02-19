@@ -4,6 +4,8 @@
   children:
   - title: Philosophy
     url: /docs/learn/philosophy.html
+  - title: Architecture
+    url: /docs/learn/architecture.html
   - title: Dat Protocol
     url: /docs/learn/dat.html
   - title: FAQ
