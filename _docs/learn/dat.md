@@ -42,3 +42,4 @@ import jquery from 'dat://code.jquery.com@3.1.1/jquery.min.js'
 
  - [datprotocol.com](https://www.datprotocol.com). Learn about the protocol in-depth.
  - [datproject.org](https://datproject.org). The organization behind Dat.
+ - [FAQ](./faq.html)

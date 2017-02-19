@@ -13,7 +13,7 @@ Dat Archives are bundles of files that are shared in a Peer-to-Peer network.
 They are similar to Torrents, except that they are changeable, versioned, and privately shareable.
 In Beaker, they act as web-sites.
 
-[You can read more about the Dat protocol here.](/docs/dat/intro.html)
+[You can read more about the Dat protocol here.](./dat.html)
 
 ### What do Dat URLs look like?
 
@@ -29,7 +29,7 @@ You can reference specific files by putting the path at the end.
 ### Can I use DNS to create short URLs?
 
 Yes!
-You can [read the guide here](/docs/dat/intro.html#experimental-behaviors).
+You can [with the DatHTTPD server](https://github.com/beakerbrowser/dathttpd).
 
 ### Is the network anonymous?
 
@@ -38,11 +38,12 @@ This is very important to understand:
 If any other user has the link to a Dat site, they'll be able to see
 your requests for it, and they'll know your IP.
 Browsing Dat sites is therefore not anonymous.
-[Read more about this here.](/docs/dat/intro.html#security-properties)
 
 ### Is the Dat Protocol encrypted?
 
 Yes, like in HTTPS, the connection is encrypted.
+The URL itself is used to encrypt the connection; therefore, only people with whom
+you have shared a URL can read the traffic.
 
 ### How does a Dat site differ from a normal site?
 
@@ -58,14 +59,13 @@ To make sure your files are available, you must setup a computer in the network 
 
 ### Do I automatically host sites that I've visited or downloaded?
 
-No.
-Unlike many peer-to-peer networks, Beaker does not automatically upload the files you've downloaded.
-If you want to rehost a site, you can do so manually with Beaker.
+No. Beaker does not automatically rehost the sites you've visited.
+If you want to rehost a site, you must [save it to your sites library](/docs/howto/host.html).
 
 ### Who is allowed to change a Dat site?
 
-When a site is created, a "keypair" is generated
-The first key, called the "private" key, gives you the power to change the site.
+When a site is created, a "key pair" is generated (literally, a pair of keys).
+The "private" key gives you the power to change the site.
 Beaker keeps that secret inside a database, on your device.
 The second key, called the "public" key, gives other users the power to find and download the site.
 The public key is used to create the site's URL.
@@ -77,19 +77,17 @@ If the private key is lost, the site can never be changed.
   <div class="icon"><span class="fa fa-exclamation-triangle"></span></div>
   <div class="body">
     <p>Don't try to copy the private key onto multiple devices, except as a backup precaution.
-    The Hyperdrive protocol doesn't yet have a way to handle conflicting updates, which might happen if you make changes from 2 devices.</p>
+    The Dat protocol doesn't yet have a way to handle conflicting updates, which might happen if you make changes from 2 devices.</p>
   </div>
 </div>
 
 ### Can I browse regular HTTP/S sites?
 
 Yes, Beaker browses the normal Web.
-It doesn't make any changes to Web platform, except for its added Peer-to-Peer features.
 
 ### Will peer-to-peer protocols ever be adopted by other browsers?
 
-We hope so.
-Our mission is to create working proofs that will influence standards bodies and push these features out to mainstream browsers.
+We hope so!
 
 ### Is Beaker built entirely from scratch?
 

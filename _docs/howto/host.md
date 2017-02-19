@@ -26,9 +26,9 @@ $ bkr ls
 
 ### Cloud hosting
 
-Cloud-hosting is recommended for public sites that need reliable uptime and a memorable URL. For advanced users, cloud-hosting has several advantages over [hosting from home](./host-from-home.html):
+Cloud-hosting is recommended for public sites that need reliable uptime and a memorable URL. For advanced users, cloud-hosting has several advantages over hosting from home:
 
- - DNS shortnames,
+ - DNS shortnames (dat://foo.com),
  - Fallback to HTTPS, and
  - Better reliability.
 
