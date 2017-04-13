@@ -39,7 +39,9 @@ Beaker is made by software enthusiasts who want a better Web; one that's decentr
 
 Beaker is a new application for browsing Websites on a peer-to-peer network. Beaker uses the [Dat Protocol](https://datproject.org) to host and navigate data directly from users’ computers for free.
 
-Our belief is that the Web fails to respond to its communities’ needs because its applications are built from the top-down by businesses. Decisions about the software are made by developers who are not a part of the community. To handle fake news, invasive ads, and harassment, users need to be empowered to change their software communally.
+Our mission is to drive the Web platform to adopt new ideas and technologies by demonstrating their viability. Beaker is a working experiment for people who share our ideals.
+
+We believe that the Web fails to respond to its communities’ needs because its applications are built from the top-down by businesses. Decisions about the software are made by developers who are not a part of the communities they construct. To handle fake news, invasive ads, and harassment, users need to be empowered to change their software communally.
 
 ### How
 
