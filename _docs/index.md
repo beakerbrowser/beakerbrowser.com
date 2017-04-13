@@ -52,6 +52,3 @@ Unlike traditional browsers, where consumption is the chief purpose, Beaker make
 ### Vision
 
 We envision a future where communities can respond to an abusive actor, such as a fake-news publisher, by presenting a new version of their social-media app with a blacklist or warning-labels built in. Users could switch to the new app with the click of a button, and resume their use just as before. New forks of an application would go viral weekly, and the community would be actively engaged in the forks they prefer.
-
-
-[Mission &raquo;](./mission.html)
