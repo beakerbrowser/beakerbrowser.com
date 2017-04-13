@@ -35,4 +35,23 @@ Beaker is made by software enthusiasts who want a better Web; one that's decentr
 
 ---
 
-Beaker is built in collaboration with the [Dat Project](https://datproject.org), a non-profit funded by the Knight and Sloan Foundations.
+### About
+
+Beaker is a new application for browsing Websites on a peer-to-peer network. Beaker uses the [Dat Protocol](https://datproject.org) to host and navigate data directly from users’ computers for free.
+
+Our mission is to drive the Web platform to adopt new ideas and technologies by demonstrating their viability. Beaker is a working experiment for people who share our ideals.
+
+We believe that the Web fails to respond to its communities’ needs because its applications are built from the top-down by businesses. Decisions about the software are made by developers who are not a part of the communities they construct. To handle fake news, invasive ads, and harassment, users need to be empowered to change their software communally.
+
+### How
+
+Beaker uses a peer-to-peer network to remove the dependence on Web services and their data siloes. Instead, its users run applications on their own devices, and exchange code and data directly with each other. With no dependence on a remote service, users are free to use and alter their data and applications however they wish.
+
+Unlike traditional browsers, where consumption is the chief purpose, Beaker makes creation a first-class citizen of the browser UI. Beaker includes an editor, so that users can visit a peer-to-peer site and simply click “Edit Source.” Beaker also makes hosting a matter of community engagement; users can support the sites they like by contributing bandwidth. Site popularity can easily be gauged by the number of active peers.
+
+### Vision
+
+We envision a future where communities can respond to an abusive actor, such as a fake-news publisher, by presenting a new version of their social-media app with a blacklist or warning-labels built in. Users could switch to the new app with the click of a button, and resume their use just as before. New forks of an application would go viral weekly, and the community would be actively engaged in the forks they prefer.
+
+
+[Mission &raquo;](./mission.html)
