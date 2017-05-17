@@ -59,10 +59,10 @@
   }
 
   .divider {
-    margin: 2em auto;
+    margin: 1em auto;
 
     @include respond-to(show-grid-2) {
-      margin: 2em 0;
+      margin: 1em 0;
     }
   }
 
