@@ -33,7 +33,7 @@
   }
 
   .container {
-    @extend %grid-2;
+    @extend %grid-3;
     position: relative;
     z-index: 1;
 
@@ -50,10 +50,10 @@
 
 
   &__intro {
-    @extend %col-1-2;
+    @extend %col-2-3;
     margin: 0 auto;
 
-    @include respond-to(show-grid-2) {
+    @include respond-to(show-grid-3) {
       padding-right: 4em;
     }
   }
@@ -61,7 +61,7 @@
   .divider {
     margin: 1em auto;
 
-    @include respond-to(show-grid-2) {
+    @include respond-to(show-grid-3) {
       margin: 1em 0;
     }
   }
