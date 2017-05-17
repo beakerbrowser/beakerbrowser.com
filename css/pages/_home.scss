@@ -6,7 +6,7 @@
   @extend %shrink-text-phone;
 
   @include respond-to(tablet) {
-    font-size: 1em;
+    font-size: 1rem;
 
     &:before {
       display: block;
@@ -68,12 +68,11 @@
 
   &__description {
     margin-bottom: 3em;
-    font-size: 1.1em;
   }
 
   &__github {
     margin-top: 1.5em;
-    font-size: .85em;
+    font-size: .85rem;
 
     * {
       vertical-align: middle;
@@ -111,7 +110,7 @@
   }
 
   &__tagline {
-    font-size: 1.75em;
+    font-size: 1.5rem;
     font-weight: bold;
   }
 }
@@ -121,7 +120,7 @@
   padding: 3em 0;
 
   &--explainer {
-    font-size: .95em;
+    font-size: .95rem;
     background: $explainer-bg;
     padding: 4em 0;
   }
@@ -169,7 +168,7 @@
     @extend %flex-container;
     flex-direction: column;
     max-width: 400px;
-    font-size: .9em;
+    font-size: .9rem;
     text-align: center;
     padding: 3em 2em;
 
@@ -283,14 +282,14 @@
     p {
       color: $text--light-bg-muted;
       font-style: italic;
-      font-size: .9em;
+      font-size: .9rem;
       margin-bottom: 1em;
     }
   }
 
   &__list {
     @extend %col-2-5;
-    font-size: .9em;
+    font-size: .9rem;
     padding: 2em 2em 2em 3.5em;
     margin: auto;
     text-align: left;
@@ -325,7 +324,7 @@
       @extend %link;
       display: inline-block;
       flex-basis: 10%;
-      font-size: .9em;
+      font-size: .9rem;
     }
   }
 }
@@ -334,7 +333,7 @@
   .testimonials {
     @extend %grid-3;
     list-style: none;
-    font-size: .8em;
+    font-size: .8rem;
   }
 
   .testimonial {
