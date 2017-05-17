@@ -5,3 +5,9 @@ sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   color: $text--light-bg;
 }
+
+code,
+pre {
+  font-family: Consolas, 'Lucida Console', Monaco, Menlo, monospace;
+  font-size: .9rem;
+}
