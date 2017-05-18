@@ -33,13 +33,13 @@
   }
 
   .container {
-    @extend %grid-3;
+    @extend %grid-5;
     position: relative;
     z-index: 1;
 
 
-    // override default media query for %grid-2
-    @include respond-to(show-grid-2) {
+    // override default media query for %grid-5
+    @include respond-to(show-grid-5) {
       flex-direction: column;
     }
 
@@ -50,23 +50,29 @@
 
 
   &__intro {
-    @extend %col-2-3;
+    @extend %col-3-5;
     margin: 0 auto;
 
-    @include respond-to(show-grid-3) {
-      padding-right: 4em;
+    @include respond-to(show-grid-5) {
+      padding-right: 2em;
     }
   }
 
   .divider {
     margin: 1em auto;
 
-    @include respond-to(show-grid-3) {
+    @include respond-to(show-grid-5) {
       margin: 1em 0;
     }
   }
 
+  &__tagline {
+    font-size: 1.35rem;
+    font-weight: bold;
+  }
+
   &__description {
+    font-size: 1rem;
     margin-bottom: 3em;
   }
 
@@ -94,24 +100,63 @@
     }
   }
 
-  &__demo {
-    @extend %col-1-2;
+  &__links {
+    @extend %col-2-5;
     width: 100%;
-    max-width: 700px;
-    margin: 3em auto 0 auto;
+    margin-top: 2em;
 
     @include respond-to(expand-hero) {
       margin: 0;
-    }
-
-    img {
-      width: 100%;
+      text-align: left;
     }
   }
 
-  &__tagline {
-    font-size: 1.35rem;
-    font-weight: bold;
+  &__link {
+    @extend %rounded;
+    @extend %flex-container;
+    flex-wrap: nowrap;
+    padding: 1em;
+    background: transparentize(#fff, .9);
+    border: 1px solid transparentize(#fff, .75);
+    cursor: pointer;
+    text-align: left;
+
+    &:hover {
+      background: transparentize(#fff, .75);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+
+    i {
+      font-size: 2rem;
+    }
+
+    .info {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 1em;
+    }
+
+    .title {
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: .85;
+      margin-bottom: .5em;
+
+      &:after {
+        content: '\203A';
+        display: inline-block;
+        font-size: 1.2rem;
+        margin-left: .25em;
+      }
+    }
+
+    .description {
+      font-size: .9rem;
+      font-weight: 200;
+    }
   }
 }
 
