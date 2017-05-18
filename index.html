@@ -75,6 +75,21 @@ layout: default
   </div>
 </div>
 
+
+<div class="section section--faq">
+  <div class="container">
+    <h2>FAQ</h2>
+    <ul>
+      {% for item in site.data.faq %}
+      <li>
+        <h3 class="question">{{ item.question }}</h3>
+        <p>{{ item.answer }}</h3>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
 <div class="section section--explainer">
   <div class="container">
     <div class="explainer">

@@ -170,6 +170,38 @@
     padding: 4em 0;
   }
 
+  &--faq {
+    background: $latest-bg;
+    padding: 3em 0;
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      width: 100%;
+      display: inline-block;
+      text-align: left;
+      margin-bottom: 3em;
+
+      @media (min-width: 700px) {
+        width: 45%;
+      }
+
+      &:nth-of-type(2n) {
+        margin-left: .75em;
+      }
+
+      &:nth-of-type(1n) {
+        margin-right: .75em;
+      }
+    }
+
+    .question {
+      margin-bottom: 1em;
+    }
+  }
+
   &--download {
     background: $download-bg;
     padding: 3em 0 4em 0;
