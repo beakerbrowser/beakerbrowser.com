@@ -1,0 +1,29 @@
+-
+  question: "Will my files be available when I’m offline?"
+  answer:
+    "<p>It depends. When you turn off your computer, <em>you</em> are no longer
+     hosting your files. But if you’ve shared the URL to your site with others,
+     it’s possible that they might be hosting its files.</p><p>To
+     guarantee that your site’s files are available even when you’re offline,
+     you can use a cloud rehosting service like <a href=\"https://hashbase.io\">
+     Hashbase</a>.</p>"
+-
+  question: "How do I view a specific version of a site?"
+  answer:
+    "<p>To view a site at a given version, simply add <code>+{versionNumber}</code>
+     at the end of the site’s URL.</p>"
+-
+  question: "How is Dat different than IPFS?"
+  answer:
+    "<p>Both IPFS and Dat deduplicate content-addressed pieces of data and
+     provide a mechanism for searching for peers who have a specific piece of
+     data.</p><p>Unlike IPFS, Dat archives are addressed by a public key
+     instead of a static hash. This makes it possible for Dat archives to
+     to be editable, with the added bonus that Dat maintains a verifiable
+     record of every addition, deletion, and modification to an archive.</p>"
+-
+  question: "Who can see Web sites I publish with Beaker?"
+  answer:
+    "<p>Your site is private by default. Dat URLs are effectively unguessable and
+     are never sent over the network, so only people you share the URL with will
+     be able to download your site’s files.</p>"
