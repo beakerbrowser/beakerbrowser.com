@@ -171,19 +171,140 @@
   }
 
   &--screenshots {
+    padding: 0;
 
     .screenshot-container {
-      @extend %grid-2;
+      border-bottom: 1px solid $gray--mid;
+      padding-top: 2em;
+      overflow: hidden;
 
-      img {
+
+      img,
+      video {
         @extend %col-1-2;
         height: auto;
         display: inline-block;
-        border: 1px solid $gray--light;
+        border: 1px solid $gray--mid;
+        border-bottom: 0;
+        box-shadow: 0 15px 50px $gray--mid;
+        max-width: 640px;
+        max-height: 400px;
+      }
+
+      .title {
+        color: $primary;
+        font-weight: normal;
+        font-style: italic;
+      }
+
+      .subsection {
+        @extend %rounded;
+        padding: .75em;
+        transition: bacgkround .15s ease;
+        border: 1px solid transparent;
+
+        &:not(:last-child) {
+          margin-bottom: .75em;
+        }
+
+        &.selectable:hover,
+        &.selectable.active {
+          cursor: pointer;
+          border: 1px solid transparentize($primary, .85);
+          background: transparentize($primary, .95);
+        }
+      }
+
+      .subtitle {
+        color: $text--light-bg-muted;
+        text-transform: uppercase;
+        margin-bottom: .5em;
+        font-size: .9rem;
       }
 
       .desc {
         @extend %col-1-3;
+        color: $text--light-bg-muted;
+        padding-bottom: 1em;
+
+        p {
+          font-size: .9rem;
+        }
+
+        p:not(:last-of-type) {
+          margin-bottom: 2em;
+        }
+      }
+
+      .cta {
+
+        span {
+          display: block;
+          margin-top: 1em;
+        }
+      }
+    }
+
+    .screenshot-container.center {
+
+      img,
+      video {
+        width: 100%;
+        max-width: 598px;
+        margin: auto;
+        display: block;
+        border-bottom: 1px solid $gray--mid;
+      }
+
+      .desc {
+        @extend %grid-3;
+        margin-top: 1em;
+
+        @include respond-to(show-grid-3) {
+          margin-top: 3em;
+        }
+      }
+
+      .subsection {
+        @extend %col-1-3;
+      }
+    }
+
+    .screenshot-container.left,
+    .screenshot-container.right {
+
+      .container {
+        @extend %grid-2;
+      }
+
+      .desc {
+        margin: 2em 0 1em 0;
+
+        @include respond-to(show-grid-2) {
+          padding-left: 2em;
+          padding-bottom: 0;
+          margin: 0;
+        }
+      }
+    }
+
+    .screenshot-container.right {
+
+      @include respond-to(show-grid-2) {
+
+        .desc {
+          order: 1;
+          padding-left: 0;
+          padding-right: 2em;
+
+          p {
+            font-size: 1rem;
+          }
+        }
+
+        img {
+          order: 2;
+        }
       }
     }
   }

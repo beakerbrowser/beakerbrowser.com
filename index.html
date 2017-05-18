@@ -76,14 +76,22 @@ layout: default
 </div>
 
 <div class="section section--screenshots">
-  <div class="container">
     {% for ss in site.data.screenshots %}
-      <div class="screenshot-container">
-        <img src="{{ ss.src }}"/>
-        <div class="desc">{{ ss.desc }}</div>
+      <div class="screenshot-container {{ ss.orientation }}">
+        <h2 class="title">{{ ss.title }}</h2>
+        <div class="container">
+          {% if ss.src == '/img/ss/create-site.mp4' %}
+            <video autoplay loop>
+              <source src="{{ ss.src }}" type="video/mp4">
+              Sorry, your browser does not support the HTML video tag.
+            </video>
+          {% else %}
+            <img id="{{ ss.id }}" src="{{ ss.src }}"/>
+          {% endif %}
+          <div class="desc">{{ ss.desc }}</div>
+        </div>
       </div>
     {% endfor %}
-  </div>
 </div>
 
 <div class="section section--faq">
@@ -294,5 +302,6 @@ layout: default
   </div>
   <div class="divider"></div>
 </div>
+<script src="/js/screenshots.js"></script>
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
