@@ -13,17 +13,14 @@
     "<p>To view a site at a given version, simply add <code>+{versionNumber}</code>
      at the end of the site’s URL.</p>"
 -
-  question: "How is Dat different than IPFS?"
-  answer:
-    "<p>Both IPFS and Dat deduplicate content-addressed pieces of data and
-     provide a mechanism for searching for peers who have a specific piece of
-     data.</p><p>Unlike IPFS, Dat archives are addressed by a public key
-     instead of a static hash. This makes it possible for Dat archives to
-     to be editable, with the added bonus that Dat maintains a verifiable
-     record of every addition, deletion, and modification to an archive.</p>"
--
   question: "Who can see Web sites I publish with Beaker?"
   answer:
     "<p>Your site is private by default. Dat URLs are effectively unguessable and
      are never sent over the network, so only people you share the URL with will
      be able to download your site’s files.</p>"
+-
+  question: "Is my site’s traffic encrypted?"
+  answer:
+    "Yes. Your site’s traffic is encrypted in transit using its URL/public key.
+     So to decrypt the traffic, one must know the the site’s URL."
+
