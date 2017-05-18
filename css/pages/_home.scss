@@ -170,6 +170,24 @@
     padding: 4em 0;
   }
 
+  &--screenshots {
+
+    .screenshot-container {
+      @extend %grid-2;
+
+      img {
+        @extend %col-1-2;
+        height: auto;
+        display: inline-block;
+        border: 1px solid $gray--light;
+      }
+
+      .desc {
+        @extend %col-1-3;
+      }
+    }
+  }
+
   &--faq {
     background: $latest-bg;
     padding: 3em 0;

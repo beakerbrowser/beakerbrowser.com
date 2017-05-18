@@ -75,6 +75,16 @@ layout: default
   </div>
 </div>
 
+<div class="section section--screenshots">
+  <div class="container">
+    {% for ss in site.data.screenshots %}
+      <div class="screenshot-container">
+        <img src="{{ ss.src }}"/>
+        <div class="desc">{{ ss.desc }}</div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
 
 <div class="section section--faq">
   <div class="container">
