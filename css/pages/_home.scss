@@ -310,14 +310,14 @@
   }
 
   &--faq {
-    background: $latest-bg;
-    padding: 3em 0;
+    padding: 2em 0 1em 0;
+    border-bottom: 1px solid $gray--mid;
 
     ul {
       list-style: none;
       columns: 2;
       column-width: 300px;
-      column-gap: 2em;
+      column-gap: 4em;
     }
 
     li {
@@ -330,6 +330,7 @@
 
     .question {
       margin-bottom: 1em;
+      font-weight: 500;
     }
 
     .answer {
@@ -340,7 +341,7 @@
       }
 
       p {
-        margin-bottom: 1em;
+        margin-bottom: 1.5em;
       }
     }
   }
