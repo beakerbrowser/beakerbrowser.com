@@ -191,8 +191,10 @@
 
       .title {
         color: $primary;
-        font-weight: normal;
-        font-style: italic;
+
+        &:empty {
+          display: none;
+        }
       }
 
       .subsection {
