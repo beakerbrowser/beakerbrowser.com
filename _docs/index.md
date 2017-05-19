@@ -59,26 +59,72 @@ order: 1
 
 <div class="callouts-2">
   <div class="container">
-    <div class="tutorials">
+    <div class="tutorials callout">
       <h2>Tutorials</h2>
       <ul class="tutorials-list">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>
+          <a href="/">
+            <i class="purple fa fa-rss"></i>
+            <span>Create a peer-to-peer blog with RSS</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <i class="orange fa fa-terminal"></i>
+            <span>Host your files using the Dat CLI</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <i class="green fa fa-link"></i>
+            <span>Share files secretly</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <i class="teal fa fa-code"></i>
+            <span>Beaker Web APIs: Listen for file changes</span>
+          </a>
+        </li>
       </ul>
-      <p>
+      <p class="more">
         <a href="/docs/tutorials">
-          See all tutorials
+          All tutorials
           <i class="fa fa-angle-right"></i>
         </a>
       </p>
     </div>
 
-    <div class="tools">
+    <div class="updates callout">
+      <h2>Recent updates</h2>
+      <ul class="updates-list">
+        <li>
+          <a href="/">
+
+          </a>
+        </li>
+        <li>
+          <a href="/">
+
+          </a>
+        </li>
+        <li>
+          <a href="/">
+
+          </a>
+        </li>
+        <li>
+          <a href="/">
+
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="tools callout">
       <h2>Tools</h2>
       <p>
-        Tools and resources for working with Beaker.
+        Tools and resources for working with Beaker and Dat.
       </p>
       <ul class="tools-list">
         <li>Dat CLI</li>
