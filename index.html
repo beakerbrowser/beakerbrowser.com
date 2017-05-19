@@ -6,12 +6,13 @@ layout: default
   <div class="container">
     <div class="hero__intro">
       <p class="hero__tagline">
-        Browse the peer-to-peer Web.
+        Versioned, verifiable Web sites on the peer-to-peer Web.
       </p>
       <div class="divider"></div>
 
       <p class="hero__description">
-        Beaker is an experimental browser with peer-to-peer hosting that enables any user to create a site instantly and for free.
+        Beaker is an experimental browser with tools for browsing, publishing,
+        and hosting peer-to-peer Web sites.
       </p>
 
       <a class="btn" href="/docs/">Learn more</a>
@@ -26,7 +27,7 @@ layout: default
         </a>
         |
         <a href="https://github.com/beakerbrowser/beaker">
-          Contribute on GitHub
+          Star on GitHub
         </a>
         <a class="github-button"
            href="https://github.com/beakerbrowser/beaker"
@@ -39,52 +40,71 @@ layout: default
       </div>
     </div>
 
-    <div class="hero__demo">
-      <a class="video" href="https://www.youtube.com/watch?v=Bem9nRpyPEs"
-        target="_blank">
-        <img src="/img/ss/demo-beaker.jpg" />
-        <span class="video__overlay">
-          <button class="video__text btn btn--outline">
-            <span>Watch the demo</span>
-          </button>
-        </span>
+    <div class="hero__links">
+      <a class="hero__link" href="https://github.com/datproject/docs/tree/master/papers">
+        <i class="fa fa-file-text-o"></i>
+        <div class="info">
+          <h2 class="title">Dat white paper</h2>
+          <p class="description">
+            Learn about Dat, the peer-to-peer protocol that powers Beaker.
+          </p>
+        </div>
+      </a>
+
+      <a class="hero__link" href="https://github.com/beakerbrowser/beaker">
+        <i class="fa fa-code"></i>
+        <div class="info">
+          <h2 class="title">View source</h2>
+          <p class="description">
+            Check out Beaker’s development and source code on GitHub.
+          </p>
+        </div>
+      </a>
+
+      <a class="hero__link">
+        <i class="fa fa-comment-o"></i>
+        <div class="info">
+          <h2 class="title">Join us on IRC</h2>
+          <p class="description">
+            We hang out in <code>#beakerbrowser</code> and <code>#dat</code> on
+            freenode.
+          </p>
+        </div>
       </a>
     </div>
   </div>
 </div>
 
-<div class="section section--explainer">
+<div class="section section--screenshots">
+    {% for ss in site.data.screenshots %}
+      <div class="screenshot-container {{ ss.orientation }}">
+        <h2 class="title">{{ ss.title }}</h2>
+        <div class="container">
+          {% if ss.src == '/img/ss/create-site.mp4' %}
+            <video autoplay loop>
+              <source src="{{ ss.src }}" type="video/mp4">
+              Sorry, your browser does not support the HTML video tag.
+            </video>
+          {% else %}
+            <img id="{{ ss.id }}" src="{{ ss.src }}"/>
+          {% endif %}
+          <div class="desc">{{ ss.desc }}</div>
+        </div>
+      </div>
+    {% endfor %}
+</div>
+
+<div class="section section--faq">
   <div class="container">
-    <div class="explainer">
-      <div class="explainer__item">
-        <img src="/img/icon/host-site.svg" width="100" height="85"/>
-        <h3>Browse</h3>
-        <p>
-        Beaker uses
-        peer-to-peer networks to make the cloud&nbsp;optional, while still
-        browsing the traditional&nbsp;Web.
-        </p>
-      </div>
-
-      <div class="explainer__item">
-        <img src="/img/icon/cursor.svg" class="cursor" width="70" height="85"/>
-        <h3>Build</h3>
-        <p>
-        Create and publish a website directly from your browser.
-        Start sharing immediately &mdash; hosting is
-        instant and&nbsp;free.
-        </p>
-      </div>
-
-      <div class="explainer__item">
-        <img src="/img/icon/fork-site.svg" width="70" height="85"/>
-        <h3>Experiment</h3>
-        <p>
-        Any site can be forked. With one click, you can duplicate an application
-        and tailor it to be your own with Beaker's builtin&nbsp;tools.
-        </p>
-      </div>
-   </div>
+    <h2>FAQ</h2>
+    <ul>
+      {% for item in site.data.faq %}
+      <li>
+        <h3 class="question">{{ item.question }}</h3>
+        <div class="answer">{{ item.answer }}</div>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
 </div>
 
@@ -247,5 +267,6 @@ layout: default
   </div>
   <div class="divider"></div>
 </div>
+<script src="/js/screenshots.js"></script>
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>

@@ -1,0 +1,26 @@
+-
+  question: "Will my files be available when I’m offline?"
+  answer:
+    "<p>It depends. When you turn off your computer, <em>you</em> are no longer
+     hosting your files. But if you’ve shared the URL to your site with others,
+     it’s possible that they might be hosting its files.</p><p>To
+     guarantee that your site’s files are available even when you’re offline,
+     you can use a cloud rehosting service like <a href=\"https://hashbase.io\">
+     Hashbase</a>.</p>"
+-
+  question: "How do I view a specific version of a site?"
+  answer:
+    "<p>To view a site at a given version, simply add <code>+{versionNumber}</code>
+     at the end of the site’s URL.</p>"
+-
+  question: "Who can see Web sites I publish with Beaker?"
+  answer:
+    "<p>Your site is private by default. Dat URLs are effectively unguessable and
+     are never sent over the network, so only people you share the URL with will
+     be able to download your site’s files.</p>"
+-
+  question: "Is my site’s traffic encrypted?"
+  answer:
+    "Yes. Your site’s traffic is encrypted in transit using its URL/public key.
+     So to decrypt the traffic, one must know the the site’s URL."
+

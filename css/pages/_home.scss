@@ -6,7 +6,7 @@
   @extend %shrink-text-phone;
 
   @include respond-to(tablet) {
-    font-size: 1em;
+    font-size: 1rem;
 
     &:before {
       display: block;
@@ -33,13 +33,13 @@
   }
 
   .container {
-    @extend %grid-2;
+    @extend %grid-5;
     position: relative;
     z-index: 1;
 
 
-    // override default media query for %grid-2
-    @include respond-to(show-grid-2) {
+    // override default media query for %grid-5
+    @include respond-to(show-grid-5) {
       flex-direction: column;
     }
 
@@ -50,30 +50,35 @@
 
 
   &__intro {
-    @extend %col-1-2;
+    @extend %col-3-5;
     margin: 0 auto;
 
-    @include respond-to(show-grid-2) {
-      padding-right: 4em;
+    @include respond-to(show-grid-5) {
+      padding-right: 2em;
     }
   }
 
   .divider {
-    margin: 2em auto;
+    margin: 1em auto;
 
-    @include respond-to(show-grid-2) {
-      margin: 2em 0;
+    @include respond-to(show-grid-5) {
+      margin: 1em 0;
     }
   }
 
+  &__tagline {
+    font-size: 1.35rem;
+    font-weight: 500;
+  }
+
   &__description {
+    font-size: 1rem;
     margin-bottom: 3em;
-    font-size: 1.1em;
   }
 
   &__github {
     margin-top: 1.5em;
-    font-size: .85em;
+    font-size: .85rem;
 
     * {
       vertical-align: middle;
@@ -95,24 +100,62 @@
     }
   }
 
-  &__demo {
-    @extend %col-1-2;
+  &__links {
+    @extend %col-2-5;
     width: 100%;
-    max-width: 700px;
-    margin: 3em auto 0 auto;
+    margin-top: 2em;
 
     @include respond-to(expand-hero) {
       margin: 0;
-    }
-
-    img {
-      width: 100%;
+      text-align: left;
     }
   }
 
-  &__tagline {
-    font-size: 1.75em;
-    font-weight: bold;
+  &__link {
+    @extend %rounded;
+    @extend %flex-container;
+    flex-wrap: nowrap;
+    padding: 1em;
+    background: transparentize(#fff, .9);
+    border: 1px solid transparentize(#fff, .75);
+    cursor: pointer;
+    text-align: left;
+
+    &:hover {
+      background: transparentize(#fff, .75);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+
+    i {
+      font-size: 2rem;
+    }
+
+    .info {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 1em;
+    }
+
+    .title {
+      font-size: 1rem;
+      line-height: .85;
+      margin-bottom: .5em;
+
+      &:after {
+        content: '\203A';
+        display: inline-block;
+        font-size: 1.2rem;
+        margin-left: .25em;
+      }
+    }
+
+    .description {
+      font-size: .9rem;
+      font-weight: 200;
+    }
   }
 }
 
@@ -121,9 +164,258 @@
   padding: 3em 0;
 
   &--explainer {
-    font-size: .95em;
+    font-size: .95rem;
     background: $explainer-bg;
     padding: 4em 0;
+  }
+
+  &--screenshots {
+    padding: 0;
+
+    .screenshot-container {
+      border-bottom: 1px solid $gray--mid;
+      padding-top: 2em;
+      overflow: hidden;
+
+
+      img,
+      video {
+        @extend %col-1-2;
+        height: auto;
+        display: inline-block;
+        border: 1px solid $gray--mid;
+        border-bottom: 0;
+        box-shadow: 0 15px 50px $gray--mid;
+        max-width: 640px;
+        max-height: 400px;
+      }
+
+      .title {
+        color: $primary;
+
+        &:empty {
+          display: none;
+        }
+      }
+
+      .subsection {
+        @extend %rounded;
+        padding: .75em;
+        transition: bacgkround .15s ease;
+        border: 1px solid transparent;
+
+        &:not(:last-child) {
+          margin-bottom: .75em;
+        }
+
+        &.selectable:hover,
+        &.selectable.active {
+          cursor: pointer;
+          border: 1px solid transparentize($primary, .85);
+          background: transparentize($primary, .95);
+        }
+      }
+
+      .subtitle {
+        color: $text--light-bg-muted;
+        text-transform: uppercase;
+        margin-bottom: .5em;
+        font-size: .9rem;
+        font-weight: 700;
+      }
+
+      .desc {
+        @extend %col-1-3;
+        color: $text--light-bg-muted;
+        padding-bottom: 1em;
+
+        p {
+          font-size: .9rem;
+        }
+
+        p:not(:last-of-type) {
+          margin-bottom: 2em;
+        }
+      }
+
+      .cta {
+
+        span {
+          display: block;
+          margin-top: 1em;
+        }
+      }
+    }
+
+    .screenshot-container.center {
+
+      img,
+      video {
+        width: 100%;
+        max-width: 598px;
+        margin: auto;
+        display: block;
+        border-bottom: 1px solid $gray--mid;
+      }
+
+      .desc {
+        @extend %grid-3;
+        margin-top: 1em;
+
+        @include respond-to(show-grid-3) {
+          margin-top: 2em;
+        }
+      }
+
+      .subsection {
+        @extend %col-1-3;
+      }
+    }
+
+    .screenshot-container.left {
+
+      .container {
+        @extend %grid-2;
+      }
+
+      .desc {
+        margin: 2em 0 1em 0;
+      }
+
+      @include respond-to(show-grid-2) {
+        .container {
+          flex-direction: column !important;
+        }
+
+        img {
+          margin: auto;
+        }
+
+        .desc {
+          display: flex;
+          flex-direction: row;
+          margin: 2em auto 1em auto;
+
+          .subsection:not(:last-child) {
+            margin-right: 2em;
+          }
+        }
+      }
+
+      @media (min-width: 1100px) {
+
+        .container {
+          flex-direction: row !important;
+        }
+
+        img {
+          margin: initial;
+        }
+
+        .desc {
+          display: inline-block;
+          padding-left: 2em;
+          padding-bottom: 0;
+          margin: 0 !important;
+        }
+      }
+    }
+
+    .screenshot-container.right {
+
+      .container {
+        @extend %grid-2;
+      }
+
+      .desc {
+        margin: 2em 0 1em 0;
+      }
+
+      @include respond-to(show-grid-2) {
+
+        .desc,
+        img {
+          margin: auto;
+        }
+
+        .desc {
+          max-width: 640px;
+          padding-right: 2em;
+          margin-bottom: 1em;
+
+          p {
+            font-size: 1rem;
+          }
+        }
+
+        img {
+          order: 2;
+        }
+
+        .container {
+          flex-direction: column !important;
+        }
+      }
+
+      @media (min-width: 1200px) {
+
+        .container {
+          flex-direction: row !important;
+        }
+
+        img {
+          margin: initial;
+        }
+
+        .desc {
+          display: inline-block;
+          padding-left: 2em;
+          padding-bottom: 0;
+          margin: 0 !important;
+        }
+      }
+    }
+  }
+
+  &--faq {
+    padding: 2em 0;
+    border-bottom: 1px solid $gray--mid;
+
+    @include respond-to(show-grid-2) {
+      padding-bottom: 1em;
+    }
+
+    ul {
+      list-style: none;
+      columns: 2;
+      column-width: 300px;
+      column-gap: 4em;
+    }
+
+    li {
+      width: 100%;
+      display: inline-block;
+      text-align: left;
+      margin-bottom: .5em;
+      vertical-align: top;
+    }
+
+    .question {
+      margin-bottom: 1em;
+      font-size: 1rem;
+    }
+
+    .answer {
+      font-size: .9rem;
+
+      a {
+        @extend %link;
+      }
+
+      p {
+        margin-bottom: 1.5em;
+      }
+    }
   }
 
   &--download {
@@ -158,62 +450,6 @@
   &--community {
     padding: 0 0 4em 0;
     background: $community-bg;
-  }
-}
-
-.explainer {
-  @extend %grid-3;
-
- &__item {
-    @extend %col-1-3;
-    @extend %flex-container;
-    flex-direction: column;
-    max-width: 400px;
-    font-size: .9em;
-    text-align: center;
-    padding: 3em 2em;
-
-    &:first-of-type {
-      padding-top: 0;
-    }
-
-    &:last-of-type {
-      padding-bottom: 0;
-    }
-
-    &:not(:last-of-type) {
-      border-bottom: 2px solid $gray--light;
-    }
-
-    @include respond-to(show-grid-3) {
-      padding: 0 2.5em;
-
-      &:not(:last-of-type) {
-        border-bottom: none;
-        border-right: 2px solid $gray--light;
-      }
-
-      &:first-of-type {
-        padding-left: 0;
-      }
-
-      &:last-of-type{
-        padding-right: 0;
-      }
-    }
-  }
-
-  img {
-    display: block;
-    margin: 0 auto 1em auto;
-  }
-
-  img.cursor {
-    padding: 0 1.25em .75em 0;
-  }
-
-  h3 {
-    margin-bottom: 1em;
   }
 }
 
@@ -283,14 +519,14 @@
     p {
       color: $text--light-bg-muted;
       font-style: italic;
-      font-size: .9em;
+      font-size: .9rem;
       margin-bottom: 1em;
     }
   }
 
   &__list {
     @extend %col-2-5;
-    font-size: .9em;
+    font-size: .9rem;
     padding: 2em 2em 2em 3.5em;
     margin: auto;
     text-align: left;
@@ -325,7 +561,7 @@
       @extend %link;
       display: inline-block;
       flex-basis: 10%;
-      font-size: .9em;
+      font-size: .9rem;
     }
   }
 }
@@ -334,7 +570,7 @@
   .testimonials {
     @extend %grid-3;
     list-style: none;
-    font-size: .8em;
+    font-size: .8rem;
   }
 
   .testimonial {
