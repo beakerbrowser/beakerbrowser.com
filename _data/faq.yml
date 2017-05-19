@@ -13,7 +13,7 @@
     "<p>To view a site at a given version, simply add <code>+{versionNumber}</code>
      at the end of the site’s URL.</p>"
 -
-  question: "Who can see Web sites I publish with Beaker?"
+  question: "Who can see websites I publish with Beaker?"
   answer:
     "<p>Your site is private by default. Dat URLs are effectively unguessable and
      are never sent over the network, so only people you share the URL with will
