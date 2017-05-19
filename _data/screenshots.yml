@@ -29,8 +29,8 @@
 - src: /img/ss/forking.png
   title: "Build an open source Web"
   desc:
-    "<p>The source for peer-to-peer Web sites is completely transparent.</p>
-     <p>You can inspect a site’s files, view its history, and even make an
+    "<p>The source for peer-to-peer Web sites is completely transparent.
+     You can inspect a site’s files, view its history, and even make an
      editable copy by forking it.</p><p class=\"cta\">Get started:<span>
      <a class=\"btn btn--outline\" href=\"/docs/install.html\">Install Beaker
      <i class=\"fa fa-download\" aria-hidden=\"true\"></i></a></span></p>"
