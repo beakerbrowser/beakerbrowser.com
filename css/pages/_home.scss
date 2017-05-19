@@ -68,7 +68,6 @@
 
   &__tagline {
     font-size: 1.35rem;
-    font-weight: bold;
   }
 
   &__description {
@@ -140,7 +139,6 @@
     }
 
     .title {
-      font-weight: 500;
       font-size: 1rem;
       line-height: .85;
       margin-bottom: .5em;
@@ -220,6 +218,7 @@
         text-transform: uppercase;
         margin-bottom: .5em;
         font-size: .9rem;
+        font-weight: 700;
       }
 
       .desc {
@@ -330,7 +329,7 @@
 
     .question {
       margin-bottom: 1em;
-      font-weight: 500;
+      font-size: 1rem;
     }
 
     .answer {
