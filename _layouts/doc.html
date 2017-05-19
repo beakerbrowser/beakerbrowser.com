@@ -1,16 +1,15 @@
 ---
-layout: default-no-header-or-footer
+layout: default
 ---
 
-<div class="doc">
-  {% include docs-nav.html %}
+<main class="docs">
   <div class="doc__content">
     <div class="container">
       <h2>{{ page.title }}</h2>
       {{ content }}
     </div>
   </div>
-</div>
+</main>
 
 <script>
 var $ = document.querySelector.bind(document)
