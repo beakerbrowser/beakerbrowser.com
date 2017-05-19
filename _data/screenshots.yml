@@ -2,27 +2,27 @@
   src: /img/ss/create-site.mp4
   title: "Publish on the peer-to-peer Web"
   desc:
-    "<div class=\"subsection\"><h3 class=\"subtitle\">Free</h3><p>Your files are
-     hosted on a peer-to-peer network, so the cost of bandwidth and storage is
-     shared by peers.</p></div><div class=\"subsection\"><h3 class=\"subtitle\">
-     Local</h3><p>Your files live on your computer, so you can edit and publish
-     without connecting to any remote server.</p></div><div class=\"subsection\">
-     <h3 class=\"subtitle\">Private</h3><p>Your files are private by default. Only
-     people with the URL can download your files, and all files are encrypted in
-     transit.</p></div>"
+    "<div class=\"subsection\"><h3 class=\"subtitle\">Free</h3><p>The cost of
+     bandwidth and storage is distributed across a network of peers, so hosting is
+     free. No blockchain required.</p></div><div class=\"subsection\"><h3 class=\"subtitle\">
+     Decentralized</h3><p>Your files are hosted on a peer-to-peer network,
+     so you can publish without depending on a third-party server.</p></div>
+     <div class=\"subsection\"><h3 class=\"subtitle\">Private</h3><p>Sites are
+     private by default. Only people with the URL can download your files, and
+     all traffic is encrypted in transit.</p></div>"
   orientation: center
 - src: /img/ss/peer-count.png
   title: "Browse the peer-to-peer Web"
   desc:
     "<div data-src=\"/img/ss/peer-count.png\" class=\"subsection selectable active\"><h3 class=\"subtitle\">
-     Rehosting files</h3><p>When you visit a peer-to-peer site, you’re added to
-     the swarm and help rehost content to other visitors.</p></div>
-     <div data-src=\"/img/ss/offline.png\" class=\"subsection selectable\"><h3 class=\"subtitle\">Offline</h3>
-     <p>Sites you save to your Library are
-     saved locally to your device and can be browsed even while you’re offline.
+     Distributed</h3><p>A site’s visitors are added to the network swarm and
+     help rehost its files on the peer-to-peer network.</p></div>
+     <div data-src=\"/img/ss/offline.png\" class=\"subsection selectable\">
+     <h3 class=\"subtitle\">Offline</h3><p>Sites you save to your Library are
+     downloaded to your device and can be browsed even when you’re offline.
      </p></div><div data-src=\"/img/ss/history.png\" class=\"subsection selectable\">
      <h3 class=\"subtitle\">Versioned</h3><p>The Dat protocol maintains a
-     verifiable log of every change made to a site, so you can visit a site at
+     verifiable log of every change made to a site, so you can view it at
      any point in its history.</p></div>"
   orientation: left
   id: 'subsection-ss'
