@@ -15,7 +15,9 @@ order: 1
     <div class="callout">
       <div class="heading">
         <i class="fa fa-laptop"></i>
-        <h2 class="title">Getting started</h2>
+        <h2 class="title">
+          <a href="/docs/getting-started">Getting started</a>
+        </h2>
       </div>
       <p class="desc">
         Learn how to use Beaker to publish peer-to-peer websites, share files secretly, and more.
@@ -29,7 +31,9 @@ order: 1
     <div class="callout">
       <div class="heading">
         <i class="fa fa-terminal"></i>
-        <h2 class="title">New Web APIs</h2>
+        <h2 class="title">
+          <a href="/docs/web-apis">New Web APIs</a>
+        </h2>
       </div>
       <p class="desc">
         Explore Beaker's new Web APIs for publishing and managing peer-to-peer
@@ -44,7 +48,9 @@ order: 1
     <div class="callout">
       <div class="heading">
         <i class="fa fa-cogs"></i>
-        <h2 class="title">Inside Beaker</h2>
+        <h2 class="title">
+          <a href="/docs/inside-beaker">Inside Beaker</a>
+        </h2>
       </div>
       <p class="desc">
         Learn about Beaker's internal architecture, design decisions, and more.
