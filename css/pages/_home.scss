@@ -280,11 +280,43 @@
 
       .desc {
         margin: 2em 0 1em 0;
+      }
 
-        @include respond-to(show-grid-2) {
+      @include respond-to(show-grid-2) {
+        .container {
+          flex-direction: column !important;
+        }
+
+        img {
+          margin: auto;
+        }
+
+        .desc {
+          display: flex;
+          flex-direction: row;
+          margin: 2em auto 1em auto;
+
+          .subsection:not(:last-child) {
+            margin-right: 2em;
+          }
+        }
+      }
+
+      @media (min-width: 1100px) {
+
+        .container {
+          flex-direction: row !important;
+        }
+
+        img {
+          margin: initial;
+        }
+
+        .desc {
+          display: inline-block;
           padding-left: 2em;
           padding-bottom: 0;
-          margin: 0;
+          margin: 0 !important;
         }
       }
     }
