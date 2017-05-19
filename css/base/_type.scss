@@ -11,3 +11,8 @@ pre {
   font-family: Consolas, 'Lucida Console', Monaco, Menlo, monospace;
   font-size: .9rem;
 }
+
+%antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

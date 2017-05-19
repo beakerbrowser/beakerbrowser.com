@@ -4,6 +4,8 @@
   color: $text--dark-bg;
   padding: 3em 0 4em 0;
   @extend %shrink-text-phone;
+  @extend %antialiased;
+  font-weight: 500;
 
   @include respond-to(tablet) {
     font-size: 1rem;
@@ -68,7 +70,7 @@
 
   &__tagline {
     font-size: 1.35rem;
-    font-weight: 500;
+    font-weight: 700;
   }
 
   &__description {
@@ -143,6 +145,7 @@
       font-size: 1rem;
       line-height: .85;
       margin-bottom: .5em;
+      font-weight: 700;
 
       &:after {
         content: '\203A';
@@ -154,7 +157,6 @@
 
     .description {
       font-size: .9rem;
-      font-weight: 200;
     }
   }
 }
@@ -426,6 +428,7 @@
     background: $download-bg;
     padding: 3em 0 4em 0;
     color: $text--dark-bg;
+    @extend %antialiased;
     @extend %shrink-text-phone;
 
     .divider {

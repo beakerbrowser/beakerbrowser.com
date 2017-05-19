@@ -1,5 +1,6 @@
 .footer {
   @extend %shrink-text-phone;
+  @extend %antialiased;
   background: $footer-bg;
   color: $text--dark-bg;
   display: flex;
