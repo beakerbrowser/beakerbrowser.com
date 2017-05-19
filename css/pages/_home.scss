@@ -176,7 +176,7 @@
 
     .screenshot-container {
       border-bottom: 1px solid $gray--mid;
-      padding-top: 2em;
+      padding-top: 3em;
       overflow: hidden;
 
 
@@ -194,6 +194,7 @@
 
       .title {
         color: $primary;
+        margin-bottom: 2.5em;
 
         &:empty {
           display: none;
