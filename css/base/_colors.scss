@@ -1,20 +1,14 @@
 $beaker-blue: #246fde;
-$orange: #ff9800;
-$vermillion: #dc493a;
 $white: #fff;
 $black: mix($beaker-blue, #000, 10%);
 
 $primary: $beaker-blue;
-$accent: $orange;
 
 $primary--dark: shade($primary, 70%);
 $primary--dark-mid: shade($primary, 35%);
 $primary--light-mid: tint($primary, 35%);
 $primary--light: tint($primary, 70%);
 $primary--very-light: tint($primary, 95%);
-
-$accent--mid: tint($accent, 35%);
-$accent--light: tint($accent, 65%);
 
 $gray--very-dark: mix($black, $white, 65%);
 $gray--dark: mix($black, $white, 35%);
