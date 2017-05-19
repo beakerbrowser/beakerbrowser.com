@@ -343,8 +343,12 @@
   }
 
   &--faq {
-    padding: 2em 0 1em 0;
+    padding: 2em 0;
     border-bottom: 1px solid $gray--mid;
+
+    @include respond-to(show-grid-2) {
+      padding-bottom: 1em;
+    }
 
     ul {
       list-style: none;
