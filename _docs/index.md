@@ -12,36 +12,44 @@ order: 1
 
 <div class="callouts-1">
   <div class="container">
-    <div class="big-callout">
-      <h2>Getting started</h2>
-      <p>
-        Learn how to use Beaker to publish peer-to-peer websites, rehost content,
-        and share files secretly.
+    <div class="callout">
+      <div class="heading">
+        <i class="fa fa-laptop"></i>
+        <h2 class="title">Getting started</h2>
+      </div>
+      <p class="desc">
+        Learn how to use Beaker to publish peer-to-peer websites, share files secretly, and more.
       </p>
-      <a href="/docs/getting-started">
+      <a class="more" href="/docs/getting-started">
         Read more
         <i class="fa fa-angle-right"></i>
       </a>
     </div>
 
-    <div class="big-callout">
-      <h2>New Web APIs</h2>
-      <p>
-        Beaker introduces new Web APIs for publishing and managing peer-to-peer
+    <div class="callout">
+      <div class="heading">
+        <i class="fa fa-terminal"></i>
+        <h2 class="title">New Web APIs</h2>
+      </div>
+      <p class="desc">
+        Explore Beaker's new Web APIs for publishing and managing peer-to-peer
         websites.
       </p>
-      <a href="/docs/web-apis">
+      <a class="more" href="/docs/web-apis">
         Read more
         <i class="fa fa-angle-right"></i>
       </a>
     </div>
 
-    <div class="big-callout">
-      <h2>Inside Beaker</h2>
-      <p>
-        Learn about the internals of Beaker.
+    <div class="callout">
+      <div class="heading">
+        <i class="fa fa-cogs"></i>
+        <h2 class="title">Inside Beaker</h2>
+      </div>
+      <p class="desc">
+        Learn about Beaker's internal architecture, design decisions, and more.
       </p>
-      <a href="/docs/inside-beaker">
+      <a class="more" href="/docs/inside-beaker">
         Read more
         <i class="fa fa-angle-right"></i>
       </a>

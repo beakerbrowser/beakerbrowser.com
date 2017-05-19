@@ -1,0 +1,183 @@
+.layout-docs-intro {
+
+  .content {
+
+  }
+
+  .callouts-1 {
+
+    .container {
+      @extend %grid-3;
+      border-top: 1px solid $gray--mid;
+      padding: 2em 0;
+    }
+
+    .callout {
+      @extend %col-1-3;
+      border-radius: 3px;
+      border: 1px solid $gray--mid;
+      font-size: .9rem;
+      padding: 1em;
+      position: relative;
+      background: $gray--light;
+      box-shadow: 0 1px 1px rgba(0,0,0,.1);
+      color: $text--light-bg-muted;
+
+      &:not(:last-child) {
+        margin-bottom: 2em;
+
+        @include respond-to(show-grid-3) {
+          margin-bottom: 0;
+          margin-right: 2em;
+        }
+      }
+
+      .heading {
+        @extend %flex-container;
+
+        i {
+          font-size: 24px;
+          margin-right: 8px;
+        }
+      }
+
+      .title {
+        font-size: 1rem;
+        margin-bottom: 1em;
+      }
+
+      .desc {
+        margin-bottom: 2em;
+      }
+
+      .more {
+        @extend %link;
+        position: absolute;
+        left: 1em;
+        bottom: 1em;
+      }
+    }
+  }
+
+  .callouts-2 {
+
+    .container {
+      @extend %grid-3;
+      padding: 2em 0;
+    }
+
+    .callout {
+      @extend %col-1-3;
+
+      &:not(:last-child) {
+        margin-bottom: 2em;
+
+        @include respond-to(show-grid-3) {
+          margin-right: 2em;
+        }
+      }
+    }
+
+    h2 {
+      margin-bottom: .5em;
+      text-transform: uppercase;
+      font-size: .9rem;
+      color: $text--light-bg-muted;
+    }
+
+    .tutorials {
+      font-size: .9rem;
+
+      .more {
+        @extend %link;
+        margin-top: .5em;
+        padding-top: .5em;
+        border-top: 1px solid $gray--mid;
+      }
+    }
+
+    .tutorials-list {
+      list-style: none;
+
+      li {
+
+        a {
+          height: 30px;
+          line-height: 30px;
+          vertical-align: middle;
+
+          &:hover span {
+            text-decoration: underline;
+          }
+        }
+
+        a span {
+          height: 30px;
+          line-height: 30px;
+          vertical-align: middle;
+        }
+
+        &:not(:last-child) {
+          // border-bottom: 1px solid $gray--mid;
+          margin-bottom: 3px;
+        }
+      }
+
+      i {
+        margin-right: 4px;
+        padding: 0 3px;
+        border-radius: 3px;
+        color: $text--dark-bg;
+        width: 21px;
+        height: 21px;
+        text-align: center;
+        font-size: 13px;
+        line-height: 21px;
+        vertical-align: middle;
+
+        &.teal {
+          background: $teal;
+        }
+
+        &.purple {
+          background: $purple;
+          -webkit-text-stroke-width: .4px;
+          -webkit-text-stroke-color: $purple;
+          text-stroke: .4px $purple;
+        }
+
+        &.orange {
+          background: $orange;
+
+        }
+
+        &.orange,
+        &.teal {
+          -webkit-text-stroke-width: .5px;
+          -webkit-text-stroke-color: $text--dark-bg;
+          text-stroke: .5px $text--dark-bg;
+        }
+
+        &.green {
+          background: $green;
+        }
+      }
+    }
+
+    .updates-list {
+      margin-left: 20px;
+
+      li {
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .tools {
+      border-radius: 3px;
+      border: 1px solid $gray--mid;
+    }
+  }
+}
