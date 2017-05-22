@@ -1,0 +1,73 @@
+- title: Installing Beaker
+  baseurl: /docs/install/
+  url: /docs/install.html
+- title: Using Beaker
+  baseurl: /docs/using-beaker/
+  url: /docs/using-beaker/the-peer-to-peer-web.html
+  children:
+    - title: The peer-to-peer Web
+      url: /docs/using-beaker/the-peer-to-peer-web.html
+    - title: Publishing with Beaker
+      url: /docs/using-beaker/publishing-with-beaker.html
+    - title: Managing your sites
+      url: /docs/using-beaker/managing-your-sites.html
+    - title: Saving sites you visit
+      url: /docs/using-beaker/saving-sites.html
+    - title: History and versions
+      url: /docs/using-beaker/history-and-versions.html
+    - title: Availability and reliability
+      url: /docs/using-beaker/availability-and-reliability.html
+- title: Web APIs
+  baseurl: /docs/apis/
+  url: /docs/apis/core-concepts.html
+  children:
+    - title: Core concepts
+      url: /docs/apis/core-concepts.html
+    - title: By example
+      url: /docs/apis/by-example.html
+    - title: Dat API
+      url: /docs/apis/dat.html
+    - title: Permissions API
+      url: /docs/apis/permissions.html
+    - title: App manifest
+      url: /docs/apis/manifest.html
+- title: Inside Beaker
+  baseurl: /docs/inside-beaker/
+  url: /docs/inside-beaker/dat-files-protocol.html
+  children:
+    - title: Dat files protocol
+      url: /docs/inside-beaker/dat-files-protocol.html
+    - title: Privacy and security
+      url: /docs/inside-beaker/privacy-and-security.html
+    - title: Thick applications model
+      url: /docs/inside-beaker/thick-applications.html
+    - title: Other technologies
+      url: /docs/inside-beaker/other-technologies.html
+    - title: Mission
+      url: /docs/inside-beaker/mission.html
+    - title: Team
+      url: /docs/inside-beaker/team.html
+- title: Tutorials
+  baseurl: /docs/tutorials
+  url: /docs/tutorials/create-a-blog.html
+  children:
+    - title: Create a blog
+      url: /docs/tutorials/create-a-blog.html
+    - title: Create a markdown site
+      url: /docs/tutorials/create-a-markdown-site.html
+    - title: Host outside of Beaker
+      url: /docs/tutorials/host-outside-of-beaker.html
+     - title: Share files secretly
+      url: /docs/tutorials/share-files-secretly.html
+    - title: Publish software securely
+      url: /docs/tutorials/publish-software-securely.html
+    - title: 'Code: Read site files'
+      url: /docs/tutorials/read-site-files.html
+    - title: 'Code: Write site files'
+      url: /docs/tutorials/write-site-files.html
+    - title: 'Code: Diff, commit, revert'
+      url: /docs/tutorials/diff-commit-revert.html
+    - title: 'Code: Listen for file changes'
+      url: /docs/tutorials/listen-for-file-changes.html
+    - title: 'Code: Create or fork a site'
+      url: /docs/tutorials/create-or-fork-a-site.html
