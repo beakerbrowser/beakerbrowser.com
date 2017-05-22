@@ -333,7 +333,7 @@ instance_methods:
       ```js
       [
         {
-          name: string (the path of the entry, eg '/index.html')
+          path: string (the path of the entry, eg '/index.html')
           version: number (the revision number that represents the change)
           type: string (the operation, 'put' or 'del')
         },
