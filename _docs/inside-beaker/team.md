@@ -12,7 +12,7 @@ Beaker is built by a team of decentralizated Web enthusiasists with a history of
 
 <div class="team-members">
   <div class="team-member">
-    <img src="/img/team/pfrazee.png">
+    <img src="/img/team/pfrazee.jpg">
     <div class="info">
       <h3>Paul Frazee</h3>
       <ul>
