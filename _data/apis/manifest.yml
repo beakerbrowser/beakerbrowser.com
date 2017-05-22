@@ -3,41 +3,11 @@ attributes:
     name: ".url"
     desc: "The URL of the archive."
   -
-    name: ".version"
-    desc: |
-      The archive's version.
-      It is suggested to use semantic versionining, but this is not required.
-  -
     name: ".title"
     desc: "A short but descriptive human friendly title."
   -
     name: ".description"
     desc: "A one- or two-line description of the archive."
-  -
-    name: ".author"
-    desc: |
-      The archive's author. Can be either an object with any of those keys:
-
-      ```json
-      {
-        "name": "Bob Roberts",
-        "email": "bob@roberts.com",
-        "web": "https://roberts.com/bob"
-      }
-      ```
-
-      or a string with at least the name and any of the segments email and web:
-
-      ```js
-      "NAME <EMAIL> (WEB)"
-      ```
-
-      like for example:
-
-      - `"Bob Roberts"`
-      - `"Bob Roberts <bob@roberts.com>"`
-      - `"Bob Roberts (https://roberts.com/bob)"`
-      - `"Bob Roberts <bob@roberts.com> (https://roberts.com/bob)"`
   -
     name: ".forkOf"
     desc: |

@@ -12,10 +12,8 @@ Beaker automatically manages the manifest for archives created via the Dat Web A
 ```json
 {
   "url": "dat://4483a2..66/",
-  "version": "1.2.3",
   "title": "Application Title",
   "description": "A short description of the app",
-  "author": "Bob Roberts <bob@roberts.com>",
   "forkOf": ["dat://00fdc3..7a/"],
   "createdBy": {
     "title": "My Dat App",
