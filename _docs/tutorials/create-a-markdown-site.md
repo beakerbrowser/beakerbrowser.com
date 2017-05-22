@@ -31,7 +31,7 @@ For convenience, Beaker also supports a `/nav.md` file, which is automatically i
 
 ```markdown
 [Home](/)
-[A Page(/page.md)
+[A Page](/page.md)
 ```
 
 [TODO screenshot]
