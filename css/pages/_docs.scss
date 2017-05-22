@@ -65,11 +65,22 @@
 
   h1 {
     font-weight: 400;
+    margin-bottom: 1rem;
+
   }
 
   .content {
     flex: 3;
-    margin-right: 3rem;
+    margin-right: 4rem;
+    font-size: .92rem;
+
+    p:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    ul {
+      margin: 0 0 1.5rem 20px;
+    }
   }
 
   .doc-sidebar-nav {
