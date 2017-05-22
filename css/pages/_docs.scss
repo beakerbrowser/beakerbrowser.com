@@ -153,6 +153,8 @@
       padding: 1rem;
       border-radius: 3px;
       background: transparentize($gray--light, .65);
+      white-space: pre-wrap;
+      word-wrap: break-word;
     }
 
     blockquote {
