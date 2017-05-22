@@ -9,7 +9,7 @@ Beaker was started during an explosion of peer-to-peer protocol development in S
 
 These protocols can be broadly categorized as either Blockchain Variants and BitTorrent Variants.
 
-#### Why not a blockchain?
+## Why not a blockchain?
 
 We quickly ruled out the blockchain variants (Bitcoin, Ethereum, Namecoin) as the core network model of Beaker for the following reasons:
 
@@ -20,9 +20,9 @@ We quickly ruled out the blockchain variants (Bitcoin, Ethereum, Namecoin) as th
 
 We are not completely disinterested in blockchains, but we take a pragmatic view that the value of a network technology is in “the API it provides.” For example, if Bitcoin is capable of providing a low-cost and open payments API for users, then we’re interested in using it. However, we see the blockchain solutions as involving more risk and downsides than is necessary to accomplish our goals for Beaker at this time.
 
-#### About the Bittorrent Variants
+## About the Bittorrent Variants
 
-It would be fair to characterize Beaker as “a novel application of Bittorrent’s concepts to the Web platform.” If Beaker had been started in 2006, it would be using Bittorrent as its primary protocol. However, as of 2016, new variants have appeared with better properties. 
+It would be fair to characterize Beaker as “a novel application of Bittorrent’s concepts to the Web platform.” If Beaker had been started in 2006, it would be using Bittorrent as its primary protocol. However, as of 2016, new variants have appeared with better properties.
 
 At the core of Bittorrent is the use of cryptographic hashes to distribute verifiable datasets. By reducing the datasets down to small hash identifiers, the throughput requirement of trusted channels is reduced down to what’s required to provide the hash identifiers. Actual content transmission can then be delegated to one or many untrusted channels, and therefore the resource-requirements of hosting can be displaced to CDNs and/or to the peer network.
 
@@ -30,7 +30,7 @@ Also key to Bittorrent’s value is the discovery networks which enable user-dev
 
 Moving past the original Bittorrent design, Elliptic curve cryptography can now generate public keys which are small enough to act as URLs. EC key pairs can sign hash identifiers, providing a “pointer” to content which mutates over time, while the main identifier -- a public key -- remains fixed.
 
-#### Dat vs IPFS
+## Dat vs IPFS
 
 The Bittorrent variants share many features, and at the formation of Beaker, IPFS was the presumptive choice. However, differences in design goals made Dat our ultimate choice.
 
@@ -38,6 +38,6 @@ IPFS exchanges static hash-addressed blobs. While it does provide “mutable” 
 
 IPFS also made a decision to break from the standard URL format, which was incompatible with Beaker’s goals. We want to use a URL scheme which mirrors the existing HTTP/S format as closely as possible.
 
-#### Further development
+## Further development
 
 Beaker’s suite of protocols will evolve as the problem-space is better understood, and as each technology matures. Our goal is to provide a stack capable of replacing all modern closed services.

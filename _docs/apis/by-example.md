@@ -8,7 +8,7 @@ order: 2
 This is a collection of snippets to help you get familiar with Beaker's APIs.
 You can read about the APIs here: [dat](./dat.html), [permissions](./permissions.html)
 
-### Create a site
+## Create a site
 
 ```js
 var datUrl = await dat.createSite({
@@ -19,16 +19,14 @@ console.log(datUrl)
 // => dat://da2ce4..dc/
 ```
 
-
-### Write a file
+## Write a file
 
 ```js
 var fileUrl = datUrl + '/hello.txt'
 await dat.writeFile(fileURL, 'world')
 ```
 
-
-### Read a file
+## Read a file
 
 ```js
 var fileUrl = datUrl + '/hello.txt'
@@ -37,8 +35,7 @@ console.log(helloTxt)
 // => 'world'
 ```
 
-
-### Create a subdirectory
+## Create a subdirectory
 
 ```js
 var dirUrl = datUrl + '/subdir'
@@ -46,8 +43,7 @@ var exists = await dat.exists(dirUrl)
 if (!exists) await dat.createDirectory(dirUrl))
 ```
 
-
-### List files
+## List files
 
 ```js
 var files = await dat.listFiles(datUrl)
@@ -60,8 +56,7 @@ console.log(files)
 */
 ```
 
-
-### Check if a file exists
+## Check if a file exists
 
 ```js
 var fileUrl = datUrl + '/subdir/hello.txt'
@@ -69,8 +64,7 @@ var exists = await dat.exists(fileUrl)
 console.log(exists) // => true
 ```
 
-
-### Get the last-modified time of a file
+## Get the last-modified time of a file
 
 The `ctime` is the file creation-time, and `mtime` is the last-modified time.
 Note: the ctime and mtime may not be correct.
@@ -88,8 +82,7 @@ console.log(fileInfo)
 } */
 ```
 
-
-### Read a binary file
+## Read a binary file
 
 ```js
 var picUrl = datUrl + '/picture.png'
@@ -106,8 +99,7 @@ var src = 'data:image/png;base64,'+base64
 document.querySelector('img').src = src
 ```
 
-
-### Write a binary file
+## Write a binary file
 
 ```js
 var orgUrl = datUrl + '/picture.png'
@@ -123,8 +115,7 @@ var base64 = convertBufToBase64(arrayBuf)
 await dat.writeFile(dstUrl, base64, 'base64')
 ```
 
-
-### Request network access to a host
+## Request network access to a host
 
 ```js
 var res = await navigator.permissions.request({
@@ -135,8 +126,7 @@ console.log(res.status)
 // => 'granted'
 ```
 
-
-### Request network access to all hosts
+## Request network access to all hosts
 
 ```js
 var res = await navigator.permissions.request({

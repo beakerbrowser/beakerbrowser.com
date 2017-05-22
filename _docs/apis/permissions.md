@@ -14,7 +14,7 @@ order: 4
 - Only apps served over dat:// are able to access these APIs.
 - <i class="fa fa-flask"></i> This API is under development and subject to change.
 
-### Network access
+## Network access
 
 By default, sites served over dat:// are not allowed to access the network.
 They can, however, request exceptions.

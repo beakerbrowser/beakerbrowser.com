@@ -11,7 +11,7 @@ Beaker is an experiment. It is designed to demonstrate the features that we beli
 
 By participating in Beaker, you help give a voice to our experiment.
 
-#### Motivations
+## Motivations
 
 We’re afraid of the Web losing its spirit of freedom and innovation.
 
