@@ -1,5 +1,5 @@
 ---
-title: Dat API
+title: DatArchive API
 section: webAPIs
 sectionTitle: Web APIs
 order: 3
@@ -91,3 +91,7 @@ It is a manifest file that includes metadata and configuration.
 ### Toplevel methods
 
 {% include api-reference.html items=site.data.apis.dat.toplevel_methods %}
+
+### `DatArchive` instance methods
+
+{% include api-reference.html items=site.data.apis.dat.instance_methods %}

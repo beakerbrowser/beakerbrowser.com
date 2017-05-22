@@ -1,5 +1,5 @@
 ---
-title: Web APIs by example
+title: By example
 section: webAPIs
 sectionTitle: Web APIs
 order: 2
@@ -11,57 +11,56 @@ You can read about the APIs here: [dat](./dat.html), [permissions](./permissions
 ## Create a site
 
 ```js
-var datUrl = await dat.createSite({
+var archive = await DatArchive.create({
   title: 'My Site',
   description: 'Where I put my files'
 })
-console.log(datUrl)
+console.log(archive.url)
 // => dat://da2ce4..dc/
 ```
 
 ## Write a file
 
 ```js
-var fileUrl = datUrl + '/hello.txt'
-await dat.writeFile(fileURL, 'world')
+await archive.writeFile('/hello.txt', 'world')
+await archive.writeFile('/image.png', 'data:image/png;base64,iV...rkJggg==', 'base64')
 ```
 
 ## Read a file
 
 ```js
-var fileUrl = datUrl + '/hello.txt'
-var helloTxt = await dat.readFile(fileURL)
+var helloTxt = await archive.readFile('/hello.txt')
 console.log(helloTxt)
 // => 'world'
+var imagePng = await archive.readFile('/image.png', 'binary')
+console.log(typeof imagePng)
+// => 'ArrayBuffer'
 ```
 
 ## Create a subdirectory
 
 ```js
-var dirUrl = datUrl + '/subdir'
-var exists = await dat.exists(dirUrl)
-if (!exists) await dat.createDirectory(dirUrl))
+await archive.mkdir('/subdir'))
 ```
 
 ## List files
 
 ```js
-var files = await dat.listFiles(datUrl)
-console.log(files)
-/* =>
-{
-  index.html: {mtime: ...},
-  subdir: {mtime: ...}
-}
-*/
+var files = await archive.readdir('/')
+console.log(files) // => ['index.html', 'js', 'css', ...]
+var files = await archive.readdir('/', {recursive: true})
+console.log(files) // => ['index.html', 'js', 'js/index.js', ...]
 ```
 
 ## Check if a file exists
 
 ```js
-var fileUrl = datUrl + '/subdir/hello.txt'
-var exists = await dat.exists(fileUrl)
-console.log(exists) // => true
+try {
+  var st = await archive.stat('/foo.txt')
+  // does exist
+} catch (e) {
+  // does not exist
+}
 ```
 
 ## Get the last-modified time of a file
@@ -70,12 +69,9 @@ The `ctime` is the file creation-time, and `mtime` is the last-modified time.
 Note: the ctime and mtime may not be correct.
 
 ```js
-var fileUrl = datUrl + '/subdir/hello.txt'
-var fileInfo = await dat.stat(fileUrl)
-console.log(fileInfo)
+var st = await archive.stat('/hello.txt')
+console.log(st)
 /* => {
-  type: 'file',
-  name: 'subdir/hello.txt',
   ctime: 1477267871000,
   mtime: 1477267871000,
   ...
@@ -85,16 +81,14 @@ console.log(fileInfo)
 ## Read a binary file
 
 ```js
-var picUrl = datUrl + '/picture.png'
-
 // arraybuffer:
-var arrayBuf = await dat.readFile(picUrl)
+var arrayBuf = await archive.readFile('/picture.png')
 var blob = new Blob([arrayBuf], {type: 'image/png'})
 var src = URL.createObjectURL(blob)
 document.querySelector('img').src = src
 
 // base64:
-var base64 = await dat.readFile(picUrl, 'base64')
+var base64 = await archive.readFile(picUrl, 'base64')
 var src = 'data:image/png;base64,'+base64
 document.querySelector('img').src = src
 ```
@@ -102,17 +96,16 @@ document.querySelector('img').src = src
 ## Write a binary file
 
 ```js
-var orgUrl = datUrl + '/picture.png'
-var dstUrl = datUrl + '/picture_copy.png'
+var orgUrl = archive.url + '/picture.png'
 var res = await fetch(orgUrl)
 
 // arraybuffer:
 var arrayBuf = await res.arrayBuffer()
-await dat.writeFile(dstUrl, arrayBuf)
+await archive.writeFile('/picture_copy.png', arrayBuf)
 
 // base64:
 var base64 = convertBufToBase64(arrayBuf)
-await dat.writeFile(dstUrl, base64, 'base64')
+await archive.writeFile('/picture_copy.png', base64, 'base64')
 ```
 
 ## Request network access to a host

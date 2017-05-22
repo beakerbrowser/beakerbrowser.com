@@ -1,205 +1,439 @@
 toplevel_methods:
   -
-    name: "dat.createSite()"
-    signature: "dat.createSite(opts?: Object): Promise&lt;string&gt;"
-    experimental: true
-    alias: dat.createArchive
+    name: "DatArchive()"
+    signature: "new DatArchive(url: String)"
     desc: |
-      Create a new dat archive, and return the URL.
+      Create an archive instance from an existing archive.
+
+      - `url` String. The URL of the archive to instantiate.
+
+      ```js
+      var archive = new DatArchive(datUrl)
+      ```
+  -
+    name: "DatArchive.create()"
+    signature: "DatArchive.create(opts?: Object): Promise&lt;DatArchive&gt;"
+    desc: |
+      Create a new dat archive, and return the archive instance.
       The archive is sandboxed to only access to files within it.
 
-      - opts.title. String. The title of the new archive.
-      - opts.description. String. The description of the new archive.
-  -
-    name: "dat.deleteSite()"
-    signature: "dat.deleteSite(url: string): void"
-    experimental: true
-    alias: dat.deleteArchive
-    desc: |
-      Mark the given archive for deletion.
-      The archive will not be deleted immediately, but put into the cache system where it can be cleaned.
-  -
-    name: "dat.stat()"
-    signature: "dat.stat(url: string, opts?: Object): Promise&lt;Object&gt;"
-    experimental: true
-    desc: |
-      Fetches information about the file or directory at 'path'.
-      The promise will reject if no file or directory is found.
+      The user will be prompted to confirm or deny the archive creation.
 
-      - url. The URL of the file/directory to stat. This must be a dat:// URL.
-      - opts.version. String. Which version of the file to read? Refers to the name of a checkpoint. If unspecified, defaults to latest.
-      - opts.downloadedBlocks. Boolean. Count how many blocks are downloaded? Causes the `downloadedBlocks` attribute to be populated. Default false.
-      - opts.timeout. Number. How long, in ms, to wait for a response? Default 5000. 
+      - `opts.title` String. The title of the new archive.
+      - `opts.description` String. The description of the new archive.
+
+      ```js
+      var archive = await DatArchive.create({
+        title: 'Hello, world!',
+        description: 'My new site'
+      })
+      ```
+  -
+    name: "DatArchive.fork()"
+    signature: "DatArchive.fork(url: String, opts?: Object): Promise&lt;DatArchive&gt;"
+    desc: |
+      Fork an existing archive to create a new dat archive, and return the archive instance.
+      The archive is sandboxed to only access to files within it.
+
+      The fork will contain only the files in the target archive that have been completely downloaded.
+      Use [`download()`](#datarchive-download) to ensure the intended files are ready.
+
+      The user will be prompted to confirm or deny the archive creation.
+
+      - `url` String. The URL of the archive to fork.
+      - `opts.title` String. The title of the new archive.
+      - `opts.description` String. The description of the new archive.
+
+      ```js
+      var archive = await DatArchive.fork(otherURL, {
+        title: 'Hello, world 2!',
+        description: 'My new fork'
+      })
+      ```
+  -
+    name: "DatArchive.resolveName()"
+    signature: "DatArchive.resolveName(url: String): Promise&lt;string&gt;"
+    desc: |
+      Resolves a Dat shortname to its "raw" public-key URL using
+      [DNS-over-TLS](https://github.com/beakerbrowser/beaker/wiki/Authenticated-Dat-URLs-and-HTTPS-to-Dat-Discovery).
+
+      - `url` String. The URL of the archive to resolve.
+
+      ```js
+      var rawDatUrl = await DatArchive.resolveName(datUrl)
+      ```
+instance_methods:
+  -
+    name: "url"
+    signature: "url: String"
+    desc: |
+      The URL of the archive.
+
+      ```js
+      var archive = new DatArchive(datUrl)
+      archive.url
+      ```
+  -
+    name: "getInfo()"
+    signature: "getInfo(opts?: Object): Promise&lt;Object&gt;"
+    desc: |
+      Fetches information about the archive.
+
+      - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
 
       Return object:
 
       ```text
       {
-        type: string ('file' or 'directory'),
-        name: string (the full path),
-        size: number (bytes),
-        blocks: number (blocks),
-        downloadedBlocks: number (blocks, optional),
-        mtime: number (timestamp) the last modification time
+        key: string (the archive public key)
+        url: string (the archive URL)
+        version: number (the archive's current revision number)
+        peers: number (the number of active connections)
       }
       ```
 
-      If the archive is not found on the network, or in the local cache, this call will timeout.
+      Example:
+
+      ```js
+      var archive = new DatArchive(datUrl)
+      await archive.getInfo()
+      ```
   -
-    name: "dat.exists()"
-    signature: "dat.stat(url: string): Promise&lt;Boolean&gt;"
-    experimental: true
+    name: "stat()"
+    signature: "stat(path: string, opts?: Object): Promise&lt;Object&gt;"
     desc: |
-      Returns true/false if the given file is known to exist.
+      Fetches information about the file or directory at `path`.
+      The promise will reject if no file or directory is found.
 
-      - url. The URL of the file/directory to look for. This must be a dat:// URL.
+      - `path` The path of the file/directory to stat.
+      - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
 
-      If the archive is not found on the network, or in the local cache, this call will timeout.
+      Return object:
+
+      ```text
+      Stat {
+        size: number (bytes)
+        blocks: number (number of data blocks in the metadata)
+        downloaded: number (number of blocks downloaded, if a remote archive)
+        mtime: Date (last modified time; not reliable)
+        ctime: Date (creation time; not reliable)
+        isDirectory(): boolean
+        isFile(): boolean
+      }
+      ```
+
+      Example:
+
+      ```js
+      var archive = new DatArchive(datUrl)
+      await archive.stat('/hello.txt')
+      ```
   -
-    name: "dat.readFile()"
+    name: "readFile()"
     signature: |
-      dat.readFile(url: string, opts?: String|Object):
+      readFile(path: string, opts?: String|Object):
         Promise&lt;string|ArrayBuffer&gt;
-    experimental: true
     desc: |
       Reads the file's contents.
 
-      - url. The URL of the file to read. This must be a dat:// URL.
-      - opts.version. String. Which version of the file to read? Refers to the name of a checkpoint. If unspecified, defaults to latest.
-      - opts.encoding
-        - 'utf8' / 'utf-8' (default). Return value will be a string.
-        - 'base64'. Return value will be a string.
-        - 'hex'. Return value will be a string.
-        - 'binary'. Return value will be an ArrayBuffer.
+      - `path` The path of the file to read.
+      - `opts.encoding`
+        - `'utf8'` / `'utf-8'` (default) Return value will be a string.
+        - `'base64'` Return value will be a string.
+        - `'hex'` Return value will be a string.
+        - `'binary'` Return value will be an ArrayBuffer.
         - If `opts` is a string, it is specifying the encoding.
-      - opts.timeout. Number. How long, in ms, to wait for a response? Default 5000.
+      - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
 
       ```js
-      dat.readFile('dat://.../picture.png').then(arrayBuf => {
-        var blob = new Blob([arrayBuf], {type: 'image/png'})
-        document.querySelector('img').src = URL.createObjectURL(blob)
-      })
-      
-      dat.readFile('dat:/.../picture.png', 'base64').then(str => {
-        document.querySelector('img').src = 'data:image/png;base64,'+str
-      })
-      ```
+      var archive = new DatArchive(datUrl)
 
-      If the archive is not found on the network, or in the local cache, this call will timeout.
+      var buf = await archive.readFile('/picture.png', 'binary')
+      var blob = new Blob([buf], {type: 'image/png'})
+      document.querySelector('img').src = URL.createObjectURL(blob)
+      
+      var str = await archive.readFile('/picture.png', 'base64')
+      document.querySelector('img').src = 'data:image/png;base64,'+str
+      ```
   -
-    name: "dat.listFiles()"
-    signature: "dat.listFiles(url: string, opts?: Object): Promise&lt;Array&lt;String&gt;&gt;"
-    experimental: true
-    alias: dat.readDirectory
+    name: "readdir()"
+    signature: "readdir(path: string, opts?: Object): Promise&lt;Array&lt;String&gt;&gt;"
     desc: |
       Reads the contents of a directory.
-      Returns an object listing the files and folders in the directory, excluding '.' and '..'.
+      Returns an array listing the files and folders in the directory, excluding '.' and '..'.
 
-      - url. The URL of the directory to read. This must be a dat:// URL.
-      - opts.version. String. Which version of the file to read? Refers to the name of a checkpoint. If unspecified, defaults to latest.
-      - opts.timeout. Number. How long, in ms, to wait for a response? Default 5000.
-  -
-    name: "dat.writeFile()"
-    signature: "dat.writeFile(url: string, data: string|ArrayBuffer, opts?: Object|String): Promise&lt;void&gt;"
-    experimental: true
-    desc: |
-      Replaces the file's contents with 'data'.
-      The promise will reject if there is already a directory at 'url', or if the containing directory-tree does not yet exist.
-
-      - url. The URL of the file to write. This must be a dat:// URL.
-      - data. The data to be written.
-      - opts.encoding
-        - 'utf8' / 'utf-8'. Data must be a string. (This is the default value if data is a string.)
-        - 'base64'. Data must be a string.
-        - 'hex'. Data must be a string.
-        - 'binary'. Data must be an ArrayBuffer. (This is the default value if data is an ArrayBuffer.)
-        - If `opts` is a string, it is specifying the encoding.
-
-      The app must be the creator of the archive to be granted permission.
+      - `path` The path of the directory to read.
+      - `opts.recursive` Boolean. Recurse the listing into the subdirectories?
+      - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
 
       ```js
-      dat.writeFile('dat://.../hello.txt', 'world', 'utf8').then(...)
+      var archive = new DatArchive(datUrl)
+      var topFiles = await archive.readdir('/')
+      var allFiles = await archive.readdir('/', {recursive: true})
       ```
   -
-    name: "dat.createDirectory()"
-    signature: "dat.createDirectory(url: string): Promise&lt;void&gt;"
-    experimental: true
+    name: "writeFile()"
+    signature: "writeFile(path: string, data: string|ArrayBuffer, opts?: Object|String): Promise&lt;void&gt;"
     desc: |
-      Creates a new directory at 'url'.
-      The promise will reject if there is already a file or directory at 'url', or if the containing directory-tree does not yet exist.
+      Replaces the file's contents with `data` in the staging area.
+      The promise will reject if there is already a directory at `path`, or if the containing directory-tree does not yet exist.
 
-      - url. The URL of the directory to create. This must be a dat:// URL.
+      The archive must be committed to make the file update permanent.
 
-      The app must be the creator of the archive to be granted permission.
+      - `path` The path of the file to write.
+      - `data` The data to be written.
+      - `opts.encoding`
+        - `'utf8'` / `'utf-8'` Data must be a string. (This is the default value if data is a string.)
+        - `'base64'` Data must be a string.
+        - `'hex'` Data must be a string.
+        - `'binary'` Data must be an ArrayBuffer. (This is the default value if data is an ArrayBuffer.)
+        - If `opts` is a string, it is specifying the encoding.
+
+      ```js
+      var archive = new DatArchive(datUrl)
+      await archive.writeFile('/hello.txt', 'world')
+      ```
   -
-    name: "dat.deleteFile()"
-    signature: "dat.deleteFile(url: string): Promise&lt;void&gt;"
-    notyet: true
+    name: "mkdir()"
+    signature: "mkdir(path: string): Promise&lt;void&gt;"
     desc: |
-      Deletes the file at 'url'.
+      Creates a new directory at `path` in the staging area.
+      The promise will reject if there is already a file or directory at `url`, or if the containing directory-tree does not yet exist.
+
+      The archive must be committed to make the new directory permanent.
+
+      - `path` The path of the directory to create.
+
+      ```js
+      var archive = new DatArchive(datUrl)
+      await archive.mkdir('/subdir')
+      ```
+  -
+    name: "unlink()"
+    signature: "unlink(path: string): Promise&lt;void&gt;"
+    desc: |
+      Deletes the file at `path`.
       The promise will reject if no file is found, or if the target path is a directory.
-      
-      - url. The URL of the file to delete. This must be a dat:// URL.
 
-      Requires `datWrite` permission, and the app must be the creator of the archive.
+      The archive must be committed to make the deletion permanent.
+
+      - `path` The path of the file to delete.
+
+      ```js
+      var archive = new DatArchive(datUrl)
+      await archive.unlink('/hello.txt')
+      ```
   -
-    name: "dat.deleteDirectory()"
-    signature: "dat.deleteDirectory(url: string): Promise&lt;void&gt;"
-    notyet: true
+    name: "rmdir()"
+    signature: "rmdir(path: string, opts?: Object): Promise&lt;void&gt;"
     desc: |
-      Deletes the directory at 'url'.
-      The promise will reject if there is not a directory at 'url', or if the directory is not empty.
+      Deletes the directory at `path`.
+      The promise will reject if there is not a directory at `path`, or if the directory is not empty.
 
-      - url. The URL of the directory to delete. This must be a dat:// URL.
+      The archive must be committed to make the deletion permanent.
 
-      Requires `datWrite` permission, and the app must be the creator of the archive.
+      - `path` The path of the directory to delete.
+      - `opts.recursive` Boolean. If not empty, delete all files and folders inside the folder?
+
+      ```js
+      var archive = new DatArchive(datUrl)
+      await archive.rmdir('/subdir')
+      await archive.rmdir('/', {recursive: true})
+      ```
   -
-    name: "dat.getHistory()"
-    signature: "dat.getHistory(url: string, opts?: Object): Promise&lt;Array&lt;Object&gt;&gt;"
-    notyet: true
+    name: "diff()"
+    signature: "diff(opts?: Object): Promise&lt;Array&lt;Object&gt;&gt;"
+    desc: |
+      Compare the current staging area to the published archive, and provide a list of the differences.
+
+      - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
+
+      Returns an array of objects:
+
+      ```js
+      [
+        {
+          change: string (the operation, 'add' or 'mod' or 'del')
+          type: string (the typeof of entry, 'dir' or 'file')
+          path: string (path of the file)
+        },
+        ...
+      ]
+      ```
+
+      Example:
+
+      ```js
+      var archive = new DatArchive(datUrl)
+      await archive.diff()
+      ```
+  -
+    name: "commit()"
+    signature: "commit(): Promise&lt;Array&lt;Object&gt;&gt;"
+    desc: |
+      Publish all changes in the staging area to the archive, and provide a list of the applied changes.
+
+      Returns an array of objects:
+
+      ```js
+      [
+        {
+          change: string (the operation, 'add' or 'mod' or 'del')
+          type: string (the typeof of entry, 'dir' or 'file')
+          path: string (path of the file)
+        },
+        ...
+      ]
+      ```
+
+      Example:
+
+      ```js
+      var archive = new DatArchive(datUrl)
+      await archive.commit()
+      ```
+  -
+    name: "revert()"
+    signature: "revert(): Promise&lt;Array&lt;Object&gt;&gt;"
+    desc: |
+      Undo all changes in the staging area, and provide a list of the reversions.
+
+      Returns an array of objects:
+
+      ```js
+      [
+        {
+          change: string (the operation, 'add' or 'mod' or 'del')
+          type: string (the typeof of entry, 'dir' or 'file')
+          path: string (path of the file)
+        },
+        ...
+      ]
+      ```
+
+      Example:
+
+      ```js
+      var archive = new DatArchive(datUrl)
+      await archive.revert()
+      ```
+  -
+    name: "history()"
+    signature: "history(opts?: Object): Promise&lt;Array&lt;Object&gt;&gt;"
     desc: |
       Fetch the history of changes to this archive.
 
-      - url. The URL of the archive to read. This must be a dat:// URL.
-      - opts.offset. Optional number, where in the history to start reading.
-      - opts.limit. Optional number, how many entries to include.
-  -
-    name: "dat.getCheckpoints()"
-    signature: "dat.getCheckpoints(url: string, opts?: Object): Promise&lt;Array&lt;Object&gt;&gt;"
-    notyet: true
-    desc: |
-      Fetch the checkpoints in this archives history.
+      - `opts.start` Number. Where in the history to start reading.
+      - `opts.end` Number. Where in the history to stop reading.
+      - `opts.reverse` Boolean. Reverse the order given?
+      - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
 
-      - url. The URL of the archive to read. This must be a dat:// URL.
-      - opts.offset. Optional number, where in the history to start reading.
-      - opts.limit. Optional number, how many entries to include.
-
-      Return objects:
-
-      ```text
-      {
-        index: number (position in history),
-        name: string,
-        timestamp: number (timestamp),
-        description: string (optional)
-      }
-      ```
-  -
-    name: "dat.writeCheckpoint()"
-    signature: "dat.writeCheckpoint(url: string, name: string, description?: string): Promise&lt;void&gt;"
-    notyet: true
-    desc: |
-      Writes a version checkpoint to the archive's history.
-
-      - url. The URL of the archive to update. This must be a dat:// URL.
-      - name. The version-name of the checkpoint. Can be any string. If the name has been used before, checkpoint() will fail.
-      - description. Optional, a message to accompany the checkpoint.
-
-      Requires `datWrite` permission, and the app must be the creator of the archive.
+      Returns an array of objects:
 
       ```js
-      // Write new versions
-      dat.writeCheckpoint('dat://.../', '1.0.0')
-        .then(() => dat.writeFile('dat://.../hello.txt', 'web!!', 'utf8'))
-        .then(() => dat.writeCheckpoint('dat://.../', '2.0.0'))
+      [
+        {
+          name: string (the path of the entry, eg '/index.html')
+          version: number (the revision number that represents the change)
+          type: string (the operation, 'put' or 'del')
+        },
+        ...
+      ]
+      ```
+
+      Example:
+
+      ```js
+      var archive = new DatArchive(datUrl)
+      await archive.history({start: 0, end: 100, reverse: true})
+      ```
+  -
+    name: "download()"
+    signature: "download(path: String, opts?: Object): Promise&lt;void&gt;"
+    desc: |
+      Download the given file or folder, and return when finished.
+
+      - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
+
+      ```js
+      var archive = new DatArchive(datUrl)
+      await archive.download('/foo.txt')
+      await archive.download('/') // download everything
+      ```
+  -
+    name: "createFileActivityStream()"
+    signature: "createFileActivityStream(pattern?: String|Array&lt;String&gt;): EventTarget"
+    desc: |
+      Watch the given path or path-pattern for file events.
+
+      - `pattern`
+        - If a string, the path to watch.
+        - If an array of strings, an [anymatch](https://npm.im/anymatch) pattern of paths to watch.
+
+      Provides an `EventTarget` with a `.close()` method and the following events:
+
+      - `'changed' ({path: string})` The contents of the file has changed, either by a local write or a remote write. The new content will be ready when this event is emitted.
+        - `path` is the path-string of the file.
+      - `'invalidated' ({path: string})` The contents of the file has changed remotely, but it hasn't been downloaded yet. 
+        - `path` is the path-string of the file.
+
+      ```js
+      var archive = new DatArchive(datUrl)
+
+      var evts = archive.createFileActivityStream() // or...
+      var evts = archive.createFileActivityStream('foo.txt') // or...
+      var evts = archive.createFileActivityStream(['**/*.txt', '**/*.md'])
+
+      evts.addEventListener('invalidated', ({path}) => {
+        console.log(path, 'has been invalidated, downloading the update')
+        archive.download(path)
+      })
+      evts.addEventListener('changed', ({path}) => {
+        console.log(path, 'has been updated!')
+      })
+
+      // later:
+      evts.close()
+      ```
+  -
+    name: "createNetworkActivityStream()"
+    signature: "createNetworkActivityStream(): EventTarget"
+    desc: |
+      Watch for network events. Provides an `EventTarget` with a `.close()` method and the following events:
+
+      - `'network-changed' ({connections})` The number of connections has changed. 
+        - `connections` is a number.
+      - `'download' ({feed,block,bytes})` A block has been downloaded.
+        - `feed` will either be `"metadata"` or `"content"`.
+        - `block` is the index of data downloaded.
+        - `bytes` is the number of bytes in the block.
+      - `'upload' ({feed,block,bytes})` A block has been uploaded.
+        - `feed` will either be `"metadata"` or `"content"`.
+        - `block` is the index of data downloaded.
+        - `bytes` is the number of bytes in the block.
+      - `'sync' ({feed})` All known blocks have been downloaded.
+        - `feed` will either be `"metadata"` or `"content"`.
+
+      ```js
+      var archive = new DatArchive(datUrl)
+      var evts = archive.createNetworkActivityStream()
+
+      evts.addEventListener('network-changed', ({connections}) => {
+        console.log(connections, 'current peers')
+      })
+
+      evts.addEventListener('download', ({feed, block, bytes}) => {
+        console.log('Downloaded a block in the', feed, {block, bytes})
+      })
+
+      evts.addEventListener('upload', ({feed, block, bytes}) => {
+        console.log('Uploaded a block in the', feed, {block, bytes})
+      })
+
+      evts.addEventListener('sync', ({feed}) => {
+        console.log('Downloaded everything currently published in the', feed)
+      })
+
+      // later:
+      evts.close()
       ```
