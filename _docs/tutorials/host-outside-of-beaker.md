@@ -14,7 +14,7 @@ The [Dat project](https://datproject.org) has created a suite of tools outside o
 
 As fun as self-hosting a site is, sometimes it’s important to make sure your site is always available. The simple solution is to setup a cloud server somewhere and rehost your site using either [Dat CLI](https://github.com/datproject/dat) or [DatHTTPD](https://github.com/beakerbrowser/dathttpd). For hands-off hosting, DatHTTPD is the best choice.
 
-From the readme:
+From the README:
 
 > A Web server for Dat and HTTPS.
 
@@ -68,4 +68,4 @@ sudo add-to-systemd dathttpd --user $(whoami) $(which dathttpd)
 sudo systemctl start dathttpd
 ```
 
-Just like that, you’re ready to go. [Read the DatHTTPD readme](https://github.com/beakerbrowser/dathttpd) for more information.
+Just like that, you’re ready to go. [Read the DatHTTPD README](https://github.com/beakerbrowser/dathttpd) for more information.
