@@ -92,7 +92,15 @@
     font-size: .92rem;
     max-width: 700px;
 
-    p:not(:last-child) {
+    p {
+
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    p:not(:last-child),
+    blockquote {
       margin-bottom: 1.5rem;
     }
 
@@ -107,6 +115,15 @@
       padding: 1rem;
       border-radius: 3px;
       background: transparentize($gray--light, .65);
+    }
+
+    blockquote {
+      margin-left: 30px;
+      padding-left: 15px;
+      border-left: 2px solid $gray--mid;
+      color: $text--light-bg-muted;
+      font-style: italic;
+      font-size: 1rem;
     }
   }
 
