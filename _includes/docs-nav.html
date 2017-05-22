@@ -1,73 +1,18 @@
-<div class="container">
-  <button class="doc__nav-menu-btn doc__nav-menu-btn--open" aria-label="Open navigation">
-    <i class="fa fa-bars"></i>
-  </button>
+<div class="docs-nav">
+  <nav>
+    {% assign activeSection = site.data.docs[include.section] %}
+    <span class="active-section">{{ activeSection.title }}
+    <ul>
+      {% for obj in site.data.docs %}
+        {% assign section = obj[1] %}
+
+        {% if section.title == activeSection.title %}
+          <li class="active">
+        {% else %}
+          <li>
+        {% endif %}
+          <a href="{{ section.url }}">{{ section.title }}</a>
+        </li>
+      {% endfor %}
+  </nav>
 </div>
-
-<nav id="doc-nav" class="doc__nav">
-  <button class="doc__nav-menu-btn doc__nav-menu-btn--close btn" aria-label="Close navigation">
-    <i aria-hidden="true" class="fa fa-bars"></i>
-  </button>
-
-  <a href="/" class="doc__nav__logo">
-    <span><i class="fa fa-flask"></i> Beaker</span>
-  </a>
-
-  <div>
-    <ul class="doc__nav-section">
-      <li class="doc__link {% if '/docs/install.html' == page.url %}current{%endif %}">
-        <a href="{{ '/docs/install.html' | prepend: site.baseurl }}">
-          Install
-        </a>
-      </li>
-      <li class="doc__link {% if '/docs/index.html' == page.url %}current{%endif %}">
-        <a href="{{ '/docs/index.html' | prepend: site.baseurl }}">
-          Introduction
-        </a>
-      </li>
-    </ul>
-
-    {% for section in site.data.docs-nav %}
-    <ul class="doc__nav-section">
-      <span class="doc__group-name">
-        <a href="{{ section.url }}">
-          {{ section.title }}
-        </a>
-      </span>
-      {% if page.url contains section.baseurl %}
-        {% for doc in section.children %}
-          <li class="doc__link {% if doc.url == page.url %}current{%endif %}">
-            <a href="{{ doc.url | prepend: site.baseurl }}">
-              {{ doc.short_title | default: doc.title | escape }}
-            </a>
-          </li>
-        {% endfor %}
-      {% endif %}
-    </ul>
-    {% endfor %}
-
-    <hr>
-    <ul class="doc__nav-section">
-      <li class="doc__link outbound">
-        <a href="https://github.com/beakerbrowser">GitHub</a>
-      </li>
-      <li class="doc__link outbound">
-        <a href="https://twitter.com/BeakerBrowser">Twitter</a>
-      </li>
-      <li class="doc__link outbound">
-        <a href="https://groups.google.com/forum/#!forum/beaker-browser">Mailing list</a>
-      </li>
-      <li class="doc__link outbound">
-        <a href="/docs/howto/install.html">Install Now</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<script>
-  var docNav = document.getElementById('doc-nav');
-  var docNavBtns = document.querySelectorAll('.doc__nav-menu-btn');
-  docNavBtns.forEach(function (el) {
-      el.addEventListener('click', function () { docNav.classList.toggle('visible') });
-  });
-</script>

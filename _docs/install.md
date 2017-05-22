@@ -1,9 +1,8 @@
 ---
-title:    Install Beaker
-category: Get started
-order:    1
-redirect_from:
- - /docs/howto/use-bkr.html
+title: Installing Beaker
+section: installingBeaker
+sectionTitle: Installing Beaker
+order: 1
 ---
 
 <table class="install-options">
