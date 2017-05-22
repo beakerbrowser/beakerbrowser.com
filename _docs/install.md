@@ -31,14 +31,6 @@ order: 1
 
 For MacOS, follow the instructions in [the installer](https://download.beakerbrowser.net/download/latest/osx). For Linux, follow the instructions on the [GitHub README](https://github.com/beakerbrowser/beaker).
 
-Additional command-line tools (**recommended**):
-
-```
-npm install -g bkr
-```
-
-<small>Requires [node 6](https://nodejs.org/) or later. If you have a problem with permissions, <a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions" target="_blank">see this guide</a>.</small>
-
 ### Guides
 
 <div class="card-group">
