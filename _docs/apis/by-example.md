@@ -1,5 +1,5 @@
 ---
-title: By example
+title: Web APIs by example
 section: webAPIs
 sectionTitle: Web APIs
 order: 2
