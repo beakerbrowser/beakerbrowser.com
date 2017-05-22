@@ -5,7 +5,7 @@ sectionTitle: Installing Beaker
 order: 1
 ---
 
-<table class="install-options">
+<table class="install-options basic-table">
   <tr>
     <th>MacOS:</th>
     <td>
