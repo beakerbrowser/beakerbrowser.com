@@ -95,8 +95,17 @@
       margin-bottom: 1.5rem;
     }
 
-    ul {
+    ul,
+    ol {
       margin: 0 0 1.5rem 20px;
+    }
+
+    pre {
+      margin-bottom: 1.5rem;
+      border: 1px solid $gray--mid;
+      padding: 1rem;
+      border-radius: 3px;
+      background: transparentize($gray--light, .65);
     }
   }
 
