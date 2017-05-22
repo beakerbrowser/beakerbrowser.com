@@ -8,15 +8,24 @@ order: 1
 <table class="install-options">
   <tr>
     <th>MacOS:</th>
-    <td><span class="fa fa-apple"></span> <a href="https://download.beakerbrowser.net/download/latest/osx">Download the binary</a></td>
+    <td>
+      <i class="fa fa-apple"></i>
+      <a href="https://download.beakerbrowser.net/download/latest/osx">Download the binary</a>
+    </td>
   </tr>
   <tr>
     <th>Linux:</th>
-    <td><span class="fa fa-linux"></span> <a href="https://github.com/beakerbrowser/beaker">Build from source</a></td>
+    <td>
+      <i class="fa fa-linux"></i>
+      <a href="https://github.com/beakerbrowser/beaker">Build from source</a>
+    </td>
   </tr>
   <tr>
     <th>Windows:</th>
-    <td><span class="fa fa-windows"></span> Coming soon</td>
+    <td>
+      <i class="fa fa-windows"></i>
+      Coming soon
+    </td>
   </tr>
 </table>
 
