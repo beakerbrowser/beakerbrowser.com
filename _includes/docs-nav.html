@@ -1,18 +1,21 @@
 <div class="docs-nav">
-  <nav>
+  <div class="container">
     {% assign activeSection = site.data.docs[include.section] %}
-    <span class="active-section">{{ activeSection.title }}
-    <ul>
-      {% for obj in site.data.docs %}
-        {% assign section = obj[1] %}
+    <span class="active-section">{{ activeSection.title }}</span>
 
-        {% if section.title == activeSection.title %}
-          <li class="active">
-        {% else %}
-          <li>
-        {% endif %}
-          <a href="{{ section.url }}">{{ section.title }}</a>
-        </li>
-      {% endfor %}
-  </nav>
+    <nav>
+      <ul>
+        {% for obj in site.data.docs %}
+          {% assign section = obj[1] %}
+
+          {% if section.title == activeSection.title %}
+            <li class="active">
+          {% else %}
+            <li>
+          {% endif %}
+            <a href="{{ section.url }}">{{ section.title }}</a>
+          </li>
+        {% endfor %}
+    </nav>
+  </div>
 </div>

@@ -11,12 +11,53 @@
   }
 }
 
+.layout-doc {
+
+  .docs-nav {
+    margin-top: 3rem;
+    color: $text--light-bg-muted;
+
+    .container {
+      @extend %flex-container;
+      justify-content: space-between;
+      border-bottom: 1px solid $gray--mid;
+    }
+
+    .active-section {
+      font-size: 1.1rem;
+    }
+
+    .active-section,
+    nav {
+      display: inline-block;
+    }
+
+    nav {
+
+      li {
+        display: inline-block;
+        padding-bottom: .5rem;
+        font-size: .9rem;
+
+        &.active {
+          border-bottom: 2px solid $gray;
+          color: $text--light-bg;
+          font-weight: 500;
+        }
+
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
 .docs {
   min-height: 100%;
 
   .content {
 
   }
+
   &__content {
     padding: 25px 0 3em 0;
     max-width: 850px;
