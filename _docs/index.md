@@ -16,13 +16,13 @@ order: 1
       <div class="heading">
         <i class="fa fa-laptop"></i>
         <h2 class="title">
-          <a href="/docs/using-beaker/the-peer-to-peer-web.html">Getting started</a>
+          <a href="/docs/using-beaker/">Getting started</a>
         </h2>
       </div>
       <p class="desc">
         Learn how to use Beaker to publish peer-to-peer websites, share files secretly, and more.
       </p>
-      <a class="more" href="/docs/using-beaker/the-peer-to-peer-web.html">
+      <a class="more" href="/docs/using-beaker/">
         Read more
         <i class="fa fa-angle-right"></i>
       </a>
@@ -32,14 +32,14 @@ order: 1
       <div class="heading">
         <i class="fa fa-terminal"></i>
         <h2 class="title">
-          <a href="/docs/apis/core-concepts.html">New Web APIs</a>
+          <a href="/docs/apis/">New Web APIs</a>
         </h2>
       </div>
       <p class="desc">
         Explore Beaker's new Web APIs for publishing and managing peer-to-peer
         websites.
       </p>
-      <a class="more" href="/docs/apis/core-concepts.html">
+      <a class="more" href="/docs/apis/">
         Read more
         <i class="fa fa-angle-right"></i>
       </a>
@@ -49,13 +49,13 @@ order: 1
       <div class="heading">
         <i class="fa fa-cogs"></i>
         <h2 class="title">
-          <a href="/docs/inside-beaker/dat-files-protocol.html">Inside Beaker</a>
+          <a href="/docs/inside-beaker/">Inside Beaker</a>
         </h2>
       </div>
       <p class="desc">
         Learn about Beaker's internal architecture, design decisions, and more.
       </p>
-      <a class="more" href="/docs/inside-beaker/dat-files-protocol.html">
+      <a class="more" href="/docs/inside-beaker/">
         Read more
         <i class="fa fa-angle-right"></i>
       </a>
@@ -94,7 +94,7 @@ order: 1
         </li>
       </ul>
       <p class="more">
-        <a href="/docs/tutorials/create-a-blog.html">
+        <a href="/docs/tutorials/">
           All tutorials
           <i class="fa fa-angle-right"></i>
         </a>

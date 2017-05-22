@@ -1,14 +1,12 @@
 installingBeaker:
   title: Installing Beaker
-  baseurl: /docs/install/
-  url: /docs/install.html
+  url: /docs/install/
   children:
     - title: Installing Beaker
-      url: /docs/install.html
+      url: /docs/install/
 usingBeaker:
   title: Using Beaker
-  baseurl: /docs/using-beaker/
-  url: /docs/using-beaker/the-peer-to-peer-web.html
+  url: /docs/using-beaker/
   children:
     - title: The peer-to-peer Web
       url: /docs/using-beaker/the-peer-to-peer-web.html
@@ -24,8 +22,7 @@ usingBeaker:
       url: /docs/using-beaker/availability-and-reliability.html
 webAPIs:
   title: Web APIs
-  baseurl: /docs/apis/
-  url: /docs/apis/core-concepts.html
+  url: /docs/apis/
   children:
     - title: Core concepts
       url: /docs/apis/core-concepts.html
@@ -39,8 +36,7 @@ webAPIs:
       url: /docs/apis/manifest.html
 insideBeaker:
   title: Inside Beaker
-  baseurl: /docs/inside-beaker/
-  url: /docs/inside-beaker/dat-files-protocol.html
+  url: /docs/inside-beaker/
   children:
     - title: Dat files protocol
       url: /docs/inside-beaker/dat-files-protocol.html
@@ -56,8 +52,7 @@ insideBeaker:
       url: /docs/inside-beaker/team.html
 tutorials:
   title: Tutorials
-  baseurl: /docs/tutorials
-  url: /docs/tutorials/create-a-blog.html
+  url: /docs/tutorials/
   children:
     - title: Create a blog
       url: /docs/tutorials/create-a-blog.html
