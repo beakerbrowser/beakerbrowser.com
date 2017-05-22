@@ -89,6 +89,19 @@ instance_methods:
         url: string (the archive URL)
         version: number (the archive's current revision number)
         peers: number (the number of active connections)
+        isOwner: boolean (is the local user the owner of this archive?)
+
+        title: string (the archive title)
+        description: string (the archive description)
+        forkOf: string|array&lt;string&gt; (the archive's parent fork)
+        createdBy: {
+          url: string (the url of the app that created the archive)
+          title: string (the title of the app that created the archive)
+        }
+
+        mtime: number (the walltime of the last received update; is reliable)
+        metaSize: number (bytes, the size-on-disk of the archive metadata)
+        stagingSize: number (bytes, the size-on-disk of the archive staging area)
       }
       ```
 
@@ -333,7 +346,7 @@ instance_methods:
       ```js
       [
         {
-          name: string (the path of the entry, eg '/index.html')
+          path: string (the path of the entry, eg '/index.html')
           version: number (the revision number that represents the change)
           type: string (the operation, 'put' or 'del')
         },
