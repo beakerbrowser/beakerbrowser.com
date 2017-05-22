@@ -53,9 +53,58 @@
 
 .docs {
   min-height: 100%;
+  padding: 3rem 0;
+
+  .container {
+    @extend %flex-container;
+  }
+
+  h1 {
+    font-weight: 400;
+  }
 
   .content {
+    flex: 3;
+    margin-right: 3rem;
+  }
 
+  .doc-sidebar-nav {
+    flex: 1;
+    border-radius: 3px;
+    border: 1px solid $gray--mid;
+    color: $text--light-bg-muted;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    height: 100%;
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      padding: .4rem 1rem;
+      font-size: .9rem;
+      border-left: 2px solid transparent;
+      cursor: pointer;
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $gray--mid;
+      }
+
+      &:hover {
+        background: $gray--light;
+        color: $text--link;
+      }
+
+      &.active {
+        border-left: 2px solid $primary;
+      }
+    }
   }
 
   &__content {
