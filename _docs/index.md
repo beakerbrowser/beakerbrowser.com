@@ -32,14 +32,14 @@ order: 1
       <div class="heading">
         <i class="fa fa-terminal"></i>
         <h2 class="title">
-          <a href="/docs/web-apis">New Web APIs</a>
+          <a href="/docs/apis">New Web APIs</a>
         </h2>
       </div>
       <p class="desc">
         Explore Beaker's new Web APIs for publishing and managing peer-to-peer
         websites.
       </p>
-      <a class="more" href="/docs/web-apis">
+      <a class="more" href="/docs/apis">
         Read more
         <i class="fa fa-angle-right"></i>
       </a>
