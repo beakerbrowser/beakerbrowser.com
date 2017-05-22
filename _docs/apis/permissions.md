@@ -1,7 +1,8 @@
 ---
-title:    Permissions API
-category: Web APIs
-order:    3
+title: Permissions API
+section: webAPIs
+sectionTitle: Web APIs
+order: 4
 ---
 
 <div class="card">
@@ -27,21 +28,21 @@ It will not enable remotely-served styles, scripts, or objects.
 
 ```js
 // Request access
-var res = await navigator.permissions.request({ 
+var res = await navigator.permissions.request({
   name: 'network',
   hostname: 'github.com'
 })
 res.status // => 'granted'
 
 // Query access
-res = await navigator.permissions.query({ 
+res = await navigator.permissions.query({
   name: 'network',
   hostname: 'github.com'
 })
 res.status // => 'granted'
 
 // Give up access
-res = await navigator.permissions.revoke({ 
+res = await navigator.permissions.revoke({
   name: 'network',
   hostname: 'github.com'
 })

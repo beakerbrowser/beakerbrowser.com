@@ -1,7 +1,8 @@
 ---
 title: Team
-redirect_from:
- - /docs/team.html
+section: insideBeaker
+sectionTitle: Inside Beaker
+order: 6
 ---
 
 Beaker is built by a team of decentralizated Web enthusiasists with a history of making Web apps, FOSS software, and peer-to-peer networks. We work in tandem with the [Dat Project](https://datproject.org).

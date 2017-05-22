@@ -1,6 +1,6 @@
 ---
-title: Saving sites you visit
+title: Managing your sites
 section: usingBeaker
 sectionTitle: Using Beaker
-order: 4
+order: 3
 ---

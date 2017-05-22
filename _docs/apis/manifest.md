@@ -1,7 +1,8 @@
 ---
-title:    App manifest
-category: Web APIs
-order:    2
+title: App manifest
+section: webAPIs
+sectionTitle: Web APIs
+order: 5
 ---
 
 Sites and applications served over `dat://` can include a manifest file to set metadata and configure the application.

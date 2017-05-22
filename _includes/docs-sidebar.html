@@ -1,0 +1,10 @@
+<nav id="doc-sidebar-nav">
+  SIDEBAR
+  {% assign section = site.data.docs[include.section] %}
+  <ul>
+    {% for page in section.children %}
+      <li>
+        <a href="{{ page.url }}">{{ page.title }}</a>
+      </li>
+    {% endfor %}
+</nav>

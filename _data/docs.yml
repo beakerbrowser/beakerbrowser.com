@@ -1,7 +1,12 @@
-- title: Installing Beaker
+installingBeaker:
+  title: Installing Beaker
   baseurl: /docs/install/
   url: /docs/install.html
-- title: Using Beaker
+  children:
+    - title: Installing Beaker
+      url: /docs/install.html
+usingBeaker:
+  title: Using Beaker
   baseurl: /docs/using-beaker/
   url: /docs/using-beaker/the-peer-to-peer-web.html
   children:
@@ -17,7 +22,8 @@
       url: /docs/using-beaker/history-and-versions.html
     - title: Availability and reliability
       url: /docs/using-beaker/availability-and-reliability.html
-- title: Web APIs
+webAPIs:
+  title: Web APIs
   baseurl: /docs/apis/
   url: /docs/apis/core-concepts.html
   children:
@@ -31,7 +37,8 @@
       url: /docs/apis/permissions.html
     - title: App manifest
       url: /docs/apis/manifest.html
-- title: Inside Beaker
+insideBeaker:
+  title: Inside Beaker
   baseurl: /docs/inside-beaker/
   url: /docs/inside-beaker/dat-files-protocol.html
   children:
@@ -47,7 +54,8 @@
       url: /docs/inside-beaker/mission.html
     - title: Team
       url: /docs/inside-beaker/team.html
-- title: Tutorials
+tutorials:
+  title: Tutorials
   baseurl: /docs/tutorials
   url: /docs/tutorials/create-a-blog.html
   children:
@@ -57,7 +65,7 @@
       url: /docs/tutorials/create-a-markdown-site.html
     - title: Host outside of Beaker
       url: /docs/tutorials/host-outside-of-beaker.html
-     - title: Share files secretly
+    - title: Share files secretly
       url: /docs/tutorials/share-files-secretly.html
     - title: Publish software securely
       url: /docs/tutorials/publish-software-securely.html

@@ -5,8 +5,11 @@ layout: default
 <main class="docs">
   <div class="content">
     <div class="container">
+      <!-- TODO main nav -->
       <h2>{{ page.title }}</h2>
+      {{ page.category }}
       {{ content }}
+      {% include docs-sidebar.html section=page.section %}
     </div>
   </div>
 </main>

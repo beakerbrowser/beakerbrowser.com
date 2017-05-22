@@ -1,7 +1,8 @@
 ---
-title:    Dat API
-category: Web APIs
-order:    4
+title: Dat API
+section: webAPIs
+sectionTitle: Web APIs
+order: 3
 ---
 
 <div class="card">
@@ -34,7 +35,7 @@ console.log(str) // => 'world'
 ```
 
 
-### Permissions 
+### Permissions
 
 This API is only available to apps served over `dat://`.
 By default, any `dat://` app can read other dat-sites via HTML embeds, Ajax, or the `dat` read commands.

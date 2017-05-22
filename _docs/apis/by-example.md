@@ -1,8 +1,8 @@
 ---
-title:    Web APIs by example
-short_title: By example
-category: Web APIs
-order:    1
+title: Web APIs by example
+section: webAPIs
+sectionTitle: Web APIs
+order: 2
 ---
 
 This is a collection of snippets to help you get familiar with Beaker's APIs.
@@ -38,7 +38,7 @@ console.log(helloTxt)
 ```
 
 
-### Create a subdirectory 
+### Create a subdirectory
 
 ```js
 var dirUrl = datUrl + '/subdir'
@@ -127,7 +127,7 @@ await dat.writeFile(dstUrl, base64, 'base64')
 ### Request network access to a host
 
 ```js
-var res = await navigator.permissions.request({ 
+var res = await navigator.permissions.request({
   name: 'network',
   hostname: 'github.com'
 })
@@ -139,7 +139,7 @@ console.log(res.status)
 ### Request network access to all hosts
 
 ```js
-var res = await navigator.permissions.request({ 
+var res = await navigator.permissions.request({
   name: 'network',
   hostname: '*'
 })
