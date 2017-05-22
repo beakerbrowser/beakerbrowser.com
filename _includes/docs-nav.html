@@ -19,3 +19,27 @@
     </nav>
   </div>
 </div>
+
+<div class="docs-nav-mobile">
+  {% assign activePage = include.page %}
+  <div class="container">
+    <select id="docs-nav-mobile">
+      {% for obj in site.data.docs %}
+        {% assign section = obj[1] %}
+        <optgroup label="{{ section.title }}">
+          {% for page in section.children %}
+            {% if activePage.title == page.title %}
+              <option selected data-url="{{ page.url }}">
+                {{ page.title }}
+              </option>
+            {% else %}
+              <option data-url="{{ page.url }}">
+                {{ page.title }}
+              </option>
+            {% endif %}
+          {% endfor %}
+        </optgroup>
+      {% endfor %}
+    </select>
+  </div>
+</div>

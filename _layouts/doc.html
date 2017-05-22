@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% include docs-nav.html section=page.section %}
+{% include docs-nav.html section=page.section page=page %}
 
 <main class="docs">
   <div class="container">
@@ -23,4 +23,12 @@ var $$ = function (selector) {
 <script src="/js/anchor.min.js"></script>
 <script>
 anchors.add('h2, h3, h4')
+</script>
+
+<script>
+var mobileNav = document.getElementById('docs-nav-mobile')
+mobileNav.addEventListener('change', function (e) {
+  var select = e.target
+  window.location = select.selectedOptions[0].dataset.url
+})
 </script>

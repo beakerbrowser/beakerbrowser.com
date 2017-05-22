@@ -13,6 +13,45 @@
 
 .layout-doc {
 
+  .docs-nav-mobile {
+    margin: 2rem 0 1rem 0;
+
+    select {
+      font-size: 13px;
+      width: 300px;
+      height: 25px;
+    }
+  }
+
+  .docs-nav,
+  .doc-sidebar-nav {
+    display: none;
+  }
+
+  @media (min-width: 1000px) {
+    .docs-nav,
+    .doc-sidebar-nav {
+      display: block;
+    }
+
+    .docs-nav-mobile {
+      display: none;
+    }
+
+    .docs {
+      padding-top: 3rem;
+    }
+
+    .content {
+      flex: 3;
+      margin-right: 4rem;
+    }
+
+    .doc-sidebar-nav {
+      flex: 1;
+    }
+  }
+
   .container {
     max-width: 1000px;
   }
@@ -57,7 +96,7 @@
 
 .docs {
   min-height: 100%;
-  padding: 3rem 0 4rem 0;
+  padding-bottom: 4rem;
 
   .container {
     @extend %flex-container;
@@ -87,10 +126,9 @@
   }
 
   .content {
-    flex: 3;
-    margin-right: 4rem;
     font-size: .92rem;
-    max-width: 700px;
+    max-width: 650px;
+    width: 100%;
 
     p {
 
