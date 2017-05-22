@@ -16,13 +16,13 @@ order: 1
       <div class="heading">
         <i class="fa fa-laptop"></i>
         <h2 class="title">
-          <a href="/docs/getting-started">Getting started</a>
+          <a href="/docs/using-beaker/the-peer-to-peer-web.html">Getting started</a>
         </h2>
       </div>
       <p class="desc">
         Learn how to use Beaker to publish peer-to-peer websites, share files secretly, and more.
       </p>
-      <a class="more" href="/docs/getting-started">
+      <a class="more" href="/docs/using-beaker/the-peer-to-peer-web.html">
         Read more
         <i class="fa fa-angle-right"></i>
       </a>
@@ -32,14 +32,14 @@ order: 1
       <div class="heading">
         <i class="fa fa-terminal"></i>
         <h2 class="title">
-          <a href="/docs/apis">New Web APIs</a>
+          <a href="/docs/apis/core-concepts.html">New Web APIs</a>
         </h2>
       </div>
       <p class="desc">
         Explore Beaker's new Web APIs for publishing and managing peer-to-peer
         websites.
       </p>
-      <a class="more" href="/docs/apis">
+      <a class="more" href="/docs/apis/core-concepts.html">
         Read more
         <i class="fa fa-angle-right"></i>
       </a>
@@ -49,13 +49,13 @@ order: 1
       <div class="heading">
         <i class="fa fa-cogs"></i>
         <h2 class="title">
-          <a href="/docs/inside-beaker">Inside Beaker</a>
+          <a href="/docs/inside-beaker/dat-files-protocol.html">Inside Beaker</a>
         </h2>
       </div>
       <p class="desc">
         Learn about Beaker's internal architecture, design decisions, and more.
       </p>
-      <a class="more" href="/docs/inside-beaker">
+      <a class="more" href="/docs/inside-beaker/dat-files-protocol.html">
         Read more
         <i class="fa fa-angle-right"></i>
       </a>
@@ -94,7 +94,7 @@ order: 1
         </li>
       </ul>
       <p class="more">
-        <a href="/docs/tutorials">
+        <a href="/docs/tutorials/create-a-blog.html">
           All tutorials
           <i class="fa fa-angle-right"></i>
         </a>
@@ -148,7 +148,11 @@ order: 1
         <li>
           <img class="icon" src="/img/hashbase-favicon-32x32.png"/>
           <div class="info">
-            <h3 class="title">Hashbase</h3>
+            <h3 class="title">
+              <a href="https://hashbase.io">
+                Hashbase
+              </a>
+            </h3>
             <p class="desc">
               A cloud peer that rehosts your Dat archives. Run by the Beaker team.
             </p>
