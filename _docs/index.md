@@ -128,14 +128,32 @@ order: 1
     </div>
 
     <div class="tools callout">
-      <h2>Tools</h2>
       <p>
-        Tools and resources for working with Beaker and Dat.
+        Tools for working with Beaker and Dat
       </p>
       <ul class="tools-list">
-        <li>Dat CLI</li>
-        <li>Dat desktop application</li>
-        <li>Hashbase</li>
+        <li>
+          <img class="icon" src="/img/dat-hexagon.svg" />
+          <div class="info">
+            <h3 class="title">
+              <a href="https://datproject.org/install">
+                Dat CLI & desktop application
+              </a>
+            </h3>
+            <p class="desc">
+              The official Dat clients for syncing and sharing files.
+            </p>
+          </div>
+        </li>
+        <li>
+          <img class="icon" src="/img/hashbase-favicon-32x32.png"/>
+          <div class="info">
+            <h3 class="title">Hashbase</h3>
+            <p class="desc">
+              A cloud peer that rehosts your Dat archives. Run by the Beaker team.
+            </p>
+          </div>
+        </li>
       </ul>
     </div>
   </div>

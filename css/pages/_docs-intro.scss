@@ -178,6 +178,59 @@
     .tools {
       border-radius: 3px;
       border: 1px solid $gray--mid;
+      font-size: .9rem;
+      color: $text--light-bg-muted;
+      height: 100%;
+
+      > p {
+        padding: .5rem 1rem;
+        background: $gray--light;
+        border-bottom: 1px solid $gray--mid;
+        // font-weight: 500;
+      }
+    }
+
+    .tools-list {
+      list-style: none;
+
+      li {
+        @extend %flex-container;
+        align-items: center;
+        padding: 10px 1em;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $gray--mid;
+        }
+      }
+
+      .info {
+        height: 100%;
+        margin-left: 15px;
+      }
+
+      .title {
+        font-size: .85rem;
+        margin-bottom: .25rem;
+
+        a {
+          cursor: pointer;
+        }
+
+        &:hover {
+          @extend %link;
+          color: inherit;
+        }
+      }
+
+      p {
+        font-size: .8rem;
+      }
+
+      .icon {
+        width: 25px;
+        height: 25px;
+        border-radius: 2px;
+      }
     }
   }
 }
