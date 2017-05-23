@@ -1,7 +1,17 @@
 <div class="docs-nav">
   <div class="container">
     {% assign activeSection = site.data.docs[include.section] %}
-    <span class="active-section">{{ activeSection.title }}</span>
+
+    <div class="active-section">
+      <a href="/docs/" class="active-section">Beaker Docs</a>
+
+      {% if activeSection %}
+        <i class="fa fa-angle-right"></i>
+        <a href="{{ activeSection.url }}">
+          {{ activeSection.title }}
+        </a>
+      {% endif %}
+    </div>
 
     <nav>
       <ul>
@@ -16,6 +26,7 @@
             <a href="{{ section.url }}">{{ section.title }}</a>
           </li>
         {% endfor %}
+      </ul>
     </nav>
   </div>
 </div>

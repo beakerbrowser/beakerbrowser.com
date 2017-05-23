@@ -1,14 +1,13 @@
 .layout-docs-intro {
 
   main {
-    padding: 3rem 0;
+    padding: 1rem 0 3rem 0;
   }
 
   .callouts-1 {
 
     .container {
       @extend %grid-3;
-      border-top: 1px solid $gray--mid;
       padding: 2em 0;
     }
 

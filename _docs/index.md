@@ -4,11 +4,7 @@ title: Introduction
 order: 1
 ---
 
-<div class="intro">
-  <div class="container">
-    Hero
-  </div>
-</div>
+{% include docs-nav.html section=page.section page=page %}
 
 <div class="callouts-1">
   <div class="container">
