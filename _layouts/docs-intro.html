@@ -5,3 +5,11 @@ layout: default
 <main class="docs-intro">
   {{ content }}
 </main>
+
+<script>
+var mobileNav = document.getElementById('docs-nav-mobile')
+mobileNav.addEventListener('change', function (e) {
+  var select = e.target
+  window.location = select.selectedOptions[0].dataset.url
+})
+</script>
