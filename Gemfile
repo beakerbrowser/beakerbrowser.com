@@ -25,3 +25,7 @@ gem "jekyll-redirect-from"
 # group :jekyll_plugins do
 #   gem "jekyll-github-metadata", "~> 1.0"
 # end
+
+group :jekyll_plugins do
+  gem 'octopress-minify-html'
+end
