@@ -11,22 +11,22 @@
      private by default. Only people with the URL can download your files, and
      all traffic is encrypted in transit.</p></div>"
   orientation: center
-- src: /img/ss/peer-count.png
+- src: /img/ss/peer-count.jpg
   title: "Browse the peer-to-peer Web"
   desc:
-    "<div data-src=\"/img/ss/peer-count.png\" class=\"subsection selectable active\"><h3 class=\"subtitle\">
+    "<div data-src=\"/img/ss/peer-count.jpg\" class=\"subsection selectable active\"><h3 class=\"subtitle\">
      Distributed</h3><p>A site’s visitors are added to the network swarm and
      help rehost its files on the peer-to-peer network.</p></div>
-     <div data-src=\"/img/ss/offline.png\" class=\"subsection selectable\">
+     <div data-src=\"/img/ss/offline.jpg\" class=\"subsection selectable\">
      <h3 class=\"subtitle\">Offline</h3><p>Sites you save to your Library are
      downloaded to your device and can be browsed even when you’re offline.
-     </p></div><div data-src=\"/img/ss/history.png\" class=\"subsection selectable\">
+     </p></div><div data-src=\"/img/ss/history.jpg\" class=\"subsection selectable\">
      <h3 class=\"subtitle\">Versioned</h3><p>The Dat protocol maintains a
      verifiable log of every change made to a site, so you can view it at
      any point in its history.</p></div>"
   orientation: left
   id: 'subsection-ss'
-- src: /img/ss/secret-sharing.png
+- src: /img/ss/secret-sharing.jpg
   title: "Share files secretly"
   desc:
     "<p>Beaker enables <em>truly secret file sharing</em>. Files published with
