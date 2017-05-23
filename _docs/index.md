@@ -65,25 +65,25 @@ order: 1
       <h2>Tutorials</h2>
       <ul class="tutorials-list">
         <li>
-          <a href="/">
+          <a href="/docs/tutorials/create-a-blog.html">
             <i class="purple fa fa-rss"></i>
-            <span>Create a peer-to-peer blog with RSS</span>
+            <span>Create a peer-to-peer blog</span>
           </a>
         </li>
         <li>
-          <a href="/">
+          <a href="/docs/tutorials/host-outside-of-beaker.html">
             <i class="orange fa fa-terminal"></i>
             <span>Host your files using the Dat CLI</span>
           </a>
         </li>
         <li>
-          <a href="/">
+          <a href="/docs/tutorials/share-files-secretly.html">
             <i class="green fa fa-link"></i>
             <span>Share files secretly</span>
           </a>
         </li>
         <li>
-          <a href="/">
+          <a href="/docs/tutorials/listen-for-file-changes.html">
             <i class="teal fa fa-code"></i>
             <span>Beaker Web APIs: Listen for file changes</span>
           </a>
