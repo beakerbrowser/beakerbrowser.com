@@ -7,12 +7,14 @@ order: 2
 
 Beaker is designed to give better privacy where it counts. This involves a tradeoff which might be surprising. To explain, here is a quick comparison to traditional websites:
 
-- **Data privacy: improved.** Dat sites store user data on the device, and Dats can be secretly shared.
-- **Browsing privacy: mixed.** The peer-to-peer network reveals who is sharing a Dat to anybody that possesses the Dat’s URL (see Transport security). This means that browsing history for publicly-shared Dats may be tracked.
+- **Data privacy: improved.** Dat sites store user data on the device, and Dats can be secretly shared. User files and messages can be made fully secret.
+- **Browsing privacy: mixed.** The peer-to-peer network reveals who is sharing a Dat to anybody that possesses the Dat’s URL. This means that browsing history for publicly-shared Dats may be tracked.
 
-Here’s why we say “better privacy where it counts”: Beaker can’t yet protect browsing habits, but it provides much better protection of the user’s data, including messages, documents, and contacts. Compared to current Web services, which store all user data in the clear for the operators to read, we believe this is a huge improvement.
+## Privacy where it counts
 
-We also expect browsing privacy will be improved in the future through proxies, private peers, or Tor.
+Beaker can’t yet protect browsing habits, but it provides much better protection of the user’s data, including messages, documents, and contacts. Compared to current Web services, which store all user data in the clear for the operators to read, we believe this is a huge improvement.
+
+We expect browsing privacy will be improved in the future with private peers.
 
 ## Strict sandbox
 
