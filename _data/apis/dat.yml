@@ -36,7 +36,7 @@ toplevel_methods:
       The archive is sandboxed to only access to files within it.
 
       The fork will contain only the files in the target archive that have been completely downloaded.
-      Use [`download()`](#datarchive-download) to ensure the intended files are ready.
+      Use [`download()`](#download) to ensure the intended files are ready.
 
       The user will be prompted to confirm or deny the archive creation.
 
