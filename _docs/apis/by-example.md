@@ -7,7 +7,7 @@ order: 2
 
 <p class="doc-summary">
   This is a collection of snippets to help you get familiar with Beaker’s APIs.
-  You can read more about the APIs here: <a href="./dat.html">Dat</a>,
+  You can read more about the APIs here: <a href="./dat.html">DatArchive</a>,
   <a href="./permissions.html">permissions</a>.
 </p>
 
