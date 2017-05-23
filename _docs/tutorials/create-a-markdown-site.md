@@ -8,7 +8,7 @@ order: 2
 Because we’re huge fans of [Markdown](https://daringfireball.net/projects/markdown/syntax), we included Markdown rendering in Beaker. You can create a markdown site very easily. First, [create a new site](/docs/using-beaker/publishing-with-beaker.html). Then, add an `index.md`:
 
 <figcaption class="code">/index.md</figcaption>
-```markdown
+```
 # Hello world
 
 This is my **cool** markdown site!
@@ -24,7 +24,7 @@ When you open the site, you'll see the markdown is rendered as html.
 Any file with a `.md` extension will be rendered. For instance, `page.md`:
 
 <figcaption class="code">/page.md</figcaption>
-```markdown
+```
 # A Page
 
 This is another page
@@ -35,7 +35,7 @@ This is another page
 For convenience, Beaker also supports a `/nav.md` file:
 
 <figcaption class="code">/nav.md</figcaption>
-```markdown
+```
 [Home](/)
 [A Page](/page.md)
 ```
