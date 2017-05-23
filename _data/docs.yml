@@ -54,7 +54,7 @@ tutorials:
   title: Tutorials
   url: /docs/tutorials/
   children:
-    - title: Create a blog
+    - title: Create a peer-to-peer blog
       url: /docs/tutorials/create-a-blog.html
     - title: Create a markdown site
       url: /docs/tutorials/create-a-markdown-site.html
