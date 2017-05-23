@@ -85,7 +85,7 @@ order: 1
         <li>
           <a href="/docs/tutorials/listen-for-file-changes.html">
             <i class="teal fa fa-code"></i>
-            <span>Beaker Web APIs: Listen for file changes</span>
+            <span>Web APIs: Listen for file changes</span>
           </a>
         </li>
       </ul>
