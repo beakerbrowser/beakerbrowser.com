@@ -5,14 +5,17 @@ sectionTitle: Web APIs
 order: 4
 ---
 
-<div class="card">
-  <p><strong>Summary.</strong> Request access from the user to use special APIs.</p>
-</div>
+<p class="doc-summary">
+  In this tutorial, you’ll learn how to request access from the user to use
+  special APIs.
+</p>
 
-**Note**
+**Notes:**
 
-- Only apps served over dat:// are able to access these APIs.
-- <i class="fa fa-flask"></i> This API is under development and subject to change.
+- Only apps served over `dat://` are able to access these APIs.
+- <i class="fa fa-flask"></i> Indicates that this API is under development and subject to change.
+
+---
 
 ## Network access
 

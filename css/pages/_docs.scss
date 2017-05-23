@@ -152,6 +152,14 @@
     max-width: 650px;
     width: 100%;
 
+    .doc-summary {
+      color: $text--light-bg-muted;
+      padding: 1rem;
+      background: $gray--light;
+      border-radius: 3px;
+      border: 1px solid $gray--mid;
+    }
+
     p {
 
       a {

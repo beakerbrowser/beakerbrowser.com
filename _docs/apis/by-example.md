@@ -5,8 +5,13 @@ sectionTitle: Web APIs
 order: 2
 ---
 
-This is a collection of snippets to help you get familiar with Beaker's APIs.
-You can read about the APIs here: [dat](./dat.html), [permissions](./permissions.html)
+<p class="doc-summary">
+  This is a collection of snippets to help you get familiar with Beaker’s APIs.
+  You can read more about the APIs here: <a href="./dat.html">Dat</a>,
+  <a href="./permissions.html">permissions</a>.
+</p>
+
+---
 
 ## Create a site
 
