@@ -5,7 +5,7 @@ sectionTitle: Inside Beaker
 order: 4
 ---
 
-Beaker was started during an explosion of peer-to-peer protocol development in Spring 2016. A short list of those protocols includes Bitcoin, Ethereum, Namecoin, IPFS, Secure Scuttlebutt, WebTorrent, and Dat.
+Beaker was started during an explosion of peer-to-peer protocol development in Spring 2016. A short list of those protocols includes [Bitcoin](https://bitcoin.org/), [Ethereum](https://www.ethereum.org/), [Namecoin](https://www.namecoin.org/), [BlockStack](https://blockstack.org/), [Zeronet](https://zeronet.io/), [IPFS](https://ipfs.io/), [Secure Scuttlebutt](https://www.scuttlebutt.nz/), [WebTorrent](https://webtorrent.io/), and [Dat](https://datproject.org/).
 
 These protocols can be broadly categorized as either Blockchain Variants and BitTorrent Variants.
 
@@ -14,7 +14,7 @@ These protocols can be broadly categorized as either Blockchain Variants and Bit
 We quickly ruled out the blockchain variants (Bitcoin, Ethereum, Namecoin) as the core network model of Beaker for the following reasons:
 
 - Proof-of-work and global ledger distribution are inefficient. So far, blockchain networks have struggled with throughput as they scale. Betting on a blockchain includes the risk that throughput may decrease over time, and/or that users will be forced to download large datasets to participate.
-- The requirement to use global consensus on all transactions results in a direct costs for operations in the form of transaction fees. We recognize that many network operations do not require global consensus, and therefore a blockchain makes a poor default for applications.
+- The requirement to use global consensus on all transactions results in a direct costs for operations in the form of transaction fees. We know that many network operations do not require global consensus, and therefore a blockchain makes a poor default for applications.
 - We believe Proof-of-work is wasteful, and we have ethical reservations about the expenditure of resources to sustain PoW. At this time, Proof-of-stake is still an unproven alternative, but we are interested in its potential.
 - We have concerns over governance models. By investing decision-making in miners, the blockchain networks have given power to the entities with the most mining resources. We’re concerned this may give too much power to wealthier actors. We also worry about the unpredictability of policies designed to patch the “hands-off” core design.
 
