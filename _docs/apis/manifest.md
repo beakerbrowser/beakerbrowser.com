@@ -1,11 +1,11 @@
 ---
-title: App manifest
+title: Dat.json site manifest
 section: webAPIs
 sectionTitle: Web APIs
 order: 5
 ---
 
-Sites and applications served over `dat://` can include a manifest file to set metadata and configure the application.
+Sites and applications served over `dat://` can include a manifest file to set metadata and configure the site/application/archive.
 The file should be located at `/dat.json` in the root of the site.
 Beaker automatically manages the manifest for archives created via the Dat Web API.
 

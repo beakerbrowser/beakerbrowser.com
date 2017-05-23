@@ -1,0 +1,15 @@
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+
+  div {
+    flex: 0 0 50%;
+
+    &:nth-child(even) {
+      padding-left: 1.5em;
+    }
+    &:nth-child(odd) {
+      padding-right: 1.5em;
+    }
+  }
+}

@@ -24,15 +24,15 @@ webAPIs:
   title: Web APIs
   url: /docs/apis/
   children:
-    - title: Core concepts
-      url: /docs/apis/core-concepts.html
+    - title: Web APIs
+      url: /docs/apis/index.html
     - title: Web APIs by example
       url: /docs/apis/by-example.html
     - title: DatArchive API
       url: /docs/apis/dat.html
     - title: Permissions API
       url: /docs/apis/permissions.html
-    - title: App manifest
+    - title: Dat.json site manifest
       url: /docs/apis/manifest.html
 insideBeaker:
   title: Inside Beaker
