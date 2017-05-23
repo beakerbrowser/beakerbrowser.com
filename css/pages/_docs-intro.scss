@@ -1,11 +1,15 @@
 .layout-docs-intro {
 
+  .docs-nav {
+    margin-top: 1rem;
+  }
+
   .container {
     max-width: 1000px;
   }
 
   main {
-    padding: 1rem 0 3rem 0;
+    padding: 1rem 0;
     min-height: calc(100vh - 56px - 70px);
   }
 
