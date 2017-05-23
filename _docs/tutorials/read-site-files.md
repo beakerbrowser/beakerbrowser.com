@@ -7,6 +7,8 @@ order: 6
 
 The [DatArchive API](/docs/apis/dat.html) provides a simple set of APIs to read files and directories. After instantiating an archive instance, you can call `stat()`, `readdir()`, and `readFile()`.
 
+## Setup
+
 First, [create a new Dat site](/docs/using-beaker/publishing-with-beaker.html) using this [<i class="fa fa-file-archive-o"></i> template.zip](/docs/tutorials/template.zip). In `js/index.js`, add the following code. We’ll use the API to read about the current site.
 
 <figcaption class="code">js/index.js</figcaption>
@@ -16,6 +18,8 @@ async function main () {
   var archive = new DatArchive(window.location.toString())
 }
 ```
+
+## readdir
 
 Let’s first list the files in the site. Add this to the end of main:
 
@@ -47,7 +51,11 @@ Now you should see this:
 <figcaption>The output of archive.readdir('/', {recursive: true})</figcaption>
 </figure>
 
-The `recursive` option is much more efficient than manually recursing the tree. Now let’s read a file. Add this to the end of your main function:
+The `recursive` option is much more efficient than manually recursing the tree.
+
+## readFile (string)
+
+Now let’s read a file. Add this to the end of your main function:
 
 <figcaption class="code">js/index.js</figcaption>
 ```js
@@ -61,6 +69,8 @@ Reload the page and you should see this:
 <img src="/img/docs/tut-read-site-files/readfile.png" >
 <figcaption>The output of archive.readFile('/js/index.js')</figcaption>
 </figure>
+
+## readFile (binary)
 
 What if we wanted to read a binary file? Let’s do that to add a copy of the image to the page. Add this to the end of your main function:
 
@@ -79,6 +89,8 @@ Reload the page and you should see this:
 <figcaption>The duplicated image</figcaption>
 </figure>
 
+## stat
+
 It's useful to see the size, creation time, and modify time of a file. You can get that information with `stat`. Add this to the end of main:
 
 <figcaption class="code">js/index.js</figcaption>
@@ -96,6 +108,8 @@ Reload the page and you should see this:
 
 The output is made to mimic the output of node.js’ stat() call. The attributes you’ll mostly be interested in are `size`, `mtime`, and `ctime`. Note, however, that mtime and ctime aren’t verified and they could be wrong!
 
+## timeout
+
 One last thing: suppose you wanted to read a file in a Dat which the user will have to download first. There’s a chance that the Dat won’t be found, either because the network is down, or because the Dat isn’t being hosted by anybody.
 
 To deal with this, Beaker sets a default timeout of 5 seconds. You can increase it, like so:
@@ -110,6 +124,8 @@ var beakerPng = await dat.readFile('/img/beaker.png', {
 ```
 
 Or, you can disable the timeout altogether by setting timeout to `false`.
+
+## Summary
 
 For review, here is our final `js/index.js`:
 

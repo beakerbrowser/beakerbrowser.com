@@ -32,6 +32,8 @@ You should see this appear in your devtools console:
 <figcaption>The output of DatArchive.create()</figcaption>
 </figure>
 
+## Setup
+
 We now have a Dat which our site can modify. In `js/index.js`, add the following code. This will create an instance of the Dat we just created.
 
 <figcaption class="code">js/index.js</figcaption>
@@ -53,6 +55,8 @@ Refresh the page, and you should see this in your devtools:
 <figcaption>The output of archive.readdir('/')</figcaption>
 </figure>
 
+## mkdir
+
 As you can see, the archive is empty. Let’s change that by adding a folder. Add the following snippet to the end of your main function:
 
 <figcaption class="code">js/index.js</figcaption>
@@ -68,18 +72,13 @@ try {
 If you refresh the page, you should see this:
 
 <figure>
-<img src="/img/docs/tut-write-site-files/mkdir-success.png" >
-<figcaption>The output of archive.mkdir('/stuff') on first load</figcaption>
+<img src="/img/docs/tut-write-site-files/mkdir.png" >
+<figcaption>The output of archive.mkdir('/stuff')</figcaption>
 </figure>
 
-If you refresh the page again, you should see this:
+## writeFile (string)
 
-<figure>
-<img src="/img/docs/tut-write-site-files/mkdir-failure.png" >
-<figcaption>The output of archive.mkdir('/stuff') on second load</figcaption>
-</figure>
-
-This is expected. After creating the folder, you can’t create it again. Now let’s add a file. Add this to the end of your main function:
+Now let’s add a file. Add this to the end of your main function:
 
 <figcaption class="code">js/index.js</figcaption>
 ```js
@@ -100,6 +99,8 @@ If you open that URL, you’ll see this:
 <img src="/img/docs/tut-write-site-files/writefile-view.png" >
 <figcaption>The output of hello.txt</figcaption>
 </figure>
+
+## writeFile (binary)
 
 Now let’s try a binary file. Add this to your main function:
 
@@ -124,6 +125,8 @@ If you open that URL, you’ll see this:
 <img src="/img/docs/tut-write-site-files/writefile2-view.png" >
 <figcaption>The output of logo.png</figcaption>
 </figure>
+
+## Summary
 
 For review, here is our final `js/index.js`:
 
