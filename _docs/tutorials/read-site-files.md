@@ -5,7 +5,7 @@ sectionTitle: Tutorials
 order: 6
 ---
 
-The [DatArchive API](/docs/apis/dat.html) provides a simple set of APIs to read files and directories. After instantiating an archive instance, you can call stat(), readdir(), and readFile().
+The [DatArchive API](/docs/apis/dat.html) provides a simple set of APIs to read files and directories. After instantiating an archive instance, you can call `stat()`, `readdir()`, and `readFile()`.
 
 First, [create a new Dat site](/docs/using-beaker/publishing-with-beaker.html) using this [<i class="fa fa-file-archive-o"></i> template.zip](/docs/tutorials/template.zip). In `js/index.js`, add the following code. We’ll use the API to read about the current site.
 
