@@ -179,6 +179,14 @@
       padding-top: 3em;
       overflow: hidden;
 
+      img {
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+
+      img[data-src] {
+        opacity: 0;
+      }
 
       img,
       video {

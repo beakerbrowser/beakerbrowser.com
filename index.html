@@ -86,7 +86,7 @@ layout: default
               Sorry, your browser does not support the HTML video tag.
             </video>
           {% else %}
-            <img id="{{ ss.id }}" src="{{ ss.src }}"/>
+            <img id="{{ ss.id }}" data-src="{{ ss.src }}"/>
           {% endif %}
           <div class="desc">{{ ss.desc }}</div>
         </div>
@@ -172,21 +172,21 @@ layout: default
       <h2 class="videos__title">Videos</h2>
       <div class="videos__list">
         <a href="https://www.youtube.com/watch?v=pi-kreA52oI" target="_blank" rel="noopener">
-          <img src="/img/ss/talk-webconf.png" width="175" height="98">
+          <img data-src="/img/ss/talk-webconf.png" width="175" height="98">
           <span>The Distributed Web</span>
         </a>
 
         <a href="https://www.youtube.com/watch?v=hBsJskcGIsA" target="_blank" rel="noopener">
-          <img src="/img/ss/demo-bkr.png" width="175" height="98">
+          <img data-src="/img/ss/demo-bkr.jpg" width="175" height="98">
           <span>Using the bkr CLI</span>
         </a>
 
         <a href="https://www.youtube.com/watch?v=2qQyhQCaMiY" target="_blank" rel="noopener">
-          <img src="/img/ss/demo-fork-dat.png" width="175" height="98">
-          <span>Forking Dats in Beaker</span>
+          <img data-src="/img/ss/demo-fork-dat.jpg" width="175" height="98">
+          <span>Forking Dats in Beaker</span>n
         </a>
         <a href="https://www.youtube.com/watch?v=xcCNAAo8X8E" target="_blank" rel="noopener">
-          <img src="/img/ss/demo-live-reloading.png" width="175" height="98">
+          <img data-src="/img/ss/demo-live-reloading.jpg" width="175" height="98">
           <span>Live Reloading in Beaker</span>
         </a>
       </div>
@@ -204,7 +204,7 @@ layout: default
           <a href="https://twitter.com/beakerbrowser">@BeakerBrowser</a>!
         </q>
         <div class="wrapper">
-          <img class="testimonial__avatar" src="/img/webtorrentapp.jpg" />
+          <img class="testimonial__avatar" data-src="/img/webtorrentapp.jpg" />
           <span>
             <a class="testimonial__link"
                href="https://twitter.com/WebTorrentApp/status/814577481273528320">
@@ -222,7 +222,7 @@ layout: default
           are going to be huge in 2017.
         </q>
         <div class="wrapper">
-          <img class="testimonial__avatar" src="/img/jermolene.jpg" />
+          <img class="testimonial__avatar" data-src="/img/jermolene.jpg" />
           <span>
             <a class="testimonial__link"
               href="https://twitter.com/Jermolene/status/811582543107592192">
@@ -239,7 +239,7 @@ layout: default
           to watch.
         </q>
         <div class="wrapper">
-          <img class="testimonial__avatar" src="/img/rauchg.jpg" />
+          <img class="testimonial__avatar" data-src="/img/rauchg.jpg" />
           <span>
             <a class="testimonial__link"
                href="https://twitter.com/rauchg/status/816361204721385472">
@@ -267,6 +267,14 @@ layout: default
   </div>
   <div class="divider"></div>
 </div>
+<script>
+[].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+  img.setAttribute('src', img.getAttribute('data-src'))
+  img.onload = function() {
+    img.removeAttribute('data-src')
+  }
+})
+</script>
 <script src="/js/screenshots.js"></script>
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
