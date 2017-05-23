@@ -1,0 +1,17 @@
+figure {
+  @extend %rounded;
+  display: table; // this is, sadly, the best way to get centering. ask prf.
+  border: 1px solid $gray--mid;
+  margin: 0 auto 2em;
+
+  img {
+    display: block;
+  }
+
+  figcaption {
+    text-align: center;
+    border-top: 1px solid $gray--mid;
+    padding: 2px 0;
+    font-size: 0.8rem;
+  }
+}
