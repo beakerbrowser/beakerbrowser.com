@@ -101,23 +101,16 @@ order: 1
       <h2>Recent updates</h2>
       <ul class="updates-list">
         <li>
-          <a href="/">
-
+          <a href="https://groups.google.com/forum/#!topic/beaker-browser/zDRrk194bbM">Beaker v0.7 pre-release</a>
+        </li>
+        <li>
+          <a href="https://datproject.org/blog/2016-12-18-p2p-reader-privacy">
+            Reader privacy on the peer-to-peer Web
           </a>
         </li>
         <li>
-          <a href="/">
-
-          </a>
-        </li>
-        <li>
-          <a href="/">
-
-          </a>
-        </li>
-        <li>
-          <a href="/">
-
+          <a href="https://pfrazee.github.io/blog/achieving-scale">
+            Achieving scale in the decentralized Web
           </a>
         </li>
       </ul>
