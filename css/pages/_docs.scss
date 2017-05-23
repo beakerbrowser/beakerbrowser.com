@@ -178,13 +178,7 @@
     }
 
     pre {
-      margin-bottom: 1.5rem;
-      border: 1px solid $gray--mid;
-      padding: 1rem;
-      border-radius: 3px;
-      background: transparentize($gray--light, .65);
-      white-space: pre-wrap;
-      word-wrap: break-word;
+      @extend %code-block;
     }
 
     blockquote {
@@ -194,6 +188,19 @@
       color: $text--light-bg-muted;
       font-style: italic;
       font-size: 1rem;
+    }
+
+    figcaption.code {
+      border: 1px solid $gray--mid;
+      border-bottom: 0;
+      border-radius: 3px 3px 0 0;
+      background: $gray--light;
+      padding: 3px 7px 2px;
+      font-size: 12px;
+      color: mix($black, $white, 45%);
+    }
+    figcaption.code + .highlighter-rouge pre {
+      border-radius: 0 0 3px 3px;
     }
   }
 

@@ -1,13 +1,11 @@
 %code-block {
-  background: $gray--light;
-  border: 1px solid shade($gray--light, 7%);
-  padding: 1em;
-  white-space: pre;
-  overflow: auto;
-
-  code {
-    white-space: pre;
-  }
+  margin-bottom: 1.5rem;
+  border: 1px solid $gray--mid;
+  padding: 1rem;
+  border-radius: 3px;
+  background: transparentize($gray--light, .65);
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 .highlight .hll { background-color: #ffffcc }
