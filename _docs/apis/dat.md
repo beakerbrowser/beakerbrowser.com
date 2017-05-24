@@ -9,11 +9,10 @@ order: 3
  Read and write versioned files to sites on the user’s local hard drive, and share the sites over the network.
 </p>
 
-
 **Note**
 
-- Only apps served over dat:// are able to access this API.
-- <i class="fa fa-flask"></i> This API is under development and subject to change.
+- Only apps served over `dat://` are able to access this API.
+- <i class="fa fa-flask"></i> Indicates that this API is under development and subject to change.
 
 ---
 
