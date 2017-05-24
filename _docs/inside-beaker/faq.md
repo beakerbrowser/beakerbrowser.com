@@ -7,7 +7,7 @@ order: 2
 
 
 Is your question not answered here?
-**[Open an issue](https://github.com/beakerbrowser/beakerbrowser.com)** and let us know.
+[Open an issue](https://github.com/beakerbrowser/beakerbrowser.com) and let us know.
 
 ### What are Dat archives?
 
