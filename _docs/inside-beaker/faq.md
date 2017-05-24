@@ -11,9 +11,8 @@ Is your question not answered here?
 
 ### What are Dat archives?
 
-Dat Archives are bundles of files that are shared in a Peer-to-Peer network.
-They are similar to Torrents, except that they are changeable, versioned, and privately shareable.
-In Beaker, they act as web-sites.
+Dat Archives are bundles of files that are shared in a peer-to-peer network.
+They are similar to Torrents, except that they are changeable, versioned, and privately shareable. In Beaker, they act as websites.
 
 [You can read more about the Dat protocol here.](/docs/inside-beaker/dat-files-protocol.html)
 
