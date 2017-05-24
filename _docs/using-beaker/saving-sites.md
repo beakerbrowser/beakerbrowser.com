@@ -9,5 +9,5 @@ If you want to keep a site you visit, simply save it to your Library. This will 
 
 <figure>
 <img src="/img/docs/tour-save-to-library.png">
-<figcaption>Save a site to store it permanently and keep receiving updates</figcaption>
+<figcaption>Save a site to store it on your device and receive updates</figcaption>
 </figure>
