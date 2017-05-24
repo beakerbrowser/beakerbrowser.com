@@ -17,7 +17,7 @@ order: 1
     <th>Linux:</th>
     <td>
       <i class="fa fa-linux"></i>
-      <a href="TODO">Download the TODO</a>
+      <a href="TODO">Build from source</a>
     </td>
   </tr>
   <tr>
