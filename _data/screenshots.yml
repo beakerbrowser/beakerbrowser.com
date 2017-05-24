@@ -3,7 +3,7 @@
   desc:
     "<p>Your files are hosted on a peer-to-peer network, so you can publish
      without depending on a third-party server.</p><p>Visitors to your site help
-     rehost your files, which means you don't need to pay for a server."
+     rehost your files, which offloads the cost of bandwidth for popular sites.</p>"
   orientation: left
 - src: /img/ss/secret-sharing.jpg
   title: "Share files secretly"
