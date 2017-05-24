@@ -24,8 +24,11 @@ Like this:
 dat://54f74fe89d7779946343ec6db9618631e4dbf43bece2a125d0099103741963c9/
 ```
 
-They work just like regular URLs, except that the "hostname" is a 64-character hex number.
-You can reference specific files by putting the path at the end.
+They work just like regular URLs, except that the "hostname" is a 64-character hex number. You can reference specific files by putting the path at the end:
+
+```
+dat://54f74fe89d7779946343ec6db9618631e4dbf43bece2a125d0099103741963c9/index.html
+```
 
 ### Can I use DNS to create short URLs?
 
