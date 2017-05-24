@@ -72,7 +72,7 @@ order: 1
 
 <div>
 <h3>Dat files API</h3>
-<p>Beaker provides a complete Web API for reading, writing, and watching Dats from within a site. Only sites hosted over the dat:// protocol can access the API. No permission is currently required to read Dats, but permission is required to write. (Reads may be permissioned in the future, depending on their potential for abuse.)</p>
+<p>Beaker provides a complete Web API for reading, writing, and watching Dats from within a site. Only sites hosted over the <code>dat://</code> protocol can access the API. No permission is currently required to read Dats, but permission is required to write. (Reads may be permissioned in the future, depending on their potential for abuse.)</p>
 </div>
 
 </div>
