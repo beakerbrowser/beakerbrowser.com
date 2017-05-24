@@ -57,7 +57,7 @@ order: 1
 
 <div>
 <h3>Dat staging area</h3>
-<p>Like Git, Beaker maintains a “staging area” for each Dat the user creates or saves. This staging area allows the user to make local changes to the Dat before publishing. In addition to helping prevent changes from accidentally being published, this saves bandwidth, processing time, and disk space. At any point, the user can either “commit” the changes to the Dat, or “revert” to the last committed stage. These concepts apply to the Web APIs as well.</p>
+<p>Like Git, Beaker maintains a “staging area” for each Dat the user creates or saves. This staging area allows the user to make local changes to the Dat before publishing. In addition to helping prevent changes from accidentally being published, this saves bandwidth, processing time, and disk space. At any point, the user can either “commit” the changes to the Dat, or “revert” to the last committed stage.</p>
 </div>
 
 <div>
