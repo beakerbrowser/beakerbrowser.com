@@ -9,7 +9,7 @@ One of Beaker’s most powerful features comes from the Dat protocol’s approac
 
 **Only users that possess a Dat URL can access its files.**
 
-To share files secretly, [create a new Dat](/docs/using-beaker/publishing-with-beaker.html) and use a private channel to send the URL to your intended recipients.
+To share files secretly, [create a new Dat](/docs/using-beaker/create-a-site.html) and use a private channel to send the URL to your intended recipients.
 
 After transferring the files, remove the Dat from your library. Removing a Dat doesn’t delete your local copy of the files; it just removes the archive from your Beaker, so that nobody else can download the site.
 

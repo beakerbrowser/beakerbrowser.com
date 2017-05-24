@@ -9,10 +9,16 @@ order: 5
 
 Every addition, deletion, and modification to your site is added to your site’s history log. You can review every change in the "History" section in your Library.
 
+<figure>
 <img src="/img/docs/tour-site-history.png">
+<figcaption>You can review every published change in the site history</figcaption>
+</figure>
 
 ## Site versions
 
-Each revision made to a site creates a new version of the site. You can view any version of a site by adding `+\${versionNumber}` to the end of the domain.
+Each revision made to a site creates a new version of the site. You can view any version of a site by adding `+n` to the end of the domain.
 
+<figure>
 <img src="/img/docs/tour-site-versions.png">
+<figcaption>Versions are specified as a <code>+n</code> to the end of the domain</figcaption>
+</figure>

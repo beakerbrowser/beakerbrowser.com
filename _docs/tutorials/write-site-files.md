@@ -7,7 +7,7 @@ order: 7
 
 The [DatArchive API](/docs/apis/dat.html) provides a simple set of APIs to write files and create directories. After instantiating an archive instance, you can call `mkdir()` and `writeFile()`.
 
-First, [create a new Dat site](/docs/using-beaker/publishing-with-beaker.html) using this [<i class="fa fa-file-archive-o"></i> template.zip](/docs/tutorials/template.zip). Open the site, then open its devtools and paste this code into the console:
+First, [create a new Dat site](/docs/using-beaker/create-a-site.html) using this [<i class="fa fa-file-archive-o"></i> template.zip](/docs/tutorials/template.zip). Open the site, then open its devtools and paste this code into the console:
 
 <figcaption class="code">snippet</figcaption>
 ```js

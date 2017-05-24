@@ -5,7 +5,7 @@ sectionTitle: Tutorials
 order: 2
 ---
 
-Because we’re huge fans of [Markdown](https://daringfireball.net/projects/markdown/syntax), we included Markdown rendering in Beaker. You can create a markdown site very easily. First, [create a new site](/docs/using-beaker/publishing-with-beaker.html). Then, add an `index.md`:
+Because we’re huge fans of [Markdown](https://daringfireball.net/projects/markdown/syntax), we included Markdown rendering in Beaker. You can create a markdown site very easily. First, [create a new site](/docs/using-beaker/create-a-site.html). Then, add an `index.md`:
 
 <figcaption class="code">/index.md</figcaption>
 ```

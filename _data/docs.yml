@@ -10,16 +10,20 @@ usingBeaker:
   children:
     - title: The peer-to-peer Web
       url: /docs/using-beaker/the-peer-to-peer-web.html
-    - title: Publishing with Beaker
-      url: /docs/using-beaker/publishing-with-beaker.html
-    - title: Managing your sites
-      url: /docs/using-beaker/managing-your-sites.html
-    - title: Saving sites you visit
+    - title: Creating a new Web site
+      url: /docs/using-beaker/create-a-site.html
+    - title: Adding files to a site
+      url: /docs/using-beaker/publishing-files.html    
+    - title: Beaker’s Library
+      url: /docs/using-beaker/library.html
+    - title: The staging area
+      url: /docs/using-beaker/staging-area.html
+    - title: Saving a site to your Library
       url: /docs/using-beaker/saving-sites.html
+    - title: Forking a site
+      url: /docs/using-beaker/forking-sites.html
     - title: History and versions
       url: /docs/using-beaker/history-and-versions.html
-    - title: Availability and reliability
-      url: /docs/using-beaker/availability-and-reliability.html
 webAPIs:
   title: Web APIs
   url: /docs/apis/
