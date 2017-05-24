@@ -11,10 +11,6 @@ order: 1
 }
 </style>
 
-<p class="doc-summary">
-  Learn how to write applications in Beaker.
-</p>
-    
 <div class="columns">
 
 <div>
