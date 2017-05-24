@@ -204,7 +204,7 @@ instance_methods:
     name: "writeFile"
     signature: "writeFile(path, data, opts?)"
     desc: |
-      Replaces the file's contents with `data` in the staging area.
+      Replaces the file’  s contents with `data` in the staging area.
       The promise will reject if there is already a directory at `path`, or if the containing directory-tree does not yet exist.
 
       The archive must be committed to make the file update permanent.
