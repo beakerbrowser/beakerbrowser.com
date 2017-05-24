@@ -5,7 +5,7 @@ sectionTitle: Using Beaker
 order: 3
 ---
 
-Every site you create or save has a folder. This is called the "staging area."
+Every site you create or save has a folder. This is called the “staging area.”
 
 You can review the state of the staging area in the library. Any time you add, delete, or modify the files in your site’s folder, that change will be tracked. From there, you can publish or revert the changes.
 
