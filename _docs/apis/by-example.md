@@ -71,7 +71,7 @@ try {
 ## Get the last-modified time of a file
 
 The `ctime` is the file creation-time, and `mtime` is the last-modified time.
-Note: the ctime and mtime may not be correct.
+Note: `ctime` and `mtime` can be edited by the file’s author and *may* be incorrect.
 
 ```js
 var st = await archive.stat('/hello.txt')
