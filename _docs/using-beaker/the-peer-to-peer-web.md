@@ -14,4 +14,4 @@ Peer-to-peer sites are just like any other Web site. But instead of being served
 <figcaption>Browsing to a peer-to-peer site shows the number of peers</figcaption>
 </figure>
 
-You can see how many peers are hosting the site’s files. When you navigate to a site, you’ll automatically share the files you download for a short period.
+You can see how many peers are hosting a site’s files. When you navigate to a site, you’ll automatically share the files you download for a short period.
