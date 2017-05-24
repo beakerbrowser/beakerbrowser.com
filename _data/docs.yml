@@ -31,7 +31,7 @@ webAPIs:
   url: /docs/apis/
   children:
     - title: Web APIs
-      url: /docs/apis/index.html
+      url: /docs/apis/
     - title: Web APIs by example
       url: /docs/apis/by-example.html
     - title: DatArchive API
