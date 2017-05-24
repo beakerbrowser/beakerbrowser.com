@@ -19,9 +19,8 @@ order: 4
 
 ## Network access
 
-By default, sites served over dat:// are not allowed to access the network.
-They can, however, request exceptions.
-This will generate a prompt, which the user can choose to accept or deny.
+By default, sites served over `dat://` are not allowed to access the network.
+They can, however, request exceptions. This will generate a prompt, which the user can choose to accept or deny.
 
 <img class="bordered" src="/img/screenshot-network-permission-request.png">
 

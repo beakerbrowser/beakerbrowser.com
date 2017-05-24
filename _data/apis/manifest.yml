@@ -28,4 +28,4 @@ attributes:
   -
     name: ".createdBy"
     desc: |
-      An object of {url:, title:} describing the application that created the archive.
+      An object of `{url:, title:}` describing the application that created the archive.
