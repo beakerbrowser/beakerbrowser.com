@@ -5,7 +5,7 @@ sectionTitle: Inside Beaker
 order: 4
 ---
 
-Beaker was started during an explosion of peer-to-peer protocol development in Spring 2016. A short list of those protocols includes [Bitcoin](https://bitcoin.org/), [Ethereum](https://www.ethereum.org/), [Namecoin](https://www.namecoin.org/), [BlockStack](https://blockstack.org/), [Zeronet](https://zeronet.io/), [IPFS](https://ipfs.io/), [Secure Scuttlebutt](https://www.scuttlebutt.nz/), [WebTorrent](https://webtorrent.io/), and [Dat](https://datproject.org/).
+Beaker was started in the Spring of 2016, following an explosion of peer-to-peer and decentralized protocol development. A short list of those protocols includes [Bitcoin](https://bitcoin.org/), [Ethereum](https://www.ethereum.org/), [Namecoin](https://www.namecoin.org/), [Blockstack](https://blockstack.org/), [Zeronet](https://zeronet.io/), [IPFS](https://ipfs.io/), [Secure Scuttlebutt](https://www.scuttlebutt.nz/), [WebTorrent](https://webtorrent.io/), and [Dat](https://datproject.org/).
 
 These protocols can be broadly categorized as either Blockchain Variants and BitTorrent Variants.
 
