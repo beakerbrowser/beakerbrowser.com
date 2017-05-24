@@ -78,17 +78,12 @@ layout: default
 <div class="section section--screenshots">
     {% for ss in site.data.screenshots %}
       <div class="screenshot-container {{ ss.orientation }}">
-        <h2 class="title">{{ ss.title }}</h2>
         <div class="container">
-          {% if ss.src == '/img/ss/create-site.mp4' %}
-            <video autoplay loop>
-              <source src="{{ ss.src }}" type="video/mp4">
-              Sorry, your browser does not support the HTML video tag.
-            </video>
-          {% else %}
-            <img id="{{ ss.id }}" data-src="{{ ss.src }}"/>
-          {% endif %}
-          <div class="desc">{{ ss.desc }}</div>
+          <img id="{{ ss.id }}" data-src="{{ ss.src }}"/>
+          <div>
+            <h2 class="title">{{ ss.title }}</h2>
+            <div class="desc">{{ ss.desc }}</div>
+          </div>
         </div>
       </div>
     {% endfor %}

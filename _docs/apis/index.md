@@ -39,7 +39,7 @@ order: 1
   </li>
   <li>
     <a href="/docs/apis/manifest.html">Dat.json site manifest</a>
-  </li>    
+  </li>
 </ul>
 </div>
 
