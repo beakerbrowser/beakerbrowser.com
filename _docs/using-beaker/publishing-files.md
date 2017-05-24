@@ -24,8 +24,8 @@ Use the [staging area](./staging-area.html) in the library to review your change
 <figure>
   <img class="screenshot" src="/img/docs/tour-new-site-publish3.png"/>
   <figcaption>
-    Back in the library page, review your changes, then click "Publish".
+    Back in the Library, review your changes, then click "Publish".
   </figcaption>
 </figure>
 
-After you click "Publish," the users who know your site’s URL can view the files.
+After you click "Publish," the users who know your site’s URL can view its files.
