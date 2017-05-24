@@ -16,15 +16,14 @@ Sometimes it’s important to make sure your site is always available. The solut
 
 From the README:
 
-> A Web server for Dat and HTTPS.
-
+> A Web server for Dat and HTTPS:
 > - Serve sites over Dat at dat://{subdomain}.{yourdomain.com}.
 > - Rehost those sites over https://{subdomain}.{yourdomain.com}.
 > - Get TLS certs automatically with Let's Encrypt.
 > - (Optionally) Auto-redirect from https -> dat.
 > - Metrics dashboard
 
-Using DatHTTPD should be very simple for an experienced admin. Create a host your Dats with Beaker, or some other Dat application. Then, on your server, create a config file at `~/.dathttpd.yml`.
+Using DatHTTPD should be very simple for an experienced admin. Host your Dats with Beaker, or some other Dat application. Then, on your server, create a config file at `~/.dathttpd.yml`.
 
 <figcaption class="code">~/.dathttpd.yml</figcaption>
 ```yml
@@ -53,7 +52,7 @@ Then run
 ~$ dathttpd
 ```
 
-To daemonify the server in Debian-based systems, stop the dathttpd process and then run:
+To daemonify the server in Debian-based systems, stop the `dathttpd` process and then run:
 
 <figcaption class="code">bash</figcaption>
 ```
@@ -67,4 +66,4 @@ To daemonify the server in Debian-based systems, stop the dathttpd process and t
 ~$ sudo systemctl start dathttpd
 ```
 
-[Read the DatHTTPD README](https://github.com/beakerbrowser/dathttpd) for more information.
+See the [DatHTTPD README](https://github.com/beakerbrowser/dathttpd) for more information.
