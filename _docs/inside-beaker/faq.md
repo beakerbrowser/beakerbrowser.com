@@ -38,10 +38,8 @@ You can [with the DatHTTPD server](https://github.com/beakerbrowser/dathttpd).
 ### Is the network anonymous?
 
 **No!**
-This is very important to understand:
-If any other user has the link to a Dat site, they'll be able to see
-your requests for it, and they'll know your IP.
-Browsing Dat sites is therefore not anonymous.
+
+This is very important to understand: If any other user has the link to a Dat site, they'll be able to see your requests for it, and they'll know your IP address. Browsing Dat sites is therefore not anonymous.
 
 ### Is the Dat Protocol encrypted?
 
