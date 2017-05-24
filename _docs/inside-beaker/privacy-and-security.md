@@ -12,9 +12,7 @@ Beaker is designed to give better privacy where it counts. This involves a trade
 
 ## Privacy where it counts
 
-Beaker can’t yet protect browsing habits, but it provides much better protection of the user’s data, including messages, documents, and contacts. Compared to current Web services, which store all user data in the clear for the operators to read, we believe this is a huge improvement.
-
-We expect browsing privacy will be improved in the future with private peers.
+Beaker can’t yet protect browsing habits, but it provides much better protection of the user’s data, including messages, documents, and contacts. Compared to current Web services, which store all user data in the clear for the operators to read, Beaker stores user content on the device, and provides encrypted peer-to-peer transmission of the files.
 
 ## Strict sandbox
 
