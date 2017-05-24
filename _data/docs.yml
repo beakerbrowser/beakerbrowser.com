@@ -52,6 +52,8 @@ insideBeaker:
       url: /docs/inside-beaker/thick-applications.html
     - title: Other technologies
       url: /docs/inside-beaker/other-technologies.html
+    - title: Frequently Asked Questions
+      url: /docs/inside-beaker/faq.html
     - title: Mission
       url: /docs/inside-beaker/mission.html
     - title: Team
