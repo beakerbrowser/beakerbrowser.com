@@ -11,7 +11,7 @@ order: 1
 }
 </style>
 
-<div class="columns">
+<div class="columns two">
 
 <div>
 <h3>Tutorials</h3>
@@ -43,7 +43,7 @@ order: 1
 
 ## Core concepts
 
-<div class="columns">
+<div class="columns two">
 
 <div>
 <h3>Peer-to-peer hosting</h3>
