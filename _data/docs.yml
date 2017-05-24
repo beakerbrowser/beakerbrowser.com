@@ -24,6 +24,8 @@ usingBeaker:
       url: /docs/using-beaker/forking-sites.html
     - title: History and versions
       url: /docs/using-beaker/history-and-versions.html
+    - title: Troubleshooting
+      url: /docs/using-beaker/troubleshooting.html
 webAPIs:
   title: Web APIs
   url: /docs/apis/
