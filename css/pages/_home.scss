@@ -263,6 +263,10 @@
   &--screenshots {
     padding: 0;
 
+    a {
+      @extend %link;
+    }
+
     .screenshot-container {
       border-bottom: 1px solid $gray--mid;
       padding-top: 3em;
