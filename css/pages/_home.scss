@@ -350,6 +350,11 @@
 
         img {
           margin: initial;
+          order: 1;
+
+          + div {
+            order: 2;
+          }
         }
 
         .desc {
@@ -405,11 +410,6 @@
 
         img {
           margin: initial;
-          order: 1;
-
-          + div {
-            order: 2;
-          }
         }
 
         .desc {
@@ -682,10 +682,8 @@
     }
 
     .logo {
-      img {
-        height: 70px;
-        margin-right: 6em;
-      }
+      height: 70px;
+      margin-right: 6em;
     }
 
     h3 {
@@ -704,7 +702,7 @@
 
 .posts {
   @extend %grid-5;
-  margin-bottom: 3em;
+  margin-bottom: 1rem;
 
   &__title {
     @extend %col-1-5;
@@ -743,35 +741,6 @@
 
   a {
     @extend %link;
-  }
-}
-
-.videos {
-  @extend %grid-5;
-
-  a {
-    margin: 0 1em 1em 0;
-  }
-
-  &__title {
-    @extend %col-1-5;
-    margin-bottom: 1.5em;
-  }
-
-  &__list {
-    @extend %col-4-5;
-    @extend %flex-container;
-
-    span {
-      display: block;
-    }
-
-    a {
-      @extend %link;
-      display: inline-block;
-      flex-basis: 10%;
-      font-size: .9rem;
-    }
   }
 }
 

@@ -6,6 +6,11 @@
   background: transparentize($gray--light, .65);
   white-space: pre-wrap;
   word-wrap: break-word;
+
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
 }
 
 .highlight .hll { background-color: #ffffcc }
