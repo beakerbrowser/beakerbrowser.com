@@ -89,6 +89,94 @@ layout: default
     {% endfor %}
 </div>
 
+<div class="section section--mission">
+  <div class="icons">
+  <i class="fa fa-opera"></i>
+  <i class="fa fa-firefox"></i>
+  <i class="fa fa-safari"></i>
+  <i class="fa fa-chrome"></i>
+  <i class="fa fa-edge"></i>
+  </div>
+  <div class="container">
+    <h2>Mission</h2>
+    <p>
+      Beaker is an experiment designed to demonstrate the features we believe the Web platform should adopt. Our goal is not to create a “new Web,” but rather to improve the Web we have. We don’t want to replace existing browsers; we want to change them.
+    </p>
+
+
+  </div>
+</div>
+
+<div class="section section--apis">
+  <div class="container">
+    <div class="info">
+      <h2>Beaker’s Web APIs</h2>
+      <p>
+        Beaker provides a set of Web APIs for reading, writing, and watching Dat archives from within a site.
+      </p>
+
+      <span>
+        <a href="/docs/apis/">API documentation</a>
+        <i class="fa fa-angle-right"></i>
+      </span>
+    </div>
+
+{% highlight js %}
+var archive = await DatArchive.create({
+  title: 'My Site',
+  description: 'My peer-to-peer website'
+})
+await archive.writeFile('/hello.txt', 'hello, world!')
+await archive.commit()
+
+console.log(archive.url)
+// => dat://da2ce4..dc/
+{% endhighlight %}
+    </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section section--use-cases">
+  <div class="container">
+    <a href="/docs/tutorials/create-a-blog.html" class="use-case">
+      <h2>
+        <i class="fa fa-feed"></i>
+        Create a peer-to-peer blog
+      </h2>
+      <p>
+        Creating a peer-to-peer blog with Beaker is
+        simple, especially if you already have a static site! Beaker
+        manages your changes in a staging area, and files are hosted from your computer.
+      </p>
+      <span class="more">Learn more <i class="fa fa-angle-right"></i></span>
+    </a>
+
+    <a href="/docs/tutorials/publish-software-securely.html" class="use-case">
+      <h2>
+        <i class="fa fa-code"></i>
+        Publish software securely
+      </h2>
+      <p>
+        One of the Dat protocol's most powerful features is file integrity guarantees. It also maintains a verifiable log of updates, so distributing your software's versions is built-in to the protocol.
+      </p>
+      <span class="more">Learn more <i class="fa fa-angle-right"></i></span>
+    </a>
+
+    <a href="/docs/tutorials/share-files-secretly.html" class="use-case">
+      <h2>
+        <i class="fa fa-link"></i>
+        Share files secretly
+      </h2>
+      <p>
+        Files published with the Dat protocol are secret by default — only people who know the site’s URL can decrypt and download its files, and all traffic is encrypted while in transit.
+      </p>
+      <span class="more">Learn more <i class="fa fa-angle-right"></i></span>
+    </a>
+  </div>
+</div>
+
 <div class="section section--faq">
   <div class="container">
     <h2>FAQ</h2>
