@@ -23,5 +23,5 @@ After you click "Create site," Beaker will open the library view, where you can 
 
 <figure>
 <img src="/img/docs/tour-new-site-in-library.png">
-<figcaption>The library is where you can manage and modify your sites</figcaption>
+<figcaption><code>beaker://library</code> is where you manage and modify your sites</figcaption>
 </figure>
