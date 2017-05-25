@@ -56,35 +56,35 @@ Configuration file: /Users/paulfrazee/my-awesome-p2p-blog/_config.yml
 Now, let’s create the site in Beaker. Open the dropdown menu in Beaker, and select “New site”:
 
 <figure>
-<img src="/img/docs/tut-create-a-blog/new-site.png" >
+<img src="/img/docs/tut-create-a-blog/new-site.jpg" >
 <figcaption>Click "New site" in the dropdown menu</figcaption>
 </figure>
 
 Fill in the title and description of your blog:
 
 <figure>
-<img src="/img/docs/tut-create-a-blog/site-details.png" >
+<img src="/img/docs/tut-create-a-blog/site-details.jpg" >
 <figcaption>Set the title and description</figcaption>
 </figure>
 
 Click "Create site" and Beaker will take you to the library page for your site:
 
 <figure>
-<img src="/img/docs/tut-create-a-blog/library-page.png" >
+<img src="/img/docs/tut-create-a-blog/library-page.jpg">
 <figcaption>Your new site in your Library</figcaption>
 </figure>
 
 By default, Beaker creates a new folder for you under the `~/Sites` directory. In this case, we want to pick our own folder, because we want to use the `./_sites` folder within our Jekyll blog. To select the `_site` directory, click "Change folder" in the Library dropdown menu.
 
 <figure>
-<img src="/img/docs/tut-create-a-blog/change-folder.png" >
+<img src="/img/docs/tut-create-a-blog/change-folder.jpg" >
 <figcaption>Select "Change folder" in the library dropdown</figcaption>
 </figure>
 
 For my blog, I set the folder to `~/my-awesome-p2p-blog/_site`:
 
 <figure>
-<img src="/img/docs/tut-create-a-blog/select-folder.png" >
+<img src="/img/docs/tut-create-a-blog/select-folder.jpg" >
 <figcaption>Choose ~/my-awesome-p2p-blog/_site</figcaption>
 </figure>
 
@@ -123,7 +123,7 @@ This is the staging area. It shows all the local changes that you’ve made, but
 Click “Publish,” and the changes will be committed to your site.
 
 <figure>
-<img src="/img/docs/tut-create-a-blog/published.png" >
+<img src="/img/docs/tut-create-a-blog/published.jpg" >
 <figcaption>Click “Publish” and the site is ready</figcaption>
 </figure>
 
@@ -132,7 +132,7 @@ Now you can share the URL to anybody using Beaker, and keep your computer online
 One last tip: once you have `jekyll build --watch` running, Jekyll will automatically generate a new version of your site when you make updates. If you want Beaker to automatically reload the page too, you can turn on Live reloading:
 
 <figure>
-<img src="/img/docs/tut-create-a-blog/live-reloading.png" >
+<img src="/img/docs/tut-create-a-blog/live-reloading.jpg" >
 <figcaption>Turn on live reloading</figcaption>
 </figure>
 
