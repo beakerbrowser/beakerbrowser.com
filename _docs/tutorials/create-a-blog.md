@@ -95,7 +95,7 @@ You’ll see Beaker's staging area populate with the new changes immediately.
 <figcaption>The staging area shows unpublished changes</figcaption>
 </figure>
 
-We'll publish in a moment. First, let's click “View site” to how the site looks.
+We'll publish in a moment. First, let's click “View site” to see how the site looks.
 
 <figure>
 <img data-src="/img/docs/tut-create-a-blog/view-site.png">
