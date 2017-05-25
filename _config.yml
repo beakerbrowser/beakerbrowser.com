@@ -10,7 +10,9 @@ github_username:  pfrazee
 # Build settings
 markdown: kramdown
 theme: minima
+include: [".well-known"]
 exclude: ["node_modules"]
+keep_files: [".dat"]
 gems:
  - jekyll-redirect-from
  - octopress-minify-html
