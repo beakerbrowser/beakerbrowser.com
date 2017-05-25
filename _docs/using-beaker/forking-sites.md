@@ -10,6 +10,6 @@ If you want to create an editable copy of a site you visit, you can “fork” t
 Forked sites are given an entirely new URL, which you control.
 
 <figure>
-<img src="/img/docs/tour-fork.png">
+<img src="/img/docs/tour-fork.jpg">
 <figcaption>Fork a site to make a duplicate that you can publish to</figcaption>
 </figure>

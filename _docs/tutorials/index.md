@@ -91,7 +91,7 @@ For my blog, I set the folder to `~/my-awesome-p2p-blog/_site`:
 You’ll see Beaker's staging area populate with the new changes immediately.
 
 <figure>
-<img src="/img/docs/tut-create-a-blog/staging-area.png" >
+<img src="/img/docs/tut-create-a-blog/staging-area.jpg" >
 <figcaption>The staging area shows unpublished changes</figcaption>
 </figure>
 
@@ -114,7 +114,7 @@ Jekyll has a builtin command, `bundle exec jekyll serve`, for previewing your si
 There’s one last step before you can share your blog; you need to publish your files. Back in the Library page for your blog, you should see your changes listed:
 
 <figure>
-<img src="/img/docs/tut-create-a-blog/staging-area.png" >
+<img src="/img/docs/tut-create-a-blog/staging-area.jpg" >
 <figcaption>The staging area shows unpublished changes</figcaption>
 </figure>
 
