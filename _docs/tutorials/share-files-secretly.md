@@ -14,6 +14,6 @@ To share files secretly, [create a new Dat](/docs/using-beaker/create-a-site.htm
 After transferring the files, remove the Dat from your library. Removing a Dat doesn’t delete your local copy of the files; it just stops Beaker from hosting the files, so that nobody can download them.
 
 <figure>
-<img src="/img/docs/tour-share-site.jpg" >
+<img data-src="/img/docs/tour-share-site.jpg" >
 <figcaption>Give the Dat URL <em>only</em> to your recipients</figcaption>
 </figure>

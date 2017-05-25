@@ -33,7 +33,7 @@ archive.writeFile('/foo.txt', 'bar')
 You should see this appear in your console:
 
 <figure>
-<img src="/img/docs/tut-listen-for-file-changes/changed.png" >
+<img data-src="/img/docs/tut-listen-for-file-changes/changed.png" >
 <figcaption>The 'changed' event</figcaption>
 </figure>
 

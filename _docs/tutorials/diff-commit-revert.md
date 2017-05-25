@@ -19,7 +19,7 @@ console.log(await archive.diff())
 You should see this in your devtools console:
 
 <figure>
-<img src="/img/docs/tut-diff-commit-revert/diff.jpg" >
+<img data-src="/img/docs/tut-diff-commit-revert/diff.jpg" >
 <figcaption>The output of <code>archive.diff()</code></figcaption>
 </figure>
 
@@ -51,13 +51,13 @@ console.log(await archive.commit())
 Refresh the page and you should see this:
 
 <figure>
-<img src="/img/docs/tut-diff-commit-revert/diff.jpg" >
+<img data-src="/img/docs/tut-diff-commit-revert/diff.jpg" >
 <figcaption>The output of <code>archive.commit()</code> is the same as before</figcaption>
 </figure>
 
 The output is unchanged from `diff()`. That's because it describes the changes that were committed. You can confirm the commit by opening the target site in your library, and checking the history tab:
 
 <figure>
-<img src="/img/docs/tut-diff-commit-revert/history.jpg" >
+<img data-src="/img/docs/tut-diff-commit-revert/history.jpg" >
 <figcaption>The history of the target archive</figcaption>
 </figure>

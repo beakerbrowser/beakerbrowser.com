@@ -14,6 +14,6 @@ In Beaker, we use this to ensure that applications are securely distributed. How
 To do this, we suggest [Hosting the binaries outside of Beaker](/docs/tutorials/host-outside-of-beaker.html), perhaps using the [Dat CLI](https://github.com/datproject/dat) or [DatHTTPD](https://github.com/beakerbrowser/dathttpd). Using the latter, your users will be able to download either from Dat directly, or over HTTPS if they don’t need the added security.
 
 <figure>
-<img src="/img/docs/tour-site-history.jpg" >
+<img data-src="/img/docs/tour-site-history.jpg" >
 <figcaption>The Dat protocol keeps a full history and signs every update</figcaption>
 </figure>

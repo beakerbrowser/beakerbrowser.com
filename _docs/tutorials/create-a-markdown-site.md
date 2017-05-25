@@ -17,7 +17,7 @@ This is my **cool** markdown site!
 When you open the site, you'll see the markdown is rendered as html.
 
 <figure>
-<img src="/img/docs/tut-create-a-markdown-site/index.md.jpg" >
+<img data-src="/img/docs/tut-create-a-markdown-site/index.md.jpg" >
 <figcaption>The index.md will be rendered as html</figcaption>
 </figure>
 
@@ -43,7 +43,7 @@ For convenience, Beaker also supports a `/nav.md` file:
 The content of `/nav.md` is automatically inserted into each page to provide navigation.
 
 <figure>
-<img src="/img/docs/tut-create-a-markdown-site/with-nav.jpg" >
+<img data-src="/img/docs/tut-create-a-markdown-site/with-nav.jpg" >
 <figcaption>The index.md with a nav.md file</figcaption>
 </figure>
 
