@@ -1,11 +1,11 @@
 ---
-title: Creating a new Web site
+title: Creating a new website
 section: usingBeaker
 sectionTitle: Using Beaker
 order: 2
 ---
 
-With Beaker, you can publish your own peer-to-peer Web sites. Click the "New site" button in the dropdown menu.
+With Beaker, you can publish your own peer-to-peer websites. Click the "New site" button in the dropdown menu.
 
 <figure>
 <img src="/img/docs/tour-new-site.png">

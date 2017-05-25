@@ -67,7 +67,7 @@ order: 1
 
 <div>
 <h3>Hostless sandbox</h3>
-<p>Traditionally, Web sites can use Ajax to freely can freely contact their hosting server. However, Dat sites are served from the peer-to-peer swarm, not from a hosting server. Therefore there is no remote host attached to the domain, and all remote requests to non-Dat URLs require a request for permission.</p>
+<p>Traditionally, websites can use Ajax to freely can freely contact their hosting server. However, Dat sites are served from the peer-to-peer swarm, not from a hosting server. Therefore there is no remote host attached to the domain, and all remote requests to non-Dat URLs require a request for permission.</p>
 </div>
 
 <div>
