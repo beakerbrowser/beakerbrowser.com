@@ -17,11 +17,12 @@
 
     <!-- social woo woo -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@BeakerBrowser">
     <meta name="twitter:creator" content="@BeakerBrowser">
-    <meta name="twitter:title" content="Beaker | {{ page.title | default: "Peer-to-peer Web browser. No blockchain required." }}">
-    <meta name="twitter:description" content="{{ page.desc }}">
+    <meta name="og:title" content="Beaker | {{ page.title | default: "Peer-to-peer Web browser. No blockchain required." }}">
+    <meta name="og:description" content="{{ page.desc }}">
     {% if page.thumb %}
-    <meta name="twitter:image" content="{{ site.url }}/img/{{ page.thumb }}">
+    <meta name="og:image" content="{{ page.thumb }}">
     {% endif %}
 
   </head>
