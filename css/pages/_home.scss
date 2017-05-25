@@ -595,7 +595,7 @@
     border-bottom: 1px solid $gray--mid;
 
     @include respond-to(show-grid-2) {
-      padding-bottom: 1em;
+      padding-bottom: 2em;
     }
 
     ul {
@@ -628,6 +628,13 @@
       p {
         margin-bottom: 1.5em;
       }
+    }
+
+    .more {
+      @extend %link;
+      display: block;
+      width: 100%;
+      text-align: right;
     }
   }
 
