@@ -644,6 +644,7 @@
     color: $text--dark-bg;
     @extend %antialiased;
     @extend %shrink-text-phone;
+    font-weight: 500;
 
     .divider {
       margin: 4em auto 0 auto;
