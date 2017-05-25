@@ -138,7 +138,7 @@ order: 1
           <img class="icon" src="/img/favicon.png"/>
           <div class="info">
             <h3 class="title">
-              <a href="https://github.com/beakerbrowser/httpd">
+              <a href="https://github.com/beakerbrowser/dathttpd">
                 DatHTTPD
               </a>
             </h3>
