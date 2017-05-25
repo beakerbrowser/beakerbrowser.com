@@ -19,7 +19,7 @@ async function main () {
 }
 ```
 
-## readdir
+## `readdir`
 
 Let’s first list the files in the site. Add this to the end of main:
 
@@ -53,7 +53,7 @@ Now you should see this:
 
 The `recursive` option is much more efficient than manually recursing the tree.
 
-## readFile (string)
+## `readFile (string)`
 
 Now let’s read a file. Add this to the end of your main function:
 
@@ -70,7 +70,7 @@ Reload the page and you should see this:
 <figcaption>The output of archive.readFile('/js/index.js')</figcaption>
 </figure>
 
-## readFile (binary)
+## `readFile (binary)`
 
 What if we wanted to read a binary file? Let’s do that to add a copy of the image to the page. Add this to the end of your main function:
 
@@ -89,7 +89,7 @@ Reload the page and you should see this:
 <figcaption>The duplicated image</figcaption>
 </figure>
 
-## stat
+## `stat`
 
 It's useful to see the size, creation time, and modify time of a file. You can get that information with `stat`. Add this to the end of main:
 
@@ -108,7 +108,7 @@ Reload the page and you should see this:
 
 The output is made to mimic the output of node.js’ stat() call. The attributes you’ll mostly be interested in are `size`, `mtime`, and `ctime`. Note, however, that mtime and ctime aren’t verified and they could be wrong!
 
-## timeout
+## `timeout`
 
 One last thing: suppose you wanted to read a file in a Dat which the user will have to download first. There’s a chance that the Dat won’t be found, either because the network is down, or because the Dat isn’t being hosted by anybody.
 
@@ -148,7 +148,7 @@ async function main () {
   var img = document.createElement('img')
   img.src = 'data:image/png;base64,'+beakerPng
   document.body.appendChild(img)
-    
+
   // get this file's metadata
   var indexJsStat = await archive.stat('/js/index.js')
   console.log(indexJsStat)
