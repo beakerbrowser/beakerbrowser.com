@@ -135,6 +135,20 @@ order: 1
           </div>
         </li>
         <li>
+          <img class="icon" src="/img/favicon.png"/>
+          <div class="info">
+            <h3 class="title">
+              <a href="https://github.com/beakerbrowser/httpd">
+                DatHTTPD
+              </a>
+            </h3>
+            <p class="desc">
+              Serve your Dat site and rehost it over HTTPS.
+            </p>
+          </div>
+        </li>
+       <!-- TODO: remove until Hashbase is out of beta
+        <li>
           <img class="icon" src="/img/hashbase-favicon-32x32.png"/>
           <div class="info">
             <h3 class="title">
@@ -147,6 +161,7 @@ order: 1
             </p>
           </div>
         </li>
+ -->
       </ul>
     </div>
   </div>
