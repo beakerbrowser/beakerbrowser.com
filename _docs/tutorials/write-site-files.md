@@ -21,14 +21,14 @@ DatArchive.create({title: 'Write site files tutorial'})
 When you run this snippet, you’ll see the following dialog appear. Click “Create site”:
 
 <figure>
-<img src="/img/docs/tut-write-site-files/modal.png" >
+<img src="/img/docs/tut-write-site-files/modal.jpg" >
 <figcaption>Click "Create site"</figcaption>
 </figure>
 
 You should see this appear in your devtools console:
 
 <figure>
-<img src="/img/docs/tut-write-site-files/create-site.png" >
+<img src="/img/docs/tut-write-site-files/create-site.jpg" >
 <figcaption>The output of <code>DatArchive.create()</code></figcaption>
 </figure>
 
@@ -51,7 +51,7 @@ async function main () {
 Refresh the page, and you should see an empty array logged in your console:
 
 <figure>
-<img src="/img/docs/tut-write-site-files/readdir.png" >
+<img src="/img/docs/tut-write-site-files/readdir.jpg" >
 <figcaption>The output of <code>archive.readdir('/')</code></figcaption>
 </figure>
 
@@ -72,7 +72,7 @@ try {
 If you refresh the page, you should see this:
 
 <figure>
-<img src="/img/docs/tut-write-site-files/mkdir.png" >
+<img src="/img/docs/tut-write-site-files/mkdir.jpg" >
 <figcaption>The output of <code>archive.mkdir('/stuff')</code></figcaption>
 </figure>
 
@@ -89,7 +89,7 @@ console.log('Wrote', archive.url + '/hello.txt')
 If you refresh the page, you should see something like this:
 
 <figure>
-<img src="/img/docs/tut-write-site-files/writefile.png" >
+<img src="/img/docs/tut-write-site-files/writefile.jpg" >
 <figcaption>The output of <code>archive.writeFile()</code></figcaption>
 </figure>
 
@@ -115,14 +115,14 @@ console.log('Wrote', archive.url + '/beaker.png')
 If you refresh the page, you should see something like this:
 
 <figure>
-<img src="/img/docs/tut-write-site-files/writefile2.png" >
+<img src="/img/docs/tut-write-site-files/writefile2.jpg" >
 <figcaption>The output of <code>archive.writeFile()</code></figcaption>
 </figure>
 
 If you open that URL, you’ll see this:
 
 <figure>
-<img src="/img/docs/tut-write-site-files/writefile2-view.png" >
+<img src="/img/docs/tut-write-site-files/writefile2-view.jpg" >
 <figcaption>The content of logo.png</figcaption>
 </figure>
 
