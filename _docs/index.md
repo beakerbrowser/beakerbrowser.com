@@ -1,54 +1,168 @@
 ---
+layout: docs-intro
 title: Introduction
 order: 1
 ---
 
-Beaker is made by software enthusiasts who want a better Web; one that's decentralized, easy to hack, and safe to use. We started a new browser, with these goals in mind:
+{% include docs-nav.html section=page.section page=page %}
 
- - Apply the Unix philosophy of small, interoperable programs.
- - Separate the frontend from the backend.
- - Make every site [forkable](./howto/create-a-site.html#how-to-fork) and user-programmable.
- - Lock Javascript behind a network-restricted sandbox by default.
+<div class="callouts-1">
+  <div class="container">
+    <div class="callout">
+      <div class="heading">
+        <i class="fa fa-laptop"></i>
+        <h2 class="title">
+          <a href="/docs/using-beaker/">Getting started</a>
+        </h2>
+      </div>
+      <p class="desc">
+        Learn how to use Beaker to publish peer-to-peer websites, share files secretly, and more.
+      </p>
+      <a class="more" href="/docs/using-beaker/">
+        Read more
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </div>
 
-[Keep reading](./learn/philosophy.html)
+    <div class="callout">
+      <div class="heading">
+        <i class="fa fa-terminal"></i>
+        <h2 class="title">
+          <a href="/docs/apis/">New Web APIs</a>
+        </h2>
+      </div>
+      <p class="desc">
+        Explore Beaker's new Web APIs for publishing and managing peer-to-peer
+        websites.
+      </p>
+      <a class="more" href="/docs/apis/">
+        Read more
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </div>
 
----
-
-<div class="card-group">
-  <div class="card card-with-icon card-inline-block">
-    <a href="./install.html" class="fa fa-download card-icon"></a>
-    <span class="card-body">Install</span>
-  </div>
-  <div class="card card-with-icon card-inline-block">
-    <a href="./howto/create-a-site.html" class="fa fa-code card-icon"></a>
-    <span class="card-body">Create a site</span>
-  </div>
-  <div class="card card-with-icon card-inline-block">
-    <a href="./apis/by-example.html" class="fa fa-cube card-icon"></a>
-    <span class="card-body">Web APIs</span>
-  </div>
-  <div class="card card-with-icon card-inline-block">
-    <a href="./howto/host.html" class="fa fa-server card-icon"></a>
-    <span class="card-body">Hosting</span>
+    <div class="callout">
+      <div class="heading">
+        <i class="fa fa-cogs"></i>
+        <h2 class="title">
+          <a href="/docs/inside-beaker/">Inside Beaker</a>
+        </h2>
+      </div>
+      <p class="desc">
+        Learn about Beaker's internal architecture, design decisions, and more.
+      </p>
+      <a class="more" href="/docs/inside-beaker/">
+        Read more
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </div>
   </div>
 </div>
 
----
+<div class="callouts-2">
+  <div class="container">
+    <div class="tutorials callout">
+      <h2>Tutorials</h2>
+      <ul class="tutorials-list">
+        <li>
+          <a href="/docs/tutorials/create-a-blog.html">
+            <i class="purple fa fa-rss"></i>
+            <span>Create a peer-to-peer blog</span>
+          </a>
+        </li>
+        <li>
+          <a href="/docs/tutorials/host-outside-of-beaker.html">
+            <i class="orange fa fa-terminal"></i>
+            <span>Host your files using the Dat CLI</span>
+          </a>
+        </li>
+        <li>
+          <a href="/docs/tutorials/share-files-secretly.html">
+            <i class="green fa fa-link"></i>
+            <span>Share files secretly</span>
+          </a>
+        </li>
+        <li>
+          <a href="/docs/tutorials/listen-for-file-changes.html">
+            <i class="teal fa fa-code"></i>
+            <span>Web APIs: Listen for file changes</span>
+          </a>
+        </li>
+      </ul>
+      <p class="more">
+        <a href="/docs/tutorials/">
+          All tutorials
+          <i class="fa fa-angle-right"></i>
+        </a>
+      </p>
+    </div>
 
-### About
+    <div class="updates callout">
+      <h2>Recent updates</h2>
+      <ul class="updates-list">
+        <li>
+          <a href="https://groups.google.com/forum/#!topic/beaker-browser/zDRrk194bbM">Beaker v0.7 pre-release</a>
+        </li>
+        <li>
+          <a href="https://datproject.org/blog/2016-12-18-p2p-reader-privacy">
+            Reader privacy on the peer-to-peer Web
+          </a>
+        </li>
+        <li>
+          <a href="https://pfrazee.github.io/blog/achieving-scale">
+            Achieving scale in the decentralized Web
+          </a>
+        </li>
+      </ul>
+    </div>
 
-Beaker is a new application for browsing Websites on a peer-to-peer network. Beaker uses the [Dat Protocol](https://datproject.org) to host and navigate data directly from users’ computers for free.
-
-Our mission is to drive the Web platform to adopt new ideas and technologies by demonstrating their viability. Beaker is a working experiment for people who share our ideals.
-
-We believe that the Web fails to respond to its communities’ needs because its applications are built from the top-down by businesses. Decisions about the software are made by developers who are not a part of the communities they construct. To handle fake news, invasive ads, and harassment, users need to be empowered to change their software communally.
-
-### How
-
-Beaker uses a peer-to-peer network to remove the dependence on Web services and their data siloes. Instead, its users run applications on their own devices, and exchange code and data directly with each other. With no dependence on a remote service, users are free to use and alter their data and applications however they wish.
-
-Unlike traditional browsers, where consumption is the chief purpose, Beaker makes creation a first-class citizen of the browser UI. Beaker includes an editor, so that users can visit a peer-to-peer site and simply click “Edit Source.” Beaker also makes hosting a matter of community engagement; users can support the sites they like by contributing bandwidth. Site popularity can easily be gauged by the number of active peers.
-
-### Vision
-
-We envision a future where communities can respond to an abusive actor, such as a fake-news publisher, by presenting a new version of their social-media app with a blacklist or warning-labels built in. Users could switch to the new app with the click of a button, and resume their use just as before. New forks of an application would go viral weekly, and the community would be actively engaged in the forks they prefer.
+    <div class="tools callout">
+      <p>
+        Tools for working with Beaker and Dat
+      </p>
+      <ul class="tools-list">
+        <li>
+          <img class="icon" src="/img/dat-hexagon.svg" />
+          <div class="info">
+            <h3 class="title">
+              <a href="https://datproject.org/install">
+                Dat CLI & desktop application
+              </a>
+            </h3>
+            <p class="desc">
+              The official Dat clients for syncing and sharing files.
+            </p>
+          </div>
+        </li>
+        <li>
+          <img class="icon" src="/img/favicon.png"/>
+          <div class="info">
+            <h3 class="title">
+              <a href="https://github.com/beakerbrowser/httpd">
+                DatHTTPD
+              </a>
+            </h3>
+            <p class="desc">
+              Serve your Dat site and rehost it over HTTPS.
+            </p>
+          </div>
+        </li>
+       <!-- TODO: remove until Hashbase is out of beta
+        <li>
+          <img class="icon" src="/img/hashbase-favicon-32x32.png"/>
+          <div class="info">
+            <h3 class="title">
+              <a href="https://hashbase.io">
+                Hashbase
+              </a>
+            </h3>
+            <p class="desc">
+              A cloud peer that rehosts your Dat archives. Run by the Beaker team.
+            </p>
+          </div>
+        </li>
+ -->
+      </ul>
+    </div>
+  </div>
+</div>

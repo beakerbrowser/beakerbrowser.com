@@ -1,16 +1,18 @@
 ---
-layout: default-no-header-or-footer
+layout: default
 ---
 
-<div class="doc">
-  {% include docs-nav.html %}
-  <div class="doc__content">
-    <div class="container">
-      <h2>{{ page.title }}</h2>
+{% include docs-nav.html section=page.section page=page %}
+
+<main class="docs">
+  <div class="container">
+    <div class="content">
+      <h1>{{ page.title }}</h1>
       {{ content }}
     </div>
+    {% include docs-sidebar.html section=page.section page=page %}
   </div>
-</div>
+</main>
 
 <script>
 var $ = document.querySelector.bind(document)
@@ -21,4 +23,20 @@ var $$ = function (selector) {
 <script src="/js/anchor.min.js"></script>
 <script>
 anchors.add('h2, h3, h4')
+</script>
+
+<script>
+var mobileNav = document.getElementById('docs-nav-mobile')
+mobileNav.addEventListener('change', function (e) {
+  var select = e.target
+  window.location = select.selectedOptions[0].dataset.url
+})
+</script>
+<script>
+[].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+  img.setAttribute('src', img.getAttribute('data-src'))
+  img.onload = function() {
+    img.removeAttribute('data-src')
+  }
+})
 </script>

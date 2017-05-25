@@ -1,0 +1,125 @@
+installingBeaker:
+  title: Installing Beaker
+  url: /docs/install/
+  children:
+    - title: Installing Beaker
+      url: /docs/install/
+usingBeaker:
+  title: Using Beaker
+  url: /docs/using-beaker/
+  children:
+    - title: The peer-to-peer Web
+      url: /docs/using-beaker/the-peer-to-peer-web.html
+    - title: Creating a new website
+      url: /docs/using-beaker/create-a-site.html
+    - title: Adding files to a site
+      url: /docs/using-beaker/publishing-files.html
+    - title: Beaker’s Library
+      url: /docs/using-beaker/library.html
+    - title: The staging area
+      url: /docs/using-beaker/staging-area.html
+    - title: Saving a site to your Library
+      url: /docs/using-beaker/saving-sites.html
+    - title: Forking a site
+      url: /docs/using-beaker/forking-sites.html
+    - title: History and versions
+      url: /docs/using-beaker/history-and-versions.html
+    - title: Troubleshooting
+      url: /docs/using-beaker/troubleshooting.html
+webAPIs:
+  title: Web APIs
+  url: /docs/apis/
+  children:
+    - title: Web APIs
+      url: /docs/apis/
+    - title: Web APIs by example
+      url: /docs/apis/by-example.html
+    - title: DatArchive API
+      url: /docs/apis/dat.html
+      children:
+      - title: "new DatArchive(url)"
+        url: "#datarchive"
+      - title: "DatArchive.create(opts?)"
+        url: "#datarchive-create"
+      - title: "DatArchive.fork(url, opts?)"
+        url: "#datarchive-fork"
+      - title: "DatArchive.resolveName(url)"
+        url: "#datarchive-resolvename"
+      - title: "url"
+        url: "#url"
+      - title: "getInfo(opts?)"
+        url: "#getinfo"
+      - title: "stat(path, opts?)"
+        url: "#stat"
+      - title: "readFile(path, opts?)"
+        url: "#readfile"
+      - title: "readdir(path, opts?)"
+        url: "#readdir"
+      - title: "writeFile(path, data, opts?)"
+        url: "#writefile"
+      - title: "mkdir(path)"
+        url: "#mkdir"
+      - title: "unlink(path)"
+        url: "#unlink"
+      - title: "rmdir(path, opts?)"
+        url: "#rmdir"
+      - title: "diff(opts?)"
+        url: "#diff"
+      - title: "commit()"
+        url: "#commit"
+      - title: "revert()"
+        url: "#revert"
+      - title: "history(opts?)"
+        url: "#history"
+      - title: "download(path, opts?)"
+        url: "#download"
+      - title: "createFileActivityStream(pattern?)"
+        url: "#createfileactivitystream"
+      - title: "createNetworkActivityStream()"
+        url: "#createnetworkactivitystream"
+    - title: Permissions API
+      url: /docs/apis/permissions.html
+    - title: Dat.json site manifest
+      url: /docs/apis/manifest.html
+insideBeaker:
+  title: Inside Beaker
+  url: /docs/inside-beaker/
+  children:
+    - title: Dat files protocol
+      url: /docs/inside-beaker/dat-files-protocol.html
+    - title: Privacy and security
+      url: /docs/inside-beaker/privacy-and-security.html
+    - title: Thick applications model
+      url: /docs/inside-beaker/thick-applications.html
+    - title: Other technologies
+      url: /docs/inside-beaker/other-technologies.html
+    - title: Frequently Asked Questions
+      url: /docs/inside-beaker/faq.html
+    - title: Mission
+      url: /docs/inside-beaker/mission.html
+    - title: Team
+      url: /docs/inside-beaker/team.html
+tutorials:
+  title: Tutorials
+  url: /docs/tutorials/
+  children:
+    - title: Create a peer-to-peer blog
+      url: /docs/tutorials/create-a-blog.html
+    - title: Create a markdown site
+      url: /docs/tutorials/create-a-markdown-site.html
+    - title: Host outside of Beaker
+      url: /docs/tutorials/host-outside-of-beaker.html
+    - title: Share files secretly
+      url: /docs/tutorials/share-files-secretly.html
+    - title: Publish software securely
+      url: /docs/tutorials/publish-software-securely.html
+    - title: 'Code: Read site files'
+      url: /docs/tutorials/read-site-files.html
+    - title: 'Code: Write site files'
+      url: /docs/tutorials/write-site-files.html
+    - title: 'Code: Diff, commit, revert'
+      url: /docs/tutorials/diff-commit-revert.html
+    - title: 'Code: Listen for file changes'
+      url: /docs/tutorials/listen-for-file-changes.html
+    - title: 'Code: Create or fork a site'
+      url: /docs/tutorials/create-or-fork-a-site.html

@@ -1,0 +1,28 @@
+{% assign section = site.data.docs[include.section] %}
+{% assign activePage = include.page %}
+
+<nav class="doc-sidebar-nav">
+  <ul class="pages">
+    {% for page in section.children %}
+      {% if activePage.title == page.title %}
+        {% assign activePageNav = page %}
+        <li class="active">
+      {% else %}
+        <li>
+      {% endif %}
+        <a href="{{ page.url }}">{{ page.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% if activePageNav.children %} 
+    <ul class="headings">
+      {% for heading in activePageNav.children %}
+        <li>
+          <a href="{{ heading.url }}">{{ heading.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</nav>
+

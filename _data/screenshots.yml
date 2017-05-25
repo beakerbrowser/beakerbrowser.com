@@ -1,37 +1,16 @@
--
-  src: /img/ss/create-site.mp4
-  title: ""
+- src: /img/ss/peer-count.jpg
+  title: "Host websites"
   desc:
-    "<div class=\"subsection\"><h3 class=\"subtitle\">Free</h3><p>The cost of
-     bandwidth and storage is distributed across a network of peers, so hosting is
-     free. No blockchain required.</p></div><div class=\"subsection\"><h3 class=\"subtitle\">
-     Decentralized</h3><p>Your files are hosted on a peer-to-peer network,
-     so you can publish without depending on a third-party server.</p></div>
-     <div class=\"subsection\"><h3 class=\"subtitle\">Private</h3><p>Sites are
-     private by default. Only people with the URL can download your files, and
-     all traffic is encrypted in transit.</p></div>"
-  orientation: center
-- src: /img/ss/peer-count.png
-  title: "Browse the peer-to-peer Web"
-  desc:
-    "<div data-src=\"/img/ss/peer-count.png\" class=\"subsection selectable active\"><h3 class=\"subtitle\">
-     Distributed</h3><p>A site’s visitors are added to the network swarm and
-     help rehost its files on the peer-to-peer network.</p></div>
-     <div data-src=\"/img/ss/offline.png\" class=\"subsection selectable\">
-     <h3 class=\"subtitle\">Offline</h3><p>Sites you save to your Library are
-     downloaded to your device and can be browsed even when you’re offline.
-     </p></div><div data-src=\"/img/ss/history.png\" class=\"subsection selectable\">
-     <h3 class=\"subtitle\">Versioned</h3><p>The Dat protocol maintains a
-     verifiable log of every change made to a site, so you can view it at
-     any point in its history.</p></div>"
+    "<p>Your files are hosted on a peer-to-peer network, so you can publish
+     without depending on a third-party server.</p><p>Visitors to your site help
+     rehost your files, which offloads the cost of bandwidth for popular sites.</p>"
   orientation: left
-  id: 'subsection-ss'
-- src: /img/ss/secret-sharing.png
+- src: /img/ss/secret-sharing.jpg
   title: "Share files secretly"
   desc:
     "<p>Beaker enables <em>truly secret file sharing</em>. Files published with
      the Dat protocol are secret by default — only people who know the site’s
-     URL can decrypt and download its files.</p><p>Share a URL to a Dat archive
-     and your recipient will be able to download its files directly from your
-     computer. No third-party service required.</p>"
+     URL can decrypt and download its files.</p><p>When you share a URL,
+     your recipient can download its files directly from your
+     computer. No third-party service required.</p><p><a href=\"/docs/inside-beaker/privacy-and-security.html\">Learn more <i class=\"fa fa-angle-right\"></i></a></p>"
   orientation: right

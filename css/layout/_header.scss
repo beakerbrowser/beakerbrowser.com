@@ -1,20 +1,26 @@
 .header {
   @extend %antialiased;
   @extend %shrink-text-phone;
-  position: relative;
   background: $header-bg;
   color: $text--dark-bg;
   width: 100%;
   font-weight: bold;
 
+  .container {
+    @extend %flex-container;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 15px 0;
+
+    @include respond-to(tablet) {
+      border-bottom: 1px solid;
+    }
+  }
+
   &__logo {
     @extend %transition;
-    position: relative;
-    top: -6px;
     transition-property: color;
-    display: inline-block;
     font-size: 1.5em;
-    height: 100%;
 
     img, span {
       display: inline-block;
@@ -30,14 +36,4 @@
       color: $text--dark-bg-hover;
     }
   }
-
-  .container {
-    position: relative;
-    padding: 25px 0;
-    height: 80px;
-    @include respond-to(tablet) {
-      border-bottom: 1px solid;
-    }
-  }
 }
-

@@ -1,18 +1,25 @@
 table.basic-table {
+  display: block;
   border-collapse: collapse;
-  border-radius: 2px;
+  border-radius: 3px;
+  border: 1px solid $gray--mid;
+  border-bottom: 0;
+  margin-bottom: 1.5rem;
 
   th {
     background: $gray--light;
-    border: 1px solid $gray;
     padding: 0.5em 1em;
     text-align: right;
-    vertical-align: top;
-    white-space: pre;
+    border-bottom: 1px solid $gray--mid;
+    border-right: 1px solid $gray--mid;
+    font-weight: 500 !important;
+    white-space: nowrap;
   }
+
   td {
     padding: 0.5em 1em;
-    border: 1px solid $gray;
+    width: 100%;
+    border-bottom: 1px solid $gray--mid;
     vertical-align: top;
   }
 }

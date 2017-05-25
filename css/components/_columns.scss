@@ -1,0 +1,21 @@
+.columns {
+  column-gap: 2rem;
+  -webkit-column-gap: 2rem;
+  -moz-column-gap: 2rem;
+
+  column-width: 275px;
+  -webkit-column-width: 275px;
+  -moz-column-width: 275px;
+
+  &.two {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+
+  div {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}

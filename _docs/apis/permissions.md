@@ -1,23 +1,26 @@
 ---
-title:    Permissions API
-category: Web APIs
-order:    3
+title: Permissions API
+section: webAPIs
+sectionTitle: Web APIs
+order: 4
 ---
 
-<div class="card">
-  <p><strong>Summary.</strong> Request access from the user to use special APIs.</p>
-</div>
+<p class="doc-summary">
+  In this tutorial, you’ll learn how to request access from the user to use
+  special APIs.
+</p>
 
-**Note**
+**Notes:**
 
-- Only apps served over dat:// are able to access these APIs.
-- <i class="fa fa-flask"></i> This API is under development and subject to change.
+- Only apps served over `dat://` are able to access these APIs.
+- <i class="fa fa-flask"></i> Indicates that this API is under development and subject to change.
 
-### Network access
+---
 
-By default, sites served over dat:// are not allowed to access the network.
-They can, however, request exceptions.
-This will generate a prompt, which the user can choose to accept or deny.
+## Network access
+
+By default, sites served over `dat://` are not allowed to access the network.
+They can, however, request exceptions. This will generate a prompt, which the user can choose to accept or deny.
 
 <img class="bordered" src="/img/screenshot-network-permission-request.png">
 
@@ -27,21 +30,21 @@ It will not enable remotely-served styles, scripts, or objects.
 
 ```js
 // Request access
-var res = await navigator.permissions.request({ 
+var res = await navigator.permissions.request({
   name: 'network',
   hostname: 'github.com'
 })
 res.status // => 'granted'
 
 // Query access
-res = await navigator.permissions.query({ 
+res = await navigator.permissions.query({
   name: 'network',
   hostname: 'github.com'
 })
 res.status // => 'granted'
 
 // Give up access
-res = await navigator.permissions.revoke({ 
+res = await navigator.permissions.revoke({
   name: 'network',
   hostname: 'github.com'
 })

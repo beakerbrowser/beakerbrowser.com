@@ -13,6 +13,7 @@ theme: minima
 exclude: ["node_modules"]
 gems:
  - jekyll-redirect-from
+ - octopress-minify-html
 
 # Sass
 sass:

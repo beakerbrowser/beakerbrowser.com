@@ -3,10 +3,7 @@
   answer:
     "<p>It depends. When you turn off your computer, <em>you</em> are no longer
      hosting your files. But if you’ve shared the URL to your site with others,
-     it’s possible that they might be hosting its files.</p><p>To
-     guarantee that your site’s files are available even when you’re offline,
-     you can use a cloud rehosting service like <a href=\"https://hashbase.io\">
-     Hashbase</a>.</p>"
+     it’s possible that they might be hosting its files.</p>"
 -
   question: "How do I view a specific version of a site?"
   answer:

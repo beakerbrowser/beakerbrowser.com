@@ -1,4 +1,6 @@
-.layout-doc {
+.layout-doc,
+.layout-docs-intro {
+
   .header {
     position: relative;
     z-index: 3;
@@ -9,164 +11,257 @@
   }
 }
 
-.doc {
-  min-height: 100%;
+.layout-doc,
+.layout-docs-intro {
 
-  &__content {
-    padding: 25px 0 3em 0;
-    max-width: 850px;
+  .docs-nav-mobile {
+    margin: 2rem 0 1rem 0;
 
-    @include respond-to(tablet) {
-      margin-left: $docs-nav-width;
-    }
-
-    // TODO: add class to all docs images -tbv
-    @include respond-to(tablet) {
-      img {
-        max-width: 700px;
-      }
-    }
-
-    figure {
-      @extend %figure;
-    }
-
-    // TODO: revisit these -tbv
-    h3, h4, h5, h6 {
-      @extend %content-heading;
-    }
-
-    p {
-      @extend %content-paragraph;
-    }
-
-    ul, ol {
-      @extend %content-list;
-    }
-
-    a {
-      color: $text--link;
-    }
-
-    code {
-      white-space: pre-wrap;
-    }
-
-    pre.highlight {
-      @extend %code-block !optional;
+    select {
+      font-size: 13px;
+      width: 300px;
+      height: 25px;
     }
   }
 
-  &__nav-menu-btn {
-    display: block;
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 1.2em;
-    cursor: pointer;
+  .docs-nav,
+  .doc-sidebar-nav {
+    display: none;
+  }
 
-    @include respond-to(tablet) {
+  @media (min-width: 1000px) {
+    .docs-nav {
+      display: block;
+    }
+
+    .docs-nav-mobile {
       display: none;
     }
-
-    &--close {
-      position: absolute;
-      top: 0;
-      right: 1.25em;
-      padding: 1em 0;
-      margin-right: 0;
-    }
-
-    &--open {
-      padding-top: 1em;
-    }
   }
 
-  &__nav {
-    position: fixed;
-    transition: left .4s ease-in-out;
-    left: -100%;
-    top: 0;
-    width: $docs-nav-width;
-    height: 100%;
-    padding: 25px 1.5em;
-    background: $doc-nav-bg;
-    border-right: 1px solid shade($doc-nav-bg, 5%);
-    font-size: .95em;
-    text-align: right;
-    overflow-y: scroll;
+  .docs-nav {
+    margin-top: 3rem;
+    color: $text--light-bg-muted;
 
-    &::-webkit-scrollbar {
-      width: 0px;
+    .container {
+      @extend %flex-container;
+      justify-content: space-between;
+      border-bottom: 1px solid $gray--mid;
     }
 
-    @include respond-to(tablet) {
-      left: 0;
-    }
+    .active-section {
+      font-size: 1.1rem;
 
-    &.visible {
-      left: 0;
-    }
+      a:hover {
+        color: $text--link;
+      }
 
-    &__logo {
-      transition-property: color;
-      display: block;
-      font-size: 1.5em;
-      font-weight: bold;
-      margin-top: 1.25em;
-
-      @include respond-to(tablet) {
-        margin-top: 0;
+      i {
+        margin: 0 4px;
       }
     }
-  }
 
-  &__nav-section {
-    list-style: none;
-
-    &:first-child {
-      margin-top: 1em;
-    }
-
-    li:last-child {
-      margin-bottom: 1em;
-    }
-  }
-
-  &__link {
-    position: relative;
-    padding-right: 1em;
-
-    &:after {
-      position: absolute;
-      right: 0;
+    .active-section,
+    nav {
       display: inline-block;
-      content: '\203A';
     }
 
-    &.current, &.current a {
-      color: $primary;
-    }
+    nav {
 
-    a {
-      @extend %link;
-      color: $text--light-bg-muted;
-    }
+      li {
+        display: inline-block;
+        padding-bottom: .5rem;
+        font-size: .925rem;
+        border-bottom: 2px solid transparent;
 
-    &.outbound{
-      padding-right: 0;
+        &:hover {
+          border-bottom: 2px solid $gray;
+        }
 
-      &:after {
-        content: '';
+        &.active {
+          border-bottom: 2px solid $gray;
+          color: $text--light-bg;
+          font-weight: 500;
+        }
+
+        margin-left: 1rem;
       }
     }
-  }
-
-  &__group-name {
-    text-transform: uppercase;
-    font-size: .85em;
-    font-weight: bold;
-    padding-right: 1em;
   }
 }
 
+.layout-doc {
+
+  @media (min-width: 1000px) {
+    .doc-sidebar-nav {
+      display: block;
+    }
+
+    .docs {
+      padding-top: 3rem;
+    }
+
+    .content {
+      flex: 3;
+      margin-right: 4rem;
+    }
+
+    .doc-sidebar-nav {
+      flex: 1;
+    }
+  }
+
+  .container {
+    max-width: 1000px;
+  }
+}
+
+.docs {
+  min-height: 100%;
+  padding-bottom: 4rem;
+
+  .container {
+    @extend %flex-container;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .content {
+    font-size: .92rem;
+    max-width: 650px;
+    width: 100%;
+
+    .doc-summary {
+      color: $text--light-bg-muted;
+      padding: 1rem;
+      background: $gray--light;
+      border-radius: 3px;
+      border: 1px solid $gray--mid;
+    }
+
+    p, li {
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    p:not(:last-child),
+    blockquote {
+      margin-bottom: 1.5rem;
+    }
+
+    ul,
+    ol {
+      margin: 0 0 1.5rem 20px;
+
+      li {
+        margin-bottom: 5px;
+      }
+    }
+
+    pre {
+      @extend %code-block;
+    }
+
+    blockquote {
+      margin-left: 30px;
+      padding-left: 15px;
+      border-left: 2px solid $gray--mid;
+      color: $text--light-bg-muted;
+      font-style: italic;
+      font-size: 1rem;
+    }
+
+    figcaption.code {
+      border: 1px solid $gray--mid;
+      border-bottom: 0;
+      border-radius: 3px 3px 0 0;
+      background: $gray--light;
+      padding: 3px 7px 2px;
+      font-size: 12px;
+      color: mix($black, $white, 45%);
+    }
+    figcaption.code + .highlighter-rouge pre {
+      border-radius: 0 0 3px 3px;
+    }
+  }
+
+  .doc-sidebar-nav {
+    flex: 1;
+    height: 100%;
+
+    ul.pages {
+      border-radius: 3px;
+      border: 1px solid $gray--mid;
+      color: $text--light-bg-muted;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+      list-style: none;
+
+      li {
+        font-size: .9rem;
+        border-left: 2px solid transparent;
+        cursor: pointer;
+
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding: .4rem 1rem;
+        }
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $gray--mid;
+        }
+
+        &:hover {
+          background: $gray--light;
+          color: $text--link;
+        }
+
+        &.active {
+          border-left: 2px solid $primary;
+        }
+      }
+    }
+
+    ul.headings {
+      list-style: none;
+      padding: 0.6em 1em;
+
+      li {
+        border-bottom: 0;
+        font-size: .9rem;
+        border-left: 2px solid transparent;
+        cursor: pointer;
+
+        a {
+          color: $gray--very-dark;        
+        }
+        a:hover {
+          color: $text--link;
+        }
+      }
+    }
+  }
+}
