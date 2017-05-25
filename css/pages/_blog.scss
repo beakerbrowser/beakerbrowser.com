@@ -1,0 +1,10 @@
+.layout-blog {
+
+  .header .container {
+    border-bottom: 0;
+  }
+
+  main {
+    min-height: calc(100vh - 56px - 70px);
+  }
+}
