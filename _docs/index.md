@@ -104,7 +104,7 @@ order: 1
           <a href="https://groups.google.com/forum/#!topic/beaker-browser/zDRrk194bbM">Beaker v0.7 pre-release</a>
         </li>
         <li>
-          <a href="https://datproject.org/blog/2016-12-18-p2p-reader-privacy">
+          <a href="https://blog.datproject.org/2016/12/12/reader-privacy-on-the-p2p-web/">
             Reader privacy on the peer-to-peer Web
           </a>
         </li>
