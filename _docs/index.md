@@ -102,7 +102,8 @@ order: 1
       <ul class="updates-list">
         <li>
           <a href="https://github.com/beakerbrowser/beaker/releases/tag/0.7.0">
-          Beaker 0.7 released
+            Beaker 0.7 released
+          </a>
         </li>
         <li>
           <a href="https://blog.datproject.org/2016/12/12/reader-privacy-on-the-p2p-web/">
