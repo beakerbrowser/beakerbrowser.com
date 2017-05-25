@@ -101,7 +101,8 @@ order: 1
       <h2>Recent updates</h2>
       <ul class="updates-list">
         <li>
-          <a href="https://groups.google.com/forum/#!topic/beaker-browser/zDRrk194bbM">Beaker v0.7 pre-release</a>
+          <a href="https://github.com/beakerbrowser/beaker/releases/tag/0.7.0">
+          Beaker 0.7 released
         </li>
         <li>
           <a href="https://blog.datproject.org/2016/12/12/reader-privacy-on-the-p2p-web/">
