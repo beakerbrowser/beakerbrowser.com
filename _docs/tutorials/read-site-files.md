@@ -85,7 +85,7 @@ document.body.appendChild(img)
 Reload the page and you should see this:
 
 <figure>
-<img src="/img/docs/tut-read-site-files/imgcopy.png" >
+<img src="/img/docs/tut-read-site-files/imgcopy.jpg" >
 <figcaption>The duplicated image</figcaption>
 </figure>
 
@@ -102,7 +102,7 @@ console.log(indexJsStat)
 Reload the page and you should see this:
 
 <figure>
-<img src="/img/docs/tut-read-site-files/stat.png" >
+<img src="/img/docs/tut-read-site-files/stat.jpg" >
 <figcaption>The output of archive.stat('/js/index.js')</figcaption>
 </figure>
 
