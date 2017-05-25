@@ -5,6 +5,7 @@
   color: $text--dark-bg;
   display: flex;
   padding: 1em 0;
+  font-weight: 500;
 
   &__links {
     @extend %flex-container;
