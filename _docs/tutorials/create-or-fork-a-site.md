@@ -11,16 +11,16 @@ The [DatArchive API](/docs/apis/dat.html) provides three ways to get an archive 
  2. Create a new site with [`DatArchive.create()`](/docs/apis/dat.html#datarchive-create).
  3. Fork an existing site with [`DatArchive.fork()`](/docs/apis/dat.html#datarchive-fork).
 
-## DatArchive
+## `DatArchive`
 
-To open an existing archive, use [the `DatArchive` constructor](/docs/apis/dat.html#datarchive) as follows:
+To open an existing archive, use the [`DatArchive` constructor](/docs/apis/dat.html#datarchive) as follows:
 
 <figcaption class="code">snippet</figcaption>
 ```js
 var archive = new DatArchive('dat://…')
 ```
 
-## DatArchive.create()
+## `DatArchive.create()`
 
 To create a new site, use [`DatArchive.create()`](/docs/apis/dat.html#datarchive-create) as follows:
 
@@ -31,7 +31,7 @@ var archive = await DatArchive.create({title: '…', description: '…'})
 
 This will result in a modal window which the user will either confirm or deny.
 
-## DatArchive.fork()
+## `DatArchive.fork()`
 
 To fork an existing site, use [`DatArchive.fork()`](/docs/apis/dat.html#datarchive-fork) as follows:
 

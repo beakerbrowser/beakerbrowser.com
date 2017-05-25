@@ -15,14 +15,14 @@ toplevel_methods:
     name: "DatArchive.create"
     signature: "DatArchive.create(opts?)"
     desc: |
-      Create a new dat archive, and return the archive instance.
+      Create a new Dat archive, and return the archive instance.
       The archive is sandboxed to only access to files within it.
 
       The user will be prompted to confirm or deny the archive creation.
 
       - `opts.title` String. The title of the new archive.
       - `opts.description` String. The description of the new archive.
-      - returns Promise&lt;DatArchive&gt;
+      - returns `Promise<DatArchive>`
 
       <figcaption class="code">example</figcaption>
       ```js
@@ -35,7 +35,7 @@ toplevel_methods:
     name: "DatArchive.fork"
     signature: "DatArchive.fork(url, opts?)"
     desc: |
-      Fork an existing archive to create a new dat archive, and return the archive instance.
+      Fork an existing archive to create a new Dat archive, and return the archive instance.
       The archive is sandboxed to only access to files within it.
 
       The fork will contain only the files in the target archive that have been completely downloaded.
@@ -46,7 +46,7 @@ toplevel_methods:
       - `url` String. The URL of the archive to fork.
       - `opts.title` String. The title of the new archive.
       - `opts.description` String. The description of the new archive.
-      - returns Promise&lt;DatArchive&gt;
+      - returns `Promise<DatArchive>`
 
       <figcaption class="code">example</figcaption>
       ```js
@@ -63,7 +63,7 @@ toplevel_methods:
       [DNS-over-TLS](https://github.com/beakerbrowser/beaker/wiki/Authenticated-Dat-URLs-and-HTTPS-to-Dat-Discovery).
 
       - `url` String. The URL of the archive to resolve.
-      - returns Promise&lt;string&gt;
+      - returns `Promise<string>`
 
       <figcaption class="code">example</figcaption>
       ```js
@@ -88,7 +88,7 @@ instance_methods:
       Fetches information about the archive.
 
       - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
-      - returns Promise&lt;Object&gt;
+      - returns `Promise<Object>`
 
       Return object:
 
@@ -103,7 +103,7 @@ instance_methods:
 
         title: string (the archive title)
         description: string (the archive description)
-        forkOf: string|array&lt;string&gt; (the archive's parent fork)
+        forkOf: string|array<string> (the archive's parent fork)
         createdBy: {
           url: string (the url of the app that created the archive)
           title: string (the title of the app that created the archive)
@@ -131,7 +131,7 @@ instance_methods:
 
       - `path` The path of the file/directory to stat.
       - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
-      - returns Promise&lt;Object&gt;
+      - returns `Promise<Object>`
 
       Return object:
 
@@ -159,7 +159,7 @@ instance_methods:
     name: "readFile"
     signature: readFile(path, opts?)
     desc: |
-      Reads the file's contents.
+      Reads the file’s contents.
 
       - `path` The path of the file to read.
       - `opts.encoding`
@@ -169,7 +169,7 @@ instance_methods:
         - `'binary'` Return value will be an ArrayBuffer.
         - If `opts` is a string, it is specifying the encoding.
       - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
-      - returns Promise&lt;string|ArrayBuffer&gt;
+      - returns `Promise<string|ArrayBuffer>`
 
       <figcaption class="code">example</figcaption>
       ```js
@@ -178,7 +178,7 @@ instance_methods:
       var buf = await archive.readFile('/picture.png', 'binary')
       var blob = new Blob([buf], {type: 'image/png'})
       document.querySelector('img').src = URL.createObjectURL(blob)
-      
+
       var str = await archive.readFile('/picture.png', 'base64')
       document.querySelector('img').src = 'data:image/png;base64,'+str
       ```
@@ -187,12 +187,12 @@ instance_methods:
     signature: "readdir(path, opts?)"
     desc: |
       Reads the contents of a directory.
-      Returns an array listing the files and folders in the directory, excluding '.' and '..'.
+      Returns an array listing the files and folders in the directory, excluding `'.'` and `'..'`.
 
       - `path` The path of the directory to read.
       - `opts.recursive` Boolean. Recurse the listing into the subdirectories?
       - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
-      - returns Promise&lt;Array&lt;String&gt;&gt;
+      - returns `Promise<Array<String>>`
 
       <figcaption class="code">example</figcaption>
       ```js
@@ -204,7 +204,7 @@ instance_methods:
     name: "writeFile"
     signature: "writeFile(path, data, opts?)"
     desc: |
-      Replaces the file's contents with `data` in the staging area.
+      Replaces the file’  s contents with `data` in the staging area.
       The promise will reject if there is already a directory at `path`, or if the containing directory-tree does not yet exist.
 
       The archive must be committed to make the file update permanent.
@@ -217,7 +217,7 @@ instance_methods:
         - `'hex'` Data must be a string.
         - `'binary'` Data must be an ArrayBuffer. (This is the default value if data is an ArrayBuffer.)
         - If `opts` is a string, it is specifying the encoding.
-      - returns Promise&lt;void&gt;
+      - returns `Promise<void>`
 
       <figcaption class="code">example</figcaption>
       ```js
@@ -234,7 +234,7 @@ instance_methods:
       The archive must be committed to make the new directory permanent.
 
       - `path` The path of the directory to create.
-      - returns Promise&lt;void&gt;
+      - returns `Promise<void>`
 
       <figcaption class="code">example</figcaption>
       ```js
@@ -251,7 +251,7 @@ instance_methods:
       The archive must be committed to make the deletion permanent.
 
       - `path` The path of the file to delete.
-      - returns Promise&lt;void&gt;
+      - returns `Promise<void>`
 
       <figcaption class="code">example</figcaption>
       ```js
@@ -269,7 +269,7 @@ instance_methods:
 
       - `path` The path of the directory to delete.
       - `opts.recursive` Boolean. If not empty, delete all files and folders inside the folder?
-      - returns Promise&lt;void&gt;
+      - returns `Promise<void>`
 
       <figcaption class="code">example</figcaption>
       ```js
@@ -284,7 +284,7 @@ instance_methods:
       Compare the current staging area to the published archive, and provide a list of the differences.
 
       - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
-      - returns Promise&lt;Array&lt;Object&gt;&gt;
+      - returns `Promise<Array<Object>>`
 
       Returns an array of objects:
 
@@ -313,7 +313,7 @@ instance_methods:
     desc: |
       Publish all changes in the staging area to the archive, and provide a list of the applied changes.
 
-      - returns Promise&lt;Array&lt;Object&gt;&gt;
+      - returns `Promise<Array<Object>>`
 
       Returns an array of objects:
 
@@ -342,7 +342,7 @@ instance_methods:
     desc: |
       Undo all changes in the staging area, and provide a list of the reversions.
 
-      - returns Promise&lt;Array&lt;Object&gt;&gt;
+      - returns `Promise<Array<Object>>`
 
       Returns an array of objects:
 
@@ -375,7 +375,7 @@ instance_methods:
       - `opts.end` Number. Where in the history to stop reading.
       - `opts.reverse` Boolean. Reverse the order given?
       - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
-      - returns Promise&lt;Array&lt;Object&gt;&gt;
+      - returns `Promise<Array<Object>>`
 
       Returns an array of objects:
 
@@ -405,7 +405,7 @@ instance_methods:
       Download the given file or folder, and return when finished.
 
       - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
-      - returns Promise&lt;void&gt;
+      - returns `Promise<void>`
 
       <figcaption class="code">example</figcaption>
       ```js
@@ -427,7 +427,7 @@ instance_methods:
 
       - `'changed' ({path: string})` The contents of the file has changed, either by a local write or a remote write. The new content will be ready when this event is emitted.
         - `path` is the path-string of the file.
-      - `'invalidated' ({path: string})` The contents of the file has changed remotely, but it hasn't been downloaded yet. 
+      - `'invalidated' ({path: string})` The contents of the file has changed remotely, but it hasn't been downloaded yet.
         - `path` is the path-string of the file.
 
       <figcaption class="code">example</figcaption>
@@ -455,7 +455,7 @@ instance_methods:
     desc: |
       Watch for network events. Provides an `EventTarget` with a `.close()` method and the following events:
 
-      - `'network-changed' ({connections})` The number of connections has changed. 
+      - `'network-changed' ({connections})` The number of connections has changed.
         - `connections` is a number.
       - `'download' ({feed,block,bytes})` A block has been downloaded.
         - `feed` will either be `"metadata"` or `"content"`.

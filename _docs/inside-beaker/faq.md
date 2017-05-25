@@ -7,13 +7,12 @@ order: 2
 
 
 Is your question not answered here?
-**[Open an issue](https://github.com/beakerbrowser/beakerbrowser.com)** and let us know.
+[Open an issue](https://github.com/beakerbrowser/beakerbrowser.com) and let us know.
 
 ### What are Dat archives?
 
-Dat Archives are bundles of files that are shared in a Peer-to-Peer network.
-They are similar to Torrents, except that they are changeable, versioned, and privately shareable.
-In Beaker, they act as web-sites.
+Dat Archives are bundles of files that are shared in a peer-to-peer network.
+They are similar to Torrents, except that they are changeable, versioned, and privately shareable. In Beaker, they act as websites.
 
 [You can read more about the Dat protocol here.](/docs/inside-beaker/dat-files-protocol.html)
 
@@ -25,8 +24,11 @@ Like this:
 dat://54f74fe89d7779946343ec6db9618631e4dbf43bece2a125d0099103741963c9/
 ```
 
-They work just like regular URLs, except that the "hostname" is a 64-character hex number.
-You can reference specific files by putting the path at the end.
+They work just like regular URLs, except that the "hostname" is a 64-character hex number. You can reference specific files by putting the path at the end:
+
+```
+dat://54f74fe89d7779946343ec6db9618631e4dbf43bece2a125d0099103741963c9/index.html
+```
 
 ### Can I use DNS to create short URLs?
 
@@ -36,10 +38,8 @@ You can [with the DatHTTPD server](https://github.com/beakerbrowser/dathttpd).
 ### Is the network anonymous?
 
 **No!**
-This is very important to understand:
-If any other user has the link to a Dat site, they'll be able to see
-your requests for it, and they'll know your IP.
-Browsing Dat sites is therefore not anonymous.
+
+This is very important to understand: If any other user has the link to a Dat site, they'll be able to see your requests for it, and they'll know your IP address. Browsing Dat sites is therefore not anonymous.
 
 ### Is the Dat Protocol encrypted?
 

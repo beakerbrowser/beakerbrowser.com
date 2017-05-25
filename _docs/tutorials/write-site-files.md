@@ -18,18 +18,18 @@ DatArchive.create({title: 'Write site files tutorial'})
   })
 ```
 
-When you run this snippet, you’ll see the following dialog appear. Hit ‘Create site’:
+When you run this snippet, you’ll see the following dialog appear. Click “Create site”:
 
 <figure>
-<img src="/img/docs/tut-write-site-files/modal.png" >
-<figcaption>Click "Create site" on this modal</figcaption>
+<img data-src="/img/docs/tut-write-site-files/modal.jpg" >
+<figcaption>Click "Create site"</figcaption>
 </figure>
 
 You should see this appear in your devtools console:
 
 <figure>
-<img src="/img/docs/tut-write-site-files/create-site.png" >
-<figcaption>The output of DatArchive.create()</figcaption>
+<img data-src="/img/docs/tut-write-site-files/create-site.jpg" >
+<figcaption>The output of <code>DatArchive.create()</code></figcaption>
 </figure>
 
 ## Setup
@@ -48,14 +48,14 @@ async function main () {
 }
 ```
 
-Refresh the page, and you should see this in your devtools:
+Refresh the page, and you should see an empty array logged in your console:
 
 <figure>
-<img src="/img/docs/tut-write-site-files/readdir.png" >
-<figcaption>The output of archive.readdir('/')</figcaption>
+<img data-src="/img/docs/tut-write-site-files/readdir.jpg" >
+<figcaption>The output of <code>archive.readdir('/')</code></figcaption>
 </figure>
 
-## mkdir
+## `mkdir`
 
 As you can see, the archive is empty. Let’s change that by adding a folder. Add the following snippet to the end of your main function:
 
@@ -72,11 +72,11 @@ try {
 If you refresh the page, you should see this:
 
 <figure>
-<img src="/img/docs/tut-write-site-files/mkdir.png" >
-<figcaption>The output of archive.mkdir('/stuff')</figcaption>
+<img data-src="/img/docs/tut-write-site-files/mkdir.jpg" >
+<figcaption>The output of <code>archive.mkdir('/stuff')</code></figcaption>
 </figure>
 
-## writeFile (string)
+## `writeFile (string)`
 
 Now let’s add a file. Add this to the end of your main function:
 
@@ -89,18 +89,18 @@ console.log('Wrote', archive.url + '/hello.txt')
 If you refresh the page, you should see something like this:
 
 <figure>
-<img src="/img/docs/tut-write-site-files/writefile.png" >
-<figcaption>The output of archive.writeFile()</figcaption>
+<img data-src="/img/docs/tut-write-site-files/writefile.jpg" >
+<figcaption>The output of <code>archive.writeFile()</code></figcaption>
 </figure>
 
 If you open that URL, you’ll see this:
 
 <figure>
-<img src="/img/docs/tut-write-site-files/writefile-view.png" >
-<figcaption>The output of hello.txt</figcaption>
+<img data-src="/img/docs/tut-write-site-files/writefile-view.png" >
+<figcaption>The content of hello.txt</figcaption>
 </figure>
 
-## writeFile (binary)
+## `writeFile (binary)`
 
 Now let’s try a binary file. Add this to your main function:
 
@@ -115,15 +115,15 @@ console.log('Wrote', archive.url + '/beaker.png')
 If you refresh the page, you should see something like this:
 
 <figure>
-<img src="/img/docs/tut-write-site-files/writefile2.png" >
-<figcaption>The output of archive.writeFile()</figcaption>
+<img data-src="/img/docs/tut-write-site-files/writefile2.jpg" >
+<figcaption>The output of <code>archive.writeFile()</code></figcaption>
 </figure>
 
 If you open that URL, you’ll see this:
 
 <figure>
-<img src="/img/docs/tut-write-site-files/writefile2-view.png" >
-<figcaption>The output of logo.png</figcaption>
+<img data-src="/img/docs/tut-write-site-files/writefile2-view.jpg" >
+<figcaption>The content of logo.png</figcaption>
 </figure>
 
 ## Summary

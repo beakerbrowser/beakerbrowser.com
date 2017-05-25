@@ -7,7 +7,7 @@ order: 9
 
 The [DatArchive API](/docs/apis/dat.html) provides a simple set of APIs to listen for changes to a file, whether the file is locally owned or remote. After instantiating an archive instance and making changes, you can call `createFileActivityStream()`.
 
-## createFileActivityStream
+## `createFileActivityStream`
 
 Start with the [site you created in the Writing site files tutorial](http://localhost:4000/docs/tutorials/write-site-files.html). Add the following code to the end of the main function:
 
@@ -33,7 +33,7 @@ archive.writeFile('/foo.txt', 'bar')
 You should see this appear in your console:
 
 <figure>
-<img src="/img/docs/tut-listen-for-file-changes/changed.png" >
+<img data-src="/img/docs/tut-listen-for-file-changes/changed.png" >
 <figcaption>The 'changed' event</figcaption>
 </figure>
 

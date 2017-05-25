@@ -5,7 +5,7 @@ sectionTitle: Tutorials
 order: 2
 ---
 
-Because we’re huge fans of [Markdown](https://daringfireball.net/projects/markdown/syntax), we included Markdown rendering in Beaker. You can create a markdown site very easily. First, [create a new site](/docs/using-beaker/create-a-site.html). Then, add an `index.md`:
+We're huge fans of [Markdown](https://daringfireball.net/projects/markdown/syntax), so we included Markdown rendering in Beaker. Creating a markdown site is easy. First, [create a new site](/docs/using-beaker/create-a-site.html). Then, add an `index.md`:
 
 <figcaption class="code">/index.md</figcaption>
 ```
@@ -17,7 +17,7 @@ This is my **cool** markdown site!
 When you open the site, you'll see the markdown is rendered as html.
 
 <figure>
-<img src="/img/docs/tut-create-a-markdown-site/index.md.png" >
+<img data-src="/img/docs/tut-create-a-markdown-site/index.md.jpg" >
 <figcaption>The index.md will be rendered as html</figcaption>
 </figure>
 
@@ -43,7 +43,7 @@ For convenience, Beaker also supports a `/nav.md` file:
 The content of `/nav.md` is automatically inserted into each page to provide navigation.
 
 <figure>
-<img src="/img/docs/tut-create-a-markdown-site/with-nav.png" >
+<img data-src="/img/docs/tut-create-a-markdown-site/with-nav.jpg" >
 <figcaption>The index.md with a nav.md file</figcaption>
 </figure>
 

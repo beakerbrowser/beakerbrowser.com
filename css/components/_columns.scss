@@ -1,15 +1,21 @@
 .columns {
-  display: flex;
-  flex-wrap: wrap;
+  column-gap: 2rem;
+  -webkit-column-gap: 2rem;
+  -moz-column-gap: 2rem;
+
+  column-width: 275px;
+  -webkit-column-width: 275px;
+  -moz-column-width: 275px;
+
+  &.two {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
 
   div {
-    flex: 0 0 50%;
-
-    &:nth-child(even) {
-      padding-left: 1.5em;
-    }
-    &:nth-child(odd) {
-      padding-right: 1.5em;
-    }
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
 }

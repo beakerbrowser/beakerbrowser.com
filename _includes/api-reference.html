@@ -1,7 +1,16 @@
 {% for item in include.items %}
-  <h2 id="{{ item.name | slugify }}">
-    {% if item.experimental %}<i class="fa fa-flask" title="Experimental. API may change"></i>{% endif %}
-    <span>{% if item.signature %}{{ item.signature }}{% else %}{{ item.name }}{% endif %}</span>
-  </h2>
+  <h3 id="{{ item.name | slugify }}">
+    {% if item.experimental %}
+      <i class="fa fa-flask" title="Experimental. API may change"></i>
+    {% endif %}
+
+    <code>
+      {% if item.signature %}
+        {{ item.signature }}
+      {% else %}
+        {{ item.name }}
+      {% endif %}
+    </code>
+  </h3>
   <div>{{ item.desc | markdownify }}</div>
 {% endfor %}

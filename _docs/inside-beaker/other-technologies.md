@@ -5,7 +5,7 @@ sectionTitle: Inside Beaker
 order: 4
 ---
 
-Beaker was started during an explosion of peer-to-peer protocol development in Spring 2016. A short list of those protocols includes [Bitcoin](https://bitcoin.org/), [Ethereum](https://www.ethereum.org/), [Namecoin](https://www.namecoin.org/), [BlockStack](https://blockstack.org/), [Zeronet](https://zeronet.io/), [IPFS](https://ipfs.io/), [Secure Scuttlebutt](https://www.scuttlebutt.nz/), [WebTorrent](https://webtorrent.io/), and [Dat](https://datproject.org/).
+Beaker was started in the Spring of 2016, following an explosion of peer-to-peer and decentralized protocol development. A short list of those protocols includes [Bitcoin](https://bitcoin.org/), [Ethereum](https://www.ethereum.org/), [Namecoin](https://www.namecoin.org/), [Blockstack](https://blockstack.org/), [Zeronet](https://zeronet.io/), [IPFS](https://ipfs.io/), [Secure Scuttlebutt](https://www.scuttlebutt.nz/), [WebTorrent](https://webtorrent.io/), and [Dat](https://datproject.org/).
 
 These protocols can be broadly categorized as either Blockchain Variants and BitTorrent Variants.
 
@@ -32,7 +32,7 @@ Moving past the original Bittorrent design, Elliptic curve cryptography can now 
 
 ## Why Dat instead of IPFS
 
-The Bittorrent variants share many features, and at the formation of Beaker, IPFS was the presumptive choice. However, differences in design goals made Dat our ultimate choice.
+The Bittorrent variants share many features, and at Beaker's formation, IPFS was the presumptive choice. However, differences in design goals made Dat our ultimate choice.
 
  - IPFS exchanges static hash-addressed blobs. While it does provide “mutable” public-key-addressed blobs, it is not as well-developed as Dat’s auditable archive histories. We favored the better mutability featureset of Dat for Beaker.
  - IPFS made a decision to break from the standard URL format, which was incompatible with Beaker’s goals. We want to use a URL scheme which mirrors the existing HTTP/S format as closely as possible.

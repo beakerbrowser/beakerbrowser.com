@@ -12,7 +12,7 @@ Beaker is built by a team of decentralizated Web enthusiasists with a history of
 
 <div class="team-members">
   <div class="team-member">
-    <img src="/img/team/pfrazee.jpg">
+    <img data-src="/img/team/pfrazee.jpg">
     <div class="info">
       <h3>Paul Frazee</h3>
       <ul>
@@ -33,7 +33,7 @@ Beaker is built by a team of decentralizated Web enthusiasists with a history of
   </div>
 
   <div class="team-member">
-    <img src="/img/team/taravancil.jpg">
+    <img data-src="/img/team/taravancil.jpg">
     <div class="info">
       <h3>Tara Vancil</h3>
       <ul>
@@ -59,7 +59,7 @@ Beaker is built by a team of decentralizated Web enthusiasists with a history of
 Beaker is free and open-source, and has received contributions from some awesome hackers.
 
 <div class="team-member">
-  <img src="/img/team/pogapo.jpg">
+  <img data-src="/img/team/pogapo.jpg">
   <div class="info">
     <h3>Poga Po</h3>
     <ul>

@@ -5,6 +5,8 @@ sectionTitle: Inside Beaker
 order: 2
 ---
 
+Beaker can’t yet protect browsing habits, but it provides much better protection of the user’s data, including messages, documents, and contacts. Compared to current Web services, which store all user data in the clear for the operators to read, Beaker stores user content on the device, and provides encrypted peer-to-peer transmission of the files.
+
 <table class="basic-table">
   <tr>
     <th>Browsing privacy</th><td>No.</td>
@@ -16,8 +18,6 @@ order: 2
     <th>Secret sharing</th><td>Yes.</td>
   </tr>
 </table>
-
-Beaker can’t yet protect browsing habits, but it provides much better protection of the user’s data, including messages, documents, and contacts. Compared to current Web services, which store all user data in the clear for the operators to read, Beaker stores user content on the device, and provides encrypted peer-to-peer transmission of the files.
 
 ## Browsing privacy
 
@@ -31,7 +31,7 @@ Rather than using remote services, Dat sites write user data to the local device
 
 ## Secret sharing
 
-Beaker provides a unique means for sharing files privately between peers, without revealing the content to a third-party. Dat URLs are secrets which ensure that only users in possession of the URL can discover the Dat or read its network traffic. This is accomplished by two mechanisms:
+Beaker provides a unique means for sharing files privately between peers, without revealing the content to a third party. Dat URLs are secrets which ensure that only users in possession of the URL can discover the Dat or read its network traffic. This is accomplished by two mechanisms:
 
 1. Discovery hashing. When the Dat protocol enters the swarm, it contacts multiple overlapping “discovery networks” to find peers. To disguise which site the user is requesting, Dat applies a one-way HMAC to the URL.
 2. Transport encryption. Once in contact with peers, Dat uses the 32-byte public key as a symmetric key to encrypt the network traffic.
@@ -42,6 +42,6 @@ Read the [Dat whitepaper](https://github.com/datproject/docs/tree/master/papers)
 
 ## Site integrity
 
-The Dat protocol ensures that the archive is signed by the author, and can be checked for correctness by querying network peers (distribution uniformity). Only one version of the archive’s history can be distributed. If a signed Dat archive is found to differ from a peer’s signed copy, it is treated as corrupt, as the differing content could indicate a targeted attack by the Dat author. It’s important that all users receive the same content, and that’s why Dat has integrity verification built in
+The Dat protocol ensures that the archive is signed by the author, and can be checked for correctness by querying network peers (distribution uniformity). Only one version of the archive’s history can be distributed. If a signed Dat archive is found to differ from a peer’s signed copy, it is treated as corrupt, as the differing content could indicate a targeted attack by the Dat author. It’s important that all users receive the same content, and that’s why Dat has integrity verification built in.
 
 Beaker uses content-security policies to ensure that only the archive source assets are executed in the application sandbox.

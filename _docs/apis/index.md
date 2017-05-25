@@ -11,11 +11,7 @@ order: 1
 }
 </style>
 
-<p class="doc-summary">
-  Learn how to write applications in Beaker.
-</p>
-    
-<div class="columns">
+<div class="columns two">
 
 <div>
 <h3>Tutorials</h3>
@@ -47,7 +43,7 @@ order: 1
 
 ## Core concepts
 
-<div class="columns">
+<div class="columns two">
 
 <div>
 <h3>Peer-to-peer hosting</h3>
@@ -61,7 +57,7 @@ order: 1
 
 <div>
 <h3>Dat staging area</h3>
-<p>Like Git, Beaker maintains a “staging area” for each Dat the user creates or saves. This staging area allows the user to make local changes to the Dat before publishing. In addition to helping prevent changes from accidentally being published, this saves bandwidth, processing time, and disk space. At any point, the user can either “commit” the changes to the Dat, or “revert” to the last committed stage. These concepts apply to the Web APIs as well.</p>
+<p>Like Git, Beaker maintains a “staging area” for each Dat the user creates or saves. This staging area allows the user to make local changes to the Dat before publishing. In addition to helping prevent changes from accidentally being published, this saves bandwidth, processing time, and disk space. At any point, the user can either “commit” the changes to the Dat, or “revert” to the last committed stage.</p>
 </div>
 
 <div>
@@ -71,12 +67,12 @@ order: 1
 
 <div>
 <h3>Hostless sandbox</h3>
-<p>Traditionally, Web sites can use Ajax to freely can freely contact their hosting server. However, Dat sites are served from the peer-to-peer swarm, not from a hosting server. Therefore there is no remote host attached to the domain, and all remote requests to non-Dat URLs require a request for permission.</p>
+<p>Traditionally, websites can use Ajax to freely can freely contact their hosting server. However, Dat sites are served from the peer-to-peer swarm, not from a hosting server. Therefore there is no remote host attached to the domain, and all remote requests to non-Dat URLs require a request for permission.</p>
 </div>
 
 <div>
 <h3>Dat files API</h3>
-<p>Beaker provides a complete Web API for reading, writing, and watching Dats from within a site. Only sites hosted over the dat:// protocol can access the API. No permission is currently required to read Dats, but permission is required to write. (Reads may be permissioned in the future, depending on their potential for abuse.)</p>
+<p>Beaker provides a complete Web API for reading, writing, and watching Dats from within a site. Only sites hosted over the <code>dat://</code> protocol can access the API. No permission is currently required to read Dats, but permission is required to write. (Reads may be permissioned in the future, depending on their potential for abuse.)</p>
 </div>
 
 </div>
