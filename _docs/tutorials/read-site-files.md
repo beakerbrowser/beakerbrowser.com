@@ -32,7 +32,7 @@ console.log(files)
 If you save and refresh the page, you should see the following output in your console:
 
 <figure>
-<img src="/img/docs/tut-read-site-files/readdir.png" >
+<img src="/img/docs/tut-read-site-files/readdir.jpg" >
 <figcaption>The output of archive.readdir('/')</figcaption>
 </figure>
 
@@ -47,7 +47,7 @@ console.log(files)
 Now you should see this:
 
 <figure>
-<img src="/img/docs/tut-read-site-files/readdir-recursive.png" >
+<img src="/img/docs/tut-read-site-files/readdir-recursive.jpg" >
 <figcaption>The output of archive.readdir('/', {recursive: true})</figcaption>
 </figure>
 
@@ -66,7 +66,7 @@ console.log(indexJs)
 Reload the page and you should see this:
 
 <figure>
-<img src="/img/docs/tut-read-site-files/readfile.png" >
+<img src="/img/docs/tut-read-site-files/readfile.jpg" >
 <figcaption>The output of archive.readFile('/js/index.js')</figcaption>
 </figure>
 
