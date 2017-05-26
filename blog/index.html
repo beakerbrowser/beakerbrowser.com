@@ -5,18 +5,27 @@ layout: blog
 
 <div class="container">
   <h1>Blog</h1>
-  <ul class="post-list">
+  <div class="post-list">
     {% for post in site.posts %}
-      <li>
+      <div class="post">
         <h2 class="title">
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+          <a class="post-link" href="{{ post.url }}">{{ post.title | escape }}</a>
         </h2>
-        <div class="info">
-          <a class="author" href="{{ post.authorLink }}">{{ post.author }}</a>
-          on
-          <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <p class="post-meta">
+          <img class="avatar" src="{{ post.avatar }}" />
+          <span class="info">
+            <a href="{{ post.authorLink}}" class="author">{{ post.author }}</a>
+            on
+            <time datetime="{{ post.date }}" class="time">
+              {{ post.date | date: "%b %-d, %Y" }}
+            </time>
+          </span>
+        </p>
+        <div class="summary">
+          {{ post.summary | markdownify }}
         </div>
-      </li>
+        <a class="read-more" href="{{ post.url }}">Read more</a>
+      </div>
     {% endfor %}
-  </ul>
+  </div>
 </div>
