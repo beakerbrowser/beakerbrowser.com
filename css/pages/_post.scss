@@ -4,14 +4,24 @@
     border-bottom: 0;
   }
 
+  .container {
+    max-width: 1000px;
+  }
+
   main {
     min-height: calc(100vh - 56px - 70px);
     max-width: 700px;
-    padding: 3rem 0;
+    margin: 2rem 1rem;
     font-size: .9rem;
+    word-wrap: break-word;
 
     a {
-      text-decoration: underline;
+      color: $primary;
+      text-decoration: none !important;
+
+      &:hover {
+        text-decoration: underline !important;
+      }
     }
 
     h1,
@@ -21,6 +31,10 @@
     h5,
     h6 {
       margin-bottom: 1rem;
+    }
+
+    @include respond-to(tablet) {
+      margin: 3rem;
     }
   }
 
@@ -58,8 +72,8 @@
     margin-left: 20px;
   }
 
+  ul,
   p {
-
     &:not(:last-child) {
       margin-bottom: 1.5rem;
     }
