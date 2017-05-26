@@ -6,7 +6,7 @@ order: 1
 ---
 
 Creating a blog on Beaker is easy to do with a static site generator. In this
-tutoril, we’ll use [Jekyll](https://jekyllrb.com/). Start by following their instructions for creating a new blog:
+tutorial, we’ll use [Jekyll](https://jekyllrb.com/). Start by following their instructions for creating a new blog:
 
 <figcaption class="code">bash</figcaption>
 ```bash
