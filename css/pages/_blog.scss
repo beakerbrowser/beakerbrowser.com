@@ -1,10 +1,36 @@
 .layout-blog {
 
+  h1 {
+    margin-bottom: 1rem;
+  }
+
   .header .container {
     border-bottom: 0;
   }
 
   main {
     min-height: calc(100vh - 56px - 70px);
+    margin: 3rem 0;
+  }
+
+  .post-list {
+    list-style: none;
+  }
+
+  .author {
+    color: $primary;
+  }
+
+  .info {
+    color: $text--light-bg-muted;
+  }
+
+  li {
+    font-size: .85rem;
+    margin-bottom: 1.5rem;
+
+    .title {
+      margin-bottom: 0;
+    }
   }
 }

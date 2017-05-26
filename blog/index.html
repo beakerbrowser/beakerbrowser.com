@@ -4,14 +4,18 @@ layout: blog
 ---
 
 <div class="container">
-  <h1>Beaker browser blog</h1>
+  <h1>Blog</h1>
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <h2>
+        <h2 class="title">
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
         </h2>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <div class="info">
+          <a class="author" href="{{ post.authorLink }}">{{ post.author }}</a>
+          on
+          <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        </div>
       </li>
     {% endfor %}
   </ul>
