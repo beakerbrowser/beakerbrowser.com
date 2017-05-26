@@ -1,0 +1,31 @@
+---
+title: Beaker Blog
+layout: blog
+---
+
+<div class="container">
+  <h1>Blog</h1>
+  <div class="post-list">
+    {% for post in site.posts %}
+      <div class="post">
+        <h2 class="title">
+          <a class="post-link" href="{{ post.url }}">{{ post.title | escape }}</a>
+        </h2>
+        <p class="post-meta">
+          <img class="avatar" src="{{ post.avatar }}" />
+          <span class="info">
+            <a href="{{ post.authorLink}}" class="author">{{ post.author }}</a>
+            on
+            <time datetime="{{ post.date }}" class="time">
+              {{ post.date | date: "%b %-d, %Y" }}
+            </time>
+          </span>
+        </p>
+        <div class="summary">
+          {{ post.summary | markdownify }}
+        </div>
+        <a class="read-more" href="{{ post.url }}">Read more</a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
