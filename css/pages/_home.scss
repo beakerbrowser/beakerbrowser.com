@@ -261,6 +261,21 @@
       padding-top: 3rem;
       overflow: hidden;
 
+      img.full {
+        display: none;
+      }
+
+      @media (min-width: 600px) {
+
+        img.cropped {
+          display: none;
+        }
+
+        img.full {
+          display: block;
+        }
+      }
+
       @include respond-to (show-grid-2) {
         padding-top: 6rem;
       }
