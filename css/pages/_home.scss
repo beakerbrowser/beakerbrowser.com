@@ -424,6 +424,7 @@
     .container {
       @extend %grid-2;
       margin: auto;
+      overflow: hidden;
     }
 
     .info {
@@ -486,7 +487,7 @@
         right: -74px;
       }
 
-      @media (min-width: 425px) {
+      @media (min-width: 410px) {
         padding: 1rem !important;
 
         code {
