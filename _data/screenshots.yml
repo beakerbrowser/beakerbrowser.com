@@ -1,5 +1,5 @@
 - src: /img/ss/peer-count.jpg
-  title: "Create peer-to-peer websites"
+  title: "<i class=\"fa fa-pencil\"></i> Create peer-to-peer websites"
   desc: |
     <p>Create and share websites for free, with no advertising and no third-party
     services, directly from your device.</p>
@@ -7,13 +7,13 @@
     peer-to-peer network, so you don't have to pay hosting costs.</p>
   orientation: left
 - src: /img/ss/fork-site.jpg
-  title: "Fork websites and applications"
+  title: "<i class=\"fa fa-code-fork\"></i> Fork websites and applications"
   desc: |
     <p>Live creatively with open-source web applications. Any peer-to-peer website
     can be copied to your device to remix, remake, and reshare.</p>
   orientation: left
 - src: /img/ss/secret-sharing.jpg
-  title: "Share files secretly"
+  title: "<i class=\"fa fa-lock\"></i> Share files secretly"
   desc: |
     <p>Your recipient downloads your files directly from your computer. Only
     people who know the site’s URL can decrypt and download the files.</p>
