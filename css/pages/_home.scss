@@ -271,8 +271,12 @@
 
     .screenshot-container {
       border-bottom: 1px solid $gray--mid;
-      padding-top: 6em;
+      padding-top: 3rem;
       overflow: hidden;
+
+      @include respond-to (show-grid-2) {
+        padding-top: 6rem;
+      }
 
       img[data-src] {
         opacity: 0;
