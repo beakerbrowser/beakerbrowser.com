@@ -42,23 +42,15 @@
 
   .intro {
     margin: inherit auto;
-    text-align: left;
-
-    @media (min-width: 700px) {
-      text-align: center;
-    }
+    text-align: center;
 
     > .description {
-      font-size: .95rem;
+      font-size: 1.05rem;
       max-width: 700px;
-      margin: 0 auto 2rem auto;
+      margin: 0 auto 3rem auto;
 
       @media (min-width: 700px) {
-        font-size: 1rem;
-      }
-
-      @media (min-width: 1000px) {
-        font-size: 1.05rem;
+        font-size: 1.25rem;
       }
 
       a {
@@ -68,22 +60,31 @@
 
     .cta {
       font-weight: 600;
-      font-size: 1rem;
-      margin-bottom: 3rem;
+      font-size: 0.95rem;
+      margin-bottom: 3.25rem;
+
+      @media (min-width: 350px) {
+        font-size: 1.25rem;
+      }
     }
   }
 
   .tagline {
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-size: 1.3rem;
+    font-weight: bold;
     margin-bottom: 1.5rem;
 
-    @media (min-width: 700px) {
-      font-size: 1.65rem;
+    @media (min-width: 350px) {
+      font-size: 1.6rem;
+      font-weight: 400;
     }
 
-    @media (min-width: 1000px) {
-      font-size: 2rem;
+    @media (min-width: 530px) {
+      font-size: 2.3rem;
+    }
+
+    @media (min-width: 700px) {
+      font-size: 2.6rem;
     }
   }
 
@@ -822,6 +823,6 @@
 body.layout-default {
 
   .header .container {
-    padding: 25px 0;
+    padding: 25px 10px;
   }
 }
