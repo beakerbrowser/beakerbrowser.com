@@ -45,12 +45,12 @@
     text-align: center;
 
     > .description {
-      font-size: 1.05rem;
+      font-size: .95rem;
       max-width: 700px;
       margin: 0 auto 3rem auto;
 
       @media (min-width: 700px) {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
       }
 
       a {
@@ -64,7 +64,7 @@
       margin-bottom: 3.25rem;
 
       @media (min-width: 350px) {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
       }
     }
   }
@@ -81,10 +81,6 @@
 
     @media (min-width: 530px) {
       font-size: 2.3rem;
-    }
-
-    @media (min-width: 700px) {
-      font-size: 2.6rem;
     }
   }
 
