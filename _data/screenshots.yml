@@ -1,16 +1,20 @@
 - src: /img/ss/peer-count.jpg
-  title: "Host websites"
-  desc:
-    "<p>Your files are hosted on a peer-to-peer network, so you can publish
-     without depending on a third-party server.</p><p>Visitors to your site help
-     rehost your files, which offloads the cost of bandwidth for popular sites.</p>"
+  title: "Create peer-to-peer websites"
+  desc: |
+    <p>Create and share websites for free, with no advertising and no third-party
+    services, directly from your device.</p>
+    <p>Visitors to your site rehost your files automatically on the
+    peer-to-peer network, so you don't have to pay hosting costs.</p>
+  orientation: left
+- src: /img/ss/fork-site.jpg
+  title: "Fork websites and applications"
+  desc: |
+    <p>Live creatively with open-source web applications. Any peer-to-peer website
+    can be copied to your device to remix, remake, and reshare.</p>
   orientation: left
 - src: /img/ss/secret-sharing.jpg
   title: "Share files secretly"
-  desc:
-    "<p>Beaker enables <em>truly secret file sharing</em>. Files published with
-     the Dat protocol are secret by default — only people who know the site’s
-     URL can decrypt and download its files.</p><p>When you share a URL,
-     your recipient can download its files directly from your
-     computer. No third-party service required.</p>"
-  orientation: right
+  desc: |
+    <p>Your recipient downloads your files directly from your computer. Only
+    people who know the site’s URL can decrypt and download the files.</p>
+  orientation: left
