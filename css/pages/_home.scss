@@ -731,9 +731,13 @@
   &__list {
     @extend %col-2-5;
     font-size: .9rem;
-    padding: 2em 2em 2em 3.5em;
+    padding: 1rem;
     margin: auto;
     text-align: left;
+
+    @include respond-to(show-grid-5) {
+      padding: 2rem 2rem 2rem 3.5rem;
+    }
   }
 
   a {
