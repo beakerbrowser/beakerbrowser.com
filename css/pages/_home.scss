@@ -503,10 +503,6 @@
       @include respond-to(show-grid-2) {
         margin-top: 0;
         margin-bottom: 0 !important;
-        // border: 0 !important;
-        // border-left: 1px solid $gray--mid !important;
-        // background: $gray--light !important;
-        // padding: 0 0 0 1.5rem !important;
 
         &:before,
         &:after {
