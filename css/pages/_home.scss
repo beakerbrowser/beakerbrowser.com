@@ -449,17 +449,56 @@
       @extend %col-1-2;
     }
 
+    code {
+      font-size: 11.5px;
+    }
+
     .highlight {
       @extend %code-block;
+      padding: 1rem 0 !important;
       background: #fff !important;
       border: 0;
       border-top: 1px solid $gray--mid;
       border-bottom: 1px solid $gray--mid;
-      padding-top: 1rem;
       text-align: left;
       margin-top: 1.5rem;
       margin-bottom: 3rem !important;
       position: relative;
+
+      &:after,
+      &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        height: 100%;
+        background: #fff;
+        border-bottom: 1px solid $gray--mid;
+        border-top: 1px solid $gray--mid;
+        width: 75px;
+        top: -1px;
+      }
+
+      &:before {
+        left: -74px;
+      }
+
+      &:after {
+        right: -74px;
+      }
+
+      @media (min-width: 425px) {
+        padding: 1rem !important;
+
+        code {
+          font-size: 13px;
+        }
+
+        &:after,
+        &:before {
+          display: none;
+        }
+
+      }
 
       @include respond-to(show-grid-2) {
         margin-top: 0;

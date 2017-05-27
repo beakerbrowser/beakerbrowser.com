@@ -108,7 +108,7 @@ var archive = await DatArchive.create({
   title: 'My Site',
   description: 'My peer-to-peer website'
 })
-await archive.writeFile('/hello.txt', 'hello, world!')
+await archive.writeFile('/hello.txt', 'hello')
 await archive.commit()
 
 console.log(archive.url)
