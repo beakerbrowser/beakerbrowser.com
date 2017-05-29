@@ -188,6 +188,14 @@
     p {
       margin-bottom: 2rem;
       font-style: italic;
+
+      &.more {
+        margin-top: 2rem;
+        font-style: normal;
+        a {
+          @extend %link;
+        }
+      }
     }
 
     h2 {

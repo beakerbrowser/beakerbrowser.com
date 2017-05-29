@@ -7,8 +7,8 @@
 -
   question: "How do I view a specific version of a site?"
   answer:
-    "<p>To view a site at a given version, simply add <code>+{versionNumber}</code>
-     at the end of the site’s URL.</p>"
+    "<p>Beaker's peer-to-peer websites are versioned. To view a site at a previous
+    version, simply add <code>+{versionNumber}</code> to the end of the site’s domain.</p>"
 -
   question: "Who can see websites I publish with Beaker?"
   answer:
