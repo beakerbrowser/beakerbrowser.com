@@ -817,3 +817,41 @@ body.layout-default {
     padding: 25px 10px;
   }
 }
+
+#video-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0,0,0,0.5);
+
+  &.show {
+    display: block;
+  }
+
+  iframe {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 180px;
+
+    @media (min-width: 600px) {
+      width: 560px;
+      height: 315px;
+    }
+    @media (min-width: 800px) {
+      width: 640px;
+      height: 360px;
+      top: 50%;
+    }
+    @media (min-width: 1000px) {
+      width: 853px;
+      height: 480px;
+    }
+  }
+}

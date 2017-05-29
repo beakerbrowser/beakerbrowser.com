@@ -16,7 +16,10 @@ thumb: https://beakerbrowser.com/img/docs/tour-new-site.jpg
       </p>
 
       <div class="cta">
-        <a class="btn" href="/docs/">Learn more</a>
+        <a id="video-modal-btn" class="btn" href="https://www.youtube.com/watch?v=U2B9mwRFE8U">
+          <i class="fa fa-play" aria-hidden="true"></i>
+          Watch the video
+        </a>
         <a class="btn btn--action"
            href="/docs/install/">
           Install Beaker
@@ -349,5 +352,8 @@ console.log(archive.url)
   }
 })
 </script>
-<!-- Place this tag in your head or just before your close body tag. -->
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<div id="video-modal">
+  <iframe src="https://www.youtube.com/embed/U2B9mwRFE8U" frameborder="0" allowfullscreen></iframe>
+</div>
+<script src="/js/video-modal.js"></script>
