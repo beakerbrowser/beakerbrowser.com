@@ -74,3 +74,7 @@ Beaker is free and open-source, and has received contributions from some awesome
     </ul>
   </div>
 </div>
+
+## Code for Science
+
+Beaker works closely with [Code for Science](https://datproject.org/team), the team behind the Dat protocol. Code for Science is a 501(c)(3) non-profit.
