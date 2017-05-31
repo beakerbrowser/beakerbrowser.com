@@ -4,10 +4,11 @@ title: Building Markdown sites with Beaker
 author: Tara Vancil
 authorLink: https://twitter.com/taravancil
 avatar: /img/team/taravancil.jpg
+image: /img/blog/markdown-nav.jpg
 ---
 
-We're big fans of
-[Markdown](https://daringfireball.net/projects/markdown/syntax), so we've built
+We’re big fans of
+[Markdown](https://daringfireball.net/projects/markdown/syntax), so we’ve built
 in support for Markdown formatting to Beaker.
 
 Markdown rendering is turned on by default for all `.md` files, but you can easily switch between the raw and formatted file content.

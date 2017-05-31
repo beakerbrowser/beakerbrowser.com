@@ -16,15 +16,28 @@
     <link rel="icon" href="/img/favicon.png">
 
     <!-- social woo woo -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@BeakerBrowser">
-    <meta name="twitter:creator" content="@BeakerBrowser">
-    <meta name="og:title" content="Beaker | {{ page.title | default: "Peer-to-peer Web browser. No blockchain required." }}">
-    <meta name="og:description" content="{{ page.desc }}">
-    {% if page.thumb %}
-    <meta name="og:image" content="{{ page.thumb }}">
-    {% endif %}
 
+    {% if page.layout == 'post' %}
+      <meta name="twitter:site" content="@BeakerBrowser" />
+      <meta name="twitter:title" content="{{ page.title }}"/>
+      <meta name="twitter:description" content="{{ page.excerpt | markdownify | strip_html }}"/>
+      {% if page.image %}
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://beakerbrowser.com{{ page.image }}" />
+      {% else %}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:image" content="https://beakerbrowser.com/img/logo/256x256.png" />
+      {% endif %}
+    {% else %}
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="Beaker | {{ page.title | default: "Peer-to-peer Web browser. No blockchain required." }}">
+      <meta name="og:description" content="{{ page.desc }}">
+      {% if page.thumb %}
+        <meta name="og:image" content="{{ page.thumb }}">
+      {% endif %}
+    {% endif %}
   </head>
   <body class="layout-{{ page.layout }}">
     {% include header.html %}
