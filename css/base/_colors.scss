@@ -24,6 +24,7 @@ $gray--dark: mix($black, $white, 35%);
 $gray: mix($black, $white, 20%);
 $gray--mid: mix($black, $white, 15%);
 $gray--light: mix($black, $white, 3.5%);
+$gray--very-light: mix($black, $white, 2.5%);
 
 // text colors
 $text--dark-bg: transparentize($white, .03);

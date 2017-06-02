@@ -1,0 +1,68 @@
+.blog-sidebar {
+  @extend %antialiased;
+  display: none;
+  margin-left: 30px;
+
+  #sidebar-scrollwith {
+    width: 250px;
+
+    &.fixed {
+      position: fixed;
+      top: 50px;
+    }
+  }
+
+  .callout {
+    position: relative;
+    border-radius: 3px;
+    border: 1px solid $gray--mid;
+    font-size: .9rem;
+    padding: 50px 1em 0;
+    margin-top: 50px;
+
+    .logo {
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+
+      img {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
+    }
+
+    .tagline {
+      text-align: center;
+      color: #333;
+    }
+  }
+
+  a {
+    @extend %link;
+  }
+
+  p {
+    margin: 1em 0;
+  }
+
+  .sidebar-links {
+    text-align: center;
+    i {
+      margin-right: 5px;
+    }
+    a {
+      margin-right: 10px;
+    }
+  }
+
+  @include respond-to(show-blog-sidenav) {
+    display: block;
+  }
+}

@@ -3,8 +3,8 @@ title: Beaker Blog
 layout: blog
 ---
 
-<div class="container">
-  <h1>Blog</h1>
+<h1>Blog</h1>
+<div class="blog-columns">
   <div class="post-list">
     {% for post in site.posts %}
       <div class="post">
@@ -28,4 +28,5 @@ layout: blog
       </div>
     {% endfor %}
   </div>
+  {% include blog-sidebar.html %}
 </div>

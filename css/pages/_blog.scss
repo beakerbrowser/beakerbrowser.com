@@ -1,12 +1,8 @@
 .layout-blog {
 
-  h1 {
-    margin-bottom: 2rem;
-    color: $text--light-bg-muted;
-    border-bottom: 1px solid $gray--mid;
-    font-size: 1.1rem;
-    font-weight: normal;
-    padding-bottom: 0.5rem;
+  main {
+    min-height: calc(100vh - 56px - 70px);
+    margin: 2rem 0;
   }
 
   .header .container {
@@ -17,9 +13,32 @@
     max-width: 1000px;
   }
 
-  main {
-    min-height: calc(100vh - 56px - 70px);
-    margin: 2rem 0;
+  .blog-columns {
+    display: flex;
+
+    .post-list {
+      flex: 3;
+      max-width: 100%;
+
+      @include respond-to(tablet) {
+        max-width: 600px;
+        margin: 0 1em;
+      }
+    }
+
+    .blog-sidebar {
+      flex: 1;
+      min-width: 200px;
+    }
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+    color: $text--light-bg-muted;
+    border-bottom: 1px solid $gray--mid;
+    font-size: 1.1rem;
+    font-weight: normal;
+    padding-bottom: 0.5rem;
   }
 
   .avatar {
@@ -33,6 +52,9 @@
 
     h2 {
       margin-bottom: 0.5rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 
@@ -66,6 +88,7 @@
 
     p {
       margin: 1rem 0;
+      font-size: 0.9em;
     }
   }
 
