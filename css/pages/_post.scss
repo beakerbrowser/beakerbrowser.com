@@ -17,9 +17,13 @@
     }
 
     .blog-sidebar {
-      flex: 1;
-      min-width: 200px;
+      flex: 0 0 250px;
+      margin-left: auto;
       margin-top: 3em;
+
+      @include respond-to(shrink-blog-sidenav) {
+        flex: 0 0 300px;
+      }
     }
   }
 
