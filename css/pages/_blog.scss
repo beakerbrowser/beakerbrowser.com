@@ -48,7 +48,9 @@
   }
 
   .post {
-    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid $gray--mid;
 
     h2 {
       margin-bottom: 0.5rem;
