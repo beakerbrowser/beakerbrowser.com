@@ -103,4 +103,15 @@
       text-decoration: underline !important;
     }
   }
+
+  .twitter-tweet {
+    margin-bottom: 1.5rem !important;
+  }
+
+  blockquote {
+    font-style: italic;
+    color: $text--light-bg-muted;
+    margin-left: 20px;
+    margin-bottom: 1.5rem;
+  }
 }
