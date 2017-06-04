@@ -73,7 +73,7 @@ order: 1
         <li>
           <a href="/docs/tutorials/host-outside-of-beaker.html">
             <i class="orange fa fa-terminal"></i>
-            <span>Host your files using the Dat CLI</span>
+            <span>Host your files from a server</span>
           </a>
         </li>
         <li>
@@ -83,9 +83,9 @@ order: 1
           </a>
         </li>
         <li>
-          <a href="/docs/tutorials/listen-for-file-changes.html">
+          <a href="/docs/tutorials/read-site-files.html">
             <i class="teal fa fa-code"></i>
-            <span>Web APIs: Listen for file changes</span>
+            <span>Web APIs: Read site files</span>
           </a>
         </li>
       </ul>
