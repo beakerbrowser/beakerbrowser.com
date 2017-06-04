@@ -14,6 +14,8 @@ usingBeaker:
       url: /docs/using-beaker/create-a-site.html
     - title: Adding files to a site
       url: /docs/using-beaker/publishing-files.html
+    - title: Turning on Live reloading
+      url: /docs/using-beaker/live-reloading.html
     - title: Beaker’s Library
       url: /docs/using-beaker/library.html
     - title: The staging area
