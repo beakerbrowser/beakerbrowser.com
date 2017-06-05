@@ -4,7 +4,7 @@ title: Building Markdown sites with Beaker
 author: Tara Vancil
 authorLink: https://twitter.com/taravancil
 avatar: /img/team/taravancil.jpg
-image: /img/blog/markdown-nav.jpg
+image: /img/posts/markdown-sites/markdown-nav.jpg
 ---
 
 We’re big fans of
@@ -15,7 +15,7 @@ Markdown rendering is turned on by default for all `.md` files, but you can easi
 
 
 <figure>
-  <img src="/img/blog/markdown.jpg"/>
+  <img src="/img/posts/markdown-sites/markdown.jpg"/>
   <figcaption>Formatted Markdown vs. raw Markdown in Beaker</figcaption>
 </figure>
 
@@ -46,7 +46,7 @@ Once you've added a `nav.md` file, Beaker will render the
 navigation menu on all of Markdown pages in your project.
 
 <figure>
-  <img src="/img/blog/markdown-nav.jpg" />
+  <img src="/img/posts/markdown-sites/markdown-nav.jpg" />
   <figcaption>
     A Markdown site with navigation
   </figcaption>
