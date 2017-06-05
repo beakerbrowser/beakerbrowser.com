@@ -47,6 +47,8 @@ webAPIs:
         url: "#datarchive-create"
       - title: "DatArchive.fork(url, opts?)"
         url: "#datarchive-fork"
+      - title: "DatArchive.selectArchive(opts?)"
+        url: "#datarchive-selectarchive"
       - title: "DatArchive.resolveName(url)"
         url: "#datarchive-resolvename"
       - title: "url"
