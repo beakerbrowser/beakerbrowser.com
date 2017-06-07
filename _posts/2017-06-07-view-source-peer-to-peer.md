@@ -12,11 +12,16 @@ documents written in *plain text* that could be downloaded and viewed transparen
 
 <figure>
 <img src="/img/posts/view-source/netscape-view-source.gif">
-<figcaption>Early View-source. <a href="http://ueu.co/what-the-browsers-dont-show-you/">&mdash; ueu.co</a></figcaption>
+<figcaption>Early View source (<a href="http://ueu.co/what-the-browsers-dont-show-you/">ueu.co</a>)</figcaption>
 </figure>
 
 But most Web applications aren't composed of open documents anymore. Most
 are delivered as bundled, minified, and indecipherable versions of the original source. 
+
+<figure>
+<img src="/img/posts/view-source/minified-js.png"/>
+<figcaption>View source on a file when a source map isn't available</figcaption>
+</figure>
 
 From [Jenn Schiffer's Greater Than Code interview](https://www.greaterthancode.com/podcast/episode-020-jenn-schiffer/):
 
@@ -26,20 +31,23 @@ We agree. The Web is the fabric of so much innovation and creativity, but unfort
 
 ## View source in peer-to-peer websites
 
-The peer-to-peer Web can help.
+In Beaker, we use the [Dat peer-to-peer
+protocol](/docs/inside-beaker/dat-files-protocol.html) to host files and
+websites. Dat is similar to BitTorrent, but maintains many of the same characteristics as HTTP.
 
-The [Dat peer-to-peer
-protocol](/docs/inside-beaker/dat-files-protocol.html) behaves like BitTorrent mixed with HTTP. Instead of downloading just one file, **you download a
-file listing,** and can choose to view any file from that listing. This makes View Source
-more interesting!
+With Dat, instead of downloading just one file associated with a single `GET`
+request, you download a file listing, and can view any file from that listing.
+
+This changes the entire dynamic of how View source works, because now you can
+see the whole site!
 
 <figure>
 <img src="/img/posts/view-source/beaker-view-source.jpg">
-<figcaption>View-source in P2P shows the whole site.</figcaption>
+<figcaption><code>beaker://view-source</code> for a Dat website</figcaption>
 </figure>
 
-With Beaker and Dat, you can still minify your source code, but you can also ship the original source too. This means
-users can view the entire set of files used to generate the application code -- including all source files and build tools.
+With Beaker and Dat, you can still minify your source code, but you can ship the original source too. This means
+users can view the entire set of files used to generate the application code ― including all source files and build tools.
 
 ## An open source Web
 
