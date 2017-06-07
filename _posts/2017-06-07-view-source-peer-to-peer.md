@@ -4,7 +4,7 @@ title: View source on the peer-to-peer Web
 author: Tara Vancil
 authorLink: https://twitter.com/taravancil
 avatar: /img/team/taravancil.jpg
-image: /img/ss/fork-site-460x215.jpg
+image: /img/posts/view-source/netscape-view-source-cropped.jpg
 ---
 
 The spirit of openness has been baked into the Web since its formation. The Web was built to share
