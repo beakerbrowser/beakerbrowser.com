@@ -27,8 +27,12 @@
     }
 
     .blog-sidebar {
-      flex: 1;
-      min-width: 200px;
+      flex: 0 0 250px;
+      margin-left: auto;
+
+      @include respond-to(shrink-blog-sidenav) {
+        flex: 0 0 300px;
+      }
     }
   }
 
@@ -48,7 +52,9 @@
   }
 
   .post {
-    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid $gray--mid;
 
     h2 {
       margin-bottom: 0.5rem;

@@ -17,9 +17,13 @@
     }
 
     .blog-sidebar {
-      flex: 1;
-      min-width: 200px;
+      flex: 0 0 250px;
+      margin-left: auto;
       margin-top: 3em;
+
+      @include respond-to(shrink-blog-sidenav) {
+        flex: 0 0 300px;
+      }
     }
   }
 
@@ -116,5 +120,16 @@
     &:hover {
       text-decoration: underline !important;
     }
+  }
+
+  .twitter-tweet {
+    margin-bottom: 1.5rem !important;
+  }
+
+  blockquote {
+    font-style: italic;
+    color: $text--light-bg-muted;
+    margin-left: 20px;
+    margin-bottom: 1.5rem;
   }
 }

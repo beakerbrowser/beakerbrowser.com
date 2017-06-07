@@ -11,6 +11,10 @@ pre {
   font-size: .9rem;
 }
 
+mark {
+  background: $text--mark-bg;
+}
+
 %antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
