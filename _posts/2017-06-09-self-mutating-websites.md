@@ -22,7 +22,7 @@ forked copy will be able to write changes to itself.
 <figcaption>Forking a self-mutating site to make an editable copy that can write to itself.</figcaption>
 </figure>
 
-In the example above, the site writes to its own index.html to persist its changes.
+In the example above, the site writes to its own `index.html` to persist its changes.
 
 ## How do self-mutating websites work?
 
