@@ -7,13 +7,15 @@ avatar: /img/team/pfrazee.jpg
 image: /img/posts/self-mutating-websites/thumbnail.png
 ---
 
-In [Beaker 0.7.2](/2017/06/05/beaker-0-7-2.html), we made policy updates that enable an application-model we call "Self-mutating websites." In this post, I'll explain what they are and how to get the most out of them.
+In [Beaker 0.7.2](/2017/06/05/beaker-0-7-2.html), we made policy updates that enable an application model we call "Self-mutating websites." In this post, I'll explain what they are and how to get the most out of them.
 
 ## What are self-mutating websites?
 
 Self-mutating websites are [Dat](/docs/inside-beaker/dat-files-protocol.html) websites that can modify their own files.
 
-For a new visitor, a self-mutating site would be read-only. To make changes, the visitor would [fork the site](/docs/using-beaker/forking-sites.html), making an editable copy. The new fork would then be able to write to itself.
+When you first visit a self-mutating website, it's in read-only mode. In order to make changes,
+you'd need to [fork the site](/docs/using-beaker/forking-sites.html) to make an editable copy. Then your
+forked copy will be able to write changes to itself.
 
 <figure>
 <img src="/img/posts/self-mutating-websites/self-mutation.gif">
