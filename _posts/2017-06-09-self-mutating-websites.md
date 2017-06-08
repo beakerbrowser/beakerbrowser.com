@@ -28,7 +28,8 @@ In the example above, the site writes to its own `index.html` to persist its cha
 
 Self-mutating websites are [Dat websites](/docs/using-beaker/the-peer-to-peer-web.html) that use the [`DatArchive` Web API](/docs/apis/dat.html) to modify their own files. These modifications can include anything from storing user data to modifying the application's own code.
 
+Self-mutation is a very convenient way to do personal storage and publishing, e.g., on a Wiki or TODO list. For example, a self-mutating TODO application would write the user's data to its own archive files, which would then be stored on the user's device.
 
 ## How can I build a self-mutating site?
 
-The fastest way to get started is to [visit this example application](dat://6ef097c861c8c1857aefa9b2e9700d3061955d4552c492ab1e3f69ca77fdcba7) and view the source, or [fork it](TODO) to create your own copy to build with. This app includes everything you need to know to build a self-mutating website.
+The fastest way to get started is to [view the source of this example application in Beaker](dat://6ef097c861c8c1857aefa9b2e9700d3061955d4552c492ab1e3f69ca77fdcba7) or [fork it](/docs/using-beaker/forking-sites.html) to create your own editable copy. This app includes everything you need to know about building a self-mutating website.
