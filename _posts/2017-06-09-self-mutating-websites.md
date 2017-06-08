@@ -11,9 +11,7 @@ In [Beaker 0.7.2](/2017/06/05/beaker-0-7-2.html), we made policy updates that en
 
 ## What are self-mutating websites?
 
-### What are self-mutating websites?
-
-self-mutating websites are [Dat](/docs/inside-beaker/dat-files-protocol.html) sites that modify their own files.
+Self-mutating websites are [Dat](/docs/inside-beaker/dat-files-protocol.html) websites that can modify their own files.
 
 For a new visitor, a self-mutating site would be read-only. To make changes, the visitor would [fork the site](/docs/using-beaker/forking-sites.html), making an editable copy. The new fork would then be able to write to itself.
 
