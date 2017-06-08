@@ -26,9 +26,7 @@ In the example above, the site writes to its own `index.html` to persist its cha
 
 ## How do self-mutating websites work?
 
-Self-mutating websites are [dat websites](/docs/using-beaker/the-peer-to-peer-web.html) which use the [`DatArchive` Web API](/docs/apis/dat.html) to modify their own files. These modifications can include anything from storing user-data to modifying the application's own code.
-
-Self-mutation is a very convenient way to do personal storage and publishing, eg with a Wiki or Todo list. The application would write any user-data to its own site-archive, storing the data for the long term, and making it possible to share that data over the network.
+Self-mutating websites are [Dat websites](/docs/using-beaker/the-peer-to-peer-web.html) that use the [`DatArchive` Web API](/docs/apis/dat.html) to modify their own files. These modifications can include anything from storing user data to modifying the application's own code.
 
 
 ## How can I build a self-mutating site?
