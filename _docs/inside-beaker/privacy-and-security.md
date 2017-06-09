@@ -27,7 +27,7 @@ Beaker does not provide browsing privacy on the network. Anybody who possesses t
 
 Beaker provides better data privacy than other browsers. Dat websites are executed in a restrictive sandbox on the user’s device. While traditional Web apps assume a connection to a remote host, Dats are detached and must request network rights specially. Without permission, Dat sites should have no way to export user data.
 
-Rather than using remote services, Dat sites write user data to the local device with the `localStorage`, `indexDB`, and Dat APIs. Read more about the [Thick applications model](/docs/inside-beaker/thick-applications.html).
+Rather than using remote services, Dat sites write user data to the local device with the `localStorage`, `indexedDB`, and Dat APIs. Read more about the [Thick applications model](/docs/inside-beaker/thick-applications.html).
 
 ## Secret sharing
 
