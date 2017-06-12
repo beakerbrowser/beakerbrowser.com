@@ -175,6 +175,59 @@
   text-align: center;
   padding: 3em 0;
 
+  &--features {
+    @extend %grid-2;
+    border-bottom: 1px solid $gray--mid;
+
+    h2 {
+      font-weight: 200;
+    }
+
+    div {
+      flex: 0.6;
+      padding-right: 4rem;
+      align-self: center;
+      text-align: right;
+    }
+
+    ul {
+      flex: 1;
+      position: relative;
+      text-align: left;
+      list-style: none;
+      font-size: 1.3rem;
+      padding-left: 1em;
+
+      @include respond-to(show-grid-2) {
+        border-left: 1px solid #aaa;
+
+        &:after,
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 25px;
+          height: 1px;
+          background: #aaa;
+        }
+        &:after {
+          bottom: 0;
+          top: auto;
+        }
+      }
+
+      li {
+        margin: 0.5em 0;
+        font-weight: 300;
+      }
+
+      .fa-flash {
+        color: $beaker-blue;
+        margin-right: 0.5em;
+      }
+    }
+  }
 
   &--better-internet {
     color: $text--light-bg-muted;
