@@ -36,7 +36,7 @@ In Linux (and in some cases OSX) you need libtool, m4, and automake.
 
 <figcaption class="code">bash</figcaption>
 ```
-sudo apt-get install libtool m4 automake
+sudo apt-get install libtool m4 make g++
 ```
 
 To build:
