@@ -1,18 +1,18 @@
 - src: /img/ss/peer-count.jpg
   croppedSrc: /img/ss/peer-count-460x215.jpg
-  title: "<i class=\"fa fa-pencil\"></i> Create peer-to-peer websites"
+  title: "<i class=\"fa fa-pencil\"></i> Create websites"
   desc: |
-    <p>Create and share websites for free, with no advertising and no third-party
-    services, directly from your device.</p>
-    <p>Visitors to your site rehost your files automatically on the
-    peer-to-peer network, so you don't have to pay hosting costs.</p>
+    <p>Create and share content for free, with no advertising or sign-ups. Beaker
+    uses a peer-to-peer network to share bandwidth and keep costs low.</p>
+    <p><a href="/docs/tutorials/create-a-blog.html">Learn how</a> <i class="fa fa-angle-right"></i></p>
   orientation: left
 - src: /img/ss/fork-site.jpg
   croppedSrc: /img/ss/fork-site-460x215.jpg
-  title: "<i class=\"fa fa-code-fork\"></i> Fork websites and applications"
+  title: "<i class=\"fa fa-code-fork\"></i> Make changes"
   desc: |
-    <p>Live creatively with open-source web applications. Any peer-to-peer website
-    can be copied to your device to remix, remake, and reshare.</p>
+    <p>Any peer-to-peer website can be copied to your device to remix, remake,
+    and reshare.</p>
+    <p><a href="/docs/using-beaker/forking-sites.html">Learn how</a> <i class="fa fa-angle-right"></i></p>
   orientation: left
 - src: /img/ss/secret-sharing.jpg
   croppedSrc: /img/ss/secret-sharing-460x215.jpg
@@ -20,4 +20,5 @@
   desc: |
     <p>Your recipient downloads your files directly from your computer. Only
     people who know the site’s URL can decrypt and download the files.</p>
+    <p><a href="/docs/tutorials/share-files-secretly.html">Learn how</a> <i class="fa fa-angle-right"></i></p>
   orientation: left
