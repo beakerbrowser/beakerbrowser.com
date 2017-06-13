@@ -40,7 +40,7 @@ Then run
 <figcaption class="code">bash</figcaption>
 ```
 # install build dependencies
-~$ sudo apt-get install libtool m4 automake
+~$ sudo apt-get install libtool m4 automake make g++
 
 # install dathttpd (https://docs.npmjs.com/getting-started/fixing-npm-permissions)
 ~$ npm install -g dathttpd
