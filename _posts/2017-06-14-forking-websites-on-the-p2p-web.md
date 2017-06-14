@@ -6,15 +6,15 @@ authorLink: https://twitter.com/taravancil
 avatar: /img/team/taravancil.jpg
 image: /img/posts/forking-sites/thumbnail.png
 excerpt: |
-  We love services like GitHub, Codepen, and Glitch, for providing tools to share, duplicate, and remix other people’s projects. What if instead of being part of a one-off service, this feature were a core piece of the Web platform?
+  We love services like GitHub, Codepen, and Glitch, for providing tools to share, duplicate, and remix other people’s projects. What if instead of being part of a one-off service, these tools were a core feature of the Web platform?
 ---
 
-One of the most interesting phenomena on the Web, is the popularity of services like GitHub, Codepen, and Glitch, which provide tools for sharing, duplicating, and remixing other people’s projects. The practice of learning from and using existing code as boilerplate is a critical piece of what’s made innovation on the Web platform so open.
- 
-We love these tools, and think they’re provide an amazing service, but what if instead of being part of a one-off service, this feature were a core piece of the Web platform?
- 
-In Beaker, it is.
- 
+One of the most interesting phenomena on the Web is the popularity of services like [GitHub](https://github.com), [CodePen](https://codepen.io), and [Glitch](https://glitch.com), which provide tools for sharing, duplicating, and remixing other people’s projects. The practice of learning from and using existing code as boilerplate is a critical piece of what’s made innovation on the Web platform so open.
+
+We love these tools, and think they provide an amazing service, but what if instead of being part of a one-off service, they were a core feature of the Web platform?
+
+In Beaker, they are.
+
 ## Open-source websites
  
 Beaker uses [Dat, a peer-to-peer protocol](/docs/inside-beaker/dat-files-protocol.html) for distributing and delivering websites and files. So when you visit a website in Beaker, the Dat protocol makes it possible to download every file that composes the website.
