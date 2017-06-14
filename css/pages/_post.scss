@@ -139,9 +139,9 @@
 
   .highlight {
     padding: 1rem;
-    border: 1px solid $gray--very-dark;
-    border-radius: 2px;
-    box-shadow: 0 2px;
-    color: $gray--very-dark;
+    font-size: .825rem;
+    background: $gray--light;
+    border: 1px solid $gray--mid;
+    margin-bottom: 1.5rem;
   }
 }
