@@ -136,4 +136,12 @@
       font-size: 1.1rem;
     }
   }
+
+  .highlight {
+    padding: 1rem;
+    border: 1px solid $gray--very-dark;
+    border-radius: 2px;
+    box-shadow: 0 2px;
+    color: $gray--very-dark;
+  }
 }
