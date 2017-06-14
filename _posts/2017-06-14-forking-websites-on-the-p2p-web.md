@@ -4,7 +4,7 @@ title: Forking websites on the peer-to-peer Web
 author: Tara Vancil
 authorLink: https://twitter.com/taravancil
 avatar: /img/team/taravancil.jpg
-image: /img/posts/forking-sites/thumbnail.png
+image: /img/posts/forking-sites/thumbnail-wide.png
 excerpt: |
   We love services like GitHub, Codepen, and Glitch, for providing tools to share, duplicate, and remix other people’s projects. What if instead of being part of a one-off service, these tools were a core feature of the Web platform?
 ---
