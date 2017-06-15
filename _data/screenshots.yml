@@ -4,7 +4,7 @@
   desc: |
     <p>Create and share content for free, with no advertising or sign-ups. Beaker
     uses a peer-to-peer network to share bandwidth and keep costs low.</p>
-    <p><a href="/docs/tutorials/create-a-blog.html">Learn how</a> <i class="fa fa-angle-right"></i></p>
+    <p><a href="/docs/tutorials/create-a-blog.html">Learn how <i class="fa fa-angle-right"></i></a></p>
   orientation: left
 - src: /img/ss/fork-site.jpg
   croppedSrc: /img/ss/fork-site-460x215.jpg
@@ -12,7 +12,7 @@
   desc: |
     <p>Any peer-to-peer website can be copied to your device to remix, remake,
     and reshare.</p>
-    <p><a href="/docs/using-beaker/forking-sites.html">Learn how</a> <i class="fa fa-angle-right"></i></p>
+    <p><a href="/docs/using-beaker/forking-sites.html">Learn how <i class="fa fa-angle-right"></i></a></p>
   orientation: left
 - src: /img/ss/secret-sharing.jpg
   croppedSrc: /img/ss/secret-sharing-460x215.jpg
@@ -20,5 +20,5 @@
   desc: |
     <p>Your recipient downloads your files directly from your computer. Only
     people who know the site’s URL can decrypt and download the files.</p>
-    <p><a href="/docs/tutorials/share-files-secretly.html">Learn how</a> <i class="fa fa-angle-right"></i></p>
+    <p><a href="/docs/tutorials/share-files-secretly.html">Learn how <i class="fa fa-angle-right"></a></i></p>
   orientation: left
