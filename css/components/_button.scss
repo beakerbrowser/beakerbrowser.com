@@ -17,7 +17,7 @@
     @extend %box-shadow;
     background: transparentize($white, .05);
     color: $primary;
-    font-weight: bold;
+    font-weight: 500;
 
     &:hover {
       background: transparentize($white, .075);
@@ -34,6 +34,17 @@
    &:hover {
      background: $white;
    }
+  }
+
+  &--primary {
+    -webkit-font-smoothing: antialiased;
+    color: transparentize($white, .05);
+    background: $primary;
+    font-weight: 500;
+
+    &:hover {
+      background: darken($primary, 5%);
+    }
   }
 }
 

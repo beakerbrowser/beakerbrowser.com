@@ -176,35 +176,55 @@
   padding: 3em 0;
 
   &--features {
-    @extend %grid-2;
     border-bottom: 1px solid $gray--mid;
+    color: $text--light-bg-muted;
+    background: $gray--light;
 
-    div {
-      flex: 0.5;
-      align-self: center;
-      text-align: right;
+    .container {
+      @extend %grid-2;
 
-      @include respond-to(show-grid-2) {
-        padding-right: 4rem;
+      > div {
+        @extend %col-1-2;
       }
     }
 
-    ul {
-      flex: 1;
-      position: relative;
-      text-align: left;
-      list-style: circle;
-      font-size: 1.1rem;
-      padding-left: 2em;
-      padding-right: 1em;
+    img {
+      border: 1px solid $gray--mid;
+    }
 
-      @include respond-to(show-grid-2) {
-        font-size: 1.2rem;
+    p:first-of-type {
+      font-size: 1.15rem;
+      margin-bottom: 1.5rem;
+      padding-right: 2.5rem;
+    }
+
+    .features {
+      font-size: .9rem;
+      margin-top: 2rem !important;
+
+      @media (min-width: 750px) {
+        margin-top: 0 !important;
+        padding-left: 2.5rem;
+        border-left: 1px solid $gray--mid;
+      }
+
+      ul {
+        columns: 2;
+        column-gap: 15px;
+        column-width: 225px;
       }
 
       li {
-        margin: 0.5em 0;
+        margin-left: 20px;
+        text-align: left;
       }
+    }
+
+    h2 {
+      color: $text--light-bg-muted;
+      font-size: .9rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
     }
   }
 
