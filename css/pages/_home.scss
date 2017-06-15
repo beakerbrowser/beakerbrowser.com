@@ -311,6 +311,7 @@
 
   &--screenshots {
     padding: 0;
+    color: $text--light-bg-muted;
 
     a {
       @extend %link;
