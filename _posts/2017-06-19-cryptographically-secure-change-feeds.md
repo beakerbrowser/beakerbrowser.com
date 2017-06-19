@@ -65,7 +65,7 @@ It’s important that the change-feeds *really are* append-only.
 Why? In Beaker, Dat archives contain Web applications. Our goal is to support end-to-end secrecy of user data, so it's very important that we can trust the software.
 
 <aside class="highlight">
-  One reason that the Web has historically lacked end-to-end secrecy is that all Web applications have to trust a third party — the host. But this deficiency is umique to is the services-based Web. In the peer-to-peer Web, the application has no host, and we can use signatures and integrity checks to audit the software.
+  One reason that the Web has historically lacked end-to-end secrecy is that all Web applications have to trust a third party — the host. But this deficiency is unique to is the services-based Web. In the peer-to-peer Web, the application has no host, and we can use signatures and integrity checks to audit the software.
 </aside>
  
 We want a "uniform distribution" of all applications. If it were possible for a developer to distribute multiple versions of their code, then they could deliver one version of the app to most users, and deliver a compromised version to a single target. We call this a "targeted payload" attack.
