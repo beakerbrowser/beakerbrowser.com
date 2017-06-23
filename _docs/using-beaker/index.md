@@ -71,48 +71,49 @@ create a site.
 <figcaption class="thick">Click "New site" in the browser dropdown menu</figcaption>
 </figure>
 
-<figure>
-<img data-src="/img/docs/tour-set-site-info.jpg">
-<figcaption class="thick">Choose a title and description</figcaption>
-</figure>
-
 </section>
 
 <section markdown="1">
 
 ## Adding files to a site
 
-Once you’ve created a site, you can start adding files.
+You can add files to a site by opening the folder in your explorer, then
+copying the files into the directory.
 
 <figure>
   <img class="screenshot" src="/img/docs/tour-new-site-publish1.png"/>
   <figcaption class="thick">Click "Open folder"</figcaption>
 </figure>
 
-<figure>
-  <img class="screenshot" src="/img/docs/tour-new-site-publish2.jpg"/>
-  <figcaption class="thick">Add files to the folder</figcaption>
-</figure>
+</section>
 
-<figure>
-  <img class="screenshot" src="/img/docs/tour-new-site-publish3.png"/>
-  <figcaption class="thick">
-    Back in the Library, click "Publish"
-  </figcaption>
-</figure>
+<section markdown="1">
 
-<br>
+## Import files button
 
-Alternatively, you can use the "Import files" control:
+You can also use the "Import files" button to add files.
 
 <figure>
   <img class="screenshot" src="/img/docs/tour-import-files1.jpg"/>
   <figcaption class="thick">Click "Import files"</figcaption>
 </figure>
 
+</section>
+
+<section markdown="1">
+
+## Publish changes
+
+When you're ready to share the files, click "Publish."
+
+Even if somebody has the URL of your site, they won't be able to access the
+files until you "publish" them. That's so you can review your changes first.
+
 <figure>
-  <img class="screenshot" src="/img/docs/tour-import-files2.jpg"/>
-  <figcaption class="thick">Choose the files you want to add</figcaption>
+  <img class="screenshot" src="/img/docs/tour-new-site-publish3.png"/>
+  <figcaption class="thick">
+    When you're ready to share, click "Publish"
+  </figcaption>
 </figure>
 
 </section>
@@ -147,11 +148,6 @@ it in your main menu.
   <figcaption class="thick">Click "Library" in the browser dropdown menu</figcaption>
 </figure>
 
-<figure>
-  <img class="screenshot" src="/img/docs/tour-library2.jpg"/>
-  <figcaption class="thick">Choose your site from the left nav</figcaption>
-</figure>
-
 </section>
 
 <section markdown="1">
@@ -164,16 +160,6 @@ by using the sidebar control.
 <figure>
   <img class="screenshot" src="/img/docs/tour-sidebar1.png"/>
   <figcaption class="thick">Click the sidebar icon in the navbar</figcaption>
-</figure>
-
-<figure>
-  <img class="screenshot" src="/img/docs/tour-sidebar2.png"/>
-  <figcaption class="thick">If you own the site, you can add files</figcaption>
-</figure>
-
-<figure>
-  <img class="screenshot" src="/img/docs/tour-sync-for-offline2.png"/>
-  <figcaption class="thick">If you're just visiting, you can sync for offline</figcaption>
 </figure>
 
 </section>
@@ -202,11 +188,6 @@ Turn on "Sync for offline" to make sure you get the latest updates when online,
 and then can access the files when offline.
 
 <figure>
-  <img class="screenshot" src="/img/docs/tour-sync-for-offline1.png"/>
-  <figcaption class="thick">Click "Sync"</figcaption>
-</figure>
-
-<figure>
   <img class="screenshot" src="/img/docs/tour-sync-for-offline2.png"/>
   <figcaption class="thick">Select "Sync for offline"</figcaption>
 </figure>
@@ -223,11 +204,6 @@ called "Forking" the site, and it's very convenient in Beaker.
 <figure>
   <img class="screenshot" src="/img/docs/tour-fork1.jpg"/>
   <figcaption class="thick">Click "Fork"</figcaption>
-</figure>
-
-<figure>
-  <img class="screenshot" src="/img/docs/tour-fork2.jpg"/>
-  <figcaption class="thick">Choose a new title and description</figcaption>
 </figure>
 
 </section>
