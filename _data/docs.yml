@@ -8,24 +8,8 @@ usingBeaker:
   title: Using Beaker
   url: /docs/using-beaker/
   children:
-    - title: The peer-to-peer Web
-      url: /docs/using-beaker/the-peer-to-peer-web.html
-    - title: Creating a new website
-      url: /docs/using-beaker/create-a-site.html
-    - title: Adding files to a site
-      url: /docs/using-beaker/publishing-files.html
-    - title: Turning on Live reloading
-      url: /docs/using-beaker/live-reloading.html
-    - title: Beaker’s Library
-      url: /docs/using-beaker/library.html
-    - title: The staging area
-      url: /docs/using-beaker/staging-area.html
-    - title: Saving a site to your Library
-      url: /docs/using-beaker/saving-sites.html
-    - title: Forking a site
-      url: /docs/using-beaker/forking-sites.html
-    - title: History and versions
-      url: /docs/using-beaker/history-and-versions.html
+    - title: Welcome to Beaker
+      url: /docs/using-beaker/index.html
     - title: Ignoring files with .datignore
       url: /docs/using-beaker/datignore.html
     - title: Troubleshooting

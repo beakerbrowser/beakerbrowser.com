@@ -49,6 +49,14 @@
       border-bottom: 1px solid $gray--mid;
     }
 
+    &.dark {
+      margin-top: 0.5rem;
+
+      .container {
+        border: 0;
+      }
+    }
+
     .active-section {
       font-size: 1.1rem;
 
@@ -119,6 +127,11 @@
 .docs {
   min-height: 100%;
   padding-bottom: 4rem;
+
+  &.dark {
+    background: $gray--very-light;
+    border-top: 1px solid $gray--mid;
+  }
 
   .container {
     @extend %flex-container;
@@ -210,6 +223,7 @@
   .doc-sidebar-nav {
     flex: 1;
     height: 100%;
+    background: #fff;
 
     ul.pages {
       border-radius: 3px;
@@ -256,12 +270,29 @@
         cursor: pointer;
 
         a {
-          color: $gray--very-dark;        
+          color: $gray--very-dark;
         }
         a:hover {
           color: $text--link;
         }
       }
+    }
+  }
+
+  section {
+    margin: 0 0 2rem;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.05);
+    background: #fff;
+
+    & > :first-child {
+      margin-top: 0 !important;
+    }
+
+    & > :last-child {
+      margin-bottom: 0 !important;
     }
   }
 }
