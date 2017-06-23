@@ -4,88 +4,87 @@ title: Introduction
 order: 1
 ---
 
-{% include docs-nav.html section=page.section page=page %}
-
 <div class="callouts-1">
   <div class="container">
-    <div class="callout">
-      <div class="heading">
-        <i class="fa fa-laptop"></i>
-        <h2 class="title">
-          <a href="/docs/using-beaker/">Getting started</a>
-        </h2>
-      </div>
+    <a href="/docs/using-beaker" class="callout">
+      <h2 class="title">
+        Using Beaker
+      </h2>
+      <i class="fa fa-laptop"></i>
       <p class="desc">
         Learn how to use Beaker to publish peer-to-peer websites, share files secretly, and more.
       </p>
-      <a class="more" href="/docs/using-beaker/">
-        Read more
-        <i class="fa fa-angle-right"></i>
-      </a>
-    </div>
+    </a>
 
-    <div class="callout">
-      <div class="heading">
-        <i class="fa fa-terminal"></i>
-        <h2 class="title">
-          <a href="/docs/apis/">New Web APIs</a>
-        </h2>
-      </div>
+    <a href="/docs/apis" class="callout">
+      <h2 class="title">
+        APIs
+      </h2>
+      <i class="fa fa-code"></i>
       <p class="desc">
         Explore Beaker's new Web APIs for publishing and managing peer-to-peer
         websites.
       </p>
-      <a class="more" href="/docs/apis/">
-        Read more
-        <i class="fa fa-angle-right"></i>
-      </a>
-    </div>
+    </a>
 
-    <div class="callout">
-      <div class="heading">
-        <i class="fa fa-cogs"></i>
-        <h2 class="title">
-          <a href="/docs/inside-beaker/">Inside Beaker</a>
-        </h2>
-      </div>
+    <a href="/docs/inside-beaker" class="callout">
+      <h2 class="title">
+        Inside Beaker
+      </h2>
+      <i class="fa fa-cogs"></i>
       <p class="desc">
         Learn about Beaker's internal architecture, design decisions, and more.
       </p>
-      <a class="more" href="/docs/inside-beaker/">
-        Read more
-        <i class="fa fa-angle-right"></i>
-      </a>
-    </div>
+    </a>
   </div>
 </div>
 
 <div class="callouts-2">
   <div class="container">
     <div class="tutorials callout">
-      <h2>Tutorials</h2>
       <ul class="tutorials-list">
-        <li>
+        <li class="tutorial">
           <a href="/docs/tutorials/create-a-blog.html">
-            <i class="purple fa fa-rss"></i>
-            <span>Create a peer-to-peer blog</span>
+            <div class="heading">
+              <i class="purple fa fa-rss"></i>
+              <span>Create a peer-to-peer blog</span>
+            </div>
+            <p>
+              Learn how to create a blog that can be hosted without relying on a third party cloud-hosting service.
+            </p>
           </a>
         </li>
-        <li>
+        <li class="tutorial">
           <a href="/docs/tutorials/host-outside-of-beaker.html">
-            <i class="orange fa fa-terminal"></i>
-            <span>Host your files from a server</span>
+            <div class="heading">
+              <i class="orange fa fa-terminal"></i>
+              <span>Host your files from a server</span>
+            </div>
+            <p>
+              Learn how to set up a server to sync your Beaker projects, so your files are always online, even when your computer is turned off.
+            </p>
           </a>
         </li>
-        <li>
+        <li class="tutorial">
           <a href="/docs/tutorials/share-files-secretly.html">
-            <i class="green fa fa-link"></i>
-            <span>Share files secretly</span>
+            <div class="heading">
+              <i class="green fa fa-link"></i>
+              <span>Share files secretly</span>
+            </div>
+            <p>
+              Peer-to-peer websites and files are secret by default. Learn how to create a secret URL that you can use to share files directly with a friend.
+            </p>
           </a>
         </li>
-        <li>
+        <li class="tutorial">
           <a href="/docs/tutorials/read-site-files.html">
-            <i class="teal fa fa-code"></i>
-            <span>Web APIs: Read site files</span>
+            <div class="heading">
+              <i class="teal fa fa-code"></i>
+              <span>Web APIs: Read files</span>
+            </div>
+            <p>
+              Use Beaker's <code>DatArchive</code> Web API to read file data from a peer-to-peer website.
+            </p>
           </a>
         </li>
       </ul>
@@ -115,55 +114,6 @@ order: 1
             Achieving scale in the decentralized Web
           </a>
         </li>
-      </ul>
-    </div>
-
-    <div class="tools callout">
-      <p>
-        Tools for working with Beaker and Dat
-      </p>
-      <ul class="tools-list">
-        <li>
-          <img class="icon" src="/img/dat-hexagon.svg" />
-          <div class="info">
-            <h3 class="title">
-              <a href="https://datproject.org/install">
-                Dat CLI & desktop application
-              </a>
-            </h3>
-            <p class="desc">
-              The official Dat clients for syncing and sharing files.
-            </p>
-          </div>
-        </li>
-        <li>
-          <img class="icon" src="/img/favicon.png"/>
-          <div class="info">
-            <h3 class="title">
-              <a href="https://github.com/beakerbrowser/dathttpd">
-                DatHTTPD
-              </a>
-            </h3>
-            <p class="desc">
-              Serve your Dat site and rehost it over HTTPS.
-            </p>
-          </div>
-        </li>
-       <!-- TODO: remove until Hashbase is out of beta
-        <li>
-          <img class="icon" src="/img/hashbase-favicon-32x32.png"/>
-          <div class="info">
-            <h3 class="title">
-              <a href="https://hashbase.io">
-                Hashbase
-              </a>
-            </h3>
-            <p class="desc">
-              A cloud peer that rehosts your Dat archives. Run by the Beaker team.
-            </p>
-          </div>
-        </li>
- -->
       </ul>
     </div>
   </div>
