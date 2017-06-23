@@ -1,9 +1,5 @@
 .layout-docs-intro {
 
-  .docs-nav {
-    margin-top: 1rem;
-  }
-
   .container {
     max-width: 1000px;
   }
@@ -22,48 +18,59 @@
 
     .callout {
       @extend %col-1-3;
-      border-radius: 3px;
       border: 1px solid $gray--mid;
       font-size: .9rem;
-      padding: 1em;
+      padding: 1rem;
       position: relative;
       background: $gray--light;
-      box-shadow: 0 1px 1px rgba(0,0,0,.1);
       color: $text--light-bg-muted;
-      text-align: left;
+      text-align: center;
+      cursor: pointer;
+
+      &:hover {
+        background: darken($gray--light, 5%);
+
+        > i {
+          text-shadow: 2px 4px $text--light-bg-transparent;
+        }
+      }
 
       &:not(:last-child) {
         margin-bottom: 2em;
 
         @include respond-to(show-grid-3) {
           margin-bottom: 0;
-          margin-right: 2em;
+          border-right: 0;
+          border-bottom: 1px solid $gray--mid;
         }
       }
 
-      .heading {
-        @extend %flex-container;
-
-        i {
-          font-size: 24px;
-          margin-right: 8px;
-        }
+      > i {
+        font-size: 3rem;
+        margin-bottom: 1rem;
       }
 
       .title {
-        font-size: 1rem;
-        margin-bottom: 1em;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
       }
 
       .desc {
-        margin-bottom: 2em;
+        font-size: .9rem;
       }
 
-      .more {
-        @extend %link;
-        position: absolute;
-        left: 1em;
-        bottom: 1em;
+      @include respond-to(show-grid-3) {
+        padding: 2rem;
+
+        > i {
+          font-size: 8rem;
+          margin-bottom: 3rem;
+        }
+
+        .title {
+          font-size: 1.5rem;
+          margin-bottom: 3rem;
+        }
       }
     }
   }
@@ -77,10 +84,11 @@
     }
 
     .callout {
-      @extend %col-1-3;
       text-align: left;
 
       &.updates {
+        @extend %col-1-3;
+        text-align: left;
         margin-bottom: 3rem !important;
       }
 
@@ -118,6 +126,7 @@
     }
 
     .tutorials {
+      @extend %col-2-3;
       font-size: .9rem;
 
       .more {
@@ -128,33 +137,48 @@
     }
 
     .tutorials-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
       list-style: none;
 
-      li {
+      @media (min-width: 1000px) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .tutorial {
+        border: 1px solid $gray--mid;
+        cursor: pointer;
 
         a {
-          height: 30px;
-          line-height: 30px;
-          vertical-align: middle;
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding: .5em 1em 1em 1em;
 
-          &:hover span {
+          span {
+            height: 30px;
+            line-height: 30px;
+            vertical-align: middle;
+          }
+        }
+
+        &:hover {
+          box-shadow: 0 0 7px $gray;
+
+          .heading span {
             text-decoration: underline;
           }
         }
 
-        a span {
-          height: 30px;
-          line-height: 30px;
-          vertical-align: middle;
+        .heading {
+          font-weight: 500;
         }
 
-        &:not(:last-child) {
-          border-bottom: 1px solid $gray--mid;
-          margin-bottom: 3px;
-
-          @include respond-to(show-grid-3){
-            border-bottom: 0;
-          }
+        p {
+          font-size: .8rem;
+          color: $text--light-bg-muted;
+          margin-top: .5em;
         }
       }
 
@@ -212,64 +236,6 @@
         &:hover {
           text-decoration: underline;
         }
-      }
-    }
-
-    .tools {
-      border-radius: 3px;
-      border: 1px solid $gray--mid;
-      font-size: .9rem;
-      color: $text--light-bg-muted;
-      height: 100%;
-
-      > p {
-        padding: .5rem 1rem;
-        background: $gray--light;
-        border-bottom: 1px solid $gray--mid;
-        // font-weight: 500;
-      }
-    }
-
-    .tools-list {
-      list-style: none;
-
-      li {
-        @extend %flex-container;
-        align-items: center;
-        padding: 10px 1em;
-
-        &:not(:last-child) {
-          border-bottom: 1px solid $gray--mid;
-        }
-      }
-
-      .info {
-        height: 100%;
-        margin-left: 15px;
-      }
-
-      .title {
-        font-size: .85rem;
-        margin-bottom: .25rem;
-
-        a {
-          cursor: pointer;
-        }
-
-        &:hover {
-          @extend %link;
-          color: inherit;
-        }
-      }
-
-      p {
-        font-size: .8rem;
-      }
-
-      .icon {
-        width: 25px;
-        height: 25px;
-        border-radius: 2px;
       }
     }
   }

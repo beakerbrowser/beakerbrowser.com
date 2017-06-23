@@ -5,11 +5,6 @@ sectionTitle: Web APIs
 order: 4
 ---
 
-<p class="doc-summary">
-  In this tutorial, you’ll learn how to request access from the user to use
-  special APIs.
-</p>
-
 **Notes:**
 
 - Only apps served over `dat://` are able to access these APIs.

@@ -5,10 +5,6 @@ sectionTitle: Web APIs
 order: 3
 ---
 
-<p class="doc-summary">
- Read and write versioned files to sites on the user’s local hard drive, and share the sites over the network.
-</p>
-
 **Note**
 
 - Only apps served over `dat://` are able to access this API.
