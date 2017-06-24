@@ -35,8 +35,8 @@ privately, and they work great for publishing to a broad audience too!
 
 ### Share personal files
 
-Create a site, add the files, and send the URL using a chat program. It's
-encrypted from end-to-end so that you have total privacy.
+Create a site, add the files, and send the URL to your recipient (e.g., using a
+chat program). It's encrypted from end-to-end so that you have total privacy.
 
 ### Make webpages
 
@@ -67,7 +67,6 @@ create a site.
 
 <figure>
 <img data-src="/img/docs/tour-new-site.jpg">
-<figcaption class="thick">Click "New site" in the browser dropdown menu</figcaption>
 </figure>
 
 </section>
@@ -81,14 +80,12 @@ copying the files into the directory.
 
 <figure>
   <img class="screenshot" src="/img/docs/tour-new-site-publish1.png"/>
-  <figcaption class="thick">Click "Open folder"</figcaption>
 </figure>
 
 You can also use the "Import files" button to add files.
 
 <figure>
   <img class="screenshot" src="/img/docs/tour-import-files1.jpg"/>
-  <figcaption class="thick">Click "Import files"</figcaption>
 </figure>
 
 </section>
@@ -105,9 +102,6 @@ to review your changes before they're public.
 
 <figure>
   <img class="screenshot" src="/img/docs/tour-new-site-publish3.png"/>
-  <figcaption class="thick">
-    When you're ready to share, click "Publish changes"
-  </figcaption>
 </figure>
 
 </section>
@@ -137,7 +131,6 @@ find a link to it in your main menu.
 
 <figure>
   <img class="screenshot" src="/img/docs/tour-library1.jpg"/>
-  <figcaption class="thick">Click "Library" in the browser dropdown menu</figcaption>
 </figure>
 
 </section>
@@ -151,7 +144,6 @@ by using the sidebar control.
 
 <figure>
   <img class="screenshot" src="/img/docs/tour-sidebar1.png"/>
-  <figcaption class="thick">Click the sidebar icon in the navbar</figcaption>
 </figure>
 
 </section>
@@ -166,7 +158,6 @@ automatically update every time you make a change.
 
 <figure>
   <img class="screenshot" src="/img/docs/tour-livereloading.jpg"/>
-  <figcaption class="thick">The yellow bolt will indicate it's on</figcaption>
 </figure>
 
 </section>
@@ -181,7 +172,6 @@ synchronize any updates made to the website whenever you reconnect to the Intern
 
 <figure>
   <img class="screenshot" src="/img/docs/tour-sync-for-offline2.png"/>
-  <figcaption class="thick">Select "Sync for offline"</figcaption>
 </figure>
 
 </section>
@@ -195,7 +185,6 @@ called "Forking" the site, and it's very convenient in Beaker.
 
 <figure>
   <img class="screenshot" src="/img/docs/tour-fork1.jpg"/>
-  <figcaption class="thick">Click "Fork"</figcaption>
 </figure>
 
 </section>
