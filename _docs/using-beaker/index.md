@@ -20,12 +20,11 @@ At the heart of Beaker is a **peer-to-peer network** for sharing all kinds of
 content.
 
 It lets you skip the middle man and share data directly with your
-friends and colleagues. P2P is fantastic for sharing information privately, and
-it works great for publishing to a broad audience too!
+friends and colleagues. P2P networks are fantastic for sharing information
+privately, and they work great for publishing to a broad audience too!
 
 <figure>
 <img data-src="/img/docs/tour-site-peer-count.jpg">
-<figcaption>Peer-to-peer networking skips the middle man and shares data directly.</figcaption>
 </figure>
 
 </section>
@@ -41,9 +40,9 @@ encrypted from end-to-end so that you have total privacy.
 
 ### Make webpages
 
-Create a site, fill it with your
-HTML/CSS/JS, and publish the URL (eg on Twitter). Your users can save the sites
-permanently, so that they work offline. [You can host in the
+Create a website, add HTML/CSS/JS, and publish its URL, e.g., on Twitter.
+Visitors can even save your website to their device for offline use!
+[You can host in the
 cloud too.](/docs/tutorials/host-outside-of-beaker.html)
 
 ### Hack on P2P apps
@@ -61,7 +60,7 @@ Chromium, the Free and Open Source engine from Google Chrome.
 
 <section markdown="1">
 
-## How to create a site
+## How to create a website
 
 If you want to share files, make webpages, or hack on apps, you'll need to
 create a site.
@@ -85,12 +84,6 @@ copying the files into the directory.
   <figcaption class="thick">Click "Open folder"</figcaption>
 </figure>
 
-</section>
-
-<section markdown="1">
-
-## Using the "Import files" button
-
 You can also use the "Import files" button to add files.
 
 <figure>
@@ -104,15 +97,16 @@ You can also use the "Import files" button to add files.
 
 ## Publishing files and changes
 
-When you're ready to share the files, click "Publish."
+When you're ready to share your files, click "Publish."
 
 Even if somebody has the URL of your site, they won't be able to access the
-files until you "publish" them. That's so you can review your changes first.
+updates to your files until you "publish" them. This gives you the opportunity
+to review your changes before they're public.
 
 <figure>
   <img class="screenshot" src="/img/docs/tour-new-site-publish3.png"/>
   <figcaption class="thick">
-    When you're ready to share, click "Publish"
+    When you're ready to share, click "Publish changes"
   </figcaption>
 </figure>
 
@@ -120,28 +114,26 @@ files until you "publish" them. That's so you can review your changes first.
 
 <section markdown="1">
 
-## How to share a site
+## How to share a website
 
-When you're ready to share, you just need to copy and paste the URL.
+When you're ready to share your work, simply share the URL with your recipients.
 
 <figure>
   <img class="screenshot" src="/img/docs/tour-share-site1.png"/>
-  <figcaption class="thick">Click "Share site"</figcaption>
 </figure>
 
 <figure>
   <img class="screenshot" src="/img/docs/tour-share-site2.png"/>
-  <figcaption class="thick">Copy the URL</figcaption>
 </figure>
 
 </section>
 
 <section markdown="1">
 
-## How to manage your site
+## How to manage your websites
 
-Beaker keeps all the sites you create in the "Library." You can find a link to
-it in your main menu.
+All of the websites you create with Beaker are kept in your "Library". You can
+find a link to it in your main menu.
 
 <figure>
   <img class="screenshot" src="/img/docs/tour-library1.jpg"/>
@@ -168,7 +160,7 @@ by using the sidebar control.
 
 ## Live reloading
 
-As the author of a site, or just as a remote recipient, live-reloading makes it
+As the author of a site, or just as a remote recipient, live reloading makes it
 easy to stay abreast of changes while you work. Turn it on to have the page
 automatically update every time you make a change.
 
@@ -181,11 +173,11 @@ automatically update every time you make a change.
 
 <section markdown="1">
 
-## Sync for offline
+## Offline sync
 
 As the visitor to a site, you may want to save a site for offline reading.
-Turn on "Sync for offline" to make sure you get the latest updates when online,
-and then can access the files when offline.
+Turn on "Offline sync" to access a website while you're offline. Beaker will
+synchronize any updates made to the website whenever you reconnect to the Internet.
 
 <figure>
   <img class="screenshot" src="/img/docs/tour-sync-for-offline2.png"/>
@@ -196,7 +188,7 @@ and then can access the files when offline.
 
 <section markdown="1">
 
-## Forking a site
+## Forking a website
 
 Sometimes, you want to create a new copy of a site that you control. This is
 called "Forking" the site, and it's very convenient in Beaker.
