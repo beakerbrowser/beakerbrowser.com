@@ -10,8 +10,29 @@ usingBeaker:
   children:
     - title: Welcome to Beaker
       url: /docs/using-beaker/index.html
-    - title: Ignoring files with .datignore
-      url: /docs/using-beaker/datignore.html
+      children:
+      - title: "How to create a site"
+        url: "#how-to-create-a-site"
+      - title: "Adding files to a site"
+        url: "#adding-files-to-a-site"
+      - title: "Using the Import files button"
+        url: "#using-the-import-files-button"
+      - title: "Publishing files and changes"
+        url: "#publishing-files-and-changes"
+      - title: "How to share a site"
+        url: "#how-to-share-a-site"
+      - title: "How to manage your site"
+        url: "#how-to-manage-your-site"
+      - title: "Using the sidebar"
+        url: "#using-the-sidebar"
+      - title: "Live reloading"
+        url: "#live-reloading"
+      - title: "Sync for offline"
+        url: "#sync-for-offline"
+      - title: "Forking a site"
+        url: "#forking-a-site"
+      - title: Ignoring files with .datignore
+        url: "#ignoring-files-with-datignore"
     - title: Troubleshooting
       url: /docs/using-beaker/troubleshooting.html
 webAPIs:

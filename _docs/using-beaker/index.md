@@ -1,5 +1,5 @@
 ---
-title: Welcome to Beaker!
+title: Welcome to Beaker
 section: usingBeaker
 sectionTitle: Using Beaker
 order: 1
@@ -89,7 +89,7 @@ copying the files into the directory.
 
 <section markdown="1">
 
-## Import files button
+## Using the "Import files" button
 
 You can also use the "Import files" button to add files.
 
@@ -102,7 +102,7 @@ You can also use the "Import files" button to add files.
 
 <section markdown="1">
 
-## Publish changes
+## Publishing files and changes
 
 When you're ready to share the files, click "Publish."
 
@@ -205,5 +205,20 @@ called "Forking" the site, and it's very convenient in Beaker.
   <img class="screenshot" src="/img/docs/tour-fork1.jpg"/>
   <figcaption class="thick">Click "Fork"</figcaption>
 </figure>
+
+</section>
+
+<section markdown="1">
+
+## Ignoring files with .datignore
+
+Beaker supports a `.datignore` file in the root folder of sites, which you can use to specify files and folders which should not be published in the site archive. The list can include `*` globs to match against patterns.
+
+<figcaption class="code">A common .datignore</figcaption>
+```
+.DS_Store
+node_modules
+*.log
+```
 
 </section>

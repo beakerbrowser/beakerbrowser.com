@@ -223,7 +223,6 @@
   .doc-sidebar-nav {
     flex: 1;
     height: 100%;
-    background: #fff;
 
     ul.pages {
       border-radius: 3px;
@@ -231,6 +230,7 @@
       color: $text--light-bg-muted;
       box-shadow: 0 1px 1px rgba(0,0,0,0.1);
       list-style: none;
+      background: #fff;
 
       li {
         font-size: .9rem;
