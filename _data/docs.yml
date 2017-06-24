@@ -15,8 +15,6 @@ usingBeaker:
         url: "#how-to-create-a-website"
       - title: "Adding files to a site"
         url: "#adding-files-to-a-site"
-      - title: "Using the Import files button"
-        url: "#using-the-import-files-button"
       - title: "Publishing files and changes"
         url: "#publishing-files-and-changes"
       - title: "How to share a website"
