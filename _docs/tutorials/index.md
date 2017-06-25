@@ -3,6 +3,7 @@ title: Tutorials
 section: tutorials
 sectionTitle: Tutorials
 layout: docs-tutorials-intro
+class: dark
 ---
 
 <div class="tutorials callout">
