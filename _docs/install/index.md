@@ -35,14 +35,15 @@ Requires node 6 or higher.
 In Linux (and in some cases OSX) you need libtool, m4, and automake.
 
 <figcaption class="code">bash</figcaption>
-```
-sudo apt-get install libtool m4 make g++
+```bash
+sudo apt-get install libtool m4 make g++  # debian/ubuntu
+sudo dnf install libtool m4 make gcc-c++  # fedora
 ```
 
 To build:
 
 <figcaption class="code">bash</figcaption>
-```
+```bash
 git clone https://github.com/beakerbrowser/beaker.git
 cd beaker
 npm install

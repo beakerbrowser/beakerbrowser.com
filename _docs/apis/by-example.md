@@ -2,16 +2,14 @@
 title: Web APIs by example
 section: webAPIs
 sectionTitle: Web APIs
-order: 2
+class: dark
 ---
 
-<p class="doc-summary">
-  This is a collection of snippets to help you get familiar with Beaker’s APIs.
-  You can read more about the APIs here: <a href="./dat.html">DatArchive</a>,
-  <a href="./permissions.html">permissions</a>.
-</p>
+This is a collection of snippets to help you get familiar with Beaker’s APIs.
+You can read more about the APIs here: <a href="./dat.html">DatArchive</a>,
+<a href="./permissions.html">permissions</a>.
 
----
+<section markdown="1">
 
 ## Create a site
 
@@ -24,38 +22,57 @@ console.log(archive.url)
 // => dat://da2ce4..dc/
 ```
 
+</section>
+
+<section markdown="1">
+
 ## Write a file
 
 ```js
 await archive.writeFile('/hello.txt', 'world')
-await archive.writeFile('/image.png', 'data:image/png;base64,iV...rkJggg==', 'base64')
+await archive.writeFile('/image.png', myArrayBuffer)
+await archive.writeFile('/image.png', myBase64, 'base64')
 ```
+
+</section>
+
+<section markdown="1">
 
 ## Read a file
 
 ```js
 var helloTxt = await archive.readFile('/hello.txt')
-console.log(helloTxt)
-// => 'world'
+// => String
 var imagePng = await archive.readFile('/image.png', 'binary')
-console.log(typeof imagePng)
-// => 'ArrayBuffer'
+// => ArrayBuffer
 ```
 
-## Create a subdirectory
+</section>
+
+<section markdown="1">
+
+## Create a directory
 
 ```js
 await archive.mkdir('/subdir'))
 ```
 
+</section>
+
+<section markdown="1">
+
 ## List files
 
 ```js
 var files = await archive.readdir('/')
-console.log(files) // => ['index.html', 'js', 'css', ...]
+console.log(files) // => ['index.html', 'js']
 var files = await archive.readdir('/', {recursive: true})
-console.log(files) // => ['index.html', 'js', 'js/index.js', ...]
+console.log(files) // => ['index.html', 'js', 'js/index.js']
 ```
+
+</section>
+
+<section markdown="1">
 
 ## Check if a file exists
 
@@ -67,6 +84,10 @@ try {
   // does not exist
 }
 ```
+
+</section>
+
+<section markdown="1">
 
 ## Get the last-modified time of a file
 
@@ -83,6 +104,10 @@ console.log(st)
 } */
 ```
 
+</section>
+
+<section markdown="1">
+
 ## Read a binary file
 
 ```js
@@ -97,6 +122,10 @@ var base64 = await archive.readFile(picUrl, 'base64')
 var src = 'data:image/png;base64,'+base64
 document.querySelector('img').src = src
 ```
+
+</section>
+
+<section markdown="1">
 
 ## Write a binary file
 
@@ -113,6 +142,10 @@ var base64 = convertBufToBase64(arrayBuf)
 await archive.writeFile('/picture_copy.png', base64, 'base64')
 ```
 
+</section>
+
+<section markdown="1">
+
 ## Request network access to a host
 
 ```js
@@ -124,6 +157,10 @@ console.log(res.status)
 // => 'granted'
 ```
 
+</section>
+
+<section markdown="1">
+
 ## Request network access to all hosts
 
 ```js
@@ -134,3 +171,5 @@ var res = await navigator.permissions.request({
 console.log(res.status)
 // => 'granted'
 ```
+
+</section>

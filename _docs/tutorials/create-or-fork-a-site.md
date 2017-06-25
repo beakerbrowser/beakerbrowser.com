@@ -1,7 +1,7 @@
 ---
-title: 'Code: Create or fork a site'
-section: tutorials
-sectionTitle: Tutorials
+title: 'Example: Create or fork a site'
+section: webAPIs
+sectionTitle: Web APIs
 order: 10
 ---
 

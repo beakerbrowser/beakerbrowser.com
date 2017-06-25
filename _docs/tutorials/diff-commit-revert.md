@@ -1,7 +1,7 @@
 ---
-title: 'Code: Diff, commit, revert'
-section: tutorials
-sectionTitle: Tutorials
+title: 'Example: Diff, commit, revert'
+section: webAPIs
+sectionTitle: Web APIs
 order: 8
 ---
 
