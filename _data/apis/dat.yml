@@ -310,6 +310,7 @@ instance_methods:
       Compare the current staging area to the published archive, and provide a list of the differences.
 
       - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
+      - `opts.shallow` Boolean. If true, diff() will not recurse into folders that need to be added or removed.
       - returns `Promise<Array<Object>>`
 
       Returns an array of objects:
