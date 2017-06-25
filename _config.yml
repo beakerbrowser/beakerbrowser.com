@@ -24,6 +24,8 @@ sass:
 
 # Site data
 collections:
+  releases:
+    output: true
   docs:
     output: true
 defaults:
@@ -33,3 +35,9 @@ defaults:
       type: "docs"
     values:
       layout: "doc"
+  -
+    scope:
+      path: ""
+      type: "releases"
+    values:
+      layout: "release"

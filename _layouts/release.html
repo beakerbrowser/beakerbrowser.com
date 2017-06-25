@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Beaker v{{ page.version }}</title>
+    <link rel="stylesheet" href="/css/release.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <main class="release">
+      <div id="update-message">
+        <div class="check">
+          <i class="fa fa-check-circle"></i>
+        </div>
+        <p>
+          Beaker is up to date!
+        </p>
+      </div>
+
+      <div class="container">
+        <div class="sidebar">
+          <h1 class="mobile">What’s new in Beaker {{ page.version }}</h1>
+          <div class="gallery">
+            <img src="{{ page.imageBasePath }}{{ page.images | first }}" class="active">
+            <div class="thumbnails">
+              {% for image in page.images %}
+                <img class="thumbnail" src="{{ page.imageBasePath }}{{ image }}"/>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="info">
+            <h2>Information</h2>
+            <ul>
+              <li>Version: {{ page.version }}</li>
+              <li>Released: {{ page.releaseDate }}</li>
+              <li>Size: {{ page.size }}</li>
+            </ul>
+            <div class="install-actions visible">
+              <a href="https://github.com/beakerbrowser/beaker">Build from source</a>
+              <a href="https://download.beakerbrowser.net/download/latest/osx">Download .dmg</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="release-notes">
+          <h1 class="desktop">What’s new in Beaker {{ page.version }}</h1>
+          {{ content }}
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script>
+    var q = window.location.search || '';
+    if (q.includes('updated')) {
+      document.querySelector('#update-message').classList.add('visible')
+      document.querySelector('.install-actions').classList.remove('visible')
+    }
+
+    var activeImg = document.querySelector('img.active').src
+    var thumbnails = document.querySelectorAll('.thumbnail')
+
+    thumbnails.forEach(function (el) {
+      el.addEventListener('click', updateActiveImage)
+    })
+
+    function updateActiveImage (e) {
+      var img = e.target
+      document.querySelector('img.active').src = img.src
+    }
+  </script>
+</html>
