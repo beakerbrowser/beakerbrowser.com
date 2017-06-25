@@ -216,6 +216,7 @@ instance_methods:
       - `path` The path of the directory to read.
       - `opts.recursive` Boolean. Recurse the listing into the subdirectories?
       - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
+      - `opts.stat` Boolean. Run stat() on every entry and return with `{name:, stat:}`
       - returns `Promise<Array<String>>`
 
       <figcaption class="code">example</figcaption>
@@ -223,6 +224,7 @@ instance_methods:
       var archive = new DatArchive(datUrl)
       var topFiles = await archive.readdir('/')
       var allFiles = await archive.readdir('/', {recursive: true})
+      var stats = await archive.readdir('/', {stat: true})
       ```
   -
     name: "writeFile"
