@@ -16,12 +16,12 @@
 
       <div class="container">
         <div class="sidebar">
-          <h1 class="mobile">What’s new in Beaker {{ page.version }}</h1>
+          <h1 class="mobile">Beaker {{ page.version }}</h1>
           <div class="gallery">
-            <img src="{{ page.imageBasePath }}{{ page.images | first }}" class="active">
+            <img src="/img/releases/{{ page.version | slugify }}{{ page.images | first }}" class="active">
             <div class="thumbnails">
               {% for image in page.images %}
-                <img class="thumbnail" src="{{ page.imageBasePath }}{{ image }}"/>
+                <img class="thumbnail" src="/img/releases/{{ page.version | slugify }}{{ image }}"/>
               {% endfor %}
             </div>
           </div>

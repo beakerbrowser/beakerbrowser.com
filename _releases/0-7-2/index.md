@@ -3,7 +3,6 @@ version: 0.7.2
 releaseDate: June 5, 2017
 size: 61.2 MB
 layout: release
-imageBasePath: /img/releases/0-7-2
 images: [thumb1.png, thumb2.png]
 ---
 
