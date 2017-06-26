@@ -1,5 +1,6 @@
 .layout-doc,
-.layout-docs-intro {
+.layout-docs-intro,
+.layout-docs-tutorials-intro {
 
   .header {
     position: relative;
@@ -11,94 +12,91 @@
   }
 }
 
-.layout-doc,
-.layout-docs-intro {
+.docs-nav-mobile {
+  margin: 2rem 0 1rem 0;
+
+  select {
+    font-size: 13px;
+    width: 300px;
+    height: 25px;
+  }
+}
+
+.docs-nav,
+.doc-sidebar-nav {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .docs-nav {
+    display: block;
+  }
 
   .docs-nav-mobile {
-    margin: 2rem 0 1rem 0;
-
-    select {
-      font-size: 13px;
-      width: 300px;
-      height: 25px;
-    }
-  }
-
-  .docs-nav,
-  .doc-sidebar-nav {
     display: none;
   }
+}
 
-  @media (min-width: 1000px) {
-    .docs-nav {
-      display: block;
-    }
+.docs-nav {
+  margin-top: 3rem;
+  color: $text--light-bg-muted;
 
-    .docs-nav-mobile {
-      display: none;
+  .container {
+    @extend %flex-container;
+    justify-content: space-between;
+    border-bottom: 1px solid $gray--mid;
+  }
+
+  &.dark {
+    margin-top: 0.5rem;
+
+    .container {
+      border: 0;
     }
   }
 
-  .docs-nav {
-    margin-top: 3rem;
-    color: $text--light-bg-muted;
+  .active-section {
+    font-size: 1.1rem;
 
-    .container {
-      @extend %flex-container;
-      justify-content: space-between;
-      border-bottom: 1px solid $gray--mid;
+    a:hover {
+      color: $text--link;
     }
 
-    &.dark {
-      margin-top: 0.5rem;
-
-      .container {
-        border: 0;
-      }
+    i {
+      margin: 0 4px;
     }
+  }
 
-    .active-section {
-      font-size: 1.1rem;
+  .active-section,
+  nav {
+    display: inline-block;
+  }
 
-      a:hover {
-        color: $text--link;
-      }
+  nav {
 
-      i {
-        margin: 0 4px;
-      }
-    }
-
-    .active-section,
-    nav {
+    li {
       display: inline-block;
-    }
+      padding-bottom: .5rem;
+      font-size: .925rem;
+      border-bottom: 2px solid transparent;
 
-    nav {
-
-      li {
-        display: inline-block;
-        padding-bottom: .5rem;
-        font-size: .925rem;
-        border-bottom: 2px solid transparent;
-
-        &:hover {
-          border-bottom: 2px solid $gray;
-        }
-
-        &.active {
-          border-bottom: 2px solid $gray;
-          color: $text--light-bg;
-          font-weight: 500;
-        }
-
-        margin-left: 1rem;
+      &:hover {
+        border-bottom: 2px solid $gray;
       }
+
+      &.active {
+        border-bottom: 2px solid $gray;
+        color: $text--light-bg;
+        font-weight: 500;
+      }
+
+      margin-left: 1rem;
     }
   }
 }
 
-.layout-doc {
+.layout-doc,
+.layout-docs-tutorials-intro {
 
   @media (min-width: 1000px) {
     .doc-sidebar-nav {
@@ -293,6 +291,21 @@
 
     & > :last-child {
       margin-bottom: 0 !important;
+    }
+  }
+}
+
+.layout-docs-tutorials-intro {
+  .content {
+    max-width: none;
+
+    .tutorials-list {
+      @media (min-width: 600px) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @media (min-width: 900px) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
     }
   }
 }

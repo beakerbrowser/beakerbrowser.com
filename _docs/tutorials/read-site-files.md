@@ -1,7 +1,7 @@
 ---
-title: 'Code: Read site files'
-section: tutorials
-sectionTitle: Tutorials
+title: 'Example: Read site files'
+section: webAPIs
+sectionTitle: Web APIs
 order: 6
 ---
 

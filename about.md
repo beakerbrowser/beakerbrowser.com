@@ -1,15 +1,58 @@
 ---
-layout: page
+layout: doc
 title: About
-permalink: /about/
+class: dark
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Beaker is built by a team of decentralizated Web enthusiasists with a history of making Web apps, FOSS software, and peer-to-peer networks.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+## Beaker team
+
+<div class="team-members">
+  <div class="team-member">
+    <img data-src="/img/team/pfrazee.jpg">
+    <div class="info">
+      <h3>Paul Frazee</h3>
+      <ul>
+        <li>
+          <i class="fa fa-twitter"></i>
+          <a href="https://twitter.com/pfrazee">Twitter</a>
+        </li>
+        <li>
+          <i class="fa fa-github"></i>
+          <a href="https://github.com/pfrazee">GitHub</a>
+        </li>
+        <li>
+          <i class="fa fa-rss"></i>
+          <a href="https://pfrazee.github.io">Blog</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="team-member">
+    <img data-src="/img/team/taravancil.jpg">
+    <div class="info">
+      <h3>Tara Vancil</h3>
+      <ul>
+        <li>
+          <i class="fa fa-twitter"></i>
+          <a href="https://twitter.com/taravancil">Twitter</a>
+        </li>
+        <li>
+          <i class="fa fa-github"></i>
+          <a href="https://github.com/taravancil">GitHub</a>
+        </li>
+        <li>
+          <i class="fa fa-rss"></i>
+          <a href="https://taravancil.com/">Blog</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+## Code for Science
+
+Beaker works closely with [Code for Science](https://datproject.org/team), the team behind the Dat protocol. Code for Science is a 501(c)(3) non-profit.

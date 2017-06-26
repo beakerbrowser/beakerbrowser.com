@@ -12,7 +12,17 @@ order: 1
       </h2>
       <i class="fa fa-laptop"></i>
       <p class="desc">
-        Learn how to use Beaker to publish peer-to-peer websites, share files secretly, and more.
+        Learn how to publish peer-to-peer websites and share files secretly.
+      </p>
+    </a>
+
+    <a href="/docs/tutorials" class="callout">
+      <h2 class="title">
+        Tutorials
+      </h2>
+      <i class="fa fa-cogs"></i>
+      <p class="desc">
+        Learn how to tackle more advanced tasks and workflows.
       </p>
     </a>
 
@@ -22,18 +32,7 @@ order: 1
       </h2>
       <i class="fa fa-code"></i>
       <p class="desc">
-        Explore Beaker's new Web APIs for publishing and managing peer-to-peer
-        websites.
-      </p>
-    </a>
-
-    <a href="/docs/inside-beaker" class="callout">
-      <h2 class="title">
-        Inside Beaker
-      </h2>
-      <i class="fa fa-cogs"></i>
-      <p class="desc">
-        Learn about Beaker's internal architecture, design decisions, and more.
+        Explore Beaker's new Web APIs for building peer-to-peer apps.
       </p>
     </a>
   </div>
@@ -46,7 +45,7 @@ order: 1
         <li class="tutorial">
           <a href="/docs/tutorials/create-a-blog.html">
             <div class="heading">
-              <i class="purple fa fa-rss"></i>
+              <i class="purple fa fa-pencil"></i>
               <span>Create a peer-to-peer blog</span>
             </div>
             <p>

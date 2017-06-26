@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+{% include docs-nav.html section=page.section page=page class=page.class %}
+
+<main class="docs {{ page.class }}">
+  <div class="container">
+    <div class="content">
+      {{ content }}
+    </div>
+  </div>
+</main>
+
+<script>
+var $ = document.querySelector.bind(document)
+var $$ = function (selector) {
+  return Array.prototype.slice.call(document.querySelectorAll(selector))
+}
+</script>
+<script src="/js/anchor.min.js"></script>
+<script>
+anchors.add('h2, h3, h4')
+</script>
+
+<script>
+var mobileNav = document.getElementById('docs-nav-mobile')
+mobileNav.addEventListener('change', function (e) {
+  var select = e.target
+  window.location = select.selectedOptions[0].dataset.url
+})
+</script>
+<script>
+[].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+  img.setAttribute('src', img.getAttribute('data-src'))
+  img.onload = function() {
+    img.removeAttribute('data-src')
+  }
+})
+</script>
