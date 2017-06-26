@@ -41,30 +41,43 @@
         </div>
 
         <div class="release-notes">
-          <h1 class="desktop">What’s new in Beaker {{ page.version }}</h1>
+          <h1 class="desktop">Beaker {{ page.version }}</h1>
           {{ content }}
         </div>
       </div>
     </main>
+    <div class="image-modal">
+      <img>
+    </div>
   </body>
 
   <script>
+    window.onkeydown = function(e) {
+      var key = e.keyCode ? e.keyCode : e.which
+      if (key === 27) closeModal()
+    }
+
     var q = window.location.search || '';
     if (q.includes('updated')) {
       document.querySelector('#update-message').classList.add('visible')
       document.querySelector('.install-actions').classList.remove('visible')
     }
 
-    var activeImg = document.querySelector('img.active').src
     var thumbnails = document.querySelectorAll('.thumbnail')
-
     thumbnails.forEach(function (el) {
-      el.addEventListener('click', updateActiveImage)
+      el.addEventListener('click', openModal)
     })
 
-    function updateActiveImage (e) {
+    function closeModal () {
+      document.querySelector('.image-modal').classList.remove('visible')
+      document.querySelector('.image-modal').removeEventListener('click', closeModal)
+    }
+
+    function openModal (e) {
       var img = e.target
-      document.querySelector('img.active').src = img.src
+      document.querySelector('.image-modal img').src = img.src
+      document.querySelector('.image-modal').classList.toggle('visible')
+      document.querySelector('.image-modal').addEventListener('click', closeModal)
     }
   </script>
 </html>
