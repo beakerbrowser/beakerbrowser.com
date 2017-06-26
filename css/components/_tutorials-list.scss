@@ -1,0 +1,88 @@
+.tutorials-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  list-style: none;
+
+  @media (min-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tutorial {
+    border: 1px solid $gray--mid;
+    cursor: pointer;
+    background: #fff;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: .5em 1em 1em 1em;
+      text-decoration: none !important;
+
+      span {
+        height: 30px;
+        line-height: 30px;
+        vertical-align: middle;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 0 7px $gray;
+
+      .heading span {
+        text-decoration: underline;
+      }
+    }
+
+    .heading {
+      font-weight: 500;
+    }
+
+    p {
+      font-size: .8rem;
+      color: $text--light-bg-muted;
+      margin-top: .5em;
+    }
+  }
+
+  i {
+    margin-right: 4px;
+    padding: 0 3px;
+    border-radius: 3px;
+    color: $text--dark-bg;
+    width: 21px;
+    height: 21px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 21px;
+    vertical-align: middle;
+
+    &.teal {
+      background: $teal;
+    }
+
+    &.purple {
+      background: $purple;
+      -webkit-text-stroke-width: .4px;
+      -webkit-text-stroke-color: $purple;
+      text-stroke: .4px $purple;
+    }
+
+    &.orange {
+      background: $orange;
+
+    }
+
+    &.orange,
+    &.teal {
+      -webkit-text-stroke-width: .5px;
+      -webkit-text-stroke-color: $text--dark-bg;
+      text-stroke: .5px $text--dark-bg;
+    }
+
+    &.green {
+      background: $green;
+    }
+  }
+}

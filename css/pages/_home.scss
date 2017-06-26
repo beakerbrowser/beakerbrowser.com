@@ -2,7 +2,7 @@
   position: relative;
   background: $hero-bg;
   color: $text--dark-bg;
-  padding: 3em 0 4em 0;
+  padding: 1em 0 4em 0;
   @extend %shrink-text-phone;
   @extend %antialiased;
   font-weight: 500;
@@ -10,6 +10,7 @@
 
   @include respond-to(tablet) {
     font-size: 1rem;
+    padding-top: 3em;
 
     &:before {
       display: block;
@@ -47,10 +48,11 @@
     > .description {
       font-size: .95rem;
       max-width: 700px;
-      margin: 0 auto 3rem auto;
+      margin: 0 auto 2em auto;
 
       @media (min-width: 700px) {
         font-size: 1.1rem;
+        margin-bottom: 3em;
       }
 
       a {
@@ -60,18 +62,19 @@
 
     .cta {
       font-weight: 600;
-      font-size: 0.95rem;
-      margin-bottom: 3.25rem;
+      font-size: 0.85rem;
+      margin-bottom: 2em;
 
       @media (min-width: 350px) {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        margin-bottom: 3em;
       }
     }
   }
 
   .tagline {
     font-size: 1.3rem;
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 1.5rem;
 
     @media (min-width: 350px) {

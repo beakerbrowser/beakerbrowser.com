@@ -1,6 +1,7 @@
 {% assign section = site.data.docs[include.section] %}
 {% assign activePage = include.page %}
 
+{% if section %}
 <nav class="doc-sidebar-nav">
   <ul class="pages">
     {% for page in section.children %}
@@ -15,7 +16,7 @@
     {% endfor %}
   </ul>
 
-  {% if activePageNav.children %} 
+  {% if activePageNav.children %}
     <ul class="headings">
       {% for heading in activePageNav.children %}
         <li>
@@ -25,4 +26,4 @@
     </ul>
   {% endif %}
 </nav>
-
+{% endif %}

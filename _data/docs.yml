@@ -1,43 +1,52 @@
-installingBeaker:
-  title: Installing Beaker
-  url: /docs/install/
-  children:
-    - title: Installing Beaker
-      url: /docs/install/
 usingBeaker:
   title: Using Beaker
   url: /docs/using-beaker/
   children:
-    - title: The peer-to-peer Web
-      url: /docs/using-beaker/the-peer-to-peer-web.html
-    - title: Creating a new website
-      url: /docs/using-beaker/create-a-site.html
-    - title: Adding files to a site
-      url: /docs/using-beaker/publishing-files.html
-    - title: Turning on Live reloading
-      url: /docs/using-beaker/live-reloading.html
-    - title: Beaker’s Library
-      url: /docs/using-beaker/library.html
-    - title: The staging area
-      url: /docs/using-beaker/staging-area.html
-    - title: Saving a site to your Library
-      url: /docs/using-beaker/saving-sites.html
-    - title: Forking a site
-      url: /docs/using-beaker/forking-sites.html
-    - title: History and versions
-      url: /docs/using-beaker/history-and-versions.html
-    - title: Ignoring files with .datignore
-      url: /docs/using-beaker/datignore.html
+    - title: Welcome to Beaker
+      url: /docs/using-beaker/index.html
+      children:
+      - title: "How to create a website"
+        url: "#how-to-create-a-website"
+      - title: "Adding files to a site"
+        url: "#adding-files-to-a-site"
+      - title: "Publishing files and changes"
+        url: "#publishing-files-and-changes"
+      - title: "How to share a website"
+        url: "#how-to-share-a-website"
+      - title: "How to manage your websites"
+        url: "#how-to-manage-your-websites"
+      - title: "Using the sidebar"
+        url: "#using-the-sidebar"
+      - title: "Live reloading"
+        url: "#live-reloading"
+      - title: "Sync for offline"
+        url: "#sync-for-offline"
+      - title: "Forking a website"
+        url: "#forking-a-website"
+      - title: Ignoring files with .datignore
+        url: "#ignoring-files-with-datignore"
     - title: Troubleshooting
       url: /docs/using-beaker/troubleshooting.html
+tutorials:
+  title: Tutorials
+  url: /docs/tutorials/
+  children:
+    - title: Create a peer-to-peer blog
+      url: /docs/tutorials/create-a-blog.html
+    - title: Create a markdown site
+      url: /docs/tutorials/create-a-markdown-site.html
+    - title: Host outside of Beaker
+      url: /docs/tutorials/host-outside-of-beaker.html
+    - title: Share files secretly
+      url: /docs/tutorials/share-files-secretly.html
+    - title: Publish software securely
+      url: /docs/tutorials/publish-software-securely.html
 webAPIs:
   title: Web APIs
   url: /docs/apis/
   children:
     - title: Web APIs
       url: /docs/apis/
-    - title: Web APIs by example
-      url: /docs/apis/by-example.html
     - title: DatArchive API
       url: /docs/apis/dat.html
       children:
@@ -87,6 +96,18 @@ webAPIs:
       url: /docs/apis/permissions.html
     - title: Dat.json site manifest
       url: /docs/apis/manifest.html
+    - title: Web APIs by example
+      url: /docs/apis/by-example.html
+    - title: 'Example: Read site files'
+      url: /docs/tutorials/read-site-files.html
+    - title: 'Example: Write site files'
+      url: /docs/tutorials/write-site-files.html
+    - title: 'Example: Diff, commit, revert'
+      url: /docs/tutorials/diff-commit-revert.html
+    - title: 'Example: Listen for file changes'
+      url: /docs/tutorials/listen-for-file-changes.html
+    - title: 'Example: Create or fork a site'
+      url: /docs/tutorials/create-or-fork-a-site.html
 insideBeaker:
   title: Inside Beaker
   url: /docs/inside-beaker/
@@ -99,33 +120,3 @@ insideBeaker:
       url: /docs/inside-beaker/thick-applications.html
     - title: Other technologies
       url: /docs/inside-beaker/other-technologies.html
-    - title: Frequently Asked Questions
-      url: /docs/inside-beaker/faq.html
-    - title: Mission
-      url: /docs/inside-beaker/mission.html
-    - title: Team
-      url: /docs/inside-beaker/team.html
-tutorials:
-  title: Tutorials
-  url: /docs/tutorials/
-  children:
-    - title: Create a peer-to-peer blog
-      url: /docs/tutorials/create-a-blog.html
-    - title: Create a markdown site
-      url: /docs/tutorials/create-a-markdown-site.html
-    - title: Host outside of Beaker
-      url: /docs/tutorials/host-outside-of-beaker.html
-    - title: Share files secretly
-      url: /docs/tutorials/share-files-secretly.html
-    - title: Publish software securely
-      url: /docs/tutorials/publish-software-securely.html
-    - title: 'Code: Read site files'
-      url: /docs/tutorials/read-site-files.html
-    - title: 'Code: Write site files'
-      url: /docs/tutorials/write-site-files.html
-    - title: 'Code: Diff, commit, revert'
-      url: /docs/tutorials/diff-commit-revert.html
-    - title: 'Code: Listen for file changes'
-      url: /docs/tutorials/listen-for-file-changes.html
-    - title: 'Code: Create or fork a site'
-      url: /docs/tutorials/create-or-fork-a-site.html
