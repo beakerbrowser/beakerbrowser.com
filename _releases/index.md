@@ -1,5 +1,4 @@
 ---
-title: Beaker releases
 layout: releases
+title: Beaker releases
 ---
-aostuhaosthuoausaoe
