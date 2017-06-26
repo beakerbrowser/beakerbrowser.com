@@ -24,7 +24,7 @@ friends and colleagues. P2P networks are fantastic for sharing information
 privately, and they work great for publishing to a broad audience too!
 
 <figure>
-<img data-src="/img/docs/tour-site-peer-count.jpg">
+<img data-src="/img/docs/tour-site-peer-count.png">
 </figure>
 
 </section>
@@ -75,18 +75,18 @@ create a site.
 
 ## Adding files to a site
 
-You can add files to a site by opening the folder in your explorer, then
-copying the files into the directory.
+You can add files to a site by pressing the "Add files" button.
+
+<figure>
+  <img class="screenshot" src="/img/docs/tour-import-files1.png"/>
+</figure>
+
+You can also open the folder in your explorer, and make changes directly.
 
 <figure>
   <img class="screenshot" src="/img/docs/tour-new-site-publish1.png"/>
 </figure>
 
-You can also use the "Import files" button to add files.
-
-<figure>
-  <img class="screenshot" src="/img/docs/tour-import-files1.jpg"/>
-</figure>
 
 </section>
 
@@ -94,10 +94,10 @@ You can also use the "Import files" button to add files.
 
 ## Publishing files and changes
 
-When you're ready to share your files, click "Publish."
+When you're ready to share your files, click "Review changes," and then "Publish."
 
 Even if somebody has the URL of your site, they won't be able to access the
-updates to your files until you "publish" them. This gives you the opportunity
+updates to your files until you publish them. This gives you the opportunity
 to review your changes before they're public.
 
 <figure>
@@ -157,7 +157,7 @@ easy to stay abreast of changes while you work. Turn it on to have the page
 automatically update every time you make a change.
 
 <figure>
-  <img class="screenshot" src="/img/docs/tour-livereloading.jpg"/>
+  <img class="screenshot" src="/img/docs/tour-livereloading.png"/>
 </figure>
 
 </section>
