@@ -18,12 +18,20 @@ body {
     margin-left: 5px;
     text-transform: uppercase;
 
-    &.new {
-      background: darken($green, 15%);
+    &.new,
+    &.updated {
       color: #fff;
       -webkit-font-smoothing: antialiased;
       font-weight: 700;
       letter-spacing: .05px;
+    }
+
+    &.new {
+      background: darken($green, 15%);
+    }
+
+    &.updated {
+      background: darken($orange, 5%);
     }
   }
 
@@ -180,6 +188,23 @@ body {
       margin: .5rem 0;
     }
 
+    .thumbnail-container {
+      position: relative;
+      display: inline-block;
+
+      i {
+        position: absolute;
+        bottom: 9px;
+        right: 4px;
+        z-index: 1;
+        background: rgba(255,255,255,.85);
+        padding: 4px 5px 4px 6px;
+        border-radius: 2px;
+        border: 1px solid #ddd;
+        color: gray;
+      }
+    }
+
     .thumbnail {
       width: 165px;
       height: 110px;
@@ -289,7 +314,8 @@ body {
 
 .image-modal {
   visibility: hidden;
-  position: absolute;
+  position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   display: flex;

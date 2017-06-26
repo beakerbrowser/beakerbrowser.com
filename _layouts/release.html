@@ -21,7 +21,10 @@
             <img src="/img/releases/{{ page.version | slugify }}{{ page.images | first }}" class="active">
             <div class="thumbnails">
               {% for image in page.images %}
-                <img class="thumbnail" src="/img/releases/{{ page.version | slugify }}{{ image }}"/>
+                <div class="thumbnail-container">
+                  <img class="thumbnail" src="/img/releases/{{ page.version | slugify }}{{ image }}"/>
+                  <i class="fa fa-search"></i>
+                </div>
               {% endfor %}
             </div>
           </div>
@@ -74,8 +77,9 @@
     }
 
     function openModal (e) {
+      e.preventDefault()
       var img = e.target
-      document.querySelector('.image-modal img').src = img.src
+      document.querySelector('.image-modal img').src = img.src || img.dataset.src
       document.querySelector('.image-modal').classList.toggle('visible')
       document.querySelector('.image-modal').addEventListener('click', closeModal)
     }
