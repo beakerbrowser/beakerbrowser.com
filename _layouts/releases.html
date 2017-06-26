@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/css/release.css">
+</head>
+
+<body>
+  <main class="releases">
+    <div class="container">
+      <h1>{{ page.title }}</h1>
+      <ul>
+        {% for release in site.releases %}
+          {% if release.version %}
+            <li><a href="/releases/{{ release.version | slugify }}">Beaker {{ release.version }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </main>
+</body>
