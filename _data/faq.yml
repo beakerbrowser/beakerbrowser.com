@@ -19,5 +19,4 @@
   question: "Is my site’s traffic encrypted?"
   answer:
     "Yes. Your site’s traffic is encrypted in transit using its URL/public key.
-     So to decrypt the traffic, one must know the the site’s URL."
-
+     So to decrypt the traffic, one must know the site’s URL."
