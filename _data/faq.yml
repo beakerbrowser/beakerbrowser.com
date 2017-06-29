@@ -20,4 +20,3 @@
   answer:
     "Yes. Your site’s traffic is encrypted in transit using its URL/public key.
      So to decrypt the traffic, one must know the site’s URL."
-
