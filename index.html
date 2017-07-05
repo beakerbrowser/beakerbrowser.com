@@ -6,13 +6,10 @@ desc: Beaker is a new peer-to-peer browser for a Web where users control their d
   <img src="/img/polygons.svg" class="hero__bg" aria-hidden="true">
   <div class="container">
     <div class="intro">
-      <h1 class="tagline">
-        A peer-to-peer Web browser
-      </h1>
+      <h1 class="tagline">Rethink the Web browser</h1>
 
       <p class="description">
-        Create and share the Web, directly from your computer.
-        <a href="/docs/inside-beaker/other-technologies.html#why-not-a-blockchain">No blockchain required.</a>
+        Beaker is a peer-to-peer browser with tools to create and host websites. Don't just browse the Web, build it.
       </p>
 
       <div class="cta">
@@ -62,47 +59,102 @@ desc: Beaker is a new peer-to-peer browser for a Web where users control their d
  </div>
 </div>
 
-<div class="section section--features">
+<div class="section section--problem">
   <div class="container">
-      <div>
+    <p class="intro">It's time for a better Web</p>
+    <div class="web bad">
+      <img src="/img/bad-web.svg"/>
       <p>
-        Beaker is a peer-to-peer Web browser, with tools for hosting websites directly from your device.
+        <strong>The old Web</strong> depends on data silos run by big businesses, which takes away personal control, privacy, and freedom.
       </p>
+    </div>
 
+    <div class="web good">
+      <img src="/img/good-web.svg"/>
       <p>
-        <a href="/docs" class="btn btn--primary">Learn more</a>
+        <strong>Beaker's peer-to-peer Web</strong> enables free publishing for all, with open data, private sharing, and no silos.
       </p>
-      </div>
-
-      <div class="features">
-      <h2>Features</h2>
-
-      <ul>
-        <li>Host websites from your device</li>
-        <li>Offline syncing</li>
-        <li>Share files with secret URLs</li>
-        <li>Versioned URLs</li>
-        <li>Web APIs for building peer-to-peer applications</li>
-        <li>Live reloading for development</li>
-        <li>Native Markdown rendering</li>
-      </ul>
-      </div>
+    </div>
   </div>
 </div>
 
-<div class="section section--screenshots">
-    {% for ss in site.data.screenshots %}
-      <div class="screenshot-container {{ ss.orientation }}">
-        <div class="container">
-          <img class="full" id="{{ ss.id }}" data-src="{{ ss.src }}"/>
-          <img class="cropped" id="{{ ss.id }}" data-src="{{ ss.croppedSrc }}"/>
-          <div>
-            <h2 class="title">{{ ss.title }}</h2>
-            <div class="desc">{{ ss.desc }}</div>
-          </div>
+<div class="section section--features">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature">
+        <div class="img-container">
+          <img src="/img/features/self-hosting.svg" />
         </div>
+        <span class="title">Independent hosting</span>
+        <p class="description">
+          Beaker is equipped with tools for creating and hosting websites directly
+          from the browser. Beaker uses the Dat peer-to-peer network to host your
+          website's files, so you can share your projects completely independently
+          and without   worrying about hosting fees.
+        </p>
       </div>
-    {% endfor %}
+
+      <div class="feature">
+        <div class="img-container">
+          <img src="/img/features/live-reloading.svg" />
+        </div>
+        <span class="title">Live reloading</span>
+        <p class="description">
+          With builtin tools for live reloading, developing peer-to-peer
+          websites and applications with Beaker is a breeze. While live
+          reloading is on, Beaker will automatically reflect your work on
+          your device.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="img-container">
+          <img src="/img/features/versioned-urls.svg" />
+        </div>
+        <span class="title">Versioned URLs</span>
+        <p class="description">
+          Every change that's published to a Dat peer-to-peer website is added
+          to its history log. With Beaker, you can a view a website
+          at any point in its history at links like <code>dat://beakerbrowser.com+42</code>.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="img-container">
+          <img src="/img/features/secret-url.png" />
+        </div>
+        <span class="title">Secret filesharing</span>
+        <p class="description">
+          Files published on the Dat network can only be decrypted by people who
+          know the files' secret URL. This enables truly secret sharing in Beaker,
+          where you can share files privately without ever revealing the files
+          to a third-party hosting service.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="img-container">
+          <img src="/img/features/offline-sync.svg" />
+        </div>
+        <span class="title">Offline sync</span>
+        <p class="description">
+          Save a website for offline use, and as soon as you're back online,
+          Beaker will sync any changes that were published in the background.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="img-container">
+          <img src="/img/features/web-apis.svg" />
+        </div>
+        <span class="title">New Web APIs</span>
+        <p class="description">
+          Beaker introduces new Web APIs for building peer-to-peer websites and
+          applications with the Dat protocol.
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="section section--mission">

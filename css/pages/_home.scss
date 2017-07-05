@@ -178,56 +178,124 @@
   text-align: center;
   padding: 3em 0;
 
-  &--features {
+  &--problem {
     border-bottom: 1px solid $gray--mid;
-    color: $text--light-bg-muted;
-    background: $gray--light;
+    padding: 4em 0 2em;
 
-    .container {
-      @extend %grid-2;
+    .intro {
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+      font-weight: 500;
+      position: relative;
+    }
 
-      > div {
-        @extend %col-1-2;
-      }
+    p {
+      margin-bottom: 1.5em;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    .web {
+      width: 100%;
+      padding-bottom: 1em;
     }
 
     img {
-      border: 1px solid $gray--mid;
+      margin-bottom: 1em;
     }
 
-    p:first-of-type {
-      font-size: 1.15rem;
-      margin-bottom: 1.5rem;
-      padding-right: 2.5rem;
-    }
+    @media (min-width: 700px) {
+      padding: 4em 0 5em;
 
-    .features {
-      font-size: .9rem;
-      margin-top: 2rem !important;
-
-      @media (min-width: 750px) {
-        margin-top: 0 !important;
-        padding-left: 2.5rem;
-        border-left: 1px solid $gray--mid;
+      .web {
+        display: inline-block;
+        width: 48%;
       }
 
-      ul {
-        columns: 2;
-        column-gap: 15px;
-        column-width: 225px;
-      }
-
-      li {
-        margin-left: 20px;
-        text-align: left;
+      p {          
+        max-width: 360px;
+        margin: 0 auto;
       }
     }
 
-    h2 {
-      color: $text--light-bg-muted;
-      font-size: .9rem;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
+    @media (min-width: 1000px) {
+      .web {
+        padding: 0 4em;
+      }
+    }
+  }
+
+  &--features {
+    border-bottom: 1px solid $gray--mid;
+    padding: 5em 0 4em;
+
+    .features-grid {
+
+      @media (min-width: 500px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+      }
+
+      @media (min-width: 800px) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    .feature {
+      width: 100%;
+      margin-bottom: 3rem;
+      font-size: .85rem;
+      text-align: left;
+
+      code {
+        font-size: .8rem;
+      }
+
+      > * {
+        display: block;
+      }
+
+      .title {
+        color: $text--light-bg;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .description {
+        color: $text--light-bg-muted;
+      }
+
+      .img-container {
+        margin: auto;
+        margin-bottom: 1rem;
+        height: 45px;
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    @media (min-width: 500px) {
+      margin: 0;
+
+      .feature {
+        max-width: 330px;
+
+        .title {
+          text-align: left;
+        }
+
+        img {
+          margin: 0 0 1rem 0;
+        }
+      }
     }
   }
 
