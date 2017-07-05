@@ -178,6 +178,32 @@
   text-align: center;
   padding: 3em 0;
 
+  &--problem {
+    padding: 3em 0;
+
+    .intro {
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+    }
+
+    p {
+      margin-bottom: 1.5em;
+    }
+
+    .web {
+      width: 100%;
+
+    }
+
+    @media (min-width: 700px) {
+
+      .web {
+        display: inline-block;
+        width: 48%;
+      }
+    }
+  }
+
   &--features {
     border-bottom: 1px solid $gray--mid;
 
