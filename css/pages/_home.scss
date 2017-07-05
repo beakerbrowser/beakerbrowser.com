@@ -179,33 +179,57 @@
   padding: 3em 0;
 
   &--problem {
-    padding: 3em 0;
+    border-bottom: 1px solid $gray--mid;
+    padding: 4em 0 2em;
 
     .intro {
-      font-size: 1.2rem;
-      margin-bottom: 3rem;
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+      font-weight: 500;
+      position: relative;
     }
 
     p {
       margin-bottom: 1.5em;
     }
 
+    strong {
+      font-weight: 700;
+    }
+
     .web {
       width: 100%;
+      padding-bottom: 1em;
+    }
 
+    img {
+      margin-bottom: 1em;
     }
 
     @media (min-width: 700px) {
+      padding: 4em 0 5em;
 
       .web {
         display: inline-block;
         width: 48%;
+      }
+
+      p {          
+        max-width: 360px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      .web {
+        padding: 0 4em;
       }
     }
   }
 
   &--features {
     border-bottom: 1px solid $gray--mid;
+    padding: 5em 0 4em;
 
     .features-grid {
 
