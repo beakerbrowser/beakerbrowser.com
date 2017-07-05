@@ -225,12 +225,20 @@
         margin-bottom: 1rem;
         height: 45px;
       }
+    }
 
-      @media (min-width: 500px) {
-        margin: 0;
+    @media (min-width: 500px) {
+      margin: 0;
 
-        .feature {
-          max-width: 330px;
+      .feature {
+        max-width: 330px;
+
+        .title {
+          text-align: left;
+        }
+
+        img {
+          margin: 0 0 1rem 0;
         }
       }
     }
