@@ -157,21 +157,6 @@ desc: Beaker is a new peer-to-peer browser for a Web where users control their d
   </div>
 </div>
 
-<div class="section section--screenshots">
-    {% for ss in site.data.screenshots %}
-      <div class="screenshot-container {{ ss.orientation }}">
-        <div class="container">
-          <img class="full" id="{{ ss.id }}" data-src="{{ ss.src }}"/>
-          <img class="cropped" id="{{ ss.id }}" data-src="{{ ss.croppedSrc }}"/>
-          <div>
-            <h2 class="title">{{ ss.title }}</h2>
-            <div class="desc">{{ ss.desc }}</div>
-          </div>
-        </div>
-      </div>
-    {% endfor %}
-</div>
-
 <div class="section section--mission">
   <div class="icons">
   <i class="fa fa-opera"></i>
