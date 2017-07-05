@@ -11,7 +11,7 @@
             <circle id="Oval-2" fill="#000000" cx="7.5" cy="8.5" r="2.5"></circle>
             <rect id="Web-APIs" stroke="#000000" stroke-width="2" x="1" y="1" width="83" height="63" rx="3"></rect>
             <path d="M1,15 L84,15" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
-            <polygon id="Path-4" stroke="#000000" stroke-width="2" points="37.6756713 33.3807145 45.7321088 24 41.457994 36.810176 49.203125 35.7102423 36.6274832 54.1382884 39.1355983 40.0457096 32 40.0457096"></polygon>
+            <polygon id="Path-9" stroke="#000000" fill="#F8E71C" points="33 38.565918 49.8085938 22 44.7841797 37.5107422 52.9296875 37.5107422 35.4707031 54.4008789 40.9121094 38.565918"></polygon>
         </g>
     </g>
 </svg>

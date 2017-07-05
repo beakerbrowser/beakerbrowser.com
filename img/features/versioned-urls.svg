@@ -18,7 +18,7 @@
                 <rect stroke="#000000" stroke-width="2" x="16" y="13" width="48" height="36.2352941" rx="3"></rect>
             </g>
             <g id="Rectangle">
-                <use fill="#EEF6FF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
                 <rect stroke="#000000" stroke-width="2" x="31" y="25" width="48" height="36.2352941" rx="3"></rect>
             </g>
             <text id="v42" font-family="Consolas" font-size="14" font-weight="normal" fill="#000000">

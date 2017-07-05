@@ -246,10 +246,15 @@
         color: $text--light-bg-muted;
       }
 
-      img {
+      .img-container {
         margin: auto;
         margin-bottom: 1rem;
         height: 45px;
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
       }
     }
 
