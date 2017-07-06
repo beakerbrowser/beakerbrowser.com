@@ -227,6 +227,23 @@
     }
   }
 
+  &--publishing {
+    background: $gray--light;
+    justify-content: center;
+    border-bottom: 1px solid $gray--mid;
+    padding-bottom: 4em;
+
+    .container {
+      margin: auto;
+      max-width: 600px;
+    }
+
+    img {
+      border: 1px solid #c4c6cc; // this border color should match the image
+      margin-bottom: 2em;
+    }
+  }
+
   &--features {
     border-bottom: 1px solid $gray--mid;
     padding: 5em 0 4em;
