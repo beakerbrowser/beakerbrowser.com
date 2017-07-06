@@ -214,7 +214,7 @@
         width: 48%;
       }
 
-      p {          
+      p {
         max-width: 360px;
         margin: 0 auto;
       }
@@ -289,6 +289,7 @@
 
       .img-container {
         margin: auto;
+        text-align: center;
         margin-bottom: 1rem;
         height: 45px;
       }
@@ -309,7 +310,8 @@
           text-align: left;
         }
 
-        img {
+        .img-container {
+          text-align: left;
           margin: 0 0 1rem 0;
         }
       }
@@ -402,6 +404,7 @@
     color: $text--dark-bg;
     position: relative;
     padding: 2em 0;
+    font-size: .95rem;
 
     .container {
       max-width: 600px;
