@@ -221,7 +221,7 @@
         margin: 0 auto;
 
         &.intro {
-          max-width: 520px;
+          max-width: 440px;
           margin-bottom: 3em;
         }
       }
@@ -253,7 +253,7 @@
 
   &--features {
     border-bottom: 1px solid $gray--mid;
-    padding: 5em 0 4em;
+    padding: 3em 0;
 
     .features-grid {
 
