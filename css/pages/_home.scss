@@ -271,7 +271,7 @@
     .feature {
       width: 100%;
       margin-bottom: 3rem;
-      font-size: .85rem;
+      font-size: .9rem;
       text-align: left;
 
       code {
@@ -321,54 +321,6 @@
           text-align: left;
           margin: 0 0 1rem 0;
         }
-      }
-    }
-  }
-
-  &--mission {
-    @extend %antialiased;
-    background: $primary;
-    color: $text--dark-bg;
-    position: relative;
-    padding: 2em 0;
-    font-size: .95rem;
-
-    .container {
-      max-width: 600px;
-    }
-
-    .icons {
-      @extend %flex-container;
-      justify-content: space-between;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      font-size: 3rem;
-      color: transparentize(#fff, .925);
-      padding: 1rem;
-
-      @media (min-width: 550px) {
-        font-size: 5rem;
-        padding: 0
-      }
-
-      @media (min-width: 1000px) {
-        padding: 0 1em;
-        font-size: 8rem;
-        height: 100%;
-        align-items: center;
-      }
-    }
-
-    h2 {
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-weight: 500;
-
-      &:not(:last-child) {
-        margin-bottom: 1.5rem;
       }
     }
   }
