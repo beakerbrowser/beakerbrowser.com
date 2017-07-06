@@ -178,19 +178,21 @@
   text-align: center;
   padding: 3em 0;
 
+  h2 {
+    font-weight: normal;
+  }
+
   &--problem {
     border-bottom: 1px solid $gray--mid;
     padding: 4em 0 2em;
 
-    .intro {
+    h2 {
       font-size: 1.6rem;
       margin-bottom: 2rem;
-      font-weight: 500;
-      position: relative;
     }
 
     p {
-      margin-bottom: 1.5em;
+      margin-bottom: 2em;
     }
 
     strong {
@@ -217,6 +219,11 @@
       p {
         max-width: 360px;
         margin: 0 auto;
+
+        &.intro {
+          max-width: 520px;
+          margin-bottom: 3em;
+        }
       }
     }
 
@@ -315,86 +322,6 @@
           margin: 0 0 1rem 0;
         }
       }
-    }
-  }
-
-  &--better-internet {
-    color: $text--light-bg-muted;
-    border-bottom: 1px solid $gray--mid;
-
-    .container {
-      margin: auto;
-      max-width: 600px;
-    }
-
-    p {
-      margin-bottom: 2rem;
-      font-style: italic;
-
-      &.more {
-        margin-top: 2rem;
-        font-style: normal;
-        a {
-          @extend %link;
-        }
-      }
-    }
-
-    h2 {
-      color: $text--light-bg-muted;
-      font-weight: 400;
-      font-style: italic;
-      margin-bottom: .25rem;
-    }
-
-    ol {
-      counter-reset: li;
-      margin-left: 2em;
-      padding-left: 0;
-      text-align: left;
-    }
-
-    li {
-      position: relative;
-      margin: 0 0 0 1em;
-      padding: 4px 15px;
-      list-style: none;
-      text-align: left;
-
-      &:not(:last-child) {
-        margin-bottom: .5rem;
-      }
-
-      p {
-        font-size: .95rem;
-        margin-bottom: 0;
-        font-style: normal;
-      }
-    }
-
-    ol > li:before {
-      @extend %antialiased;
-      content: counter(li);
-      counter-increment: li;
-      position: absolute;
-      top: 7px;
-      left: -2em;
-      box-sizing: border-box;
-      width: 2em;
-      margin-right: 15px;
-      padding: 4px;
-      color: #fff;
-      background: $primary;
-      text-align: center;
-      border-radius: 50%;
-      font-weight: 600;
-    }
-
-    .heading {
-      font-size: 1.1rem;
-      font-weight: 500;
-      margin-bottom: .5rem;
-      display: block;
     }
   }
 
