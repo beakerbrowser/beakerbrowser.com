@@ -180,7 +180,7 @@ synchronize any updates made to the website whenever you reconnect to the Intern
 
 ## Forking a website
 
-Sometimes, you want to create a new copy of a site that you control. This is
+Sometimes, you want to create a new copy of a site that you don’t control. This is
 called "Forking" the site, and it's very convenient in Beaker.
 
 <figure>
