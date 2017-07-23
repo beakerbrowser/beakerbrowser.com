@@ -45,8 +45,6 @@ webAPIs:
   title: Web APIs
   url: /docs/apis/
   children:
-    - title: Web APIs
-      url: /docs/apis/
     - title: DatArchive API
       url: /docs/apis/dat.html
       children:
@@ -92,22 +90,10 @@ webAPIs:
         url: "#createfileactivitystream"
       - title: "createNetworkActivityStream()"
         url: "#createnetworkactivitystream"
-    - title: Permissions API
-      url: /docs/apis/permissions.html
     - title: Dat.json site manifest
       url: /docs/apis/manifest.html
     - title: Web APIs by example
       url: /docs/apis/by-example.html
-    - title: 'Example: Read site files'
-      url: /docs/tutorials/read-site-files.html
-    - title: 'Example: Write site files'
-      url: /docs/tutorials/write-site-files.html
-    - title: 'Example: Diff, commit, revert'
-      url: /docs/tutorials/diff-commit-revert.html
-    - title: 'Example: Listen for file changes'
-      url: /docs/tutorials/listen-for-file-changes.html
-    - title: 'Example: Create or fork a site'
-      url: /docs/tutorials/create-or-fork-a-site.html
 insideBeaker:
   title: Inside Beaker
   url: /docs/inside-beaker/
