@@ -1,3 +1,5 @@
+@import "../utils/placeholders";
+
 figure {
   @extend %rounded;
   display: table; // this is, sadly, the best way to get centering. ask prf.
