@@ -291,20 +291,20 @@ body {
 
   #update-message {
     display: none;
-    margin: 2rem auto 0 auto;
-    padding: 3px 10px;
-    width: 350px;
-    background: darken($green, 15%);
-    border-radius: 3px;
-    color: #fff;
+    padding: 20px 10px;
+    background: #fafafa;
+    border-bottom: 1px solid #ddd;
     -webkit-font-smoothing: antialiased;
     font-weight: 500;
-    font-size: 14px;
-    align-items: center;
-    justify-content: space-between;
+    font-size: 18px;
+    text-align: center;
 
     > * {
       display: inline-block;
+    }
+
+    i {
+      margin-right: 10px;
     }
 
     &.visible {
