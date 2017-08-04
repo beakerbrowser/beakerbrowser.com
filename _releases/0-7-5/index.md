@@ -1,6 +1,6 @@
 ---
 version: 0.7.5
-releaseDate: July 24, 2017
+releaseDate: August 4, 2017
 size: 65 MB
 layout: release
 ---
