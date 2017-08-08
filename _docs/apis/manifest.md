@@ -14,11 +14,8 @@ Beaker automatically manages the manifest for archives created via the Dat Web A
   "url": "dat://4483a2..66/",
   "title": "Application Title",
   "description": "A short description of the app",
-  "forkOf": ["dat://00fdc3..7a/"],
-  "createdBy": {
-    "title": "My Dat App",
-    "url": "dat://15f17e..6a/"
-  }
+  "fallback_page": "/public/404.html",
+  "web_root": "/public"
 }
 ```
 

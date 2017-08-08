@@ -9,23 +9,10 @@ attributes:
     name: ".description"
     desc: "A one- or two-line description of the archive."
   -
-    name: ".forkOf"
+    name: ".fallback_page"
     desc: |
-      An array of URLs describing the fork history of the archive, starting from the oldest ancestor to the most recent.
-      The first entry in the array is the URL of the original, and the last entry in the array is the URL of the most-recently forked.
-
-      If you fork a fork, there will be 2 items in the array:
-
-      ```
-      forkOf: [grandparent-url (the original), parent-url]
-      ```
-
-      If you fork again, there will be 3 items in the array:
-
-      ```
-      forkOf: [great-grandparent-url (the original), grandparent-url, parent-url]
-      ```
+      The path for the page to serve when a user hits a 404. ([See this demo gif.](/img/docs/demo-fallback-page.gif))
   -
-    name: ".createdBy"
+    name: ".web_root"
     desc: |
-      An object of `{url:, title:}` describing the application that created the archive.
+      The path of the folder which all requests should be served from. ([See this demo gif.](/img/docs/demo-web-root.gif))

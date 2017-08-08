@@ -42,6 +42,15 @@
     color: $gray--very-dark;
     padding: 1rem;
   }
+
+  &.danger {
+    border-color: darken($red, 20%);
+
+    .card-body {
+      background: lighten($red, 15%);
+      color: darken($red, 30%);
+    }
+  }
 }
 
 .detailed-card {

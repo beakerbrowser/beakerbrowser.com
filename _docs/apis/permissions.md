@@ -5,6 +5,14 @@ sectionTitle: Web APIs
 order: 4
 ---
 
+<div class="card danger">
+  <div class="card-body">
+    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> This API has been deprecated.
+  </div>
+</div>
+
+<br>
+
 **Notes:**
 
 - Only apps served over `dat://` are able to access these APIs.

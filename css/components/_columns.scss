@@ -17,5 +17,9 @@
     -webkit-column-break-inside: avoid;
     page-break-inside: avoid;
     break-inside: avoid;
+
+    & > :first-child {
+      margin-top: 0;
+    }
   }
 }
