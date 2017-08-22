@@ -115,7 +115,6 @@
     @extend %grid-3;
     width: 100%;
     margin-top: 2em;
-    flex-wrap: wrap;
 
     @include respond-to(expand-hero) {
       margin: 0;
@@ -338,7 +337,6 @@
 
     .container {
       @extend %grid-2;
-      flex-wrap: wrap;
       margin: auto;
       overflow: hidden;
     }
@@ -654,7 +652,6 @@
 .community {
   .testimonials {
     @extend %grid-3;
-    flex-wrap: wrap;
     list-style: none;
     font-size: .8rem;
   }

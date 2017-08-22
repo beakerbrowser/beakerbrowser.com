@@ -80,7 +80,6 @@
     .container {
       @extend %grid-3;
       padding: 2em 0;
-      flex-wrap: wrap !important;
     }
 
     .callout {
