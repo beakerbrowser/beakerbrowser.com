@@ -338,6 +338,7 @@
 
     .container {
       @extend %grid-2;
+      flex-wrap: wrap;
       margin: auto;
       overflow: hidden;
     }
