@@ -20,7 +20,7 @@
       content: '';
       width: 100%;
       height: 40px;
-      background: linear-gradient($header-bg, transparent);
+      background: linear-gradient($header-bg, transparentize($header-bg, 1));
 
       @include respond-to(tall-gradient-hero) {
         height: 60px;
