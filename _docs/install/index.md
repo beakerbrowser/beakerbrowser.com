@@ -10,7 +10,14 @@ order: 1
     <th>MacOS:</th>
     <td>
       <i class="fa fa-apple"></i>
-      <a href="https://download.beakerbrowser.net/download/latest/osx">Download the .dmg</a>
+      <a href="https://download.beakerbrowser.net/download/latest/osx">Download the installer</a>
+    </td>
+  </tr>
+  <tr>
+    <th>Windows:</th>
+    <td>
+      <i class="fa fa-windows"></i>
+      <a href="https://download.beakerbrowser.net/download/latest/windows_64">Download the installer</a>
     </td>
   </tr>
   <tr>
@@ -20,29 +27,37 @@ order: 1
       Build from source
     </td>
   </tr>
-  <tr>
-    <th>Windows:</th>
-    <td>
-      <i class="fa fa-windows"></i>
-      Coming soon
-    </td>
-  </tr>
 </table>
+
+**Note**: Windows will prompt you with a security concern before install. It is safe to continue! Beaker is downloaded via secure connection from <code>download.beakerbrowser.net</code>. (We're still working on signing the release, which will solve that problem.)
+
+**You can [report issues here](https://github.com/beakerbrowser/beaker/issues).**
 
 ## Building from source
 
-Requires node 6 or higher.
-In Linux (and in some cases OSX) you need libtool, m4, and automake.
+Requires node 6 or higher. On windows, you may need to use npm version 4, due to a bug in npm 5.
 
-<figcaption class="code">bash</figcaption>
+In Linux (and in some cases OSX) you need libtool, m4, and automake:
+
+<figcaption class="code">bash (linux)</figcaption>
 ```bash
 sudo apt-get install libtool m4 make g++  # debian/ubuntu
 sudo dnf install libtool m4 make gcc-c++  # fedora
 ```
 
+In Windows, you'll need to install [Python 2.7](https://www.python.org/downloads/release/python-2711/), Visual Studio 2015 or 2017, and [Git](https://git-scm.com/download/win). (You might try [windows-build-tools](https://www.npmjs.com/package/windows-build-tools).) Then run:
+
+<figcaption class="code">powershell (windows)</figcaption>
+```bash
+npm config set python c:/python27
+npm config set msvs_version 2015
+npm install -g node-gyp
+npm install -g gulp
+```
+
 To build:
 
-<figcaption class="code">bash</figcaption>
+<figcaption class="code">bash (linux) or powershell (windows)</figcaption>
 ```bash
 git clone https://github.com/beakerbrowser/beaker.git
 cd beaker
@@ -53,7 +68,7 @@ npm start
 
 If you pull latest from the repo and get weird module errors, do:
 
-<figcaption class="code">bash</figcaption>
+<figcaption class="code">bash (linux) or powershell (windows)</figcaption>
 ```
 npm run burnthemall
 ```
