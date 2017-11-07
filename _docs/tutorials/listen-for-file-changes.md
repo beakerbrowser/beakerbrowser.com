@@ -9,7 +9,7 @@ The [DatArchive API](/docs/apis/dat.html) provides a simple set of APIs to liste
 
 ## `createFileActivityStream`
 
-Start with the [site you created in the Writing site files tutorial](http://localhost:4000/docs/tutorials/write-site-files.html). Add the following code to the end of the main function:
+Start with the [site you created in the Writing site files tutorial](/docs/tutorials/write-site-files.html). Add the following code to the end of the main function:
 
 <figcaption class="code">js/index.js</figcaption>
 ```js
