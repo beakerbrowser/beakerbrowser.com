@@ -1,46 +1,42 @@
 .btn {
   @extend %transition;
+  @extend %decorative-font;
   transition-property: background;
-  border-radius: .2em;
-  padding: .4em .7em;
-  margin-right: .5em;
+  border-radius: 3px;
+  padding: 3px 15px;
   background: $button-bg;
   border: 1px solid transparent;
   cursor: pointer;
   display: inline-block;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  text-align: center;
 
   &:hover {
     background: $button-bg-hover;
   }
 
-  &--action {
-    @extend %box-shadow;
-    background: transparentize($white, .05);
-    color: $primary;
-    font-weight: 500;
+  &.action {
+    background: $blue;
+    color: #fff;
 
     &:hover {
-      background: transparentize($white, .075);
-      box-shadow: none;
-      color: $primary;
+      background: darken($blue, 5%);
     }
   }
 
-  &--outline {
-    color: $primary;
-    border: 2px solid $primary;
-    background: $white;
+  &.outline {
+    border: 1px solid $text--light-bg;
 
-   &:hover {
-     background: $white;
-   }
+    &:hover {
+      color: $primary;
+      border-color: $primary;
+    }
   }
 
-  &--primary {
-    -webkit-font-smoothing: antialiased;
+  &.primary {
     color: transparentize($white, .05);
     background: $primary;
-    font-weight: 500;
 
     &:hover {
       background: darken($primary, 5%);
