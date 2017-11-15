@@ -7,7 +7,9 @@ avatar: /img/team/pfrazee.jpg
 image: /img/posts/self-mutating-websites/thumbnail.png
 ---
 
-In [Beaker 0.7.2](/2017/06/05/beaker-0-7-2.html), we made policy updates that enable an application model we call "Self-mutating websites." In this post, I'll explain what they are and how to get the most out of them.
+<p class="post-summary">
+  In <a href="/2017/06/05/beaker-0-7-2.html">Beaker 0.7.2</a>, we made policy updates that enable an application model we call "Self-mutating websites." In this post, I'll explain what they are and how to get the most out of them.
+</p>
 
 ## What are self-mutating websites?
 
