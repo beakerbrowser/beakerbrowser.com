@@ -1,5 +1,4 @@
 .nav {
-  @extend %antialiased;
 
   @include respond-to(tablet) {
     right: 0;
@@ -22,27 +21,17 @@
       display: none;
     }
   }
-
-  &__link {
-    @extend %transition;
-    transition-property: color;
-    margin-right: .5em;
-    padding: .6em;
-    border-radius: .2em;
-
-    @include respond-to(tablet) {
-      margin-right: 1em;
-    }
-
-    &:last-of-type {
-      margin-right: 0;
-    }
-
-    &:hover {
-      background: $button-bg-hover;
-    }
-  }
 }
 
+.nav-link {
 
+  &:not(:last-of-type) {
+    margin-right: 30px;
+  }
 
+  &:not(.btn):active,
+  &:not(.btn):hover {
+    color: $primary;
+    border-bottom: 1px solid;
+  }
+}
