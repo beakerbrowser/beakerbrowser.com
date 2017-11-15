@@ -10,26 +10,28 @@ order: 1
     <th>MacOS:</th>
     <td>
       <i class="fa fa-apple"></i>
-      <a href="https://download.beakerbrowser.net/download/latest/osx">Download the installer</a>
+      <a href="https://github.com/beakerbrowser/beaker/releases/download/0.7.8/beaker-browser-0.7.8.dmg">Download the installer</a>
     </td>
   </tr>
   <tr>
     <th>Windows:</th>
     <td>
       <i class="fa fa-windows"></i>
-      <a href="https://download.beakerbrowser.net/download/latest/windows_64">Download the installer</a>
+      <a href="https://github.com/beakerbrowser/beaker/releases/download/0.7.8/beaker-browser-setup-0.7.8.exe">Download the installer</a>
     </td>
   </tr>
   <tr>
     <th>Linux:</th>
     <td>
       <i class="fa fa-linux"></i>
-      Build from source
+      <a href="https://github.com/beakerbrowser/beaker/releases/download/0.7.8/beaker-browser-0.7.8-x86_64.AppImage">Download the installer</a>
     </td>
   </tr>
 </table>
 
-**Note**: Windows will prompt you with a security concern before install. It is safe to continue! Beaker is downloaded via secure connection from <code>download.beakerbrowser.net</code>. (We're still working on signing the release, which will solve that problem.)
+**Note 1**: Windows will prompt you with a security concern before install. It is safe to continue! Beaker is downloaded via secure connection from <code>download.beakerbrowser.net</code>. (We're still working on signing the release, which will solve that problem.)
+
+**Note 2**: Linux users don't have an auto-updater yet. You'll need to download new versions manually for now. Sorry!
 
 **You can [report issues here](https://github.com/beakerbrowser/beaker/issues).**
 
