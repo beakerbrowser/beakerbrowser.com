@@ -1,22 +1,103 @@
 .footer {
-  @extend %shrink-text-phone;
-  @extend %antialiased;
-  background: $footer-bg;
-  color: $text--dark-bg;
-  display: flex;
-  padding: 1em 0;
-  font-weight: 500;
+  @extend %decorative-font;
+  padding: 40px 0;
 
-  &__links {
+  .install-btn {
+    width: 100%;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: inherit;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: .9rem;
+    margin-bottom: 5px;
+    color: $text--light-bg-muted;
+  }
+
+  a {
+
+    &:not(.btn):hover {
+      color: $primary;
+    }
+  }
+
+  .container {
     @extend %flex-container;
-    justify-content: center;
+    flex-direction: column;
+  }
+
+  .col {
+    flex-basis: 33%;
+    margin-bottom: 40px;
+
+    &:first-of-type {
+      text-transform: uppercase;
+
+      .links {
+        font-size: .9rem;
+        font-weight: 500;
+      }
+
+      a {
+        display: inline-block;
+        margin-right: 5px;
+
+        &:not(:first-child) {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  .links {
 
     a {
-      margin-right: 2em;
+      display: block;
+    }
 
-      &:last-of-type {
-        margin-right: 0;
+    &.icons {
+      font-size: 24px;
+
+      a {
+        display: inline-block;
       }
+
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .logo-container {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 26px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+
+    .logo {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      border: 6px solid $primary;
+      margin-right: 3px;
+    }
+  }
+
+  .links {
+  }
+
+  @include respond-to(show-grid-3) {
+
+    .container {
+      flex-direction: row;
+    }
+
+    .col {
+      margin-bottom: 0;
     }
   }
 }
