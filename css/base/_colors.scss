@@ -30,7 +30,7 @@ $gray--very-light: mix($black, $white, 2.5%);
 // text colors
 $text--dark-bg: transparentize($white, .03);
 $text--dark-bg-hover: transparentize($white, .4);
-$text--light-bg: transparentize($black, .1);
+$text--light-bg: #333;
 $text--light-bg-muted: transparentize($black, .3);
 $text--light-bg-transparent: transparentize($black, .75);
 $text--button-action: $primary;
