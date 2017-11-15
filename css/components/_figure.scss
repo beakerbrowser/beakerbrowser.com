@@ -1,24 +1,21 @@
 @import "../utils/placeholders";
 
 figure {
-  @extend %rounded;
   display: table; // this is, sadly, the best way to get centering. ask prf.
-  border: 1px solid $gray--mid;
-  margin: 0 auto 2em;
+  margin: auto;
 
   img {
     display: block;
+    margin: auto;
   }
 
   figcaption {
+    @extend %decorative-font;
+    max-width: 300px;
     text-align: center;
-    border-top: 1px solid $gray--mid;
-    padding: 2px 0;
-    font-size: 0.8rem;
-
-    &.thick {
-      padding: 1em 0;
-      font-weight: bold;
-    }
+    margin: auto;
+    margin-top: 10px;
+    font-style: italic;
+    line-height: 1.2;
   }
 }

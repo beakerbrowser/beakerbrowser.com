@@ -4,27 +4,29 @@ layout: blog
 ---
 
 <h1>Blog</h1>
-<div class="blog-columns">
-  <div class="post-list">
-    {% for post in site.posts %}
-      <div class="post">
+<div class="post-list">
+  {% for post in site.posts %}
+    <div href="{{ post.url }}" class="post">
+      <div class="container">
         <h2 class="title">
           <a class="post-link" href="{{ post.url }}">{{ post.title | escape }}</a>
         </h2>
+
         <p class="post-meta">
-          <img class="avatar" src="{{ post.avatar }}" />
           <span class="info">
             <a href="{{ post.authorLink}}" class="author">{{ post.author }}</a>
-            on
+             /
             <time datetime="{{ post.date }}" class="time">
               {{ post.date | date: "%b %-d, %Y" }}
             </time>
           </span>
         </p>
+
         <div class="summary">
           {{ post.excerpt | markdownify }}
         </div>
-        <a class="read-more" href="{{ post.url }}">Read more</a>
+
+        <a class="read-more" href="{{ post.url }}">Read more &raquo;</a>
       </div>
     </div>
   {% endfor %}

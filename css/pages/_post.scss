@@ -10,27 +10,13 @@
 
   & > .container {
     display: flex;
-
-    main {
-      flex: 3;
-      max-width: 600px;
-    }
-
-    .blog-sidebar {
-      flex: 0 0 250px;
-      margin-left: auto;
-      margin-top: 3em;
-
-      @include respond-to(shrink-blog-sidenav) {
-        flex: 0 0 300px;
-      }
-    }
   }
 
   main {
+    max-width: 650px;
     min-height: calc(100vh - 56px - 70px);
-    margin: 2rem 1rem;
-    font-size: .9rem;
+    margin: 50px auto;
+    font-size: .875rem;
     word-wrap: break-word;
 
     pre {
@@ -48,11 +34,10 @@
     }
 
     a {
-      color: $primary;
-      text-decoration: none !important;
+      text-decoration: underline;
 
       &:hover {
-        text-decoration: underline !important;
+        color: $primary;
       }
     }
 
@@ -62,23 +47,31 @@
     h4,
     h5,
     h6 {
-      margin-bottom: 1rem;
+      margin-bottom: 5px;
+      margin-top: 20px;
     }
 
-    @include respond-to(tablet) {
-      margin: 3rem 1em;
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 40px;
+      font-weight: 500;
+    }
+
+    h3 {
+      font-weight: 500;
     }
   }
 
   .post-meta {
-    @extend %flex-container;
-    align-items: center;
-    font-size: .8rem;
+    @extend %decorative-font;
+    text-align: center;
     color: $text--light-bg-muted;
-
-    .avatar {
-      height: 100%;
-    }
+    font-size: 1rem;
+    margin-bottom: 35px !important;
 
     .author {
       color: $primary;
@@ -94,10 +87,11 @@
     }
   }
 
-  .avatar {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
+  .post-summary {
+    @extend %decorative-font;
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-bottom: 35px !important;
   }
 
   ul {
@@ -107,41 +101,62 @@
   ul,
   p {
     &:not(:last-child) {
-      margin-bottom: 1.5rem;
+      margin-bottom: 20px;
     }
   }
 
   .back-to-blog {
-    margin-top: 1.5rem;
+    @extend %decorative-font;
+    text-transform: uppercase;
+    text-decoration: none;
     color: $primary;
-    text-decoration: none !important;
-    display: block;
 
     &:hover {
-      text-decoration: underline !important;
+      text-decoration: underline;
     }
   }
 
   .twitter-tweet {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 25px !important;
   }
 
   blockquote {
+    @extend %decorative-font;
+    position: relative;
     font-style: italic;
     color: $text--light-bg-muted;
-    margin-left: 20px;
-    margin-bottom: 1.5rem;
+    padding: 10px 0 30px 25px;
+    font-size: 1.3rem;
+  }
 
-    &.big {
-      font-size: 1.1rem;
+  figure {
+    padding-top: 15px;
+    margin-bottom: 30px;
+
+    code {
+      background: none;
+      font-size: inherit;
+      font-family: inherit;
+      padding: 0;
     }
   }
 
   .highlight {
-    padding: 1rem;
-    font-size: .825rem;
-    background: $gray--light;
-    border: 1px solid $gray--mid;
-    margin-bottom: 1.5rem;
+    margin-bottom: 25px;
+
+    code {
+      background: none;
+      padding: 0;
+    }
+  }
+
+  code {
+    background: #eee;
+    padding: 2px 5px;
+    font-size: inherit;
+  }
+
+  strong {
+    font-weight: 600;
   }
 }
