@@ -11,8 +11,9 @@ $other-blue: rgb(0, 122, 255);
 $purple: rgb(88, 86, 214);
 $pink: rgb(255, 45, 85);
 
-$primary: $beaker-blue;
+$blue: #3d5af0;
 
+$primary: $blue;
 $primary--dark: shade($primary, 70%);
 $primary--dark-mid: shade($primary, 35%);
 $primary--light-mid: tint($primary, 35%);
