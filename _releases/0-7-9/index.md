@@ -5,7 +5,7 @@ size: 79 MB
 layout: release
 ---
 
-This is a small fix for OSX's Dat stack.
+This update contains some fixes for the MacOS DAT networking stack.
 
 <h2>Fixes</h2>
 

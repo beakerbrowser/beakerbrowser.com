@@ -10,21 +10,21 @@ order: 1
     <th>MacOS:</th>
     <td>
       <i class="fa fa-apple"></i>
-      <a href="https://github.com/beakerbrowser/beaker/releases/download/0.7.8/beaker-browser-0.7.8.dmg">Download the installer</a>
+      <a href="https://github.com/beakerbrowser/beaker/releases/download/0.7.9/beaker-browser-0.7.9.dmg">Download the installer</a>
     </td>
   </tr>
   <tr>
     <th>Windows:</th>
     <td>
       <i class="fa fa-windows"></i>
-      <a href="https://github.com/beakerbrowser/beaker/releases/download/0.7.8/beaker-browser-setup-0.7.8.exe">Download the installer</a>
+      <a href="https://github.com/beakerbrowser/beaker/releases/download/0.7.9/beaker-browser-setup-0.7.9.exe">Download the installer</a>
     </td>
   </tr>
   <tr>
     <th>Linux:</th>
     <td>
       <i class="fa fa-linux"></i>
-      <a href="https://github.com/beakerbrowser/beaker/releases/download/0.7.8/beaker-browser-0.7.8-x86_64.AppImage">Download the installer</a>
+      <a href="https://github.com/beakerbrowser/beaker/releases/download/0.7.9/beaker-browser-0.7.9-x86_64.AppImage">Download the installer</a>
     </td>
   </tr>
 </table>
