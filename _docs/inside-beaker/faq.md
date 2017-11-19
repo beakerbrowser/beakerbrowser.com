@@ -71,7 +71,7 @@ This is to protect the privacy of users.
 ### Do I automatically host sites that I've visited or downloaded?
 
 Yes, temporarily.
-If you want to rehost a site permanently, you should [save it to your sites library](/docs/howto/host.html).
+If you want to rehost a site permanently, you should [save it to your sites library](/docs/tutorials/host-outside-of-beaker.html).
 
 ### Who is allowed to change a Dat site?
 
