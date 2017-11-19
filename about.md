@@ -55,4 +55,4 @@ Beaker is built by a team of decentralizated Web enthusiasists with a history of
 
 ## Code for Science
 
-Beaker works closely with [Code for Science](https://datproject.org/team), the team behind the Dat protocol. Code for Science is a 501(c)(3) non-profit.
+Beaker works closely with [Code for Science](https://datproject.org/about#team), the team behind the Dat protocol. Code for Science is a 501(c)(3) non-profit.
