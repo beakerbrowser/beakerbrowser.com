@@ -6,7 +6,7 @@ order: 1
 
 <div class="callouts-1">
   <div class="container">
-    <a href="/docs/using-beaker" class="callout">
+    <a href="/docs/using-beaker/" class="callout">
       <h2 class="title">
         Using Beaker
       </h2>
@@ -16,7 +16,7 @@ order: 1
       </p>
     </a>
 
-    <a href="/docs/tutorials" class="callout">
+    <a href="/docs/tutorials/" class="callout">
       <h2 class="title">
         Tutorials
       </h2>
@@ -26,7 +26,7 @@ order: 1
       </p>
     </a>
 
-    <a href="/docs/apis" class="callout">
+    <a href="/docs/apis/" class="callout">
       <h2 class="title">
         APIs
       </h2>
