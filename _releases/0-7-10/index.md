@@ -1,11 +1,11 @@
 ---
 version: 0.7.10
 releaseDate: December 1, 2017
-size: 79 MB
+size: 80 MB
 layout: release
 ---
 
-Happy December 1st everybody! This release contains a set of fixes which we should've released a week ago, but forgot about. Enjoy!
+This release contains a set of fixes which we should've released a week ago, but forgot about. Enjoy!
 
 <h2>Additions</h2>
 
