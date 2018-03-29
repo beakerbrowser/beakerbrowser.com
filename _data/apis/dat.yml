@@ -418,6 +418,7 @@ instance_methods:
   -
     name: "revert"
     signature: "revert()"
+    deprecated: true
     desc: |
       Undo all changes in the staging area, and provide a list of the reversions.
 
@@ -425,7 +426,6 @@ instance_methods:
 
       Returns an array of objects:
 
-      <figcaption class="code">example</figcaption>
       ```plain
       [
         {
@@ -458,7 +458,6 @@ instance_methods:
 
       Returns an array of objects:
 
-      <figcaption class="code">output schema</figcaption>
       ```plain
       [
         {
@@ -472,7 +471,6 @@ instance_methods:
 
       Example:
 
-      <figcaption class="code">example</figcaption>
       ```js
       var archive = new DatArchive(datUrl)
       await archive.history({start: 0, end: 100, reverse: true})
