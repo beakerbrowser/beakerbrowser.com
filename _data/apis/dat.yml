@@ -297,15 +297,13 @@ instance_methods:
     name: "mkdir"
     signature: "mkdir(path)"
     desc: |
-      Creates a new directory at `path` in the staging area.
-      The promise will reject if there is already a file or directory at `url`, or if the containing directory-tree does not yet exist.
-
-      The archive must be committed to make the new directory permanent.
+      Creates a new directory at `path`. The promise will reject if there is
+      already a file or directory at `path`, or if the containing directory-tree
+      does not exist.
 
       - `path` The path of the directory to create.
       - returns `Promise<void>`
 
-      <figcaption class="code">example</figcaption>
       ```js
       var archive = new DatArchive(datUrl)
       await archive.mkdir('/subdir')
