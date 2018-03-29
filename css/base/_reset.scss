@@ -38,3 +38,12 @@ img {
 figcaption code {
   font-size: .8rem;
 }
+
+button {
+  background: transparent;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  outline: 0;
+  border: 0;
+}
