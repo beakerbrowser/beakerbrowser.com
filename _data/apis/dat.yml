@@ -207,7 +207,6 @@ instance_methods:
 
       Return object:
 
-      <figcaption class="code">output schema</figcaption>
       ```plain
       Stat {
         size: number (bytes)
@@ -239,11 +238,9 @@ instance_methods:
         - `'base64'` Return value will be a string.
         - `'hex'` Return value will be a string.
         - `'binary'` Return value will be an ArrayBuffer.
-        - If `opts` is a string, it is specifying the encoding.
       - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
       - returns `Promise<string|ArrayBuffer>`
 
-      <figcaption class="code">example</figcaption>
       ```js
       var archive = new DatArchive(datUrl)
 
@@ -278,10 +275,9 @@ instance_methods:
     name: "writeFile"
     signature: "writeFile(path, data, opts?)"
     desc: |
-      Replaces the file’  s contents with `data` in the staging area.
-      The promise will reject if there is already a directory at `path`, or if the containing directory-tree does not yet exist.
-
-      The archive must be committed to make the file update permanent.
+      Writes `data` to the the file at `path`.
+      The promise will reject if there is already a directory at `path`, or if
+      the containing directory-tree does not yet exist.
 
       - `path` The path of the file to write.
       - `data` The data to be written.
@@ -293,7 +289,6 @@ instance_methods:
         - If `opts` is a string, it is specifying the encoding.
       - returns `Promise<void>`
 
-      <figcaption class="code">example</figcaption>
       ```js
       var archive = new DatArchive(datUrl)
       await archive.writeFile('/hello.txt', 'world')
