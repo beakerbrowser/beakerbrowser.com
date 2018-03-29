@@ -389,6 +389,7 @@ instance_methods:
   -
     name: "commit"
     signature: "commit()"
+    deprecated: true
     desc: |
       Publish all changes in the staging area to the archive, and provide a list of the applied changes.
 
@@ -410,7 +411,6 @@ instance_methods:
 
       Example:
 
-      <figcaption class="code">example</figcaption>
       ```js
       var archive = new DatArchive(datUrl)
       await archive.commit()
