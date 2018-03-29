@@ -54,18 +54,21 @@ toplevel_methods:
       The fork will contain only the files in the target archive that have been completely downloaded.
       Use [`download()`](#download) to ensure the intended files are ready.
 
-      The user will be prompted to confirm or deny the archive creation.
+      Unless `opts.prompt` is false, the user will be prompted to confirm or
+      deny the archive creation.
+
 
       - `url` String. The URL of the archive to fork.
       - `opts.title` String. The title of the new archive.
       - `opts.description` String. The description of the new archive.
+      - `opts.prompt` Boolean. Whether or not to show Beaker's fork modal.
       - returns `Promise<DatArchive>`
 
-      <figcaption class="code">example</figcaption>
       ```js
       var archive = await DatArchive.fork(otherURL, {
         title: 'Hello, world 2!',
-        description: 'My new fork'
+        description: 'My new fork',
+        prompt: false
       })
       ```
   -
