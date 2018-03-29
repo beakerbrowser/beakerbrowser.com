@@ -11,6 +11,18 @@ toplevel_methods:
       var archive = new DatArchive(datUrl)
       ```
   -
+    name: "DatArchive.load"
+    signature: "DatArchive.load(url)"
+    desc: |
+      Create a Dat archive instance from an existing archive.
+
+      - `url` String. The URL of the archive to instantiate.
+      - returns `Promise<DatArchive>`
+
+      ```js
+      var archive = await DatArchive.load(datUrl)
+      ```
+  -
     name: "DatArchive.create"
     signature: "DatArchive.create(opts?)"
     desc: |
