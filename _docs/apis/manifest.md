@@ -20,8 +20,8 @@ Example:
 ```json
 {
   "url": "dat://4483a2..66/",
-  "title": "Application Title",
-  "description": "A short description of the app",
+  "title": "My website",
+  "description": "A simple website built with the Beaker Browser",
   "fallback_page": "/public/404.html",
   "web_root": "/public"
 }
