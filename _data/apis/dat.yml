@@ -112,7 +112,6 @@ toplevel_methods:
       - `url` String. The URL of the archive to resolve.
       - returns `Promise<string>`
 
-      <figcaption class="code">example</figcaption>
       ```js
       var rawDatUrl = await DatArchive.resolveName(datUrl)
       ```
@@ -139,26 +138,19 @@ instance_methods:
 
       Return object:
 
-      <figcaption class="code">output schema</figcaption>
       ```plain
       {
         key: string (the archive public key)
         url: string (the archive URL)
         version: number (the archive's current revision number)
-        peers: number (the number of active connections)
-        isOwner: boolean (is the local user the owner of this archive?)
+        peers: number (the number of active connections for the archive)
+        isOwner: boolean (is the user the owner of this archive?)
 
         title: string (the archive title)
         description: string (the archive description)
-        forkOf: string|array<string> (the archive's parent fork)
-        createdBy: {
-          url: string (the url of the app that created the archive)
-          title: string (the title of the app that created the archive)
-        }
 
         mtime: number (the walltime of the last received update; is reliable)
-        metaSize: number (bytes, the size-on-disk of the archive metadata)
-        stagingSize: number (bytes, the size-on-disk of the archive staging area)
+        size: number (bytes, the size-on-disk of the archive)
       }
       ```
 
