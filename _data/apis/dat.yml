@@ -88,26 +88,20 @@ toplevel_methods:
     name: "DatArchive.selectArchive"
     signature: "DatArchive.selectArchive(opts?)"
     desc: |
-      Select a Dat archive from the library, or create a new Dat,
-      and return the archive instance.
+      Prompt the user to select a Dat archive from the Library or create a new
+      Dat archive, and return the archive instance.
 
-      - `opts.title` String. The title of the select modal.
-      - `opts.buttonLabel` String. The label on the primary action button.
+      - `opts.title` String. The title of the select archive modal.
+      - `opts.buttonLabel` String. The label on the primary action button in the select archive modal.
       - `opts.filters.isOwner` Boolean. If true, only show archives that the user owns and can modify.
       - returns `Promise<DatArchive>`
 
-      <figcaption class="code">example</figcaption>
       ```js
       var archive = await DatArchive.selectArchive({
-        title: 'Hello, world!',
-        buttonLabel: 'My new site'
+        title: 'Select an archive to use as your user profile',
+        buttonLabel: 'Select profile'
       })
       ```
-
-      <figure>
-      <img src="/img/posts/beaker-0-7-2/dat-picker.jpg" >
-      <figcaption>The Dat picker modal for selectArchive()</figcaption>
-      </figure>
   -
     name: "DatArchive.resolveName"
     signature: "DatArchive.resolveName(url)"
