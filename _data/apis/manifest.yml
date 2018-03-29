@@ -1,18 +1,18 @@
 attributes:
   -
-    name: ".url"
-    desc: "The URL of the archive."
+    name: "url"
+    desc: "The Dat archive's URL."
   -
-    name: ".title"
-    desc: "A short but descriptive human friendly title."
+    name: "title"
+    desc: "A short and descriptive human-friendly title."
   -
-    name: ".description"
-    desc: "A one- or two-line description of the archive."
+    name: "description"
+    desc: "A description of the Dat archive."
   -
-    name: ".fallback_page"
+    name: "fallback_page"
     desc: |
-      The path for the page to serve when a user hits a 404. ([See this demo gif.](/img/docs/demo-fallback-page.gif))
+      The path to a fallback page to serve instead of the default 404 page.
   -
-    name: ".web_root"
+    name: "web_root"
     desc: |
-      The path of the folder which all requests should be served from. ([See this demo gif.](/img/docs/demo-web-root.gif))
+      The path of the folder from which all requests should be served.
