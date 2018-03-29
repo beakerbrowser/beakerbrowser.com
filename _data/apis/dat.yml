@@ -29,17 +29,19 @@ toplevel_methods:
       Create a new Dat archive, and return the archive instance.
       The archive is sandboxed to only access to files within it.
 
-      The user will be prompted to confirm or deny the archive creation.
+      Unless `opts.prompt` is false, the user will be prompted to confirm or
+      deny the archive creation.
 
       - `opts.title` String. The title of the new archive.
       - `opts.description` String. The description of the new archive.
+      - `opts.prompt` Boolean. Whether or not to show Beaker's create archive modal upon creation.
       - returns `Promise<DatArchive>`
 
-      <figcaption class="code">example</figcaption>
       ```js
       var archive = await DatArchive.create({
-        title: 'Hello, world!',
-        description: 'My new site'
+        title: 'My website',
+        description: 'A simple demo website',
+        prompt: false
       })
       ```
   -
