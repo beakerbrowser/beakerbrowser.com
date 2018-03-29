@@ -162,6 +162,39 @@ instance_methods:
       await archive.getInfo()
       ```
   -
+    name: "configure"
+    signature: "configure(opts)"
+    desc: |
+      Configure the dat.json manifest file values for the given Dat archive.
+
+      - `opts.title`
+      - `opts.description`
+      - `opts.repository`
+      - `opts.web_root`
+      - `opts.fallback_page`
+      - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
+      - returns `Promise<void>`
+
+      ```javascript
+      var archive = new DatArchive(datUrl)
+      await archive.configure({title: 'New title', fallback_page: 'index.html'})
+      ```
+  -
+    name: "copy"
+    signature: "copy(path, dstPath, opts?)"
+    desc: |
+      Copies a file or directory to a target path.
+
+      - `path` The path of the file/directory to copy
+      - `dstpath` The target path
+      - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
+      - returns `Promise<void>`
+
+      ```javascript
+      var archive = new DatArchive(datUrl)
+      await archive.copy('/images', '/backup-images')
+      ```
+  -
     name: "stat"
     signature: "stat(path, opts?)"
     desc: |
