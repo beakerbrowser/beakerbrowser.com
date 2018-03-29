@@ -484,15 +484,18 @@ instance_methods:
       - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
       - returns `Promise<void>`
 
-      <figcaption class="code">example</figcaption>
       ```js
       var archive = new DatArchive(datUrl)
       await archive.download('/foo.txt')
-      await archive.download('/') // download everything
+      await archive.download('/') // download the entire archive
       ```
+  -
+    name: "watch"
+    signature: "watch() // TODO!!! do we also need to document addEventListener?"
   -
     name: "createFileActivityStream"
     signature: "createFileActivityStream(pattern?)"
+    deprecated: true
     desc: |
       Watch the given path or path-pattern for file events.
 
@@ -507,7 +510,6 @@ instance_methods:
       - `'invalidated' ({path: string})` The contents of the file has changed remotely, but it hasn't been downloaded yet.
         - `path` is the path-string of the file.
 
-      <figcaption class="code">example</figcaption>
       ```js
       var archive = new DatArchive(datUrl)
 
@@ -528,6 +530,7 @@ instance_methods:
       ```
   -
     name: "createNetworkActivityStream"
+    deprecated: true
     signature: "createNetworkActivityStream()"
     desc: |
       Watch for network events. Provides an `EventTarget` with a `.close()` method and the following events:
@@ -545,7 +548,6 @@ instance_methods:
       - `'sync' ({feed})` All known blocks have been downloaded.
         - `feed` will either be `"metadata"` or `"content"`.
 
-      <figcaption class="code">example</figcaption>
       ```js
       var archive = new DatArchive(datUrl)
       var evts = archive.createNetworkActivityStream()
