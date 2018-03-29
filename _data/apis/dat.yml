@@ -72,6 +72,19 @@ toplevel_methods:
       })
       ```
   -
+    name: "DatArchive.unlink"
+    signature: "DatArchive.unlink(url)"
+    desc: |
+      Delete the given Dat archive from the user's Library. The user must
+      grant permission to delete the archive.
+
+      - `url` String. The URL of the archive to delete.
+      - returns `Promise<void>`
+
+      ```js
+      await DatArchive.unlink(datUrl)
+      ```
+  -
     name: "DatArchive.selectArchive"
     signature: "DatArchive.selectArchive(opts?)"
     desc: |
