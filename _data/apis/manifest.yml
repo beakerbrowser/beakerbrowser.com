@@ -9,6 +9,9 @@ attributes:
     name: "description"
     desc: "A description of the Dat archive."
   -
+    name: "repository"
+    desc: "The URL for the git repository associated with the Dat archive."
+  -
     name: "fallback_page"
     desc: |
       The path to a fallback page to serve instead of the default 404 page.
