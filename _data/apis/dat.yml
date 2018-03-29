@@ -3,11 +3,10 @@ toplevel_methods:
     name: "DatArchive"
     signature: "new DatArchive(url)"
     desc: |
-      Create an archive instance from an existing archive.
+      Create a Dat archive instance from an existing archive.
 
       - `url` String. The URL of the archive to instantiate.
 
-      <figcaption class="code">example</figcaption>
       ```js
       var archive = new DatArchive(datUrl)
       ```
