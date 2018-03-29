@@ -340,8 +340,24 @@ instance_methods:
       await archive.rmdir('/', {recursive: true})
       ```
   -
+    name: "rename"
+    signature: "rename(oldPath, newPath, opts?)"
+    desc: |
+      - `oldPath` The path to the file/directory be renamed
+      - `newPath` The new path for the file/directory to be renamed
+      - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
+      - returns `Promise<void>`
+
+      Example:
+
+      ```javascript
+      var archive = new DatArchive(datUrl)
+      await archive.rename('index.js', 'main.js')
+      ```
+  -
     name: "diff"
     signature: "diff(opts?)"
+    deprecated: true
     desc: |
       Compare the current staging area to the published archive, and provide a list of the differences.
 
