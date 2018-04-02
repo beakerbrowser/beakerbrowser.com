@@ -1,15 +1,121 @@
-.layout-doc,
-.layout-docs-intro,
-.layout-docs-tutorials-intro {
+.layout.doc {
+  position: relative;
+  height: initial;
+  overflow-y: auto;
 
   .header {
-    position: relative;
-    z-index: 3;
+    background: var(--page-color);
   }
 
-  .header .container {
-    border-bottom: none;
+  .hero {
+    @extend %antialiased;
+    padding: 50px 0;
+    color: #fff;
+    background: var(--page-color);
+
+    .subtitle {
+      font-weight: 400;
+
+    }
   }
+
+  .container.columns {
+    position: relative;
+    align-items: flex-start;
+  }
+}
+
+.docs-sidebar {
+  position: sticky;
+  top: 60px;
+  padding-top: 5px;
+  font-size: .8rem;
+  font-weight: 400;
+
+  ul {
+    list-style: none;
+    margin-left: 0;
+  }
+
+  .heading {
+    color: var(--page-color);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  li.subheading {
+    position: relative;
+    margin-top: 15px;
+    color: var(--page-color);
+    font-weight: 500;
+
+    .anchor {
+      position: absolute;
+      left: -15px;
+      opacity: 0;
+      color: #bbb;
+
+      &:hover {
+        color: var(--page-color);
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+
+      .anchor {
+        opacity: 1;
+      }
+    }
+
+    li {
+      margin-left: 20px;
+      font-weight: 400;
+    }
+  }
+
+  [href]:hover {
+    color: var(--page-color);
+    text-decoration: underline;
+  }
+}
+
+.docs-breadcrumbs {
+  @extend %antialiased;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  font-family: Hind;
+  font-weight: 500;
+
+  .container {
+    padding: 10px 0;
+    border-top: 1px solid transparentize(#fff, .9);
+  }
+
+  .breadcrumb {
+    margin-right: 10px;
+
+    &:not(.btn):hover {
+      text-decoration: underline;
+    }
+
+    .dropdown .nav-item {
+
+      &:hover,
+      &.active {
+        color: var(--page-color);
+      }
+    }
+  }
+
+  background: var(--page-color);
+  color: #fff;
+}
+
+main {
+  padding: 50px 0;
 }
 
 .docs-nav-mobile {
@@ -42,7 +148,7 @@
   color: $text--light-bg-muted;
 
   .container {
-    @extend %flex-container;
+    @extend %flex;
     justify-content: space-between;
     border-bottom: 1px solid $gray--mid;
   }
@@ -132,7 +238,7 @@
   }
 
   .container {
-    @extend %flex-container;
+    @extend %flex;
   }
 
   h1,

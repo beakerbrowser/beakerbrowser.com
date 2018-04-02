@@ -2,7 +2,8 @@
 {% assign activePage = include.page %}
 
 {% if section %}
-<nav class="doc-sidebar-nav">
+<nav class="col-1-5 docs-sidebar">
+  <!--
   <ul class="pages">
     {% for page in section.children %}
       {% if activePage.title == page.title %}
@@ -15,13 +16,42 @@
       </li>
     {% endfor %}
   </ul>
+  -->
+
+  <div class="heading">
+    {{ activePage.title }}
+  </div>
 
   {% if activePageNav.children %}
     <ul class="headings">
-      {% for heading in activePageNav.children %}
-        <li>
-          <a href="{{ heading.url }}">{{ heading.title }}</a>
-        </li>
+      {% for child in activePageNav.children %}
+        {% if child.heading %}
+          <li class="subheading">
+            <a class="anchor" href="{{ child.url }}" title="{{ child.title }}">
+              #
+            </a>
+
+            <span class="collapseable-btn">
+              {{child.title }}
+              <i class="fa fa-angle-up"></i>
+            </span>
+
+            <ul class="collapseable">
+              {% for subchild in child.children %}
+                <li>
+                  <a href="{{ subchild.url }}">{{ subchild.title }}</a>
+                  {% if subchild.deprecated %}
+                    <i class="fa fa-exclamation-circle"></i>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% else %}
+          <li>
+            <a href="{{ child.url }}">{{ child.title }}</a>
+          </li>
+        {% endif %}
       {% endfor %}
     </ul>
   {% endif %}

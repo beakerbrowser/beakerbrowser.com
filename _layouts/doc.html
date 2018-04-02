@@ -1,42 +1,101 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title | default: "Beaker Browser" }}</title>
+    <meta name="viewport" content="width=device-width">
 
-{% include docs-nav.html section=page.section page=page class=page.class %}
+    <!-- SEO -->
+    {% include keywords.html %}
 
-<main class="docs {{ page.class }}">
-  <div class="container">
-    <div class="content">
-      <h1>{{ page.title }}</h1>
-      {{ content }}
-    </div>
-    {% include docs-sidebar.html section=page.section page=page %}
-  </div>
-</main>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="icon" href="/img/favicon.png">
 
-<script>
-var $ = document.querySelector.bind(document)
-var $$ = function (selector) {
-  return Array.prototype.slice.call(document.querySelectorAll(selector))
-}
-</script>
-<script src="/js/anchor.min.js"></script>
-<script>
-anchors.add('h2, h3, h4')
-</script>
+    <!-- social woo woo -->
 
-<script>
-var mobileNav = document.getElementById('docs-nav-mobile')
-mobileNav.addEventListener('change', function (e) {
-  var select = e.target
-  window.location = select.selectedOptions[0].dataset.url
-})
-</script>
-<script>
-[].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
-  img.setAttribute('src', img.getAttribute('data-src'))
-  img.onload = function() {
-    img.removeAttribute('data-src')
-  }
-})
-</script>
+    {% if page.layout == 'post' %}
+      <meta name="twitter:site" content="@BeakerBrowser" />
+      <meta name="twitter:title" content="{{ page.title }}"/>
+      <meta name="twitter:description" content="{{ page.excerpt | markdownify | strip_html }}"/>
+      {% if page.image %}
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://beakerbrowser.com{{ page.image }}" />
+      {% else %}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:image" content="https://beakerbrowser.com/img/logo/256x256.png" />
+      {% endif %}
+    {% else %}
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="Beaker | {{ page.title | default: "Peer-to-peer Web browser. No blockchain required." }}">
+      <meta name="og:description" content="{{ page.desc }}">
+      {% if page.thumb %}
+        <meta name="og:image" content="{{ page.thumb }}">
+      {% endif %}
+    {% endif %}
+
+    {% case page.section %}
+      {% when 'tutorials' %}
+        <style>body { --page-color: orange; }</style>
+      {% when 'webAPIs' %}
+        <style>body { --page-color: teal; }</style>
+      {% when 'troubleshooting' %}
+        <style>body { --page-color: green; }</style>
+      {% when 'faq' %}
+        <style>body { --page-color: magenta; }</style>
+      {% else %}
+        <style>body { --page-color: blue; }</style>
+    {% endcase %}
+  </head>
+
+  <body class="layout doc">
+    {% include header-light.html %}
+    {% include docs-hero.html section=page.section page=page class=page.class %}
+    {% include docs-breadcrumbs.html section=page.section page=page class=page.class %}
+
+    <main class="docs {{ page.class }}">
+      <div class="container columns">
+        {% include docs-sidebar.html section=page.section page=page %}
+
+        <div class="content col-4-5">
+          <h1>{{ page.title }}</h1>
+          {{ content }}
+        </div>
+      </div>
+    </main>
+
+    <script>
+    var $ = document.querySelector.bind(document)
+    var $$ = function (selector) {
+      return Array.prototype.slice.call(document.querySelectorAll(selector))
+    }
+    </script>
+    <script src="/js/anchor.min.js"></script>
+    <script>
+    anchors.add('h2, h3, h4')
+    </script>
+
+    <script>
+    var mobileNav = document.getElementById('docs-nav-mobile')
+    mobileNav.addEventListener('change', function (e) {
+      var select = e.target
+      window.location = select.selectedOptions[0].dataset.url
+    })
+    </script>
+    <script>
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'))
+      img.onload = function() {
+        img.removeAttribute('data-src')
+      }
+    })
+    </script>
+  </body>
+
+  <script src="/js/toggleable.js"></script>
+  <script src="/js/collapseable.js"></script>
+</html>
