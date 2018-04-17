@@ -1,176 +1,47 @@
 .hero {
-  position: relative;
-  background: $hero-bg;
-  color: $text--dark-bg;
-  padding: 1em 0 4em 0;
-  @extend %shrink-text-phone;
   @extend %antialiased;
-  font-weight: 500;
-  text-align: center;
-
-  @include respond-to(tablet) {
-    font-size: 1rem;
-    padding-top: 3em;
-
-    &:before {
-      display: block;
-      position: absolute;
-      top: -5px;
-      z-index: 1;
-      content: '';
-      width: 100%;
-      height: 40px;
-      background: linear-gradient($header-bg, transparentize($header-bg, 1));
-
-      @include respond-to(tall-gradient-hero) {
-        height: 60px;
-      }
-    }
-  }
-
-  &__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    height: 100%;
-  }
+  align-items: center;
+  padding: 60px 0;
+  background: $blue;
+  color: #fff;
 
   .container {
-    position: relative;
-    z-index: 1;
+    align-items: center;
   }
 
-  .intro {
-    margin: inherit auto;
-    text-align: center;
+  .col {
 
-    > .description {
-      font-size: .95rem;
-      max-width: 700px;
-      margin: 0 auto 2em auto;
+    &.graphic {
+      text-align: right;
 
-      @media (min-width: 700px) {
-        font-size: 1.1rem;
-        margin-bottom: 3em;
-      }
-
-      a {
-        text-decoration: underline;
-      }
-    }
-
-    .cta {
-      font-weight: 600;
-      font-size: 0.85rem;
-      margin-bottom: 2em;
-
-      @media (min-width: 350px) {
-        font-size: 1rem;
-        margin-bottom: 3em;
+      img {
+        max-width: 500px;
       }
     }
   }
 
   .tagline {
-    font-size: 1.3rem;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-
-    @media (min-width: 350px) {
-      font-size: 1.6rem;
-      font-weight: 400;
-    }
-
-    @media (min-width: 530px) {
-      font-size: 1.85rem;
-    }
+    font-size: 2.1rem;
+    font-weight: 700;
+    -webkit-text-stroke: .4px;
+    letter-spacing: .5px;
+    line-height: 1.2;
   }
 
-  .links {
-    font-size: .85rem;
-    margin-bottom: 2rem;
-
-    * {
-      vertical-align: middle;
-    }
-
-    iframe {
-      display: block;
-      margin: .5em auto 0 auto;
-
-      @include respond-to(tablet) {
-        display: inline-block;
-        margin-left: .25em;
-        margin-top: 0;
-      }
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
+  .description {
+    font-family: Hind;
+    font-size: 18px;
   }
 
-  &__links {
-    @extend %grid-3;
-    width: 100%;
-    margin-top: 2em;
-
-    @include respond-to(expand-hero) {
-      margin: 0;
-      text-align: left;
-    }
+  .description,
+  .cta {
+    color: #fff;
   }
 
-  &__link {
-    @extend %rounded;
-    @extend %col-1-3;
-    display: flex;
-    padding: 1em;
-    background: transparentize(#fff, .9);
-    border: 1px solid transparentize(#fff, .75);
-    cursor: pointer;
-    text-align: left;
-
-    &:hover {
-      background: transparentize(#fff, .75);
-    }
-
-    &:not(:last-child) {
-      margin-bottom: 1rem;
-
-      @include respond-to(show-grid-3) {
-        margin: 0 2rem 0 0;
-      }
-    }
-
-    i {
-      font-size: 2rem;
-    }
-
-    .info {
-      display: inline-block;
-      vertical-align: top;
-      margin-left: 1em;
-    }
-
-    .title {
-      font-size: 1rem;
-      line-height: .85;
-      margin-bottom: .5em;
-      font-weight: 700;
-
-      &:after {
-        content: '\203A';
-        display: inline-block;
-        font-size: 1.2rem;
-        margin-left: .25em;
-      }
-    }
-
-    .description {
-      font-size: .9rem;
-    }
+  img {
+    // position: absolute;
+    right: -2px;
+    bottom: -2px;
   }
 }
 
@@ -180,6 +51,53 @@
 
   h2 {
     font-weight: normal;
+  }
+
+  &.social {
+
+    .container {
+      @extend %flex;
+      flex-direction: column;
+      height: 300px;
+    }
+
+    .demo-video {
+      position: relative;
+      flex-basis: calc(30% - 15px);
+      margin-right: 15px;
+      height: 100%;
+      background-color: lighten($blue, 10%);
+      background-image: url(/img/demo-screencap.png);
+      background-size: cover;
+      background-position-x: center;
+      background-blend-mode: multiply;
+      border-radius: 3px;
+
+      .label {
+        @extend %transition;
+        transition-property: background;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 0;
+        background: transparentize($blue, .5);
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+
+        i {
+          margin-left: 5px;
+        }
+      }
+
+      &:hover {
+
+        .label {
+          background: transparentize($blue, .3);
+        }
+      }
+    }
   }
 
   &--problem {
