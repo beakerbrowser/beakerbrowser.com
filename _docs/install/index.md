@@ -10,7 +10,7 @@ order: 1
     <th>MacOS:</th>
     <td>
       <i class="fa fa-apple"></i>
-      <a href="https://github.com/beakerbrowser/beaker/releases/download/0.8.0-prerelease.5/beaker-browser-0.8.0-prerelease.5-x86_64.AppImage">Download the installer</a>
+      <a href="https://github.com/beakerbrowser/beaker/releases/download/0.8.0-prerelease.5/beaker-browser-0.8.0-prerelease.5.dmg">Download the installer</a>
     </td>
   </tr>
   <tr>
