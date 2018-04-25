@@ -51,6 +51,27 @@ Beaker is built by a team of decentralizated Web enthusiasists with a history of
       </ul>
     </div>
   </div>
+
+  <div class="team-member">
+    <img data-src="/img/team/mafintosh.jpg">
+    <div class="info">
+      <h3>Mathias Buus</h3>
+      <ul>
+        <li>
+          <i class="fa fa-twitter"></i>
+          <a href="https://twitter.com/mafintosh">Twitter</a>
+        </li>
+        <li>
+          <i class="fa fa-github"></i>
+          <a href="https://github.com/mafintosh">GitHub</a>
+        </li>
+        <li>
+          <i class="fa fa-rss"></i>
+          <a href="http://mafintosh.com/">Blog</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 ## Code for Science
