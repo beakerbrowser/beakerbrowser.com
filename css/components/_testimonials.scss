@@ -1,0 +1,75 @@
+.testimonials-wrapper {
+  text-align: left;
+  display: block;
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+  animation: scroll 30s linear infinite;
+  padding: 5px;
+
+  .testimonial {
+    @extend %transition;
+    @extend %inline-flex;
+    align-items: flex-start;
+    min-width: 200px;
+    max-width: 300px;
+    height: 125px;
+    margin-right: 15px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 4px;
+    font-size: 12.5px;
+    font-family: "Inter UI";
+
+    &.big {
+      grid-row: auto / span 2;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    q {
+      color: #111;
+      font-weight: 300;
+      white-space: pre-line;
+    }
+
+    &:hover q {
+      color: $blue;
+    }
+  }
+
+  &:hover {
+    animation-play-state: paused
+  }
+
+  &.grid {
+    animation: none;
+    @extend %grid;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    grid-gap: 15px;
+
+    .testimonial {
+      margin-right: 0;
+      max-width: initial;
+      max-height: initial;
+    }
+  }
+
+  button#show-all-testimonials {
+    width: 100%;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@keyframes scroll {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
