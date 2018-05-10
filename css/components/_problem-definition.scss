@@ -8,7 +8,7 @@
 
   h3 {
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     font-size: 1.2rem;
     letter-spacing: .3px;
   }
@@ -17,67 +17,84 @@
     font-weight: 600;
   }
 
-  .problem {
-    @extend %flex;
-    flex-wrap: nowrap;
-    align-items: stretch;
-    border: 30px solid;
+  // TODO saved for when we actually have learn-more links
+  .learn-more {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    padding-top: 10px;
+    margin-top: 25px;
+  }
 
-    > div {
-      @extend %flex;
-    }
+  .problems {
+    @extend %grid;
+    grid-template-columns: 1fr 1fr 1fr; // TODO use minmax
+  }
+
+  .problem {
+    position: relative;
+    padding: 25px;
+    border: 10px solid;
 
     &.blue {
       border-color: $blue;
 
-      a,
+      p a,
       h3 {
         color: $blue;
+      }
+
+      .learn-more {
+        background: $blue;
       }
     }
 
     &.green {
       border-color: $green;
 
-      a,
+      p a,
       h3 {
         color: $green;
+      }
+
+      .learn-more {
+        background: $green;
       }
     }
 
     &.purple {
       border-color: $purple;
 
-      a,
+      p a,
       h3 {
         color: $purple;
       }
-    }
 
-    &:not(:last-of-type) {
-      margin-bottom: 60px;
+      .learn-more {
+        background: $purple;
+      }
     }
 
     .graphic-container {
-      @extend %inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex: 1 0 235px;
       background: #fff;
+      margin: auto;
+      margin-bottom: 20px;
     }
 
     img.graphic {
-      width: 130px;
-      height: auto;
+      height: 90px;
+      width: auto;
     }
 
     .content {
-      padding: 35px;
       background: #fff;
       text-align: left;
 
       p {
-        font-size: .95rem;
+        font-size: .9rem;
         font-weight: 400;
       }
     }
