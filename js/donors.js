@@ -1,30 +1,40 @@
-var xhr = new XMLHttpRequest()
-xhr.onload = renderDonors
-xhr.open('GET', '/js/donors.json')
-xhr.send()
+(function () {
+  // donor IDs with avatars that 404
+  var BLACKLIST = [16048, 7981, 10672]
 
-function renderDonors () {
-  var donors = JSON.parse(this.responseText)
-  var donorsEl = document.getElementById('donors')
+  var xhr = new XMLHttpRequest()
+  xhr.onload = renderDonors
+  xhr.open('GET', '/js/donors.json')
+  xhr.send()
 
-  donorsEl.innerHTML = ''
-  var donorEls = donors.forEach(function (d) {
-    if (d.role !== 'CONTRIBUTOR' && d.role !== 'HOST') {
+  function renderDonors () {
+    var donors = JSON.parse(this.responseText)
+    var totalDonorCount = donors.length
+
+    donors = donors.filter(d => d.image && d.role === 'BACKER' && BLACKLIST.indexOf(d.MemberId) === -1)
+    var noAvatarCount = totalDonorCount - donors.length
+
+    var donorsEl = document.getElementById('donors')
+    donorsEl.innerHTML = ''
+
+    var donorEls = donors.forEach(function (d) {
       donorsEl.appendChild(renderDonor(d))
-    }
-  })
-}
+    })
 
-function renderDonor (donor) {
-  var el = document.createElement('div')
-  el.classList.add('donor')
-  el.title = donor.name + ' gave $' + donor.totalAmountDonated
-
-  if (donor.image) {
-    el.innerHTML = '<img class="avatar" src="' + donor.image + '"/>'
-  } else {
-    el.innerHTML = '<div class="avatar placeholder gray-bg"><i class="fa fa-heart"></i></div>'
+    var linkEl = document.createElement('a')
+    linkEl.href = 'https://opencollective.com/beaker'
+    linkEl.classList.add('donor')
+    linkEl.innerText = '+ ' + noAvatarCount + ' other supporters'
+    donorsEl.appendChild(linkEl)
   }
 
-  return el
-}
+  function renderDonor (donor) {
+    var el = document.createElement('a')
+    el.href = donor.profile
+    el.classList.add('donor')
+    el.title = donor.name + ' gave $' + donor.totalAmountDonated
+    el.innerHTML = '<img class="avatar" src="' + donor.image + '"/>'
+
+    return el
+  }
+})()
