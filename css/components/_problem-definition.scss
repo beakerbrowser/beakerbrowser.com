@@ -1,0 +1,85 @@
+.section.problem {
+
+  h2 {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 80px;
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    letter-spacing: .3px;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  .problem {
+    @extend %flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    border: 30px solid;
+
+    > div {
+      @extend %flex;
+    }
+
+    &.blue {
+      border-color: $blue;
+
+      a,
+      h3 {
+        color: $blue;
+      }
+    }
+
+    &.green {
+      border-color: $green;
+
+      a,
+      h3 {
+        color: $green;
+      }
+    }
+
+    &.purple {
+      border-color: $purple;
+
+      a,
+      h3 {
+        color: $purple;
+      }
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 60px;
+    }
+
+    .graphic-container {
+      @extend %inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1 0 235px;
+      background: #fff;
+    }
+
+    img.graphic {
+      width: 130px;
+      height: auto;
+    }
+
+    .content {
+      padding: 35px;
+      background: #fff;
+      text-align: left;
+
+      p {
+        font-size: .95rem;
+        font-weight: 400;
+      }
+    }
+  }
+}
