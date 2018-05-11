@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="502px" height="248px" viewBox="0 0 502 248" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>p2p-network</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="p2p-network">
+            <rect id="Rectangle-22" fill="#FFFFFF" x="0" y="0" width="502" height="248"></rect>
+            <path d="M426,177 L375,101" id="Line-10" stroke="#EEEEEE" stroke-width="4" stroke-linecap="square"></path>
+            <path d="M271,182 L261,64" id="Line-10-Copy" stroke="#EEEEEE" stroke-width="4" stroke-linecap="square"></path>
+            <path d="M203,99 L253,57" id="Line-10-Copy-3" stroke="#EEEEEE" stroke-width="4" stroke-linecap="square"></path>
+            <path d="M146,166 L268,186" id="Line-10-Copy-5" stroke="#EEEEEE" stroke-width="4" stroke-linecap="square"></path>
+            <path d="M100,71 L189,106" id="Line-10-Copy-4" stroke="#EEEEEE" stroke-width="4" stroke-linecap="square"></path>
+            <path d="M261,56 L357,86" id="Line-10-Copy-2" stroke="#EEEEEE" stroke-width="4" stroke-linecap="square"></path>
+            <circle id="Oval-17" fill="#7089FA" cx="192.5" cy="104.5" r="10.5"></circle>
+            <circle id="Oval-17-Copy" fill="#7089FA" cx="271.5" cy="185.5" r="10.5"></circle>
+            <circle id="Oval-17-Copy-2" fill="#3FDFA0" cx="91.5" cy="65.5" r="10.5"></circle>
+            <circle id="Oval-17-Copy-3" fill="#3FDFA0" cx="366.5" cy="92.5" r="10.5"></circle>
+            <circle id="Oval-17-Copy-4" fill="#111111" cx="133.5" cy="162.5" r="10.5"></circle>
+            <circle id="Oval-17-Copy-5" fill="#111111" cx="258.5" cy="55.5" r="10.5"></circle>
+            <circle id="Oval-17-Copy-6" fill="#111111" cx="422.5" cy="173.5" r="10.5"></circle>
+        </g>
+    </g>
+</svg>
