@@ -5,7 +5,7 @@ sectionTitle: Tutorials
 order: 5
 ---
 
-One of Beaker’s most powerful features comes from the Dat protocol’s approach to ensuring archive/site integrity. As explained in [Inside Beaker: Privacy and security](/docs/inside-beaker/privacy-and-security.html#archive-integrity), each update to a Dat is signed, and and each file is hashed.
+One of Beaker’s most powerful features comes from the Dat protocol’s approach to ensuring archive/site integrity. As explained in [Inside Beaker: Privacy and security](/docs/how-beaker-works/privacy-and-security.html#archive-integrity), each update to a Dat is signed, and and each file is hashed.
 
 > The Dat protocol ensures that the archive is signed by the author, and can be checked for correctness by querying network peers (distribution uniformity). Only one version of the archive’s history can be distributed. If a signed Dat archive is found to differ from a peer’s signed copy, it is treated as corrupt, as the differing content could indicate a targeted attack by the Dat author. It’s important that all users receive the same content, and that’s why Dat has integrity verification built in.
 

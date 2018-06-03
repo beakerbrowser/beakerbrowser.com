@@ -1,17 +1,26 @@
 %grid {
-  @extend %flex-container;
-  flex-direction: column;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr;
 }
 
-%grid-2 {
+.grid-2 {
   @extend %grid;
 
   @include respond-to(show-grid-2) {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-%grid-3 {
+.grid-3 {
+  @extend %grid;
+
+  @include respond-to(show-grid-2) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.grid-3 {
   @extend %grid;
 
   @include respond-to(show-grid-3) {
@@ -19,7 +28,7 @@
   }
 }
 
-%grid-5 {
+.grid-5 {
   @extend %grid;
 
   @include respond-to(show-grid-5) {
@@ -27,34 +36,49 @@
   }
 }
 
-%col {
-  width: 100%;
-  display: block;
-  margin: auto;
-  text-align: center;
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  @include respond-to(tablet) {
+    flex-wrap: nowrap;
+  }
 }
 
-%col-1-2 {
+%col {
+  width: 100%;
+  margin-bottom: 50px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include respond-to(tablet) {
+    margin-bottom: 0;
+    margin-right: 50px;
+  }
+}
+
+.col-1-2 {
   @extend %col;
 
   @include respond-to(show-grid-2) {
     flex: 1;
     text-align: left;
-    margin: 0;
   }
 }
 
-%col-1-3 {
+.col-1-3 {
   @extend %col;
 
   @include respond-to(show-grid-3) {
     flex: 1;
     text-align: left;
-    margin: 0;
   }
 }
 
-%col-2-3 {
+.col-2-3 {
   @extend %col;
 
   @include respond-to(show-grid-3) {
@@ -64,7 +88,7 @@
   }
 }
 
-%col-1-5 {
+.col-1-5 {
   @extend %col;
 
   @include respond-to(show-grid-5) {
@@ -75,32 +99,29 @@
   }
 }
 
-%col-2-5 {
+.col-2-5 {
   @extend %col;
 
   @include respond-to(show-grid-5) {
     flex: 2;
     text-align: left;
-    margin: 0;
   }
 }
 
-%col-3-5 {
+.col-3-5 {
   @extend %col;
 
   @include respond-to(show-grid-5) {
     flex: 3;
     text-align: left;
-    margin: 0;
   }
 }
 
-%col-4-5 {
+.col-4-5 {
   @extend %col;
 
   @include respond-to(show-grid-5) {
     flex: 4;
     text-align: left;
-    margin: 0;
   }
 }

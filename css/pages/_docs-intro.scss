@@ -1,7 +1,55 @@
 .layout-docs-intro {
 
-  .container {
-    max-width: 1000px;
+  // TODO get rid of all this
+  .quick-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+    margin: 20px 0;
+
+    @include respond-to(netbook) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    > div {
+      // border: 1px solid;
+      padding: 20px;
+      color: rgba(0,0,0,.8);
+      cursor: pointer;
+
+      &:hover {
+
+        h2 {
+          text-decoration: underline;
+        }
+      }
+
+      p {
+        font-size: .85rem;
+      }
+
+      &.quickstart {
+        border-color: $blue;
+        background: $blue;
+        background: transparentize($blue, .85);
+      }
+
+      &.apis {
+        // border-color: $lime;
+        // background: $lime;
+        // background: transparentize($lime, .85);
+      }
+
+      &.overview {
+        // border-color: $pink;
+        // background: transparentize($pink, .85);
+      }
+
+      h2 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+      }
+    }
   }
 
   main {
@@ -12,12 +60,12 @@
   .callouts-1 {
 
     .container {
-      @extend %grid-3;
+      // @extend .grid-3;
       padding: 2em 0;
     }
 
     .callout {
-      @extend %col-1-3;
+      // @extend .col-1-3;
       border: 1px solid $gray--mid;
       font-size: .9rem;
       padding: 1rem;
@@ -78,7 +126,7 @@
   .callouts-2 {
 
     .container {
-      @extend %grid-3;
+      // @extend .grid-3;
       padding: 2em 0;
     }
 
@@ -86,7 +134,7 @@
       text-align: left;
 
       &.updates {
-        @extend %col-1-3;
+        @extend .col-1-3;
         text-align: left;
         margin-bottom: 3rem !important;
       }
@@ -125,7 +173,7 @@
     }
 
     .tutorials {
-      @extend %col-2-3;
+      @extend .col-2-3;
       font-size: .9rem;
 
       .more {

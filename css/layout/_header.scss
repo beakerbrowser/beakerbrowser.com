@@ -1,33 +1,41 @@
 .header {
-  @extend %shrink-text-phone;
-  @extend %decorative-font;
   width: 100%;
+  padding: 30px 0;
 
   .container {
-    @extend %flex-container;
+    @extend %flex;
     justify-content: space-between;
-    align-items: baseline;
-    padding: 15px 0;
   }
 
-  .logo {
-    border: 6px solid $primary;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    margin-right: 3px;
-  }
+  .nav-link {
+    margin-left: 30px;
+    font-size: .85rem;
+    font-weight: 600;
 
-  &__logo {
-    font-size: 26px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    &:not(.btn) {
 
-    * {
-      display: inline-block;
-      vertical-align: top;
-      line-height: 35px;
-      font-weight: 700;
+      &:hover {
+        text-decoration: underline;
+      }
     }
+  }
+
+  &.light {
+    @extend %antialiased;
+    background: $blue;
+    color: #fff;
+    font-weight: 700;
+
+    .btn.action {
+      background: transparent;
+
+      &:hover {
+        background: transparentize(#fff, .9);
+      }
+    }
+  }
+
+  &.dark {
+    color: $primary;
   }
 }

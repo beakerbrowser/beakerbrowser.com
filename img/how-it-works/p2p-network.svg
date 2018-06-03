@@ -13,13 +13,13 @@
             <path d="M146,166 L268,186" id="Line-10-Copy-5" stroke="#EEEEEE" stroke-width="4" stroke-linecap="square"></path>
             <path d="M100,71 L189,106" id="Line-10-Copy-4" stroke="#EEEEEE" stroke-width="4" stroke-linecap="square"></path>
             <path d="M261,56 L357,86" id="Line-10-Copy-2" stroke="#EEEEEE" stroke-width="4" stroke-linecap="square"></path>
-            <circle id="Oval-17" fill="#7089FA" cx="192.5" cy="104.5" r="10.5"></circle>
-            <circle id="Oval-17-Copy" fill="#7089FA" cx="271.5" cy="185.5" r="10.5"></circle>
-            <circle id="Oval-17-Copy-2" fill="#3FDFA0" cx="91.5" cy="65.5" r="10.5"></circle>
-            <circle id="Oval-17-Copy-3" fill="#3FDFA0" cx="366.5" cy="92.5" r="10.5"></circle>
-            <circle id="Oval-17-Copy-4" fill="#111111" cx="133.5" cy="162.5" r="10.5"></circle>
-            <circle id="Oval-17-Copy-5" fill="#111111" cx="258.5" cy="55.5" r="10.5"></circle>
-            <circle id="Oval-17-Copy-6" fill="#111111" cx="422.5" cy="173.5" r="10.5"></circle>
+            <circle id="Oval-17" fill="#5743FF" cx="192.5" cy="104.5" r="10.5"></circle>
+            <circle id="Oval-17-Copy" fill="#5743FF" cx="271.5" cy="185.5" r="10.5"></circle>
+            <circle id="Oval-17-Copy-2" fill="#0AD895" cx="91.5" cy="65.5" r="10.5"></circle>
+            <circle id="Oval-17-Copy-3" fill="#0AD895" cx="366.5" cy="92.5" r="10.5"></circle>
+            <circle id="Oval-17-Copy-4" fill="#8D54F0" cx="133.5" cy="162.5" r="10.5"></circle>
+            <circle id="Oval-17-Copy-5" fill="#8D54F0" cx="258.5" cy="55.5" r="10.5"></circle>
+            <circle id="Oval-17-Copy-6" fill="#5743FF" cx="422.5" cy="173.5" r="10.5"></circle>
         </g>
     </g>
 </svg>

@@ -1,5 +1,5 @@
 %card {
-  @extend %rounded;
+  border-radius: 2px;
   border: 1px solid $gray--dark;
 }
 
@@ -37,7 +37,7 @@
 
   &-body {
     @extend %rounded-bottom;
-    
+
     background: $gray--light;
     color: $gray--very-dark;
     padding: 1rem;
@@ -55,48 +55,54 @@
 
 .detailed-card {
   @extend %card;
-  border-color: $gray;
-  box-shadow: 0px 2px 2px rgba(0,0,0,0.05);
-  position: relative;
-  display: flex;
-  padding: 1em;
+  border-color: #ddd;
 
-  @include respond-to(tablet) {
-    margin: 2em;
-  }
-
-  // title
-  &:before {
-    content: attr(data-title);
-    display: block;
-    box-sizing: border-box;
-    position: absolute;
-    left: 0;
-    top: 0;
+  .card-heading {
+    @extend %antialiased;
     width: 100%;
-    padding: 6px 14px 5px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    background: #eee;
     font-size: 11px;
-    color: $gray--dark;
-    background: $gray--light;
-  }
-
-  &.thin {
-    max-width: 400px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .3px;
   }
 
   .icon {
     flex: 0 0 45px;
-    padding-top: 20px;
     font-size: 32px;
-    color: $gray--dark;
+    color: gray;
   }
 
-  .body {
-    padding-top: 20px;
+  .card-body {
+    @extend %flex;
+    padding: 15px;
+    background: #fff;
+    font-size: 12.5px;
+    color: inherit;
+
+    > div {
+      flex: 1;
+    }
   }
 
   .body>:last-child {
     margin-bottom: 0 !important;
+  }
+
+  &.warning {
+    border-color: mix($orange, $yellow);
+
+    .card-heading {
+      background: mix($orange, $yellow);
+      color: #fff;
+    }
+
+    .icon {
+      color: mix($orange, $yellow);
+    }
   }
 
   @media (max-width: 800px) {

@@ -1,4 +1,4 @@
-toplevel_methods:
+constructor:
   -
     name: "DatArchive"
     signature: "new DatArchive(url)"
@@ -7,9 +7,12 @@ toplevel_methods:
 
       - `url` String. The URL of the archive to instantiate.
 
+      Example:
+
       ```js
       var archive = new DatArchive(datUrl)
       ```
+toplevel_methods:
   -
     name: "DatArchive.load"
     signature: "DatArchive.load(url)"
@@ -18,6 +21,8 @@ toplevel_methods:
 
       - `url` String. The URL of the archive to instantiate.
       - returns `Promise<DatArchive>`
+
+      Example:
 
       ```js
       var archive = await DatArchive.load(datUrl)
@@ -36,6 +41,8 @@ toplevel_methods:
       - `opts.description` String. The description of the new archive.
       - `opts.prompt` Boolean. Whether or not to show Beaker's create archive modal upon creation.
       - returns `Promise<DatArchive>`
+
+      Example:
 
       ```js
       var archive = await DatArchive.create({
@@ -64,6 +71,8 @@ toplevel_methods:
       - `opts.prompt` Boolean. Whether or not to show Beaker's fork modal.
       - returns `Promise<DatArchive>`
 
+      Example:
+
       ```js
       var archive = await DatArchive.fork(otherURL, {
         title: 'Hello, world 2!',
@@ -81,6 +90,8 @@ toplevel_methods:
       - `url` String. The URL of the archive to delete.
       - returns `Promise<void>`
 
+      Example:
+
       ```js
       await DatArchive.unlink(datUrl)
       ```
@@ -95,6 +106,8 @@ toplevel_methods:
       - `opts.buttonLabel` String. The label on the primary action button in the select archive modal.
       - `opts.filters.isOwner` Boolean. If true, only show archives that the user owns and can modify.
       - returns `Promise<DatArchive>`
+
+      Example:
 
       ```js
       var archive = await DatArchive.selectArchive({
@@ -112,21 +125,25 @@ toplevel_methods:
       - `url` String. The URL of the archive to resolve.
       - returns `Promise<string>`
 
+      Example:
+
       ```js
       var rawDatUrl = await DatArchive.resolveName(datUrl)
       ```
-instance_methods:
+properties:
   -
     name: "url"
     signature: "url"
     desc: |
       The URL of the archive.
 
-      <figcaption class="code">example</figcaption>
+      Example:
+
       ```js
       var archive = new DatArchive(datUrl)
       archive.url
       ```
+methods:
   -
     name: "getInfo"
     signature: "getInfo(opts?)"
@@ -156,7 +173,6 @@ instance_methods:
 
       Example:
 
-      <figcaption class="code">example</figcaption>
       ```js
       var archive = new DatArchive(datUrl)
       await archive.getInfo()
@@ -175,6 +191,8 @@ instance_methods:
       - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
       - returns `Promise<void>`
 
+      Example:
+
       ```javascript
       var archive = new DatArchive(datUrl)
       await archive.configure({title: 'New title', fallback_page: 'index.html'})
@@ -189,6 +207,8 @@ instance_methods:
       - `dstpath` The target path
       - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
       - returns `Promise<void>`
+
+      Example:
 
       ```javascript
       var archive = new DatArchive(datUrl)
@@ -221,7 +241,6 @@ instance_methods:
 
       Example:
 
-      <figcaption class="code">example</figcaption>
       ```js
       var archive = new DatArchive(datUrl)
       await archive.stat('/hello.txt')
@@ -240,6 +259,8 @@ instance_methods:
         - `'binary'` Return value will be an ArrayBuffer.
       - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
       - returns `Promise<string|ArrayBuffer>`
+
+      Example:
 
       ```js
       var archive = new DatArchive(datUrl)
@@ -264,7 +285,8 @@ instance_methods:
       - `opts.stat` Boolean. Run stat() on every entry and return with `{name:, stat:}`
       - returns `Promise<Array<String>>`
 
-      <figcaption class="code">example</figcaption>
+      Example:
+
       ```js
       var archive = new DatArchive(datUrl)
       var topFiles = await archive.readdir('/')
@@ -289,6 +311,8 @@ instance_methods:
         - If `opts` is a string, it is specifying the encoding.
       - returns `Promise<void>`
 
+      Example:
+
       ```js
       var archive = new DatArchive(datUrl)
       await archive.writeFile('/hello.txt', 'world')
@@ -304,6 +328,8 @@ instance_methods:
       - `path` The path of the directory to create.
       - returns `Promise<void>`
 
+      Example:
+
       ```js
       var archive = new DatArchive(datUrl)
       await archive.mkdir('/subdir')
@@ -317,6 +343,8 @@ instance_methods:
 
       - `path` The path of the file to delete.
       - returns `Promise<void>`
+
+      Example:
 
       ```js
       var archive = new DatArchive(datUrl)
@@ -333,7 +361,8 @@ instance_methods:
       - `opts.recursive` Boolean. If not empty, delete all files and folders inside the folder?
       - returns `Promise<void>`
 
-      <figcaption class="code">example</figcaption>
+      Example:
+
       ```js
       var archive = new DatArchive(datUrl)
       await archive.rmdir('/subdir')
@@ -367,7 +396,6 @@ instance_methods:
 
       Returns an array of objects:
 
-      <figcaption class="code">output schema</figcaption>
       ```plain
       [
         {
@@ -381,7 +409,6 @@ instance_methods:
 
       Example:
 
-      <figcaption class="code">example</figcaption>
       ```js
       var archive = new DatArchive(datUrl)
       await archive.diff()
@@ -397,7 +424,6 @@ instance_methods:
 
       Returns an array of objects:
 
-      <figcaption class="code">output schema</figcaption>
       ```plain
       [
         {
@@ -439,7 +465,6 @@ instance_methods:
 
       Example:
 
-      <figcaption class="code">example</figcaption>
       ```js
       var archive = new DatArchive(datUrl)
       await archive.revert()
@@ -484,6 +509,8 @@ instance_methods:
       - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
       - returns `Promise<void>`
 
+      Example:
+
       ```js
       var archive = new DatArchive(datUrl)
       await archive.download('/foo.txt')
@@ -509,6 +536,8 @@ instance_methods:
         - `path` is the path-string of the file.
       - `'invalidated' ({path: string})` The contents of the file has changed remotely, but it hasn't been downloaded yet.
         - `path` is the path-string of the file.
+
+      Example:
 
       ```js
       var archive = new DatArchive(datUrl)
@@ -547,6 +576,8 @@ instance_methods:
         - `bytes` is the number of bytes in the block.
       - `'sync' ({feed})` All known blocks have been downloaded.
         - `feed` will either be `"metadata"` or `"content"`.
+
+      Example:
 
       ```js
       var archive = new DatArchive(datUrl)

@@ -1,58 +1,51 @@
 ---
-layout: doc
-title: About
-class: dark
+title: Beaker is a more powerful browser, for a more powerful Web
+layout: about
+sublayout: about
+class: light
+header: dark
 ---
 
-Beaker is built by a team of decentralizated Web enthusiasists with a history of making Web apps, FOSS software, and peer-to-peer networks.
+<p class="accent">
+  We believe the Web is at its best when it empowers creation and encourages
+  participation. That's why we're building a browser for a <br>
+  <em>person-to-person Web</em>.
+</p>
 
+## Our mission
 
-## Beaker team
+The Web enabled communication, collaboration, and creativity at a scale
+once unimaginable, but it's devolved into a landscape of of isolated platforms
+that discourage customization and interoperability. The Web's value
+flows from the people who use it, yet our
+[online experiences](https://twitter.com/prozdkp/status/978344325456318465)
+are dictated by corporations whose incentives rarely align with our own.
 
-<div class="team-members">
-  <div class="team-member">
-    <img data-src="/img/team/pfrazee.jpg">
-    <div class="info">
-      <h3>Paul Frazee</h3>
-      <ul>
-        <li>
-          <i class="fa fa-twitter"></i>
-          <a href="https://twitter.com/pfrazee">Twitter</a>
-        </li>
-        <li>
-          <i class="fa fa-github"></i>
-          <a href="https://github.com/pfrazee">GitHub</a>
-        </li>
-        <li>
-          <i class="fa fa-rss"></i>
-          <a href="https://pfrazee.github.io">Blog</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+We believe the Web can (and must) be a people-first platform, where everybody
+is invited to create, personalize, and share. We've set out to make it so.
 
-  <div class="team-member">
-    <img data-src="/img/team/taravancil.jpg">
-    <div class="info">
-      <h3>Tara Vancil</h3>
-      <ul>
-        <li>
-          <i class="fa fa-twitter"></i>
-          <a href="https://twitter.com/taravancil">Twitter</a>
-        </li>
-        <li>
-          <i class="fa fa-github"></i>
-          <a href="https://github.com/taravancil">GitHub</a>
-        </li>
-        <li>
-          <i class="fa fa-rss"></i>
-          <a href="https://taravancil.com/">Blog</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
+### Why build a browser?
 
-## Code for Science
+Browsers are the gateway to the Web! By building a browser with experimental
+features and capabilities, we have the flexibility to explore how the browser
+can help uphold the vision of an open Web.
 
-Beaker works closely with [Code for Science](https://datproject.org/team), the team behind the Dat protocol. Code for Science is a 501(c)(3) non-profit.
+## History
+
+Paul released the [Beaker prototype](https://twitter.com/pfrazee/status/763737371376365568)
+in August 2016 after participating in the inaugral
+[Decentralized Web Summit](https://decentralized-web.net), where he shopped his
+idea to integrate peer-to-peer protocols into a browser.
+
+Tara made her first contribution in October 2016 and joined full-time in April 2017.
+As core developer of the [Dat protocol](https://datprotocol.com),
+Mathias has always been a part of the Beaker community, but he
+[officially joined](https://twitter.com/mafintosh/status/989214862764118016) the
+Beaker team in 2018.
+
+## Team
+
+Beaker is a project by [Blue Link Labs](https://bluelinklabs.com), a team of
+developers who love the Web.
+
+{% include team.html %}

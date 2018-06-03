@@ -1,3 +1,160 @@
+.content {
+
+  a {
+    color: $blue;
+    color: var(--page-color); // TODO
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: initial;
+
+    code {
+      font-weight: 500;
+    }
+  }
+
+  h2 {
+    margin-top: 50px;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 40px;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  h4:not(code) {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  p,
+  ul,
+  ol,
+  aside {
+    font-size: 13.5px;
+    font-weight: 300;
+    color: #333;
+  }
+
+  .columns,
+  p:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  p.accent {
+    font-family: Hind;
+    font-size: 18px;
+    color: rgba(0,0,0,.6);
+  }
+
+  ul,
+  ol {
+    margin: 0 0 20px 50px;
+
+    li:not(:last-of-type) {
+      margin-bottom: 3px;
+    }
+  }
+
+  blockquote {
+    margin-left: 30px;
+    padding-left: 15px;
+    border-left: 2px solid var(--page-color);
+    color: $text--light-bg-muted;
+    font-style: italic;
+    font-size: 1rem;
+  }
+
+  aside {
+    @extend %inline-flex;
+    @extend %antialiased;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: var(--page-color);
+    color: #fff;
+    border-radius: 2px;
+
+    p {
+      color: #fff;
+      font-size: 12.75px;
+    }
+
+    .icon {
+      min-width: 80px;
+      margin-left: 20px;
+    }
+
+    .title {
+      font-size: 16px;
+      margin-top: 0;
+    }
+  }
+
+  figcaption.code {
+    border: 1px solid $gray--mid;
+    border-bottom: 0;
+    border-radius: 2px 2px 0 0;
+    background: $gray--light;
+    padding: 3px 7px 2px;
+    font-size: 12px;
+    color: mix($black, $white, 45%);
+  }
+
+  figcaption.code + .highlighter-rouge pre {
+    border-radius: 0 0 3px 3px;
+  }
+
+  pre {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f7f7f7;
+    border: 1px solid #eee;
+    font-size: 13.5px;
+
+    code {
+      background: none;
+      padding: 0;
+    }
+  }
+
+  ul code,
+  ol code,
+  aside code,
+  p code {
+    background: #f7f7f7;
+    padding: 2px 4px 0 4px;
+    font-size: 13.5px;
+  }
+
+  figure.col {
+
+    &:first-child {
+      margin-right: 30px;
+    }
+
+    &:last-child {
+      margin-left: 30px;
+    }
+  }
+}
+
 .layout-post {
 
   .header .container {
@@ -67,7 +224,6 @@
   }
 
   .post-meta {
-    @extend %decorative-font;
     text-align: center;
     color: $text--light-bg-muted;
     font-size: 1rem;
@@ -88,7 +244,6 @@
   }
 
   .post-summary {
-    @extend %decorative-font;
     font-size: 1.3rem;
     font-style: italic;
     margin-bottom: 35px !important;
@@ -106,7 +261,6 @@
   }
 
   .back-to-blog {
-    @extend %decorative-font;
     text-transform: uppercase;
     text-decoration: none;
     color: $primary;
@@ -121,7 +275,6 @@
   }
 
   blockquote {
-    @extend %decorative-font;
     position: relative;
     font-style: italic;
     color: $text--light-bg-muted;
@@ -139,24 +292,5 @@
       font-family: inherit;
       padding: 0;
     }
-  }
-
-  .highlight {
-    margin-bottom: 25px;
-
-    code {
-      background: none;
-      padding: 0;
-    }
-  }
-
-  code {
-    background: #eee;
-    padding: 2px 5px;
-    font-size: inherit;
-  }
-
-  strong {
-    font-weight: 600;
   }
 }

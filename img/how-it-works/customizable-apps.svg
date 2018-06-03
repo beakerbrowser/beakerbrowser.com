@@ -15,8 +15,8 @@
             <path d="M461.140625,51.859375 L461.140625,179.859375 C461.140625,180.963944 462.036056,181.859375 463.140625,181.859375 L692.859375,181.859375 C693.963944,181.859375 694.859375,180.963944 694.859375,179.859375 L694.859375,51.859375" id="Line-5-Copy-4" stroke="url(#linearGradient-1)" stroke-width="4" stroke-linecap="round" stroke-dasharray="4,10,4,10" transform="translate(578.000000, 116.859375) rotate(90.000000) translate(-578.000000, -116.859375) "></path>
             <g id="browser-copy" transform="translate(173.000000, 13.000000)">
                 <rect id="Rectangle-2-Copy" stroke="#EEEEEE" stroke-width="3" fill="#F9F9F9" x="0" y="0" width="300" height="209" rx="4"></rect>
-                <rect id="Rectangle-3-Copy" fill-opacity="0.75" fill="#4264FB" x="186.585366" y="26.6666667" width="95.1219512" height="34.8333333" rx="2.74390244"></rect>
-                <rect id="Rectangle-3-Copy-2" fill-opacity="0.75" fill="#01D682" x="186.585366" y="71.6666667" width="95.1219512" height="34.8333333" rx="2.74390244"></rect>
+                <rect id="Rectangle-3-Copy" fill="#5743FF" x="186.585366" y="26.6666667" width="95.1219512" height="34.8333333" rx="2.74390244"></rect>
+                <rect id="Rectangle-3-Copy-2" fill="#0AD895" x="186.585366" y="71.6666667" width="95.1219512" height="34.8333333" rx="2.74390244"></rect>
                 <path d="M21.9512195,27.5 L170.121951,27.5 C171.132228,27.5 171.95122,28.3189913 171.95122,29.3292683 L171.95122,121.004065 C171.95122,122.014342 171.132228,122.833333 170.121951,122.833333 L21.9512195,122.833333 C20.9409425,122.833333 20.1219512,122.014342 20.1219512,121.004065 L20.1219512,29.3292683 C20.1219512,28.3189913 20.9409425,27.5 21.9512195,27.5 Z" id="back-copy" stroke="#CCCCCC" stroke-width="2.5" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2,10,2,10"></path>
                 <rect id="Rectangle-10" fill="#DDDDDD" x="20.1219512" y="141.166667" width="151.829268" height="7" rx="1.82926829"></rect>
                 <rect id="Rectangle-10-Copy" fill="#DDDDDD" x="20.1219512" y="157.666667" width="107.926829" height="7" rx="1.82926829"></rect>

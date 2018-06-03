@@ -5,7 +5,11 @@ sectionTitle: Tutorials
 order: 4
 ---
 
-One of Beaker’s most powerful features comes from the Dat protocol’s approach to transport secrecy. As explained in [Inside Beaker: Privacy and security](/docs/inside-beaker/privacy-and-security.html#transport-security), a Dat URL is “secret.” It is unguessable, and encrypted in transit. This means:
+One of Beaker’s most powerful features comes from the Dat protocol’s
+approach to transport secrecy. As explained in [Inside Beaker: Privacy
+and security](/docs/how-beaker-works/privacy-and-security.html
+#transport-security), a Dat URL is “secret.” It is unguessable, and
+encrypted in transit. This means:
 
 *Only users that possess a Dat URL can access its files.*
 

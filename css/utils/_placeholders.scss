@@ -1,9 +1,14 @@
 @import "./mixins";
 
-%flex-container {
+%flex {
   display: flex;
-  align-content: center;
+  align-items: center;
   flex-wrap: wrap;
+}
+
+%inline-flex {
+  display: inline-flex;
+  align-items: center;
 }
 
 %transition {
@@ -11,7 +16,7 @@
 }
 
 %box-shadow {
-  box-shadow: 1px 1px 5px 1.5px transparentize($black, .85);
+  box-shadow: 0px 5px 25px 10px transparentize($black, .925);
 }
 
 %box-shadow--light {

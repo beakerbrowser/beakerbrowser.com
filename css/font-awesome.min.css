@@ -20,3 +20,63 @@
 .fa-twitter-square:before {
   content: "\f081";
 }
+.fa-tasks:before {
+  content: "\f0ae";
+}
+.fa-question:before {
+  content: "\f128";
+}
+.fa-life-ring:before {
+  content: "\f1cd";
+}
+.fa-lightbulb-o:before {
+  content: "\f0eb";
+}
+.fa-angle-down:before {
+  content: "\f107";
+}
+.fa-check:before {
+  content: "\f00c";
+}
+.fa-exclamation:before {
+  content: "\f12a";
+}
+.fa-exclamation-circle:before {
+  content: "\f06a";
+}
+.fa-heart-o:before {
+  content: "\f08a";
+}
+.fa-heart:before {
+  content: "\f004";
+}
+.fa-arrow-right:before {
+  content: "\f061";
+}
+.fa-times:before {
+  content: "\f00d";
+}
+.fa-bolt:before {
+  content: "\f0e7";
+}
+.fa-clone:before {
+  content: "\f24d";
+}
+.fa-wifi:before {
+  content: "\f1eb";
+}
+.fa-undo:before {
+  content: "\f0e2";
+}
+.fa-caret-down:before {
+  content: "\f0d7";
+}
+.fa-thumbs-o-down:before {
+  content: "\f088";
+}
+.fa-asterisk:before {
+  content: "\f069";
+}
+.fa-calendar:before {
+  content: "\f073";
+}

@@ -2,7 +2,7 @@ $beaker-blue: #246fde;
 $white: #fff;
 $black: mix($beaker-blue, #000, 10%);
 
-$red: rgb(255, 59, 48);
+$red: rgb(220, 59, 48);
 $orange: rgb(255, 149, 0);
 $yellow: rgb(255, 204, 0);
 $green: rgb(76, 217, 100);
@@ -11,7 +11,10 @@ $other-blue: rgb(0, 122, 255);
 $purple: rgb(88, 86, 214);
 $pink: rgb(255, 45, 85);
 
-$blue: #3d5af0;
+$blue: #5743ff;
+$green: #0ad895;
+$teal: #4DEBFF;
+$purple: #8D54F0;
 
 $primary: $blue;
 $primary--dark: shade($primary, 70%);

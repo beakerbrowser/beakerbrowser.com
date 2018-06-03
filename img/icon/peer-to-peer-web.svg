@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="322px" height="166px" viewBox="0 0 322 166" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>peer-to-peer-web</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="peer-to-peer-web" transform="translate(3.000000, 3.000000)">
+            <path d="M158,126.670886 C241.947282,126.670886 310,102.120222 310,71.835443 C310,41.5506641 241.947282,17 158,17 C74.052718,17 6,41.5506641 6,71.835443 C6,102.120222 74.052718,126.670886 158,126.670886 Z" id="bg-2" stroke="#09E06E" stroke-width="5" fill="#09E06E" stroke-linecap="round" stroke-linejoin="bevel" stroke-dasharray="1,1,1"></path>
+            <path d="M158,114 C245.26099,114 316,88.4802307 316,57 C316,25.5197693 245.26099,0 158,0 C70.7390095,0 0,25.5197693 0,57 C0,88.4802307 70.7390095,114 158,114 Z" id="bg-1" stroke="#111111" stroke-width="5" stroke-linecap="round" stroke-linejoin="bevel" stroke-dasharray="10,10,1,10"></path>
+            <g id="browser" transform="translate(78.000000, 33.000000)">
+                <rect id="Rectangle-2" stroke="#111111" stroke-width="2" fill="#111111" x="0" y="0" width="164" height="129" rx="1.5"></rect>
+                <rect id="Rectangle-2-Copy" stroke="#111111" stroke-width="2" fill="#FFFFFF" x="0" y="15" width="164" height="114" rx="1.5"></rect>
+                <rect id="Rectangle-3-Copy" fill="#4363F3" x="102" y="29" width="52" height="19" rx="1.5"></rect>
+                <rect id="Rectangle-3-Copy-2" fill="#09E06E" x="102" y="52" width="52" height="19" rx="1.5"></rect>
+                <path d="M12,30 L93,30 C93.5522847,30 94,30.4477153 94,31 L94,81 C94,81.5522847 93.5522847,82 93,82 L12,82 C11.4477153,82 11,81.5522847 11,81 L11,31 C11,30.4477153 11.4477153,30 12,30 Z" id="back-copy" stroke="#111111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,5,1,5"></path>
+                <circle id="Oval" fill="#FFFFFF" cx="7.5" cy="7.5" r="2.5"></circle>
+                <circle id="Oval-Copy" fill="#FFFFFF" cx="17.5" cy="7.5" r="2.5"></circle>
+                <circle id="Oval-Copy-2" fill="#FFFFFF" cx="28.5" cy="7.5" r="2.5"></circle>
+                <rect id="Rectangle-10" fill="#111111" x="11" y="92" width="83" height="4.5" rx="1"></rect>
+                <rect id="Rectangle-10-Copy" fill="#111111" x="11" y="101" width="59" height="4.5" rx="1"></rect>
+                <rect id="Rectangle-10-Copy-3" fill="#111111" x="11" y="110" width="72" height="4.5" rx="1"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

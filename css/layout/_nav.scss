@@ -1,37 +1,115 @@
-.nav {
-
-  @include respond-to(tablet) {
-    right: 0;
-  }
-
-  .phone-text {
-    display: inline-block;
-  }
-
-  .tablet-text {
-    display: none;
-  }
-
-  @include respond-to(tablet) {
-    .tablet-text {
-      display: block;
-    }
-
-    .phone-text {
-      display: none;
-    }
-  }
-}
-
 .nav-link {
+  font-family: Hind;
 
-  &:not(:last-of-type) {
-    margin-right: 30px;
+  &.dropdown-container {
+
+    &:hover {
+
+      .dropdown {
+        visibility: visible;
+        transform: scale(1) translateX(-50%);
+        opacity: 1;
+        z-index: 3000;
+      }
+    }
   }
 
-  &:not(.btn):active,
-  &:not(.btn):hover {
-    color: $primary;
-    border-bottom: 1px solid;
+  .dropdown {
+    width: 500px;
+
+    .dropdown-heading {
+      color: $blue;
+      color: var(--page-color);
+      margin-bottom: 20px;
+
+      .fa {
+        margin-right: 5px;
+      }
+
+      .title {
+        text-transform: uppercase;
+        letter-spacing: .5px;
+        font-size: inherit;
+      }
+    }
+
+    p,
+    ul {
+      font-family: Hind;
+      font-weight: 400;
+    }
+
+    .links {
+      color: #333;
+
+      .col-1-2:first-of-type {
+        padding-right: 30px;
+      }
+
+      .links-heading {
+        font-size: .8rem;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+        color: transparentize(#111, .45);
+      }
+
+      ul {
+        font-weight: 400;
+        list-style: none;
+        margin-left: 0;
+      }
+
+      li {
+        line-height: 1;
+        margin-top: 15px;
+
+        &:first-of-type {
+          margin-top: 10px;
+        }
+      }
+
+      a {
+        color: $blue;
+        color: var(--page-color);
+        font-weight: 300;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .dropdown-footer {
+
+      .footer-item {
+        @extend %inline-flex;
+        align-items: flex-start;
+
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+
+      .footer-heading {
+        color: $blue;
+        color: var(--page-color);
+      }
+
+      .icon-container {
+        @extend %inline-flex;
+        align-items: center;
+        justify-content: space-around;
+        flex: 0 0 50px;
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+        background: #fff;
+        color: $blue;
+        color: var(--page-color);
+        border-radius: 50%;
+        border: 1px solid;
+        font-size: 28px;
+      }
+    }
   }
 }

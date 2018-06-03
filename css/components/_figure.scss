@@ -1,21 +1,22 @@
 @import "../utils/placeholders";
 
 figure {
-  display: table; // this is, sadly, the best way to get centering. ask prf.
-  margin: auto;
+  margin: 40px auto;
+  max-width: 300px;
 
   img {
     display: block;
-    margin: auto;
+    border: 1px solid #eee;
+    border-radius: 2px;
   }
 
   figcaption {
-    @extend %decorative-font;
+    font-family: 'Inter UI';
+    font-size: 11px;
+    font-style: italic;
     max-width: 300px;
     text-align: center;
     margin: auto;
-    margin-top: 10px;
-    font-style: italic;
-    line-height: 1.2;
+    margin-top: 5px;
   }
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="467px" height="375px" viewBox="0 0 467 375" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>how-it-works-bg</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="how-it-works-bg" transform="translate(5.000000, 0.000000)">
+            <path d="M334.920186,272.536973 C421.46552,247.958317 418.886571,209.027648 445.331883,139.256544 C471.777196,69.4854404 460.192797,52.1607556 445.331883,40.841914 C430.470969,29.5230724 397.757664,26.4034387 351.585789,26.4034387 C305.413914,26.4034387 279.394235,34.3384506 229.722508,21.2444239 C180.050781,8.15039731 152.18789,-13.8254601 127.249852,11.9751122 C102.311814,37.7756846 127.249852,94.547103 127.249852,139.256544 C127.249852,174.777401 81.5285711,213.228437 113.13503,238.358923 C152.389458,269.570357 248.374852,297.115629 334.920186,272.536973 Z" id="Oval-16" fill="#EEEEEE"></path>
+            <path d="M81,286 L285,370" id="Line-9" stroke="#EEEEEE" stroke-width="10" stroke-linecap="round"></path>
+            <path d="M45,270 L63.493562,277.614996" id="Line-9-Copy-3" stroke="#EEEEEE" stroke-width="10" stroke-linecap="round"></path>
+            <path d="M0,222 L204,306" id="Line-9-Copy" stroke="#EEEEEE" stroke-width="10" stroke-linecap="round"></path>
+            <path d="M223,315 L315.46781,353.074981" id="Line-9-Copy-2" stroke="#EEEEEE" stroke-width="10" stroke-linecap="round"></path>
+        </g>
+    </g>
+</svg>

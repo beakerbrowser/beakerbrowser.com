@@ -29,15 +29,25 @@
     margin-top: 25px;
   }
 
-  .problems {
-    @extend %grid;
-    grid-template-columns: 1fr 1fr 1fr; // TODO use minmax
-  }
-
   .problem {
-    position: relative;
-    padding: 25px;
-    border: 10px solid;
+    @extend %flex;
+    flex-wrap: nowrap;
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    border: 2px solid;
+
+    &.left {
+      padding-left: 25px;
+    }
+
+    &.right {
+      padding-right: 25px;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 40px;
+    }
 
     &.blue {
       border-color: $blue;
@@ -79,19 +89,17 @@
     }
 
     .graphic-container {
-      background: #fff;
-      margin: auto;
-      margin-bottom: 20px;
+      flex: 1 0 250px;
     }
 
     img.graphic {
-      height: 90px;
-      width: auto;
+      width: 100px;
+      height: auto;
     }
 
     .content {
-      background: #fff;
       text-align: left;
+      padding: 25px 0;
 
       p {
         font-size: .9rem;

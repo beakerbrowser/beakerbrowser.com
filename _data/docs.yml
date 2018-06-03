@@ -27,82 +27,117 @@ usingBeaker:
         url: "#ignoring-files-with-datignore"
     - title: Troubleshooting
       url: /docs/using-beaker/troubleshooting.html
-tutorials:
-  title: Tutorials
-  url: /docs/tutorials/
-  children:
-    - title: Create a peer-to-peer blog
-      url: /docs/tutorials/create-a-blog.html
-    - title: Create a markdown site
-      url: /docs/tutorials/create-a-markdown-site.html
-    - title: Host outside of Beaker
-      url: /docs/tutorials/host-outside-of-beaker.html
-    - title: Share files secretly
-      url: /docs/tutorials/share-files-secretly.html
-    - title: Publish software securely
-      url: /docs/tutorials/publish-software-securely.html
 webAPIs:
   title: Web APIs
+  subtitle: Explore Beaker's APIs for creating peer-to-peer websites and applications
   url: /docs/apis/
   children:
     - title: DatArchive API
       url: /docs/apis/dat.html
       children:
-      - title: "new DatArchive(url)"
-        url: "#datarchive"
-      - title: "DatArchive.create(opts?)"
-        url: "#datarchive-create"
-      - title: "DatArchive.fork(url, opts?)"
-        url: "#datarchive-fork"
-      - title: "DatArchive.selectArchive(opts?)"
-        url: "#datarchive-selectarchive"
-      - title: "DatArchive.resolveName(url)"
-        url: "#datarchive-resolvename"
-      - title: "url"
-        url: "#url"
-      - title: "getInfo(opts?)"
-        url: "#getinfo"
-      - title: "stat(path, opts?)"
-        url: "#stat"
-      - title: "readFile(path, opts?)"
-        url: "#readfile"
-      - title: "readdir(path, opts?)"
-        url: "#readdir"
-      - title: "writeFile(path, data, opts?)"
-        url: "#writefile"
-      - title: "mkdir(path)"
-        url: "#mkdir"
-      - title: "unlink(path)"
-        url: "#unlink"
-      - title: "rmdir(path, opts?)"
-        url: "#rmdir"
-      - title: "diff(opts?)"
-        url: "#diff"
-      - title: "commit()"
-        url: "#commit"
-      - title: "revert()"
-        url: "#revert"
-      - title: "history(opts?)"
-        url: "#history"
-      - title: "download(path, opts?)"
-        url: "#download"
-      - title: "createFileActivityStream(pattern?)"
-        url: "#createfileactivitystream"
-      - title: "createNetworkActivityStream()"
-        url: "#createnetworkactivitystream"
-    - title: Dat.json site manifest
+      - title: "Permissions"
+        heading: true
+        url: "#permissions"
+        children:
+        - title: "Read permissions"
+          url: "#read-permissions"
+        - title: "Write permissions"
+          url: "#write-permissions"
+      - title: "Disk usage"
+        heading: true
+        url: "#disk-usage"
+        children:
+          - title: "Per-origin quotas"
+            url: "#per-origin-quotas"
+      - title: "Constructor"
+        heading: true
+        url: "#constructor"
+        children:
+        - title: "DatArchive()"
+          url: "#datarchive"
+      - title: "Top-level methods"
+        heading: true
+        url: "#toplevel-methods"
+        children:
+        - title: "DatArchive.load()"
+          url: "#datarchive-load"
+        - title: "DatArchive.create()"
+          url: "#datarchive-create"
+        - title: "DatArchive.fork()"
+          url: "#datarchive-fork"
+        - title: "DatArchive.selectArchive()"
+          url: "#datarchive-selectarchive"
+        - title: "DatArchive.resolveName()"
+          url: "#datarchive-resolvename"
+        - title: "DatArchive.unlink()"
+          url: "#datarchive-unlink"
+      - title: "Properties"
+        heading: true
+        url: "#properties"
+        children:
+        - title: "url"
+          url: "#url"
+      - title: "Methods"
+        heading: true
+        url: "#methods"
+        children:
+        - title: "getInfo()"
+          url: "#getinfo"
+        - title: "configure()"
+          url: "#configure"
+        - title: "copy()"
+          url: "#copy"
+        - title: "stat()"
+          url: "#stat"
+        - title: "readFile()"
+          url: "#readfile"
+        - title: "readdir()"
+          url: "#readdir"
+        - title: "writeFile()"
+          url: "#writefile"
+        - title: "mkdir()"
+          url: "#mkdir"
+        - title: "unlink()"
+          url: "#unlink"
+        - title: "rmdir()"
+          url: "#rmdir"
+        - title: "rename()"
+          url: "#rename"
+        - title: "history()"
+          url: "#history"
+        - title: "download()"
+          url: "#download"
+        - title: "diff()"
+          url: "#diff"
+          deprecated: true
+        - title: "commit()"
+          url: "#commit"
+          deprecated: true
+        - title: "revert()"
+          url: "#revert"
+          deprecated: true
+        - title: "createFileActivityStream()"
+          url: "#createfileactivitystream"
+          deprecated: true
+        - title: "createNetworkActivityStream()"
+          url: "#createnetworkactivitystream"
+          deprecated: true
+    - title: dat.json site manifest
       url: /docs/apis/manifest.html
-    - title: Web APIs by example
-      url: /docs/apis/by-example.html
-insideBeaker:
-  title: Inside Beaker
-  url: /docs/inside-beaker/
-  children:
-    - title: Dat files protocol
-      url: /docs/inside-beaker/dat-files-protocol.html
-    - title: Privacy and security
-      url: /docs/inside-beaker/privacy-and-security.html
-    - title: Thick applications model
-      url: /docs/inside-beaker/thick-applications.html
-    - title: Other technologies
-      url: /docs/inside-beaker/other-technologies.html
+      children:
+        - title: "Properties"
+          url: "#properties"
+          heading: true
+          children:
+          - title: "url"
+            url: "#url"
+          - title: "title"
+            url: "#title"
+          - title: "description"
+            url: "#description"
+          - title: "repository"
+            url: "#repository"
+          - title: "fallback_page"
+            url: "#fallback_page"
+          - title: "web_root"
+            url: "#web_root"

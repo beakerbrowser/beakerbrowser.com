@@ -24,7 +24,7 @@
                 <rect stroke="#DDDDDD" stroke-width="1" x="159.5" y="125.5" width="325" height="54" rx="8"></rect>
             </g>
             <text id="dat://beakerbrowser." font-family="Hind-Medium, Hind" font-size="24" font-weight="400">
-                <tspan x="172" y="160" fill="#3D5AF0">dat://</tspan>
+                <tspan x="172" y="160" fill="#5743FF">dat://</tspan>
                 <tspan x="233.08" y="160" font-family="Hind-Regular, Hind" font-weight="normal" fill="#C4C4C4">beakerbrowser.com</tspan>
             </text>
             <g id="arrow-right" fill-rule="nonzero">

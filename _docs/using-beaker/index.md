@@ -137,19 +137,6 @@ find a link to it in your main menu.
 
 <section markdown="1">
 
-## Using the sidebar
-
-If you're visiting a peer-to-peer site, you can quickly access more information
-by using the sidebar control.
-
-<figure>
-  <img class="screenshot" src="/img/docs/tour-sidebar1.png"/>
-</figure>
-
-</section>
-
-<section markdown="1">
-
 ## Live reloading
 
 As the author of a site, or just as a remote recipient, live reloading makes it

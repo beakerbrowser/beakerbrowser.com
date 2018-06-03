@@ -1,0 +1,41 @@
+.mission {
+
+  .graphic-container {
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .earth-graphic {
+    max-width: 350px;
+    margin-bottom: -15px;
+    display: none;
+
+    &.active {
+      display: inline;
+    }
+  }
+
+  .mission-btn {
+    width: 50px;
+    margin-bottom: 40px;
+    font-size: 18px;
+
+    &#mission-good {
+
+      &.active {
+        background: $green;
+        border-color: $green;
+        color: #fff;
+      }
+    }
+
+    &#mission-bad {
+
+      &.active {
+        background: #ED495D; // todo
+        border-color: #ED495D;
+        color: #fff;
+      }
+    }
+  }
+}

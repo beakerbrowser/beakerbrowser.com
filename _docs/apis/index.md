@@ -2,6 +2,7 @@
 title: Web APIs
 section: webAPIs
 sectionTitle: Web APIs
+sectionSubtitle: Explore Beaker's Web APIs for reading and writing the peer-to-peer filesystem
 order: 1
 ---
 
@@ -14,18 +15,8 @@ order: 1
 <div class="columns two">
 
 <div>
-<h3>Tutorials</h3>
-<ul>
-  <li><a href="/docs/tutorials/read-site-files.html">Read site files</a></li>
-  <li><a href="/docs/tutorials/write-site-files.html">Write site files</a></li>
-  <li><a href="/docs/tutorials/diff-commit-revert.html">Diff, commit, revert</a></li>
-  <li><a href="/docs/tutorials/listen-for-file-changes.html">Listen for file changes</a></li>
-  <li><a href="/docs/tutorials/create-or-fork-a-site.html">Create or fork a site</a></li>
-</ul>
-</div>
-
 <div>
-<h3>API References</h3>
+<h3>API Reference</h3>
 <ul>
   <li>
     <a href="/docs/apis/dat.html">DatArchive API</a>

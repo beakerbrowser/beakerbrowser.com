@@ -4,6 +4,48 @@ title: Introduction
 order: 1
 ---
 
+<div class="container">
+  <h1>Documentation</h1>
+  <p>
+    Welcome to the Beaker documentation!
+  </p>
+
+  <div class="quick-links">
+    <div class="quickstart">
+      <h2>
+        Quickstart
+        <i class="fa fa-magic"></i>
+      </h2>
+
+      <p>
+        First time here? Explore how to get started with Beaker.
+      </p>
+    </div>
+
+    <div class="apis">
+      <h2>
+        API Reference
+        <i class="fa fa-code"></i>
+      </h2>
+
+      <p>
+        Explore Beaker's peer-to-peer Web APIs.
+      </p>
+    </div>
+
+    <div class="overview">
+      <h2>
+        Technical overview
+        <i class="fa fa-cubes"></i>
+      </h2>
+
+      <p>
+        Learn about how Beaker works and why.
+      </p>
+    </div>
+  </div>
+</div>
+
 <div class="callouts-1">
   <div class="container">
     <a href="/docs/using-beaker" class="callout">

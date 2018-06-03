@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ page.title | default: "Beaker Browser" }}</title>
+    <title>{{ page.sectionTitle }} | {{ page.title }}</title>
     <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
 
     <!-- SEO -->
     {% include keywords.html %}
@@ -42,13 +43,13 @@
       {% when 'tutorials' %}
         <style>body { --page-color: orange; }</style>
       {% when 'webAPIs' %}
-        <style>body { --page-color: teal; }</style>
+        <style>body { --page-color: #0eb370; }</style>
       {% when 'troubleshooting' %}
         <style>body { --page-color: green; }</style>
       {% when 'faq' %}
         <style>body { --page-color: magenta; }</style>
       {% else %}
-        <style>body { --page-color: blue; }</style>
+        <style>body { --page-color: #4353ff; }</style>
     {% endcase %}
   </head>
 

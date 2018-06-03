@@ -67,12 +67,18 @@ with the `DatArchive` API will fail.
 
 ---
 
-## Toplevel methods
+## Constructor
+
+{% include api-reference.html items=site.data.apis.dat.constructor %}
+
+## Top-level methods
 
 {% include api-reference.html items=site.data.apis.dat.toplevel_methods %}
 
----
+## Properties
 
-## DatArchive instance attributes and methods
+{% include api-reference.html items=site.data.apis.dat.properties %}
 
-{% include api-reference.html items=site.data.apis.dat.instance_methods %}
+## Methods
+
+{% include api-reference.html items=site.data.apis.dat.methods %}

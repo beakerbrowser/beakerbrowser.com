@@ -11,7 +11,7 @@
   transform: scale(.95) translateX(-50%);
   opacity: 0;
   z-index: -1;
-  // display: none;
+  visibility: hidden;
   width: 400px;
   padding: 0;
   background: #fff;
@@ -37,13 +37,6 @@
     border-top: 1px solid mix(#eee, transparentize($blue, .9));
   }
 
-  &.visible {
-    display: block;
-    transform: scale(1) translateX(-50%);
-    opacity: 1;
-    z-index: 3000;
-  }
-
   // triangle
   &:before {
     display: block;
@@ -56,6 +49,68 @@
     height: 15px;
     transform: translateX(-50%) rotate(45deg);
     background: #fff;
-    border: 1px solid mix(#ddd, transparentize($blue, .9));
+    border-left: 1px solid mix(#ddd, transparentize($blue, .9));
+    border-top: 1px solid mix(#ddd, transparentize($blue, .9));
+  }
+
+  &.visible {
+    // display: block;
+    visibility: visible;
+    transform: scale(1) translateX(-50%);
+    opacity: 1;
+    z-index: 3000;
+  }
+
+  &.left {
+    left: 0;
+    transform: scale(.95);  // reset the translateX transform
+
+    &:before {
+      left: 30px;
+    }
+
+    &.visible {
+      transform: scale(1); // reset the translateX transform
+    }
+  }
+}
+
+.dropdown.nav-list {
+  width: 200px;
+  padding: 10px 0;
+
+  .dropdown-body {
+    padding: 0;
+  }
+
+  .nav-item {
+    @extend %inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 15px;
+    background: #fff;
+    color: #333;
+    font-family: Hind;
+    font-weight: 400;
+    text-align: left;
+    cursor: pointer;
+
+    &:first-of-type {
+      border-radius: 4px 4px 0 0;
+    }
+
+    &:last-of-type {
+      border-radius: 0 0 4px 4px;
+    }
+
+    &.active {
+      font-weight: 700;
+      color: $blue;
+    }
+
+    &:hover {
+      color: $blue;
+      background: mix(#f7f7f7, transparentize($blue, .9));
+    }
   }
 }

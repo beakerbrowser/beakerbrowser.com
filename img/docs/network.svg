@@ -1,0 +1,8 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 500 500">
+  <line x1="0" y1="0" x2="30" y2="30" stroke-width="1" stroke="blue"/>
+  <circle r="2" cx="30" cy="30" fill="blue"/>
+
+  <line x1="50" y1="50" x2="70" y2="70" stroke-width="1" stroke="blue"/>
+  <circle r="2" cx="70" cy="70+" fill="blue"/>
+</svg>

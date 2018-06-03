@@ -1,0 +1,53 @@
+<div class="docs-breadcrumbs {{ include.class }}">
+  {% assign activeSection = site.data.docs[include.section] %}
+
+  <div class="container">
+    <a href="/docs/" class="breadcrumb">Documentation</a>
+
+    {% if activeSection %}
+      <span class="breadcrumb">
+        /
+      </span>
+
+      <button class="breadcrumb active btn dropdown-container toggleable-container">
+        <span>{{ activeSection.title }}</span>
+        <i class="fa fa-angle-down"></i>
+
+        <div class="dropdown nav-list left toggleable">
+            {% for section in site.data.docs %}
+              {% if activeSection.title == section[1].title %}
+                <a class="nav-item active" href="{{ section[1].url }}">
+                  {{ section[1].title }}
+                  <i class="fa fa-check"></i>
+                </a>
+              {% else %}
+                <a class="nav-item" href="{{ section[1].url }}">{{ section[1].title }}</a>
+              {% endif %}
+            {% endfor %}
+        </div>
+      </button>
+
+      <span class="breadcrumb">
+        /
+      </span>
+
+      <button class="breadcrumb active btn dropdown-container toggleable-container">
+        <span>{{ page.title }}</span>
+        <i class="fa fa-angle-down"></i>
+
+        <div class="dropdown nav-list left toggleable">
+            {% for sectionPage in activeSection.children %}
+              {% if page.title == sectionPage.title %}
+                <a class="nav-item active" href="{{ sectionPage.url }}">
+                  {{ sectionPage.title }}
+                  <i class="fa fa-check"></i>
+                </a>
+              {% else %}
+                <a class="nav-item" href="{{ sectionPage.url }}">{{ sectionPage.title }}</a>
+              {% endif %}
+            {% endfor %}
+        </div>
+      </button>
+    {% endif %}
+  </div>
+</div>

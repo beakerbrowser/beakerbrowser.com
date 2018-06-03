@@ -50,7 +50,6 @@
   }
 
   .post-meta {
-    @extend %decorative-font;
     color: $text--light-bg-muted;
     margin-bottom: 20px;
 
@@ -73,7 +72,6 @@
   }
 
   .read-more {
-    @extend %decorative-font;
     text-transform: uppercase;
     display: block;
     font-size: .9rem;
