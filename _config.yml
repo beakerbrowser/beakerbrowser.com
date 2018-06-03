@@ -22,6 +22,8 @@ sass:
   style: :compressed
   sass_dir: css
 
+minify_html: false
+
 # Site data
 collections:
   releases:
