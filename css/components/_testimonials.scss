@@ -10,15 +10,17 @@
   padding-top: 60px;
   overflow: hidden;
 
-  &:after {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: block;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, $blue 0%, transparent, transparent, $blue 100%);
+  @include respond-to(tablet) {
+    &:after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, $blue 0%, transparent, transparent, $blue 100%);
+    }
   }
 
   .testimonial {
@@ -56,6 +58,21 @@
 
   &:hover {
     animation-play-state: paused
+  }
+
+  @media (max-width: 699px) {
+    // on mobile, when unexpanded,
+    // only show the first, centered
+    &:not(.grid) {
+      .testimonial {
+        display: flex;
+        margin: 0 auto;
+
+        &:not(:first-child) {
+          display: none;
+        }
+      }
+    }
   }
 
   &.grid {
