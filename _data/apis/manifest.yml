@@ -1,21 +1,115 @@
 attributes:
   -
-    name: "url"
-    desc: "The Dat archive's URL."
-  -
     name: "title"
-    desc: "A short and descriptive human-friendly title."
+    desc: |
+      A short and descriptive human-friendly title. Can be read with [getInfo()](dat.html#getinfo) and changed with [configure()](dat.html#configure).
+
+      ```json
+      {
+        "title": "My cool site"
+      }
+      ```
   -
     name: "description"
-    desc: "A description of the Dat archive."
+    desc: |
+      A description of the Dat archive. Can be read with [getInfo()](dat.html#getinfo) and changed with [configure()](dat.html#configure).
+
+      ```json
+      {
+        "description": "The absolute best place to find cat pictures."
+      }
+      ```
   -
-    name: "repository"
-    desc: "The URL for the git repository associated with the Dat archive."
+    name: "type"
+    desc: |
+      A list of 'type' strings. Can be read with [getInfo()](dat.html#getinfo) and changed with [configure()](dat.html#configure).
+
+      Type strings are experimental. They were introduced to Beaker as a way to categorize archives, and can be used as a filter in [selectArchive()](dat.html#datarchive-selectarchive). You can list multiple types on an archive.
+
+      ```json
+      {
+        "type": ["user-profile", "fritter-user-profile"]
+      }
+      ```
+  -
+    name: "links"
+    desc: |
+      An object containing a set of Web links from the Dat. Can be read with [getInfo()](dat.html#getinfo) and changed with [configure()](dat.html#configure).
+
+      The `links` object is a mapping of "rel" values to arrays of link objects, as follows:
+
+      ```json
+      {
+        "rel-type": [{"href": "https://.../"}]
+      }
+      ```
+
+      The `.links` follows the same schema as [Web links](https://www.w3.org/TR/html5/document-metadata.html#the-link-element) and so any attribute which applies to a `<link>` will apply to these values.
+
+      The one difference is how the `rel` value is handled: in the links object, the `rel` is used as the key. Only one `rel` value should be used.
+
+      If a link has additional rel values, it can specify them using the `rel` field on the link object. For instance, a link with the `rel` value of `"foo bar baz"` would look like this:
+
+      ```json
+      {
+        "foo": [{"href": "https://.../", "rel": "bar baz"}]
+      }
+      ```
+
+      Links can be duplicated, and so it would also be possible to handle this case with 3 different link objects:
+
+      ```json
+      {
+        "foo": [{"href": "https://.../"}],
+        "bar": [{"href": "https://.../"}],
+        "baz": [{"href": "https://.../"}]
+      }
+      ```
   -
     name: "fallback_page"
     desc: |
       The path to a fallback page to serve instead of the default 404 page.
+
+      ```json
+      {
+        "fallback_page": "/404.html"
+      }
+      ```
   -
     name: "web_root"
     desc: |
       The path of the folder from which all requests should be served.
+
+      ```json
+      {
+        "web_root": "/public"
+      }
+      ```
+  -
+    name: "content_security_policy"
+    desc: |
+      The security policy for which content can be loaded in the dat site.
+      See [Using Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) for a general description of CSP syntax.
+
+      ```json
+      {
+        "content_security_policy": "default-src 'self'; script-src 'self' https://example.com"
+      }
+      ```
+  - name: "experimental.apis"
+    desc: |
+      A list of experimental "Lab APIs" which the site has opted into using. Possible values:
+
+       - `"datPeers"` for the [experimental.datPeers API](experimental-datpeers.html)
+       - `"globalFetch"` for the [experimental.globalFetch API](experimental-globalfetch.html)
+       - `"library"` for the [experimental.library API](experimental-datpeers.html)
+
+      ```json
+      {
+        "experimental": {
+          "apis": ["datPeers", "globalFetch", "library"]
+        }
+      }
+      ```
+
+      Lab APIs may change quickly or provide a temporary solution that's expected to be removed in the future. Developers should not depend on a Lab API in the long term. By listing the Lab API's ID in this array, the site author acknowledges that they are using an experimental & temporary API.

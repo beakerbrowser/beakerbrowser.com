@@ -149,15 +149,21 @@ webAPIs:
           url: "#properties"
           heading: true
           children:
-          - title: "url"
-            url: "#url"
           - title: "title"
             url: "#title"
           - title: "description"
             url: "#description"
-          - title: "repository"
-            url: "#repository"
+          - title: "type"
+            url: "#type"
+          - title: "links"
+            url: "#links"
           - title: "fallback_page"
             url: "#fallback_page"
           - title: "web_root"
             url: "#web_root"
+          - title: "content_security_policy"
+            url: "#content_security_policy"
+          - title: "experimental.apis"
+            url: "#experimental-apis"
+
+
