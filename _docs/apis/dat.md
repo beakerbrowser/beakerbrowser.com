@@ -82,3 +82,11 @@ with the `DatArchive` API will fail.
 ## Methods
 
 {% include api-reference.html items=site.data.apis.dat.methods %}
+
+## Events
+
+{% include api-reference.html items=site.data.apis.dat.events %}
+
+## Deprecated methods
+
+{% include api-reference.html items=site.data.apis.dat.deprecated_methods %}
