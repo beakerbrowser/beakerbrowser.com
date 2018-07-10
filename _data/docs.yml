@@ -165,6 +165,46 @@ webAPIs:
             url: "#content_security_policy"
           - title: "experimental.apis"
             url: "#experimental-apis"
+    - title: datPeers API
+      url: /docs/apis/experimental-datpeers.html
+      experimental: true
+      children:
+        - title: "Methods"
+          url: "#methods"
+          heading: true
+          children:
+          - title: "getSessionData()"
+            url: "#getsessiondata"
+          - title: "setSessionData()"
+            url: "#setsessiondata"
+          - title: "list()"
+            url: "#list"
+          - title: "get()"
+            url: "#get"
+          - title: "broadcast()"
+            url: "#broadcast"
+        - title: "Events"
+          url: "#events"
+          heading: true
+          children:
+          - title: "connect"
+            url: "#event-connect"
+          - title: "disconnect"
+            url: "#event-disconnect"
+          - title: "message"
+            url: "#event-message"
+          - title: "session-data"
+            url: "#event-session-data"
+        - title: "DatPeer"
+          url: "#datpeer"
+          heading: true
+          children:
+          - title: "id"
+            url: "#datpeer-id"
+          - title: "sessionData"
+            url: "#datpeer-sessiondata"
+          - title: "send()"
+            url: "#datpeer-send"
     - title: Library API
       url: /docs/apis/experimental-library.html
       experimental: true
