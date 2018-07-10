@@ -165,5 +165,35 @@ webAPIs:
             url: "#content_security_policy"
           - title: "experimental.apis"
             url: "#experimental-apis"
-
-
+    - title: Library API
+      url: /docs/apis/experimental-library.html
+      experimental: true
+      children:
+        - title: "Methods"
+          url: "#methods"
+          heading: true
+          children:
+          - title: "add()"
+            url: "#add"
+          - title: "remove()"
+            url: "#remove"
+          - title: "requestAdd()"
+            url: "#requestAdd"
+          - title: "requestRemove()"
+            url: "#requestRemove"
+          - title: "get()"
+            url: "#get"
+          - title: "list()"
+            url: "#list"
+        - title: "Events"
+          url: "#events"
+          heading: true
+          children:
+          - title: "added"
+            url: "#event-added"
+          - title: "removed"
+            url: "#event-removed"
+          - title: "updated"
+            url: "#event-updated"
+          - title: "network-changed"
+            url: "#event-network-changed"

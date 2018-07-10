@@ -37,7 +37,7 @@ toplevel_methods:
 
       - `opts.title` String. The title of the archive.
       - `opts.description` String. The description of the archive.
-      - `opts.type` Array<String>. The archive's type identifiers.
+      - `opts.type` Array&lt;String&gt;. The archive's type identifiers.
       - `opts.links` Object. Top-level links to other resources.
       - `opts.prompt` Boolean. Whether or not to show Beaker's create archive modal. (If `false`, a simple permission prompt will be shown instead.)
       - returns `Promise<DatArchive>`
@@ -64,7 +64,7 @@ toplevel_methods:
       - `url` String. The URL of the archive to fork.
       - `opts.title` String. The title of the archive.
       - `opts.description` String. The description of the archive.
-      - `opts.type` Array<String>. The archive's type identifiers.
+      - `opts.type` Array&lt;String&gt;. The archive's type identifiers.
       - `opts.links` Object. Top-level links to other resources.
       - `opts.prompt` Boolean. Whether or not to show Beaker's fork modal. (If `false`, a simple permission prompt will be shown instead.)
       - returns `Promise<DatArchive>`
@@ -103,6 +103,7 @@ toplevel_methods:
       - `opts.title` String. The title of the select archive modal.
       - `opts.buttonLabel` String. The label on the primary action button in the select archive modal.
       - `opts.filters.isOwner` Boolean. If true, only show archives that the user owns and can modify.
+      - `opts.filters.type` String or Array&lt;String&gt;. If set, only show archives that have the given `type` strings in their dat.json. See [dat.json site manifest](manifest.html#type) for more information.
       - returns `Promise<DatArchive>`
 
       Example:
@@ -110,7 +111,11 @@ toplevel_methods:
       ```js
       var archive = await DatArchive.selectArchive({
         title: 'Select an archive to use as your user profile',
-        buttonLabel: 'Select profile'
+        buttonLabel: 'Select profile',
+        filters: {
+          isOwner: true,
+          type: 'user-profile'
+        }
       })
       ```
   -
@@ -185,7 +190,7 @@ methods:
 
       - `opts.title` String. The title of the archive.
       - `opts.description` String. The description of the archive.
-      - `opts.type` Array<String>. The archive's type identifiers.
+      - `opts.type` Array&lt;String&gt;. The archive's type identifiers.
       - `opts.links` Object. Top-level links to other resources.
       - `opts.web_root` String. Path of the folder from which all web requests should be served.
       - `opts.fallback_page` String. Path to a fallback page to serve instead of the default 404 page.
@@ -267,7 +272,7 @@ methods:
       - `opts.recursive` Boolean. Recurse the listing into the subdirectories?
       - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
       - `opts.stat` Boolean. Run stat() on every entry and return with `{name:, stat:}`
-      - returns `Promise<Array<String>>`
+      - returns `Promise<Array&lt;String&gt;>`
 
       Example:
 
