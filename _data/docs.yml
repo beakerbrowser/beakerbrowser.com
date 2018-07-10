@@ -237,3 +237,13 @@ webAPIs:
             url: "#event-updated"
           - title: "network-changed"
             url: "#event-network-changed"
+    - title: globalFetch API
+      url: /docs/apis/experimental-globalfetch.html
+      experimental: true
+      children:
+        - title: "Methods"
+          url: "#methods"
+          heading: true
+          children:
+          - title: "globalFetch()"
+            url: "#globalFetch"
