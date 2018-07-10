@@ -165,7 +165,7 @@ webAPIs:
             url: "#content_security_policy"
           - title: "experimental.apis"
             url: "#experimental-apis"
-    - title: datPeers API
+    - title: DatPeers API
       url: /docs/apis/experimental-datpeers.html
       experimental: true
       children:
@@ -237,7 +237,7 @@ webAPIs:
             url: "#event-updated"
           - title: "network-changed"
             url: "#event-network-changed"
-    - title: globalFetch API
+    - title: GlobalFetch API
       url: /docs/apis/experimental-globalfetch.html
       experimental: true
       children:
@@ -247,3 +247,13 @@ webAPIs:
           children:
           - title: "globalFetch()"
             url: "#globalFetch"
+    - title: CapturePage API
+      url: /docs/apis/experimental-capturepage.html
+      experimental: true
+      children:
+        - title: "Methods"
+          url: "#methods"
+          heading: true
+          children:
+          - title: "capturePage()"
+            url: "#capturePage"
