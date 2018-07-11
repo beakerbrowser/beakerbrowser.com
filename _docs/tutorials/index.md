@@ -97,17 +97,6 @@ class: dark
       </a>
     </li>
     <li class="tutorial">
-      <a href="/docs/tutorials/diff-commit-revert.html">
-        <div class="heading">
-          <i class="teal fa fa-code"></i>
-          <span>Diff, commit, revert</span>
-        </div>
-        <p>
-          Use Beaker's <code>DatArchive</code> Web API to manage the staging area of a website.
-        </p>
-      </a>
-    </li>
-    <li class="tutorial">
       <a href="/docs/tutorials/listen-for-file-changes.html">
         <div class="heading">
           <i class="teal fa fa-code"></i>
