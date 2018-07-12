@@ -25,7 +25,7 @@ and with interaction behavior defined by
 
 TODO a graphic of a folder with a bunch of files spilling out of it.
 
-For example, a very simple website could contain an `index.html` file
+For example, a simple website could contain an `index.html` file
 with inline CSS styles and a `<script>` tag that defines some JavaScript (JS)
 behavior:
 
