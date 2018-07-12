@@ -96,7 +96,7 @@ methods:
       Example:
 
       ```js
-      var archives = await experimental.library.list(datUrl)
+      var archives = await experimental.library.list({isSaved: true})
       ```
 
       Each object returned in the array will have the following properties:

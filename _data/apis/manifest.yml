@@ -102,7 +102,8 @@ attributes:
 
        - `"datPeers"` for the [experimental.datPeers API](experimental-datpeers.html)
        - `"globalFetch"` for the [experimental.globalFetch API](experimental-globalfetch.html)
-       - `"library"` for the [experimental.library API](experimental-datpeers.html)
+       - `"library"` for the [experimental.library API](experimental-library.html)
+       - `"capturePage"` for the [experimental.capturePage API](experimental-capturepage.html)
 
       ```json
       {
