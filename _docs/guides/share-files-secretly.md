@@ -1,7 +1,7 @@
 ---
 title: Share files secretly
-section: tutorials
-sectionTitle: Tutorials
+section: guides
+sectionTitle: Guides
 order: 4
 ---
 

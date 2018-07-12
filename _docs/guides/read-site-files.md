@@ -1,7 +1,7 @@
 ---
 title: 'Example: Read site files'
-section: webAPIs
-sectionTitle: Web APIs
+section: guides
+sectionTitle: Guides
 order: 6
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Create a peer-to-peer blog
-section: tutorials
-sectionTitle: Tutorials
+section: guides
+sectionTitle: Guides
 order: 1
 ---
 

@@ -3,6 +3,23 @@ guides:
   url: /docs/guides
   children:
     - title: Publish a peer-to-peer website
+      url: /docs/guides/publish-a-peer-to-peer-website.html
+    - title: Using Lab APIs
+      url: /docs/guides/using-lab-apis.html
+    - title: Create a blog
+      url: /docs/guides/create-a-blog.html
+    - title: Create a markdown site
+      url: /docs/guides/create-a-markdown-site.html
+    - title: Create or fork a site
+      url: /docs/guides/create-or-fork-a-site.html
+    - title: Host outside of Beaker
+      url: /docs/guides/host-outside-of-beaker.html
+    - title: Listen for file changes
+      url: /docs/guides/listen-for-file-changes.html
+    - title: Read site files
+      url: /docs/guides/read-site-files.html
+    - title: Write site files
+      url: /docs/guides/write-site-files.html
 howBeakerWorks:
   url: /docs/how-beaker-works
   title: How Beaker works
@@ -39,24 +56,6 @@ usingBeaker:
         url: "#ignoring-files-with-datignore"
     - title: Troubleshooting
       url: /docs/using-beaker/troubleshooting.html
-tutorials:
-  title: Tutorials
-  url: /docs/tutorials/
-  children:
-    - title: Create a blog
-      url: /docs/tutorials/create-a-blog.html
-    - title: Create a markdown site
-      url: /docs/tutorials/create-a-markdown-site.html
-    - title: Create or fork a site
-      url: /docs/tutorials/create-or-fork-a-site.html
-    - title: Host outside of Beaker
-      url: /docs/tutorials/host-outside-of-beaker.html
-    - title: Listen for file changes
-      url: /docs/tutorials/listen-for-file-changes.html
-    - title: Read site files
-      url: /docs/tutorials/read-site-files.html
-    - title: Write site files
-      url: /docs/tutorials/write-site-files.html
 webAPIs:
   title: Web APIs
   subtitle: Explore Beaker's APIs for creating peer-to-peer websites and applications

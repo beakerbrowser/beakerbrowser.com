@@ -1,7 +1,7 @@
 ---
 title: Host outside of Beaker
-section: tutorials
-sectionTitle: Tutorials
+section: guides
+sectionTitle: Guides
 order: 3
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Create a markdown site
-section: tutorials
-sectionTitle: Tutorials
+section: guides
+sectionTitle: Guides
 order: 2
 ---
 

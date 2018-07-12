@@ -1,7 +1,7 @@
 ---
 title: Publish software securely
-section: tutorials
-sectionTitle: Tutorials
+section: guides
+sectionTitle: Guides
 order: 5
 ---
 
