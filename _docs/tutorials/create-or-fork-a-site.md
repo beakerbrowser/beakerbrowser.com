@@ -1,6 +1,6 @@
 ---
 title: 'Example: Create or fork a site'
-section: webAPIs
+section: tutorials
 sectionTitle: Web APIs
 order: 10
 ---

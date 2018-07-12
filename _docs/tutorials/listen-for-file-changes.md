@@ -1,6 +1,6 @@
 ---
 title: 'Example: Listen for file changes'
-section: webAPIs
+section: tutorials
 sectionTitle: Web APIs
 order: 9
 ---
