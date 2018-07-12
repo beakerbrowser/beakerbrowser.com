@@ -454,22 +454,25 @@ methods:
       ```
   -
     name: "watch"
-    signature: "watch(pattern?)"
+    signature: "watch(pattern?, onInvalidated?)"
     desc: |
       Watch the given path or path-pattern for file events.
 
       - `pattern`
-        - If a string, the path to watch.
+        - If a string, the path to watch. You can pass a falsy value to watch all.
         - If an array of strings, an [anymatch](https://npm.im/anymatch) pattern of paths to watch.
+      - `onInvalidated` Function. An event callback which is automatically added to the 'invalidated' event.
 
       Provides an `EventTarget` with a `.close()` method and the following events:
 
-      - `'invalidated' ({path: string})` The contents of the file has changed remotely, but it hasn't been downloaded yet.
+      - `'invalidated' ({path: string})` The contents of the file has changed, but may not have been downloaded yet.
         - `path` is the path-string of the file.
-      - `'changed' ({path: string})` The contents of the file has changed, either by a local write or a remote write. The new content will be ready when this event is emitted.
+      - `'changed' ({path: string})` The contents of the file has changed, and the new version is ready to read.
         - `path` is the path-string of the file.
 
-      Example:
+      A locally-owned archive will emit 'invalidated' and 'changed' when a write occurs. A remote archive will emit 'invalidated' first, then emit 'changed' when the new version has downloaded.
+
+      Examples:
 
       ```js
       var archive = new DatArchive(datUrl)
@@ -488,6 +491,14 @@ methods:
 
       // later:
       evts.close()
+      ```
+
+      ```js
+      var archive = new DatArchive(datUrl)
+
+      var evts = archive.watch(null, ({path}) => {
+        console.log(path, 'has been invalidated')
+      })
       ```
 events:
   -
