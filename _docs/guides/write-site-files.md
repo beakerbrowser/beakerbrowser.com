@@ -1,6 +1,6 @@
 ---
 title: 'Example: Write site files'
-section: tutorials
+section: webAPIs
 sectionTitle: Web APIs
 order: 7
 ---

@@ -1,3 +1,15 @@
+guides:
+  title: Guides
+  url: /docs/guides
+  children:
+    - title: Publish a peer-to-peer website
+howBeakerWorks:
+  url: /docs/how-beaker-works
+  title: How Beaker works
+  children:
+    - title: Peer-to-peer websites
+      url: /docs/how-beaker-works/peer-to-peer-websites
+    - title: Peer-to-peer applications
 usingBeaker:
   title: Using Beaker
   url: /docs/using-beaker/
