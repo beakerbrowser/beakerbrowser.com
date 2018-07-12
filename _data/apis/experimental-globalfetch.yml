@@ -1,0 +1,14 @@
+methods:
+  -
+    name: "globalFetch"
+    signature: "experimental.globalFetch(input, init?)"
+    desc: |
+      This API is functionally similar to [fetch()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch) and accepts the same parameters.
+      Refer to the [fetch() documentation](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch) for more information
+
+      Example:
+
+      ```js
+      var res = await experimental.globalFetch('https://example.com')
+      var body = await res.text()
+      ```

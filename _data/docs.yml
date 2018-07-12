@@ -27,6 +27,24 @@ usingBeaker:
         url: "#ignoring-files-with-datignore"
     - title: Troubleshooting
       url: /docs/using-beaker/troubleshooting.html
+tutorials:
+  title: Tutorials
+  url: /docs/tutorials/
+  children:
+    - title: Create a blog
+      url: /docs/tutorials/create-a-blog.html
+    - title: Create a markdown site
+      url: /docs/tutorials/create-a-markdown-site.html
+    - title: Create or fork a site
+      url: /docs/tutorials/create-or-fork-a-site.html
+    - title: Host outside of Beaker
+      url: /docs/tutorials/host-outside-of-beaker.html
+    - title: Listen for file changes
+      url: /docs/tutorials/listen-for-file-changes.html
+    - title: Read site files
+      url: /docs/tutorials/read-site-files.html
+    - title: Write site files
+      url: /docs/tutorials/write-site-files.html
 webAPIs:
   title: Web APIs
   subtitle: Explore Beaker's APIs for creating peer-to-peer websites and applications
@@ -85,8 +103,6 @@ webAPIs:
           url: "#getinfo"
         - title: "configure()"
           url: "#configure"
-        - title: "copy()"
-          url: "#copy"
         - title: "stat()"
           url: "#stat"
         - title: "readFile()"
@@ -101,12 +117,34 @@ webAPIs:
           url: "#unlink"
         - title: "rmdir()"
           url: "#rmdir"
+        - title: "copy()"
+          url: "#copy"
         - title: "rename()"
           url: "#rename"
         - title: "history()"
           url: "#history"
+        - title: "checkout()"
+          url: "#checkout"
         - title: "download()"
           url: "#download"
+        - title: "watch()"
+          url: "#watch"
+      - title: "Events"
+        heading: true
+        url: "#events"
+        children:
+        - title: "network-changed"
+          url: "#event-network-changed"
+        - title: "download"
+          url: "#event-download"
+        - title: "upload"
+          url: "#event-upload"
+        - title: "sync"
+          url: "#event-sync"
+      - title: "Deprecated methods"
+        heading: true
+        url: "#deprecated-methods"
+        children:
         - title: "diff()"
           url: "#diff"
           deprecated: true
@@ -129,15 +167,111 @@ webAPIs:
           url: "#properties"
           heading: true
           children:
-          - title: "url"
-            url: "#url"
           - title: "title"
             url: "#title"
           - title: "description"
             url: "#description"
-          - title: "repository"
-            url: "#repository"
+          - title: "type"
+            url: "#type"
+          - title: "links"
+            url: "#links"
           - title: "fallback_page"
             url: "#fallback_page"
           - title: "web_root"
             url: "#web_root"
+          - title: "content_security_policy"
+            url: "#content_security_policy"
+          - title: "experimental.apis"
+            url: "#experimental-apis"
+    - title: DatPeers API
+      url: /docs/apis/experimental-datpeers.html
+      experimental: true
+      children:
+        - title: "Methods"
+          url: "#methods"
+          heading: true
+          children:
+          - title: "getSessionData()"
+            url: "#getsessiondata"
+          - title: "setSessionData()"
+            url: "#setsessiondata"
+          - title: "list()"
+            url: "#list"
+          - title: "get()"
+            url: "#get"
+          - title: "broadcast()"
+            url: "#broadcast"
+        - title: "Events"
+          url: "#events"
+          heading: true
+          children:
+          - title: "connect"
+            url: "#event-connect"
+          - title: "disconnect"
+            url: "#event-disconnect"
+          - title: "message"
+            url: "#event-message"
+          - title: "session-data"
+            url: "#event-session-data"
+        - title: "DatPeer"
+          url: "#datpeer"
+          heading: true
+          children:
+          - title: "id"
+            url: "#datpeer-id"
+          - title: "sessionData"
+            url: "#datpeer-sessiondata"
+          - title: "send()"
+            url: "#datpeer-send"
+    - title: Library API
+      url: /docs/apis/experimental-library.html
+      experimental: true
+      children:
+        - title: "Methods"
+          url: "#methods"
+          heading: true
+          children:
+          - title: "add()"
+            url: "#add"
+          - title: "remove()"
+            url: "#remove"
+          - title: "requestAdd()"
+            url: "#requestAdd"
+          - title: "requestRemove()"
+            url: "#requestRemove"
+          - title: "get()"
+            url: "#get"
+          - title: "list()"
+            url: "#list"
+        - title: "Events"
+          url: "#events"
+          heading: true
+          children:
+          - title: "added"
+            url: "#event-added"
+          - title: "removed"
+            url: "#event-removed"
+          - title: "updated"
+            url: "#event-updated"
+          - title: "network-changed"
+            url: "#event-network-changed"
+    - title: GlobalFetch API
+      url: /docs/apis/experimental-globalfetch.html
+      experimental: true
+      children:
+        - title: "Methods"
+          url: "#methods"
+          heading: true
+          children:
+          - title: "globalFetch()"
+            url: "#globalFetch"
+    - title: CapturePage API
+      url: /docs/apis/experimental-capturepage.html
+      experimental: true
+      children:
+        - title: "Methods"
+          url: "#methods"
+          heading: true
+          children:
+          - title: "capturePage()"
+            url: "#capturePage"

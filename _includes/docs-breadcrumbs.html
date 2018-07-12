@@ -40,10 +40,14 @@
               {% if page.title == sectionPage.title %}
                 <a class="nav-item active" href="{{ sectionPage.url }}">
                   {{ sectionPage.title }}
+                  {% if sectionPage.experimental %}(lab){% endif %}
                   <i class="fa fa-check"></i>
                 </a>
               {% else %}
-                <a class="nav-item" href="{{ sectionPage.url }}">{{ sectionPage.title }}</a>
+                <a class="nav-item" href="{{ sectionPage.url }}">
+                  {{ sectionPage.title }}
+                  {% if sectionPage.experimental %}(lab){% endif %}
+                </a>
               {% endif %}
             {% endfor %}
         </div>

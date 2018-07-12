@@ -7,26 +7,32 @@ order: 5
 ---
 
 Websites and applications served over `dat://` can include a manifest file to
-specify metadata and configure special behaviors.
-
-The file must be located at `/dat.json` in the website or application root.
+specify metadata and configure special behaviors. The file must be located at
+`/dat.json` in the website or application root.
 
 Beaker automatically creates and manages the manifest for Dat archives created
 with the `DatArchive` Web API.
-
-TODO
-https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/content_security_policy
 
 Example:
 
 <figcaption class="code">dat.json</figcaption>
 ```json
 {
-  "url": "dat://4483a2..66/",
   "title": "My website",
   "description": "A simple website built with the Beaker Browser",
-  "fallback_page": "/public/404.html",
-  "web_root": "/public"
+  "type": ["website"],
+  "links": {
+    "license": [{
+      "href": "http://creativecommons.org/licenses/by-nc/2.5/",
+      "title": "CC BY-NC 2.5"
+    }]
+  },
+  "fallback_page": "/404.html",
+  "web_root": "/public",
+  "content_security_policy": "default-src 'self'; script-src 'self' https://example.com",
+  "experimental": {
+    "apis": ["datPeers", "globalFetch", "library"]
+  }
 }
 ```
 
