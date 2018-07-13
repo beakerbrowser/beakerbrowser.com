@@ -6,6 +6,8 @@ guides:
       url: /docs/guides/publish-a-peer-to-peer-website.html
     - title: Using Lab APIs
       url: /docs/guides/using-lab-apis.html
+    - title: Create a todo list
+      url: /docs/guides/create-a-todo-list.html
     - title: Create a blog
       url: /docs/guides/create-a-blog.html
     - title: Create a markdown site
