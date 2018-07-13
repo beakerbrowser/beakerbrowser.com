@@ -193,7 +193,7 @@ webAPIs:
           - title: "web_root"
             url: "#web_root"
           - title: "content_security_policy"
-            url: "#content_security_policy"
+            url: "#content-security-policy"
           - title: "experimental.apis"
             url: "#experimental-apis"
     - title: DatPeers API

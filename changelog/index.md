@@ -6,50 +6,23 @@ layout: changelog
 See what's new in Beaker
 
 <ul class="changelog-list">
+{% for item in site.data.changelog %}
   <li class="change">
-  	<span class="addition fas fa-circle"></span>
+    <span class="{{ item.change }} fas fa-circle"></span>
 
-    <a href="" class="change-title">
-      Added
-  	  <code>window.experimental.datPeers</code>
-  	</a>
+    {% if item.href %}
+      <a href="{{ item.href }}" class="change-title">{{ item.title }}</a>
+    {% else %}
+      <span class="change-title">{{ item.title }}</span>
+    {% endif %}
 
-  	<div class="date">2018-07-04</div>
+    <div class="date">{{ item.date }}</div>
 
-  	<p class="change-description">
-      This is a test description
+    {% if item.description %}
+    <p class="change-description">
+      {{ item.description }}
     </p>
+    {% endif %}
   </li>
-
-  <li class="change">
-  	<span class="modification fas fa-circle"></span>
-
-    <a href="" class="change-title">
-      Changed Beaker's permission model
-  	</a>
-
-   	<div class="date">2018-06-10</div>
-  </li>
-
-  <li class="change">
-  	<span class="deletion fas fa-circle"></span>
-
-    <a href="" class="change-title">
-      Removed
-  	  <code>DatArchive.commit</code>
-  	</a>
-
-  	<div class="date">2018-05-30</div>
-  </li>
-
-  <li class="change">
-  	<span class="addition fas fa-circle"></span>
-
-    <a href="" class="change-title">
-      Added
-  	  <code>window.experimental.datPeers</code>
-  	</a>
-
-  	<div class="date">2018-05-22</div>
-  </li>
+{% endfor %}
 </ul>
