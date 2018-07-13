@@ -1,0 +1,78 @@
+.layout.snippets {
+
+  .title {
+  	width: 180px;
+  	text-align: center;
+  	padding: 5px 0;
+  	border: 2px dashed;
+  }
+
+  .subheading {
+  	font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .snippets-container {
+  	display: grid;
+  	grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 300px))
+  }
+
+  .snippet {
+    @extend %flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5px 10px 10px 10px;
+    background: #eee;
+    border: 2px solid transparent;
+
+    .snippet-heading {
+      @extend %inline-flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .snippet-title {
+      font-weight: 600;
+      font-size: 14.5px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .snippet-description {
+      color: rgba(0,0,0,.85);
+      margin-bottom: 7px;
+      font-size: 12.5px;
+    }
+
+    .btn.copy-snippet {
+      opacity: 0;
+      margin-top: -5px;
+    }
+
+  	figure.highlight {
+      margin: 0;
+      padding: 10px;
+      background: #fff;
+      font-size: 12.5px;
+      max-width: 100%;
+
+      pre {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+  	}
+
+    &:hover {
+      // border: 2px dashed
+
+      .btn.copy-snippet {
+        opacity: 1;
+      }
+    }
+  }
+}
