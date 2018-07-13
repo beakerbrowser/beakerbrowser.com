@@ -16,8 +16,8 @@ guides:
       url: /docs/guides/create-or-fork-a-site.html
     - title: Host outside of Beaker
       url: /docs/guides/host-outside-of-beaker.html
-    - title: Listen for file changes
-      url: /docs/guides/listen-for-file-changes.html
+    - title: Watch for file changes
+      url: /docs/guides/watch-for-file-changes.html
     - title: Read site files
       url: /docs/guides/read-site-files.html
     - title: Write site files
