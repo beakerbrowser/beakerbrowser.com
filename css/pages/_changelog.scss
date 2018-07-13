@@ -81,6 +81,7 @@
 
   .change-title {
     font-weight: 500;
+    text-overflow: ellipsis;
 
     &:hover {
       text-decoration: underline;
@@ -90,5 +91,9 @@
   .change-description {
     flex: 100%;
     margin: 15px 0 0 20px;
+
+    @include respond-to(tablet) {
+      margin-right: 30px;
+    }
   }
 }
