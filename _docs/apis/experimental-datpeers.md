@@ -13,7 +13,7 @@ The `datPeers` API includes methods for attaching "session data" to your connect
 
 ## Lab API
 
-This is a "Lab API." You must opt into the API by including the following in your [dat.json](manifest.html):
+This is a [Lab API](/docs/guides/using-lab-apis.md). You must opt into the API by including the following in your [dat.json](manifest.html):
 
 ```json
 {
