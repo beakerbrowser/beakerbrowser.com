@@ -38,6 +38,13 @@
     color: $blue;
   }
 
+  &.plain {
+    border: 0;
+    padding: 0;
+    height: initial;
+    line-height: initial;
+  }
+
   &.action {
     background: $blue;
     color: #fff;
