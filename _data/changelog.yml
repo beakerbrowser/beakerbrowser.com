@@ -11,16 +11,24 @@
   title: Added <code>experimental.capturePage</code>
   href: /docs/apis/experimental-capturepage.html
   date: TBD
+  description: |
+    The capturePage Labs API lets app take a screenshot of pages with the user's permission.
+    This is especially helpful for writing aggregators that accept site submissions, because it makes it possible to get pictures of the submitted site.
 -
   change: addition
   title: Added <code>experimental.globalFetch</code>
   href: /docs/apis/experimental-globalfetch.html
   date: TBD
+  description: |
+    The globalFetch Labs API is a variation of fetch() which lets sites circumvent CORS with the user's permission.
+    This is useful for dat:// sites, since they have no server to make those requests on their behalf.
 -
   change: addition
   title: Added <code>experimental.datPeers</code>
   href: /docs/apis/experimental-datpeers.html
   date: TBD
+  description: |
+    The datPeers Lab API makes it possible to exchange messages with peers on a dat:// website.
 -
   change: addition
   title: Added "type" field to dat.json
@@ -39,16 +47,23 @@
   change: addition
   title: Added inline editing to the library
   date: 2018-05-29
+  description: |
+    You can now edit your dats without ever leaving the browser!
 -
   change: addition
   title: Added DNS TXT record support to Dat
   href: https://www.datprotocol.com/deps/0005-dns/
   date: 2018-05-29
+  description: |
+    This expands the DNS model so that no server is required.
+    You can get a shortname by publishing a DNS TXT record that points to the dat url.
 -
   change: addition
   title: Added <code>experimental.library</code>
   href: /docs/apis/experimental-library.html
   date: 2018-05-29
+  description: |
+    The Library Labs API gives apps the tools to manage users' saved dat archives.
 -
   change: addition
   title: Added JSON rendering
