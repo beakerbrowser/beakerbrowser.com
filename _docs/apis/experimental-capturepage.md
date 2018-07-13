@@ -15,7 +15,7 @@ To avoid leaking user information, Beaker loads the page in a temporary private 
 
 ## Lab API
 
-This is a "Lab API." You must opt into the API by including the following in your [dat.json](manifest.html):
+This is a [Lab API](/docs/guides/using-lab-apis.html). You must opt into the API by including the following in your [dat.json](manifest.html):
 
 ```json
 {

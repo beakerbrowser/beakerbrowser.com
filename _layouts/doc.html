@@ -81,13 +81,6 @@
     </script>
 
     <script>
-    var mobileNav = document.getElementById('docs-nav-mobile')
-    mobileNav.addEventListener('change', function (e) {
-      var select = e.target
-      window.location = select.selectedOptions[0].dataset.url
-    })
-    </script>
-    <script>
     [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
       img.setAttribute('src', img.getAttribute('data-src'))
       img.onload = function() {
