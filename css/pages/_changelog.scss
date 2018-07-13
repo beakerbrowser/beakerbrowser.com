@@ -1,0 +1,85 @@
+.changelog-icon {
+  @extend %inline-flex;
+  margin-right: 5px;
+
+  &.heading {
+
+  	.fa-circle {
+  	  font-size: 12px;
+  	}
+  }
+
+  &.body {
+
+  	.fa-circle {
+   	  font-size: 6px;
+  	}
+  }
+
+  .fa-circle {
+  	color: $orange;
+
+  	&:nth-child(2) {
+  	  color: $blue;
+  	}
+
+  	&:nth-child(3) {
+  	  color: $green;
+  	}
+  }
+}
+
+.layout.changelog {
+
+  h1 {
+    @extend %inline-flex;
+    margin-bottom: 30px;
+  }
+
+  .changelog-list {
+    list-style: none;
+    margin-left: 0;
+    border: 2px solid;
+  }
+
+  .change {
+    @extend %flex;
+    padding: 15px 5px;
+    margin: 0 15px;
+    border-bottom: 2px solid;
+    font-size: 15px;
+
+    .fa-circle {
+      font-size: 11px;
+      margin-right: 10px;
+
+      &.addition {
+        color: $green;
+      }
+
+      &.modification {
+        color: $orange;
+      }
+
+      &.deletion {
+        color: $red;
+      }
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    .date {
+      margin-left: auto;
+    }
+  }
+
+  .change-description {
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
