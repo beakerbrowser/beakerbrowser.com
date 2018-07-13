@@ -11,7 +11,7 @@ An experimental API for managing the user's collection of Dat archives.
 
 ## Lab API
 
-This is a [Lab API](/docs/guides/using-lab-apis.md). You must opt into the API by including the following in your [dat.json](manifest.html):
+This is a [Lab API](/docs/guides/using-lab-apis.html). You must opt into the API by including the following in your [dat.json](manifest.html):
 
 ```json
 {
