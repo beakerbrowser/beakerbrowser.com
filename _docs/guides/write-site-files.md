@@ -1,165 +1,90 @@
 ---
-title: 'Example: Write site files'
+title: Write site files
 section: guides
 sectionTitle: Guides
 order: 7
 ---
 
-The [DatArchive API](/docs/apis/dat.html) provides a simple set of APIs to write files and create directories. After instantiating an archive instance, you can call `mkdir()` and `writeFile()`.
 
-First, [create a new Dat site](/docs/using-beaker/create-a-site.html) using this [<i class="fa fa-file-archive-o"></i> template.zip](/docs/tutorials/template.zip). Open the site, then open its devtools and paste this code into the console:
+The [DatArchive API](/docs/apis/dat.html) provides a simple set of APIs to write files, create directories, and delete data.
 
-<figcaption class="code">snippet</figcaption>
+<figcaption class="code">create a writable dat archive</figcaption>
 ```js
-DatArchive.create({title: 'Write site files tutorial'})
-  .then(archive => {
-    localStorage.targetDatURL = archive.url
-    console.log('Created and saved!')
-  })
+var archive = await DatArchive.create({title: 'My writable dat', prompt: false})
 ```
 
-When you run this snippet, you’ll see the following dialog appear. Click “Create site”:
+## Writing files and folders
 
-<figure>
-<img data-src="/img/docs/tut-write-site-files/modal.jpg" >
-<figcaption>Click "Create site"</figcaption>
-</figure>
+The [mkdir() method](/docs/apis/dat.html#mkdir) creates new folders.
+It will throw an error if a file/folder already exists at the target, or if no parent folder exists.
 
-You should see this appear in your devtools console:
-
-<figure>
-<img data-src="/img/docs/tut-write-site-files/create-site.jpg" >
-<figcaption>The output of <code>DatArchive.create()</code></figcaption>
-</figure>
-
-## Setup
-
-We now have a Dat which our site can modify. In `js/index.js`, add the following code. This will create an instance of the Dat we just created.
-
-<figcaption class="code">js/index.js</figcaption>
+<figcaption class="code">create folders</figcaption>
 ```js
-async function main () {
-  // create an archive instance for our created dat
-  if (!localStorage.targetDatURL) {
-    return
-  }
-  var archive = new DatArchive(localStorage.targetDatURL)
-  console.log(await archive.readdir('/'))
-}
+await archive.mkdir('/stuff')
 ```
 
-Refresh the page, and you should see an empty array logged in your console:
+The [writeFile() method](/docs/apis/dat.html#writefile) writes files.
+It accepts an encoding as its third parameter.
 
-<figure>
-<img data-src="/img/docs/tut-write-site-files/readdir.jpg" >
-<figcaption>The output of <code>archive.readdir('/')</code></figcaption>
-</figure>
-
-## `mkdir`
-
-As you can see, the archive is empty. Let’s change that by adding a folder. Add the following snippet to the end of your main function:
-
-<figcaption class="code">js/index.js</figcaption>
+<figcaption class="code">write files</figcaption>
 ```js
-try {
-  await archive.mkdir('/stuff')
-  console.log('Created /stuff')
-} catch (e) {
-  console.log('Failed:', e)
-}
+await archive.writeFile('/hello.txt', str, 'utf8')
+await archive.writeFile('/beaker.png', pngBase64, 'base64')
+await archive.writeFile('/beaker.png', pngHex, 'hex')
+await archive.writeFile('/beaker.png', pngArrayBuffer, 'binary')
 ```
 
-If you refresh the page, you should see this:
+If the encoding is omitted, then 'utf8' will be assumed for strings and 'binary' will be assumed for ArrayBuffers.
 
-<figure>
-<img data-src="/img/docs/tut-write-site-files/mkdir.jpg" >
-<figcaption>The output of <code>archive.mkdir('/stuff')</code></figcaption>
-</figure>
-
-## `writeFile (string)`
-
-Now let’s add a file. Add this to the end of your main function:
-
-<figcaption class="code">js/index.js</figcaption>
+<figcaption class="code">write files (default encoding)</figcaption>
 ```js
-await archive.writeFile('/hello.txt', 'world')
-console.log('Wrote', archive.url + '/hello.txt')
+await archive.writeFile('/hello.txt', str)
+await archive.writeFile('/beaker.png', pngArrayBuffer)
 ```
 
-If you refresh the page, you should see something like this:
+## Deleting files and folders
 
-<figure>
-<img data-src="/img/docs/tut-write-site-files/writefile.jpg" >
-<figcaption>The output of <code>archive.writeFile()</code></figcaption>
-</figure>
+The [rmdir() method](/docs/apis/dat.html#rmdir) deletes folders.
+It will fail if the folder is not empty.
 
-If you open that URL, you’ll see this:
-
-<figure>
-<img data-src="/img/docs/tut-write-site-files/writefile-view.png" >
-<figcaption>The content of hello.txt</figcaption>
-</figure>
-
-## `writeFile (binary)`
-
-Now let’s try a binary file. Add this to your main function:
-
-<figcaption class="code">js/index.js</figcaption>
+<figcaption class="code">delete a folder</figcaption>
 ```js
-var thisArchive = new DatArchive(window.location.toString())
-var beakerPng = await thisArchive.readFile('/img/beaker.png', 'base64')
-await archive.writeFile('/beaker.png', beakerPng, 'base64')
-console.log('Wrote', archive.url + '/beaker.png')
+await archive.rmdir('/stuff')
 ```
 
-If you refresh the page, you should see something like this:
+The [unlink() method](/docs/apis/dat.html#unlink) deletes files.
 
-<figure>
-<img data-src="/img/docs/tut-write-site-files/writefile2.jpg" >
-<figcaption>The output of <code>archive.writeFile()</code></figcaption>
-</figure>
-
-If you open that URL, you’ll see this:
-
-<figure>
-<img data-src="/img/docs/tut-write-site-files/writefile2-view.jpg" >
-<figcaption>The content of logo.png</figcaption>
-</figure>
-
-## Summary
-
-For review, here is our final `js/index.js`:
-
-<figcaption class="code">js/index.js</figcaption>
+<figcaption class="code">delete a file</figcaption>
 ```js
-async function main () {
-  // create an archive instance for our created dat
-  if (!localStorage.targetDatURL) {
-    return
-  }
-  var archive = new DatArchive(localStorage.targetDatURL)
-  console.log(await archive.readdir('/'))
-
-  // add the /stuff folder
-  try {
-    await archive.mkdir('/stuff')
-    console.log('Created /stuff')
-  } catch (e) {
-    console.log('Failed:', e)
-  }
-
-  // write /hello.txt
-  await archive.writeFile('/hello.txt', 'world')
-  console.log('Wrote', archive.url + '/hello.txt')
-
-  // write /logo.png
-  var thisArchive = new DatArchive(window.location.toString())
-  var logoPng = await thisArchive.readFile('/img/logo.png', 'base64')
-  await archive.writeFile('/logo.png', logoPng, 'base64')
-  console.log('Wrote', archive.url + '/logo.png')
-}
-
-main()
+await archive.unlink('/hello.txt')
 ```
 
-Now you can create folders and write files. This is great, but so far you’ve only made those changes to the staging area. Next, [read about how to commit those changes to the archive.](/docs/tutorials/diff-commit-revert.html)
+### Recursive deletes
+
+You can delete non-empty folders by specifying the `recursive` option.
+
+<figcaption class="code">delete a folder and all of its contents</figcaption>
+```js
+await archive.rmdir('/stuff', {recursive: true})
+```
+
+## Copying, moving, and renaming
+
+The [copy() method](/docs/apis/dat.html#copy) copies files and folders.
+If the folder is not empty, it will copy all of its contents.
+
+<figcaption class="code">copy files and folders</figcaption>
+```js
+await archive.copy('/stuff', '/stuff-backup')
+await archive.copy('/hello.txt', '/goodbye.txt')
+```
+
+The [rename() method](/docs/apis/dat.html#rename) moves/renames files and folders.
+If the folder is not empty, it will move all of its contents.
+
+<figcaption class="code">rename files and folders</figcaption>
+```js
+await archive.rename('/stuff', '/stuff-backup')
+await archive.rename('/hello.txt', '/goodbye.txt')
+```
+

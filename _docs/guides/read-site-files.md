@@ -7,7 +7,7 @@ order: 6
 
 The [DatArchive API](/docs/apis/dat.html) provides a simple set of APIs to read files and directories.
 
-<figcaption class="code">create a dat archive instance</figcaption>
+<figcaption class="code">open a dat archive instance</figcaption>
 ```js
 var archive = new DatArchive('dat://beakerbrowser.com')
 ```
