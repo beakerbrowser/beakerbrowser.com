@@ -47,7 +47,6 @@
     padding: 15px 5px;
     margin: 0 15px;
     border-bottom: 2px solid;
-    font-size: 15px;
 
     .fa-circle {
       font-size: 11px;
@@ -71,15 +70,25 @@
     }
 
     .date {
+      display: none;
       margin-left: auto;
+
+      @include respond-to(tablet) {
+        display: flex;
+      }
     }
   }
 
-  .change-description {
+  .change-title {
     font-weight: 500;
 
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  .change-description {
+    flex: 100%;
+    margin: 15px 0 0 20px;
   }
 }
