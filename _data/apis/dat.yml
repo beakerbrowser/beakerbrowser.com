@@ -218,13 +218,15 @@ methods:
 
       ```plain
       Stat {
+        isDirectory(): boolean
+        isFile(): boolean
+
+        // files only:
         size: number (bytes)
         blocks: number (number of data blocks in the metadata)
         downloaded: number (number of blocks downloaded, if a remote archive)
         mtime: Date (last modified time; not reliable)
         ctime: Date (creation time; not reliable)
-        isDirectory(): boolean
-        isFile(): boolean
       }
       ```
 

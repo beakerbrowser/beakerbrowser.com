@@ -5,126 +5,27 @@ layout: snippets
 ---
 
 <div class="snippets-container">
+{% for item in site.data.snippets %}
   <div class="snippet">
-  	<div class="snippet-heading">
-	  <div class="snippet-title">
-	   Get a site's title
-	  </div>
+    <div class="snippet-heading">
+      <a href="/docs/snippets/{{ item.slug }}" class="snippet-title">
+       {{ item.title }}
+      </a>
 
-	  <button class="btn plain copy-snippet" tooltip="Copy snippet">
-	  	<span class="fa fa-paste"></span>
-	  </button>
-	 </div>
+      <button class="btn plain copy-snippet" tooltip="Copy snippet">
+        <span class="fa fa-paste"></span>
+      </button>
+   </div>
+
+   {% if item.description %}
+    <p class="snippet-description">
+      {{ item.description }}
+    </p>
+    {% endif %}
 
 {% highlight javascript %}
-var site = new DatArchive('dat://beakerbrowser.com')
-site.title // => 'Beaker Browser'
+{{ item.code }}
 {% endhighlight %}
   </div>
-
-  <div class="snippet">
-  	<div class="snippet-heading">
-	  <a href="/docs/snippets/butt" class="snippet-title">
-	   Get a site's title
-	  </a>
-
-	  <button class="btn plain copy-snippet" tooltip="Copy snippet">
-	  	<span class="fa fa-paste"></span>
-	  </button>
-	 </div>
-
-{% highlight javascript %}
-var site = new DatArchive('dat://beakerbrowser.com')
-site.title // => 'Beaker Browser'
-{% endhighlight %}
-  </div>
-
-  <div class="snippet">
-  	<div class="snippet-heading">
-	  <a href="/docs/snippets/butt" class="snippet-title">
-	   Get a site's title
-	  </a>
-
-	  <button class="btn plain copy-snippet" tooltip="Copy snippet">
-	  	<span class="fa fa-paste"></span>
-	  </button>
-	 </div>
-
-{% highlight javascript %}
-var site = new DatArchive('dat://beakerbrowser.com')
-site.title // => 'Beaker Browser'
-{% endhighlight %}
-  </div>
-
-  <div class="snippet">
-  	<div class="snippet-heading">
-	  <div class="snippet-title">
-	   Get a site's title
-	  </div>
-
-	  <button class="btn plain copy-snippet" tooltip="Copy snippet">
-	  	<span class="fa fa-paste"></span>
-	  </button>
-	 </div>
-
-{% highlight javascript %}
-var site = new DatArchive('dat://beakerbrowser.com')
-site.title // => 'Beaker Browser'
-{% endhighlight %}
-  </div>
-
-  <div class="snippet">
-  	<div class="snippet-heading">
-	  <div class="snippet-title">
-	   Get a site's title
-	  </div>
-
-	  <button class="btn plain copy-snippet" tooltip="Copy snippet">
-	  	<span class="fa fa-paste"></span>
-	  </button>
-	 </div>
-
-{% highlight javascript %}
-var site = new DatArchive('dat://beakerbrowser.com')
-site.title // => 'Beaker Browser'
-{% endhighlight %}
-  </div>
-
-  <div class="snippet">
-  	<div class="snippet-heading">
-	  <div class="snippet-title">
-	   Get a site's title
-	  </div>
-
-	  <button class="btn plain copy-snippet" tooltip="Copy snippet">
-	  	<span class="fa fa-paste"></span>
-	  </button>
-	</div>
-
-  	<p class="snippet-description">
-      This one has a description that tells you something short and sweet about it
-  	</p>
-
-{% highlight javascript %}
-var site = new DatArchive('dat://beakerbrowser.com')
-site.title // => 'Beaker Browser'
-{% endhighlight %}
-  </div>
-
-  <div class="snippet">
-  	<div class="snippet-heading">
-	  <div class="snippet-title">
-	   Get a site's title
-	  </div>
-
-	  <button class="btn plain copy-snippet" tooltip="Copy snippet">
-	  	<span class="fa fa-paste"></span>
-	  </button>
-	 </div>
-
-{% highlight javascript %}
-var site = new DatArchive('dat://beakerbrowser.com')
-site.title // => 'Beaker Browser'
-{% endhighlight %}
-  </div>
+{% endfor %}
 </div>

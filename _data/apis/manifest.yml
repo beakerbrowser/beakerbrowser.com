@@ -31,6 +31,17 @@ attributes:
         "type": ["user-profile", "fritter-user-profile"]
       }
       ```
+
+      ### What are types used for?
+
+      They are used as a filter in [selectArchive()](dat.html#datarchive-selectarchive), similar to how file-extensions are used in operating system "open file" dialogs.
+      They are also a way for apps to identify the kind of data or content in an archive using [getInfo()](dat.html#getinfo).
+
+      ### What types can I use?
+
+      There are no official types.
+      We recommend including a short string which identifies the general kind of data being stored, plus one or more long strings which help identify the schema of the data.
+      For example, a social media app called 'Fritter' might use `"user-profile"` and `"fritter-user-profile"`.
   -
     name: "links"
     desc: |

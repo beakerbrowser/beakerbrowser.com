@@ -93,7 +93,7 @@ The process is similar to calculating a single file's download progress, but it 
 var sts = await archive.readdir('/', {recursive: true, stat: true})
 var blocks = 0, downloaded = 0, bytes = 0
 for (var st of sts) {
-  bytes += st.stats.bytes
+  bytes += st.stat.bytes
   blocks += st.stat.blocks
   downloaded += st.stat.downloaded
 }

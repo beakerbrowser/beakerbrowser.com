@@ -1,0 +1,267 @@
+# schema
+# -
+#   slug: string
+#   title: string
+#   description: optional string
+#   code: string
+-
+  title: Get an archive's title
+#  description: |
+#    Every dat archive has a title and description that can be read with <code>getInfo()</code>.
+  code: |
+    var archive = new DatArchive(url)
+    var info = await archive.getInfo()
+    info.title // string
+-
+  title: Get an archive's type
+#  description: |
+#    The "type" of a dat archive is used to filter archives and help organize the user's data, sites, and apps.
+  code: |
+    var archive = new DatArchive(url)
+    var info = await archive.getInfo()
+    info.type // array of strings
+-
+  title: Get an archive's total size
+#  description: |
+#    The total size of a dat will include any downloaded history.
+  code: |
+    var archive = new DatArchive(url)
+    var info = await archive.getInfo()
+    info.size // number (bytes)
+-
+  title: See if the user owns an archive
+  code: |
+    var archive = new DatArchive(url)
+    var info = await archive.getInfo()
+    info.isOwner // boolean
+-
+  title: Get the version of an archive
+  code: |
+    var archive = new DatArchive(url)
+    var info = await archive.getInfo()
+    info.version // number
+-
+  title: Check when an update was last downloaded
+  code: |
+    var archive = new DatArchive(url)
+    var info = await archive.getInfo()
+    info.mtime // number
+-
+  title: Get the number of peers
+  code: |
+    var archive = new DatArchive(url)
+    var info = await archive.getInfo()
+    info.peers // number
+-
+  title: Configure an archive's settings
+  code: |
+    var archive = new DatArchive(url)
+    await archive.configure({
+      title: 'The name of the archive',
+      description: 'A longer description of the archive',
+      type: ['website']
+    })
+-
+  title: Create a new archive
+  code: |
+    var archive = await DatArchive.create({
+      title: 'The name of the archive',
+      description: 'A longer description of the archive',
+      type: ['website']
+    })
+-
+  title: Duplicate an archive
+  code: |
+    var archive = await DatArchive.fork(sourceArchiveUrl, {
+      title: 'New name',
+      description: 'New description'
+    })
+-
+  title: Open an archive selector modal
+  code: |
+    var archive = await DatArchive.selectArchive({
+      prompt: 'Select an archive',
+      buttonLabel: 'Accept'
+    })
+-
+  title: Use a type filter in the select modal
+  code: |
+    var archive = await DatArchive.selectArchive({
+      prompt: 'Select a fritter user profile',
+      filters: {isOwner: true, type: ['user-profile', 'fritter-user-profile']}
+    })
+-
+  title: Lookup the key of a DNS name
+  code: |
+    var key = await DatArchive.resolveName('beakerbrowser.com')
+-
+  title: Check if something is a file or a folder
+  code: |
+    var st = archive.stat('/foo')
+    st.isFile() // boolean
+    st.isDirectory() // boolean
+-
+  title: Read a folder
+  code: |
+    var filenames = await archive.readdir('/')
+    var filepaths = await archive.readdir('/', {recursive: true})
+    var filestats = await archive.readdir('/', {stat: true})
+-
+  title: Read a file
+  code: |
+    var str = await archive.readFile('/index.html', 'utf8')
+    var arrayBuffer = await archive.readFile('/img/logo/logo.png', 'binary')
+-
+  title: Get the download progress of a file
+  code: |
+    var st = await archive.stat('/index.html')
+    var percentDownloaded = st.downloaded / st.blocks
+    var bytesDownloaded = st.size * percentDownloaded
+-
+  title: Get the download progress of a folder
+  code: |
+    var sts = await archive.readdir('/', {recursive: true, stat: true})
+    var blocks = 0, downloaded = 0, bytes = 0
+    for (var st of sts) {
+      bytes += st.stat.bytes
+      blocks += st.stat.blocks
+      downloaded += st.stat.downloaded
+    }
+    var percentDownloaded = downloaded / blocks
+    var bytesDownloaded = size * percentDownloaded
+-
+  title: Write files and folders
+  code: |
+    await archive.mkdir('/stuff')
+    await archive.writeFile('/hello.txt', str, 'utf8')
+    await archive.writeFile('/beaker.png', pngBase64, 'base64')
+-
+  title: Delete files and folders
+  code: |
+    await archive.rmdir('/stuff')
+    await archive.unlink('/hello.txt')
+    await archive.rmdir('/stuff', {recursive: true})
+-
+  title: Copy files and folders
+  code: |
+    await archive.copy('/stuff', '/stuff-backup')
+    await archive.copy('/hello.txt', '/goodbye.txt')
+-
+  title: Move/rename files and folders
+  code: |
+    await archive.rename('/stuff', '/stuff-backup')
+    await archive.rename('/hello.txt', '/subfolder/hello.txt')
+-
+  title: Watch all files
+  code: |
+    var archive = new DatArchive('dat://beakerbrowser.com')
+    archive.watch(e => console.log(e.path, 'has changed'))
+-
+  title: Watch specific files or folders
+  code: |
+    var archive = new DatArchive('dat://beakerbrowser.com')
+    archive.watch('/index.html', e => console.log('index.html has changed'))
+    archive.watch('/js/', e => console.log('a file in js/ has changed'))
+-
+  title: Watch using a glob pattern
+  code: |
+    var archive = new DatArchive('dat://beakerbrowser.com')
+    archive.watch('/posts/*.json', e => {
+      console.log('a .json file in /posts/ has changed')
+    })
+-
+  title: Get the change-history of an archive
+  code: |
+    var archive = new DatArchive('dat://beakerbrowser.com')
+    var history = await archive.history()
+-
+  title: Get an older version of an archive
+  code: |
+    var archive = new DatArchive('dat://beakerbrowser.com')
+    var olderArchive = await archive.checkout(50)
+-
+  title: Download all files in an archive
+  code: |
+    var archive = new DatArchive('dat://beakerbrowser.com')
+    await archive.download('/')
+-
+  title: List the peers on the site
+  code: |
+    var peers = await experimental.datPeers.list()
+    peers[..].id // string
+    peers[..].sessionData // object
+-
+  title: Watch for connects and disconnects
+  code: |
+    experimental.datPeers.addEventListener('connect', ({peer}) => {
+      console.log(peer.id, 'has connected')
+    })
+    experimental.datPeers.addEventListener('disconnect', ({peer}) => {
+      console.log(peer.id, 'has disconnected')
+    })
+-
+  title: Listen to messages from peers on the site
+  code: |
+    experimental.datPeers.addEventListener('message', ({peer, message}) => {
+      console.log(peer.id, 'has sent the following message:', message)
+    })
+-
+  title: Reply to a peer's message
+  code: |
+    experimental.datPeers.addEventListener('message', ({peer, message}) => {
+      peer.send({my: 'reply', message: 'is this'})
+    })
+-
+  title: Broadcast a message to all peers on the site
+  code: |
+    experimental.datPeers.broadcast({my: 'message'})
+-
+  title: Set session data for all peers to read
+  code: |
+    experimental.datPeers.setSessionData({
+      name: 'Bob',
+      url: 'dat://1234..56'
+    })
+-
+  title: Listen for peers to set their session data
+  code: |
+    experimental.datPeers.addEventListener('session-data', ({peer}) => {
+      console.log(peer.id, 'has set their session data to', peer.sessionData)
+    })
+-
+  title: List all of the user's saved dat archives
+  code: |
+    var archiveInfos = await experimental.library.list()
+    archiveInfos[..].url // string
+    archiveInfos[..].title // string
+    archiveInfos[..].isOwner // boolean
+-
+  title: Save or unsave a dat archive
+  code: |
+    await experimental.library.add(datUrl)
+    await experimental.library.remove(datUrl)
+-
+  title: Save or unsave a dat archive (prompt the user)
+  code: |
+    await experimental.library.requestAdd(datUrl)
+    await experimental.library.requestRemove(datUrl)
+-
+  title: Make a cross-origin Ajax request
+  code: |
+    var res = await experimental.globalFetch('https://example.com')
+    var body = await res.text()
+-
+  title: Take a screenshot of a page
+  code: |
+    var png = await experimental.capturePage('dat://beakerbrowser.com', {
+      width: 1024,
+      height: 768
+    })
+-
+  title: Take a thumbnail-sized screenshot of a page
+  code: |
+    var png = await experimental.capturePage('dat://beakerbrowser.com', {
+      width: 1024,
+      height: 768,
+      resizeTo: {width: 200, height: 150}
+    })
