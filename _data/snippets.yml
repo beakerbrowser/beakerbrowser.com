@@ -200,7 +200,7 @@
       console.log(peer.id, 'has disconnected')
     })
 -
-  title: Listen to messages from peers on the site
+  title: Listen to messages from peers
   code: |
     experimental.datPeers.addEventListener('message', ({peer, message}) => {
       console.log(peer.id, 'has sent the following message:', message)
@@ -212,7 +212,7 @@
       peer.send({my: 'reply', message: 'is this'})
     })
 -
-  title: Broadcast a message to all peers on the site
+  title: Broadcast a message to all peers
   code: |
     experimental.datPeers.broadcast({my: 'message'})
 -
@@ -241,7 +241,7 @@
     await experimental.library.add(datUrl)
     await experimental.library.remove(datUrl)
 -
-  title: Save or unsave a dat archive (prompt the user)
+  title: Prompt to save or unsave an archive
   code: |
     await experimental.library.requestAdd(datUrl)
     await experimental.library.requestRemove(datUrl)
@@ -258,7 +258,7 @@
       height: 768
     })
 -
-  title: Take a thumbnail-sized screenshot of a page
+  title: Take a thumbnail screenshot of a page
   code: |
     var png = await experimental.capturePage('dat://beakerbrowser.com', {
       width: 1024,
