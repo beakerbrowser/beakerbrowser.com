@@ -25,7 +25,7 @@ This is a [Lab API](/docs/guides/using-lab-apis.html). You must opt into the API
 }
 ```
 
-Lab APIs may change quickly or be removed in the future. You should not depend on a Lab API to always be available. By listing `"capturePage"` in the `experimental.apis`, you acknowledge that you are using an experimental & temporary API.
+Lab APIs may change quickly or be removed in the future. You should not depend on a Lab API to always be available. By listing `"capturePage"` in the `experimental.apis`, you acknowledge that you are using an experimental and temporary API.
 
 ## Methods
 
