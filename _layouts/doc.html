@@ -54,18 +54,24 @@
   </head>
 
   <body class="layout doc">
-    {% include header-light.html %}
-    {% include docs-hero.html section=page.section page=page class=page.class %}
-    {% include docs-breadcrumbs.html section=page.section page=page class=page.class %}
+    {% if page.sectionTitle == page.title %}
+      {% include header-light.html %}
+      {% include docs-hero.html section=page.section page=page class=page.class %}
+    {% else %}
+      {% include docs-breadcrumbs.html section=page.section page=page class=page.class %}
+      <div class="title-bar">
+        <div class="container">
+          <h1>{{ page.title }}{% if page.experimental %} (lab){% endif %}</h1>
+        </div>
+      </div>
+    {% endif %}
 
     <main class="docs {{ page.class }}">
-      <div class="container columns">
-        {% include docs-sidebar.html section=page.section page=page %}
+      <div class="container content-container">
+      {% include docs-sidebar.html section=page.section page=page %}
 
-        <div class="content col-4-5">
-          <h1>{{ page.title }}{% if page.experimental %} (lab){% endif %}</h1>
-          {{ content }}
-        </div>
+      <div class="content">
+        {{ content }}
       </div>
     </main>
 
