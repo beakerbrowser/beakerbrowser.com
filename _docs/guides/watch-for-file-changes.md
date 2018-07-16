@@ -8,7 +8,7 @@ order: 9
 The [DatArchive API](/docs/apis/dat.html) includes a [`watch()`](/docs/apis/dat.html#watch) method to notify you when a file or folder changes.
 It works for both local and remote files, and accepts a glob pattern for filtering files.
 
-**Watch all files**
+## Watch all files
 
 <figcaption class="code">example code</figcaption>
 ```js
@@ -16,7 +16,7 @@ var archive = new DatArchive('dat://beakerbrowser.com')
 archive.watch(e => console.log(e.path, 'has changed'))
 ```
 
-**Watch files or folders**
+## Watch files or folders
 
 <figcaption class="code">example code</figcaption>
 ```js
@@ -25,7 +25,7 @@ archive.watch('/index.html', e => console.log('index.html has changed'))
 archive.watch('/js/', e => console.log('a file in js/ has changed'))
 ```
 
-**Glob patterns**
+## Glob patterns
 
 <figcaption class="code">example code</figcaption>
 ```js

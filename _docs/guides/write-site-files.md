@@ -10,7 +10,7 @@ The [DatArchive API](/docs/apis/dat.html) provides a simple set of APIs to write
 
 <figcaption class="code">create a writable dat archive</figcaption>
 ```js
-var archive = await DatArchive.create({title: 'My writable dat', prompt: false})
+var archive = await DatArchive.create({title: 'My writable dat'})
 ```
 
 ## Writing files and folders

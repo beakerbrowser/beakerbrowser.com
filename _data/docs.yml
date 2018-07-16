@@ -6,8 +6,43 @@ guides:
       url: /docs/guides/publish-a-peer-to-peer-website.html
     - title: Using Lab APIs
       url: /docs/guides/using-lab-apis.html
-    - title: Create a todo list
+      children:
+      - title: "experimental.*"
+        url: "#experimental"
+        heading: true
+      - title: "How to use Lab APIs"
+        url: "#how-to-use-lab-apis"
+        heading: true
+      - title: "Available APIs"
+        url: "#available-apis"
+        heading: true
+      - title: "How stable are Lab APIs?"
+        url: "#how-stable-are-lab-apis"
+        heading: true
+    - title: Create a todo list app
       url: /docs/guides/create-a-todo-list.html
+      children:
+      - title: "Get started"
+        url: "#get-started"
+        heading: true
+      - title: "Rendering with a &lt;template&gt;"
+        url: "#rendering-with-a-template"
+        heading: true
+      - title: "\"Add todo\" form"
+        url: "#add-todo-form"
+        heading: true
+      - title: "Only show \"add todo\" if you own the site"
+        url: "#only-show-add-todo-if-you-own-the-site"
+        heading: true
+      - title: "How can non-owners add todos?"
+        url: "#how-can-non-owners-add-todos"
+        heading: true
+      - title: "Implementing the \"completed\" checkbox"
+        url: "#implementing-the-completed-checkbox"
+        heading: true
+      - title: "Final application"
+        url: "#final-application"
+        heading: true
     - title: Create a blog
       url: /docs/guides/create-a-blog.html
     - title: Create a markdown site
@@ -18,10 +53,63 @@ guides:
       url: /docs/guides/host-outside-of-beaker.html
     - title: Watch for file changes
       url: /docs/guides/watch-for-file-changes.html
+      children:
+      - title: "Watch all files"
+        heading: true
+        url: "#watch-all-files"
+      - title: "Watch files or folders"
+        heading: true
+        url: "#watch-files-or-folders"
+      - title: "Glob patterns"
+        heading: true
+        url: "#glob-patterns"
+      - title: "Watcher events"
+        heading: true
+        url: "#watcher-events"
+      - title: "Further reading"
+        heading: true
+        url: "#further-reading"
     - title: Read site files
       url: /docs/guides/read-site-files.html
+      children:
+      - title: "stat()"
+        heading: true
+        url: "#stat"
+        isCode: true
+        children:
+        - title: "Calculating file download progress"
+          url: "#calculating-file-download-progress"
+        - title: "Timestamps"
+          url: "#timestamps"
+      - title: "readdir()"
+        heading: true
+        url: "#readdir"
+        isCode: true
+        children:
+        - title: "Calculating folder download progress"
+          url: "#calculating-folder-download-progress"
+      - title: "readFile()"
+        heading: true
+        url: "#readfile"
+        isCode: true
+        children:
+        - title: "Reading over the network"
+          url: "#reading-over-the-network"
     - title: Write site files
       url: /docs/guides/write-site-files.html
+      children:
+      - title: "Writing files and folders"
+        heading: true
+        url: "#writing-files-and-folders"
+      - title: "Deleting files and folders"
+        heading: true
+        url: "#deleting-files-and-folders"
+        children:
+        - title: "Recursive deletes"
+          url: "#recursive-deletes"
+      - title: "Copying, moving, and renaming"
+        heading: true
+        url: "#copying-moving-and-renaming"
 howBeakerWorks:
   url: /docs/how-beaker-works
   title: How Beaker works
@@ -241,6 +329,12 @@ webAPIs:
       url: /docs/apis/experimental-datpeers.html
       experimental: true
       children:
+        - title: "Lab API"
+          url: "#lab-api"
+          heading: true
+        - title: "Security and privacy"
+          url: "#security-and-privacy"
+          heading: true
         - title: "Methods"
           url: "#methods"
           heading: true
@@ -293,6 +387,12 @@ webAPIs:
       url: /docs/apis/experimental-library.html
       experimental: true
       children:
+        - title: "Lab API"
+          url: "#lab-api"
+          heading: true
+        - title: "Permissions"
+          url: "#permissions"
+          heading: true
         - title: "Methods"
           url: "#methods"
           heading: true
@@ -335,6 +435,9 @@ webAPIs:
       url: /docs/apis/experimental-globalfetch.html
       experimental: true
       children:
+        - title: "Lab API"
+          url: "#lab-api"
+          heading: true
         - title: "Methods"
           url: "#methods"
           heading: true
@@ -346,6 +449,12 @@ webAPIs:
       url: /docs/apis/experimental-capturepage.html
       experimental: true
       children:
+        - title: "Lab API"
+          url: "#lab-api"
+          heading: true
+        - title: "Security"
+          url: "#security"
+          heading: true
         - title: "Methods"
           url: "#methods"
           heading: true

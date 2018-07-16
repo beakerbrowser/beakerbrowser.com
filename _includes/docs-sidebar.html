@@ -21,7 +21,7 @@
   {% if activePageNav.children %}
     <ul class="headings">
       {% for child in activePageNav.children %}
-        {% if child.heading %}
+        {% if child.heading and child.children %}
           <li class="subheading">
             <a class="anchor" href="{{ child.url }}" title="{{ child.title }}">
               #
@@ -29,7 +29,7 @@
 
             <span class="collapseable-btn">
               <i class="fa fa-caret-right"></i>
-              {{child.title }}
+              {{ child.title }}
             </span>
 
             <ul class="collapseable collapsed">
@@ -45,6 +45,16 @@
                 </li>
               {% endfor %}
             </ul>
+          </li>
+        {% else if child.heading %}
+          <li class="subheading">
+            <a class="anchor" href="{{ child.url }}" title="{{ child.title }}">
+              #
+            </a>
+
+            <a href="{{ child.url }}" title="{{ child.title }}">
+              {{ child.title }}
+            </a>
           </li>
         {% else %}
           <li>

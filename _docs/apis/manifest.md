@@ -29,7 +29,7 @@ Example:
   },
   "fallback_page": "/404.html",
   "web_root": "/public",
-  "content_security_policy": "default-src 'self'; script-src 'self' https://example.com",
+  "content_security_policy": "default-src 'self'",
   "experimental": {
     "apis": ["datPeers", "globalFetch", "library"]
   }
