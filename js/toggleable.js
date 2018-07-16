@@ -1,18 +1,29 @@
-document.querySelectorAll('.toggleable-container').forEach(el => el.addEventListener('click', toggle))
-document.querySelectorAll('.toggleable').forEach(el => el.addEventListener('click', onClickToggleableItem))
-document.body.addEventListener('click', closeAllToggleables, true)
+document.body.addEventListener('click', onGlobalClick)
 
-function toggle (e) {
-  e.currentTarget.querySelector('.toggleable').classList.toggle('visible')
-}
+function onGlobalClick (e)  {
+  // get the toggleable container related to this click
+  var toggleableContainer 
+  for (var i = 0; i < e.path.length; i++) {
+    if (e.path[i].classList && e.path[i].classList.contains('toggleable-container')) {
+      toggleableContainer = e.path[i]
+      break
+    }
+  }
+  var toggleable
+  if (toggleableContainer) {
+    toggleable = toggleableContainer.querySelector('.toggleable')
+  }
 
-function onClickToggleableItem (e) {
-  e.stopPropagation()
-  closeAllToggleables()
-}
+  // capture state
+  var wasVisible = toggleable && toggleable.classList.contains('visible')
 
-function closeAllToggleables ()  {
+  // close all toggleables
   document.querySelectorAll('.toggleable').forEach(el => {
     el.classList.remove('visible')
   })
+
+  // show the toggleable if it was hidden
+  if (toggleable && !wasVisible) {
+    toggleable.classList.add('visible')
+  }
 }
