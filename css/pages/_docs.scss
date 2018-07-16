@@ -119,24 +119,26 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  font-weight: 500;
   background: #fff;
   color: var(--page-color);
 
   .container {
-    padding: 10px;
+    padding: 15px 10px;
     border-bottom: 1px solid #eee;
 
     @include respond-to(tablet) {
-      padding: 10px 0;
+      padding: 15px 0;
     }
   }
 
   .breadcrumb {
+    font-size: 14px;
+    font-weight: 500;
     margin-right: 10px;
+    cursor: pointer;
 
-    &:not(.btn):hover {
-      text-decoration: underline;
+    &.dropdown-container:hover >:not(.fa) {
+      border-bottom: 1px dotted;
     }
 
     .dropdown .nav-item {
