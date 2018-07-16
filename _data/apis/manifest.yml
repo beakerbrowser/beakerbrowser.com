@@ -124,4 +124,4 @@ attributes:
       }
       ```
 
-      Lab APIs may change quickly or provide a temporary solution that's expected to be removed in the future. Developers should not depend on a Lab API in the long term. By listing the Lab API's ID in this array, the site author acknowledges that they are using an experimental & temporary API.
+      Lab APIs may change quickly or provide a temporary solution that's expected to be removed in the future. Developers should not depend on a Lab API in the long term. By listing the Lab API's ID in this array, the site author acknowledges that they are using an experimental and temporary API.

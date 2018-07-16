@@ -86,74 +86,102 @@ webAPIs:
         children:
         - title: "DatArchive()"
           url: "#datarchive"
+          isCode: true
       - title: "Top-level methods"
         heading: true
         url: "#toplevel-methods"
         children:
         - title: "DatArchive.load()"
           url: "#datarchive-load"
+          isCode: true
         - title: "DatArchive.create()"
           url: "#datarchive-create"
+          isCode: true
         - title: "DatArchive.fork()"
           url: "#datarchive-fork"
+          isCode: true
         - title: "DatArchive.selectArchive()"
           url: "#datarchive-selectarchive"
+          isCode: true
         - title: "DatArchive.resolveName()"
           url: "#datarchive-resolvename"
+          isCode: true
         - title: "DatArchive.unlink()"
           url: "#datarchive-unlink"
+          isCode: true
       - title: "Properties"
         heading: true
         url: "#properties"
         children:
         - title: "url"
           url: "#url"
+          isCode: true
       - title: "Methods"
         heading: true
         url: "#methods"
+        isCode: true
         children:
         - title: "getInfo()"
           url: "#getinfo"
+          isCode: true
         - title: "configure()"
           url: "#configure"
+          isCode: true
         - title: "stat()"
           url: "#stat"
+          isCode: true
         - title: "readFile()"
           url: "#readfile"
+          isCode: true
         - title: "readdir()"
           url: "#readdir"
+          isCode: true
         - title: "writeFile()"
           url: "#writefile"
+          isCode: true
         - title: "mkdir()"
           url: "#mkdir"
+          isCode: true
         - title: "unlink()"
           url: "#unlink"
+          isCode: true
         - title: "rmdir()"
           url: "#rmdir"
+          isCode: true
         - title: "copy()"
           url: "#copy"
+          isCode: true
         - title: "rename()"
           url: "#rename"
+          isCode: true
         - title: "history()"
           url: "#history"
+          isCode: true
         - title: "checkout()"
           url: "#checkout"
+          isCode: true
         - title: "download()"
           url: "#download"
+          isCode: true
         - title: "watch()"
           url: "#watch"
+          isCode: true
       - title: "Events"
         heading: true
         url: "#events"
         children:
         - title: "network-changed"
           url: "#event-network-changed"
+          isCode: true
         - title: "download"
           url: "#event-download"
+          isCode: true
         - title: "upload"
           url: "#event-upload"
+          isCode: true
         - title: "sync"
           url: "#event-sync"
+          isCode: true
       - title: "Deprecated methods"
         heading: true
         url: "#deprecated-methods"
@@ -161,18 +189,23 @@ webAPIs:
         - title: "diff()"
           url: "#diff"
           deprecated: true
+          isCode: true
         - title: "commit()"
           url: "#commit"
           deprecated: true
+          isCode: true
         - title: "revert()"
           url: "#revert"
           deprecated: true
+          isCode: true
         - title: "createFileActivityStream()"
           url: "#createfileactivitystream"
           deprecated: true
+          isCode: true
         - title: "createNetworkActivityStream()"
           url: "#createnetworkactivitystream"
           deprecated: true
+          isCode: true
     - title: dat.json site manifest
       url: /docs/apis/manifest.html
       children:
@@ -182,20 +215,28 @@ webAPIs:
           children:
           - title: "title"
             url: "#title"
+            isCode: true
           - title: "description"
             url: "#description"
+            isCode: true
           - title: "type"
             url: "#type"
+            isCode: true
           - title: "links"
             url: "#links"
+            isCode: true
           - title: "fallback_page"
             url: "#fallback_page"
+            isCode: true
           - title: "web_root"
             url: "#web_root"
+            isCode: true
           - title: "content_security_policy"
             url: "#content-security-policy"
+            isCode: true
           - title: "experimental.apis"
             url: "#experimental-apis"
+            isCode: true
     - title: DatPeers API
       url: /docs/apis/experimental-datpeers.html
       experimental: true
@@ -206,36 +247,48 @@ webAPIs:
           children:
           - title: "getSessionData()"
             url: "#getsessiondata"
+            isCode: true
           - title: "setSessionData()"
             url: "#setsessiondata"
+            isCode: true
           - title: "list()"
             url: "#list"
+            isCode: true
           - title: "get()"
             url: "#get"
+            isCode: true
           - title: "broadcast()"
             url: "#broadcast"
+            isCode: true
         - title: "Events"
           url: "#events"
           heading: true
           children:
           - title: "connect"
             url: "#event-connect"
+            isCode: true
           - title: "disconnect"
             url: "#event-disconnect"
+            isCode: true
           - title: "message"
             url: "#event-message"
+            isCode: true
           - title: "session-data"
             url: "#event-session-data"
+            isCode: true
         - title: "DatPeer"
           url: "#datpeer"
           heading: true
           children:
           - title: "id"
             url: "#datpeer-id"
+            isCode: true
           - title: "sessionData"
             url: "#datpeer-sessiondata"
+            isCode: true
           - title: "send()"
             url: "#datpeer-send"
+            isCode: true
     - title: Library API
       url: /docs/apis/experimental-library.html
       experimental: true
@@ -246,28 +299,38 @@ webAPIs:
           children:
           - title: "add()"
             url: "#add"
+            isCode: true
           - title: "remove()"
             url: "#remove"
+            isCode: true
           - title: "requestAdd()"
             url: "#requestAdd"
+            isCode: true
           - title: "requestRemove()"
             url: "#requestRemove"
+            isCode: true
           - title: "get()"
             url: "#get"
+            isCode: true
           - title: "list()"
             url: "#list"
+            isCode: true
         - title: "Events"
           url: "#events"
           heading: true
           children:
           - title: "added"
             url: "#event-added"
+            isCode: true
           - title: "removed"
             url: "#event-removed"
+            isCode: true
           - title: "updated"
             url: "#event-updated"
+            isCode: true
           - title: "network-changed"
             url: "#event-network-changed"
+            isCode: true
     - title: GlobalFetch API
       url: /docs/apis/experimental-globalfetch.html
       experimental: true
@@ -278,6 +341,7 @@ webAPIs:
           children:
           - title: "globalFetch()"
             url: "#globalFetch"
+            isCode: true
     - title: CapturePage API
       url: /docs/apis/experimental-capturepage.html
       experimental: true
@@ -288,3 +352,4 @@ webAPIs:
           children:
           - title: "capturePage()"
             url: "#capturePage"
+            isCode: true
