@@ -142,9 +142,15 @@
     }
 
     .dropdown .nav-item {
+      font-size: 12.5px;
 
-      &:hover,
+      &:hover:not(.active) {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
       &.active {
+        font-weight: 500;
         color: var(--page-color);
       }
     }
