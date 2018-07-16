@@ -2,12 +2,14 @@ document.body.addEventListener('click', onGlobalClick)
 
 function onGlobalClick (e)  {
   // get the toggleable container related to this click
-  var toggleableContainer 
-  for (var i = 0; i < e.path.length; i++) {
-    if (e.path[i].classList && e.path[i].classList.contains('toggleable-container')) {
-      toggleableContainer = e.path[i]
+  var toggleableContainer
+  var node = e.target
+  while (node) {
+    if (node.classList && node.classList.contains('toggleable-container')) {
+      toggleableContainer = node
       break
     }
+    node = node.parentNode
   }
   var toggleable
   if (toggleableContainer) {
