@@ -329,9 +329,6 @@ webAPIs:
       url: /docs/apis/experimental-datpeers.html
       experimental: true
       children:
-        - title: "Lab API"
-          url: "#lab-api"
-          heading: true
         - title: "Security and privacy"
           url: "#security-and-privacy"
           heading: true
@@ -387,9 +384,6 @@ webAPIs:
       url: /docs/apis/experimental-library.html
       experimental: true
       children:
-        - title: "Lab API"
-          url: "#lab-api"
-          heading: true
         - title: "Permissions"
           url: "#permissions"
           heading: true
@@ -404,10 +398,10 @@ webAPIs:
             url: "#remove"
             isCode: true
           - title: "requestAdd()"
-            url: "#requestAdd"
+            url: "#requestadd"
             isCode: true
           - title: "requestRemove()"
-            url: "#requestRemove"
+            url: "#requestremove"
             isCode: true
           - title: "get()"
             url: "#get"
