@@ -4,24 +4,20 @@ section: webAPIs
 sectionTitle: Web APIs
 sectionSubtitle: Explore Beaker's Web APIs for reading and writing the peer-to-peer filesystem
 experimental: true
-order: 5
 ---
 
-An experimental API for managing the user's collection of Dat archives.
+Beaker's `Library` API is an experimental API for managing the user's collection of Dat archives.
 
-## Lab API
+{% include experimental-api-notice.html %}
 
-This is a [Lab API](/docs/guides/using-lab-apis.html). You must opt into the API by including the following in your [dat.json](manifest.html):
+To use this API, include the following in your <a href="/docs/apis/manifest"><code>dat.json</code> manifest file</a>:
 
 ```json
-{
   "experimental": {
     "apis": ["library"]
   }
 }
 ```
-
-Lab APIs may change quickly or be removed in the future. You should not depend on a Lab API to always be available. By listing `"library"` in the `experimental.apis`, you acknowledge that you are using an experimental and temporary API.
 
 ## Permissions
 

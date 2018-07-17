@@ -7,11 +7,13 @@ experimental: true
 order: 5
 ---
 
-An experimental API for capturing a screenshot of a page.
+<p class="accent">
+  <code>capturePage</code> is an experimental API for capturing a screenshot of a page.
+</p>
 
-## Lab API
+{% include experimental-api-notice.html %}
 
-This is a [Lab API](/docs/guides/using-lab-apis.html). You must opt into the API by including the following in your [dat.json](manifest.html):
+To use this API, include the following in your <a href="/docs/apis/manifest"><code>dat.json</code> manifest file</a>:
 
 ```json
 {

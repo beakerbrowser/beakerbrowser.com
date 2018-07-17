@@ -7,13 +7,15 @@ experimental: true
 order: 5
 ---
 
-An experimental API for sending and receiving messages with peers on a website. Only works on a dat:// site.
+<p class="accent">
+  <code>datPeers</code> is an experimental API for sending and receiving messages with peers on a website. Only works on a dat:// site.
+</p>
 
 The `datPeers` API includes methods for attaching "session data" to your connection. This session data can be used to broadcast a username, profile url, or other identifying information.
 
-## Lab API
+{% include experimental-api-notice.html %}
 
-This is a [Lab API](/docs/guides/using-lab-apis.html). You must opt into the API by including the following in your [dat.json](manifest.html):
+To use this API, include the following in your <a href="/docs/apis/manifest"><code>dat.json</code> manifest file</a>:
 
 ```json
 {
