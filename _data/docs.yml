@@ -439,15 +439,15 @@ webAPIs:
           - title: "globalFetch()"
             url: "#globalFetch"
             isCode: true
-    - title: CapturePage API
+    - title: "capturePage API"
       url: /docs/apis/experimental-capturepage.html
       experimental: true
       children:
-        - title: "Lab API"
-          url: "#lab-api"
+        - title: "Permissions"
+          url: "#permissions"
           heading: true
-        - title: "Security"
-          url: "#security"
+        - title: "Privacy"
+          url: "#privacy"
           heading: true
         - title: "Methods"
           url: "#methods"
