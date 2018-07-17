@@ -1,50 +1,72 @@
 ---
-title: Create a markdown site
+title: Build a website with Markdown
 section: guides
 sectionTitle: Guides
-order: 2
+author: Tara Vancil
+authorAvatar: /img/team/taravancil.jpg
+authorLink: https://taravancil.com
 ---
 
-We're huge fans of [Markdown](https://daringfireball.net/projects/markdown/syntax), so we included Markdown rendering in Beaker. Creating a markdown site is easy. First, [create a new site](/docs/using-beaker/create-a-site.html). Then, add an `index.md`:
+We’re big fans of [Markdown](https://daringfireball.net/projects/markdown/syntax), so we added support for Markdown rendering in Beaker.
 
-<figcaption class="code">/index.md</figcaption>
+Markdown rendering is turned on by default for all `.md` files, but you can easily switch between the raw and formatted file content:
+
+<img src="/img/docs/guides/markdown-rendering.png" />
+
+## Building a website with Markdown
+
+Since Beaker renders `.md` files out-of-the-box, we can use Markdown to quickly and easily publish documents like blog posts or documentation without writing any HTML.
+
+To get started, add an an `index.md` file to your project:
+
+<figcaption class="code">index.md</figcaption>
 ```
-# Hello world
+# Hello world!
 
-This is my **cool** markdown site!
-```
-
-When you open the site, you'll see the markdown is rendered as html.
-
-<figure>
-<img data-src="/img/docs/tut-create-a-markdown-site/index.md.jpg" >
-<figcaption>The index.md will be rendered as html</figcaption>
-</figure>
-
-Any file with a `.md` extension will be rendered. For instance, `page.md`:
-
-<figcaption class="code">/page.md</figcaption>
-```
-# A Page
-
-This is another page
+This is my **cool** Markdown site published with Beaker.
 ```
 
-## Nav.md
+<img src="/img/docs/guides/markdown-index.png" />
 
-For convenience, Beaker also supports a `/nav.md` file:
+### Markdown navigation
 
-<figcaption class="code">/nav.md</figcaption>
+Beaker also supports a basic Markdown-based navigation menu. To add navigation, add a `nav.md` file to your project:
+
+<figcaption class="code">nav.md</figcaption>
 ```
-[Home](/)
-[A Page](/page.md)
+[About me](about.md)
+[My blog](blog.md)
 ```
 
-The content of `/nav.md` is automatically inserted into each page to provide navigation.
+Once you've added a `nav.md` file, Beaker will render the
+navigation menu on all `.md` pages in your project:
 
-<figure>
-<img data-src="/img/docs/tut-create-a-markdown-site/with-nav.jpg" >
-<figcaption>The index.md with a nav.md file</figcaption>
-</figure>
+<img src="/img/docs/guides/markdown-nav.png"/>
 
-You can use markdown sites as a quick way to publish documentation, or even for a personal site. Markdown supports HTML tags as well, so you can apply custom styles, scripts, and elements.
+### Custom styles and formatting
+
+Beaker's default Markdown styles are intentionally bare, but it doesn't have to stay that way! You can add inline styles to any `.md` file:
+
+```
+[About me](about.md)
+[My blog](blog.md)
+
+<style>
+  body {
+    color: red;
+  }
+</style>
+```
+
+You can also add a CSS file to your project and load it as a stylesheet:
+
+```
+[About me](about.md)
+[My blog](blog.md)
+
+<link rel="stylesheet" href="style.css">
+```
+
+Markdown sites are a convenient way to publish formatted content with Beaker
+without setting up tools to build the site for you. You can keep it simple, or
+customize the formatting as much as you'd like!

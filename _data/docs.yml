@@ -19,8 +19,18 @@ guides:
       - title: "How stable are Lab APIs?"
         url: "#how-stable-are-lab-apis"
         heading: true
-    - title: Create a todo list app
-      url: /docs/guides/create-a-todo-list.html
+    - title: Build a website with Markdown
+      featured: true
+      url: /docs/guides/create-a-markdown-site
+      author: Tara Vancil
+      authorLink: https://taravancil.com
+      authorAvatar: /img/team/taravancil.jpg
+    - title: Create a TODO list app
+      featured: true
+      url: /docs/guides/create-a-todo-list-app
+      author: Paul Frazee
+      authorLink: https://pfrazee.hashbase.io
+      authorAvatar: /img/team/pfrazee.jpg
       children:
       - title: "Get started"
         url: "#get-started"
