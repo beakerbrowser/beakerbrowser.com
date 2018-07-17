@@ -236,6 +236,14 @@ methods:
       var archive = new DatArchive(datUrl)
       await archive.stat('/hello.txt')
       ```
+
+      #### Timestamps
+
+      The accuracy of timestamps (`mtime` and `ctime`) in `stat()` metadata is not guaranteed.
+      The `mtime` or `ctime` could be incorrect for the following reasons:
+
+      - The author's clock is misconfigured
+      - The author intentionally set an incorrect time
   -
     name: "readFile"
     signature: readFile(path, opts?)
