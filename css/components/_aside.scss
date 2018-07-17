@@ -73,7 +73,7 @@
   &.dns {
     @extend %flex;
     flex-wrap: nowrap;
-    max-width: 650px;
+    max-width: 600px;
     margin: auto;
     margin-bottom: 20px;
     font-weight: 600;
@@ -84,7 +84,7 @@
 
     .icon-container {
       position: relative;
-      width: 120px;
+      width: 100px;
       height: 40px;
       margin-right: 15px;
 
@@ -170,7 +170,7 @@
       }
     }
 
-    .content {
+    .aside-content {
       font-size: 14px;
       font-weight: 500;
     }
