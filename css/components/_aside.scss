@@ -69,4 +69,110 @@
       font-size: 17px;
     }
   }
+
+  &.dns {
+    @extend %flex;
+    flex-wrap: nowrap;
+    max-width: 650px;
+    margin: auto;
+    margin-bottom: 20px;
+    font-weight: 600;
+
+    a {
+      color: inherit;
+    }
+
+    .icon-container {
+      position: relative;
+      width: 120px;
+      height: 40px;
+      margin-right: 15px;
+
+      .icon {
+        position: absolute;
+      }
+
+      .dot-com {
+        font-family: monospace;
+        font-size: 11px;
+        font-weight: bold;
+        z-index: 2000;
+
+        &.teal {
+          background: $teal;
+        }
+
+        &.pink {
+          background: $pink;
+        }
+
+        &.yellow {
+          background: $yellow;
+        }
+
+        &.big {
+          font-size: 12.5px;
+        }
+
+        &.small {
+          font-size: 10px;
+        }
+
+        &.under {
+          z-index: 0;
+        }
+
+        &:nth-child(1) {
+          transform: rotate(7deg);
+          right: -5px;
+        }
+
+        &:nth-child(2) {
+          transform: rotate(7deg);
+          left: 0;
+          bottom: 0;
+        }
+
+        &:nth-child(3) {
+          transform: rotate(2deg);
+          left: 0px;
+          bottom: 20px;
+        }
+
+        &:nth-child(4) {
+          display: none;
+          transform: rotate(-5deg);
+          left: 35px;
+          bottom: 0px;
+        }
+
+        &:nth-child(5) {
+          transform: rotate(-5deg);
+          left: 30px;
+          top: -5px;
+        }
+
+        &:nth-child(6) {
+          right: -10px;
+          bottom: 0;
+        }
+
+        &:nth-child(7) {
+          transform: rotate(4deg);
+          left: 30px;
+          bottom: -7px;
+        }
+
+        &:nth-child(8) {
+          left: 30px;
+          top: 15px;
+        }
+      }
+    }
+
+    .content {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
 }
