@@ -425,13 +425,10 @@ webAPIs:
           - title: "network-changed"
             url: "#event-network-changed"
             isCode: true
-    - title: GlobalFetch API
+    - title: globalFetch API
       url: /docs/apis/experimental-globalfetch.html
       experimental: true
       children:
-        - title: "Lab API"
-          url: "#lab-api"
-          heading: true
         - title: "Methods"
           url: "#methods"
           heading: true
