@@ -4,7 +4,7 @@ methods:
     signature: "experimental.datPeers.getSessionData()"
     desc: |
       Fetch the session data attached to your identity on the network.
-      Will be 'undefined' until a value is set using [setSessionData()](#setsessiondata).
+      Will be `undefined` until a value is set using [setSessionData()](#setsessiondata).
 
       - returns `Promise<Any>`
 
@@ -22,9 +22,6 @@ methods:
       - `sessionData` Any. The data you wish to have attached to your identity. Must be no larger than 256 bytes when serialized to JSON.
       - returns `Promise<void>`
 
-      **NOTE**. Session data is not private, not guaranteed to be correct, and could be modified by an intermediary on the network.
-      See [Security and privacy](#security-and-privacy) for more information.
-
       Example:
 
       ```js
@@ -33,6 +30,9 @@ methods:
         url: 'dat://bob.com'
       })
       ```
+
+      **Session data is not private, not guaranteed to be correct, and could be modified by an intermediary on the network.
+      See [Security and privacy](#security-and-privacy) for more information.**
   -
     name: "list"
     signature: "experimental.datPeers.list()"
@@ -69,14 +69,14 @@ methods:
       - `message` Any. The message to broadcast.
       - returns `Promise<void>`
 
-      **NOTE**. Messages are not private and could be modified by an intermediary on the network.
-      See [Security and privacy](#security-and-privacy) for more information.
-
       Example:
 
       ```js
       await experimental.datPeers.broadcast({hello: 'world!'})
       ```
+
+      **Messages are not private and could be modified by an intermediary on the network.
+      See [Security and privacy](#security-and-privacy) for more information.**
 events:
   -
     name: "Event: connect"
@@ -117,9 +117,6 @@ events:
       - `event.peer` [DatPeer](#datpeer). The messaging peer.
       - `event.message` Any. The message.
 
-      **NOTE**. Messages are not private and could be modified by an intermediary on the network.
-      See [Security and privacy](#security-and-privacy) for more information.
-
       Example:
 
       ```js
@@ -127,6 +124,9 @@ events:
         console.log(peer.id, 'has sent the following message:', message)
       })
       ```
+
+      **Messages are not private and could be modified by an intermediary on the network.
+      See [Security and privacy](#security-and-privacy) for more information.**
   -
     name: "Event: session-data"
     signature: "Event: \"session-data\""
@@ -162,12 +162,12 @@ datpeer:
       - `message` Any. The message to send.
       - returns `Promise<void>`
 
-      **NOTE**. Messages are not private and could be modified by an intermediary on the network.
-      See [Security and privacy](#security-and-privacy) for more information.
-
       Example:
 
       ```js
       var peer = await experimental.datPeers.get(datPeerId)
       await peer.send({hello: 'friend!'})
       ```
+
+      **Messages are not private and could be modified by an intermediary on the network.
+      See [Security and privacy](#security-and-privacy) for more information.**

@@ -325,7 +325,7 @@ webAPIs:
           - title: "experimental.apis"
             url: "#experimental-apis"
             isCode: true
-    - title: DatPeers API
+    - title: datPeers API
       url: /docs/apis/experimental-datpeers.html
       experimental: true
       children:
