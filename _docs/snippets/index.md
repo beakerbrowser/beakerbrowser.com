@@ -4,6 +4,7 @@ subtitle: A collection of handy snippets for building p2p websites and apps in B
 layout: snippets
 ---
 
+<div id="snippet-copied" class="toast">Copied to clipboard</div>
 <div class="snippets-container">
 {% for item in site.data.snippets %}
   <div class="snippet">
@@ -12,7 +13,7 @@ layout: snippets
        {{ item.title }}
       </a>
 
-      <button class="btn plain copy-snippet" tooltip="Copy snippet">
+      <button class="btn plain copy-snippet" tooltip="Copy snippet" data-target="snippet-{{ forloop.index0 }}">
         <span class="fa fa-paste"></span>
       </button>
    </div>
@@ -23,9 +24,11 @@ layout: snippets
     </p>
     {% endif %}
 
+    <div id="snippet-{{ forloop.index0 }}">
 {% highlight javascript %}
 {{ item.code }}
 {% endhighlight %}
+    </div>
   </div>
 {% endfor %}
 </div>
