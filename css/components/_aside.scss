@@ -1,6 +1,6 @@
 .content aside {
   @extend %inline-flex;
-  padding: 10px 15px;
+  padding: 20px;
   margin-bottom: 0;
   width: 100%;
 
@@ -8,6 +8,7 @@
     padding: 0;
     font-weight: 500;
 
+    p,
     a {
       color: inherit;
     }
@@ -67,6 +68,27 @@
       color: $orange;
       margin-right: 5px;
       font-size: 17px;
+    }
+  }
+
+  &.seeding {
+    background: $blue;
+    color: #fff;
+    position: relative;
+
+    a,
+    p {
+      color: #fff;
+      max-width: 500px;
+      font-size: 13.5px;
+    }
+
+    .icon {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 160px;
     }
   }
 
