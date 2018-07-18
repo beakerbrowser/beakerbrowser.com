@@ -43,6 +43,8 @@ transported with HTTP, a peer-to-peer website's files are transported
 
 Instead of being hosted on a server, the files of a peer-to-peer website can be hosted from any computer! This means that you can publish a website from your personal computer, and your friends, your pet dog, or anyone else on the network can help keep your website's files online.
 
+In Beaker, a peer-to-peer website is simply a folder that's been published with `dat://`. This website is a peer-to-peer website! You can visit [dat://beakerbrowser.com](dat://beakerbrowser.com) to see for yourself.
+
 <!-- TODO we really need a graphic here -->
 
 ### Equalizing access to publishing
