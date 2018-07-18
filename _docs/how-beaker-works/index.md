@@ -1,65 +1,36 @@
 ---
-title: Overview
+title: What's the peer-to-peer Web?
 section: howBeakerWorks
 sectionTitle: How Beaker works
 order: 1
 ---
 
-Beaker is a peer-to-peer browser for the Web of the future. With built-in tools
-for building and exploring the peer-to-peer Web, Beaker is more than just your
-typical Web browser:
+<p class="accent">
+  The <em>peer-to-peer Web</em> is a loose term for categorizing websites and apps that are transported with a <a href="https://en.wikipedia.org/wiki/Peer-to-peer">peer-to-peer protocol</a> instead of <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP</a>.
+</p>
 
-- One-click website publishing
-- No-nonsense filesharing
-- APIs for building decentralized applications
-- Live reloading, offline sync, and more
+There are many peer-to-peer (p2p) protocols with subtle differences, but they share some important properties:
 
-## What's the peer-to-peer Web?
-
-The peer-to-peer Web is a loose term for websites and applications that
-are hosted with a <a href="https://en.wikipedia.org/wiki/Peer-to-peer">
-peer-to-peer network</a> instead of
-<a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP</a>.
-
-<div class="columns">
-  <figure class="col col-1-3">
-    <img src="/img/icon/p2p-protocol.svg"/>
-  </figure>
-
-  <div class="col-2-3">
-    <p>
-      There are many peer-to-peer protocols, each with subtle differences, but
-      they all share a few core properties:
-    </p>
-
-    <ul>
-      <li>Files are downloaded directly from peers on the network</li>
-      <li>Downloaders can become uploaders, contributing bandwidth and storage to help host files</li>
-      <li>Files are addressed with cryptographic identifiers, making it safe to download data from untrusted peers</li>
-    </ul>
-  </div>
-</div>
-
-If you've ever used Spotify or
-[BitTorrent](https://en.wikipedia.org/wiki/bittorrent), then you've probably
-used a peer-to-peer protocol!
+- You download files from other participants on the network
+- Anyone can become an uploader (or seeder), contributing bandwidth to help host files
 
 ### Peer-to-peer protocols and Beaker
 
-Beaker uses a peer-to-peer protocol called [Dat](https://datproject.org) to host
-websites, files, apps, and any other type of file you can imagine!
+We call Beaker a p2p browser because it supports a p2p protocol called [Dat](https://datproject.org) (dat://). Adding dat:// support in the browser made it possible for Beaker to provide experimental new features:
 
-<aside>
-  TODO link to a bunch of dat resources for the ppl who want to look at it right away
-</aside>
+- Publishing websites and files from the browser, no server required
+- [APIs](/docs/apis) for building p2p apps
+- Powerful View Source and in-browser editor
+- Live reloading, offline sync, and more
+
+{% include dat-aside.html %}
 
 ## How is Beaker different from other browsers?
 
-With Beaker you can browse `http://` and `https://` websites just as you'd expect,
-and Beaker's browsing interface should feel comfortable and familiar.
+Beaker is unique because it provides browsing support for `dat://` URLs, and provides [new Web APIs](/docs/apis/dat) for building p2p websites and applications.
 
-Beaker is unique because it provides browsing support for `dat://` URLs, and
-provides [new Web APIs](/docs/apis/dat) for building peer-to-peer websites and
-applications.
+<img src="/img/docs/tour/dat-site.png"/>
+
+You can also browse `http://` and `https://` websites with Beaker, and Beaker's browsing interfaces should feel comfortable and familiar.
 
 Read next: <a href="todo">peer-to-peer websites</a>
