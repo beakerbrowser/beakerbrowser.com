@@ -1,3 +1,26 @@
+tour:
+  title: Tour
+  url: /docs/tour
+  subtitle: Take a tour of Beaker
+  children:
+    - url: "#1-browsing-with-beaker"
+      title: 1. Browsing with Beaker
+      heading: true
+    - url: "#2-view-source"
+      title: 2. View Source
+      heading: true
+    - url: "#3-one-click-publishing"
+      title: 3. One-click publishing
+      heading: true
+    - url: "#4-beakers-built-in-editor"
+      title: 4. Built-in editor
+      heading: true
+    - url: "#5-forking-or-copying-a-website"
+      title: 5. "Forking" or copying a website
+      heading: true
+    - url: "#6-live-reloading"
+      title: 6. Live reloading
+      heading: true
 guides:
   title: Guides
   url: /docs/guides
