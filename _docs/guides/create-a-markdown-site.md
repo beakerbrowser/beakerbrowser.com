@@ -13,14 +13,14 @@ Markdown rendering is turned on by default for all `.md` files, but you can easi
 
 <img src="/img/docs/guides/markdown-rendering.png" />
 
-## Building a website with Markdown
+## Getting started with Markdown
 
 Since Beaker renders `.md` files out-of-the-box, we can use Markdown to quickly and easily publish documents like blog posts or documentation without writing any HTML.
 
 To get started, add an an `index.md` file to your project:
 
 <figcaption class="code">index.md</figcaption>
-```
+```markdown
 # Hello world!
 
 This is my **cool** Markdown site published with Beaker.
@@ -28,12 +28,12 @@ This is my **cool** Markdown site published with Beaker.
 
 <img src="/img/docs/guides/markdown-index.png" />
 
-### Markdown navigation
+## Navigation
 
 Beaker also supports a basic Markdown-based navigation menu. To add navigation, add a `nav.md` file to your project:
 
 <figcaption class="code">nav.md</figcaption>
-```
+```markdown
 [About me](about.md)
 [My blog](blog.md)
 ```
@@ -43,13 +43,15 @@ navigation menu on all `.md` pages in your project:
 
 <img src="/img/docs/guides/markdown-nav.png"/>
 
-### Custom styles and formatting
+## Custom styles
 
 Beaker's default Markdown styles are intentionally bare, but it doesn't have to stay that way! You can add inline styles to any `.md` file:
 
-```
-[About me](about.md)
-[My blog](blog.md)
+<figcaption class="code">index.html</figcaption>
+```markdown
+# Hello world!
+
+This is my **cool** Markdown site published with Beaker.
 
 <style>
   body {
@@ -60,13 +62,15 @@ Beaker's default Markdown styles are intentionally bare, but it doesn't have to 
 
 You can also add a CSS file to your project and load it as a stylesheet:
 
-```
-[About me](about.md)
-[My blog](blog.md)
+<figcaption class="code">index.html</figcaption>
+
+```markdown
+# Hello world!
+
+This is my **cool** Markdown site published with Beaker.
 
 <link rel="stylesheet" href="style.css">
 ```
 
 Markdown sites are a convenient way to publish formatted content with Beaker
-without setting up tools to build the site for you. You can keep it simple, or
-customize the formatting as much as you'd like!
+without setting up a build process to convert Markdown files to HTML. You can keep it simple or customize the formatting as much as you'd like!

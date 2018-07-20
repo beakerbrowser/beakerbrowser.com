@@ -48,6 +48,13 @@ guides:
       author: Tara Vancil
       authorLink: https://taravancil.com
       authorAvatar: /img/team/taravancil.jpg
+      children:
+        - title: Getting started with Markdown
+          url: "#getting-started-with-markdown"
+        - title: Navigation
+          url: "#navigation"
+        - title: Custom styles
+          url: "#custom-styles"
     - title: Create a TODO list app
       featured: true
       url: /docs/guides/create-a-todo-list-app
