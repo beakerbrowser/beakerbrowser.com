@@ -1,5 +1,5 @@
 ---
-title: Read site files
+title: Read files from a dat:// website
 section: guides
 sectionTitle: Guides
 author: Paul Frazee
@@ -21,7 +21,7 @@ The [`readdir()` method](/docs/apis/dat#readdir) provides a list of files in a f
 var filenames = await archive.readdir('/')
 ```
 
-#### List all file
+#### List all files
 
 ```js
 var filepaths = await archive.readdir('/', {recursive: true})
