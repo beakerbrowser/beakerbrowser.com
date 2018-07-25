@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>All Documentation - Beaker Browser</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!-- SEO -->
+    {% include keywords.html %}
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    {% if page.layout == 'post' %}
+      <meta name="twitter:site" content="@BeakerBrowser" />
+      <meta name="twitter:title" content="{{ page.title }}"/>
+      <meta name="twitter:description" content="{{ page.excerpt | markdownify | strip_html }}"/>
+      {% if page.image %}
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://beakerbrowser.com{{ page.image }}" />
+      {% else %}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:image" content="https://beakerbrowser.com/img/logo/256x256.png" />
+      {% endif %}
+    {% else %}
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="Beaker | {{ page.title | default: "Peer-to-peer Web browser. No blockchain required." }}">
+      <meta name="og:description" content="{{ page.desc }}">
+      {% if page.thumb %}
+        <meta name="og:image" content="{{ page.thumb }}">
+      {% endif %}
+    {% endif %}
+  </head>
+
+  <body class="layout doc">
+    <style>body { --page-color: #4353ff; }</style>
+
+    {% include header-light.html %}
+    <div class="docs-hero">
+      <div class="container">
+        <h1 class="title">
+          All documentation
+        </h1>
+      </div>
+    </div>
+
+    <main class="docs">
+      <div class="container">
+        {{ content }}
+      </div>
+    </main>
+
+    <script>
+    var $ = document.querySelector.bind(document)
+    var $$ = function (selector) {
+      return Array.prototype.slice.call(document.querySelectorAll(selector))
+    }
+    </script>
+    <script src="/js/adjust-anchor-scroll-positioning.js"></script>
+    <script src="/js/anchor.min.js"></script>
+    <script>
+    anchors.add('h2, h3, h4')
+    </script>
+
+    <script>
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'))
+      img.onload = function() {
+        img.removeAttribute('data-src')
+      }
+    })
+    </script>
+  </body>
+
+  <script src="/js/toggleable.js"></script>
+  <script src="/js/collapseable.js"></script>
+</html>
