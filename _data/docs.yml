@@ -26,9 +26,12 @@ guides:
   url: /docs/guides
   children:
     - title: Publish a peer-to-peer website
-      url: /docs/guides/publish-a-peer-to-peer-website.html
-    - title: Using Lab APIs
-      url: /docs/guides/using-lab-apis.html
+      url: /docs/guides/publish-a-peer-to-peer-website
+    - title: Use a custom 404 page
+      url: /docs/guides/use-a-custom-404-page
+      featured: true
+    - title: Using experimental APIs
+      url: /docs/guides/using-experimental-apis
       children:
       - title: "experimental.*"
         url: "#experimental"
