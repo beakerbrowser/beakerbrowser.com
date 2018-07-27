@@ -1,23 +1,26 @@
 ---
-title: Create a todo list app
+title: Create a TODO list application
 section: guides
-order: 1
+author: Paul Frazee
+authorAvatar: /img/team/pfrazee.jpg
+authorLink: pfrazee.hashbase.io
 ---
 
-In this guide, we'll build a "todo list" using Beaker and Dat.
-This app will keep a list of tasks, track whether they've been completed, and save the list to the site's files.
+<p class="accent">
+  In this guide, we'll build a TODO list app. This app will maintain a list of tasks, track whether they've been completed, and save the TODOs to the website's files using Beaker's <code>DatArchive</code> APIs.
+</p>
 
-We will learn:
+Our TODO list will use a very simple HTML skeleton. The TODOs will be stored in the website itself, and data will be read from the website's files and rendered with JavaScript.
 
- - How to save data to a site's files
- - How to dynamically render content that's saved to the site
- - What a site "owner" is, and how to find out if you're the owner
+You'll learn:
 
-## Get started
+ - How to save data to a website's files using the `DatArchive` API
+ - How to dynamically render content using the `DatArchive` API
+ - What it means to be an "owner" of a `dat://` site
 
-[Create a new site in Beaker](#TODO) and copy this HTML into index.html.
-Our "todo list" will use a very simple HTML skeleton.
-The todos will be rendered with Javascript.
+## Getting started
+
+[Create an empty website in Beaker](/docs/guides/create-a-peer-to-peer-website) and copy this HTML into its `index.html` file:
 
 <figcaption class="code">index.html</figcaption>
 ```html
@@ -41,8 +44,9 @@ The todos will be rendered with Javascript.
 </html>
 ```
 
-Create a todos.json file in your site.
-This will be your persistent data store.
+## Storing the TODOs
+
+Next, create a `todos.json` file in the website. This file is where we will store the TODOs, and keep track of whether or not they're completed.
 
 <figcaption class="code">todos.json</figcaption>
 ```json
@@ -52,35 +56,30 @@ This will be your persistent data store.
     "completed": true
   },
   {
-    "text": "Finish building my todo list app",
+    "text": "Finish building my TODO list app",
     "completed": false
   }
 ]
 ```
 
-On page load, we want to render the todo list. We will:
+## Rendering the TODOs
 
- - Read todos.json to get the tasks
- - Dynamically add the tasks to `'#todo-list'`
-
-We use the [DatArchive API](/docs/api/dat.html) to read the todos.json file.
+On page load, we'll need to read the TODOs from `todos.json`, then render them to the page. We'll use the [DatArchive API](/docs/api/dat) to read the `todos.json` file:
 
 <figcaption class="code">index.js</figcaption>
 ```js
 // load data
 var archive = new DatArchive(window.location)
+
+// parse the file data into an array
 var todos = JSON.parse(await archive.readFile('/todos.json', 'utf8'))
 ```
 
-We can use `DatArchive(window.location)` to get an instance of the current site because [window.location](https://developer.mozilla.org/en-US/docs/Web/API/Window/location) refers to the current page's URL.
-
-After reading and parsing the todos.json file, we have a `todos` array with all the current data.
-Let's render them to the page.
+After reading and parsing `todos.json`, we have an array named `todos` that contains the TODOs. Next, let's render them to the page:
 
 ## Rendering with a `<template>`
 
-We'll render the todos with the [template element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template).
-We'll put the template element in index.html.
+We'll render the todos with the [template element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template). We'll put the template element in index.html.
 It won't be visible because `<template>` elements are hidden by default.
 
 <figcaption class="code">index.html</figcaption>
