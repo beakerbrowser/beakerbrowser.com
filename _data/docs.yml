@@ -24,11 +24,21 @@ tour:
 guides:
   title: Guides
   url: /docs/guides
+  subtitle: Learn about building peer-to-peer websites and apps with Beaker, by example
   children:
+    - title: Use a domain name with dat://
+      url: /docs/guides/use-a-domain-name-with-dat
+      author: Tara Vancil
+      authorLink: https://taravancil.com
+      authorAvatar: /img/team/taravancil.jpg
+      featured: true
     - title: Publish a peer-to-peer website
       url: /docs/guides/publish-a-peer-to-peer-website
     - title: Use a custom 404 page
       url: /docs/guides/use-a-custom-404-page
+      author: Tara Vancil
+      authorLink: https://taravancil.com
+      authorAvatar: /img/team/taravancil.jpg
       featured: true
     - title: Using experimental APIs
       url: /docs/guides/using-experimental-apis
