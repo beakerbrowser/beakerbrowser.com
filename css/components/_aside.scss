@@ -1,3 +1,4 @@
+.docs .content aside,
 .content aside {
   @extend %inline-flex;
   padding: 20px;
@@ -11,6 +12,27 @@
     p,
     a {
       color: inherit;
+    }
+  }
+
+  &.tip {
+    @extend %flex;
+    flex-wrap: nowrap;
+    padding: 0;
+    padding-left: 10px;
+    border-left: 5px dotted $yellow;
+    background: #fff;
+    margin: 40px 0;
+
+    p.tip-content {
+      color: #111;
+      font-size: 13px;
+      margin-left: 15px;
+    }
+
+    .fa-lightbulb {
+      font-size: 30px;
+      color: $yellow;
     }
   }
 
