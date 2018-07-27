@@ -115,22 +115,17 @@ guides:
       authorLink: https://pfrazee.hashbase.io
       authorAvatar: /img/team/pfrazee.jpg
       children:
-      - title: "stat()"
-        heading: true
-        url: "#stat"
-        isCode: true
-        children:
-        - title: "Calculating file download progress"
-          url: "#calculating-file-download-progress"
-        - title: "Timestamps"
-          url: "#timestamps"
       - title: "readdir()"
         heading: true
         url: "#readdir"
         isCode: true
         children:
-        - title: "Calculating folder download progress"
-          url: "#calculating-folder-download-progress"
+        - title: List top-level files
+          url: "#list-the-top-level-files-in-a-folder"
+        - title: List all files
+          url: "#list-all-files"
+        - title: "List metadata"
+          url: "#list-the-metadata-in-the-top-level-directory"
       - title: "readFile()"
         heading: true
         url: "#readfile"
@@ -138,6 +133,15 @@ guides:
         children:
         - title: "Reading over the network"
           url: "#reading-over-the-network"
+      - title: "stat()"
+        heading: true
+        url: "#stat"
+        isCode: true
+        children:
+        - title: "File download progress"
+          url: "#calculating-file-download-progress-with-stat"
+        - title: "Folder download progress"
+          url: "#calculating-folder-download-progress-with-stat"
     - title: Write site files
       url: /docs/guides/write-site-files
       children:
