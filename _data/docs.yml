@@ -84,8 +84,6 @@ guides:
           url: "#navigation"
         - title: Custom styles
           url: "#custom-styles"
-    - title: Create a markdown site
-      url: /docs/guides/create-a-markdown-site.html
     - title: Create or fork a site
       url: /docs/guides/create-or-fork-a-site.html
     - title: Host outside of Beaker
