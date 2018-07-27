@@ -34,6 +34,14 @@ guides:
       featured: true
     - title: Publish a peer-to-peer website
       url: /docs/guides/publish-a-peer-to-peer-website
+      authorLink: https://taravancil.com
+      authorAvatar: /img/team/taravancil.jpg
+      featured: true
+      children:
+        - title: Publish a website with Beaker
+          url: "#publish-a-website-with-beaker"
+        - title: Publish a website with the Dat CLI
+          url: "#publish-a-website-with-the-dat-cli"
     - title: Use a custom 404 page
       url: /docs/guides/use-a-custom-404-page
       author: Tara Vancil

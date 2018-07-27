@@ -1,39 +1,21 @@
 ---
 title: Publish a peer-to-peer website
 section: guides
+author: Tara Vancil
+authorLink: https://taravancil.com
+authorAvatar: /img/team/taravancil.jpg
 ---
 
-Ready to create your first website? Already have a website that you want to publish on the p2p Web? This guide is for you.
+<p class="accent">
+  Ready to create your first website? Already have a website that you want to publish on the p2p Web? This guide is for you.
+</p>
 
 Related links:
 
 * [What's a peer-to-peer-website?](/docs/how-beaker-works/peer-to-peer-websites)
-* [Using a domain name with a dat:// site](TODO)
-* [Mirroring a dat:// site to https://](TODO)
+* [Using a domain name with a dat:// site](/docs/guides/use-a-domain-name-with-dat)
 
-## Publish your website
-
-TODO With Beaker or on the command line jump
-
-<div class="beaker-dat-picker">
-  <a href="" class="">
-  	<span class="icon fa fa-window-maximize"></span>
-
-  	<span class="label">
-  	  With Beaker
-  	</span>
-  </a>
-
-  <a href="" class="">
-  	<span class="icon fa fa-terminal"></span>
-
-  	<span class="label">
-  	  On the command line
-  	</span>
-  </a>
-</div>
-
-### With Beaker
+## Publish a website with Beaker
 
 Open Beaker's main menu and click "Create new":
 
@@ -49,7 +31,9 @@ If you've already built your website, click "From folder" to import the folder t
 
 Otherwise, click "Website" to use Beaker's basic website template, or click "Empty project" to start from scratch.
 
-### With the Dat CLI
+Beaker will automatically create a new `dat://` website that you can edit using [Beaker's built-in editor](/docs/tour/#4-beakers-built-in-editor) or [your preferred text editor](/docs/tour/#using-your-own-editor).
+
+## Publish a website with the Dat CLI
 
 Install the Dat CLI:
 
@@ -57,16 +41,13 @@ Install the Dat CLI:
 npm i -g dat
 ```
 
-Navigate to your website's directory and run the `dat` command:
+After installing `dat`, navigate to your website's directory and run the `dat` command:
 
 <aside class="tip">
-  <div class="tip-heading">
-  	<span class="fa fa-lightbulb-o"></span>
-  	Tip
-  </div>
+  <span class="fas fa-lightbulb"></span>
 
   <p class="tip-content">
-  	If you use a static site generator, be sure to navigate to the output directory before running `dat` (or set the entry point)!
+  	If you use a static site generator, be sure to navigate to the output directory before running <code>dat</code> (or <a href="/docs/apis/manifest#web-root">set the <code>web_root</code> to the output directory</a>)
   </p>
 </aside>
 
@@ -80,7 +61,7 @@ dat://c81299cfc139791ccc6db42f0bcac8a9af590c03828e8066478fcfc60ca6e481
 
 This will create a new dat:// website with your website's files. Open the dat:// URL in Beaker and you should see your website!
 
-Read next:
+## Further reading
 
-* [Using a domain name with a dat:// site](TODO)
-* [Mirroring a dat:// site to https://](TODO)
+* [Using a domain name with `dat://`](/docs/guides/use-a-domain-name-with-dat)
+* [Manage your website with `homebase`](https://github.com/beakerbrowser/homebase)
