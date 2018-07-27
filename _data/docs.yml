@@ -84,8 +84,6 @@ guides:
           url: "#navigation"
         - title: Custom styles
           url: "#custom-styles"
-    - title: Create or fork a site
-      url: /docs/guides/create-or-fork-a-site
     - title: Watch for file changes
       featured: true
       url: /docs/guides/watch-for-file-changes
