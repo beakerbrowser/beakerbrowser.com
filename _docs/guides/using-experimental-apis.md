@@ -7,11 +7,10 @@ authorLink: https://pfrazee.hashbase.io
 authorAvatar: /img/team/pfrazee.jpg
 ---
 
-Beaker provides several experimental APIs. These APIs are still in development and are <strong>not stable</strong>.
 
-## experimental.*
+Beaker provides several experimental APIs for building applications. These APIs are still in development and are <strong>not stable</strong>.
 
-Beaker exposes experimental APIs are under `experimental.*`:
+Beaker exposes experimental APIs under `experimental.*`:
 
 ```js
 experimental.datPeers.broadcast({hello: 'world'})
@@ -20,9 +19,9 @@ experimental.globalFetch('dat://beakerbrowser.com')
 experimental.capturePage('dat://beakerbrowser.com')
 ```
 
-## How to use experimental APIs
+## Opting-in with `dat.json`
 
-Because experimental APIs are not stable and can change at any time, Beaker requires you to opt-in explicitly in order to use them in your website or application. To opt-in to using an experimental API, edit your [`dat.json`](/docs/apis/manifest.html) to indicate which APIs you'd like :
+Because experimental APIs are not stable and can change at any time, Beaker requires you to opt-in explicitly in order to use them in your website or application. To opt-in to using an experimental API, edit your [`dat.json`](/docs/apis/manifest.html) to indicate which APIs you'd like to use:
 
 <figcaption class="code">dat.json</figcaption>
 ```json

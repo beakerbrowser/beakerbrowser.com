@@ -47,21 +47,21 @@ guides:
       author: Tara Vancil
       authorLink: https://taravancil.com
       authorAvatar: /img/team/taravancil.jpg
-      featured: true
     - title: Using experimental APIs
       url: /docs/guides/using-experimental-apis
+      author: Paul Frazee
+      authorLink: https://pfrazee.hashbase.io
+      authorAvatar: /img/team/pfrazee.jpg
+      featured: true
       children:
-      - title: "experimental.*"
-        url: "#experimental"
-        heading: true
-      - title: "How to use Lab APIs"
-        url: "#how-to-use-lab-apis"
+      - title: "Opting in with dat.json"
+        url: "#opting-in-with-datjson"
         heading: true
       - title: "Available APIs"
         url: "#available-apis"
         heading: true
-      - title: "How stable are Lab APIs?"
-        url: "#how-stable-are-lab-apis"
+      - title: "How stable are experimental APIs?"
+        url: "#how-stable-are-experimental-apis"
         heading: true
     - title: Build a website with Markdown
       featured: true
