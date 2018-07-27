@@ -86,8 +86,6 @@ guides:
           url: "#custom-styles"
     - title: Create or fork a site
       url: /docs/guides/create-or-fork-a-site
-    - title: Host outside of Beaker
-      url: /docs/guides/host-outside-of-beaker
     - title: Watch for file changes
       featured: true
       url: /docs/guides/watch-for-file-changes
