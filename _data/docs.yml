@@ -76,34 +76,6 @@ guides:
           url: "#navigation"
         - title: Custom styles
           url: "#custom-styles"
-    - title: Create a TODO list app
-      featured: true
-      url: /docs/guides/create-a-todo-list-app
-      author: Paul Frazee
-      authorLink: https://pfrazee.hashbase.io
-      authorAvatar: /img/team/pfrazee.jpg
-      children:
-      - title: "Get started"
-        url: "#get-started"
-        heading: true
-      - title: "Rendering with a &lt;template&gt;"
-        url: "#rendering-with-a-template"
-        heading: true
-      - title: "\"Add todo\" form"
-        url: "#add-todo-form"
-        heading: true
-      - title: "Only show \"add todo\" if you own the site"
-        url: "#only-show-add-todo-if-you-own-the-site"
-        heading: true
-      - title: "How can non-owners add todos?"
-        url: "#how-can-non-owners-add-todos"
-        heading: true
-      - title: "Implementing the \"completed\" checkbox"
-        url: "#implementing-the-completed-checkbox"
-        heading: true
-      - title: "Final application"
-        url: "#final-application"
-        heading: true
     - title: Create a blog
       url: /docs/guides/create-a-blog.html
     - title: Create a markdown site
