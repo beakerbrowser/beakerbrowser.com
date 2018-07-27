@@ -84,8 +84,6 @@ guides:
           url: "#navigation"
         - title: Custom styles
           url: "#custom-styles"
-    - title: Create a blog
-      url: /docs/guides/create-a-blog.html
     - title: Create a markdown site
       url: /docs/guides/create-a-markdown-site.html
     - title: Create or fork a site
