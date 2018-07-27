@@ -85,11 +85,15 @@ guides:
         - title: Custom styles
           url: "#custom-styles"
     - title: Create or fork a site
-      url: /docs/guides/create-or-fork-a-site.html
+      url: /docs/guides/create-or-fork-a-site
     - title: Host outside of Beaker
-      url: /docs/guides/host-outside-of-beaker.html
+      url: /docs/guides/host-outside-of-beaker
     - title: Watch for file changes
-      url: /docs/guides/watch-for-file-changes.html
+      featured: true
+      url: /docs/guides/watch-for-file-changes
+      author: Paul Frazee
+      authorLink: https://pfrazee.hashbase.io
+      authorAvatar: /img/team/pfrazee.jpg
       children:
       - title: "Watch all files"
         heading: true
@@ -106,8 +110,12 @@ guides:
       - title: "Further reading"
         heading: true
         url: "#further-reading"
-    - title: Read site files
-      url: /docs/guides/read-site-files.html
+    - title: Read files from a dat:// website
+      featured: true
+      url: /docs/guides/read-site-files
+      author: Paul Frazee
+      authorLink: https://pfrazee.hashbase.io
+      authorAvatar: /img/team/pfrazee.jpg
       children:
       - title: "stat()"
         heading: true
@@ -133,7 +141,7 @@ guides:
         - title: "Reading over the network"
           url: "#reading-over-the-network"
     - title: Write site files
-      url: /docs/guides/write-site-files.html
+      url: /docs/guides/write-site-files
       children:
       - title: "Writing files and folders"
         heading: true
@@ -159,7 +167,7 @@ usingBeaker:
   url: /docs/using-beaker/
   children:
     - title: Welcome to Beaker
-      url: /docs/using-beaker/index.html
+      url: /docs/using-beaker/index
       children:
       - title: "How to create a website"
         url: "#how-to-create-a-website"
@@ -182,14 +190,14 @@ usingBeaker:
       - title: Ignoring files with .datignore
         url: "#ignoring-files-with-datignore"
     - title: Troubleshooting
-      url: /docs/using-beaker/troubleshooting.html
+      url: /docs/using-beaker/troubleshooting
 webAPIs:
   title: Web APIs
   subtitle: Explore Beaker's APIs for creating peer-to-peer websites and applications
   url: /docs/apis/
   children:
     - title: DatArchive API
-      url: /docs/apis/dat.html
+      url: /docs/apis/dat
       children:
       - title: "Permissions"
         heading: true
@@ -332,7 +340,7 @@ webAPIs:
           deprecated: true
           isCode: true
     - title: dat.json site manifest
-      url: /docs/apis/manifest.html
+      url: /docs/apis/manifest
       children:
         - title: "Properties"
           url: "#properties"
@@ -363,7 +371,7 @@ webAPIs:
             url: "#experimental-apis"
             isCode: true
     - title: datPeers API
-      url: /docs/apis/experimental-datpeers.html
+      url: /docs/apis/experimental-datpeers
       experimental: true
       children:
         - title: "Security and privacy"
@@ -418,7 +426,7 @@ webAPIs:
             url: "#datpeer-send"
             isCode: true
     - title: Library API
-      url: /docs/apis/experimental-library.html
+      url: /docs/apis/experimental-library
       experimental: true
       children:
         - title: "Permissions"
@@ -463,7 +471,7 @@ webAPIs:
             url: "#event-network-changed"
             isCode: true
     - title: globalFetch API
-      url: /docs/apis/experimental-globalfetch.html
+      url: /docs/apis/experimental-globalfetch
       experimental: true
       children:
         - title: "Methods"
@@ -474,7 +482,7 @@ webAPIs:
             url: "#globalFetch"
             isCode: true
     - title: "capturePage API"
-      url: /docs/apis/experimental-capturepage.html
+      url: /docs/apis/experimental-capturepage
       experimental: true
       children:
         - title: "Permissions"
