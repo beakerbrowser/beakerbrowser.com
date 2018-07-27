@@ -32,8 +32,16 @@ guides:
       authorLink: https://taravancil.com
       authorAvatar: /img/team/taravancil.jpg
       featured: true
+      children:
+        - title: Domain names and dat://
+          url: "#domain-names-and-dat"
+        - title: Dat DNS TXT records
+          url: "#dat-dns-text-records"
+        - title: .well-known/dat
+          url: "#well-knowndat"
     - title: Publish a peer-to-peer website
       url: /docs/guides/publish-a-peer-to-peer-website
+      author: Tara Vancil
       authorLink: https://taravancil.com
       authorAvatar: /img/team/taravancil.jpg
       featured: true

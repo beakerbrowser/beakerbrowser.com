@@ -28,7 +28,7 @@ If you want to use your domain name with `dat://`, but don't care about republis
 
 If you want to use your domain name with `dat://`, and also want want to mirror the same content on `https://`, [jump to `.well-known/dat`](/docs/guides/use-a-domain-name-with-dat#well-knowndat).
 
-### Dat DNS TXT records
+## Dat DNS TXT records
 
 To point your domain name to a `dat://` website, you can use a [DNS TXT record](https://www.datprotocol.com/deps/0005-dns/#dns-txt-record).
 
@@ -45,7 +45,7 @@ www  | TXT  | datkey=123456...
 
 [Dat DNS TXT record specification](https://www.datprotocol.com/deps/0005-dns/#dns-txt-record)
 
-### `.well-known/dat`
+## `.well-known/dat`
 
 If you want to publish your website under your domain name with both `dat://` and `https://`, consider using the [`.well-known/dat` technique](https://www.datprotocol.com/deps/0005-dns/#-well-known-dat).
 
