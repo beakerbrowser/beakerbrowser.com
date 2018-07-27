@@ -142,21 +142,38 @@ guides:
           url: "#calculating-file-download-progress-with-stat"
         - title: "Folder download progress"
           url: "#calculating-folder-download-progress-with-stat"
-    - title: Write site files
+    - title: Write to a dat:// website
       url: /docs/guides/write-site-files
+      author: Paul Frazee
+      authorLink: https://pfrazee.hashbase.io
+      authorAvatar: /img/team/pfrazee.jpg
       children:
       - title: "Writing files and folders"
         heading: true
         url: "#writing-files-and-folders"
+        children:
+        - title: mkdir()
+          url: "#mkdir"
+        - title: writeFile()
+          url: "#writefile"
       - title: "Deleting files and folders"
         heading: true
         url: "#deleting-files-and-folders"
         children:
+        - title: rmdir()
+          url: "#rmdir"
+        - title: unlink()
+          url: "#unlink"
         - title: "Recursive deletes"
           url: "#recursive-deletes"
       - title: "Copying, moving, and renaming"
         heading: true
         url: "#copying-moving-and-renaming"
+        children:
+        - title: copy()
+          url: "#copy"
+        - title: rename()
+          url: "#rename"
 howBeakerWorks:
   url: /docs/how-beaker-works
   title: How Beaker works

@@ -1,42 +1,43 @@
 ---
-title: Write site files
+title: Write to a dat:// website
 section: guides
 sectionTitle: Guides
-order: 7
+author: Paul Frazee
+authorLink: https://pfrazee.hashbase.io
+authorAvatar: /img/team/pfrazee.jpg
 ---
 
+The [DatArchive API](/docs/apis/dat) provides a simple set of APIs to write files, create directories, and delete data.
 
-The [DatArchive API](/docs/apis/dat.html) provides a simple set of APIs to write files, create directories, and delete data.
+To create a writable `dat://` website, first create a new `DatArchive` instance:
 
-<figcaption class="code">create a writable dat archive</figcaption>
 ```js
-var archive = await DatArchive.create({title: 'My writable dat'})
+var archive = await DatArchive.create({title: 'My website'})
 ```
 
 ## Writing files and folders
 
-The [mkdir() method](/docs/apis/dat.html#mkdir) creates new folders.
+### `mkdir()`
+
+The [mkdir() method](/docs/apis/dat#mkdir) creates new folders.
 It will throw an error if a file/folder already exists at the target, or if no parent folder exists.
 
-<figcaption class="code">create folders</figcaption>
 ```js
 await archive.mkdir('/stuff')
 ```
 
-The [writeFile() method](/docs/apis/dat.html#writefile) writes files.
-It accepts an encoding as its third parameter.
+### `writeFile()`
 
-<figcaption class="code">write files</figcaption>
+The [writeFile() method](/docs/apis/dat#writefile) writes files. It accepts an encoding as its third parameter.
+
 ```js
 await archive.writeFile('/hello.txt', str, 'utf8')
 await archive.writeFile('/beaker.png', pngBase64, 'base64')
-await archive.writeFile('/beaker.png', pngHex, 'hex')
 await archive.writeFile('/beaker.png', pngArrayBuffer, 'binary')
 ```
 
-If the encoding is omitted, then 'utf8' will be assumed for strings and 'binary' will be assumed for ArrayBuffers.
+If the encoding is omitted, then 'utf8' will be assumed for strings and 'binary' will be assumed for ArrayBuffers:
 
-<figcaption class="code">write files (default encoding)</figcaption>
 ```js
 await archive.writeFile('/hello.txt', str)
 await archive.writeFile('/beaker.png', pngArrayBuffer)
@@ -44,17 +45,18 @@ await archive.writeFile('/beaker.png', pngArrayBuffer)
 
 ## Deleting files and folders
 
-The [rmdir() method](/docs/apis/dat.html#rmdir) deletes folders.
-It will fail if the folder is not empty.
+### `rmdir()`
 
-<figcaption class="code">delete a folder</figcaption>
+The [rmdir() method](/docs/apis/dat#rmdir) deletes folders. It will fail if the folder is not empty.
+
 ```js
 await archive.rmdir('/stuff')
 ```
 
-The [unlink() method](/docs/apis/dat.html#unlink) deletes files.
+### `unlink()`
 
-<figcaption class="code">delete a file</figcaption>
+The [unlink() method](/docs/apis/dat#unlink) deletes files.
+
 ```js
 await archive.unlink('/hello.txt')
 ```
@@ -63,28 +65,31 @@ await archive.unlink('/hello.txt')
 
 You can delete non-empty folders by specifying the `recursive` option.
 
-<figcaption class="code">delete a folder and all of its contents</figcaption>
 ```js
+// delete /stuff and all of its contents
 await archive.rmdir('/stuff', {recursive: true})
 ```
 
 ## Copying, moving, and renaming
 
-The [copy() method](/docs/apis/dat.html#copy) copies files and folders.
-If the folder is not empty, it will copy all of its contents.
+### `copy()`
 
-<figcaption class="code">copy files and folders</figcaption>
+The [copy() method](/docs/apis/dat#copy) copies files and folders. If the folder is not empty, it will copy all of its contents.
+
 ```js
 await archive.copy('/stuff', '/stuff-backup')
 await archive.copy('/hello.txt', '/goodbye.txt')
 ```
 
-The [rename() method](/docs/apis/dat.html#rename) moves/renames files and folders.
-If the folder is not empty, it will move all of its contents.
+### `rename()`
 
-<figcaption class="code">rename files and folders</figcaption>
+The [rename() method](/docs/apis/dat#rename) moves/renames files and folders. If the folder is not empty, it will move all of its contents.
+
 ```js
 await archive.rename('/stuff', '/stuff-backup')
 await archive.rename('/hello.txt', '/goodbye.txt')
 ```
 
+## Further reading
+
+- [DatArchive API reference](/docs/apis/dat)
