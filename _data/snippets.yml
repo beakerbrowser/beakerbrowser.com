@@ -5,7 +5,7 @@
 #   description: optional string
 #   code: string
 -
-  title: Get an archive's title
+  title: Get a website's title
 #  description: |
 #    Every dat archive has a title and description that can be read with <code>getInfo()</code>.
   code: |
@@ -13,7 +13,7 @@
     var info = await archive.getInfo()
     info.title // string
 -
-  title: Get an archive's type
+  title: Get a website's type
 #  description: |
 #    The "type" of a dat archive is used to filter archives and help organize the user's data, sites, and apps.
   code: |
@@ -21,7 +21,7 @@
     var info = await archive.getInfo()
     info.type // array of strings
 -
-  title: Get an archive's total size
+  title: Get a website's total size
 #  description: |
 #    The total size of a dat will include any downloaded history.
   code: |
@@ -29,13 +29,13 @@
     var info = await archive.getInfo()
     info.size // number (bytes)
 -
-  title: See if the user owns an archive
+  title: Check if the user can edit a website
   code: |
     var archive = new DatArchive(url)
     var info = await archive.getInfo()
     info.isOwner // boolean
 -
-  title: Get the version of an archive
+  title: Get the last published version number of a website
   code: |
     var archive = new DatArchive(url)
     var info = await archive.getInfo()
@@ -47,13 +47,13 @@
     var info = await archive.getInfo()
     info.mtime // number
 -
-  title: Get the number of peers
+  title: Get the number of active peers
   code: |
     var archive = new DatArchive(url)
     var info = await archive.getInfo()
     info.peers // number
 -
-  title: Configure an archive's settings
+  title: Configure a website's settings
   code: |
     var archive = new DatArchive(url)
     await archive.configure({
@@ -62,7 +62,7 @@
       type: ['website']
     })
 -
-  title: Create a new archive
+  title: Create a new website
   code: |
     var archive = await DatArchive.create({
       title: 'The name of the archive',
@@ -70,14 +70,14 @@
       type: ['website']
     })
 -
-  title: Duplicate an archive
+  title: Create a copy of a website
   code: |
     var archive = await DatArchive.fork(sourceArchiveUrl, {
       title: 'New name',
       description: 'New description'
     })
 -
-  title: Open an archive selector modal
+  title: Open Beaker's website selector modal
   code: |
     var archive = await DatArchive.selectArchive({
       prompt: 'Select an archive',
@@ -170,17 +170,17 @@
       console.log('a .json file in /posts/ has changed')
     })
 -
-  title: Get the change-history of an archive
+  title: Get the change-history of a website
   code: |
     var archive = new DatArchive('dat://beakerbrowser.com')
     var history = await archive.history()
 -
-  title: Get an older version of an archive
+  title: Get an older version of a website
   code: |
     var archive = new DatArchive('dat://beakerbrowser.com')
     var olderArchive = await archive.checkout(50)
 -
-  title: Download all files in an archive
+  title: Download all files in a website
   code: |
     var archive = new DatArchive('dat://beakerbrowser.com')
     await archive.download('/')
@@ -191,7 +191,7 @@
     peers[..].id // string
     peers[..].sessionData // object
 -
-  title: Watch for connects and disconnects
+  title: Watch for connection events
   code: |
     experimental.datPeers.addEventListener('connect', ({peer}) => {
       console.log(peer.id, 'has connected')
