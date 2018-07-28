@@ -179,35 +179,6 @@ howBeakerWorks:
     - title: Peer-to-peer websites
       url: /docs/how-beaker-works/peer-to-peer-websites
     - title: Peer-to-peer applications
-usingBeaker:
-  title: Using Beaker
-  url: /docs/using-beaker/
-  children:
-    - title: Welcome to Beaker
-      url: /docs/using-beaker/index
-      children:
-      - title: "How to create a website"
-        url: "#how-to-create-a-website"
-      - title: "Adding files to a site"
-        url: "#adding-files-to-a-site"
-      - title: "Publishing files and changes"
-        url: "#publishing-files-and-changes"
-      - title: "How to share a website"
-        url: "#how-to-share-a-website"
-      - title: "How to manage your websites"
-        url: "#how-to-manage-your-websites"
-      - title: "Using the sidebar"
-        url: "#using-the-sidebar"
-      - title: "Live reloading"
-        url: "#live-reloading"
-      - title: "Sync for offline"
-        url: "#sync-for-offline"
-      - title: "Forking a website"
-        url: "#forking-a-website"
-      - title: Ignoring files with .datignore
-        url: "#ignoring-files-with-datignore"
-    - title: Troubleshooting
-      url: /docs/using-beaker/troubleshooting
 webAPIs:
   title: Web APIs
   subtitle: Explore Beaker's APIs for creating peer-to-peer websites and applications
