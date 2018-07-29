@@ -1,17 +1,38 @@
 .layout.about {
-  .container.super-narrow {
-    max-width: 650px;
-  }
 
   h1 {
     font-size: 2.2rem;
-    // margin-bottom: 20px;
-  }
-
-  p.accent {
   }
 
   p:not(.accent):not(.bio) {
     font-size: 14.5px;
+  }
+
+  .images {
+    @extend %flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 30px 10px 60px 10px;
+
+    img {
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+      display: none;
+      max-width: 500px;
+
+      @include respond-to(netbook) {
+        display: block;
+      }
+
+      &:nth-child(2n) {
+        margin: 0 15px;
+        display: block;
+      }
+    }
+  }
+
+  .team {
+    margin: 40px 0;
   }
 }
