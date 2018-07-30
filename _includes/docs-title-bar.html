@@ -1,0 +1,27 @@
+<div class="title-bar">
+  <div class="container">
+    {% if page.section != 'tour' and page.section != 'faq' %}
+      <a href="{{ page.sectionUrl }}" class="section-title">
+        {{ page.sectionTitle }}
+      </a>
+    {% endif %}
+
+    <h1>
+      {{ page.title }}
+      {% if page.experimental %}
+      <i class="fa fa-flask"></i>
+      {% endif %}
+    </h1>
+
+    {% if page.section == 'guides' %}
+      <div class="guide-metadata">
+        <div class="author">
+          <img class="avatar" src="{{ page.authorAvatar }}"/>
+          <a href="{{ page.authorLink }}" class="name">
+            {{ page.author }}
+          </a>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
