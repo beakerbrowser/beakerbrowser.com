@@ -67,6 +67,11 @@
     flex: 1 0 125px;
     width: 125px;
     text-align: center;
+    margin-right: 20px;
+
+    @include respond-to(netbook) {
+      margin-right: 0;
+    }
 
     h3.name {
       margin: 0 0 20px 0;
@@ -79,11 +84,6 @@
     border-radius: 50%;
     margin-bottom: 0px;
     border: 2px solid rgba(255,255,255,.15);
-  }
-
-  div.bio {
-    @extend %body-font;
-    padding: 0 20px;
   }
 
   .links {
