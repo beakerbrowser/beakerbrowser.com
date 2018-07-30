@@ -1,14 +1,14 @@
 ---
-title: dat.json site manifest
+title: dat.json
 section: webAPIs
+sectionUrl: /docs/apis
 sectionTitle: Web APIs
 sectionSubtitle: Explore Beaker's Web APIs for reading and writing the peer-to-peer filesystem
-order: 5
 ---
 
-Websites and applications served over `dat://` can include a manifest file to
-specify metadata and configure special behaviors. The file must be located at
-`/dat.json` in the website or application root.
+<p class="accent">
+  Websites and applications served over <code>dat://</code> can include a manifest file to specify metadata and configure special behaviors. The file must be located at <code>/dat.json</code> in the website or application root.
+</p>
 
 Beaker automatically creates and manages the manifest for Dat archives created
 with the `DatArchive` Web API.

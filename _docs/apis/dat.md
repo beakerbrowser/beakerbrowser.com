@@ -1,6 +1,7 @@
 ---
 title: DatArchive API
 section: webAPIs
+sectionUrl: /docs/apis
 sectionTitle: Web APIs
 sectionSubtitle: Explore Beaker's Web APIs for reading and writing the peer-to-peer filesystem
 order: 3
@@ -11,11 +12,9 @@ order: 3
 - <i class="fa fa-flask"></i> Indicates that this API is under development and subject to change.
 -->
 
-The `DatArchive` API is Beaker's interface for reading and writing the Dat
-peer-to-peer filesystem. Websites and applications can use the `DatArchive`
-API to create, write, and read Dat archives.
-
----
+<p class="accent">
+	The <code>DatArchive</code> API is Beaker's interface for reading and writing the Dat peer-to-peer filesystem. Websites and applications can use the <code>DatArchive</code> API to create, write, and read Dat archives.
+</p>
 
 ## Permissions
 
@@ -26,8 +25,7 @@ with HTML embeds, Ajax, or the `DatArchive` read interfaces.
 
 ### Write permissions
 
-By default, `dat://` pages are granted permission to write to other `dat://`
-pages that it created.
+By default, `dat://` pages are only granted write permission for other `dat://` pages that it created.
 
 The user will be prompted to grant permission when a `dat://` page attempts to:
 
@@ -64,8 +62,6 @@ this limit will be configurable by user action.
 
 When the 100MB limit is reached, all writes attempted
 with the `DatArchive` API will fail.
-
----
 
 ## Constructor
 

@@ -2,7 +2,6 @@
 title: Web APIs
 section: webAPIs
 sectionTitle: Web APIs
-sectionSubtitle: Explore Beaker's Web APIs for reading and writing the peer-to-peer filesystem
 order: 1
 ---
 
