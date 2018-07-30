@@ -520,3 +520,7 @@ webAPIs:
           - title: "capturePage()"
             url: "#capturePage"
             isCode: true
+faq:
+  title: Help & FAQ
+  url: /docs/faq
+  children:
