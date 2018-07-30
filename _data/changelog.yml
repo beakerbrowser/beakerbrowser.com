@@ -21,7 +21,7 @@
   date: TBD
   description: |
     The globalFetch Labs API is a variation of fetch() which lets sites circumvent CORS with the user's permission.
-    This is useful for dat:// sites, since they have no server to make those requests on their behalf.
+    This is useful for dat:// websites, since they have no server to make those requests on their behalf.
 -
   change: addition
   title: Added <code>experimental.datPeers</code>
@@ -42,28 +42,27 @@
   href: /docs/apis/dat.html#checkout
   date: TBD
   description: |
-    This method makes it more convenient to access historic versions of a Dat Archive, rather than having to manually construct versioned URLs.
+    This method makes it more convenient to access historic versions of a Dat archive, rather than having to manually construct versioned URLs.
 -
   change: addition
-  title: Added inline editing to the library
+  title: Added inline editing to the Library
   date: 2018-05-29
   description: |
-    You can now edit your dats without ever leaving the browser!
+    This change added an inline editor to the Library, so you can edit and update changes without opening them in your text editor.
 -
   change: addition
   title: Added DNS TXT record support to Dat
   href: https://www.datprotocol.com/deps/0005-dns/
   date: 2018-05-29
   description: |
-    This expands the DNS model so that no server is required.
-    You can get a shortname by publishing a DNS TXT record that points to the dat url.
+    This expands the DNS model so that domain names can be used with `dat://` websites without setting up an `https://` server.
 -
   change: addition
   title: Added <code>experimental.library</code>
   href: /docs/apis/experimental-library.html
   date: 2018-05-29
   description: |
-    The Library Labs API gives apps the tools to manage users' saved dat archives.
+    The Library experimental API gives developers tools to manage users' saved Dat archives.
 -
   change: addition
   title: Added JSON rendering
@@ -74,7 +73,7 @@
   title: Replaced the "staging area" with automatic bidirectional sync
   date: 2018-05-29
   description: |
-    Previously, Beaker gave every Dat Archive a "staging area" where users could preview files before publishing them.
+    Previously, Beaker gave every Dat archive a "staging area" where users could preview files before publishing them.
     We found this created complex edge-cases, and so replaced it with an automatic bidirectional sync with the folder.
 -
   change: deletion
@@ -82,7 +81,7 @@
   date: 2018-05-29
   description: |
     These methods were part of the staging area implementation which were removed.
-- 
+-
   change: addition
   title: Added "content_security_policy" directive to dat.json
   href: /docs/apis/manifest.html#content-security-policy
