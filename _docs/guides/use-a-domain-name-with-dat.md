@@ -1,6 +1,8 @@
 ---
 title: Use a domain name with dat://
 section: guides
+sectionUrl: /docs/guides
+sectionTitle: Guides
 author: Tara Vancil
 authorAvatar: /img/team/taravancil.jpg
 authorLink: https://taravancil.com

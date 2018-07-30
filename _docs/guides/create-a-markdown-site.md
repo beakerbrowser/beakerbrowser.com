@@ -1,6 +1,7 @@
 ---
 title: Build a website with Markdown
 section: guides
+sectionUrl: /docs/guides
 sectionTitle: Guides
 author: Tara Vancil
 authorAvatar: /img/team/taravancil.jpg

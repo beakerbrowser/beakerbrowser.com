@@ -1,5 +1,7 @@
 ---
 title: Use a custom 404 page
+sectionUrl: /docs/guides
+sectionTitle: Guides
 section: guides
 author: Tara Vancil
 authorAvatar: /img/team/taravancil.jpg

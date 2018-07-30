@@ -1,6 +1,7 @@
 ---
 title: Using experimental APIs
 section: guides
+sectionUrl: /docs/guides
 sectionTitle: Guides
 author: Paul Frazee
 authorLink: https://pfrazee.hashbase.io

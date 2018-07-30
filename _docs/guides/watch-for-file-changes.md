@@ -1,33 +1,35 @@
 ---
-title: 'Watch for file changes'
+title: Watching for file changes
 section: guides
+sectionUrl: /docs/guides
 sectionTitle: Guides
-order: 9
+author: Paul Frazee
+authorAvatar: /img/team/pfrazee.jpg
+authorLink: https://pfrazee.hashbase.io
 ---
 
-The [DatArchive API](/docs/apis/dat.html) includes a [`watch()`](/docs/apis/dat.html#watch) method to notify you when a file or folder changes.
+Beaker's [`DatArchive` API](/docs/apis/dat) includes the [`watch()`](/docs/apis/dat.html#watch) method to notify you when a file or folder changes.
 It works for both local and remote files, and accepts a glob pattern for filtering files.
 
-## Watch all files
+## Examples
 
-<figcaption class="code">example code</figcaption>
+### Watch all files
+
 ```js
 var archive = new DatArchive('dat://beakerbrowser.com')
 archive.watch(e => console.log(e.path, 'has changed'))
 ```
 
-## Watch files or folders
+### Watch files or folders
 
-<figcaption class="code">example code</figcaption>
 ```js
 var archive = new DatArchive('dat://beakerbrowser.com')
 archive.watch('/index.html', e => console.log('index.html has changed'))
 archive.watch('/js/', e => console.log('a file in js/ has changed'))
 ```
 
-## Glob patterns
+### Using a glob pattern
 
-<figcaption class="code">example code</figcaption>
 ```js
 var archive = new DatArchive('dat://beakerbrowser.com')
 archive.watch('/posts/*.json', e => {
@@ -37,18 +39,15 @@ archive.watch('/posts/*.json', e => {
 
 ## Watcher events
 
-There are two events emitted by the watcher.
+There are two events emitted by the watcher:
 
- - **'invalidated'** means that a file has been changed but has not downloaded yet.
- - **'changed'** means that a file has been changed and the change has downloaded.
+ - `'invalidated'` means that a file has been changed but has not been downloaded
+ - `'changed'` means that a file has been changed and the change has been downloaded
 
-Both events are emitted in all cases.
-If the file archive is locally-owned, they will fire immediately after each other.
-The default event which `watch()` listens to is 'invalidated'.
+Both events are emitted in all cases. If the file archive is locally-owned, they will fire immediately after each other. The default event which `watch()` listens to is 'invalidated'.
 
-To listen to the 'changed' event, you can use the Watcher object that's returned by `watch()`.
+To listen to the `'changed'` event, you can use the object that's returned by `watch()`:
 
-<figcaption class="code">example code</figcaption>
 ```js
 var archive = new DatArchive('dat://beakerbrowser.com')
 var watcher = archive.watch('/index.html')
@@ -56,9 +55,8 @@ watcher.addEventListener('invalidated', e => console.log('index.html has invalid
 watcher.addEventListener('changed', e => console.log('index.html has changed'))
 ```
 
-If you wish to stop listening for changes, you can use the Watcher's `close()` method.
+If you wish to stop listening for changes, you can use the `close()` method:
 
-<figcaption class="code">example code</figcaption>
 ```js
 var archive = new DatArchive('dat://beakerbrowser.com')
 var watcher = archive.watch('/index.html', e => {

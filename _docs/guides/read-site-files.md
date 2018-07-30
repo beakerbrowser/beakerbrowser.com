@@ -1,6 +1,7 @@
 ---
 title: Read files from a dat:// website
 section: guides
+sectionUrl: /docs/guides
 sectionTitle: Guides
 author: Paul Frazee
 authorLink: https://pfrazee.hashbase.io
