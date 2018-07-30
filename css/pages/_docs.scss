@@ -83,8 +83,36 @@
     max-width: 100%;
     margin: auto;
 
+    &.left {
+      max-width: 100%;
+      margin: 0;
+    }
+
+    pre.highlight {
+      padding: 15px;
+    }
+
+    h2 {
+      font-size: 26px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    h3 {
+      font-size: 20px;
+
+      code {
+        font-size: 18px;
+      }
+    }
+
+    h4 {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .2px;
+    }
+
     @include respond-to(show-docs-sidebar) {
-      max-width: 655px;
+      max-width: 725px;
     }
   }
 }
