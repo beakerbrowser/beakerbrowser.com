@@ -186,6 +186,18 @@ await mySite.writeFile('index.html', 'Hello, world!');
   </div>
 </div>
 
+<div class="guides">
+  <h2>Guides</h2>
+  {% include guides-grid.html items=site.data.docs.guides.children featured=true %}
+
+  <p>
+    <a class="link" href="/docs/guides">
+      All guides
+      <span class="fa fa-angle-double-right"></span>
+    </a>
+  </p>
+</div>
+
 <div class="links-grid">
   <div class="link-icon">
     <span class="fa fa-link"></span>
@@ -217,18 +229,4 @@ await mySite.writeFile('index.html', 'Hello, world!');
       Explore what others have built
     </span>
   </a>
-</div>
-
-
-
-<div class="guides">
-  <h2>Guides</h2>
-  {% include guides-grid.html items=site.data.docs.guides.children featured=true %}
-
-  <p>
-    <a class="link" href="/docs/guides">
-      All guides
-      <span class="fa fa-angle-double-right"></span>
-    </a>
-  </p>
 </div>
