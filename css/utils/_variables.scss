@@ -13,7 +13,8 @@ $breakpoints: (
   'show-docs-sidebar': (min-width: 900px),
   'tall-gradient-hero': (min-width: 650px),
   'tablet': (min-width: 700px),
-  'netbook': (min-width: 900px)
+  'netbook': (min-width: 900px),
+  'desktop': (min-width: 1050px)
 );
 
 $docs-nav-width: 225px;
