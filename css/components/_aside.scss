@@ -94,23 +94,38 @@
   }
 
   &.seeding {
-    background: $blue;
-    color: #fff;
+    display: block;
     position: relative;
+    max-width: 525px;
+    padding: 10px 15px;
+    margin: 30px auto;
+    border: 2px dotted;
 
-    a,
-    p {
-      color: #fff;
-      max-width: 500px;
-      font-size: 13.5px;
+    h3 {
+      display: inline-block;
+      position: absolute;
+      top: -4px;
+      left: -12px;
+      padding: 2px 5px;
+      margin-top: 0;
+      background: $teal;
+      transform: rotate(-3deg);
+      font-size: 16px !important;
     }
 
-    .icon {
-      position: absolute;
-      right: 15px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 160px;
+    p {
+      margin: 20px 0 0 0 !important;
+      font-size: 14.5px;
+      font-weight: 500;
+    }
+
+    a.learn-more-link {
+      color: #111 !important;
+      font-weight: 500;
+
+      &:hover {
+        color: $teal !important;
+      }
     }
   }
 
