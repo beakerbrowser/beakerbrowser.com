@@ -21,12 +21,14 @@ header: dark
   </p>
 
   <p>
-    We believe the Web can (and must) be a people-first platform, where everybody is invited to create, personalize, and share. We've set out to make it so.
+    We believe the Web can (and must) be a people-first platform, where everybody is invited to create, personalize, and share.
   </p>
 
   <p>
-    We're using <a href="https://datproject.org">peer-to-peer technology</a> to improve creating and sharing on the Web. 
+    That's why we're using <a href="https://datproject.org">peer-to-peer technology</a> to improve how we create, share, and connect on the Web. 
   </p>
+
+  {% include dat-aside.html %}
 
   <h3>Why build a browser?</h3>
 
@@ -66,8 +68,20 @@ header: dark
     {% include team.html %}
   </p>
 
+  <h2>
+    Get started
+  </h2>
+
+  <p>
+    Ready to get started? Beaker is available on desktop for Windows, macOS, and Linux.
+  </p>
+
   <p>
     <a class="btn action" href="/install">Install Beaker</a>
-    <a class="btn blue" href="/docs">Explore the docs</a>
+    <a class="btn blue" href="/docs/tour">Take a tour</a>
+  </p>
+
+  <p>
+    <a href="/docs">Explore the docs</a>
   </p>
 </div>
