@@ -14,7 +14,7 @@ Beaker is an experimental peer-to-peer browser. Just like other browsers, you ca
 
 <img src="/img/docs/tour/https-site.png"/>
 
-## dat://
+### dat://
 
 Beaker also supports a peer-to-peer protocol called [Dat](https://datproject.org), which means you can browse `dat://` websites like [dat://beakerbrowser.com](dat://beakerbrowser.com).
 
@@ -27,6 +27,8 @@ Beaker also supports a peer-to-peer protocol called [Dat](https://datproject.org
 ### Core concept: peers and seeding
 
 `dat://` is a peer-to-peer protocol, which means that visitors to a `dat://` site connect directly to one another, downloading and sharing files. Participants on the network are called <em>peers</em>, and when a peer contributes bandwidth to re-upload a site's files, it's called <em>seeding</em>.
+
+{% include seeding-aside.html %}
 
 You can see the peer count for a `dat://` site in the URL bar:
 
@@ -124,3 +126,10 @@ Live reloading works for projects you're working on locally *and* for remote pro
 <img src="/img/docs/tour/live-reloading.png"/>
 
 <!-- TODO add a cta here -->
+
+Ready to get started?
+
+- [Install Beaker](/install)
+- [What's a peer-to-peer website?](/docs/how-beaker-works/peer-to-peer-websites)
+- [Make a peer-to-peer website](/guides/make-a-peer-to-peer-website)
+- [Learn more about Dat](/docs/how-beaker-works/dat)
