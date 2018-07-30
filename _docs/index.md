@@ -1,161 +1,234 @@
 ---
 layout: docs-intro
-title: Introduction
+title: Documentation
 order: 1
 ---
 
-<div class="container">
-  <h1>Documentation</h1>
-  <p>
-    Welcome to the Beaker documentation!
-  </p>
+<h1>Documentation</h1>
 
-  <div class="quick-links">
-    <div class="quickstart">
-      <h2>
-        Quickstart
-        <i class="fa fa-magic"></i>
-      </h2>
+<div class="docs-hero columns">
+  <div class="cta col col-2-5">
+    <p class="welcome">
+      <i class="fas fa-heart"></i>
+      <strong>Welcome to Beaker!</strong>
+    </p>
 
-      <p>
-        First time here? Explore how to get started with Beaker.
-      </p>
+    <p>
+      Beaker is an experimental peer-to-peer browser with support for
+      the <a class="link" href="#all-about-dat">dat:// protocol</a>.
+    </p>
+
+    <p>
+      {% include take-a-tour-aside.html %}
+    </p>
+  </div>
+
+  <div class="apis col col-3-5">
+    <div class="example">
+{% highlight javascript %}
+var mySite = await DatArchive.create({title: 'My site'});
+mySite.url // dat://1277b9...
+await mySite.writeFile('index.html', 'Hello, world!');
+{% endhighlight %}
     </div>
 
-    <div class="apis">
-      <h2>
-        API Reference
-        <i class="fa fa-code"></i>
-      </h2>
+    <div class="links">
+      <a href="/docs/apis">
+        <span class="fa fa-code"></span>
+        API reference
+      </a>
 
-      <p>
-        Explore Beaker's peer-to-peer Web APIs.
-      </p>
-    </div>
-
-    <div class="overview">
-      <h2>
-        Technical overview
-        <i class="fa fa-cubes"></i>
-      </h2>
-
-      <p>
-        Learn about how Beaker works and why.
-      </p>
+      <a href="/docs/snippets" class="snippets">
+        <span class="fa fa-cut"></span>
+        Code snippets
+      </a>
     </div>
   </div>
 </div>
 
-<div class="callouts-1">
-  <div class="container">
-    <a href="/docs/using-beaker" class="callout">
-      <h2 class="title">
-        Using Beaker
-      </h2>
-      <i class="fa fa-laptop"></i>
-      <p class="desc">
-        Learn how to publish peer-to-peer websites and share files secretly.
-      </p>
-    </a>
+<div class="main-info grid grid-3 small-gap">
+  <div class="col-2-3 whats-peer-to-peer-web">
+    <h2>
+      What's the p2p Web?
+    </h2>
 
-    <a href="/docs/tutorials" class="callout">
-      <h2 class="title">
-        Tutorials
-      </h2>
-      <i class="fa fa-cogs"></i>
-      <p class="desc">
-        Learn how to tackle more advanced tasks and workflows.
-      </p>
-    </a>
+    <p>
+      Learn more about how Beaker works, peer-to-peer websites, and building peer-to-peer applications
+      with the Web you know and love.
+    </p>
 
-    <a href="/docs/apis" class="callout">
-      <h2 class="title">
-        APIs
-      </h2>
-      <i class="fa fa-code"></i>
-      <p class="desc">
-        Explore Beaker's new Web APIs for building peer-to-peer apps.
-      </p>
-    </a>
+    <p>
+      <a href="/docs/how-beaker-works" class="btn white">Learn more</a>
+    </p>
   </div>
-</div>
 
-<div class="callouts-2">
-  <div class="container">
-    <div class="tutorials callout">
-      <ul class="tutorials-list">
-        <li class="tutorial">
-          <a href="/docs/tutorials/create-a-blog.html">
-            <div class="heading">
-              <i class="purple fa fa-pencil"></i>
-              <span>Create a peer-to-peer blog</span>
-            </div>
-            <p>
-              Learn how to create a blog that can be hosted without relying on a third party cloud-hosting service.
-            </p>
-          </a>
-        </li>
-        <li class="tutorial">
-          <a href="/docs/tutorials/host-outside-of-beaker.html">
-            <div class="heading">
-              <i class="orange fa fa-terminal"></i>
-              <span>Host your files from a server</span>
-            </div>
-            <p>
-              Learn how to set up a server to sync your Beaker projects, so your files are always online, even when your computer is turned off.
-            </p>
-          </a>
-        </li>
-        <li class="tutorial">
-          <a href="/docs/tutorials/share-files-secretly.html">
-            <div class="heading">
-              <i class="green fa fa-link"></i>
-              <span>Share files secretly</span>
-            </div>
-            <p>
-              Peer-to-peer websites and files are secret by default. Learn how to create a secret URL that you can use to share files directly with a friend.
-            </p>
-          </a>
-        </li>
-        <li class="tutorial">
-          <a href="/docs/tutorials/read-site-files.html">
-            <div class="heading">
-              <i class="teal fa fa-code"></i>
-              <span>Web APIs: Read files</span>
-            </div>
-            <p>
-              Use Beaker's <code>DatArchive</code> Web API to read file data from a peer-to-peer website.
-            </p>
-          </a>
-        </li>
-      </ul>
-      <p class="more">
-        <a href="/docs/tutorials/">
-          All tutorials
-          <i class="fa fa-angle-right"></i>
+  <div class="col-1-3 external-links">
+    <ul>
+      <li class="install">
+        <span class="icon fa fa-arrow-alt-circle-down fa-fw"></span>
+        <a href="/install">
+          Install Beaker
         </a>
-      </p>
-    </div>
+      </li>
 
-    <div class="updates callout">
-      <h2>Recent updates</h2>
-      <ul class="updates-list">
-        <li>
-          <a href="https://github.com/beakerbrowser/beaker/releases/tag/0.7.0">
-            Beaker 0.7 released
-          </a>
-        </li>
-        <li>
-          <a href="https://blog.datproject.org/2016/12/12/reader-privacy-on-the-p2p-web/">
-            Reader privacy on the peer-to-peer Web
-          </a>
-        </li>
-        <li>
-          <a href="https://pfrazee.github.io/blog/achieving-scale">
-            Achieving scale in the decentralized Web
-          </a>
-        </li>
-      </ul>
-    </div>
+      <li class="view-source">
+        <span class="fas fa-keyboard fa-fw"></span>
+        <a href="https://github.com/beakerbrowser/beaker">
+          Beaker on GitHub
+        </a>
+      </li>
+
+      <li class="support">
+        <span class="fas fa-heart fa-fw"></span>
+        <a href="https://opencollective.com/beaker">
+          Support Beaker
+        </a>
+      </li>
+
+      <li class="chat">
+        <span class="fas fa-comments fa-fw"></span>
+          <a href="https://webchat.freenode.net/?channels=%23beakerbrowser">
+          Talk to us
+        </a>
+      </li>
+    </ul>
   </div>
+</div>
+
+<div class="highlights grid grid-3 small-gap">
+   <a href="/docs/how-beaker-works/peer-to-peer-websites#keeping-a-peer-to-peer-website-online" class="highlight seeding">
+    <h2>All about seeding</h2>
+
+    <p>
+      Seeding, hosting, pinning, say what? Learn about keeping
+      files online in the p2p Web.
+    </p>
+
+    <img class="icon" src="/img/icon/seeding.svg" />
+  </a>
+
+  <a href="/docs/tour#2-view-source" class="highlight view-source">
+    <h2>View (and edit!) Source</h2>
+
+    <p>
+      See how Beaker's View Source can help you learn from and remix projects you like.
+    </p>
+
+    <span class="icon fas fa-font"></span>
+  </a>
+
+  <a href="/docs/faq/#is-the-dat-network-anonymous" class="highlight privacy">
+    <h2>Privacy and anonymity</h2>
+
+    <p>
+      dat:// is a powerful protocol for publishing and sharing, but it's
+      <strong>not anonymous</strong>.
+    </p>
+
+    <span class="icon fas fa-eye"></span>
+  </a>
+</div>
+
+<div class="columns">
+  <div class="quick-links col-1-2">
+    <h2>API Reference</h2>
+    <ul>
+      <li>
+        <a href="/docs/apis/dat"><code>DatArchive</code></a>
+      </li>
+
+      <li>
+        <a href="/docs/apis/manifest"><code>dat.json</code></a>
+      </li>
+
+      <li>
+        <a href="/docs/apis#experimental-api-reference">
+          Experimental APIs
+        </a>
+      </li>
+    </ul>
+
+    <h2>
+      All about Dat
+      <img class="dat-hexagon" src="/img/dat-hexagon.svg"/>
+    </h2>
+
+    <ul>
+      <li>
+        <a href="https://datprotocol.com">Dat protocol specs</a>
+      </li>
+
+      <li>
+        <a href="https://datproject.org">Dat Project</a>
+      </li>
+
+      <li>
+        <a href="https://codeforscience.org">Code for Science & Society</a>
+      </li>
+    </ul>
+
+    <h2>
+      <a href="/docs/all">
+        All documentation
+        <span class="fa fa-angle-double-right"></span>
+      </a>
+    </h2>
+
+    {% include dns-aside.html %}
+  </div>
+
+  <div class="col-1-2">
+    <h2 class="underline">
+      Videos
+    </h2>
+
+    {% include docs-videos.html %}
+  </div>
+</div>
+
+<div class="links-grid">
+  <div class="link-icon">
+    <span class="fa fa-link"></span>
+    <span class="text">Links</span>
+  </div>
+
+  <div class="link changelog">
+    <span class="icon changelog-icon body">
+      <span class="fas fa-circle"></span>
+      <span class="fas fa-circle"></span>
+      <span class="fas fa-circle"></span>
+    </span>
+
+    <a href="/changelog" class="text">
+      Changelog - see what's new
+    </a>
+  </div>
+
+  <a class="link" href="/docs/guides/publish-a-peer-to-peer-website">
+    <span class="icon dot-com">.com</span>
+    <span class="text">
+      Publish a p2p website!
+    </span>
+  </a>
+
+  <a class="link" href="https://github.com/beakerbrowser/explore">
+    <span class="icon fa fa-search"></span>
+    <span class="text">
+      Explore what others have built
+    </span>
+  </a>
+</div>
+
+
+
+<div class="guides">
+  <h2>Guides</h2>
+  {% include guides-grid.html items=site.data.docs.guides.children featured=true %}
+
+  <p>
+    <a class="link" href="/docs/guides">
+      All guides
+      <span class="fa fa-angle-double-right"></span>
+    </a>
+  </p>
 </div>
