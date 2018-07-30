@@ -49,7 +49,7 @@ header: dark
   <h2>History</h2>
 
   <p>
-    Paul released the <a href="https://twitter.com/pfrazee/status/763737371376365568">Beaker prototype</a> in August 2016 after participating in the inaugral <a href="decentralized-web.net">Decentralized Web Summit</a>, where he shopped his idea to integrate peer-to-peer protocols into a browser.
+    Paul released the <a href="https://twitter.com/pfrazee/status/763737371376365568">Beaker prototype</a> in August 2016 after participating in the inaugral <a href="https://decentralized-web.net">Decentralized Web Summit</a>, where he shopped his idea to integrate peer-to-peer protocols into a browser.
   </p>
 
   <p>
@@ -68,6 +68,6 @@ header: dark
 
   <p>
     <a class="btn action" href="/install">Install Beaker</a>
-    <a class="btn" href="/docs">Explore the docs</a>
+    <a class="btn blue" href="/docs">Explore the docs</a>
   </p>
 </div>
