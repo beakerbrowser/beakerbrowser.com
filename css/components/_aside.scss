@@ -1,9 +1,9 @@
-.docs .content aside,
-.content aside {
+aside {
   @extend %inline-flex;
   padding: 20px;
-  margin-bottom: 0;
+  margin: 20px 0;
   width: 100%;
+  font-family: "Inter UI";
 
   &.link {
     padding: 0;
@@ -22,12 +22,11 @@
     padding-left: 10px;
     border-left: 5px dotted $yellow;
     background: #fff;
-    margin: 40px 0;
 
     p.tip-content {
       color: #111;
-      font-size: 13px;
-      margin-left: 15px;
+      font-weight: 500;
+      margin-left: 25px;
     }
 
     .fa-lightbulb {
@@ -132,10 +131,14 @@
   &.dns {
     @extend %flex;
     flex-wrap: nowrap;
-    max-width: 600px;
-    margin: auto;
-    margin-bottom: 20px;
-    font-weight: 600;
+    max-width: 450px;
+    margin: 40px auto;
+    font-weight: 500;
+    padding: 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
 
     a {
       color: inherit;
@@ -143,7 +146,7 @@
 
     .icon-container {
       position: relative;
-      width: 100px;
+      width: 125px;
       height: 40px;
       margin-right: 15px;
 
