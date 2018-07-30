@@ -39,14 +39,11 @@
   .changelog-list {
     list-style: none;
     margin-left: 0;
-    border: 2px solid;
   }
 
   .change {
     @extend %flex;
-    padding: 15px 5px;
-    margin: 0 15px;
-    border-bottom: 2px solid;
+    margin-bottom: 40px;
 
     .fa-circle {
       font-size: 11px;
@@ -74,23 +71,26 @@
       margin-left: auto;
 
       @include respond-to(tablet) {
-        display: flex;
+        // temporarily hide dates
+        // display: flex;
       }
     }
   }
 
   .change-title {
     font-weight: 500;
+    font-size: 16px;
     text-overflow: ellipsis;
+  }
 
-    &:hover {
-      text-decoration: underline;
-    }
+  a.change-title:hover {
+    text-decoration: underline;
   }
 
   .change-description {
     flex: 100%;
-    margin: 15px 0 0 20px;
+    max-width: 650px;
+    margin: 5px 0 0 20px;
 
     @include respond-to(tablet) {
       margin-right: 30px;
