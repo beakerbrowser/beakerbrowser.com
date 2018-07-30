@@ -40,6 +40,30 @@
       font-size: 12.5px;
       font-weight: 500;
       margin-bottom: 0;
+      letter-spacing: .25px;
+
+      &:hover {
+        border-bottom: 1px dotted;
+      }
+    }
+
+    .guide-metadata {
+      margin-top: 10px;
+
+      .author {
+        @extend %flex;
+
+        .avatar {
+          width: 30px;
+          height: 30px;
+          margin-right: 10px;
+          border-radius: 50%;
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 
