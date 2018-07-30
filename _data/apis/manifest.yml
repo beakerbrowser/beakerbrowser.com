@@ -2,7 +2,7 @@ attributes:
   -
     name: "title"
     desc: |
-      A short and descriptive human-friendly title. Can be read with [getInfo()](dat.html#getinfo) and changed with [configure()](dat.html#configure).
+      A short and descriptive human-friendly title. Can be read with [`getInfo()`](dat.html#getinfo) and changed with [`configure()`](dat.html#configure).
 
       ```json
       {
@@ -12,7 +12,7 @@ attributes:
   -
     name: "description"
     desc: |
-      A description of the Dat archive. Can be read with [getInfo()](dat.html#getinfo) and changed with [configure()](dat.html#configure).
+      A description of the Dat archive. Can be read with [`getInfo()`](dat.html#getinfo) and changed with [`configure()`](dat.html#configure).
 
       ```json
       {
@@ -22,9 +22,9 @@ attributes:
   -
     name: "type"
     desc: |
-      A list of 'type' strings. Can be read with [getInfo()](dat.html#getinfo) and changed with [configure()](dat.html#configure).
+      A list of 'type' strings. Can be read with [`getInfo()`](dat.html#getinfo) and changed with [`configure()`(dat.html#configure).
 
-      Type strings are experimental. They were introduced to Beaker as a way to categorize archives, and can be used as a filter in [selectArchive()](dat.html#datarchive-selectarchive). You can list multiple types on an archive.
+      Type strings are experimental. They were introduced to Beaker as a way to categorize archives, and can be used as a filter in [`selectArchive()`](dat.html#datarchive-selectarchive). You can list multiple types on an archive.
 
       ```json
       {
@@ -34,8 +34,8 @@ attributes:
 
       ### What are types used for?
 
-      They are used as a filter in [selectArchive()](dat.html#datarchive-selectarchive), similar to how file-extensions are used in operating system "open file" dialogs.
-      They are also a way for apps to identify the kind of data or content in an archive using [getInfo()](dat.html#getinfo).
+      They are used as a filter in [`selectArchive()`](dat.html#datarchive-selectarchive), similar to how file-extensions are used in operating system "open file" dialogs.
+      They are also a way for apps to identify the kind of data or content in an archive using [`getInfo()`](dat.html#getinfo).
 
       ### What types can I use?
 
@@ -45,25 +45,23 @@ attributes:
   -
     name: "links"
     desc: |
-      An object containing a set of Web links from the Dat. Can be read with [getInfo()](dat.html#getinfo) and changed with [configure()](dat.html#configure).
+      An object containing a set of Web links from the Dat. Can be read with [`getInfo()`](dat.html#getinfo) and changed with [`configure()`/](dat.html#configure).
 
       The `links` object is a mapping of "rel" values to arrays of link objects, as follows:
 
       ```json
       {
-        "rel-type": [{"href": "https://.../"}]
+        "rel-type": [{"href": "https://example.com/"}]
       }
       ```
 
-      The `.links` follows the same schema as [Web links](https://www.w3.org/TR/html5/document-metadata.html#the-link-element) and so any attribute which applies to a `<link>` will apply to these values.
-
-      The one difference is how the `rel` value is handled: in the links object, the `rel` is used as the key. Only one `rel` value should be used.
+      The `links` field follows the same schema as the [link element](https://www.w3.org/TR/html5/document-metadata.html#the-link-element), so any attribute which applies to a `<link>` will apply to these values. The one difference is how the `rel` value is handled: in the links object, the `rel` is used as the key. Only one `rel` value should be used.
 
       If a link has additional rel values, it can specify them using the `rel` field on the link object. For instance, a link with the `rel` value of `"foo bar baz"` would look like this:
 
       ```json
       {
-        "foo": [{"href": "https://.../", "rel": "bar baz"}]
+        "foo": [{"href": "https://example.com/", "rel": "bar baz"}]
       }
       ```
 
@@ -71,15 +69,15 @@ attributes:
 
       ```json
       {
-        "foo": [{"href": "https://.../"}],
-        "bar": [{"href": "https://.../"}],
-        "baz": [{"href": "https://.../"}]
+        "foo": [{"href": "https://example.com/"}],
+        "bar": [{"href": "https://example.com/"}],
+        "baz": [{"href": "https://example.com/"}]
       }
       ```
   -
     name: "fallback_page"
     desc: |
-      The path to a fallback page to serve instead of the default 404 page.
+      The path to a fallback page to serve instead of Beaker's default 404 page.
 
       ```json
       {
@@ -99,8 +97,7 @@ attributes:
   -
     name: "content_security_policy"
     desc: |
-      The security policy for which content can be loaded in the dat site.
-      See [Using Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) for a general description of CSP syntax.
+      The security policy for the website. [Learn more about using Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP).
 
       ```json
       {
@@ -109,12 +106,12 @@ attributes:
       ```
   - name: "experimental.apis"
     desc: |
-      A list of experimental "Lab APIs" which the site has opted into using. Possible values:
+      A list of experimental APIs. To use an experimental API, you must list one of the following strings in the `experimental.apis` field:
 
-       - `"datPeers"` for the [experimental.datPeers API](experimental-datpeers.html)
-       - `"globalFetch"` for the [experimental.globalFetch API](experimental-globalfetch.html)
-       - `"library"` for the [experimental.library API](experimental-library.html)
-       - `"capturePage"` for the [experimental.capturePage API](experimental-capturepage.html)
+       - `"datPeers"` ([API reference](/docs/apis/experimental-datpeers))
+       - `"globalFetch"` ([API reference](/docs/apis/experimental-globalfetch))
+       - `"library"` ([API reference](/docs/apis/experimental-library))
+       - `"capturePage"` ([API reference](/docs/apis/experimental))
 
       ```json
       {
