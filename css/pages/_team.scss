@@ -2,7 +2,7 @@
   @extend %flex;
   flex-wrap: wrap;
   align-items: stretch;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 
   @include respond-to(tablet) {
     flex-wrap: nowrap;
@@ -14,13 +14,14 @@
 
   &.blue {
 
-    .info {
-      background: $blue;
-    }
-
+    .info,
     .bio a,
     .bio .fa {
       color: $blue;
+    }
+
+    .avatar {
+      border: 2px solid $blue;
     }
 
     h4 {
@@ -30,13 +31,14 @@
 
   &.purple {
 
-    .info {
-      background: $purple;
-    }
-
+    .info,
     .bio .fa,
     .bio a {
       color: $purple;
+    }
+
+    .avatar {
+      border: 2px solid $purple;
     }
 
     h4 {
@@ -46,13 +48,14 @@
 
   &.green {
 
-    .info {
-      background: $green;
-    }
-
+    .info,
     .bio .fa,
     .bio a {
       color: $green;
+    }
+
+    .avatar {
+      border: 2px solid $green;
     }
 
     h4 {
@@ -61,12 +64,8 @@
   }
 
   .info {
-    @extend %antialiased;
-    color: #fff;
-    flex: 1 0 135px;
-    width: 135px;
-    height: 135px;
-    padding: 15px;
+    flex: 1 0 125px;
+    width: 125px;
     text-align: center;
 
     h3.name {
@@ -85,18 +84,6 @@
   div.bio {
     @extend %body-font;
     padding: 0 20px;
-
-    p {
-      font-size: 13px;
-    }
-  }
-
-  h4 {
-    margin-top: 20px;
-    margin-bottom: 0px;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 11.5px;
   }
 
   .links {
@@ -114,9 +101,5 @@
         text-decoration: underline;
       }
     }
-  }
-
-  .event-links a {
-    color: #111 !important;
   }
 }
