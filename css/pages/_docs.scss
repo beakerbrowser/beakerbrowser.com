@@ -132,33 +132,36 @@
 
   .breadcrumb {
     display: inline;
-    font-size: 14px;
+    font-size: 14.5px;
     font-weight: 500;
     margin-right: 10px;
     cursor: pointer;
 
-    &.dropdown-container:hover >:not(.fa) {
+    &.dropdown-container:hover .toplevel-link {
       border-bottom: 1px dotted;
     }
 
     .dropdown .nav-item {
-      font-size: 12.5px;
 
       &:hover:not(.active) {
         text-decoration: underline;
         cursor: pointer;
+        color: #111;
+        color: var(--page-color);
       }
 
       &.active {
         font-weight: 500;
         color: var(--page-color);
+        background: #fff;
+        cursor: default;
       }
     }
   }
 }
 
 main {
-  padding: 30px 0;
+  padding: 40px 0;
 }
 
 .docs-nav-mobile {

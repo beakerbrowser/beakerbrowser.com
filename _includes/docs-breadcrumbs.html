@@ -10,32 +10,33 @@
       </span>
 
       <div class="breadcrumb active dropdown-container toggleable-container">
-        <span>{{ activeSection.title }}</span>
+        <span class="toplevel-link">{{ activeSection.title }}</span>
         <i class="fa fa-angle-down"></i>
 
         <div class="dropdown nav-list left toggleable">
-            {% for section in site.data.docs %}
-              {% if activeSection.title == section[1].title %}
-                <a class="nav-item active" href="{{ section[1].url }}">
-                  {{ section[1].title }}
-                  <i class="fa fa-check"></i>
-                </a>
-              {% else %}
-                <a class="nav-item" href="{{ section[1].url }}">{{ section[1].title }}</a>
-              {% endif %}
-            {% endfor %}
+          {% for section in site.data.docs %}
+            {% if activeSection.title == section[1].title %}
+              <a class="nav-item active" href="{{ section[1].url }}">
+                {{ section[1].title }}
+                <i class="fa fa-check"></i>
+              </a>
+            {% else %}
+              <a class="nav-item" href="{{ section[1].url }}">{{ section[1].title }}</a>
+            {% endif %}
+          {% endfor %}
         </div>
       </div>
 
-      <span class="breadcrumb">
-        /
-      </span>
+      {% if activeSection.title != 'Tour' and activeSection.title != 'Help & FAQ' %}
+        <span class="breadcrumb">
+          /
+        </span>
 
-      <div class="breadcrumb active dropdown-container toggleable-container">
-        <span>{{ page.title }}</span>
-        <i class="fa fa-angle-down"></i>
+        <div class="breadcrumb active dropdown-container toggleable-container">
+          <span class="toplevel-link">{{ page.title }}</span>
+          <i class="fa fa-angle-down"></i>
 
-        <div class="dropdown nav-list left toggleable">
+          <div class="dropdown wide nav-list left toggleable">
             {% for sectionPage in activeSection.children %}
               {% if page.title == sectionPage.title %}
                 <a class="nav-item active" href="{{ sectionPage.url }}">
@@ -57,7 +58,15 @@
                 </a>
               {% endif %}
             {% endfor %}
-        </div>
+
+            <div class="dropdown-footer">
+              <a href="{{ activeSection.url }}">
+                <span class="fa fa-arrow-left"></span>
+                Back to {{ activeSection.title }}
+              </a>
+            </div>
+          </div>
+      {% endif %}
       </div>
     {% endif %}
   </div>
