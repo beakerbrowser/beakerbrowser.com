@@ -176,9 +176,43 @@ howBeakerWorks:
   url: /docs/how-beaker-works
   title: How Beaker works
   children:
+    - title: "What's the peer-to-peer Web?"
+      url: /docs/how-beaker-works/
+      children:
+        - title: "Peer-to-peer protocols and Beaker"
+          heading: true
+          url: "#peer-to-peer-protocols-and-beaker"
+        - title: "How is Beaker different from other browsers?"
+          heading: true
+          url: "#how-is-beaker-different-from-other-browsers"
     - title: Peer-to-peer websites
       url: /docs/how-beaker-works/peer-to-peer-websites
-    - title: Peer-to-peer applications
+      children:
+        - title: "But first, what's a website?"
+          url: "#but-first-whats-a-website"
+        - title: "So what's a peer-to-peer website?"
+          url: "#so-whats-a-peer-to-peer-website"
+        - title: "Keeping a p2p website online"
+          url: "#keeping-a-peer-to-peer-website-online"
+    - title: Peer-to-peer Web applications
+      url: /docs/how-beaker-works/peer-to-peer-applications
+      children:
+        - title: What's a Web app?
+          url: "#whats-a-web-app"
+        - title: "What's a peer-to-peer Web app?"
+          url: "#whats-a-peer-to-peer-web-app"
+    - title: All about seeding
+      url: /docs/how-beaker-works/all-about-seeding
+      children:
+      - title: "Seeding, hosting, pinning, say what?"
+        heading: true
+        url: "#seeding-hosting-pinning-say-what"
+      - title: "Seeding and Beaker"
+        heading: true
+        url: "#seeding-and-beaker"
+      - title: "Keeping your p2p website online"
+        heading: true
+        url: "#keeping-your-p2p-website-online"
 webAPIs:
   title: Web APIs
   subtitle: Explore Beaker's APIs for creating peer-to-peer websites and applications
