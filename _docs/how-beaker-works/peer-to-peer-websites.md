@@ -10,7 +10,7 @@ sectionTitle: How Beaker Works
 
 ## But first, what's a website?
 
-A website can be many things, but put simply, it's a folder! That folder can contain files (and sometimes other folders)! The files in a website can be photos, `.txt` files,`.csv` files, or any other type of file.
+A website can be many things, but put simply, it's a folder! That folder can contain files and even other folders. The files in a website can be photos, `.txt` files,`.csv` files, or any other type of file.
 
 Most of the time when you visit a website, its files are sent to your browser with [HTTP](https://developer.mozilla.org/en-US/docs/Web/http). Your browser displays a rendering of [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) files styled with [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics), and with interaction behavior defined by [JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript).
 
@@ -59,11 +59,12 @@ Peer-to-peer protocols like Dat make it possible to publish from your own comput
 
 ### Other ways to seed a peer-to-peer website
 
-It's not  practical to keep your laptop on all the time, but don't worry! There are plenty of other ways to keep your website's files online:
+It's not  practical to keep your computer on all the time, but don't worry! There are plenty of other ways to keep your website's files online:
 
-- Ask a friend to help seed your website
+- Ask a friend to help seed your files with Beaker's [seeding menu](/docs/tour/#core-concept-peers-and-seeding)
 - Share your website's URL with a seeding service like [Hashbase](https://hashbase.io)
-- Or if you're feeling ambitious, set up your own seeding server like [`homebase`](https://github.com/beakerbrowser/dathttpd)
+- Or if you're feeling ambitious, set up your own seeding server with a tool like [`homebase`](https://github.com/beakerbrowser/homebase)
 
-<!-- TODO prompt ot create first website -->
+Read next: [Peer-to-peer Web apps](/docs/how-beaker-works/peer-to-peer-applications)
 
+<!-- TODO prompt to create first website -->

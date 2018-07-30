@@ -2,7 +2,7 @@
 title: Peer-to-peer Web applications
 section: howBeakerWorks
 sectionTitle: How Beaker Works
-order: 4
+sectionUrl: /docs/how-beaker-works
 ---
 
 <p class="accent">
@@ -10,39 +10,23 @@ order: 4
   Web wouldn't be the Web without applications that provide more dynamic functionality.
 </p>
 
-## What's a Web application?
+## What's a Web app?
 
-The line between website and Web application is fuzzy — they can both be described
-as a folder of [HTML](todo), [CSS](todo), and [JavaScript](todo) files. While websites and
-applications are compositionally similar, roughly,
-a Web application provides special behavior or functionality using JavaScript.
+The line between website and Web app is fuzzy — they can both be described as a folder of [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics), and [JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript) files.
 
-A calculator, a tool for managing photo albums, Twitter, or your bank's website
-could all be described as Web applications.
+While websites and apps are compositionally similar, we often use the word "app" to describe a website that provides some special behavior or functionality with JavaScript. A calculator, a tool for managing photo albums, Twitter, or your bank's website could all be described as Web apps.
 
-On the Web today, when you login to an app, you send your username and password
-to a server in the cloud. That server is responsible for hosting your user profile and all the data
-associated with it, and your browser simply acts as the interface to view the software,
-the data, and the business logic that the server sends to it.
+## What's a peer-to-peer Web app?
 
-<figure>
-  <img src="/img/icon/traditional-web.svg"/>
-</figure>
+A p2p Web app is not much different than any other Web app, with the exception that its files are transported with a p2p protocol!
 
-## What's a peer-to-peer Web application?
+<!-- TODO add a bit about the APIs -->
 
-A peer-to-peer Web application is not much different than any other Web application,
-with the exception that its files are transported using a peer-to-peer protocol!
+### What's so special about peer-to-peer apps?
 
-### User profiles, data, and business logic on the peer-to-peer Web
+On the p2p  Web, files are transmitted directly between computers instead of from servers to computers. Because participants can connect directly to one another, it makes it possible to build apps with entirely new architectures that don't necessarily require managing a database or paying for a server!
 
-On the peer-to-peer Web, files are transmitted directly between computers instead
-of from servers to computers. This means it's possible to build completely peer-to-peer
-applications that don't require managing a database or a server!
-
-Instead of making a request to a database server, when the app needs to update
-the user's profile or store new data, it can use browser APIs to read and write
-to the peer-to-peer website that contains the user's profile and data.
+Instead of making a request to a database or server, when the app needs to update the user's profile or store new data, it can use [browser APIs](/docs/apis) to read and write to the peer-to-peer website that contains the user's profile and data.
 
 This has a few advantages:
 
@@ -50,6 +34,6 @@ This has a few advantages:
 - Developers can launch applications that use profiles without needing to set up a server or database
 - There's no third-party server in charge of managing millions of user's profiles
 
-This is is just a brief overview of peer-to-peer applications. For a deep-dive on
-building peer-to-peer applications and recommended architectures and techniques, see
-our guides [todo] section.
+This is is just a brief overview of peer-to-peer applications. To learn more about building p2p apps, see our [guides](/docs/guides) section.
+
+Read next: [All about seeding](/docs/how-beaker-works/all-about-seeding)

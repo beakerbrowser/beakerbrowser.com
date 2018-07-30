@@ -1,6 +1,7 @@
 ---
 title: Privacy and security
 section: howBeakerWorks
+sectionUrl: /docs/how-beaker-works
 sectionTitle: How Beaker Works
 order: 2
 ---
