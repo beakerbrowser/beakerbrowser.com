@@ -3,7 +3,6 @@
   flex-wrap: wrap;
   align-items: stretch;
   margin-bottom: 20px;
-  border: 5px solid;
 
   @include respond-to(tablet) {
     flex-wrap: nowrap;
@@ -14,11 +13,13 @@
   }
 
   &.blue {
-    border-color: $blue;
-    background: $blue;
 
-    .name,
-    .bio a {
+    .info {
+      background: $blue;
+    }
+
+    .bio a,
+    .bio .fa {
       color: $blue;
     }
 
@@ -28,10 +29,12 @@
   }
 
   &.purple {
-    border-color: $purple;
-    background: $purple;
 
-    .name,
+    .info {
+      background: $purple;
+    }
+
+    .bio .fa,
     .bio a {
       color: $purple;
     }
@@ -42,10 +45,12 @@
   }
 
   &.green {
-    border-color: $green;
-    background: $green;
 
-    .name,
+    .info {
+      background: $green;
+    }
+
+    .bio .fa,
     .bio a {
       color: $green;
     }
@@ -56,32 +61,33 @@
   }
 
   .info {
+    @extend %antialiased;
     color: #fff;
-    flex: 1 0 190px;
+    flex: 1 0 135px;
+    width: 135px;
+    height: 135px;
     padding: 15px;
+    text-align: center;
+
+    h3.name {
+      margin: 0;
+    }
   }
 
   .avatar {
-    width: 70px;
-    height: 70px;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
-    margin-bottom: 5px;
-  }
-
-  .name {
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: initial;
-    margin-top: 0;
+    margin-bottom: 0px;
+    border: 2px solid rgba(255,255,255,.15);
   }
 
   div.bio {
     @extend %body-font;
-    padding: 20px;
-    background: #fff;
+    padding: 0 20px;
 
     p {
-      font-size: .85rem;
+      font-size: 13px;
     }
   }
 
@@ -94,11 +100,8 @@
   }
 
   .links {
-    @extend %antialiased;
     margin-left: 0;
-    color: #fff;
     list-style: none;
-    font-weight: 600;
 
     .fa {
       margin-right: 5px;
