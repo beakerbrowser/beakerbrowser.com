@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="505px" height="314px" viewBox="0 0 505 314" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
-    <title>url-bar</title>
-    <desc>Created with Sketch.</desc>
     <defs>
         <rect id="path-1" x="0" y="114" width="500" height="80" rx="8"></rect>
         <rect id="path-2" x="159" y="125" width="326" height="55" rx="8"></rect>
@@ -23,9 +20,9 @@
                 <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
                 <rect stroke="#DDDDDD" stroke-width="1" x="159.5" y="125.5" width="325" height="54" rx="8"></rect>
             </g>
-            <text id="dat://beakerbrowser." font-family="Hind-Medium, Hind" font-size="24" font-weight="400">
+            <text id="dat://beakerbrowser." font-family="Inter UI" font-size="22" font-weight="500">
                 <tspan x="172" y="160" fill="#5743FF">dat://</tspan>
-                <tspan x="233.08" y="160" font-family="Hind-Regular, Hind" font-weight="normal" fill="#C4C4C4">beakerbrowser.com</tspan>
+                <tspan x="233.08" y="160" font-family="Inter UI" font-weight="normal" fill="#BBB">beakerbrowser.com</tspan>
             </text>
             <g id="arrow-right" fill-rule="nonzero">
                 <use fill="#C4C4C4" fill-rule="evenodd" xlink:href="#path-3"></use>
