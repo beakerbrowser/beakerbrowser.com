@@ -67,14 +67,14 @@
     flex: 1 0 125px;
     width: 125px;
     text-align: center;
-    margin-right: 20px;
 
     @include respond-to(netbook) {
-      margin-right: 0;
+      margin-right: 20px;
     }
 
     h3.name {
       margin: 0 0 20px 0;
+      font-weight: 500;
     }
   }
 

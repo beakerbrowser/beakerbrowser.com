@@ -41,8 +41,8 @@
   }
 
   p a:not(.btn) {
-    color: $blue;
-    // color: var(--page-color); // TODO
+    // color: $blue;
+    color: var(--page-color); // TODO
 
     &:hover {
       text-decoration: underline;
@@ -57,11 +57,10 @@
 
 hr {
   width: 100px;
-  height: 7px;
+  height: 4px;
   margin: auto;
-  border-radius: 40px;
   border: 0;
-  background: #ddd;
+  background: var(--page-color);
 
   &.blue {
     background: $blue;
