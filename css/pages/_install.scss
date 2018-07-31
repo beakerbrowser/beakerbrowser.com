@@ -1,16 +1,5 @@
 .layout.install {
-  // TODO: this is so ugly but i'm jetlagged and running out of time so
-  // it'll have to do for now
-  position: relative;
-
-
-  footer {
-    @media (min-width: 700px) {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-    }
-  }
+  font-size: 15px;
 
   .installers {
     @extend %flex;
@@ -21,8 +10,9 @@
     @extend %transition;
     padding: 15px;
     background: #fff;
+    color: #111;
     text-align: center;
-    border: 1px solid;
+    border: 2px solid #111;
     flex: 1;
     margin-left: -2px;
     margin-right: 0;
@@ -30,22 +20,18 @@
     text-decoration: none;
 
     &:first-of-type {
-      border-left: 1px solid;
-      border-radius: 4px 0 0 4px;
-    }
-
-    &:last-of-type {
-      border-radius: 0 4px 4px 0;
+      border-left: 2px solid;
     }
 
     &:hover {
       transform: scale(1.03);
-      border: 1px solid $blue;
+      border: 2px solid $blue;
       z-index: 1;
       color: $blue;
 
       .pseudolink {
         color: $blue;
+        text-decoration: underline;
       }
     }
 
@@ -57,11 +43,6 @@
     .platform-icon {
       font-size: 40px;
       margin-bottom: 15px;
-    }
-
-    .pseudolink {
-      font-family: Hind;
-      text-decoration: underline;;
     }
   }
 }
