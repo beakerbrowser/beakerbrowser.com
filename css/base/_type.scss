@@ -1,22 +1,19 @@
 // @import url('https://rsms.me/inter/inter-ui.css');
 @font-face {
   font-family: 'Inter UI';
-   src: url('/fonts/Inter-UI-Regular.woff2') format('woff2'),
-        url('/fonts/Inter-UI-Regular.woff') format('woff');
+  src: url('/fonts/Inter-UI-Regular.woff') format('woff');
   font-weight: regular;
 }
 
 @font-face {
   font-family: 'Inter UI';
-  src: url('/fonts/Inter-UI-Medium.woff2') format('woff2'),
-       url('/fonts/Inter-UI-Medium.woff') format('woff');
+  src: url('/fonts/Inter-UI-Medium.woff') format('woff');
   font-weight: 500;
 }
 
 @font-face {
   font-family: 'Inter UI';
-  src: url('/fonts/Inter-UI-Bold.woff2') format('woff2'),
-       url('/fonts/Inter-UI-Bold.woff') format('woff');
+  src: url('/fonts/Inter-UI-Bold.woff') format('woff');
   font-weight: 700;
 }
 
@@ -48,6 +45,7 @@ pre {
 }
 
 p {
+  font-family: "Inter UI";
 
   &:not(:last-child) {
     margin-bottom: 15px;
