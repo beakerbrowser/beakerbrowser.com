@@ -6,7 +6,7 @@
   <!--
   <ul class="pages">
     {% for page in section.children %}
-      {% if include.section == 'tour' %}
+      {% if include.section == 'tour' or include.section == 'faq' %}
         {% assign activePageNav = section %}
       {% elsif activePage.title == page.title %}
         {% assign activePageNav = page %}
