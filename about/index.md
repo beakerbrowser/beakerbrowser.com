@@ -35,7 +35,10 @@ header: dark
   <p>
     Browsers are the gateway to the Web! By building a browser with experimental features and capabilities, we have the flexibility to explore how the browser can help uphold the vision of an open Web.
 
-    {% include take-a-tour-aside.html %}
+    <a href="/docs/tour">
+      Take a tour
+      <span class="fa fa-angle-double-right"></span>
+    </a>
   </p>
 </div>
 
@@ -51,7 +54,7 @@ header: dark
   <h2>History</h2>
 
   <p>
-    Paul released the <a href="https://twitter.com/pfrazee/status/763737371376365568">Beaker prototype</a> in August 2016 after participating in the inaugral <a href="https://decentralized-web.net">Decentralized Web Summit</a>, where he shopped his idea to integrate peer-to-peer protocols into a browser.
+    Paul released the <a href="https://twitter.com/pfrazee/status/763737371376365568">Beaker prototype</a> in August 2016 after participating in the inaugral <a href="https://decentralizedweb.net">Decentralized Web Summit</a>, where he shopped his idea to integrate peer-to-peer protocols into a browser.
   </p>
 
   <p>
