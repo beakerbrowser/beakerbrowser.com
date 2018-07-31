@@ -80,3 +80,6 @@
 .fa-calendar:before {
   content: "\f073";
 }
+.fa-window-maximize:before {
+  content: "\f2d0";
+}
