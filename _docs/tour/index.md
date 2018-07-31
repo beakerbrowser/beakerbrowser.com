@@ -131,5 +131,5 @@ Ready to get started?
 
 - [Install Beaker](/install)
 - [What's a peer-to-peer website?](/docs/how-beaker-works/peer-to-peer-websites)
-- [Make a peer-to-peer website](/guides/make-a-peer-to-peer-website)
-- [Learn more about Dat](/docs/how-beaker-works/dat)
+- [Make a peer-to-peer website](/docs/guides/publish-a-peer-to-peer-website)
+- [Learn more about Dat](https://datproject.org)
