@@ -89,6 +89,8 @@
     }
 
     pre.highlight {
+      overflow-x: hidden;
+      text-overflow: ellipsis;
       padding: 15px;
     }
 
