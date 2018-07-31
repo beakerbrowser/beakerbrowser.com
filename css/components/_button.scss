@@ -2,7 +2,6 @@
   @extend %inline-flex;
   @extend %transition;
   justify-content: center;
-  font-family: Hind;
   font-size: .9rem;
   font-weight: 600;
   height: 32px;
@@ -48,11 +47,11 @@
   &.action {
     background: $blue;
     color: #fff;
-    -webkit-font-smoothing: antialiased;
-    font-weight: 700;
+    border-color: transparent;
+    font-weight: 500;
 
     &:hover {
-      background: darken($blue, 3%);
+      background: darken($blue, 5%);
     }
 
     &.white {
@@ -72,6 +71,14 @@
         background: darken($green, 3%);
       }
     }
+
+    &.purple {
+      background: $purple;
+
+      &:hover {
+        background: darken($purple, 5%);
+      }
+    }
   }
 
   // icon spacing
@@ -83,7 +90,7 @@
 
 a.btn {
   display: inline-block;
-  line-height: 32px;
+  // line-height: 32px;
 }
 
 .btn-group {

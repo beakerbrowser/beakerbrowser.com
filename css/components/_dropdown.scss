@@ -15,13 +15,12 @@
   width: 400px;
   padding: 0;
   background: #fff;
-  border: 1px solid mix(#ddd, transparentize($blue, .9));
+  border: 1px solid #ddd;
   border-radius: 4px;
   font-size: .85rem;
   transition-property: all;
 
-  .dropdown-body,
-  .dropdown-footer {
+  .dropdown-body {
     padding: 20px;
   }
 
@@ -32,9 +31,13 @@
   }
 
   .dropdown-footer {
-    // TODO give this a variable
-    background: mix(#f7f7f7, transparentize($blue, .9));
-    border-top: 1px solid mix(#eee, transparentize($blue, .9));
+    margin: 10px 10px 0 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+
+    a:hover {
+      text-decoration: underline;
+    }
   }
 
   // triangle
@@ -49,8 +52,8 @@
     height: 15px;
     transform: translateX(-50%) rotate(45deg);
     background: #fff;
-    border-left: 1px solid mix(#ddd, transparentize($blue, .9));
-    border-top: 1px solid mix(#ddd, transparentize($blue, .9));
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
   }
 
   &.visible {
@@ -79,6 +82,10 @@
   width: 200px;
   padding: 10px 0;
 
+  &.wide {
+    width: 275px;
+  }
+
   .dropdown-body {
     padding: 0;
   }
@@ -89,8 +96,7 @@
     width: 100%;
     padding: 8px 15px;
     background: #fff;
-    color: #333;
-    font-family: Hind;
+    color: #222;
     font-weight: 400;
     text-align: left;
     cursor: pointer;
@@ -110,7 +116,7 @@
 
     &:hover {
       color: $blue;
-      background: mix(#f7f7f7, transparentize($blue, .9));
+      background: #f7f7f7;
     }
   }
 }
