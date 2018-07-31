@@ -1,18 +1,21 @@
 .badge {
-  @extend %antialiased;
-  display: inline-block;
+  @extend %inline-flex;
+  align-items: center;
+  height: 18px;
   margin: 0 5px;
-  padding: 4px 7px 1px 7px;
-  line-height: 1;
-  vertical-align: middle;
-  border-radius: 40px;
+  padding: 0 7px;
+  border-radius: 1px;
   background: $blue;
   color: #fff;
   font-family: "Inter UI";
-  font-weight: 700;
-  font-size: .65rem;
+  font-weight: 500;
+  font-size: 10.5px;
+  letter-spacing: .75px;
   text-transform: uppercase;
-  letter-spacing: .6px;
+
+  &.round {
+    border-radius: 40px;
+  }
 
   &.warning {
     background: $orange;
