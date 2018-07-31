@@ -17,7 +17,7 @@ There are many peer-to-peer (p2p) protocols with subtle differences, but they sh
 
 ## Peer-to-peer protocols and Beaker
 
-We call Beaker a p2p browser because it supports a p2p protocol called [Dat](https://datproject.org) (`dat://``). Adding `dat://`` support in the browser made it possible for Beaker to provide experimental new features:
+We call Beaker a p2p browser because it supports a p2p protocol called [Dat](https://datproject.org) (`dat://`). Adding `dat://` support in the browser made it possible for Beaker to provide experimental new features:
 
 - Publishing websites and files from the browser, no server required
 - [APIs](/docs/apis) for building p2p apps
