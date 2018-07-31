@@ -9,9 +9,9 @@ layout: snippets
 {% for item in site.data.snippets %}
   <div class="snippet">
     <div class="snippet-heading">
-      <a href="/docs/snippets/{{ item.slug }}" class="snippet-title">
+      <span href="/docs/snippets/{{ item.slug }}" class="snippet-title">
        {{ item.title }}
-      </a>
+      </span>
 
       <button class="btn plain copy-snippet" tooltip="Copy snippet" data-target="snippet-{{ forloop.index0 }}">
         <span class="fa fa-paste"></span>
@@ -24,7 +24,7 @@ layout: snippets
     </p>
     {% endif %}
 
-    <div id="snippet-{{ forloop.index0 }}">
+    <div class="snippet-content" id="snippet-{{ forloop.index0 }}">
 {% highlight javascript %}
 {{ item.code }}
 {% endhighlight %}

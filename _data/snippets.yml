@@ -64,7 +64,7 @@
 -
   title: Create a new website
   code: |
-    var archive = await DatArchive.create({
+    await DatArchive.create({
       title: 'The name of the archive',
       description: 'A longer description of the archive',
       type: ['website']
@@ -72,28 +72,28 @@
 -
   title: Create a copy of a website
   code: |
-    var archive = await DatArchive.fork(sourceArchiveUrl, {
+    await DatArchive.fork(sourceUrl, {
       title: 'New name',
       description: 'New description'
     })
 -
   title: Open Beaker's website selector modal
   code: |
-    var archive = await DatArchive.selectArchive({
+    await DatArchive.selectArchive({
       prompt: 'Select an archive',
       buttonLabel: 'Accept'
     })
 -
   title: Use a type filter in the select modal
   code: |
-    var archive = await DatArchive.selectArchive({
+    await DatArchive.selectArchive({
       prompt: 'Select a fritter user profile',
       filters: {isOwner: true, type: ['user-profile', 'fritter-user-profile']}
     })
 -
   title: Lookup the key of a DNS name
   code: |
-    var key = await DatArchive.resolveName('beakerbrowser.com')
+    await DatArchive.resolveName('beakerbrowser.com')
 -
   title: Check if something is a file or a folder
   code: |
@@ -103,20 +103,20 @@
 -
   title: Read a folder
   code: |
-    var filenames = await archive.readdir('/')
-    var filepaths = await archive.readdir('/', {recursive: true})
-    var filestats = await archive.readdir('/', {stat: true})
+    await archive.readdir('/')
+    await archive.readdir('/', {recursive: true})
+    await archive.readdir('/', {stat: true})
 -
   title: Read a file
   code: |
-    var str = await archive.readFile('/index.html', 'utf8')
-    var arrayBuffer = await archive.readFile('/img/logo/logo.png', 'binary')
+    await archive.readFile('/index.html', 'utf8')
+    await archive.readFile('/img/logo/logo.png', 'binary')
 -
   title: Get the download progress of a file
   code: |
     var st = await archive.stat('/index.html')
-    var percentDownloaded = st.downloaded / st.blocks
-    var bytesDownloaded = st.size * percentDownloaded
+    var percent = st.downloaded / st.blocks
+    var bytes = st.size * percent
 -
   title: Get the download progress of a folder
   code: |

@@ -21,11 +21,11 @@
   .snippet {
     @extend %flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: flex-start;
     padding: 10px 15px 15px 15px;
     background: #eee;
     border: 2px solid transparent;
+    overflow-x: hidden;
 
     .snippet-heading {
       @extend %inline-flex;
@@ -38,16 +38,16 @@
     .snippet-title {
       font-weight: 600;
       font-size: 14.5px;
-
-      &:hover {
-        text-decoration: underline;
-      }
     }
 
     .snippet-description {
       color: rgba(0,0,0,.85);
       margin-bottom: 7px;
       font-size: 12.5px;
+    }
+
+    .snippet-content {
+      width: 100%;
     }
 
     .btn.copy-snippet {
