@@ -39,6 +39,10 @@
     {% endif %}
   </head>
   <body class="layout {{ page.sublayout }}">
+    <style>
+      body { page--color: #5543ff; }
+    </style>
+
     {% if page.header == "dark" %}
       {% include header-dark.html %}
     {% else %}

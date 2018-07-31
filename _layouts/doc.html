@@ -3,16 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ page.sectionTitle }} | {{ page.title }}</title>
+    {% if page.sectionTitle %}
+      <title>{{ page.sectionTitle }} - {{ page.title }}</title>
+    {% else %}
+      <title>{{ page.title }} - Beaker Browser</title>
+    {% endif %/}
     <meta name="viewport" content="width=device-width">
-    <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
 
     <!-- SEO -->
     {% include keywords.html %}
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
     <link rel="icon" href="/img/favicon.png">
 
     <!-- social woo woo -->
@@ -20,7 +23,7 @@
     {% if page.layout == 'post' %}
       <meta name="twitter:site" content="@BeakerBrowser" />
       <meta name="twitter:title" content="{{ page.title }}"/>
-      <meta name="twitter:description" content="{{ page.excerpt | markdownify | strip_html }}"/>
+      <meta name="twitter:description" content="{{ page.description }}"/>
       {% if page.image %}
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:image" content="https://beakerbrowser.com{{ page.image }}" />
@@ -32,46 +35,46 @@
       <meta name="twitter:card" content="summary_large_image">
       <meta name="twitter:site" content="@BeakerBrowser">
       <meta name="twitter:creator" content="@BeakerBrowser">
-      <meta name="og:title" content="Beaker | {{ page.title | default: "Peer-to-peer Web browser. No blockchain required." }}">
-      <meta name="og:description" content="{{ page.desc }}">
+      <meta name="og:title" content="{{ page.title | default: "Documentation - Beaker Browser" }}">
+      <meta name="og:description" content="{{ page.description }}">
       {% if page.thumb %}
         <meta name="og:image" content="{{ page.thumb }}">
       {% endif %}
     {% endif %}
 
     {% case page.section %}
-      {% when 'tutorials' %}
-        <style>body { --page-color: orange; }</style>
+      {% when 'guides' %}
+        <style>body { --page-color: #8D54F0; }</style>
       {% when 'webAPIs' %}
         <style>body { --page-color: #0eb370; }</style>
-      {% when 'troubleshooting' %}
-        <style>body { --page-color: green; }</style>
       {% when 'faq' %}
-        <style>body { --page-color: magenta; }</style>
+        <style>body { --page-color: rgb(255, 149, 0); }</style>
+      {% when 'howBeakerWorks' %}
+        <style>body { --page-color: #fb136d;}</style>
       {% else %}
         <style>body { --page-color: #4353ff; }</style>
     {% endcase %}
   </head>
 
   <body class="layout doc">
-    {% if page.sectionTitle == page.title %}
+    {% if page.section == 'faq' or page.section == 'tour' %}
+      {% include docs-breadcrumbs.html section=page.section %}
+      {% include docs-title-bar.html %}
+    {% elsif page.sectionTitle == page.title %}
       {% include header-light.html %}
       {% include docs-hero.html section=page.section page=page class=page.class %}
     {% else %}
       {% include docs-breadcrumbs.html section=page.section page=page class=page.class %}
-      <div class="title-bar">
-        <div class="container">
-          <h1>{{ page.title }}{% if page.experimental %} (lab){% endif %}</h1>
-        </div>
-      </div>
+      {% include docs-title-bar.html page=page %}
     {% endif %}
 
     <main class="docs {{ page.class }}">
       <div class="container content-container">
-      {% include docs-sidebar.html section=page.section page=page %}
+        {% include docs-sidebar.html section=page.section page=page %}
 
-      <div class="content">
-        {{ content }}
+        <div class="content">
+          {{ content }}
+        </div>
       </div>
     </main>
 
