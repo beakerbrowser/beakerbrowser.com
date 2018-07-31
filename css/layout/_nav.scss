@@ -1,5 +1,9 @@
+.nav {
+  display: block;
+
+}
+
 .nav-link {
-  font-family: Hind;
 
   &.dropdown-container {
 
@@ -35,7 +39,6 @@
 
     p,
     ul {
-      font-family: Hind;
       font-weight: 400;
     }
 
@@ -71,7 +74,6 @@
       a {
         color: $blue;
         color: var(--page-color);
-        font-weight: 300;
 
         &:hover {
           text-decoration: underline;
