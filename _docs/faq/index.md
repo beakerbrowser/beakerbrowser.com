@@ -1,7 +1,6 @@
 ---
 title: Help & FAQ
 section: faq
-sectionTitle: faq
 ---
 
 Have a question that isn't answered here? [Open an issue on GitHub](https://github.com/beakerbrowser/beakerbrowser.com) or tweet at [@BeakerBrowser](https://twitter.com/beakerbrowser).
@@ -53,8 +52,6 @@ online, there are a few options:
 - Ask your friends to help seed your website's files
 - Share your website's URL with a seeding service like [Hashbase](https://hashbase.io)
 - Or if you're feeling ambitious, run a your own seeding server using [`homebase`](https://github.com/beakerbrowser/homebase)
-
-## How TODO
 
 ## Is there an iOS or Android Beaker client?
 
