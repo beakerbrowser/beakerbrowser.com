@@ -70,11 +70,17 @@
 
     <main class="docs {{ page.class }}">
       <div class="container content-container">
-        {% include docs-sidebar.html section=page.section page=page %}
+        {% if page.sectionTitle != page.title %}
+          {% include docs-sidebar.html section=page.section page=page %}
 
-        <div class="content">
-          {{ content }}
-        </div>
+          <div class="content">
+            {{ content }}
+          </div>
+        {% else %}
+          <div class="content left">
+            {{ content }}
+          </div>
+        {% endif %}
       </div>
     </main>
 
