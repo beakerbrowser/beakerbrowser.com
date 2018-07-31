@@ -3,8 +3,6 @@ title: Changelog
 layout: changelog
 ---
 
-See what's new in Beaker
-
 <ul class="changelog-list">
 {% for item in site.data.changelog %}
   <li class="change">
@@ -16,7 +14,7 @@ See what's new in Beaker
       <span class="change-title">{{ item.title }}</span>
     {% endif %}
 
-    <div class="date">{{ item.date }}</div>
+    <div class="date badge">{{ item.date }}</div>
 
     {% if item.description %}
     <p class="change-description">
