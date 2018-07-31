@@ -1,11 +1,24 @@
 .layout.about {
 
   h1 {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
+    line-height: 1.4;
   }
 
-  p:not(.accent):not(.bio) {
-    font-size: 14.5px;
+  p.accent {
+    font-size: 17px;
+  }
+
+  @include respond-to(tablet) {
+
+    h1 {
+      font-size: 2.2rem;
+    }
+  }
+
+  aside,
+  p:not(.accent) {
+    font-size: 15px;
   }
 
   .images {
@@ -19,7 +32,7 @@
       border: 1px solid #ddd;
       box-shadow: 0 5px 25px rgba(0,0,0,0.15);
       display: none;
-      max-width: 500px;
+      max-width: 400px;
 
       @include respond-to(netbook) {
         display: block;
