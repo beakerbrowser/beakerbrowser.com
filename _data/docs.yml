@@ -524,3 +524,27 @@ faq:
   title: Help & FAQ
   url: /docs/faq
   children:
+    - title: When I visit a dat:// URL in Beaker, does Beaker download the entire website?
+      heading: true
+      url: "#when-i-visit-a-dat-url-in-beaker-does-beaker-download-the-entire-website"
+    - title: Do visitors to peer-to-peer websites seed its files?
+      heading: true
+      url: "#do-visitors-to-peer-to-peer-websites-seed-its-files"
+    - title: Is the Dat network anonymous?
+      heading: true
+      url: "#is-the-dat-network-anonymous"
+    - title: Who can access dat:// websites?
+      heading: true
+      url: "#who-can-access-dat-websites"
+    - title: Will my website stay online when I turn Beaker off?
+      heading: true
+      url: "#will-my-website-stay-online-when-i-turn-beaker-off"
+    - title: Is there an iOS or Android Beaker client?
+      heading: true
+      url: "#is-there-an-ios-or-android-beaker-client"
+    - title: Will peer-to-peer protocols like Dat ever be adopted by other browsers?
+      heading: true
+      url: "#will-peer-to-peer-protocols-like-dat-ever-be-adopted-by-other-browsers"
+    - title: How is Beaker built?
+      heading: true
+      url: "#how-is-beaker-built"
