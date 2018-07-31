@@ -13,6 +13,7 @@
     font-weight: 600;
 
     &:not(.btn) {
+      margin-left: 40px;
 
       &:hover {
         text-decoration: underline;
@@ -25,14 +26,6 @@
     background: $blue;
     color: #fff;
     font-weight: 700;
-
-    .btn.action {
-      background: transparent;
-
-      &:hover {
-        background: transparentize(#fff, .9);
-      }
-    }
   }
 
   &.dark {
