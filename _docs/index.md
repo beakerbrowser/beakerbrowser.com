@@ -15,7 +15,7 @@ order: 1
 
     <p>
       Beaker is an experimental peer-to-peer browser with support for
-      the <a class="link" href="#all-about-dat">dat:// protocol</a>.
+      the <a class="link" href="https://datproject.org">dat:// protocol</a>.
     </p>
 
     <p>
