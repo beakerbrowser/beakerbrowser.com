@@ -6,6 +6,7 @@ sectionTitle: Guides
 author: Tara Vancil
 authorAvatar: /img/team/taravancil.jpg
 authorLink: https://taravancil.com
+description: We’re big fans of Markdown, so we added support for Markdown rendering in Beaker. Markdown rendering is...
 ---
 
 We’re big fans of [Markdown](https://daringfireball.net/projects/markdown/syntax), so we added support for Markdown rendering in Beaker.

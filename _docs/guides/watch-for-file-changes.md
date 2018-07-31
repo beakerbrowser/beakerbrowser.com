@@ -6,6 +6,7 @@ sectionTitle: Guides
 author: Paul Frazee
 authorAvatar: /img/team/pfrazee.jpg
 authorLink: https://pfrazee.hashbase.io
+description: Learn how to use the DatArchive.watch() API by example
 ---
 
 Beaker's [`DatArchive` API](/docs/apis/dat) includes the [`watch()`](/docs/apis/dat.html#watch) method to notify you when a file or folder changes.

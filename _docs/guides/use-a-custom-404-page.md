@@ -6,6 +6,7 @@ section: guides
 author: Tara Vancil
 authorAvatar: /img/team/taravancil.jpg
 authorLink: https://taravancil.com
+description: Learn how to set a custom 404 page for dat:// websites in the Beaker Browser
 ---
 
 Beaker renders a default 404 page when you navigate to a page that can't be found:

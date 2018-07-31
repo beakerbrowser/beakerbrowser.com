@@ -6,6 +6,7 @@ sectionTitle: Guides
 author: Paul Frazee
 authorLink: https://pfrazee.hashbase.io
 authorAvatar: /img/team/pfrazee.jpg
+description: Learn how to use the Beaker Browser's experimental APIs 
 ---
 
 

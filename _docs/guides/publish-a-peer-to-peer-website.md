@@ -6,6 +6,7 @@ sectionTitle: Guides
 author: Tara Vancil
 authorLink: https://taravancil.com
 authorAvatar: /img/team/taravancil.jpg
+description: Ready to create your first website? Already have a website that you want to publish on the p2p Web? This guide is for you.
 ---
 
 <p class="accent">

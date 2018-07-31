@@ -6,6 +6,7 @@ sectionTitle: Guides
 author: Paul Frazee
 authorLink: https://pfrazee.hashbase.io
 authorAvatar: /img/team/pfrazee.jpg
+description: Learn how to write files using the DatArchive API by example
 ---
 
 The [DatArchive API](/docs/apis/dat) provides a simple set of APIs to write files, create directories, and delete data.

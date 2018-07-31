@@ -6,6 +6,7 @@ sectionTitle: Guides
 author: Paul Frazee
 authorLink: https://pfrazee.hashbase.io
 authorAvatar: /img/team/pfrazee.jpg
+description: Beaker's DatArchive API provides tools for reading files and directories on the Dat network. Here are some examples.
 ---
 
 Beaker's [`DatArchive` API](/docs/apis/dat) provides tools for reading files and directories on the Dat network. Here are some examples.

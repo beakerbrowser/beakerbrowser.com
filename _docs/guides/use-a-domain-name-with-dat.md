@@ -6,6 +6,7 @@ sectionTitle: Guides
 author: Tara Vancil
 authorAvatar: /img/team/taravancil.jpg
 authorLink: https://taravancil.com
+description: Learn how to use a domain name with a dat:// website
 ---
 
 By default, `dat://` websites are addressed with a 64 character URL. For example, here's the raw `dat://` URL for [dat://beakerbrowser.com](dat://beakerbrowser.com):
