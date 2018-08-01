@@ -376,6 +376,7 @@ guides:
   children:
     - title: Use a domain name with dat://
       url: /docs/guides/use-a-domain-name-with-dat
+      path: /_docs/guides/use-a-domain-name-with-dat.md
       author: Tara Vancil
       authorLink: https://taravancil.com
       authorAvatar: /img/team/taravancil.jpg
@@ -389,6 +390,7 @@ guides:
           url: "#well-knowndat"
     - title: Publish a peer-to-peer website
       url: /docs/guides/publish-a-peer-to-peer-website
+      path: /_docs/guides/publish-a-peer-to-peer-website.md
       author: Tara Vancil
       authorLink: https://taravancil.com
       authorAvatar: /img/team/taravancil.jpg
@@ -400,11 +402,13 @@ guides:
           url: "#publish-a-website-with-the-dat-cli"
     - title: Use a custom 404 page
       url: /docs/guides/use-a-custom-404-page
+      path: /_docs/guides/use-a-custom-404-page.md
       author: Tara Vancil
       authorLink: https://taravancil.com
       authorAvatar: /img/team/taravancil.jpg
     - title: Using experimental APIs
       url: /docs/guides/using-experimental-apis
+      path: /_docs/guides/using-experimental-apis.md
       author: Paul Frazee
       authorLink: https://pfrazee.hashbase.io
       authorAvatar: /img/team/pfrazee.jpg
@@ -422,6 +426,7 @@ guides:
     - title: Build a website with Markdown
       featured: true
       url: /docs/guides/create-a-markdown-site
+      path: /_docs/guides/create-a-markdown-site.md
       author: Tara Vancil
       authorLink: https://taravancil.com
       authorAvatar: /img/team/taravancil.jpg
@@ -435,6 +440,7 @@ guides:
     - title: Watch for file changes
       featured: true
       url: /docs/guides/watch-for-file-changes
+      path: /_docs/guides/watch-for-file-changes.md
       author: Paul Frazee
       authorLink: https://pfrazee.hashbase.io
       authorAvatar: /img/team/pfrazee.jpg
@@ -457,6 +463,7 @@ guides:
     - title: Read files from a dat:// website
       featured: true
       url: /docs/guides/read-site-files
+      path: /_docs/guides/read-site-files.md
       author: Paul Frazee
       authorLink: https://pfrazee.hashbase.io
       authorAvatar: /img/team/pfrazee.jpg
@@ -490,6 +497,7 @@ guides:
           url: "#calculating-folder-download-progress-with-stat"
     - title: Write to a dat:// website
       url: /docs/guides/write-site-files
+      path: /_docs/guides/write-site-files.md
       author: Paul Frazee
       authorLink: https://pfrazee.hashbase.io
       authorAvatar: /img/team/pfrazee.jpg
