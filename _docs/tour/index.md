@@ -113,7 +113,9 @@ You can edit websites you've created, but you can't edit other people's websites
 
 Making an editable copy is especially useful when you want to customize a p2p app. For example, let's say you use [dat://fritter.hashbase.io]() as your social media client, but you don't like round buttons. You could make an editable copy, then customize the CSS to change the button styles, all without losing your user data or friends list!
 
+{% comment %}
 <-- TODO an aside about customizable apps, app/data separation -->
+{% endcomment %}
 
 <img src="/img/docs/tour/forking.png" />
 

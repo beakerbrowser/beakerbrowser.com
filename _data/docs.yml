@@ -3,22 +3,22 @@ tour:
   url: /docs/tour
   subtitle: Take a tour of Beaker
   children:
-    - url: "#1-browsing-with-beaker"
+    - url: "#browsing-with-beaker"
       title: 1. Browsing with Beaker
       heading: true
-    - url: "#2-view-source"
+    - url: "#view-source"
       title: 2. View Source
       heading: true
-    - url: "#3-one-click-publishing"
+    - url: "#one-click-publishing"
       title: 3. One-click publishing
       heading: true
-    - url: "#4-beakers-built-in-editor"
+    - url: "#beakers-built-in-editor"
       title: 4. Built-in editor
       heading: true
-    - url: "#5-forking-or-copying-a-website"
+    - url: "#forking-or-copying-a-website"
       title: 5. "Forking" or copying a website
       heading: true
-    - url: "#6-live-reloading"
+    - url: "#live-reloading"
       title: 6. Live reloading
       heading: true
 howBeakerWorks:
