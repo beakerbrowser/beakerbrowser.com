@@ -1,11 +1,15 @@
 %code-block {
-  margin-bottom: 1.5rem;
-  border: 1px solid $gray--mid;
-  padding: 1rem;
-  border-radius: 3px;
-  background: transparentize($gray--light, .65);
+  padding: 15px;
+  background: #f6f6f6;
   white-space: pre-wrap;
   word-wrap: break-word;
+  font-size: .825rem;
+
+  code {
+    padding: 0;
+    background: none;
+    font-size: inherit;
+  }
 
   pre {
     white-space: pre-wrap;

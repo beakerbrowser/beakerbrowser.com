@@ -1,108 +1,558 @@
-usingBeaker:
-  title: Using Beaker
-  url: /docs/using-beaker/
+tour:
+  title: Tour
+  url: /docs/tour
+  subtitle: Take a tour of Beaker
   children:
-    - title: Welcome to Beaker
-      url: /docs/using-beaker/index.html
+    - url: "#browsing-with-beaker"
+      title: 1. Browsing with Beaker
+      heading: true
+    - url: "#view-source"
+      title: 2. View Source
+      heading: true
+    - url: "#one-click-publishing"
+      title: 3. One-click publishing
+      heading: true
+    - url: "#beakers-built-in-editor"
+      title: 4. Built-in editor
+      heading: true
+    - url: "#forking-or-copying-a-website"
+      title: 5. "Forking" or copying a website
+      heading: true
+    - url: "#live-reloading"
+      title: 6. Live reloading
+      heading: true
+howBeakerWorks:
+  url: /docs/how-beaker-works
+  title: How Beaker works
+  children:
+    - title: "What's the peer-to-peer Web?"
+      url: /docs/how-beaker-works/
       children:
-      - title: "How to create a website"
-        url: "#how-to-create-a-website"
-      - title: "Adding files to a site"
-        url: "#adding-files-to-a-site"
-      - title: "Publishing files and changes"
-        url: "#publishing-files-and-changes"
-      - title: "How to share a website"
-        url: "#how-to-share-a-website"
-      - title: "How to manage your websites"
-        url: "#how-to-manage-your-websites"
-      - title: "Using the sidebar"
-        url: "#using-the-sidebar"
-      - title: "Live reloading"
-        url: "#live-reloading"
-      - title: "Sync for offline"
-        url: "#sync-for-offline"
-      - title: "Forking a website"
-        url: "#forking-a-website"
-      - title: Ignoring files with .datignore
-        url: "#ignoring-files-with-datignore"
-    - title: Troubleshooting
-      url: /docs/using-beaker/troubleshooting.html
-tutorials:
-  title: Tutorials
-  url: /docs/tutorials/
-  children:
-    - title: Create a peer-to-peer blog
-      url: /docs/tutorials/create-a-blog.html
-    - title: Create a markdown site
-      url: /docs/tutorials/create-a-markdown-site.html
-    - title: Host outside of Beaker
-      url: /docs/tutorials/host-outside-of-beaker.html
-    - title: Share files secretly
-      url: /docs/tutorials/share-files-secretly.html
-    - title: Publish software securely
-      url: /docs/tutorials/publish-software-securely.html
+        - title: "Peer-to-peer protocols and Beaker"
+          heading: true
+          url: "#peer-to-peer-protocols-and-beaker"
+        - title: "How is Beaker different from other browsers?"
+          heading: true
+          url: "#how-is-beaker-different-from-other-browsers"
+    - title: Peer-to-peer websites
+      url: /docs/how-beaker-works/peer-to-peer-websites
+      children:
+        - title: "But first, what's a website?"
+          url: "#but-first-whats-a-website"
+        - title: "So what's a peer-to-peer website?"
+          url: "#so-whats-a-peer-to-peer-website"
+        - title: "Keeping a p2p website online"
+          url: "#keeping-a-peer-to-peer-website-online"
+    - title: Peer-to-peer Web applications
+      url: /docs/how-beaker-works/peer-to-peer-applications
+      children:
+        - title: What's a Web app?
+          url: "#whats-a-web-app"
+        - title: "What's a peer-to-peer Web app?"
+          url: "#whats-a-peer-to-peer-web-app"
+    - title: All about seeding
+      url: /docs/how-beaker-works/all-about-seeding
+      children:
+      - title: "Seeding, hosting, pinning, say what?"
+        heading: true
+        url: "#seeding-hosting-pinning-say-what"
+      - title: "Seeding and Beaker"
+        heading: true
+        url: "#seeding-and-beaker"
+      - title: "Keeping your p2p website online"
+        heading: true
+        url: "#keeping-your-p2p-website-online"
 webAPIs:
   title: Web APIs
+  subtitle: Explore Beaker's APIs for creating peer-to-peer websites and applications
   url: /docs/apis/
   children:
     - title: DatArchive API
-      url: /docs/apis/dat.html
+      url: /docs/apis/dat
       children:
-      - title: "new DatArchive(url)"
-        url: "#datarchive"
-      - title: "DatArchive.create(opts?)"
-        url: "#datarchive-create"
-      - title: "DatArchive.fork(url, opts?)"
-        url: "#datarchive-fork"
-      - title: "DatArchive.selectArchive(opts?)"
-        url: "#datarchive-selectarchive"
-      - title: "DatArchive.resolveName(url)"
-        url: "#datarchive-resolvename"
-      - title: "url"
-        url: "#url"
-      - title: "getInfo(opts?)"
-        url: "#getinfo"
-      - title: "stat(path, opts?)"
-        url: "#stat"
-      - title: "readFile(path, opts?)"
-        url: "#readfile"
-      - title: "readdir(path, opts?)"
-        url: "#readdir"
-      - title: "writeFile(path, data, opts?)"
-        url: "#writefile"
-      - title: "mkdir(path)"
-        url: "#mkdir"
-      - title: "unlink(path)"
-        url: "#unlink"
-      - title: "rmdir(path, opts?)"
-        url: "#rmdir"
-      - title: "diff(opts?)"
-        url: "#diff"
-      - title: "commit()"
-        url: "#commit"
-      - title: "revert()"
-        url: "#revert"
-      - title: "history(opts?)"
-        url: "#history"
-      - title: "download(path, opts?)"
-        url: "#download"
-      - title: "createFileActivityStream(pattern?)"
-        url: "#createfileactivitystream"
-      - title: "createNetworkActivityStream()"
-        url: "#createnetworkactivitystream"
-    - title: Dat.json site manifest
-      url: /docs/apis/manifest.html
-    - title: Web APIs by example
-      url: /docs/apis/by-example.html
-insideBeaker:
-  title: Inside Beaker
-  url: /docs/inside-beaker/
+      - title: "Permissions"
+        heading: true
+        url: "#permissions"
+        children:
+        - title: "Read permissions"
+          url: "#read-permissions"
+        - title: "Write permissions"
+          url: "#write-permissions"
+      - title: "Disk usage"
+        heading: true
+        url: "#disk-usage"
+        children:
+          - title: "Per-origin quotas"
+            url: "#per-origin-quotas"
+      - title: "Constructor"
+        heading: true
+        url: "#constructor"
+        children:
+        - title: "DatArchive()"
+          url: "#datarchive"
+          isCode: true
+      - title: "Top-level methods"
+        heading: true
+        url: "#toplevel-methods"
+        children:
+        - title: "DatArchive.load()"
+          url: "#datarchive-load"
+          isCode: true
+        - title: "DatArchive.create()"
+          url: "#datarchive-create"
+          isCode: true
+        - title: "DatArchive.fork()"
+          url: "#datarchive-fork"
+          isCode: true
+        - title: "DatArchive.selectArchive()"
+          url: "#datarchive-selectarchive"
+          isCode: true
+        - title: "DatArchive.resolveName()"
+          url: "#datarchive-resolvename"
+          isCode: true
+        - title: "DatArchive.unlink()"
+          url: "#datarchive-unlink"
+          isCode: true
+      - title: "Properties"
+        heading: true
+        url: "#properties"
+        children:
+        - title: "url"
+          url: "#url"
+          isCode: true
+      - title: "Methods"
+        heading: true
+        url: "#methods"
+        isCode: true
+        children:
+        - title: "getInfo()"
+          url: "#getinfo"
+          isCode: true
+        - title: "configure()"
+          url: "#configure"
+          isCode: true
+        - title: "stat()"
+          url: "#stat"
+          isCode: true
+        - title: "readFile()"
+          url: "#readfile"
+          isCode: true
+        - title: "readdir()"
+          url: "#readdir"
+          isCode: true
+        - title: "writeFile()"
+          url: "#writefile"
+          isCode: true
+        - title: "mkdir()"
+          url: "#mkdir"
+          isCode: true
+        - title: "unlink()"
+          url: "#unlink"
+          isCode: true
+        - title: "rmdir()"
+          url: "#rmdir"
+          isCode: true
+        - title: "copy()"
+          url: "#copy"
+          isCode: true
+        - title: "rename()"
+          url: "#rename"
+          isCode: true
+        - title: "history()"
+          url: "#history"
+          isCode: true
+        - title: "checkout()"
+          url: "#checkout"
+          isCode: true
+        - title: "download()"
+          url: "#download"
+          isCode: true
+        - title: "watch()"
+          url: "#watch"
+          isCode: true
+      - title: "Events"
+        heading: true
+        url: "#events"
+        children:
+        - title: "network-changed"
+          url: "#event-network-changed"
+          isCode: true
+        - title: "download"
+          url: "#event-download"
+          isCode: true
+        - title: "upload"
+          url: "#event-upload"
+          isCode: true
+        - title: "sync"
+          url: "#event-sync"
+          isCode: true
+      - title: "Deprecated methods"
+        heading: true
+        url: "#deprecated-methods"
+        children:
+        - title: "diff()"
+          url: "#diff"
+          deprecated: true
+          isCode: true
+        - title: "commit()"
+          url: "#commit"
+          deprecated: true
+          isCode: true
+        - title: "revert()"
+          url: "#revert"
+          deprecated: true
+          isCode: true
+        - title: "createFileActivityStream()"
+          url: "#createfileactivitystream"
+          deprecated: true
+          isCode: true
+        - title: "createNetworkActivityStream()"
+          url: "#createnetworkactivitystream"
+          deprecated: true
+          isCode: true
+    - title: dat.json site manifest
+      url: /docs/apis/manifest
+      children:
+        - title: "Properties"
+          url: "#properties"
+          heading: true
+          children:
+          - title: "title"
+            url: "#title"
+            isCode: true
+          - title: "description"
+            url: "#description"
+            isCode: true
+          - title: "type"
+            url: "#type"
+            isCode: true
+          - title: "links"
+            url: "#links"
+            isCode: true
+          - title: "fallback_page"
+            url: "#fallback_page"
+            isCode: true
+          - title: "web_root"
+            url: "#web_root"
+            isCode: true
+          - title: "content_security_policy"
+            url: "#content-security-policy"
+            isCode: true
+          - title: "experimental.apis"
+            url: "#experimental-apis"
+            isCode: true
+    - title: datPeers API
+      url: /docs/apis/experimental-datpeers
+      experimental: true
+      children:
+        - title: "Security and privacy"
+          url: "#security-and-privacy"
+          heading: true
+        - title: "Methods"
+          url: "#methods"
+          heading: true
+          children:
+          - title: "getSessionData()"
+            url: "#getsessiondata"
+            isCode: true
+          - title: "setSessionData()"
+            url: "#setsessiondata"
+            isCode: true
+          - title: "list()"
+            url: "#list"
+            isCode: true
+          - title: "get()"
+            url: "#get"
+            isCode: true
+          - title: "broadcast()"
+            url: "#broadcast"
+            isCode: true
+        - title: "Events"
+          url: "#events"
+          heading: true
+          children:
+          - title: "connect"
+            url: "#event-connect"
+            isCode: true
+          - title: "disconnect"
+            url: "#event-disconnect"
+            isCode: true
+          - title: "message"
+            url: "#event-message"
+            isCode: true
+          - title: "session-data"
+            url: "#event-session-data"
+            isCode: true
+        - title: "DatPeer"
+          url: "#datpeer"
+          heading: true
+          children:
+          - title: "id"
+            url: "#datpeer-id"
+            isCode: true
+          - title: "sessionData"
+            url: "#datpeer-sessiondata"
+            isCode: true
+          - title: "send()"
+            url: "#datpeer-send"
+            isCode: true
+    - title: Library API
+      url: /docs/apis/experimental-library
+      experimental: true
+      children:
+        - title: "Permissions"
+          url: "#permissions"
+          heading: true
+        - title: "Methods"
+          url: "#methods"
+          heading: true
+          children:
+          - title: "add()"
+            url: "#add"
+            isCode: true
+          - title: "remove()"
+            url: "#remove"
+            isCode: true
+          - title: "requestAdd()"
+            url: "#requestadd"
+            isCode: true
+          - title: "requestRemove()"
+            url: "#requestremove"
+            isCode: true
+          - title: "get()"
+            url: "#get"
+            isCode: true
+          - title: "list()"
+            url: "#list"
+            isCode: true
+        - title: "Events"
+          url: "#events"
+          heading: true
+          children:
+          - title: "added"
+            url: "#event-added"
+            isCode: true
+          - title: "removed"
+            url: "#event-removed"
+            isCode: true
+          - title: "updated"
+            url: "#event-updated"
+            isCode: true
+          - title: "network-changed"
+            url: "#event-network-changed"
+            isCode: true
+    - title: globalFetch API
+      url: /docs/apis/experimental-globalfetch
+      experimental: true
+      children:
+        - title: "Methods"
+          url: "#methods"
+          heading: true
+          children:
+          - title: "globalFetch()"
+            url: "#globalFetch"
+            isCode: true
+    - title: "capturePage API"
+      url: /docs/apis/experimental-capturepage
+      experimental: true
+      children:
+        - title: "Permissions"
+          url: "#permissions"
+          heading: true
+        - title: "Privacy"
+          url: "#privacy"
+          heading: true
+        - title: "Methods"
+          url: "#methods"
+          heading: true
+          children:
+          - title: "capturePage()"
+            url: "#capturePage"
+            isCode: true
+guides:
+  title: Guides
+  url: /docs/guides
+  subtitle: Learn about building peer-to-peer websites and apps with Beaker
   children:
-    - title: Dat files protocol
-      url: /docs/inside-beaker/dat-files-protocol.html
-    - title: Privacy and security
-      url: /docs/inside-beaker/privacy-and-security.html
-    - title: Thick applications model
-      url: /docs/inside-beaker/thick-applications.html
-    - title: Other technologies
-      url: /docs/inside-beaker/other-technologies.html
+    - title: Use a domain name with dat://
+      url: /docs/guides/use-a-domain-name-with-dat
+      path: /_docs/guides/use-a-domain-name-with-dat.md
+      author: Tara Vancil
+      authorLink: https://taravancil.com
+      authorAvatar: /img/team/taravancil.jpg
+      featured: true
+      children:
+        - title: Domain names and dat://
+          url: "#domain-names-and-dat"
+        - title: Dat DNS TXT records
+          url: "#dat-dns-text-records"
+        - title: .well-known/dat
+          url: "#well-knowndat"
+    - title: Publish a peer-to-peer website
+      url: /docs/guides/publish-a-peer-to-peer-website
+      path: /_docs/guides/publish-a-peer-to-peer-website.md
+      author: Tara Vancil
+      authorLink: https://taravancil.com
+      authorAvatar: /img/team/taravancil.jpg
+      featured: true
+      children:
+        - title: Publish a website with Beaker
+          url: "#publish-a-website-with-beaker"
+        - title: Publish a website with the Dat CLI
+          url: "#publish-a-website-with-the-dat-cli"
+    - title: Use a custom 404 page
+      url: /docs/guides/use-a-custom-404-page
+      path: /_docs/guides/use-a-custom-404-page.md
+      author: Tara Vancil
+      authorLink: https://taravancil.com
+      authorAvatar: /img/team/taravancil.jpg
+    - title: Using experimental APIs
+      url: /docs/guides/using-experimental-apis
+      path: /_docs/guides/using-experimental-apis.md
+      author: Paul Frazee
+      authorLink: https://pfrazee.hashbase.io
+      authorAvatar: /img/team/pfrazee.jpg
+      featured: true
+      children:
+      - title: "Opting in with dat.json"
+        url: "#opting-in-with-datjson"
+        heading: true
+      - title: "Available APIs"
+        url: "#available-apis"
+        heading: true
+      - title: "How stable are experimental APIs?"
+        url: "#how-stable-are-experimental-apis"
+        heading: true
+    - title: Build a website with Markdown
+      featured: true
+      url: /docs/guides/create-a-markdown-site
+      path: /_docs/guides/create-a-markdown-site.md
+      author: Tara Vancil
+      authorLink: https://taravancil.com
+      authorAvatar: /img/team/taravancil.jpg
+      children:
+        - title: Getting started with Markdown
+          url: "#getting-started-with-markdown"
+        - title: Navigation
+          url: "#navigation"
+        - title: Custom styles
+          url: "#custom-styles"
+    - title: Watch for file changes
+      featured: true
+      url: /docs/guides/watch-for-file-changes
+      path: /_docs/guides/watch-for-file-changes.md
+      author: Paul Frazee
+      authorLink: https://pfrazee.hashbase.io
+      authorAvatar: /img/team/pfrazee.jpg
+      children:
+      - title: "Watch all files"
+        heading: true
+        url: "#watch-all-files"
+      - title: "Watch files or folders"
+        heading: true
+        url: "#watch-files-or-folders"
+      - title: "Glob patterns"
+        heading: true
+        url: "#glob-patterns"
+      - title: "Watcher events"
+        heading: true
+        url: "#watcher-events"
+      - title: "Further reading"
+        heading: true
+        url: "#further-reading"
+    - title: Read files from a dat:// website
+      featured: true
+      url: /docs/guides/read-site-files
+      path: /_docs/guides/read-site-files.md
+      author: Paul Frazee
+      authorLink: https://pfrazee.hashbase.io
+      authorAvatar: /img/team/pfrazee.jpg
+      children:
+      - title: "readdir()"
+        heading: true
+        url: "#readdir"
+        isCode: true
+        children:
+        - title: List top-level files
+          url: "#list-the-top-level-files-in-a-folder"
+        - title: List all files
+          url: "#list-all-files"
+        - title: "List metadata"
+          url: "#list-the-metadata-in-the-top-level-directory"
+      - title: "readFile()"
+        heading: true
+        url: "#readfile"
+        isCode: true
+        children:
+        - title: "Reading over the network"
+          url: "#reading-over-the-network"
+      - title: "stat()"
+        heading: true
+        url: "#stat"
+        isCode: true
+        children:
+        - title: "File download progress"
+          url: "#calculating-file-download-progress-with-stat"
+        - title: "Folder download progress"
+          url: "#calculating-folder-download-progress-with-stat"
+    - title: Write to a dat:// website
+      url: /docs/guides/write-site-files
+      path: /_docs/guides/write-site-files.md
+      author: Paul Frazee
+      authorLink: https://pfrazee.hashbase.io
+      authorAvatar: /img/team/pfrazee.jpg
+      children:
+      - title: "Writing files and folders"
+        heading: true
+        url: "#writing-files-and-folders"
+        children:
+        - title: mkdir()
+          url: "#mkdir"
+        - title: writeFile()
+          url: "#writefile"
+      - title: "Deleting files and folders"
+        heading: true
+        url: "#deleting-files-and-folders"
+        children:
+        - title: rmdir()
+          url: "#rmdir"
+        - title: unlink()
+          url: "#unlink"
+        - title: "Recursive deletes"
+          url: "#recursive-deletes"
+      - title: "Copying, moving, and renaming"
+        heading: true
+        url: "#copying-moving-and-renaming"
+        children:
+        - title: copy()
+          url: "#copy"
+        - title: rename()
+          url: "#rename"
+faq:
+  title: Help & FAQ
+  url: /docs/faq
+  children:
+    - title: When I visit a dat:// URL in Beaker, does Beaker download the entire website?
+      heading: true
+      url: "#when-i-visit-a-dat-url-in-beaker-does-beaker-download-the-entire-website"
+    - title: Do visitors to peer-to-peer websites seed its files?
+      heading: true
+      url: "#do-visitors-to-peer-to-peer-websites-seed-its-files"
+    - title: Is the Dat network anonymous?
+      heading: true
+      url: "#is-the-dat-network-anonymous"
+    - title: Who can access dat:// websites?
+      heading: true
+      url: "#who-can-access-dat-websites"
+    - title: Will my website stay online when I turn Beaker off?
+      heading: true
+      url: "#will-my-website-stay-online-when-i-turn-beaker-off"
+    - title: Is there an iOS or Android Beaker client?
+      heading: true
+      url: "#is-there-an-ios-or-android-beaker-client"
+    - title: Will peer-to-peer protocols like Dat ever be adopted by other browsers?
+      heading: true
+      url: "#will-peer-to-peer-protocols-like-dat-ever-be-adopted-by-other-browsers"
+    - title: How is Beaker built?
+      heading: true
+      url: "#how-is-beaker-built"

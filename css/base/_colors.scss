@@ -2,17 +2,26 @@ $beaker-blue: #246fde;
 $white: #fff;
 $black: mix($beaker-blue, #000, 10%);
 
-$red: rgb(255, 59, 48);
+$red: rgb(220, 59, 48);
 $orange: rgb(255, 149, 0);
 $yellow: rgb(255, 204, 0);
 $green: rgb(76, 217, 100);
 $teal: rgb(90, 200, 250);
 $other-blue: rgb(0, 122, 255);
-$purple: rgb(88, 86, 214);
 $pink: rgb(255, 45, 85);
+$pink: #fb136d;
 
-$primary: $beaker-blue;
+$blue: #5743ff;
+$blue: #4349ff;
+$blue: #5543ff;
+$green: #0ad895;
+$teal: #4DEBFF;
+$teal: #12E4FF;
+$purple: #8D54F0;
 
+$emoji-yellow: #ffcf00;
+
+$primary: $blue;
 $primary--dark: shade($primary, 70%);
 $primary--dark-mid: shade($primary, 35%);
 $primary--light-mid: tint($primary, 35%);
@@ -29,7 +38,7 @@ $gray--very-light: mix($black, $white, 2.5%);
 // text colors
 $text--dark-bg: transparentize($white, .03);
 $text--dark-bg-hover: transparentize($white, .4);
-$text--light-bg: transparentize($black, .1);
+$text--light-bg: #333;
 $text--light-bg-muted: transparentize($black, .3);
 $text--light-bg-transparent: transparentize($black, .75);
 $text--button-action: $primary;

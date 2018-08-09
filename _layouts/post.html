@@ -6,20 +6,18 @@ layout: default
   <main class="post">
     <h1>{{ page.title }}</h1>
     <p class="post-meta">
-      <img class="avatar" src="{{ page.avatar }}" />
       <span class="info">
         <a href="{{ page.authorLink}}" class="author">{{ page.author }}</a>
-        on
+         /
         <time datetime="{{ page.date }}" class="time">
           {{ page.date | date: "%b %-d, %Y" }}
         </time>
       </span>
     </p>
     {{ content }}
-    <a class="back-to-blog" href="/blog/">
-      <i class="fa fa-angle-left"></i>
+    <a class="back-to-blog" href="/blog">
+      &laquo;
       All posts
     </a>
   </main>
-  {% include blog-sidebar.html %}
 </div>

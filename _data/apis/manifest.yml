@@ -1,18 +1,126 @@
 attributes:
   -
-    name: ".url"
-    desc: "The URL of the archive."
-  -
-    name: ".title"
-    desc: "A short but descriptive human friendly title."
-  -
-    name: ".description"
-    desc: "A one- or two-line description of the archive."
-  -
-    name: ".fallback_page"
+    name: "title"
     desc: |
-      The path for the page to serve when a user hits a 404. ([See this demo gif.](/img/docs/demo-fallback-page.gif))
+      A short and descriptive human-friendly title. Can be read with [`getInfo()`](dat.html#getinfo) and changed with [`configure()`](dat.html#configure).
+
+      ```json
+      {
+        "title": "My cool site"
+      }
+      ```
   -
-    name: ".web_root"
+    name: "description"
     desc: |
-      The path of the folder which all requests should be served from. ([See this demo gif.](/img/docs/demo-web-root.gif))
+      A description of the Dat archive. Can be read with [`getInfo()`](dat.html#getinfo) and changed with [`configure()`](dat.html#configure).
+
+      ```json
+      {
+        "description": "The absolute best place to find cat pictures."
+      }
+      ```
+  -
+    name: "type"
+    desc: |
+      A list of 'type' strings. Can be read with [`getInfo()`](dat.html#getinfo) and changed with [`configure()`(dat.html#configure).
+
+      Type strings are experimental. They were introduced to Beaker as a way to categorize archives, and can be used as a filter in [`selectArchive()`](dat.html#datarchive-selectarchive). You can list multiple types on an archive.
+
+      ```json
+      {
+        "type": ["user-profile", "fritter-user-profile"]
+      }
+      ```
+
+      ### What are types used for?
+
+      They are used as a filter in [`selectArchive()`](dat.html#datarchive-selectarchive), similar to how file-extensions are used in operating system "open file" dialogs.
+      They are also a way for apps to identify the kind of data or content in an archive using [`getInfo()`](dat.html#getinfo).
+
+      ### What types can I use?
+
+      There are no official types.
+      We recommend including a short string which identifies the general kind of data being stored, plus one or more long strings which help identify the schema of the data.
+      For example, a social media app called 'Fritter' might use `"user-profile"` and `"fritter-user-profile"`.
+  -
+    name: "links"
+    desc: |
+      An object containing a set of Web links from the Dat. Can be read with [`getInfo()`](dat.html#getinfo) and changed with [`configure()`/](dat.html#configure).
+
+      The `links` object is a mapping of "rel" values to arrays of link objects, as follows:
+
+      ```json
+      {
+        "rel-type": [{"href": "https://example.com/"}]
+      }
+      ```
+
+      The `links` field follows the same schema as the [link element](https://www.w3.org/TR/html5/document-metadata.html#the-link-element), so any attribute which applies to a `<link>` will apply to these values. The one difference is how the `rel` value is handled: in the links object, the `rel` is used as the key. Only one `rel` value should be used.
+
+      If a link has additional rel values, it can specify them using the `rel` field on the link object. For instance, a link with the `rel` value of `"foo bar baz"` would look like this:
+
+      ```json
+      {
+        "foo": [{"href": "https://example.com/", "rel": "bar baz"}]
+      }
+      ```
+
+      Links can be duplicated, and so it would also be possible to handle this case with 3 different link objects:
+
+      ```json
+      {
+        "foo": [{"href": "https://example.com/"}],
+        "bar": [{"href": "https://example.com/"}],
+        "baz": [{"href": "https://example.com/"}]
+      }
+      ```
+  -
+    name: "fallback_page"
+    desc: |
+      The path to a fallback page to serve instead of Beaker's default 404 page.
+
+      ```json
+      {
+        "fallback_page": "/404.html"
+      }
+      ```
+  -
+    name: "web_root"
+    desc: |
+      The path of the folder from which all requests should be served.
+
+      ```json
+      {
+        "web_root": "/public"
+      }
+      ```
+  -
+    name: "content_security_policy"
+    desc: |
+      The security policy for the website. [Learn more about using Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP).
+
+      ```json
+      {
+        "content_security_policy": "default-src 'self'; script-src 'self' https://example.com"
+      }
+      ```
+  - name: "experimental.apis"
+    desc: |
+      A list of experimental APIs. To use an experimental API, you must list one of the following strings in the `experimental.apis` field:
+
+       - `"datPeers"` ([API reference](/docs/apis/experimental-datpeers))
+       - `"globalFetch"` ([API reference](/docs/apis/experimental-globalfetch))
+       - `"library"` ([API reference](/docs/apis/experimental-library))
+       - `"capturePage"` ([API reference](/docs/apis/experimental))
+
+      ```json
+      {
+        "experimental": {
+          "apis": ["datPeers", "globalFetch", "library"]
+        }
+      }
+      ```
+
+      To learn more, read [this guide about using experimental APIs](/docs/guides/using-experimental-apis).
+
+      *Experimental APIs may change quickly or be removed entirely. You should not depend on an experimental API for stability.*

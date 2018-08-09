@@ -1,15 +1,32 @@
-toplevel_methods:
+constructor:
   -
     name: "DatArchive"
     signature: "new DatArchive(url)"
     desc: |
-      Create an archive instance from an existing archive.
+      Create a Dat archive instance from an existing archive.
 
       - `url` String. The URL of the archive to instantiate.
 
-      <figcaption class="code">example</figcaption>
+      Example:
+
       ```js
       var archive = new DatArchive(datUrl)
+      ```
+toplevel_methods:
+  -
+    name: "DatArchive.load"
+    signature: "DatArchive.load(url)"
+    desc: |
+      Create a Dat archive instance from an existing archive.
+      This has the same effect as using the constructor, but allows you to `await` until load is successful.
+
+      - `url` String. The URL of the archive to instantiate.
+      - returns `Promise<DatArchive>`
+
+      Example:
+
+      ```js
+      var archive = await DatArchive.load(datUrl)
       ```
   -
     name: "DatArchive.create"
@@ -18,17 +35,20 @@ toplevel_methods:
       Create a new Dat archive, and return the archive instance.
       The archive is sandboxed to only access to files within it.
 
-      The user will be prompted to confirm or deny the archive creation.
-
-      - `opts.title` String. The title of the new archive.
-      - `opts.description` String. The description of the new archive.
+      - `opts.title` String. The title of the archive.
+      - `opts.description` String. The description of the archive.
+      - `opts.type` Array&lt;String&gt;. The archive's type identifiers.
+      - `opts.links` Object. Top-level links to other resources.
+      - `opts.prompt` Boolean. Whether or not to show Beaker's create archive modal. (If `false`, a simple permission prompt will be shown instead.)
       - returns `Promise<DatArchive>`
 
-      <figcaption class="code">example</figcaption>
+      Example:
+
       ```js
       var archive = await DatArchive.create({
-        title: 'Hello, world!',
-        description: 'My new site'
+        title: 'My website',
+        description: 'A simple demo website',
+        prompt: false
       })
       ```
   -
@@ -41,70 +61,92 @@ toplevel_methods:
       The fork will contain only the files in the target archive that have been completely downloaded.
       Use [`download()`](#download) to ensure the intended files are ready.
 
-      The user will be prompted to confirm or deny the archive creation.
-
       - `url` String. The URL of the archive to fork.
-      - `opts.title` String. The title of the new archive.
-      - `opts.description` String. The description of the new archive.
+      - `opts.title` String. The title of the archive.
+      - `opts.description` String. The description of the archive.
+      - `opts.type` Array&lt;String&gt;. The archive's type identifiers.
+      - `opts.links` Object. Top-level links to other resources.
+      - `opts.prompt` Boolean. Whether or not to show Beaker's fork modal. (If `false`, a simple permission prompt will be shown instead.)
       - returns `Promise<DatArchive>`
 
-      <figcaption class="code">example</figcaption>
+      Example:
+
       ```js
       var archive = await DatArchive.fork(otherURL, {
         title: 'Hello, world 2!',
-        description: 'My new fork'
+        description: 'My new fork',
+        prompt: false
       })
+      ```
+  -
+    name: "DatArchive.unlink"
+    signature: "DatArchive.unlink(url)"
+    desc: |
+      Delete the given Dat archive from the user's Library. The user must
+      grant permission to delete the archive.
+
+      - `url` String. The URL of the archive to delete.
+      - returns `Promise<void>`
+
+      Example:
+
+      ```js
+      await DatArchive.unlink(datUrl)
       ```
   -
     name: "DatArchive.selectArchive"
     signature: "DatArchive.selectArchive(opts?)"
     desc: |
-      Select a Dat archive from the library, or create a new Dat,
-      and return the archive instance.
+      Prompt the user to select a Dat archive from the Library or create a new
+      Dat archive, and return the archive instance.
 
-      - `opts.title` String. The title of the select modal.
-      - `opts.buttonLabel` String. The label on the primary action button.
+      - `opts.title` String. The title of the select archive modal.
+      - `opts.buttonLabel` String. The label on the primary action button in the select archive modal.
       - `opts.filters.isOwner` Boolean. If true, only show archives that the user owns and can modify.
+      - `opts.filters.type` String or Array&lt;String&gt;. If set, only show archives that have the given `type` strings in their dat.json. See [dat.json site manifest](manifest.html#type) for more information.
       - returns `Promise<DatArchive>`
 
-      <figcaption class="code">example</figcaption>
+      Example:
+
       ```js
       var archive = await DatArchive.selectArchive({
-        title: 'Hello, world!',
-        buttonLabel: 'My new site'
+        title: 'Select an archive to use as your user profile',
+        buttonLabel: 'Select profile',
+        filters: {
+          isOwner: true,
+          type: 'user-profile'
+        }
       })
       ```
-
-      <figure>
-      <img src="/img/posts/beaker-0-7-2/dat-picker.jpg" >
-      <figcaption>The Dat picker modal for selectArchive()</figcaption>
-      </figure>
   -
     name: "DatArchive.resolveName"
     signature: "DatArchive.resolveName(url)"
     desc: |
-      Resolves a Dat shortname to its "raw" public-key URL using
-      [DNS-over-TLS](https://github.com/beakerbrowser/beaker/wiki/Authenticated-Dat-URLs-and-HTTPS-to-Dat-Discovery).
+      Resolves a Dat shortname to its "raw" public-key URL.
+      See [DEP-0005 DNS](https://www.datprotocol.com/deps/0005-dns/) for more information.
 
       - `url` String. The URL of the archive to resolve.
       - returns `Promise<string>`
 
-      <figcaption class="code">example</figcaption>
+      Example:
+
       ```js
       var rawDatUrl = await DatArchive.resolveName(datUrl)
       ```
-instance_methods:
+properties:
   -
     name: "url"
     signature: "url"
     desc: |
       The URL of the archive.
 
-      <figcaption class="code">example</figcaption>
+      Example:
+
       ```js
       var archive = new DatArchive(datUrl)
       archive.url
       ```
+methods:
   -
     name: "getInfo"
     signature: "getInfo(opts?)"
@@ -116,35 +158,50 @@ instance_methods:
 
       Return object:
 
-      <figcaption class="code">output schema</figcaption>
       ```plain
       {
         key: string (the archive public key)
         url: string (the archive URL)
+        isOwner: boolean (is the user the owner of this archive?)
+
         version: number (the archive's current revision number)
-        peers: number (the number of active connections)
-        isOwner: boolean (is the local user the owner of this archive?)
+        peers: number (the number of active connections for the archive)
+        mtime: number (the walltime of the last received update; is reliable)
+        size: number (bytes, the size-on-disk of the archive)
 
         title: string (the archive title)
         description: string (the archive description)
-        forkOf: string|array<string> (the archive's parent fork)
-        createdBy: {
-          url: string (the url of the app that created the archive)
-          title: string (the title of the app that created the archive)
-        }
-
-        mtime: number (the walltime of the last received update; is reliable)
-        metaSize: number (bytes, the size-on-disk of the archive metadata)
-        stagingSize: number (bytes, the size-on-disk of the archive staging area)
+        type: array of strings (the archive's type identifiers)
+        links: object (top-level links to other resources)
       }
       ```
 
       Example:
 
-      <figcaption class="code">example</figcaption>
       ```js
       var archive = new DatArchive(datUrl)
       await archive.getInfo()
+      ```
+  -
+    name: "configure"
+    signature: "configure(opts)"
+    desc: |
+      Configure the dat.json manifest file values for the given Dat archive.
+
+      - `opts.title` String. The title of the archive.
+      - `opts.description` String. The description of the archive.
+      - `opts.type` Array&lt;String&gt;. The archive's type identifiers.
+      - `opts.links` Object. Top-level links to other resources.
+      - `opts.web_root` String. Path of the folder from which all web requests should be served.
+      - `opts.fallback_page` String. Path to a fallback page to serve instead of the default 404 page.
+      - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
+      - returns `Promise<void>`
+
+      Example:
+
+      ```javascript
+      var archive = new DatArchive(datUrl)
+      await archive.configure({title: 'New title', fallback_page: 'index.html'})
       ```
   -
     name: "stat"
@@ -159,26 +216,34 @@ instance_methods:
 
       Return object:
 
-      <figcaption class="code">output schema</figcaption>
       ```plain
       Stat {
+        isDirectory(): boolean
+        isFile(): boolean
+
+        // files only:
         size: number (bytes)
         blocks: number (number of data blocks in the metadata)
         downloaded: number (number of blocks downloaded, if a remote archive)
         mtime: Date (last modified time; not reliable)
         ctime: Date (creation time; not reliable)
-        isDirectory(): boolean
-        isFile(): boolean
       }
       ```
 
       Example:
 
-      <figcaption class="code">example</figcaption>
       ```js
       var archive = new DatArchive(datUrl)
       await archive.stat('/hello.txt')
       ```
+
+      #### Timestamps
+
+      The accuracy of timestamps (`mtime` and `ctime`) in `stat()` metadata is not guaranteed.
+      The `mtime` or `ctime` could be incorrect for the following reasons:
+
+      - The author's clock is misconfigured
+      - The author intentionally set an incorrect time
   -
     name: "readFile"
     signature: readFile(path, opts?)
@@ -191,11 +256,11 @@ instance_methods:
         - `'base64'` Return value will be a string.
         - `'hex'` Return value will be a string.
         - `'binary'` Return value will be an ArrayBuffer.
-        - If `opts` is a string, it is specifying the encoding.
       - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
       - returns `Promise<string|ArrayBuffer>`
 
-      <figcaption class="code">example</figcaption>
+      Example:
+
       ```js
       var archive = new DatArchive(datUrl)
 
@@ -217,9 +282,10 @@ instance_methods:
       - `opts.recursive` Boolean. Recurse the listing into the subdirectories?
       - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
       - `opts.stat` Boolean. Run stat() on every entry and return with `{name:, stat:}`
-      - returns `Promise<Array<String>>`
+      - returns `Promise<Array&lt;String&gt;>`
 
-      <figcaption class="code">example</figcaption>
+      Example:
+
       ```js
       var archive = new DatArchive(datUrl)
       var topFiles = await archive.readdir('/')
@@ -230,10 +296,9 @@ instance_methods:
     name: "writeFile"
     signature: "writeFile(path, data, opts?)"
     desc: |
-      Replaces the file’  s contents with `data` in the staging area.
-      The promise will reject if there is already a directory at `path`, or if the containing directory-tree does not yet exist.
-
-      The archive must be committed to make the file update permanent.
+      Writes `data` to the the file at `path`.
+      The promise will reject if there is already a directory at `path`, or if
+      the containing directory-tree does not yet exist.
 
       - `path` The path of the file to write.
       - `data` The data to be written.
@@ -245,7 +310,8 @@ instance_methods:
         - If `opts` is a string, it is specifying the encoding.
       - returns `Promise<void>`
 
-      <figcaption class="code">example</figcaption>
+      Example:
+
       ```js
       var archive = new DatArchive(datUrl)
       await archive.writeFile('/hello.txt', 'world')
@@ -254,15 +320,15 @@ instance_methods:
     name: "mkdir"
     signature: "mkdir(path)"
     desc: |
-      Creates a new directory at `path` in the staging area.
-      The promise will reject if there is already a file or directory at `url`, or if the containing directory-tree does not yet exist.
-
-      The archive must be committed to make the new directory permanent.
+      Creates a new directory at `path`. The promise will reject if there is
+      already a file or directory at `path`, or if the containing directory-tree
+      does not exist.
 
       - `path` The path of the directory to create.
       - returns `Promise<void>`
 
-      <figcaption class="code">example</figcaption>
+      Example:
+
       ```js
       var archive = new DatArchive(datUrl)
       await archive.mkdir('/subdir')
@@ -271,15 +337,14 @@ instance_methods:
     name: "unlink"
     signature: "unlink(path)"
     desc: |
-      Deletes the file at `path`.
-      The promise will reject if no file is found, or if the target path is a directory.
-
-      The archive must be committed to make the deletion permanent.
+      Deletes the file at `path`. The promise will reject if no file is found,
+      or if the target path is a directory.
 
       - `path` The path of the file to delete.
       - returns `Promise<void>`
 
-      <figcaption class="code">example</figcaption>
+      Example:
+
       ```js
       var archive = new DatArchive(datUrl)
       await archive.unlink('/hello.txt')
@@ -291,106 +356,48 @@ instance_methods:
       Deletes the directory at `path`.
       The promise will reject if there is not a directory at `path`, or if the directory is not empty.
 
-      The archive must be committed to make the deletion permanent.
-
       - `path` The path of the directory to delete.
       - `opts.recursive` Boolean. If not empty, delete all files and folders inside the folder?
       - returns `Promise<void>`
 
-      <figcaption class="code">example</figcaption>
+      Example:
+
       ```js
       var archive = new DatArchive(datUrl)
       await archive.rmdir('/subdir')
       await archive.rmdir('/', {recursive: true})
       ```
   -
-    name: "diff"
-    signature: "diff(opts?)"
+    name: "copy"
+    signature: "copy(path, dstPath, opts?)"
     desc: |
-      Compare the current staging area to the published archive, and provide a list of the differences.
+      Copies a file or directory to a target path.
 
+      - `path` The path of the file/directory to copy
+      - `dstpath` The target path
       - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
-      - `opts.shallow` Boolean. If true, diff() will not recurse into folders that need to be added or removed.
-      - returns `Promise<Array<Object>>`
-
-      Returns an array of objects:
-
-      <figcaption class="code">output schema</figcaption>
-      ```plain
-      [
-        {
-          change: string (the operation, 'add' or 'mod' or 'del')
-          type: string (the typeof of entry, 'dir' or 'file')
-          path: string (path of the file)
-        },
-        ...
-      ]
-      ```
+      - returns `Promise<void>`
 
       Example:
 
-      <figcaption class="code">example</figcaption>
-      ```js
+      ```javascript
       var archive = new DatArchive(datUrl)
-      await archive.diff()
+      await archive.copy('/images', '/backup-images')
       ```
   -
-    name: "commit"
-    signature: "commit()"
+    name: "rename"
+    signature: "rename(oldPath, newPath, opts?)"
     desc: |
-      Publish all changes in the staging area to the archive, and provide a list of the applied changes.
-
-      - returns `Promise<Array<Object>>`
-
-      Returns an array of objects:
-
-      <figcaption class="code">output schema</figcaption>
-      ```plain
-      [
-        {
-          change: string (the operation, 'add' or 'mod' or 'del')
-          type: string (the typeof of entry, 'dir' or 'file')
-          path: string (path of the file)
-        },
-        ...
-      ]
-      ```
+      - `oldPath` The path to the file/directory be renamed
+      - `newPath` The new path for the file/directory to be renamed
+      - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
+      - returns `Promise<void>`
 
       Example:
 
-      <figcaption class="code">example</figcaption>
-      ```js
+      ```javascript
       var archive = new DatArchive(datUrl)
-      await archive.commit()
-      ```
-  -
-    name: "revert"
-    signature: "revert()"
-    desc: |
-      Undo all changes in the staging area, and provide a list of the reversions.
-
-      - returns `Promise<Array<Object>>`
-
-      Returns an array of objects:
-
-      <figcaption class="code">example</figcaption>
-      ```plain
-      [
-        {
-          change: string (the operation, 'add' or 'mod' or 'del')
-          type: string (the typeof of entry, 'dir' or 'file')
-          path: string (path of the file)
-        },
-        ...
-      ]
-      ```
-
-      Example:
-
-      <figcaption class="code">example</figcaption>
-      ```js
-      var archive = new DatArchive(datUrl)
-      await archive.revert()
+      await archive.rename('index.js', 'main.js')
       ```
   -
     name: "history"
@@ -406,7 +413,6 @@ instance_methods:
 
       Returns an array of objects:
 
-      <figcaption class="code">output schema</figcaption>
       ```plain
       [
         {
@@ -420,10 +426,25 @@ instance_methods:
 
       Example:
 
-      <figcaption class="code">example</figcaption>
       ```js
       var archive = new DatArchive(datUrl)
       await archive.history({start: 0, end: 100, reverse: true})
+      ```
+  -
+    name: "checkout"
+    signature: "checkout(version)"
+    desc: |
+      Checkout the a historic version of the archive.
+      All reads will be from that version.
+      (Writes will not be allowed.)
+
+      - `version` Number. Which revision to checkout.
+
+      Example:
+
+      ```js
+      var archive = new DatArchive(datUrl)
+      var archiveOldVersion = archive.checkout(10) // check out revision 10
       ```
   -
     name: "download"
@@ -434,16 +455,224 @@ instance_methods:
       - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
       - returns `Promise<void>`
 
-      <figcaption class="code">example</figcaption>
+      Example:
+
       ```js
       var archive = new DatArchive(datUrl)
       await archive.download('/foo.txt')
-      await archive.download('/') // download everything
+      await archive.download('/') // download the entire archive
+      ```
+  -
+    name: "watch"
+    signature: "watch(pattern?, onInvalidated?)"
+    desc: |
+      Watch the given path or path-pattern for file events.
+
+      - `pattern`
+        - If a string, the path to watch. You can pass a falsy value to watch all.
+        - If an array of strings, an [anymatch](https://npm.im/anymatch) pattern of paths to watch.
+      - `onInvalidated` Function. An event callback which is automatically added to the 'invalidated' event.
+
+      Provides an `EventTarget` with a `.close()` method and the following events:
+
+      - `'invalidated' ({path: string})` The contents of the file has changed, but may not have been downloaded yet.
+        - `path` is the path-string of the file.
+      - `'changed' ({path: string})` The contents of the file has changed, and the new version is ready to read.
+        - `path` is the path-string of the file.
+
+      A locally-owned archive will emit 'invalidated' and 'changed' when a write occurs. A remote archive will emit 'invalidated' first, then emit 'changed' when the new version has downloaded.
+
+      Examples:
+
+      ```js
+      var archive = new DatArchive(datUrl)
+
+      var evts = archive.watch() // or...
+      var evts = archive.watch('foo.txt') // or...
+      var evts = archive.watch(['**/*.txt', '**/*.md'])
+
+      evts.addEventListener('invalidated', ({path}) => {
+        console.log(path, 'has been invalidated, downloading the update')
+        archive.download(path)
+      })
+      evts.addEventListener('changed', ({path}) => {
+        console.log(path, 'has been updated!')
+      })
+
+      // later:
+      evts.close()
+      ```
+
+      ```js
+      var archive = new DatArchive(datUrl)
+
+      var evts = archive.watch(null, ({path}) => {
+        console.log(path, 'has been invalidated')
+      })
+      ```
+events:
+  -
+    name: "Event: network-changed"
+    signature: "Event: \"network-changed\""
+    desc: |
+      The network conditions have changed (e.g. a new peer has connected).
+
+      - `event.connections` Number. The number of active connections.
+
+      Example:
+
+      ```js
+      var archive = new DatArchive(datUrl)
+      archive.addEventListener('network-changed', ({connections}) => {
+        console.log(connections, 'current peers')
+      })
+      ```
+  -
+    name: "Event: download"
+    signature: "Event: \"download\""
+    desc: |
+      A data block has been downloaded.
+
+        - `event.feed` String. The data-feed which the block was a part of. Will either be `"metadata"` or `"content"`.
+        - `event.block` Number. The index of data-block downloaded.
+        - `event.bytes` Number. The number of bytes in the block.
+
+      Example:
+
+      ```js
+      var archive = new DatArchive(datUrl)
+      archive.addEventListener('download', ({feed, block, bytes}) => {
+        console.log('Downloaded a block in the', feed, {block, bytes})
+      })
+      ```
+  -
+    name: "Event: upload"
+    signature: "Event: \"upload\""
+    desc: |
+      A data block has been uploaded.
+
+        - `event.feed` String. The data-feed which the block was a part of. Will either be `"metadata"` or `"content"`.
+        - `event.block` Number. The index of data-block uploaded.
+        - `event.bytes` Number. The number of bytes in the block.
+
+      Example:
+
+      ```js
+      var archive = new DatArchive(datUrl)
+      archive.addEventListener('upload', ({feed, block, bytes}) => {
+        console.log('Uploaded a block in the', feed, {block, bytes})
+      })
+      ```
+  -
+    name: "Event: sync"
+    signature: "Event: \"sync\""
+    desc: |
+      All known data blocks have been downloaded.
+
+        - `event.feed` String. The data-feed which has been synced. Will either be `"metadata"` or `"content"`.
+
+      Example:
+
+      ```js
+      var archive = new DatArchive(datUrl)
+      archive.addEventListener('sync', ({feed}) => {
+        console.log('Downloaded everything currently published in the', feed)
+      })
+      ```
+deprecated_methods:
+  -
+    name: "diff"
+    signature: "diff(opts?)"
+    deprecated: true
+    desc: |
+      Compare the current staging area to the published archive, and provide a list of the differences.
+
+      - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
+      - `opts.shallow` Boolean. If true, diff() will not recurse into folders that need to be added or removed.
+      - returns `Promise<Array<Object>>`
+
+      Returns an array of objects:
+
+      ```plain
+      [
+        {
+          change: string (the operation, 'add' or 'mod' or 'del')
+          type: string (the typeof of entry, 'dir' or 'file')
+          path: string (path of the file)
+        },
+        ...
+      ]
+      ```
+
+      Example:
+
+      ```js
+      var archive = new DatArchive(datUrl)
+      await archive.diff()
+      ```
+  -
+    name: "commit"
+    signature: "commit()"
+    deprecated: true
+    desc: |
+      Publish all changes in the staging area to the archive, and provide a list of the applied changes.
+
+      - returns `Promise<Array<Object>>`
+
+      Returns an array of objects:
+
+      ```plain
+      [
+        {
+          change: string (the operation, 'add' or 'mod' or 'del')
+          type: string (the typeof of entry, 'dir' or 'file')
+          path: string (path of the file)
+        },
+        ...
+      ]
+      ```
+
+      Example:
+
+      ```js
+      var archive = new DatArchive(datUrl)
+      await archive.commit()
+      ```
+  -
+    name: "revert"
+    signature: "revert()"
+    deprecated: true
+    desc: |
+      Undo all changes in the staging area, and provide a list of the reversions.
+
+      - returns `Promise<Array<Object>>`
+
+      Returns an array of objects:
+
+      ```plain
+      [
+        {
+          change: string (the operation, 'add' or 'mod' or 'del')
+          type: string (the typeof of entry, 'dir' or 'file')
+          path: string (path of the file)
+        },
+        ...
+      ]
+      ```
+
+      Example:
+
+      ```js
+      var archive = new DatArchive(datUrl)
+      await archive.revert()
       ```
   -
     name: "createFileActivityStream"
     signature: "createFileActivityStream(pattern?)"
+    deprecated: true
     desc: |
+      **Deprecated**. Use [watch()](#watch) instead.
+
       Watch the given path or path-pattern for file events.
 
       - `pattern`
@@ -457,7 +686,8 @@ instance_methods:
       - `'invalidated' ({path: string})` The contents of the file has changed remotely, but it hasn't been downloaded yet.
         - `path` is the path-string of the file.
 
-      <figcaption class="code">example</figcaption>
+      Example:
+
       ```js
       var archive = new DatArchive(datUrl)
 
@@ -478,8 +708,11 @@ instance_methods:
       ```
   -
     name: "createNetworkActivityStream"
+    deprecated: true
     signature: "createNetworkActivityStream()"
     desc: |
+      **Deprecated**. You can now listen for these events on the `archive` object.
+
       Watch for network events. Provides an `EventTarget` with a `.close()` method and the following events:
 
       - `'network-changed' ({connections})` The number of connections has changed.
@@ -495,7 +728,8 @@ instance_methods:
       - `'sync' ({feed})` All known blocks have been downloaded.
         - `feed` will either be `"metadata"` or `"content"`.
 
-      <figcaption class="code">example</figcaption>
+      Example:
+
       ```js
       var archive = new DatArchive(datUrl)
       var evts = archive.createNetworkActivityStream()

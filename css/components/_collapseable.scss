@@ -1,0 +1,22 @@
+.collapseable-btn {
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &.collapsed {
+
+    i {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.collapseable {
+
+  &.collapsed {
+    height: 0;
+    visibility: hidden;
+  }
+}

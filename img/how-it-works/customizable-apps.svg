@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="647px" height="243px" viewBox="0 0 647 243" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>forget-servers</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="93.3004404%" x2="50%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#EEEEEE" offset="0%"></stop>
+            <stop stop-color="#EEEEEE" stop-opacity="0.05" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="forget-servers" transform="translate(2.000000, 2.000000)">
+            <path d="M-51.0625,56.859375 L-51.0625,184.859375 C-51.0625,185.963944 -50.1670695,186.859375 -49.0625,186.859375 L180.65625,186.859375 C181.760819,186.859375 182.65625,185.963944 182.65625,184.859375 L182.65625,56.859375" id="Line-5-Copy-3" stroke="url(#linearGradient-1)" stroke-width="4" stroke-linecap="round" stroke-dasharray="4,10,4,10" transform="translate(65.796875, 121.859375) scale(-1, 1) rotate(90.000000) translate(-65.796875, -121.859375) "></path>
+            <path d="M461.140625,51.859375 L461.140625,179.859375 C461.140625,180.963944 462.036056,181.859375 463.140625,181.859375 L692.859375,181.859375 C693.963944,181.859375 694.859375,180.963944 694.859375,179.859375 L694.859375,51.859375" id="Line-5-Copy-4" stroke="url(#linearGradient-1)" stroke-width="4" stroke-linecap="round" stroke-dasharray="4,10,4,10" transform="translate(578.000000, 116.859375) rotate(90.000000) translate(-578.000000, -116.859375) "></path>
+            <g id="browser-copy" transform="translate(173.000000, 13.000000)">
+                <rect id="Rectangle-2-Copy" stroke="#EEEEEE" stroke-width="3" fill="#F9F9F9" x="0" y="0" width="300" height="209" rx="4"></rect>
+                <rect id="Rectangle-3-Copy" fill="#5743FF" x="186.585366" y="26.6666667" width="95.1219512" height="34.8333333" rx="2.74390244"></rect>
+                <rect id="Rectangle-3-Copy-2" fill="#0AD895" x="186.585366" y="71.6666667" width="95.1219512" height="34.8333333" rx="2.74390244"></rect>
+                <path d="M21.9512195,27.5 L170.121951,27.5 C171.132228,27.5 171.95122,28.3189913 171.95122,29.3292683 L171.95122,121.004065 C171.95122,122.014342 171.132228,122.833333 170.121951,122.833333 L21.9512195,122.833333 C20.9409425,122.833333 20.1219512,122.014342 20.1219512,121.004065 L20.1219512,29.3292683 C20.1219512,28.3189913 20.9409425,27.5 21.9512195,27.5 Z" id="back-copy" stroke="#CCCCCC" stroke-width="2.5" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2,10,2,10"></path>
+                <rect id="Rectangle-10" fill="#DDDDDD" x="20.1219512" y="141.166667" width="151.829268" height="7" rx="1.82926829"></rect>
+                <rect id="Rectangle-10-Copy" fill="#DDDDDD" x="20.1219512" y="157.666667" width="107.926829" height="7" rx="1.82926829"></rect>
+                <rect id="Rectangle-10-Copy-3" fill="#DDDDDD" x="20.1219512" y="174.166667" width="131.707317" height="7" rx="1.82926829"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

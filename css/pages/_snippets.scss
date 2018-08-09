@@ -1,0 +1,82 @@
+.layout.snippets {
+
+  .title {
+  	width: 180px;
+  	text-align: center;
+  	padding: 5px 0;
+  	border: 2px dashed;
+  }
+
+  .subheading {
+  	font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .snippets-container {
+  	display: grid;
+  	grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(315px, 1fr))
+  }
+
+  .snippet {
+    @extend %flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px 15px 15px;
+    background: #eee;
+    border: 2px solid transparent;
+    overflow-x: hidden;
+
+    .snippet-heading {
+      @extend %inline-flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .snippet-title {
+      font-weight: 600;
+      font-size: 14.5px;
+    }
+
+    .snippet-description {
+      color: rgba(0,0,0,.85);
+      margin-bottom: 7px;
+      font-size: 12.5px;
+    }
+
+    .snippet-content {
+      width: 100%;
+    }
+
+    .btn.copy-snippet {
+      opacity: 0;
+      margin-top: -5px;
+    }
+
+  	figure.highlight {
+      margin: 0;
+      padding: 10px;
+      background: #fff;
+      font-size: 12.5px;
+      width: 100%;
+      max-width: 100%;
+      max-height: 85px;
+      overflow-y: auto;
+
+      pre {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+  	}
+
+    &:hover {
+      // border: 2px dashed
+
+      .btn.copy-snippet {
+        opacity: 1;
+      }
+    }
+  }
+}

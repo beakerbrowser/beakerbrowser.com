@@ -1,0 +1,17 @@
+.beaker-link {
+  display: inline-flex;
+  align-items: center;
+
+  .logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 7px;
+  }
+
+  .wordmark {
+    font-weight: 700 !important;
+    font-size: 26px;
+    letter-spacing: .4px;
+    line-height: 1;
+  }
+}

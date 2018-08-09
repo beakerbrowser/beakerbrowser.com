@@ -1,40 +1,105 @@
-.team-members {
-  display: block;
-
-  @media (min-width: 950px) {
-    display: flex;
-  }
-}
-
 .team-member {
-  display: flex;
-  margin: 0 20px 0 0;
+  @extend %flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin-bottom: 40px;
 
-  img {
-    width: 70px;
-    height: 70px;
-    border-radius: 2px;
-    border: 1px solid $gray--mid;
+  @include respond-to(tablet) {
+    flex-wrap: nowrap;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  &.blue {
+
+    .info,
+    .bio a,
+    .bio .fa {
+      color: $blue;
+    }
+
+    .avatar {
+      border: 2px solid $blue;
+    }
+
+    h4 {
+      color: $blue;
+    }
+  }
+
+  &.purple {
+
+    .info,
+    .bio .fa,
+    .bio a {
+      color: $purple;
+    }
+
+    .avatar {
+      border: 2px solid $purple;
+    }
+
+    h4 {
+      color: $purple;
+    }
+  }
+
+  &.green {
+
+    .info,
+    .bio .fa,
+    .bio a {
+      color: $green;
+    }
+
+    .avatar {
+      border: 2px solid $green;
+    }
+
+    h4 {
+      color: $green;
+    }
   }
 
   .info {
-    margin-left: 1rem;
+    flex: 1 0 125px;
+    width: 125px;
+    text-align: center;
+
+    @include respond-to(netbook) {
+      margin-right: 20px;
+    }
+
+    h3.name {
+      margin: 0 0 20px 0;
+      font-weight: 500;
+    }
   }
 
-  h3 {
-    margin-top: 0;
+  .avatar {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-bottom: 0px;
+    border: 2px solid rgba(255,255,255,.15);
   }
 
-  ul {
+  .links {
+    margin-left: 0;
     list-style: none;
-    margin-left: 0 !important;
-  }
 
-  i {
-    margin-right: 3px;
-  }
+    .fa {
+      margin-right: 5px;
+    }
 
-  a {
-    text-decoration: underline;
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }

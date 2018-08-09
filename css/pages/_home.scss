@@ -1,235 +1,135 @@
 .hero {
-  position: relative;
-  background: $hero-bg;
-  color: $text--dark-bg;
-  padding: 1em 0 4em 0;
-  @extend %shrink-text-phone;
   @extend %antialiased;
-  font-weight: 500;
-  text-align: center;
-
-  @include respond-to(tablet) {
-    font-size: 1rem;
-    padding-top: 3em;
-
-    &:before {
-      display: block;
-      position: absolute;
-      top: -5px;
-      z-index: 1;
-      content: '';
-      width: 100%;
-      height: 40px;
-      background: linear-gradient($header-bg, transparentize($header-bg, 1));
-
-      @include respond-to(tall-gradient-hero) {
-        height: 60px;
-      }
-    }
-  }
-
-  &__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    height: 100%;
-  }
+  align-items: center;
+  padding: 40px 0;
+  background: $blue;
+  color: #fff;
 
   .container {
-    position: relative;
-    z-index: 1;
+    align-items: center;
   }
 
-  .intro {
-    margin: inherit auto;
-    text-align: center;
+  .col {
 
-    > .description {
-      font-size: .95rem;
-      max-width: 700px;
-      margin: 0 auto 2em auto;
+    &.graphic {
+      display: none;
+      text-align: right;
 
-      @media (min-width: 700px) {
-        font-size: 1.1rem;
-        margin-bottom: 3em;
+      @include respond-to(desktop) {
+        display: block;
       }
 
-      a {
-        text-decoration: underline;
-      }
-    }
-
-    .cta {
-      font-weight: 600;
-      font-size: 0.85rem;
-      margin-bottom: 2em;
-
-      @media (min-width: 350px) {
-        font-size: 1rem;
-        margin-bottom: 3em;
+      img {
+        max-width: 500px;
+        border-radius: 4px;
+        box-shadow: 0 5px 30px 0 rgba(0,0,0,.15);
+        border: 1px solid rgba(0,0,0,.4);
       }
     }
   }
 
   .tagline {
-    font-size: 1.3rem;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-
-    @media (min-width: 350px) {
-      font-size: 1.6rem;
-      font-weight: 400;
-    }
-
-    @media (min-width: 530px) {
-      font-size: 1.85rem;
-    }
+    font-size: 2.1rem;
+    font-weight: 700;
+    -webkit-text-stroke: .4px;
+    letter-spacing: .5px;
+    line-height: 1.2;
   }
 
-  .links {
-    font-size: .85rem;
-    margin-bottom: 2rem;
-
-    * {
-      vertical-align: middle;
-    }
-
-    iframe {
-      display: block;
-      margin: .5em auto 0 auto;
-
-      @include respond-to(tablet) {
-        display: inline-block;
-        margin-left: .25em;
-        margin-top: 0;
-      }
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
+  .description {
+    font-size: 18px;
   }
 
-  &__links {
-    @extend %grid-3;
-    width: 100%;
-    margin-top: 2em;
-
-    @include respond-to(expand-hero) {
-      margin: 0;
-      text-align: left;
-    }
-  }
-
-  &__link {
-    @extend %rounded;
-    @extend %col-1-3;
-    display: flex;
-    padding: 1em;
-    background: transparentize(#fff, .9);
-    border: 1px solid transparentize(#fff, .75);
-    cursor: pointer;
-    text-align: left;
-
-    &:hover {
-      background: transparentize(#fff, .75);
-    }
-
-    &:not(:last-child) {
-      margin-bottom: 1rem;
-
-      @include respond-to(show-grid-3) {
-        margin: 0 2rem 0 0;
-      }
-    }
-
-    i {
-      font-size: 2rem;
-    }
-
-    .info {
-      display: inline-block;
-      vertical-align: top;
-      margin-left: 1em;
-    }
-
-    .title {
-      font-size: 1rem;
-      line-height: .85;
-      margin-bottom: .5em;
-      font-weight: 700;
-
-      &:after {
-        content: '\203A';
-        display: inline-block;
-        font-size: 1.2rem;
-        margin-left: .25em;
-      }
-    }
-
-    .description {
-      font-size: .9rem;
-    }
+  .description,
+  .cta {
+    color: #fff;
   }
 }
 
-.section {
-  text-align: center;
-  padding: 3em 0;
+.section.what {
 
-  h2 {
-    font-weight: normal;
+  h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 20px;
   }
 
-  &--problem {
-    border-bottom: 1px solid $gray--mid;
-    padding: 4em 0 2em;
+  p {
+    font-size: 1.15rem;
+  }
+}
 
-    h2 {
-      font-size: 1.6rem;
-      margin-bottom: 2rem;
+.section.how-it-works {
+
+  .columns {
+    align-items: center;
+    margin-bottom: 40px;
+
+    &:nth-of-type(2n) {
+      flex-direction: column-reverse;
     }
 
-    p {
-      margin-bottom: 2em;
-    }
+    @include respond-to(netbook) {
 
-    strong {
-      font-weight: 700;
-    }
-
-    .web {
-      width: 100%;
-      padding-bottom: 1em;
-    }
-
-    img {
-      margin-bottom: 1em;
-    }
-
-    @media (min-width: 700px) {
-      padding: 4em 0 5em;
-
-      .web {
-        display: inline-block;
-        width: 48%;
+      &:nth-of-type(2n) {
+        flex-direction: initial;
       }
+    }
+  }
 
-      p {
-        max-width: 360px;
-        margin: 0 auto;
+  p {
+    font-size: .95rem;
+  }
 
-        &.intro {
-          max-width: 440px;
-          margin-bottom: 3em;
+  strong {
+    font-weight: 600;
+  }
+}
+
+.section.mission {
+  padding-bottom: 0;
+}
+
+.section {
+
+  &.social {
+
+    .demo-video {
+      position: relative;
+      flex-basis: calc(30% - 15px);
+      margin-right: 15px;
+      height: 100%;
+      background-color: lighten($blue, 10%);
+      background-image: url(/img/demo-screencap.png);
+      background-size: cover;
+      background-position-x: center;
+      background-blend-mode: multiply;
+      border-radius: 3px;
+
+      .label {
+        @extend %transition;
+        transition-property: background;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 0;
+        background: transparentize($blue, .5);
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+
+        i {
+          margin-left: 5px;
         }
       }
-    }
 
-    @media (min-width: 1000px) {
-      .web {
-        padding: 0 4em;
+      &:hover {
+
+        .label {
+          background: transparentize($blue, .3);
+        }
       }
     }
   }
@@ -336,7 +236,7 @@
     }
 
     .container {
-      @extend %grid-2;
+      @extend .grid-2;
       margin: auto;
       overflow: hidden;
     }
@@ -361,7 +261,7 @@
 
     .info,
     .highlight {
-      @extend %col-1-2;
+      @extend .col-1-2;
     }
 
     code {
@@ -433,11 +333,11 @@
     border-bottom: 1px solid $gray--mid;
 
     .container {
-      @extend %grid-3;
+      @extend .grid-3;
     }
 
     .use-case {
-      @extend %col-1-3;
+      @extend .col-1-3;
       background: $gray--light;
       border: 1px solid $gray--mid;
       border-radius: 3px;
@@ -481,6 +381,7 @@
   &--faq {
     padding: 2em 0;
     border-bottom: 1px solid $gray--mid;
+    background: lighten(#287aff, 50%);
 
     @include respond-to(show-grid-2) {
       padding-bottom: 2em;
@@ -563,17 +464,36 @@
   }
 }
 
+.section.what {
+
+  .heading {
+    font-size: 1.7rem;
+    font-weight: 400;
+  }
+}
+
+.section.donors {
+
+  .heading {
+    margin-bottom: 20px;
+  }
+}
+
+.section.testimonials {
+  padding-top: 0;
+}
+
 .partners {
-  @extend %grid-5;
+  @extend .grid-5;
   margin-bottom: 4em;
 
   &__title {
-    @extend %col-1-5;
+    @extend .col-1-5;
     margin-bottom: 1.5em;
   }
 
   &__body {
-    @extend %col-4-5;
+    @extend .col-4-5;
     display: flex;
     margin-right: 2.5em;
     text-align: left;
@@ -602,16 +522,16 @@
 }
 
 .posts {
-  @extend %grid-5;
+  @extend .grid-5;
   margin-bottom: 1rem;
 
   &__title {
-    @extend %col-1-5;
+    @extend .col-1-5;
     margin-bottom: 1.5em;
   }
 
   &__preview {
-    @extend %col-2-5;
+    @extend .col-2-5;
     // @extend %card;
     margin-right: 2.5em;
     text-align: left;
@@ -633,7 +553,7 @@
   }
 
   &__list {
-    @extend %col-2-5;
+    @extend .col-2-5;
     font-size: .9rem;
     padding: 1rem;
     margin: auto;
@@ -646,79 +566,6 @@
 
   a {
     @extend %link;
-  }
-}
-
-.community {
-  .testimonials {
-    @extend %grid-3;
-    list-style: none;
-    font-size: .8rem;
-  }
-
-  .testimonial {
-    @extend %col-1-3;
-
-    &:not(:last-child) {
-      margin-bottom: 3.5em;
-
-      @include respond-to(show-grid-3) {
-        margin-right: 3.5em;
-        margin-bottom: 0;
-      }
-    }
-
-    .wrapper {
-      @extend %flex-container;
-      justify-content: center;
-
-      @include respond-to(tablet) {
-        justify-content: flex-start;
-      }
-    }
-
-    span {
-      padding-top: 8px;
-    }
-
-    &__quote {
-      display: block;
-      color: $text--light-bg-muted;
-      font-style: italic;
-      margin-bottom: .75em;
-
-      a {
-        @extend %link;
-      }
-    }
-
-    &__avatar {
-      @extend %circle;
-      width: 40px;
-      height: 40px;
-      vertical-align: middle;
-      margin-right: .75em;
-    }
-
-    &__link {
-      @extend %link;
-
-     &:before {
-       display: inline-block;
-       content: '—';
-     }
-    }
-  }
-
-  .mailing-list {
-    @extend %col-1-3;
-  }
-}
-
-body.layout-default {
-
-  .header .container {
-    padding: 25px 10px;
   }
 }
 

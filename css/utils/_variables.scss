@@ -10,9 +10,11 @@ $breakpoints: (
   'expand-doc-nav-wide': (min-width: 1100px),
   'show-blog-sidenav': (min-width: 800px),
   'shrink-blog-sidenav': (min-width: 1100px),
+  'show-docs-sidebar': (min-width: 900px),
   'tall-gradient-hero': (min-width: 650px),
   'tablet': (min-width: 700px),
-  'netbook': (min-width: 900px)
+  'netbook': (min-width: 900px),
+  'desktop': (min-width: 1050px)
 );
 
 $docs-nav-width: 225px;

@@ -1,0 +1,11 @@
+<ul class="guides-grid grid-3">
+  {% for item in include.items %}
+    {% if include.featured %}
+      {% if item.featured %}
+        {% include guide-grid-item.html guide=item %}
+      {% endif %}
+    {% else %}
+      {% include guide-grid-item.html guide=item %}
+    {% endif %}
+  {% endfor %}
+</ul>

@@ -1,0 +1,124 @@
+.testimonials-wrapper {
+  display: block;
+  position: relative;
+  // left: 0;
+  width: 100%;
+  text-align: left;
+  white-space: nowrap;
+  // animation: scroll 50s linear infinite;
+  padding: 5px;
+  padding-top: 60px;
+  overflow: hidden;
+
+  @include respond-to(tablet) {
+    &:after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, $blue 0%, transparent, transparent, $blue 100%);
+    }
+  }
+
+  .testimonial {
+    @extend %transition;
+    @extend %inline-flex;
+    align-items: flex-start;
+    min-width: 200px;
+    max-width: 320px;
+    // height: 125px;
+    margin-right: 20px;
+    border-radius: 4px;
+    font-size: 12.5px;
+    font-family: "Inter UI";
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    q {
+      color: #fff;
+      font-weight: 400;
+      white-space: pre-line;
+    }
+
+    &:hover {
+
+      q {
+        color: transparentize(#fff, .15);
+      }
+    }
+  }
+
+  &:hover {
+    animation-play-state: paused
+  }
+
+  @media (max-width: 699px) {
+    // on mobile, when unexpanded,
+    // only show the first, centered
+    &:not(.grid) {
+      .testimonial {
+        display: flex;
+        margin: 0 auto;
+
+        &:not(:first-child) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.grid {
+    @extend %grid;
+    animation: none;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    grid-gap: 15px;
+
+    &:after {
+      display: none;
+    }
+
+    .testimonial {
+      background: #fff;
+      margin-right: 0;
+      max-width: initial;
+      max-height: initial;
+      height: 100%;
+      padding: 15px;
+
+      q {
+        color: #111;
+      }
+
+      &:hover {
+
+        q {
+          color: $blue;
+        }
+      }
+    }
+  }
+}
+
+button#show-all-testimonials {
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@keyframes scroll {
+  0% { left: 0; }
+  100% { left: -100%; }
+}

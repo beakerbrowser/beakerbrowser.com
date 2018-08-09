@@ -3,7 +3,7 @@ title: Beaker Browser
 email: pfrazee@gmail.com
 description:
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://beakerbrowser.com" # the base hostname & protocol for your site
+url: "https://beakerbrowser.com" # the base hostname and protocol for your site
 twitter_username: pfrazee
 github_username:  pfrazee
 
@@ -21,6 +21,8 @@ gems:
 sass:
   style: :compressed
   sass_dir: css
+
+minify_html: false
 
 # Site data
 collections:

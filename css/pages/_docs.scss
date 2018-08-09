@@ -1,15 +1,240 @@
-.layout-doc,
-.layout-docs-intro,
-.layout-docs-tutorials-intro {
+.layout.doc {
+  position: relative;
+  height: initial;
+  overflow-y: auto;
 
   .header {
-    position: relative;
-    z-index: 3;
+    background: var(--page-color);
   }
 
-  .header .container {
-    border-bottom: none;
+  .docs-hero {
+    padding: 30px 0 40px 0;
+    color: #fff;
+    background: var(--page-color);
+
+    h1.title {
+      font-size: 34px;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      font-weight: 400;
+      margin-top: 0;
+    }
   }
+
+  .title-bar {
+    padding: 30px 0;
+    background: var(--page-color);
+    color: #fff;
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      @extend %antialiased;
+      text-transform: uppercase;
+      font-size: 12.5px;
+      font-weight: 500;
+      margin-bottom: 0;
+      letter-spacing: .25px;
+
+      &:hover {
+        border-bottom: 1px dotted;
+      }
+    }
+
+    .guide-metadata {
+      margin-top: 10px;
+
+      .author {
+        @extend %flex;
+
+        .avatar {
+          width: 30px;
+          height: 30px;
+          margin-right: 10px;
+          border-radius: 50%;
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .content-container.container {
+    @extend %flex;
+    position: relative;
+    align-items: flex-start;
+  }
+
+  .docs-sidebar {
+    flex: 150px;
+    max-width: 150px;
+  }
+
+  .content {
+    flex: 100%;
+    max-width: 100%;
+    margin: auto;
+
+    &.left {
+      max-width: 100%;
+      margin: 0;
+    }
+
+    pre.highlight {
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+      padding: 15px;
+    }
+
+    h2 {
+      font-size: 26px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    h3 {
+      font-size: 20px;
+
+      code {
+        font-size: 18px;
+      }
+    }
+
+    h4 {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .2px;
+    }
+
+    @include respond-to(show-docs-sidebar) {
+      max-width: 725px;
+    }
+  }
+}
+
+.docs-sidebar {
+  display: none;
+  position: sticky;
+  top: 60px;
+  font-size: 13px;
+  font-weight: 400;
+
+  @include respond-to(show-docs-sidebar) {
+    display: block;
+  }
+
+  .fa-caret-right {
+    width: 10px;
+    color: var(--page-color);
+  }
+
+  code {
+    font-size: 12px;
+  }
+
+  ul {
+    list-style: none;
+    margin-left: 0;
+  }
+
+  li.subheading {
+    position: relative;
+    margin: 15px 0 0 0;
+    font-weight: 500;
+
+    .anchor {
+      position: absolute;
+      left: -15px;
+      opacity: 0;
+      color: #bbb;
+
+      &:hover {
+        color: var(--page-color);
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+
+      .anchor {
+        opacity: 1;
+      }
+    }
+
+    li {
+      margin-bottom: 5px;
+      margin-left: 15px;
+      font-weight: 400;
+      color: var(--page-color);
+    }
+  }
+
+  [href]:hover {
+    color: var(--page-color);
+    text-decoration: underline;
+  }
+}
+
+.docs-breadcrumbs {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+  color: var(--page-color);
+
+  .fa-arrow-left {
+    margin-right: 5px;
+  }
+
+  .container {
+    padding: 15px 10px;
+    border-bottom: 1px solid #eee;
+
+    @include respond-to(tablet) {
+      padding: 15px 0;
+    }
+  }
+
+  .breadcrumb {
+    display: inline;
+    font-size: 14.5px;
+    font-weight: 500;
+    margin-right: 10px;
+    cursor: pointer;
+
+    &.toplevel-link:hover,
+    &.dropdown-container:hover .toplevel-link {
+      border-bottom: 1px dotted;
+    }
+
+    .dropdown .nav-item {
+
+      &:hover:not(.active) {
+        text-decoration: underline;
+        cursor: pointer;
+        color: #111;
+        color: var(--page-color);
+      }
+
+      &.active {
+        font-weight: 500;
+        color: var(--page-color);
+        background: #fff;
+        cursor: default;
+      }
+    }
+  }
+}
+
+main {
+  padding: 40px 0;
 }
 
 .docs-nav-mobile {
@@ -22,295 +247,29 @@
   }
 }
 
-.docs-nav,
-.doc-sidebar-nav {
-  display: none;
-}
-
-@media (min-width: 1000px) {
-  .docs-nav {
-    display: block;
-  }
-
-  .docs-nav-mobile {
-    display: none;
-  }
-}
-
-.docs-nav {
-  margin-top: 3rem;
-  color: $text--light-bg-muted;
-
-  .container {
-    @extend %flex-container;
-    justify-content: space-between;
-    border-bottom: 1px solid $gray--mid;
-  }
-
-  &.dark {
-    margin-top: 0.5rem;
-
-    .container {
-      border: 0;
-    }
-  }
-
-  .active-section {
-    font-size: 1.1rem;
-
-    a:hover {
-      color: $text--link;
-    }
-
-    i {
-      margin: 0 4px;
-    }
-  }
-
-  .active-section,
-  nav {
-    display: inline-block;
-  }
-
-  nav {
-
-    li {
-      display: inline-block;
-      padding-bottom: .5rem;
-      font-size: .925rem;
-      border-bottom: 2px solid transparent;
-
-      &:hover {
-        border-bottom: 2px solid $gray;
-      }
-
-      &.active {
-        border-bottom: 2px solid $gray;
-        color: $text--light-bg;
-        font-weight: 500;
-      }
-
-      margin-left: 1rem;
-    }
-  }
-}
-
-.layout-doc,
-.layout-docs-tutorials-intro {
-
-  @media (min-width: 1000px) {
-    .doc-sidebar-nav {
-      display: block;
-    }
-
-    .docs {
-      padding-top: 3rem;
-    }
-
-    .content {
-      flex: 3;
-      margin-right: 4rem;
-    }
-
-    .doc-sidebar-nav {
-      flex: 1;
-    }
-  }
-
-  .container {
-    max-width: 1000px;
-  }
-}
-
 .docs {
   min-height: 100%;
   padding-bottom: 4rem;
 
-  &.dark {
-    background: $gray--very-light;
-    border-top: 1px solid $gray--mid;
-  }
+  aside.tip {
+    display: block;
+    padding: 15px;
+    background: var(--page-color);
+    font-size: 15px;
+    color: #fff;
 
-  .container {
-    @extend %flex-container;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: 400;
-    margin-bottom: 1rem;
-  }
-
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-top: 2rem;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-    font-weight: 500;
-  }
-
-  .content {
-    font-size: .92rem;
-    max-width: 650px;
-    width: 100%;
-
-    .doc-summary {
-      color: $text--light-bg-muted;
-      padding: 1rem;
-      background: $gray--light;
-      border-radius: 3px;
-      border: 1px solid $gray--mid;
+    .tip-heading {
+      font-weight: 500;
+      margin-bottom: 5px;
     }
 
-    p, li {
-      a {
-        text-decoration: underline;
-      }
+    .tip-content {
+      margin-left: 20px;
+      color: #fff;
     }
 
-    p:not(:last-child),
-    blockquote {
-      margin-bottom: 1.5rem;
-    }
-
-    ul,
-    ol {
-      margin: 0 0 1.5rem 20px;
-
-      li {
-        margin-bottom: 5px;
-      }
-    }
-
-    pre {
-      @extend %code-block;
-    }
-
-    blockquote {
-      margin-left: 30px;
-      padding-left: 15px;
-      border-left: 2px solid $gray--mid;
-      color: $text--light-bg-muted;
-      font-style: italic;
-      font-size: 1rem;
-    }
-
-    figcaption.code {
-      border: 1px solid $gray--mid;
-      border-bottom: 0;
-      border-radius: 3px 3px 0 0;
-      background: $gray--light;
-      padding: 3px 7px 2px;
-      font-size: 12px;
-      color: mix($black, $white, 45%);
-    }
-    figcaption.code + .highlighter-rouge pre {
-      border-radius: 0 0 3px 3px;
-    }
-  }
-
-  .doc-sidebar-nav {
-    flex: 1;
-    height: 100%;
-
-    ul.pages {
-      border-radius: 3px;
-      border: 1px solid $gray--mid;
-      color: $text--light-bg-muted;
-      box-shadow: 0 1px 1px rgba(0,0,0,0.1);
-      list-style: none;
-      background: #fff;
-
-      li {
-        font-size: .9rem;
-        border-left: 2px solid transparent;
-        cursor: pointer;
-
-        a {
-          display: block;
-          width: 100%;
-          height: 100%;
-          padding: .4rem 1rem;
-        }
-
-        &:not(:last-child) {
-          border-bottom: 1px solid $gray--mid;
-        }
-
-        &:hover {
-          background: $gray--light;
-          color: $text--link;
-        }
-
-        &.active {
-          border-left: 2px solid $primary;
-        }
-      }
-    }
-
-    ul.headings {
-      list-style: none;
-      padding: 0.6em 1em;
-
-      li {
-        border-bottom: 0;
-        font-size: .9rem;
-        border-left: 2px solid transparent;
-        cursor: pointer;
-
-        a {
-          color: $gray--very-dark;
-        }
-        a:hover {
-          color: $text--link;
-        }
-      }
-    }
-  }
-
-  section {
-    margin: 0 0 2rem;
-    padding: 2rem;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    box-shadow: 2px 2px 2px rgba(0,0,0,.05);
-    background: #fff;
-
-    & > :first-child {
-      margin-top: 0 !important;
-    }
-
-    & > :last-child {
-      margin-bottom: 0 !important;
-    }
-  }
-}
-
-.layout-docs-tutorials-intro {
-
-  .content {
-    max-width: none;
-    margin-top: 2rem;
-
-    .tutorials-list {
-      margin-left: 0;
-
-      @media (min-width: 600px) {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      @media (min-width: 900px) {
-        grid-template-columns: 1fr 1fr 1fr;
-      }
+    .fa {
+      width: 15px;
     }
   }
 }

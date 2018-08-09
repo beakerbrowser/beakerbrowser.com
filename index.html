@@ -1,382 +1,139 @@
 ---
-layout: default
+layout: home
+header: light
 desc: Beaker is a new peer-to-peer browser for a Web where users control their data and websites are hosted locally.
 ---
 <div class="hero">
-  <img src="/img/polygons.svg" class="hero__bg" aria-hidden="true">
   <div class="container">
-    <div class="intro">
-      <h1 class="tagline">Rethink the Web browser</h1>
-
-      <p class="description">
-        Beaker is a peer-to-peer browser with tools to create and host websites. Don't just browse the Web, build it.
-      </p>
-
-      <div class="cta">
-        <a id="video-modal-btn" class="btn" href="https://www.youtube.com/watch?v=U2B9mwRFE8U">
-          <i class="fa fa-play" aria-hidden="true"></i>
-          Watch the video
-        </a>
-        <a class="btn btn--action"
-           href="/docs/install/">
-          Install Beaker
-          <i class="fa fa-download" aria-hidden="true"></i>
-        </a>
+    <a class="notice" href="https://decentralizedweb.net/">
+      <div class="badge round">
+        July 31
       </div>
-    </div>
-
-    <div class="hero__links">
-      <a class="hero__link" href="https://github.com/beakerbrowser/beaker">
-        <i class="fa fa-code"></i>
-        <div class="info">
-          <h2 class="title">View source</h2>
-          <p class="description">
-            Check out Beaker’s development and source code on GitHub.
-          </p>
-        </div>
-      </a>
-
-      <a class="hero__link" href="https://github.com/datproject/docs/tree/master/papers">
-        <i class="fa fa-file-text-o"></i>
-        <div class="info">
-          <h2 class="title">Dat white paper</h2>
-          <p class="description">
-            Learn about Dat, the peer-to-peer protocol that powers Beaker.
-          </p>
-        </div>
-      </a>
-
-      <a class="hero__link" href="/docs/">
-        <i class="fa fa-book"></i>
-        <div class="info">
-          <h2 class="title">Documentation</h2>
-          <p class="description">
-            Learn about Beaker’s APIs, architecture, and mission.
-          </p>
-        </div>
-      </a>
-    </div>
- </div>
-</div>
-
-<div class="section section--problem">
-  <div class="container">
-    <h2>It's time for a better Web</h2>
-    <p class="intro">
-      The Web’s original design enshrined its core values: to be <em>open, free,</em> and <em>highly connected</em>.
-    </p>
-    <div class="web bad">
-      <img src="/img/bad-web.svg"/>
-      <p>
-        <strong>But the Web's design has fallen short</strong>. We rely on services to provide applications, which locks us into closed infrastructure.
-      </p>
-    </div>
-
-    <div class="web good">
-      <img src="/img/good-web.svg"/>
-      <p>
-        <strong>Beaker rethinks the Web</strong> as a peer-to-peer network, where users own their data and run applications independently.
-      </p>
-    </div>
-  </div>
-</div>
-
-<div class="section section--publishing">
-  <div class="container">
-    <img src="/img/new-site.png" />
-    <h2>Can your browser do this?</h2>
-    <p>
-
-      Beaker is the world's first Web browser with builtin tools for hosting content directly from your computer. No services required.
-    </p>
-  </div>
-</div>
-
-<div class="section section--features">
-  <div class="container">
-    <h2>Features</h2>
-    <div class="features-grid">
-      <div class="feature">
-        <div class="img-container">
-          <img src="/img/features/self-hosting.png" />
-        </div>
-        <span class="title">Independent hosting</span>
-        <p class="description">
-          Beaker is equipped with tools for creating and hosting websites directly
-          from the browser. Beaker uses the Dat peer-to-peer network to host your
-          website's files, so you can share your projects independently and
-          without worrying about hosting fees.
-        </p>
-      </div>
-
-      <div class="feature">
-        <div class="img-container">
-          <img src="/img/features/secret-url.png" />
-        </div>
-        <span class="title">Secret file sharing</span>
-        <p class="description">
-          Files published on the Dat network can only be decrypted by people who
-          know the files' secret URL. This enables truly secret sharing in Beaker,
-          where you can share files privately without ever revealing their content
-          to a third-party hosting service.
-        </p>
-      </div>
-
-      <div class="feature">
-        <div class="img-container">
-          <img src="/img/features/versioned-urls.png" />
-        </div>
-        <span class="title">Versioned URLs</span>
-        <p class="description">
-          Each change published to a Dat peer-to-peer website is added
-          to its history log and distributed across the network. With Beaker,
-          you can view a website at any point in its history using built-in versioned
-          URLs like <code>dat://beakerbrowser.com+42</code>.
-        </p>
-      </div>
-
-      <div class="feature">
-        <div class="img-container">
-          <img src="/img/features/live-reloading.svg" />
-        </div>
-        <span class="title">Live reloading</span>
-        <p class="description">
-          With builtin tools for live reloading, developing peer-to-peer
-          websites with Beaker is a breeze. Simply save your work and Beaker
-          will update the page to reflect your changes.
-        </p>
-      </div>
-
-      <div class="feature">
-        <div class="img-container">
-          <img src="/img/features/offline-sync.svg" />
-        </div>
-        <span class="title">Offline sync</span>
-        <p class="description">
-          Save a website for offline use, and as soon as you're back online,
-          Beaker will automatically sync any changes that you missed.
-        </p>
-      </div>
-
-      <div class="feature">
-        <div class="img-container">
-          <img src="/img/features/web-apis.svg" />
-        </div>
-        <span class="title">New Web APIs</span>
-        <p class="description">
-          Beaker introduces new Web APIs for building peer-to-peer websites and
-          applications with the Dat protocol.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="section section--apis">
-  <div class="container">
-    <div class="info">
-      <h2>Build peer-to-peer Web applications</h2>
-      <p>
-        Beaker provides a set of Web APIs for reading, writing, and watching Dat archives from within a site.
-      </p>
 
       <span>
-        <a href="/docs/apis/">API documentation</a>
-        <i class="fa fa-angle-right"></i>
+        Decentralized Web Summit, San Francisco
       </span>
-    </div>
-
-{% highlight js %}
-var archive = await DatArchive.create({
-  title: 'My Site',
-  description: 'My peer-to-peer website'
-})
-await archive.writeFile('/hello.txt', 'hello')
-await archive.commit()
-
-console.log(archive.url)
-// => dat://da2ce4..dc/
-{% endhighlight %}
-    </div>
-    </div>
-
-  </div>
-</div>
-
-<div class="section section--faq">
-  <div class="container">
-    <h2>FAQ</h2>
-    <ul>
-      {% for item in site.data.faq %}
-      <li>
-        <h3 class="question">{{ item.question }}</h3>
-        <div class="answer">{{ item.answer }}</div>
-      </li>
-      {% endfor %}
-    </ul>
-    <a class="more" href="/docs/inside-beaker/faq.html">
-      Read more
-      <i class="fa fa-angle-right"></i>
     </a>
   </div>
-</div>
 
-<div class="section section--latest">
-  <div class="container">
-    <div class="partners">
-      <h2 class="partners__title">Partners</h2>
-      <div class="partners__body">
-        <div>
-          <img class="logo" src="/img/icon/dat.svg">
-        </div>
-        <div>
-          <h3>
-            <a href="https://datproject.org" target="_blank" rel="noopener">
-              Dat Project
-            </a>
-          </h3>
-          <p>
-            Dat is a grant-funded, open-source, decentralized data sharing tool for efficiently versioning and syncing changes to data.
-            <a href="https://datproject.org" target="_blank" rel="noopener">Learn More</a>
-          </p>
-        </div>
-      </div>
+  <div class="container columns">
+    <div class="col col-1-2">
+      <h1 class="tagline">
+        A browser for the<br>next-generation Web
+      </h1>
+
+      <p class="description">
+        Beaker is an experimental browser for exploring and building the
+        peer-to-peer Web.
+      </p>
+
+      <p class="cta">
+        <a href="/install/" class="btn action white">
+          Install Beaker
+        </a>
+
+        <a href="/docs/tour" class="btn white">
+          Take a tour
+        </a>
+      </p>
     </div>
 
-    <div class="posts">
-      <h2 class="posts__title">Latest Posts</h2>
-      <div class="posts__preview">
-        <h3>
-          <a href="https://beakerbrowser.com/2017/06/19/cryptographically-secure-change-feeds.html">
-          Cryptographically-secure change feeds in the Dat protocol, and on the Web
-          </a>
-        </h3>
-        <p>
-          Dat uses an append-only feed that’s inspired by Certificate Transparency to create auditable change logs in file archives. We use this to deliver Web applications securely in Beaker...
-          <span>
-            <a href="https://pfrazee.github.io/blog/what-is-the-p2p-web">Read more</a>
-          </span>
-        </p>
-      </div>
-      <ul class="posts__list">
-        <li>
-          <a href="https://beakerbrowser.com/releases/0-7-3/">
-            Beaker 0.7.3 released
-          </a>
-        </li>
-        <li>
-          <a href="https://beakerbrowser.com/2017/06/14/forking-websites-on-the-p2p-web.html">
-            Forking websites on the peer-to-peer Web
-          </a>
-        </li>
-
-        <li>
-          <a href="https://beakerbrowser.com/2017/06/09/self-mutating-websites.html">
-            Self-mutating websites
-          </a>
-        </li>
-        <li>
-          <a href="https://beakerbrowser.com/2017/06/07/view-source-peer-to-peer.html">
-            View source on the peer-to-peer Web
-          </a>
-        </li>
-        <li>
-          <a href="https://blog.datproject.org/2016/12/12/reader-privacy-on-the-p2p-web/">
-            Reader Privacy in the peer-to-peer Web
-          </a>
-        </li>
-        <li>
-          <a href="https://pfrazee.github.io/blog/achieving-scale">
-            Achieving Scale in the Decentralized Web
-          </a>
-        </li>
-      </ul>
+    <div class="col col-1-2 graphic">
+      <img src="/img/view-source.png"/>
     </div>
   </div>
-</div>
 
-<div class="community section section--community">
-  <div class="container">
-    <ul class="testimonials">
-      <li class="testimonial">
-        <q class="testimonial__quote">
-          Very exciting work being done on
-          <a href="https://twitter.com/beakerbrowser">@BeakerBrowser</a>!
-        </q>
-        <div class="wrapper">
-          <img class="testimonial__avatar" data-src="/img/webtorrentapp.jpg" />
-          <span>
-            <a class="testimonial__link"
-               href="https://twitter.com/WebTorrentApp/status/814577481273528320">
-              the WebTorrent team
-            </a>
-          </span>
-        </div>
-      </li>
-
-      <li class="testimonial">
-        <q class="testimonial__quote">
-          Save some time and get properly excited now about
-          <a href="https://twitter.com/beakerbrowser">@BeakerBrowser</a>
-          and <a href="https://twitter.com/dat_project">@dat_project</a>; they
-          are going to be huge in 2017.
-        </q>
-        <div class="wrapper">
-          <img class="testimonial__avatar" data-src="/img/jermolene.jpg" />
-          <span>
-            <a class="testimonial__link"
-              href="https://twitter.com/Jermolene/status/811582543107592192">
-              Jeremy Ruston,
-            </a>
-            creator of <a href="https://tiddlywiki.com/">TiddlyWiki</a>
-          </span>
-        </div>
-      </li>
-
-      <li class="testimonial">
-        <q class="testimonial__quote">
-          Beaker is making the P2P decentralized web user-friendly. Pretty cool
-          to watch.
-        </q>
-        <div class="wrapper">
-          <img class="testimonial__avatar" data-src="/img/rauchg.jpg" />
-          <span>
-            <a class="testimonial__link"
-               href="https://twitter.com/rauchg/status/816361204721385472">
-              Guillermo Rauch,
-            </a>
-            of <a href="https://socket.io/">Socket.IO and <a href="https://zeit.co">▲ZEIT</a>
-          </span>
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
-
-<div class="section section--download">
-  <div class="container">
-    <h2>Get started</h2>
-    <p>
-      <a class="btn" href="/docs/">Learn More</a>
-      <a class="btn btn--action"
-         href="/docs/install/">
-        Install Beaker
-        <i class="fa fa-download" aria-hidden="true"></i>
+  <div class="testimonials-wrapper">
+    {% for t in site.data.testimonials %}
+      <a class="testimonial" href="{{ t.href }}">
+        <img class="avatar" src="{{ t.img }}"/>
+        <q class="testimonial__quote">{{ t.text }}</q>
       </a>
-    </p>
+    {% endfor %}
   </div>
-  <div class="divider"></div>
-</div>
-<script>
-[].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
-  img.setAttribute('src', img.getAttribute('data-src'))
-  img.onload = function() {
-    img.removeAttribute('data-src')
-  }
-})
-</script>
 
-<div id="video-modal">
-  <iframe src="https://www.youtube.com/embed/U2B9mwRFE8U" frameborder="0" allowfullscreen></iframe>
+  <div class="container">
+    <button id="show-all-testimonials">
+      <span>Show more</span>
+      <span class="fa fa-angle-down"></span>
+    </button>
+  </div>
+
+  <script src="/js/testimonials.js"></script>
 </div>
-<script src="/js/video-modal.js"></script>
+
+<div class="section what">
+  <div class="container columns">
+    <div class="col col-1-2">
+      <img src="/img/what-is-beaker.svg"/>
+    </div>
+
+    <div class="col col-1-2">
+      <h2 class="extra-title">
+        Built for building
+      </h2>
+
+      <h3>
+        The Web should be a creative tool for everyone
+      </h3>
+
+       <p>
+        Beaker brings <em>peer-to-peer publishing</em> to the Web, turning the browser
+        into a supercharged tool for sharing websites, files, apps, and more.
+      </p>
+
+      <p>
+        <a href="/about">Learn more →</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="section how-it-works">
+  <div class="container narrow">
+    {% include how-it-works.html %}
+  </div>
+
+  <p>
+    <a href="/docs/tour" class="btn action">
+      Take a tour
+    </a>
+
+    <a href="/docs/" class="btn blue">
+      Explore the docs
+    </a>
+  </p>
+</div>
+
+<div class="section mission blue-bg">
+  <div class="container narrow columns">
+    <div class="col col-1-2">
+      <h2>Our mission</h2>
+
+      <p>
+        We believe the Web is at its best when it empowers creation and
+        encourages participation. We use peer-to-peer technologies to
+        uphold that vision and build a better Web.
+      </p>
+
+      <p>
+        <a href="/about" class="btn white">Learn more about us</a>
+        <a href="/install/" class="btn white action">Install Beaker</a>
+      </p>
+    </div>
+
+    <div class="col col-1-2 graphic-container">
+      <button id="mission-good" class="mission-toggle mission-btn btn white active">
+        <span class="fa fa-check"></span>
+      </button>
+
+      <button id="mission-bad" class="mission-toggle mission-btn btn white">
+        <span class="fa fa-times"></span>
+      </button>
+
+      <img class="earth-graphic mission-toggle active" src="/img/p2p-earth.svg"/>
+      <img class="earth-graphic mission-toggle" src="/img/centralized-earth.svg"/>
+    </div>
+  </div>
+  <script src="/js/mission.js"></script>
+</div>

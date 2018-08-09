@@ -1,154 +1,524 @@
-.layout-docs-intro {
+.docs-intro {
 
-  .container {
-    max-width: 1000px;
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
   }
 
-  main {
-    padding: 1rem 0;
-    min-height: calc(100vh - 56px - 70px);
+  ul,
+  p {
+    color: inherit;
+    font-size: inherit;
   }
 
-  .callouts-1 {
+  .external-links,
+  .whats-peer-to-peer-web {
 
-    .container {
-      @extend %grid-3;
-      padding: 2em 0;
+    h2 {
+      font-size: 22px;
+      margin: 0 0 20px 0;
+      line-height: 1;
+    }
+  }
+
+  .highlights {
+    margin-bottom: 40px;
+
+    .highlight {
+      padding: 15px 20px;
+      position: relative;
+      color: #fff;
+
+      &:hover h2 {
+        text-decoration: underline;
+      }
+
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+
+      a {
+        text-decoration: underline;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+
+      .icon {
+        position: absolute;
+        color: rgba(255, 255, 255, .25);
+      }
+
+      &.view-source {
+        background: $green;
+
+        .icon {
+          right: 10px;
+          top: 10px;
+          font-size: 100px;
+        }
+      }
+
+      &.privacy {
+        background: $orange;
+
+        .icon {
+          right: -15px;
+          top: 0px;
+          font-size: 120px;
+        }
+      }
+
+      &.seeding {
+        background: $blue;
+
+        .icon {
+          width: 50%;
+          right: 10px;
+          top: 15px;
+          opacity: .5;
+          filter: invert(1);
+          transform: rotateX(180deg);
+        }
+      }
+    }
+  }
+
+  .publish-a-site {
+    margin-top: 40px;
+    font-size: 15px;
+    font-weight: 500;
+
+    .fa-magic {
+      margin-right: 5px;
+    }
+  }
+
+  .welcome {
+
+    .fa-heart {
+      color: $pink;
+      margin-right: 3px;
+    }
+  }
+
+  .changelog {
+    @extend %inline-flex;
+    font-weight: 500;
+    margin: 15px 0;
+
+    &:hover {
+
+      .text {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .docs-hero {
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+
+    @include respond-to(netbook){
+      flex-wrap: nowrap;
+    }
+  }
+
+  .cta {
+    font-size: 16px;
+    margin-bottom: 15px;
+    width: 100%;
+    flex: 100%;
+
+    @include respond-to(netbook) {
+      width: 33%;
+      flex: 2;
+      margin-bottom: 0;
+      margin-right: 20px;
     }
 
-    .callout {
-      @extend %col-1-3;
-      border: 1px solid $gray--mid;
-      font-size: .9rem;
-      padding: 1rem;
-      position: relative;
-      background: $gray--light;
-      color: $text--light-bg-muted;
-      text-align: center;
-      cursor: pointer;
+    a.link {
+      text-decoration: underline;
+      color: #222;
 
       &:hover {
-        background: darken($gray--light, 5%);
+        color: $green;
+      }
+    }
 
-        > i {
-          text-shadow: 2px 4px $text--light-bg-transparent;
+    .take-a-tour {
+
+      &:hover {
+        color: $blue;
+        text-decoration: none;
+
+        .text {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .actions {
+      display: none;
+      margin-top: 15px;
+    }
+
+    .action {
+      @extend %flex;
+
+      .icon {
+        width: 25px;
+        margin-right: 0;
+
+        &.fa-map {
+          color: $blue;
+        }
+
+        &.fa-magic {
+          color: $orange;
         }
       }
 
       &:not(:last-child) {
-        margin-bottom: 2em;
-
-        @include respond-to(show-grid-3) {
-          margin-bottom: 0;
-          border-right: 0;
-          border-bottom: 1px solid $gray--mid;
-        }
+        margin-bottom: 7px;
       }
 
-      > i {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-      }
+      &:hover {
 
-      .title {
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-      }
-
-      .desc {
-        font-size: .9rem;
-      }
-
-      @include respond-to(show-grid-3) {
-        padding: 2rem;
-
-        > i {
-          font-size: 8rem;
-          margin-bottom: 3rem;
-        }
-
-        .title {
-          font-size: 1.5rem;
-          margin-bottom: 3rem;
+        .text {
+          text-decoration: underline;
         }
       }
     }
   }
 
-  .callouts-2 {
+  .apis {
+    margin: 0 0 15px 0;
+    flex: 100%;
+    max-width: 100%;
 
-    .container {
-      @extend %grid-3;
-      padding: 2em 0;
+    @include respond-to(netbook) {
+      margin-bottom: 0;
+      flex: 3;
     }
 
-    .callout {
-      text-align: left;
+    .example {
+      margin-bottom: 10px;
+      background: #eee;
 
-      &.updates {
-        @extend %col-1-3;
-        text-align: left;
-        margin-bottom: 3rem !important;
+      .highlight {
+        margin: 0;
+        padding: 15px;
+
+        pre {
+          max-width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          overflow-x: auto;
+        }
       }
+    }
 
-      @include respond-to(show-grid-3) {
-        min-width: 295px;
-        flex-basis: 295px;
-      }
+    .links {
+      @extend %flex;
 
-      &.tools {
-        @include respond-to(show-grid-3) {
-          min-width: 305px;
-          flex-basis: 305px;
+      a {
+        flex: 1;
+        padding: 3px 10px;
+        background: #111;
+        border: 2px solid #111;
+        color: #fff;
+        text-align: center;
+        font-weight: 500;
+        font-size: 15px;
+
+        &:hover {
+          background: $green;
+          border-color: $green;
         }
       }
 
-      &:not(:last-child) {
-        margin-bottom: 1rem;
+      a.snippets {
+        border: 2px dashed;
+        color: #111;
+        margin-left: 10px;
+        background: #fff;
 
-        @include respond-to(show-grid-3) {
-          margin-right: 3em;
-          margin-bottom: 0;
+        &:hover {
+          background: $teal;
         }
+      }
+    }
+  }
+
+  .main-info {
+    margin-bottom: 15px;
+  }
+
+  .external-links,
+  .whats-peer-to-peer-web {
+    padding: 20px;
+    height: 100%;
+
+    ul {
+      list-style: none;
+      margin-left: 0;
+    }
+  }
+
+  .whats-peer-to-peer-web {
+    background: #111;
+    background-image: url(/img/docs/whats-peer-to-peer-web.svg);
+    background-position-x: calc(100% + 5px);
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 15px;
+
+    p {
+      max-width: 500px;
+    }
+  }
+
+  .external-links {
+    border: 2px solid #111;
+    font-size: 16px;
+    margin-right: 0;
+
+    li {
+
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+
+      &.view-source:hover {
+        color: $orange;
+      }
+
+      &.support:hover {
+        color: $pink;
+      }
+
+      &.chat:hover {
+        color: $purple;
+      }
+
+      &.install:hover {
+        color: $green;
+      }
+    }
+
+    .fa,
+    .fas,
+    .far {
+      margin-right: 3px;
+    }
+  }
+
+  h2 {
+    @extend %body-font;
+    font-size: 30px;
+
+    &.underline {
+      border-bottom: 1px solid #ddd;
+      line-height: 1;
+      padding-bottom: 7px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .quick-links {
+    font-size: 15px;
+
+    aside.dns {
+      margin: 30px auto;
+    }
+
+    ul {
+      margin-bottom: 10px;
+
+      a {
+        @extend %link;
       }
     }
 
     h2 {
-      margin-bottom: 1em;
-      text-transform: uppercase;
-      font-size: .9rem;
-      color: $text--light-bg-muted;
+      @extend %flex;
+      align-items: center;
+      font-size: 18px;
+      margin-top: 0;
 
-      @include respond-to(show-grid-3) {
-        border-bottom: 1px solid $gray--mid;
+      &:not(:first-of-type) {
+        margin-top: 25px;
+      }
+
+      img.dat-hexagon {
+        height: 18px;
+        margin-left: 5px;
+      }
+
+      a:hover {
+        color: $blue;
+      }
+    }
+  }
+
+  ul.docs-videos {
+    list-style: none;
+    margin-left: 0;
+    font-size: inherit;
+
+    .thumbnail {
+      max-width: 100px;
+      margin-right: 15px;
+      border: 1px solid transparent;
+    }
+
+    .video-title {
+      font-weight: 500;
+      font-size: 16px;
+      margin-bottom: 3px;
+    }
+
+    .video-author {
+      font-size: 14px;
+      color: #888;
+    }
+
+    .docs-video {
+      @extend %flex;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      margin-bottom: 20px;
+
+      &:hover {
+
+        .thumbnail {
+          border-color: #111;
+        }
+
+        .video-title {
+          color: $blue;
+        }
+      }
+    }
+  }
+
+  .links-grid {
+    @extend %flex;
+    border: 2px solid;
+    margin: 40px 0;
+    flex-wrap: wrap;
+
+    .link-icon {
+      background: #111;
+      color: #fff;
+      font-size: 18px;
+      flex: 100%;
+      height: 48px;
+      line-height: 48px;
+      text-align: center;
+
+      .text {
+        font-weight: 500;
       }
     }
 
-    .tutorials {
-      @extend %col-2-3;
-      font-size: .9rem;
+    .link {
+      @extend %inline-flex;
+      align-items: center;
+      flex: 100%;
+      height: 48px;
+      padding: 10px;
+      font-weight: 500;
+      font-size: 15px;
 
-      .more {
-        @extend %link;
-        margin: .5rem 0 2rem 0;
-        padding-top: .5rem;
-      }
-    }
+      &:hover {
 
-    .updates {
-      font-size: .9rem;
-    }
-
-    .updates-list {
-      margin-left: 20px;
-      color: $text--link;
-
-      li {
-
-        &:hover {
+        .text {
           text-decoration: underline;
         }
       }
+
+      &:not(:last-child) {
+        border-bottom: 2px solid;
+      }
+
+      &.changelog {
+        margin: 0;
+
+        .icon {
+          justify-content: center;
+        }
+
+        .fa-circle {
+          font-size: 8px;
+        }
+      }
+
+      .icon {
+        width: 50px;
+        text-align: center;
+        margin-right: 10px;
+
+        &.dot-com {
+          display: inline-block;
+          height: 20px;
+          line-height: 20px;
+          background: $yellow;
+          padding: 0 4px;
+          font-family: monospace;
+          font-weight: bold;
+          transform: rotate(-7deg);
+        }
+      }
+    }
+
+    @include respond-to(netbook) {
+      flex-wrap: nowrap;
+      height: 50px;
+
+      .link-icon {
+        flex: initial;
+        width: 50px;
+
+        .text {
+          display: none;
+        }
+      }
+
+      .link {
+        flex: 1;
+        justify-content: center;
+
+        .icon {
+          width: auto;
+        }
+
+        &:not(:last-child) {
+          border-bottom: 0;
+          border-right: 2px solid;
+        }
+      }
+    }
+  }
+
+  .guides {
+
+    h2 {
+      margin: 40px 0 10px 0;
+    }
+
+    .link {
+      display: block;
+      color: $blue;
+      font-size: 15px;
+      margin-top: 15px;
     }
   }
 }

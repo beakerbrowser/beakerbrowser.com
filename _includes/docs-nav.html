@@ -1,14 +1,16 @@
-<div class="docs-nav {{ include.class }}">
+<div class="docs-breadcrumbs {{ include.class }}">
   <div class="container">
     {% assign activeSection = site.data.docs[include.section] %}
 
-    <div class="active-section">
-      <a href="/docs/" class="active-section">Beaker Docs</a>
+    <div class="breadcrumbs">
+      <a href="/docs/" class="active-section">Documentation</a>
 
       {% if activeSection %}
-        <i class="fa fa-angle-right"></i>
-        <a href="{{ activeSection.url }}">
-          {{ activeSection.title }}
+        <span>/</span>
+
+        <a href="{{ activeSection.url }}" class="btn">
+          <span>{{ activeSection.title }}</span>
+          <i class="fa fa-angle-down"></i>
         </a>
       {% endif %}
     </div>

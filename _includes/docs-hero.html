@@ -1,0 +1,13 @@
+<div class="docs-hero {{ include.class }}">
+  <div class="container">
+    {% assign activeSection = site.data.docs[include.section] %}
+
+    <h1 class="title">
+      {{ activeSection.title }}
+    </h1>
+
+    <h2 class="subtitle">
+      {{ activeSection.subtitle }}
+    </h2>
+  </div>
+</div>

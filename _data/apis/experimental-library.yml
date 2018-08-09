@@ -1,0 +1,185 @@
+methods:
+  -
+    name: "add"
+    signature: "experimental.library.add(url, opts?)"
+    desc: |
+      Add an archive to the user's Library.
+
+      - `url` String. The URL of the archive to add to the Library.
+      - `opts.duration` Number. How long the archive should stay in the Library, in minutes. Useful for "temporary seeding."
+      - returns `Promise<UserSettings>`
+
+      Example:
+
+      ```js
+      var userSettings = await experimental.library.add(datUrl)
+      userSettings.isSaved // true
+      userSettings.expiresAt // a timestamp or undefined
+      ```
+  -
+    name: "remove"
+    signature: "experimental.library.remove(url)"
+    desc: |
+      Remove an archive from the user's Library.
+
+      - `url` String. The URL of the archive to remove.
+      - returns `Promise<UserSettings>`
+
+      Example:
+
+      ```js
+      var userSettings = await experimental.library.remove(datUrl)
+      userSettings.isSaved // false
+      userSettings.expiresAt // a timestamp or undefined
+      ```
+  -
+    name: "requestAdd"
+    signature: "experimental.library.requestAdd(url, opts?)"
+    desc: |
+      Request to add an archive to the user's Library. Will prompt the user for confirmation.
+
+      - `url` String. The URL of the archive to add to the Library.
+      - `opts.duration` Number. How long the archive should stay in the Library, in minutes. Useful for "temporary seeding."
+      - returns `Promise<UserSettings>`
+
+      Example:
+
+      ```js
+      var userSettings = await experimental.library.requestAdd(datUrl)
+      userSettings.isSaved // true
+      userSettings.expiresAt // a timestamp or undefined
+      ```
+  -
+    name: "requestRemove"
+    signature: "experimental.library.requestRemove(url)"
+    desc: |
+      Request to remove an archive from the user's Library. Will prompt the user for confirmation.
+
+      - `url` String. The URL of the archive to remove.
+      - returns `Promise<UserSettings>`
+
+      Example:
+
+      ```js
+      var userSettings = await experimental.library.requestRemove(datUrl)
+      userSettings.isSaved // false
+      userSettings.expiresAt // a timestamp or undefined
+      ```
+  -
+    name: "get"
+    signature: "experimental.library.get(url)"
+    desc: |
+      Get the settings for the given archive.
+
+      - `url` String. The URL of the archive.
+      - returns `Promise<UserSettings>`
+
+      Example:
+
+      ```js
+      var userSettings = await experimental.library.get(datUrl)
+      userSettings.isSaved // true/false
+      userSettings.expiresAt // a timestamp or undefined
+      ```
+  -
+    name: "list"
+    signature: "experimental.library.list(query?)"
+    desc: |
+      List the archives saved to the user's Library.
+
+      - `query.inMemory` Boolean. Filter by whether the archives are loaded.
+      - `query.isSaved` Boolean. Filter by whether the archives are saved or just in the cache.
+      - `query.isNetworked` Boolean. Filter by whether the archives are being swarmed on the network.
+      - `query.isOwner` Boolean. Filter by whether the archive is owned by the user.
+      - returns `Promise<Array<ArchiveInfo>>`
+
+      Example:
+
+      ```js
+      var archives = await experimental.library.list({isSaved: true})
+      ```
+
+      Each object returned in the array will have the following properties:
+
+      ```js
+      {
+        url: string
+        title: string
+        description: string
+        size: number
+        mtime: number
+        isOwner: boolean
+        userSettings: {
+          isSaved: boolean
+          expiresAt: number
+        }
+        peers: number
+      }
+      ```
+events:
+  -
+    name: "Event: added"
+    signature: "Event: \"added\""
+    desc: |
+      An archive has been added to the Library.
+
+      - `event.url` String. The URL of the archive added.
+
+      Example:
+
+      ```js
+      experimental.library.addEventListener('added', ({url}) => {
+        console.log(url, 'was added to the Library')
+      })
+      ```
+  -
+    name: "Event: removed"
+    signature: "Event: \"removed\""
+    desc: |
+      An archive has been removed from the Library.
+
+      - `event.url` String. The URL of the archive removed.
+
+      Example:
+
+      ```js
+      experimental.library.addEventListener('removed', ({url}) => {
+        console.log(url, 'was removed from the Library')
+      })
+      ```
+  -
+    name: "Event: updated"
+    signature: "Event: \"updated\""
+    desc: |
+      An archive has recently had its metadata updated.
+
+      - `event.url` String. The URL of the archive updated.
+      - `event.title` String. The archive title.
+      - `event.description` String. The archive description.
+      - `event.size` Number. The archive size, in bytes.
+      - `event.mtime` Number. The timestamp of the most recent modification.
+      - `event.isOwner` Boolean. Does the user own the archive?
+
+      Example:
+
+      ```js
+      experimental.library.addEventListener('updated', ({url}) => {
+        console.log(url, 'was recently updated')
+      })
+      ```
+  -
+    name: "Event: network-changed"
+    signature: "Event: \"network-changed\""
+    desc: |
+      An archive has recently had its network conditions change.
+
+      - `event.url` String. The URL of the archive updated.
+      - `event.connections` Number. The number of active connections.
+
+      Example:
+
+      ```js
+      experimental.library.addEventListener('updated', ({url, connections}) => {
+        console.log(url, 'has', connections, 'current peers')
+      })
+      ```

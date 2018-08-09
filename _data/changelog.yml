@@ -1,0 +1,110 @@
+# schema
+# -
+#   change: addition | modification | deletion
+#   title: string
+#   href: string
+#   date: string
+#   description: optional string
+
+-
+  change: addition
+  title: Added <code>experimental.capturePage</code>
+  href: /docs/apis/experimental-capturepage.html
+  date: TBD
+  description: |
+    The capturePage Labs API lets app take a screenshot of pages with the user's permission.
+    This is especially helpful for writing aggregators that accept site submissions, because it makes it possible to get pictures of the submitted site.
+-
+  change: addition
+  title: Added <code>experimental.globalFetch</code>
+  href: /docs/apis/experimental-globalfetch.html
+  date: TBD
+  description: |
+    The globalFetch Labs API is a variation of fetch() which lets sites circumvent CORS with the user's permission.
+    This is useful for dat:// websites, since they have no server to make those requests on their behalf.
+-
+  change: addition
+  title: Added <code>experimental.datPeers</code>
+  href: /docs/apis/experimental-datpeers.html
+  date: TBD
+  description: |
+    The datPeers Lab API makes it possible to exchange messages with peers on a dat:// website.
+-
+  change: addition
+  title: Added "type" field to dat.json
+  href: /docs/apis/manifest.html#type
+  date: TBD
+  description: |
+    The type field is an experimental tool to assist with categorizing users' data, sites, and apps.
+-
+  change: addition
+  title: Added <code>DatArchive#checkout()</code>
+  href: /docs/apis/dat.html#checkout
+  date: TBD
+  description: |
+    This method makes it more convenient to access historic versions of a Dat archive, rather than having to manually construct versioned URLs.
+-
+  change: addition
+  title: Added inline editing to the Library
+  date: 2018-05-29
+  description: |
+    This change added an inline editor to the Library, so you can edit and update changes without opening them in your text editor.
+-
+  change: addition
+  title: Added DNS TXT record support to Dat
+  href: https://www.datprotocol.com/deps/0005-dns/
+  date: 2018-05-29
+  description: |
+    This expands the DNS model so that domain names can be used with `dat://` websites without setting up an `https://` server.
+-
+  change: addition
+  title: Added <code>experimental.library</code>
+  href: /docs/apis/experimental-library.html
+  date: 2018-05-29
+  description: |
+    The Library experimental API gives developers tools to manage users' saved Dat archives.
+-
+  change: addition
+  title: Added JSON rendering
+  date: 2018-05-29
+  description: JSON files will now be rendered in a GUI which makes them easier to read and explore.
+-
+  change: modification
+  title: Replaced the "staging area" with automatic bidirectional sync
+  date: 2018-05-29
+  description: |
+    Previously, Beaker gave every Dat archive a "staging area" where users could preview files before publishing them.
+    We found this created complex edge-cases, and so replaced it with an automatic bidirectional sync with the folder.
+-
+  change: deletion
+  title: Deprecated <code>DatArchive</code> methods <code>diff()</code>, <code>commit()</code>, and <code>revert()</code>
+  date: 2018-05-29
+  description: |
+    These methods were part of the staging area implementation which were removed.
+-
+  change: addition
+  title: Added "content_security_policy" directive to dat.json
+  href: /docs/apis/manifest.html#content-security-policy
+  date: 2018-05-29
+-
+  change: addition
+  title: Added "links" field to dat.json
+  href: /docs/apis/manifest.html#links
+  date: 2018-05-29
+-
+  change: modification
+  title: Replaced <code>DatArchive#createNetworkActivityStream()</code>
+  href: /docs/apis/dat.html#events
+  date: 2018-03-27
+  description: Network events are now automatically emitted on the archive object.
+-
+  change: modification
+  title: Renamed <code>DatArchive#createFileActivityStream()</code> to <code>watch()</code>
+  href: /docs/apis/dat.html#watch
+  date: 2018-03-27
+  description: The behavior is unchanged. We just felt like making the API nicer to read.
+-
+  change: addition
+  title: Added the "Dat swarm debugger"
+  date: 2018-03-15
+

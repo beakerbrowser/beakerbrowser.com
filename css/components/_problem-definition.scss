@@ -1,0 +1,110 @@
+.section.problem {
+
+  h2 {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 80px;
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    letter-spacing: .3px;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  // TODO saved for when we actually have learn-more links
+  .learn-more {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    padding-top: 10px;
+    margin-top: 25px;
+  }
+
+  .problem {
+    @extend %flex;
+    flex-wrap: nowrap;
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    border: 2px solid;
+
+    &.left {
+      padding-left: 25px;
+    }
+
+    &.right {
+      padding-right: 25px;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 40px;
+    }
+
+    &.blue {
+      border-color: $blue;
+
+      p a,
+      h3 {
+        color: $blue;
+      }
+
+      .learn-more {
+        background: $blue;
+      }
+    }
+
+    &.green {
+      border-color: $green;
+
+      p a,
+      h3 {
+        color: $green;
+      }
+
+      .learn-more {
+        background: $green;
+      }
+    }
+
+    &.purple {
+      border-color: $purple;
+
+      p a,
+      h3 {
+        color: $purple;
+      }
+
+      .learn-more {
+        background: $purple;
+      }
+    }
+
+    .graphic-container {
+      flex: 1 0 250px;
+    }
+
+    img.graphic {
+      width: 100px;
+      height: auto;
+    }
+
+    .content {
+      text-align: left;
+      padding: 25px 0;
+
+      p {
+        font-size: .9rem;
+        font-weight: 400;
+      }
+    }
+  }
+}

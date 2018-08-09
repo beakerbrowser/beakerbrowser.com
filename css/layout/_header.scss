@@ -1,39 +1,57 @@
 .header {
-  @extend %antialiased;
-  @extend %shrink-text-phone;
-  background: $header-bg;
-  color: $text--dark-bg;
   width: 100%;
-  font-weight: bold;
+  padding: 30px 0;
 
   .container {
-    @extend %flex-container;
+    @extend %flex;
     justify-content: space-between;
-    align-items: baseline;
-    padding: 15px 0;
+  }
 
-    @include respond-to(tablet) {
-      border-bottom: 1px solid;
+  .nav-link {
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: .9rem;
+    font-weight: 600;
+
+    &.btn {
+      width: 100%;
+      text-align: center;
+      margin: 20px auto 0 auto;
+
+      @media (min-width: 500px) {
+        width: auto;
+        margin-left: 30px;
+        margin-top: 0;
+      }
+    }
+
+    @media (min-width: 500px) {
+      margin-top: 0;
+      margin-left: 20px;
+    }
+
+    &:not(.btn) {
+      margin-left: 30px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &:first-of-type {
+      margin-left: 0;
     }
   }
 
-  &__logo {
-    @extend %transition;
-    transition-property: color;
-    font-size: 1.5em;
+  &.light {
+    @extend %antialiased;
+    background: $blue;
+    color: #fff;
+    font-weight: 700;
+  }
 
-    img, span {
-      display: inline-block;
-      vertical-align: middle;
-    }
-
-    img {
-      height: 30px;
-      margin: 0 5px 0 0;
-    }
-
-    &:hover {
-      color: $text--dark-bg-hover;
-    }
+  &.dark {
+    color: $primary;
   }
 }

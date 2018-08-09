@@ -1,3 +1,137 @@
+.content {
+
+  a {
+    color: $blue;
+    color: var(--page-color); // TODO
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: initial;
+
+    code {
+      font-weight: 500;
+    }
+  }
+
+  h2 {
+    margin-top: 50px;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 40px;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  h4:not(code) {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  p,
+  ul,
+  ol,
+  aside {
+    font-size: 13.5px;
+    font-size: 15px;
+    color: #222;
+  }
+
+  .columns,
+  p:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  p.accent {
+    font-size: 22px;
+
+    code {
+      font-size: 18px;
+    }
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  ul,
+  ol {
+    margin: 0 0 20px 50px;
+
+    li:not(:last-of-type) {
+      margin-bottom: 3px;
+    }
+  }
+
+  blockquote {
+    margin-left: 30px;
+    padding-left: 15px;
+    border-left: 2px solid var(--page-color);
+    color: $text--light-bg-muted;
+    font-style: italic;
+    font-size: 1rem;
+  }
+
+  figcaption.code {
+    margin-bottom: 3px;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: .25px;
+  }
+
+  pre {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #f2f2f2;
+    font-size: 14px;
+
+    code {
+      background: none;
+      padding: 0;
+    }
+  }
+
+  ul code,
+  ol code,
+  aside code,
+  p code {
+    background: #f2f2f2;
+    padding: 0 4px;
+    font-size: 13.5px;
+  }
+
+  figure.col {
+
+    &:first-child {
+      margin-right: 30px;
+    }
+
+    &:last-child {
+      margin-left: 30px;
+    }
+  }
+}
+
 .layout-post {
 
   .header .container {
@@ -10,27 +144,13 @@
 
   & > .container {
     display: flex;
-
-    main {
-      flex: 3;
-      max-width: 600px;
-    }
-
-    .blog-sidebar {
-      flex: 0 0 250px;
-      margin-left: auto;
-      margin-top: 3em;
-
-      @include respond-to(shrink-blog-sidenav) {
-        flex: 0 0 300px;
-      }
-    }
   }
 
   main {
+    max-width: 650px;
     min-height: calc(100vh - 56px - 70px);
-    margin: 2rem 1rem;
-    font-size: .9rem;
+    margin: 50px auto;
+    font-size: .875rem;
     word-wrap: break-word;
 
     pre {
@@ -48,11 +168,10 @@
     }
 
     a {
-      color: $primary;
-      text-decoration: none !important;
+      text-decoration: underline;
 
       &:hover {
-        text-decoration: underline !important;
+        color: $primary;
       }
     }
 
@@ -62,23 +181,30 @@
     h4,
     h5,
     h6 {
-      margin-bottom: 1rem;
+      margin-bottom: 5px;
+      margin-top: 20px;
     }
 
-    @include respond-to(tablet) {
-      margin: 3rem 1em;
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 40px;
+      font-weight: 500;
+    }
+
+    h3 {
+      font-weight: 500;
     }
   }
 
   .post-meta {
-    @extend %flex-container;
-    align-items: center;
-    font-size: .8rem;
+    text-align: center;
     color: $text--light-bg-muted;
-
-    .avatar {
-      height: 100%;
-    }
+    font-size: 1rem;
+    margin-bottom: 35px !important;
 
     .author {
       color: $primary;
@@ -94,10 +220,10 @@
     }
   }
 
-  .avatar {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
+  .post-summary {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-bottom: 35px !important;
   }
 
   ul {
@@ -107,41 +233,41 @@
   ul,
   p {
     &:not(:last-child) {
-      margin-bottom: 1.5rem;
+      margin-bottom: 20px;
     }
   }
 
   .back-to-blog {
-    margin-top: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
     color: $primary;
-    text-decoration: none !important;
-    display: block;
 
     &:hover {
-      text-decoration: underline !important;
+      text-decoration: underline;
     }
   }
 
   .twitter-tweet {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 25px !important;
   }
 
   blockquote {
+    position: relative;
     font-style: italic;
     color: $text--light-bg-muted;
-    margin-left: 20px;
-    margin-bottom: 1.5rem;
-
-    &.big {
-      font-size: 1.1rem;
-    }
+    padding: 10px 0 30px 25px;
+    font-size: 1.3rem;
   }
 
-  .highlight {
-    padding: 1rem;
-    font-size: .825rem;
-    background: $gray--light;
-    border: 1px solid $gray--mid;
-    margin-bottom: 1.5rem;
+  figure {
+    padding-top: 15px;
+    margin-bottom: 30px;
+
+    code {
+      background: none;
+      font-size: inherit;
+      font-family: inherit;
+      padding: 0;
+    }
   }
 }

@@ -1,0 +1,34 @@
+#donors {
+  @extend %grid;
+  grid-template-columns: repeat(auto-fill, 40px);
+  grid-gap: 5px;
+
+  .donor {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+    .avatar {
+      @extend %transition;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid transparentize(#fff, .85);
+      cursor: pointer;
+
+      &:hover {
+        border-color: transparentize($green, .1);
+      }
+    }
+  }
+
+  a.donor {
+    width: 200px;
+    text-align: left;
+    line-height: 40px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

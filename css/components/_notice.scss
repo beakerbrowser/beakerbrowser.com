@@ -1,0 +1,22 @@
+.notice {
+  position: relative;
+  display: inline-block;
+  height: 22px;
+  margin-bottom: 50px;
+  padding: 2px 25px 2px 70px;
+  background: rgba(0,0,0,.1);
+  border-radius: 40px;
+  font-family: "Inter UI";
+  font-size: 12px;
+  font-weight: 500;
+
+  .badge {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    height: 16px;
+    line-height: 8px;
+    background: #fff;
+    color: $blue;
+  }
+}

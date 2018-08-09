@@ -1,0 +1,115 @@
+.build-with-beaker {
+
+  .heading {
+    @extend %antialiased;
+    width: calc(100% + 60px);
+    margin-left: -20px;
+    margin-bottom: -60px;
+    padding: 20px 30px 60px 30px;
+    background: $green;
+    color: #fff;
+    text-align: left;
+    border-radius: 2px;
+
+    h2 {
+      font-size: 1.85rem;
+      margin-bottom: 0;
+    }
+
+    .subtitle {
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+  }
+
+  .content {
+    padding: 30px 0 30px 50px;
+    border: 1px solid mix(#f7f7f7, lighten($blue, 30%));
+    border-radius: 2px;
+  }
+
+  .col {
+    margin-right: 0;
+  }
+
+  .graphic-container {
+    position: relative;
+  }
+
+  img.graphic {
+    position: absolute;
+    right: -10px;
+    top: -40px;
+    max-height: 450px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transform: perspective(600px) rotateY(-5deg) rotateX(1deg);
+    box-shadow: 20px 30px 100px rgba(0,0,0,.5);
+  }
+
+  .build-feature {
+    position: relative;
+
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+
+    .name,
+    .description {
+      padding-left: 20px;
+    }
+
+    .name {
+      font-weight: 500;
+      font-size: 1.05rem;
+      margin: 0;
+    }
+
+    .description {
+      font-weight: 300;
+      font-size: .9rem;
+
+      code {
+        background: none;
+        padding: 0;
+      }
+    }
+
+    .icon {
+      position: absolute;
+      left: -20px;
+      top: 3px;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      background: $green;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 12px;
+
+      &.fa-clone,
+      &.fa-wifi {
+        padding-top: 1px;
+      }
+
+      &.fa-clone {
+        font-size: 11px;
+      }
+
+      &.fa-code,
+      &.fa-clone {
+        -webkit-text-stroke: .5px;
+      }
+    }
+  }
+
+  .learn-more {
+
+    p {
+      padding-left: 20px;
+      font-size: .9rem;
+    }
+  }
+}

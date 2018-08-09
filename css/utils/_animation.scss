@@ -1,0 +1,20 @@
+.pulse {
+  animation: pulse 1.75s infinite;
+}
+
+.delay-transition {
+  transition-delay: .5s;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-200%); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  25% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  75% { transform: scale(1); }
+  100% { transform: scale(1); }
+}

@@ -1,22 +1,42 @@
 .footer {
-  @extend %shrink-text-phone;
-  @extend %antialiased;
-  background: $footer-bg;
-  color: $text--dark-bg;
-  display: flex;
-  padding: 1em 0;
-  font-weight: 500;
+  padding: 40px 0;
+  background: $blue;
+  color: #fff;
+  margin-top: 60px;
 
-  &__links {
-    @extend %flex-container;
-    justify-content: center;
+  a {
+
+    &:not(.btn):hover {
+      text-decoration: underline;
+    }
+  }
+
+  .container {
+    @extend %flex;
+    flex-direction: column;
+  }
+
+  .col {
+    flex-basis: 33%;
+    margin-bottom: 40px;
+  }
+
+  .links {
+    font-size: 15px;
 
     a {
-      margin-right: 2em;
+      display: block;
+    }
+  }
 
-      &:last-of-type {
-        margin-right: 0;
-      }
+  @include respond-to(show-grid-3) {
+
+    .container {
+      flex-direction: row;
+    }
+
+    .col {
+      margin-bottom: 0;
     }
   }
 }

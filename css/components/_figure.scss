@@ -1,24 +1,24 @@
 @import "../utils/placeholders";
 
+// TODO need to get this all sorted out
+
 figure {
-  @extend %rounded;
-  display: table; // this is, sadly, the best way to get centering. ask prf.
-  border: 1px solid $gray--mid;
-  margin: 0 auto 2em;
+  margin: 40px auto;
+  // max-width: 300px;
 
   img {
     display: block;
+    // border: 1px solid #eee;
+    // border-radius: 2px;
   }
 
   figcaption {
+    font-family: 'Inter UI';
+    font-size: 11px;
+    font-style: italic;
+    max-width: 300px;
     text-align: center;
-    border-top: 1px solid $gray--mid;
-    padding: 2px 0;
-    font-size: 0.8rem;
-
-    &.thick {
-      padding: 1em 0;
-      font-weight: bold;
-    }
+    margin: auto;
+    margin-top: 5px;
   }
 }

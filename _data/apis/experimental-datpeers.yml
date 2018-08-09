@@ -1,0 +1,173 @@
+methods:
+  -
+    name: "getSessionData"
+    signature: "experimental.datPeers.getSessionData()"
+    desc: |
+      Fetch the session data attached to your identity on the network.
+      Will be `undefined` until a value is set using [setSessionData()](#setsessiondata).
+
+      - returns `Promise<Any>`
+
+      Example:
+
+      ```js
+      var sessionData = await experimental.datPeers.getSessionData()
+      ```
+  -
+    name: "setSessionData"
+    signature: "experimental.datPeers.setSessionData(sessionData)"
+    desc: |
+      Set the session data attached to your identity on the network.
+
+      - `sessionData` Any. The data you wish to have attached to your identity. Must be no larger than 256 bytes when serialized to JSON.
+      - returns `Promise<void>`
+
+      Example:
+
+      ```js
+      await experimental.datPeers.setSessionData({
+        name: 'Bob',
+        url: 'dat://bob.com'
+      })
+      ```
+
+      **Session data is not private, not guaranteed to be correct, and could be modified by an intermediary on the network.
+      See [Security and privacy](#security-and-privacy) for more information.**
+  -
+    name: "list"
+    signature: "experimental.datPeers.list()"
+    desc: |
+      List the connected peers.
+
+      - returns `Promise<DatPeer>`. See [DatPeer](#datpeer) for more information.
+
+      Example:
+
+      ```js
+      var peers = await experimental.datPeers.list()
+      ```
+  -
+    name: "get"
+    signature: "experimental.datPeers.get(id)"
+    desc: |
+      Get a connected peer by their ID.
+
+      - `id` String. The ID of the peer.
+      - returns `Promise<DatPeer>`. See [DatPeer](#datpeer) for more information.
+
+      Example:
+
+      ```js
+      var peer = await experimental.datPeers.get(peerId)
+      ```
+  -
+    name: "broadcast"
+    signature: "experimental.datPeers.broadcast(message)"
+    desc: |
+      Broadcasts a message to all connected peers.
+
+      - `message` Any. The message to broadcast.
+      - returns `Promise<void>`
+
+      Example:
+
+      ```js
+      await experimental.datPeers.broadcast({hello: 'world!'})
+      ```
+
+      **Messages are not private and could be modified by an intermediary on the network.
+      See [Security and privacy](#security-and-privacy) for more information.**
+events:
+  -
+    name: "Event: connect"
+    signature: "Event: \"connect\""
+    desc: |
+      A new peer has connected to the current site.
+
+      - `event.peer` [DatPeer](#datpeer). The connecting peer.
+
+      Example:
+
+      ```js
+      experimental.datPeers.addEventListener('connect', ({peer}) => {
+        console.log(peer.id, 'has connected')
+      })
+      ```
+  -
+    name: "Event: disconnect"
+    signature: "Event: \"disconnect\""
+    desc: |
+      A peer has disconnected from the current site.
+
+      - `event.peer` [DatPeer](#datpeer). The disconnecting peer.
+
+      Example:
+
+      ```js
+      experimental.datPeers.addEventListener('disconnect', ({peer}) => {
+        console.log(peer.id, 'has disconnected')
+      })
+      ```
+  -
+    name: "Event: message"
+    signature: "Event: \"message\""
+    desc: |
+      A message has been received from a peer.
+
+      - `event.peer` [DatPeer](#datpeer). The messaging peer.
+      - `event.message` Any. The message.
+
+      Example:
+
+      ```js
+      experimental.datPeers.addEventListener('message', ({peer, message}) => {
+        console.log(peer.id, 'has sent the following message:', message)
+      })
+      ```
+
+      **Messages are not private and could be modified by an intermediary on the network.
+      See [Security and privacy](#security-and-privacy) for more information.**
+  -
+    name: "Event: session-data"
+    signature: "Event: \"session-data\""
+    desc: |
+      A peer has updated their session data.
+
+      - `event.peer` [DatPeer](#datpeer). The disconnecting peer.
+
+      Example:
+
+      ```js
+      experimental.datPeers.addEventListener('session-data', ({peer}) => {
+        console.log(peer.id, 'has set their session data to', peer.sessionData)
+      })
+      ```
+datpeer:
+  -
+    name: "DatPeer ID"
+    signature: "id"
+    desc: |
+      The ID of the peer. This ID is randomly generated and should not be saved.
+  -
+    name: "DatPeer sessionData"
+    signature: "sessionData"
+    desc: |
+      The session data set by the peer.
+  -
+    name: "DatPeer send"
+    signature: "send(message)"
+    desc: |
+      Send a message to the peers.
+
+      - `message` Any. The message to send.
+      - returns `Promise<void>`
+
+      Example:
+
+      ```js
+      var peer = await experimental.datPeers.get(datPeerId)
+      await peer.send({hello: 'friend!'})
+      ```
+
+      **Messages are not private and could be modified by an intermediary on the network.
+      See [Security and privacy](#security-and-privacy) for more information.**

@@ -1,0 +1,34 @@
+methods:
+  -
+    name: "capturePage"
+    signature: "experimental.capturePage(url, opts?)"
+    desc: |
+      Loads the given URL in a hidden webview and takes a screenshot of the content.
+
+      The user will be prompted to give permission before taking the screenshot.
+
+      - `url` String. The URL of the resource to be captured.
+      - `opts.width` Number. The width of the page to capture. Cannot be greater than `1600`. Defaults to `1024`.
+      - `opts.height` Number. The height of the page to capture. Cannot be greater than `1200`. Defaults to `768`.
+      - `opts.resizeTo.width` Number. Resizes the captured image to the given width. Cannot be greater than `1600`.
+      - `opts.resizeTo.height` Number. Resizes the captured image to the given height. Cannot be greater than `1200`.
+      - returns `Promise<ArrayBuffer>`. A PNG-format image.
+
+      Examples:
+
+      ```js
+      var png = await experimental.capturePage('dat://beakerbrowser.com', {
+        width: 640,
+        height: 480
+      })
+      await myArchive.writeFile('/screenshot.png', png)
+      ```
+
+      ```js
+      var png = await experimental.capturePage('dat://beakerbrowser.com', {
+        width: 640,
+        height: 480,
+        resizeTo: {width: 80, height: 60}
+      })
+      await myArchive.writeFile('/thumbnail.png', png)
+      ```

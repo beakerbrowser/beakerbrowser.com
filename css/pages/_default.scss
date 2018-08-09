@@ -1,0 +1,72 @@
+.layout {
+
+  // TODO move this to somewhere more appropriate
+  .section {
+    padding: 80px 0;
+  }
+
+  > .container:first-of-type {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .title,
+  .subtitle {
+    margin-bottom: 10px;
+  }
+
+  .title {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
+  h2:not(.subtitle) {
+    // font-size: 1.3rem;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+
+    &:not(:first-child) {
+      margin-top: 40px;
+    }
+  }
+
+  p a:not(.btn) {
+    // color: $blue;
+    color: var(--page-color); // TODO
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  ul,
+  ol {
+    margin-left: 20px;
+  }
+}
+
+hr {
+  width: 100px;
+  height: 4px;
+  margin: auto;
+  border: 0;
+  background: var(--page-color);
+
+  &.blue {
+    background: $blue;
+  }
+
+  &.green {
+    background: $green;
+  }
+}

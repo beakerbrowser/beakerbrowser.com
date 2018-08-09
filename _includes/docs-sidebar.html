@@ -2,10 +2,13 @@
 {% assign activePage = include.page %}
 
 {% if section %}
-<nav class="doc-sidebar-nav">
+<nav class="docs-sidebar">
+  <!--
   <ul class="pages">
     {% for page in section.children %}
-      {% if activePage.title == page.title %}
+      {% if include.section == 'tour' or include.section == 'faq' %}
+        {% assign activePageNav = section %}
+      {% elsif activePage.title == page.title %}
         {% assign activePageNav = page %}
         <li class="active">
       {% else %}
@@ -15,13 +18,51 @@
       </li>
     {% endfor %}
   </ul>
+  -->
 
   {% if activePageNav.children %}
     <ul class="headings">
-      {% for heading in activePageNav.children %}
-        <li>
-          <a href="{{ heading.url }}">{{ heading.title }}</a>
-        </li>
+      {% for child in activePageNav.children %}
+        {% if child.heading and child.children %}
+          <li class="subheading">
+            <a class="anchor" href="{{ child.url }}" title="{{ child.title }}">
+              #
+            </a>
+
+            <span class="collapseable-btn">
+              <i class="fa fa-caret-right"></i>
+              {{ child.title }}
+            </span>
+
+            <ul class="collapseable collapsed">
+              {% for subchild in child.children %}
+                <li>
+                  <a href="{{ subchild.url }}">
+                    {% if subchild.isCode %}
+                      <code>{{ subchild.title }}</code>
+                    {% else %}
+                      {{ subchild.title }}
+                    {% endif %}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% else if child.heading %}
+          <li class="subheading">
+            <a class="anchor" href="{{ child.url }}" title="{{ child.title }}">
+              #
+            </a>
+
+            <a href="{{ child.url }}" title="{{ child.title }}">
+              {{ child.title }}
+            </a>
+          </li>
+        {% else %}
+          <li>
+            <a href="{{ child.url }}">{{ child.title }}</a>
+          </li>
+        {% endif %}
       {% endfor %}
     </ul>
   {% endif %}
