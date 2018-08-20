@@ -13,6 +13,7 @@ Beaker's `Library` API is an experimental API for managing the user's collection
 To use this API, include the following in your <a href="/docs/apis/manifest"><code>dat.json</code> manifest file</a>:
 
 ```json
+{
   "experimental": {
     "apis": ["library"]
   }
