@@ -3,22 +3,22 @@ tour:
   url: /docs/tour
   subtitle: Take a tour of Beaker
   children:
-    - url: "#browsing-with-beaker"
+    - url: "/docs/tour/#browsing-with-beaker"
       title: 1. Browsing with Beaker
       heading: true
-    - url: "#view-source"
+    - url: "/docs/tour/#view-source"
       title: 2. View Source
       heading: true
-    - url: "#one-click-publishing"
+    - url: "/docs/tour/#one-click-publishing"
       title: 3. One-click publishing
       heading: true
-    - url: "#beakers-built-in-editor"
+    - url: "/docs/tour/#beakers-built-in-editor"
       title: 4. Built-in editor
       heading: true
-    - url: "#forking-or-copying-a-website"
+    - url: "/docs/tour/#forking-or-copying-a-website"
       title: 5. "Forking" or copying a website
       heading: true
-    - url: "#live-reloading"
+    - url: "/docs/tour/#live-reloading"
       title: 6. Live reloading
       heading: true
 howBeakerWorks:
@@ -534,25 +534,25 @@ faq:
   children:
     - title: When I visit a dat:// URL in Beaker, does Beaker download the entire website?
       heading: true
-      url: "#when-i-visit-a-dat-url-in-beaker-does-beaker-download-the-entire-website"
+      url: "/docs/faq/#when-i-visit-a-dat-url-in-beaker-does-beaker-download-the-entire-website"
     - title: Do visitors to peer-to-peer websites seed its files?
       heading: true
-      url: "#do-visitors-to-peer-to-peer-websites-seed-its-files"
+      url: "/docs/faq/#do-visitors-to-peer-to-peer-websites-seed-its-files"
     - title: Is the Dat network anonymous?
       heading: true
-      url: "#is-the-dat-network-anonymous"
+      url: "/docs/faq/#is-the-dat-network-anonymous"
     - title: Who can access dat:// websites?
       heading: true
-      url: "#who-can-access-dat-websites"
+      url: "/docs/faq/#who-can-access-dat-websites"
     - title: Will my website stay online when I turn Beaker off?
       heading: true
-      url: "#will-my-website-stay-online-when-i-turn-beaker-off"
+      url: "/docs/faq/#will-my-website-stay-online-when-i-turn-beaker-off"
     - title: Is there an iOS or Android Beaker client?
       heading: true
-      url: "#is-there-an-ios-or-android-beaker-client"
+      url: "/docs/faq/#is-there-an-ios-or-android-beaker-client"
     - title: Will peer-to-peer protocols like Dat ever be adopted by other browsers?
       heading: true
-      url: "#will-peer-to-peer-protocols-like-dat-ever-be-adopted-by-other-browsers"
+      url: "/docs/faq/#will-peer-to-peer-protocols-like-dat-ever-be-adopted-by-other-browsers"
     - title: How is Beaker built?
       heading: true
-      url: "#how-is-beaker-built"
+      url: "/docs/faq/#how-is-beaker-built"
