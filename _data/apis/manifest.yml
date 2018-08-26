@@ -22,7 +22,7 @@ attributes:
   -
     name: "type"
     desc: |
-      A list of 'type' strings. Can be read with [`getInfo()`](dat.html#getinfo) and changed with [`configure()`(dat.html#configure).
+      A list of 'type' strings. Can be read with [`getInfo()`](dat.html#getinfo) and changed with [`configure()`](dat.html#configure).
 
       Type strings are experimental. They were introduced to Beaker as a way to categorize archives, and can be used as a filter in [`selectArchive()`](dat.html#datarchive-selectarchive). You can list multiple types on an archive.
 
@@ -45,7 +45,7 @@ attributes:
   -
     name: "links"
     desc: |
-      An object containing a set of Web links from the Dat. Can be read with [`getInfo()`](dat.html#getinfo) and changed with [`configure()`/](dat.html#configure).
+      An object containing a set of Web links from the Dat. Can be read with [`getInfo()`](dat.html#getinfo) and changed with [`configure()`](dat.html#configure).
 
       The `links` object is a mapping of "rel" values to arrays of link objects, as follows:
 

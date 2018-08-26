@@ -37,8 +37,8 @@ toplevel_methods:
 
       - `opts.title` String. The title of the archive.
       - `opts.description` String. The description of the archive.
-      - `opts.type` Array&lt;String&gt;. The archive's type identifiers.
-      - `opts.links` Object. Top-level links to other resources.
+      - `opts.type` Array&lt;String&gt;. The archive's type identifiers. [Learn more](manifest.html#type).
+      - `opts.links` Object. Top-level links to other resources. [Learn more](manifest.html#links).
       - `opts.prompt` Boolean. Whether or not to show Beaker's create archive modal. (If `false`, a simple permission prompt will be shown instead.)
       - returns `Promise<DatArchive>`
 
@@ -64,8 +64,8 @@ toplevel_methods:
       - `url` String. The URL of the archive to fork.
       - `opts.title` String. The title of the archive.
       - `opts.description` String. The description of the archive.
-      - `opts.type` Array&lt;String&gt;. The archive's type identifiers.
-      - `opts.links` Object. Top-level links to other resources.
+      - `opts.type` Array&lt;String&gt;. The archive's type identifiers. [Learn more](manifest.html#type).
+      - `opts.links` Object. Top-level links to other resources. [Learn more](manifest.html#links).
       - `opts.prompt` Boolean. Whether or not to show Beaker's fork modal. (If `false`, a simple permission prompt will be shown instead.)
       - returns `Promise<DatArchive>`
 
@@ -190,8 +190,8 @@ methods:
 
       - `opts.title` String. The title of the archive.
       - `opts.description` String. The description of the archive.
-      - `opts.type` Array&lt;String&gt;. The archive's type identifiers.
-      - `opts.links` Object. Top-level links to other resources.
+      - `opts.type` Array&lt;String&gt;. The archive's type identifiers. [Learn more](manifest.html#type).
+      - `opts.links` Object. Top-level links to other resources. [Learn more](manifest.html#links).
       - `opts.web_root` String. Path of the folder from which all web requests should be served.
       - `opts.fallback_page` String. Path to a fallback page to serve instead of the default 404 page.
       - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
