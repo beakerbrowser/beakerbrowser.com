@@ -12,7 +12,10 @@
      * Establish events, and fix initial scroll position if a hash is provided.
      */
     init: function() {
-      this.scrollToCurrent();
+      var self = this;
+      setTimeout(function () {
+        self.scrollToCurrent();
+      }, 500)
       window.addEventListener('hashchange', this.scrollToCurrent.bind(this));
       document.body.addEventListener('click', this.delegateAnchors.bind(this));
     },
