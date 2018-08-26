@@ -282,7 +282,7 @@ methods:
       - `opts.recursive` Boolean. Recurse the listing into the subdirectories?
       - `opts.timeout` Number. How long, in ms, to wait for a response? Default 5000.
       - `opts.stat` Boolean. Run stat() on every entry and return with `{name:, stat:}`
-      - returns `Promise<Array&lt;String&gt;>`
+      - returns `Promise<Array<String>>`
 
       Example:
 
