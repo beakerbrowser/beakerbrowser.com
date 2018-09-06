@@ -8,8 +8,6 @@ experimental: true
 order: 5
 ---
 
-TODO: we're not sure we're going to keep this API
-
 `datPeers` is an experimental API for sending and receiving messages between peers on a given `dat://` website. It includes methods for attaching "session data" to your connection. This session data can be used to broadcast a username, profile URL, or other identifying information.
 
 To use this API, include the following in your <a href="/docs/apis/manifest"><code>dat.json</code> manifest file</a>:
