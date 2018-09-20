@@ -17,7 +17,7 @@ header: dark
   <h2>Our mission</h2>
 
   <p>
-    The Web enabled communication, collaboration, and creativity at a scale once unimaginable, but it's devolved into a landscape of of isolated platforms that discourage customization and interoperability. The Web's value flows from the people who use it, yet our <a href="https://twitter.com/prozdkp/status/978344325456318465">online experiences</a> are dictated by corporations whose incentives rarely align with our own.
+    The Web enabled communication, collaboration, and creativity at a scale once unimaginable, but it's devolved into a landscape of isolated platforms that discourage customization and interoperability. The Web's value flows from the people who use it, yet our <a href="https://twitter.com/prozdkp/status/978344325456318465">online experiences</a> are dictated by corporations whose incentives rarely align with our own.
   </p>
 
   <p>
