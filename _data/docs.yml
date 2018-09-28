@@ -385,7 +385,7 @@ guides:
         - title: Domain names and dat://
           url: "#domain-names-and-dat"
         - title: Dat DNS TXT records
-          url: "#dat-dns-text-records"
+          url: "#dat-dns-txt-records"
         - title: .well-known/dat
           url: "#well-knowndat"
     - title: Publish a peer-to-peer website
