@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="85px" height="65px" viewBox="0 0 85 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
-    <title>Live reloading</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Live-reloading">
-            <circle id="Oval-2" fill="#000000" cx="23.5" cy="8.5" r="2.5"></circle>
-            <circle id="Oval-2" fill="#000000" cx="15.5" cy="8.5" r="2.5"></circle>
-            <circle id="Oval-2" fill="#000000" cx="7.5" cy="8.5" r="2.5"></circle>
-            <rect id="Web-APIs" stroke="#000000" stroke-width="2" x="1" y="1" width="83" height="63" rx="3"></rect>
-            <path d="M1,15 L84,15" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
-            <polygon id="Path-9" stroke="#000000" fill="#F8E71C" points="33 38.565918 49.8085938 22 44.7841797 37.5107422 52.9296875 37.5107422 35.4707031 54.4008789 40.9121094 38.565918"></polygon>
-        </g>
-    </g>
-</svg>
+<svg width="85" height="65" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#000" cx="23.5" cy="8.5" r="2.5"/><circle fill="#000" cx="15.5" cy="8.5" r="2.5"/><circle fill="#000" cx="7.5" cy="8.5" r="2.5"/><rect stroke="#000" stroke-width="2" x="1" y="1" width="83" height="63" rx="3"/><path d="M1 15h83" stroke="#000" stroke-width="2" stroke-linecap="square"/><path stroke="#000" fill="#F8E71C" d="M33 38.566L49.809 22l-5.025 15.51h8.146L35.47 54.4l5.442-15.834z"/></g></svg>
