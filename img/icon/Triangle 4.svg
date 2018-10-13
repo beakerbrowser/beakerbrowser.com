@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="89px" height="86px" viewBox="0 0 89 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
-    <title>Triangle 4</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group-18-Copy-3" transform="translate(-101.000000, -37.000000)" fill="#FFFFFF">
-            <path d="M175.061956,40.0410535 C180.112825,46.6936175 186.716494,52.9743274 194.872962,58.8831833 C209.160662,69.2337357 218.745273,78.8183472 223.626797,87.6370176 L102.252664,88.4597754 C107.883738,82.8287011 117.541205,75.7107965 131.225066,67.1060618 C140.838421,61.0609564 149.469169,52.238242 157.117307,40.6379186 L157.117306,40.6379178 C160.461286,35.5659321 167.283774,34.1651067 172.35576,37.5090868 C173.39453,38.1939517 174.309579,39.0500884 175.061956,40.0410535 Z" id="Triangle-4" transform="translate(162.939730, 62.075641) rotate(45.000000) translate(-162.939730, -62.075641) "></path>
-        </g>
-    </g>
-</svg>
+<svg width="89" height="86" xmlns="http://www.w3.org/2000/svg"><path d="M86.092 18.067c-1.132 8.275-.904 17.386.685 27.331 2.784 17.422 2.784 30.977 0 40.665L.371.82c7.964 0 19.826 1.796 35.586 5.387C47.029 8.73 59.371 8.594 72.981 5.8c5.951-1.222 11.766 2.612 12.988 8.563a11 11 0 0 1 .123 3.704z" fill="#FFF" fill-rule="evenodd"/></svg>

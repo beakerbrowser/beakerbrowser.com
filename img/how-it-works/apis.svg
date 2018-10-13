@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="58px" height="36px" viewBox="0 0 58 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
-    <title>apis</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="apis">
-            <rect id="Rectangle-3-Copy-7" fill="#01D682" x="0" y="0" width="39" height="4" rx="1"></rect>
-            <rect id="Rectangle-3-Copy-10" fill="#01D682" x="0" y="8" width="33" height="4" rx="1"></rect>
-            <rect id="Rectangle-3-Copy-6" fill="#3D5AF0" x="0" y="23" width="24" height="4" rx="1"></rect>
-            <rect id="Rectangle-3-Copy-9" fill="#111111" x="56" y="27" width="2" height="9" rx="1"></rect>
-            <rect id="Rectangle-3-Copy-8" fill="#3D5AF0" x="0" y="30" width="53" height="4" rx="1"></rect>
-        </g>
-    </g>
-</svg>
+<svg width="58" height="36" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><rect fill="#01D682" width="39" height="4" rx="1"/><rect fill="#01D682" y="8" width="33" height="4" rx="1"/><rect fill="#3D5AF0" y="23" width="24" height="4" rx="1"/><rect fill="#111" x="56" y="27" width="2" height="9" rx="1"/><rect fill="#3D5AF0" y="30" width="53" height="4" rx="1"/></g></svg>
