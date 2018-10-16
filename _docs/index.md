@@ -107,7 +107,7 @@ await mySite.writeFile('index.html', 'Hello, world!');
     <img class="icon" src="/img/icon/seeding.svg" />
   </a>
 
-  <a href="/docs/tour#2-view-source" class="highlight view-source">
+  <a href="/docs/tour#view-source" class="highlight view-source">
     <h2>View (and edit!) Source</h2>
 
     <p>
