@@ -517,14 +517,14 @@ events:
     desc: |
       The network conditions have changed (e.g. a new peer has connected).
 
-      - `event.connections` Number. The number of active connections.
+      - `event.peers` Number. The number of active connections.
 
       Example:
 
       ```js
       var archive = new DatArchive(datUrl)
-      archive.addEventListener('network-changed', ({connections}) => {
-        console.log(connections, 'current peers')
+      archive.addEventListener('network-changed', ({peers}) => {
+        console.log(peers, 'current peers')
       })
       ```
   -
@@ -715,8 +715,8 @@ deprecated_methods:
 
       Watch for network events. Provides an `EventTarget` with a `.close()` method and the following events:
 
-      - `'network-changed' ({connections})` The number of connections has changed.
-        - `connections` is a number.
+      - `'network-changed' ({peers})` The number of connections has changed.
+        - `peers` is a number.
       - `'download' ({feed,block,bytes})` A block has been downloaded.
         - `feed` will either be `"metadata"` or `"content"`.
         - `block` is the index of data downloaded.
@@ -734,8 +734,8 @@ deprecated_methods:
       var archive = new DatArchive(datUrl)
       var evts = archive.createNetworkActivityStream()
 
-      evts.addEventListener('network-changed', ({connections}) => {
-        console.log(connections, 'current peers')
+      evts.addEventListener('network-changed', ({peers}) => {
+        console.log(peers, 'current peers')
       })
 
       evts.addEventListener('download', ({feed, block, bytes}) => {
