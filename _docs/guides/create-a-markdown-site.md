@@ -49,7 +49,7 @@ navigation menu on all `.md` pages in your project:
 
 Beaker's default Markdown styles are intentionally bare, but it doesn't have to stay that way! You can add inline styles to any `.md` file:
 
-<figcaption class="code">index.html</figcaption>
+<figcaption class="code">index.md</figcaption>
 ```markdown
 # Hello world!
 
@@ -64,7 +64,7 @@ This is my **cool** Markdown site published with Beaker.
 
 You can also add a CSS file to your project and load it as a stylesheet:
 
-<figcaption class="code">index.html</figcaption>
+<figcaption class="code">index.md</figcaption>
 
 ```markdown
 # Hello world!
