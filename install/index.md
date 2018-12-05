@@ -63,3 +63,5 @@ npm run burnthemall
 ```
 
 This invokes [the mad king](http://nerdist.com/wp-content/uploads/2016/05/the-mad-king-game-of-thrones.jpg), who will torch your `node_modules/`, and do the full install/rebuild process. `npm start` should work afterwards.
+
+If you are on Linux and `npm run burnthemall` still fails to get Beaker working, it's possible the version of Node in your Linux distribution default software package repositories is out of date.  The simplest fix is to download and install the latest stable release of Node from [the official website](https://nodejs.org).
