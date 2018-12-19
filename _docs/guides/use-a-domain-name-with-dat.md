@@ -29,7 +29,7 @@ There are a couple of ways to use your domain name with a `dat://` website.
 
 If you want to use your domain name with `dat://`, but don't care about republishing your website on `https://`, [jump to Dat DNS TXT records](#dat-dns-txt-records).
 
-If you want to use your domain name with `dat://`, and also want want to mirror the same content on `https://`, [jump to `.well-known/dat`](/docs/guides/use-a-domain-name-with-dat#well-knowndat).
+If you want to use your domain name with `dat://`, and also want to mirror the same content on `https://`, [jump to `.well-known/dat`](/docs/guides/use-a-domain-name-with-dat#well-knowndat).
 
 ## Dat DNS TXT records
 
