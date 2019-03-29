@@ -35,7 +35,7 @@ You can see the peer count for a `dat://` site in the URL bar:
 <img src="/img/docs/tour/peer-count.png"/>
 
 
-When you you visit a `dat://` site with Beaker, you temporarily seed its files. If you want to contribute resources to that site for longer, you can use the seeding menu in the URL bar:
+When you visit a `dat://` site with Beaker, you temporarily seed its files. If you want to contribute resources to that site for longer, you can use the seeding menu in the URL bar:
 
 <img src="/img/docs/tour/seeding-menu.png"/>
 
