@@ -25,7 +25,7 @@ title: Installing Beaker
       </p>
     </a>
 
-    <a href="https://github.com/beakerbrowser/beaker/releases/download/0.8.7/beaker-browser-0.8.7-x86_64.AppImage" class="col col-1-3 installer linux">
+    <a href="https://github.com/beakerbrowser/beaker/releases/download/0.8.7/Beaker.Browser.0.8.7.AppImage" class="col col-1-3 installer linux">
       <h2 class="platform">Linux</h2>
       <i class="platform-icon fa fa-linux"></i>
 
