@@ -7,7 +7,7 @@ title: Installing Beaker
 
 <div class="columns">
   <div class="col col-1-3 installers">
-    <a href="https://github.com/beakerbrowser/beaker/releases/download/0.8.2/beaker-browser-0.8.2.dmg" class="installer macos">
+    <a href="https://github.com/beakerbrowser/beaker/releases/download/0.8.7/beaker-browser-0.8.7.dmg" class="installer macos">
       <h2 class="platform">macOS</h2>
       <i class="platform-icon fa fa-apple"></i>
       <p class="pseudolink">
@@ -16,7 +16,7 @@ title: Installing Beaker
       </p>
     </a>
 
-    <a href="https://github.com/beakerbrowser/beaker/releases/download/0.8.2/beaker-browser-setup-0.8.2.exe" class="col col-1-3 installer windows">
+    <a href="https://github.com/beakerbrowser/beaker/releases/download/0.8.7/beaker-browser-setup-0.8.7.exe" class="col col-1-3 installer windows">
       <h2 class="platform">Windows</h2>
       <i class="platform-icon fa fa-windows"></i>
       <p class="pseudolink">
@@ -25,7 +25,7 @@ title: Installing Beaker
       </p>
     </a>
 
-    <a href="https://github.com/beakerbrowser/beaker/releases/download/0.8.2/beaker-browser-0.8.2-x86_64.AppImage" class="col col-1-3 installer linux">
+    <a href="https://github.com/beakerbrowser/beaker/releases/download/0.8.7/beaker-browser-0.8.7-x86_64.AppImage" class="col col-1-3 installer linux">
       <h2 class="platform">Linux</h2>
       <i class="platform-icon fa fa-linux"></i>
 
