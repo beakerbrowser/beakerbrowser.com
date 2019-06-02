@@ -37,6 +37,10 @@ title: Installing Beaker
   </div>
 </div>
 
+## Staying updated
+
+Beaker will automatically keep up-to-date on macOS and Windows, but not on Linux. Linux users can subscribe to the [AppCast feed](https://github.com/beakerbrowser/beaker/releases.atom) (includes version release notes) to stay updated.
+
 ## Build Beaker from source
 
 Building Beaker from source requires Node 6 or higher. If you're on Linux (and in some cases macOS), you'll also need libtool, m4, and automake:
