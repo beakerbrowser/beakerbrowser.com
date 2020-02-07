@@ -1,0 +1,16 @@
+.update-notice {
+  text-align: center;
+  background: #fafafd;
+  padding: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.3px;
+  margin-top: 2rem;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+header.light .update-notice {
+  background: #8173ff;
+}
