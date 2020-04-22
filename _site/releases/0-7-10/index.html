@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Beaker v0.7.10</title>
+    <link rel="stylesheet" href="/css/release.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    <meta name="twitter:site" content="@BeakerBrowser" />
+    <meta name="twitter:title" content="Beaker v0.7.10 Released"/>
+    <meta name="twitter:description" content="See what's new in v0.7.10."/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://beakerbrowser.com/img/releases/0-7-10" />
+  </head>
+
+  <body>
+    <main class="release">
+      <div id="update-message">
+        <i class="fa fa-check-circle"></i>
+        <p>Beaker is up to date</p>
+      </div>
+
+      <div class="container">
+        <div class="sidebar">
+          <h1 class="mobile">Beaker 0.7.10</h1>
+          <div class="gallery">
+            <img src="/img/releases/0-7-10" class="active">
+            <div class="thumbnails">
+              
+            </div>
+          </div>
+
+          <div class="info">
+            <h2>Information</h2>
+            <ul>
+              <li>Version: 0.7.10</li>
+              <li>Released: December 1, 2017</li>
+              <li>Size: 80 MB</li>
+            </ul>
+            <div class="install-actions visible">
+              <a href="https://github.com/beakerbrowser/beaker">Build from source</a>
+              <a href="https://beakerbrowser.com/docs/install/">Download installer</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="release-notes">
+          <h1 class="desktop">Beaker 0.7.10</h1>
+          <p>This release contains a set of fixes which we should’ve released a week ago, but forgot about. Enjoy!</p>
+
+<h2>Additions</h2>
+
+<ul>
+  <li><span class="tag new">new</span> Added the ability to save the current page (thanks <a href="https://github.com/rickycodes">@rickycodes</a>!)</li>
+  <li><span class="tag new">new</span> (<a href="https://github.com/beakerbrowser/beaker/pull/768">#768</a>) Added a tool to the settings page which clears your Dat browsing cache.</li>
+  <li><span class="tag new">new</span> Added pagination to <code class="highlighter-rouge">beaker://debug-log</code> so that you don’t end up loading a 10gb log on accident.</li>
+  <li><span class="tag new">new</span> Added the <code class="highlighter-rouge">beaker_open_url</code> env var, which opens the given URL on first load.</li>
+</ul>
+
+<h2>Fixes</h2>
+
+<ul>
+  <li><span class="tag updated">fix</span> (<a href="https://github.com/beakerbrowser/beaker/issues/775">#775</a>, <a href="https://github.com/beakerbrowser/beaker/issues/775">#776</a>, <a href="https://github.com/beakerbrowser/beaker/issues/765">#765</a>) Now, when you add files to a Dat archive, Beaker will add the files to the Dat archive instead of weirdly replacing the folder.</li>
+  <li><span class="tag updated">fix</span> (<a href="https://github.com/beakerbrowser/beaker/issues/779">#779</a>) Modals will now resize themselves to avoid clipping the edges off of content.</li>
+  <li><span class="tag updated">fix</span> (<a href="https://github.com/beakerbrowser/beaker/issues/774">#774</a>) You can now close modals without ruining everything.</li>
+  <li><span class="tag updated">fix</span> (<a href="https://github.com/beakerbrowser/beaker/issues/773">#773</a>) Fixed a bad reference error at start up. The new reference is not necessarily good, but it’s not bad either.</li>
+  <li><span class="tag updated">fix</span> Sometimes the URL-bar’s site info dropdown would show the wrong tab’s info. Users felt this was “confusing” and “kind of unprofessional” so we fixed it.</li>
+  <li><span class="tag updated">fix</span> Reduced overall memory usage for Dat archives. We did this by reducing the amount of data cached in memory, which may increase some load times, but it should be worth it for the reduced RAM usage and GC frequency.</li>
+  <li><span class="tag updated">fix</span> Eliminated some internal messaging bugs that was barfing errors into the window. Bleh!</li>
+</ul>
+
+        </div>
+      </div>
+    </main>
+    <div class="image-modal">
+      <img>
+    </div>
+  </body>
+
+  <script>
+    window.onkeydown = function(e) {
+      var key = e.keyCode ? e.keyCode : e.which
+      if (key === 27) closeModal()
+    }
+
+    var q = window.location.search || '';
+    if (q.includes('updated')) {
+      document.querySelector('#update-message').classList.add('visible')
+      document.querySelector('.install-actions').classList.remove('visible')
+    }
+
+    var thumbnails = document.querySelectorAll('.thumbnail')
+    thumbnails.forEach(function (el) {
+      el.addEventListener('click', openModal)
+    })
+
+    function closeModal () {
+      document.querySelector('.image-modal').classList.remove('visible')
+      document.querySelector('.image-modal').removeEventListener('click', closeModal)
+    }
+
+    function openModal (e) {
+      e.preventDefault()
+      var img = e.target
+      document.querySelector('.image-modal img').src = img.src || img.dataset.src
+      document.querySelector('.image-modal').classList.toggle('visible')
+      document.querySelector('.image-modal').addEventListener('click', closeModal)
+    }
+  </script>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>How Beaker Works - Thick applications model</title>
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="Thick applications model">
+      <meta name="og:description" content="">
+      
+    
+
+    
+        <style>body { --page-color: #fb136d;}</style>
+      
+  </head>
+
+  <body class="layout doc">
+    
+      <div class="docs-breadcrumbs ">
+  
+
+  <div class="container">
+    <a href="/docs/" class="toplevel-link breadcrumb">Documentation</a>
+
+    
+      <span class="breadcrumb">
+        /
+      </span>
+
+      <div class="breadcrumb active dropdown-container toggleable-container">
+        <span class="toplevel-link">How Beaker works</span>
+        <i class="fa fa-angle-down"></i>
+
+        <div class="dropdown nav-list left toggleable">
+          
+            
+              <a class="nav-item" href="/docs/tour">Tour</a>
+            
+          
+            
+              <a class="nav-item active" href="/docs/how-beaker-works">
+                How Beaker works
+                <i class="fa fa-check"></i>
+              </a>
+            
+          
+            
+              <a class="nav-item" href="/docs/apis/">Web APIs</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/guides">Guides</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/faq">Help & FAQ</a>
+            
+          
+        </div>
+      </div>
+
+      
+        <span class="breadcrumb">
+          /
+        </span>
+
+        <div class="breadcrumb active dropdown-container toggleable-container">
+          <span class="toplevel-link">Thick applications model</span>
+          <i class="fa fa-angle-down"></i>
+
+          <div class="dropdown wide nav-list left toggleable">
+            
+              
+                <a class="nav-item" href="/docs/how-beaker-works/">
+                  What's the peer-to-peer Web?
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/how-beaker-works/peer-to-peer-websites">
+                  Peer-to-peer websites
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/how-beaker-works/peer-to-peer-applications">
+                  Peer-to-peer Web applications
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/how-beaker-works/all-about-seeding">
+                  All about seeding
+
+                  
+                </a>
+              
+            
+
+            <div class="dropdown-footer">
+              <a href="/docs/how-beaker-works">
+                <span class="fa fa-arrow-left"></span>
+                Back to How Beaker works
+              </a>
+            </div>
+          </div>
+      
+      </div>
+    
+  </div>
+</div>
+      <div class="title-bar">
+  <div class="container">
+    
+      <a href="" class="section-title">
+        How Beaker Works
+      </a>
+    
+
+    <h1>
+      Thick applications model
+      
+    </h1>
+
+    
+  </div>
+</div>
+    
+
+    <main class="docs ">
+      <div class="container content-container">
+        
+          
+
+
+
+<nav class="docs-sidebar">
+  <!--
+  <ul class="pages">
+    
+      
+        <li>
+      
+        <a href="/docs/how-beaker-works/">What's the peer-to-peer Web?</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/how-beaker-works/peer-to-peer-websites">Peer-to-peer websites</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/how-beaker-works/peer-to-peer-applications">Peer-to-peer Web applications</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/how-beaker-works/all-about-seeding">All about seeding</a>
+      </li>
+    
+  </ul>
+  -->
+
+  
+</nav>
+
+
+
+          <div class="content">
+            <p>Beaker’s architectural philosophy holds that all networked applications should be:</p>
+
+<table class="basic-table">
+
+  <tr>
+    <th>Host-free</th><td>Applications should not be bound to a remote service.</td>
+  </tr>
+
+  <tr>
+    <th>User-programmable</th><td>Applications should be easy to modify.</td>
+  </tr>
+
+  <tr>
+    <th>Configurable</th><td>Applications should read configuration from the browser.</td>
+  </tr>
+
+  <tr>
+    <th>Open-data</th><td>Applications should share data at the user's request.</td>
+  </tr>
+
+  <tr>
+    <th>Automated builds</th><td>Applications should be easy to build.</td>
+  </tr>
+
+  <tr>
+    <th>Private by default</th><td>Applications should use end-to-end encryption.</td>
+  </tr>
+
+</table>
+
+<p>The peer-to-peer features of Beaker results in three key properties.:</p>
+
+<ol>
+  <li>Any device can act as a server.</li>
+  <li>Multiple computers can serve the same site simultaneously.</li>
+  <li>There is no back end.</li>
+</ol>
+
+<p>These features enable users to publish independently of services, and move between applications freely. The rest of the architecture is built upon these ideas.</p>
+
+<h2 id="thick-applications">Thick applications</h2>
+
+<p>Thick applications are standalone programs executed on the users device. They place the business logic in the client, improving programmability and privacy.</p>
+
+<p>The name “Thick” comes from the traditional terminology for Web applications, which calls the client-side application a “Thin” application. The essential characteristic of Thick vs Thin is the location of the business logic. If a client-side application is Thin, its logic is vested in a remote service, and the application cannot do work without that service. If a client-side application is Thick, it handles its logic locally on the client device.</p>
+
+<p>Rather than relying on the host, Thick applications use APIs provided by the browser. They are expected to prefer device resources and IPC over network services. For publishing and consuming user-data on the network, Thick applications use peer-to-peer and traditional Web services.</p>
+
+<h2 id="open-source">Open-source</h2>
+
+<p>Beaker apps are both serverless and decentralized. Its apps are intended to be open source. By placing the business logic into the client, Beaker makes it possible to access and modify core behaviors.</p>
+
+<p>Thick applications can be forked by generating a new archive and copying the files of the source. The fork can then live as a new independent app, or be re-merged into the original via a pull-request style of flow.</p>
+
+<h2 id="open-data">Open-data</h2>
+
+<p>Beaker relies on the Dat network to create an open data network. Dat’s authority model is fully-distributed. Each archive is controlled by the author through ownership of its key pair. By using Dat as the primary means to publish and consume content, Beaker ensures that there are no “walled gardens.” Because users are in control of their data, it’s much harder to lock a user into a service, or enforce a unilateral change to access.</p>
+
+          </div>
+        
+      </div>
+    </main>
+
+    <script>
+    var $ = document.querySelector.bind(document)
+    var $$ = function (selector) {
+      return Array.prototype.slice.call(document.querySelectorAll(selector))
+    }
+    </script>
+    <script src="/js/adjust-anchor-scroll-positioning.js"></script>
+    <script src="/js/anchor.min.js"></script>
+    <script>
+    anchors.add('h2, h3, h4')
+    </script>
+
+    <script>
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'))
+      img.onload = function() {
+        img.removeAttribute('data-src')
+      }
+    })
+    </script>
+  </body>
+
+  <script src="/js/toggleable.js"></script>
+  <script src="/js/collapseable.js"></script>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>Web APIs - capturePage API</title>
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="capturePage API">
+      <meta name="og:description" content="">
+      
+    
+
+    
+        <style>body { --page-color: #0eb370; }</style>
+      
+  </head>
+
+  <body class="layout doc">
+    
+      <div class="docs-breadcrumbs ">
+  
+
+  <div class="container">
+    <a href="/docs/" class="toplevel-link breadcrumb">Documentation</a>
+
+    
+      <span class="breadcrumb">
+        /
+      </span>
+
+      <div class="breadcrumb active dropdown-container toggleable-container">
+        <span class="toplevel-link">Web APIs</span>
+        <i class="fa fa-angle-down"></i>
+
+        <div class="dropdown nav-list left toggleable">
+          
+            
+              <a class="nav-item" href="/docs/tour">Tour</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/how-beaker-works">How Beaker works</a>
+            
+          
+            
+              <a class="nav-item active" href="/docs/apis/">
+                Web APIs
+                <i class="fa fa-check"></i>
+              </a>
+            
+          
+            
+              <a class="nav-item" href="/docs/guides">Guides</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/faq">Help & FAQ</a>
+            
+          
+        </div>
+      </div>
+
+      
+        <span class="breadcrumb">
+          /
+        </span>
+
+        <div class="breadcrumb active dropdown-container toggleable-container">
+          <span class="toplevel-link">capturePage API</span>
+          <i class="fa fa-angle-down"></i>
+
+          <div class="dropdown wide nav-list left toggleable">
+            
+              
+                <a class="nav-item" href="/docs/apis/dat">
+                  DatArchive API
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/manifest">
+                  dat.json site manifest
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/experimental-datpeers">
+                  datPeers API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/experimental-library">
+                  Library API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/experimental-globalfetch">
+                  globalFetch API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item active" href="/docs/apis/experimental-capturepage">
+                  capturePage API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+
+                  <i class="fa fa-check"></i>
+                </a>
+              
+            
+
+            <div class="dropdown-footer">
+              <a href="/docs/apis/">
+                <span class="fa fa-arrow-left"></span>
+                Back to Web APIs
+              </a>
+            </div>
+          </div>
+      
+      </div>
+    
+  </div>
+</div>
+      <div class="title-bar">
+  <div class="container">
+    
+      <a href="/docs/apis" class="section-title">
+        Web APIs
+      </a>
+    
+
+    <h1>
+      capturePage API
+      
+      <i class="fa fa-flask"></i>
+      
+    </h1>
+
+    
+  </div>
+</div>
+    
+
+    <main class="docs ">
+      <div class="container content-container">
+        
+          
+
+
+
+<nav class="docs-sidebar">
+  <!--
+  <ul class="pages">
+    
+      
+        <li>
+      
+        <a href="/docs/apis/dat">DatArchive API</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/manifest">dat.json site manifest</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/experimental-datpeers">datPeers API</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/experimental-library">Library API</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/experimental-globalfetch">globalFetch API</a>
+      </li>
+    
+      
+        
+        <li class="active">
+      
+        <a href="/docs/apis/experimental-capturepage">capturePage API</a>
+      </li>
+    
+  </ul>
+  -->
+
+  
+    <ul class="headings">
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#permissions" title="Permissions">
+              #
+            </a>
+
+            <a href="#permissions" title="Permissions">
+              Permissions
+            </a>
+          </li>
+        
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#privacy" title="Privacy">
+              #
+            </a>
+
+            <a href="#privacy" title="Privacy">
+              Privacy
+            </a>
+          </li>
+        
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#methods" title="Methods">
+              #
+            </a>
+
+            <span class="collapseable-btn">
+              <i class="fa fa-caret-right"></i>
+              Methods
+            </span>
+
+            <ul class="collapseable collapsed">
+              
+                <li>
+                  <a href="#capturePage">
+                    
+                      <code>capturePage()</code>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+    </ul>
+  
+</nav>
+
+
+
+          <div class="content">
+            <p><code class="highlighter-rouge">experimental.capturePage</code> is an experimental API for capturing a screenshot of a page.</p>
+
+<p>To use this API, include the following in your <a href="/docs/apis/manifest"><code>dat.json</code> manifest file</a>:</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"experimental"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"apis"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"capturePage"</span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<aside class="experimental-api">
+  <div class="aside-header"></div>
+
+  <div class="aside-content">
+	<p>
+	  <span class="fa fa-wrench"></span>
+  	  This is an experimental API. Experimental APIs may be changed or removed without notice.
+	</p>
+  </div>
+</aside>
+
+<h2 id="permissions">Permissions</h2>
+
+<p>The user must grant permission for your app to use this API.</p>
+
+<h2 id="privacy">Privacy</h2>
+
+<p>To avoid leaking sensitive user data in the screenshot, Beaker loads the page in a temporary private session. The screenshot will show no login state, visited links, or any other indicator of the user’s past behaviors.</p>
+
+<h2 id="methods">Methods</h2>
+
+<h3 id="capturepage">
+    <code>
+      
+        experimental.capturePage(url, opts?)
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>Loads the given URL in a hidden webview and takes a screenshot of the content.</p>
+
+<p>The user will be prompted to give permission before taking the screenshot.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">url</code> String. The URL of the resource to be captured.</li>
+  <li><code class="highlighter-rouge">opts.width</code> Number. The width of the page to capture. Cannot be greater than <code class="highlighter-rouge">1600</code>. Defaults to <code class="highlighter-rouge">1024</code>.</li>
+  <li><code class="highlighter-rouge">opts.height</code> Number. The height of the page to capture. Cannot be greater than <code class="highlighter-rouge">1200</code>. Defaults to <code class="highlighter-rouge">768</code>.</li>
+  <li><code class="highlighter-rouge">opts.resizeTo.width</code> Number. Resizes the captured image to the given width. Cannot be greater than <code class="highlighter-rouge">1600</code>.</li>
+  <li><code class="highlighter-rouge">opts.resizeTo.height</code> Number. Resizes the captured image to the given height. Cannot be greater than <code class="highlighter-rouge">1200</code>.</li>
+  <li>returns <code class="highlighter-rouge">Promise&lt;ArrayBuffer&gt;</code>. A PNG-format image.</li>
+</ul>
+
+<p>Examples:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">png</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">experimental</span><span class="p">.</span><span class="nx">capturePage</span><span class="p">(</span><span class="s1">'dat://beakerbrowser.com'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">width</span><span class="p">:</span> <span class="mi">640</span><span class="p">,</span>
+  <span class="na">height</span><span class="p">:</span> <span class="mi">480</span>
+<span class="p">})</span>
+<span class="nx">await</span> <span class="nx">myArchive</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">'/screenshot.png'</span><span class="p">,</span> <span class="nx">png</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">png</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">experimental</span><span class="p">.</span><span class="nx">capturePage</span><span class="p">(</span><span class="s1">'dat://beakerbrowser.com'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">width</span><span class="p">:</span> <span class="mi">640</span><span class="p">,</span>
+  <span class="na">height</span><span class="p">:</span> <span class="mi">480</span><span class="p">,</span>
+  <span class="na">resizeTo</span><span class="p">:</span> <span class="p">{</span><span class="na">width</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span> <span class="na">height</span><span class="p">:</span> <span class="mi">60</span><span class="p">}</span>
+<span class="p">})</span>
+<span class="nx">await</span> <span class="nx">myArchive</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">'/thumbnail.png'</span><span class="p">,</span> <span class="nx">png</span><span class="p">)</span>
+</code></pre>
+</div>
+</div>
+
+
+          </div>
+        
+      </div>
+    </main>
+
+    <script>
+    var $ = document.querySelector.bind(document)
+    var $$ = function (selector) {
+      return Array.prototype.slice.call(document.querySelectorAll(selector))
+    }
+    </script>
+    <script src="/js/adjust-anchor-scroll-positioning.js"></script>
+    <script src="/js/anchor.min.js"></script>
+    <script>
+    anchors.add('h2, h3, h4')
+    </script>
+
+    <script>
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'))
+      img.onload = function() {
+        img.removeAttribute('data-src')
+      }
+    })
+    </script>
+  </body>
+
+  <script src="/js/toggleable.js"></script>
+  <script src="/js/collapseable.js"></script>
+</html>

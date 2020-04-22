@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>Web APIs - datPeers API</title>
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="datPeers API">
+      <meta name="og:description" content="">
+      
+    
+
+    
+        <style>body { --page-color: #0eb370; }</style>
+      
+  </head>
+
+  <body class="layout doc">
+    
+      <div class="docs-breadcrumbs ">
+  
+
+  <div class="container">
+    <a href="/docs/" class="toplevel-link breadcrumb">Documentation</a>
+
+    
+      <span class="breadcrumb">
+        /
+      </span>
+
+      <div class="breadcrumb active dropdown-container toggleable-container">
+        <span class="toplevel-link">Web APIs</span>
+        <i class="fa fa-angle-down"></i>
+
+        <div class="dropdown nav-list left toggleable">
+          
+            
+              <a class="nav-item" href="/docs/tour">Tour</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/how-beaker-works">How Beaker works</a>
+            
+          
+            
+              <a class="nav-item active" href="/docs/apis/">
+                Web APIs
+                <i class="fa fa-check"></i>
+              </a>
+            
+          
+            
+              <a class="nav-item" href="/docs/guides">Guides</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/faq">Help & FAQ</a>
+            
+          
+        </div>
+      </div>
+
+      
+        <span class="breadcrumb">
+          /
+        </span>
+
+        <div class="breadcrumb active dropdown-container toggleable-container">
+          <span class="toplevel-link">datPeers API</span>
+          <i class="fa fa-angle-down"></i>
+
+          <div class="dropdown wide nav-list left toggleable">
+            
+              
+                <a class="nav-item" href="/docs/apis/dat">
+                  DatArchive API
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/manifest">
+                  dat.json site manifest
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item active" href="/docs/apis/experimental-datpeers">
+                  datPeers API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+
+                  <i class="fa fa-check"></i>
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/experimental-library">
+                  Library API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/experimental-globalfetch">
+                  globalFetch API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/experimental-capturepage">
+                  capturePage API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+                </a>
+              
+            
+
+            <div class="dropdown-footer">
+              <a href="/docs/apis/">
+                <span class="fa fa-arrow-left"></span>
+                Back to Web APIs
+              </a>
+            </div>
+          </div>
+      
+      </div>
+    
+  </div>
+</div>
+      <div class="title-bar">
+  <div class="container">
+    
+      <a href="/docs/apis" class="section-title">
+        Web APIs
+      </a>
+    
+
+    <h1>
+      datPeers API
+      
+      <i class="fa fa-flask"></i>
+      
+    </h1>
+
+    
+  </div>
+</div>
+    
+
+    <main class="docs ">
+      <div class="container content-container">
+        
+          
+
+
+
+<nav class="docs-sidebar">
+  <!--
+  <ul class="pages">
+    
+      
+        <li>
+      
+        <a href="/docs/apis/dat">DatArchive API</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/manifest">dat.json site manifest</a>
+      </li>
+    
+      
+        
+        <li class="active">
+      
+        <a href="/docs/apis/experimental-datpeers">datPeers API</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/experimental-library">Library API</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/experimental-globalfetch">globalFetch API</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/experimental-capturepage">capturePage API</a>
+      </li>
+    
+  </ul>
+  -->
+
+  
+    <ul class="headings">
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#security-and-privacy" title="Security and privacy">
+              #
+            </a>
+
+            <a href="#security-and-privacy" title="Security and privacy">
+              Security and privacy
+            </a>
+          </li>
+        
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#methods" title="Methods">
+              #
+            </a>
+
+            <span class="collapseable-btn">
+              <i class="fa fa-caret-right"></i>
+              Methods
+            </span>
+
+            <ul class="collapseable collapsed">
+              
+                <li>
+                  <a href="#getsessiondata">
+                    
+                      <code>getSessionData()</code>
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#setsessiondata">
+                    
+                      <code>setSessionData()</code>
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#list">
+                    
+                      <code>list()</code>
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#get">
+                    
+                      <code>get()</code>
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#broadcast">
+                    
+                      <code>broadcast()</code>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#events" title="Events">
+              #
+            </a>
+
+            <span class="collapseable-btn">
+              <i class="fa fa-caret-right"></i>
+              Events
+            </span>
+
+            <ul class="collapseable collapsed">
+              
+                <li>
+                  <a href="#event-connect">
+                    
+                      <code>connect</code>
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#event-disconnect">
+                    
+                      <code>disconnect</code>
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#event-message">
+                    
+                      <code>message</code>
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#event-session-data">
+                    
+                      <code>session-data</code>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#datpeer" title="DatPeer">
+              #
+            </a>
+
+            <span class="collapseable-btn">
+              <i class="fa fa-caret-right"></i>
+              DatPeer
+            </span>
+
+            <ul class="collapseable collapsed">
+              
+                <li>
+                  <a href="#datpeer-id">
+                    
+                      <code>id</code>
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#datpeer-sessiondata">
+                    
+                      <code>sessionData</code>
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#datpeer-send">
+                    
+                      <code>send()</code>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+    </ul>
+  
+</nav>
+
+
+
+          <div class="content">
+            <p><code class="highlighter-rouge">datPeers</code> is an experimental API for sending and receiving messages between peers on a given <code class="highlighter-rouge">dat://</code> website. It includes methods for attaching “session data” to your connection. This session data can be used to broadcast a username, profile URL, or other identifying information.</p>
+
+<p>To use this API, include the following in your <a href="/docs/apis/manifest"><code>dat.json</code> manifest file</a>:</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"experimental"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"apis"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"datPeers"</span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<aside class="experimental-api">
+  <div class="aside-header"></div>
+
+  <div class="aside-content">
+	<p>
+	  <span class="fa fa-wrench"></span>
+  	  This is an experimental API. Experimental APIs may be changed or removed without notice.
+	</p>
+  </div>
+</aside>
+
+<h2 id="security-and-privacy">Security and privacy</h2>
+
+<p>Users of the <code class="highlighter-rouge">datPeers</code> API should be conscious of its limited properties. This API is designed to be a minimal stopgap solution while better tools are developed. This “minimal design” is reflected by its limited privacy, security, and reliability.</p>
+
+<p>With this API, you should expect:</p>
+
+<ul>
+  <li><strong>No privacy</strong>. The messages and session data are not kept private on the network.</li>
+  <li><strong>No security</strong>. The messages and session data could be modified by an intermediary.</li>
+  <li><strong>No reliability</strong>. Messages may not reach their intended destination.</li>
+</ul>
+
+<p>This API is experimental and temporary. We suggest you avoid any use-cases that depend on privacy or reliability.</p>
+
+<h2 id="methods">Methods</h2>
+
+<h3 id="getsessiondata">
+    <code>
+      
+        experimental.datPeers.getSessionData()
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>Fetch the session data attached to your identity on the network.
+Will be <code class="highlighter-rouge">undefined</code> until a value is set using <a href="#setsessiondata">setSessionData()</a>.</p>
+
+<ul>
+  <li>returns <code class="highlighter-rouge">Promise&lt;Any&gt;</code></li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">sessionData</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">experimental</span><span class="p">.</span><span class="nx">datPeers</span><span class="p">.</span><span class="nx">getSessionData</span><span class="p">()</span>
+</code></pre>
+</div>
+</div>
+
+<h3 id="setsessiondata">
+    <code>
+      
+        experimental.datPeers.setSessionData(sessionData)
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>Set the session data attached to your identity on the network.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">sessionData</code> Any. The data you wish to have attached to your identity. Must be no larger than 256 bytes when serialized to JSON.</li>
+  <li>returns <code class="highlighter-rouge">Promise&lt;void&gt;</code></li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">await</span> <span class="nx">experimental</span><span class="p">.</span><span class="nx">datPeers</span><span class="p">.</span><span class="nx">setSessionData</span><span class="p">({</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s1">'Bob'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'dat://bob.com'</span>
+<span class="p">})</span>
+</code></pre>
+</div>
+
+<p><strong>Session data is not private, not guaranteed to be correct, and could be modified by an intermediary on the network.
+See <a href="#security-and-privacy">Security and privacy</a> for more information.</strong></p>
+</div>
+
+<h3 id="list">
+    <code>
+      
+        experimental.datPeers.list()
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>List the connected peers.</p>
+
+<ul>
+  <li>returns <code class="highlighter-rouge">Promise&lt;DatPeer&gt;</code>. See <a href="#datpeer">DatPeer</a> for more information.</li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">peers</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">experimental</span><span class="p">.</span><span class="nx">datPeers</span><span class="p">.</span><span class="nx">list</span><span class="p">()</span>
+</code></pre>
+</div>
+</div>
+
+<h3 id="get">
+    <code>
+      
+        experimental.datPeers.get(id)
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>Get a connected peer by their ID.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">id</code> String. The ID of the peer.</li>
+  <li>returns <code class="highlighter-rouge">Promise&lt;DatPeer&gt;</code>. See <a href="#datpeer">DatPeer</a> for more information.</li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">peer</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">experimental</span><span class="p">.</span><span class="nx">datPeers</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">peerId</span><span class="p">)</span>
+</code></pre>
+</div>
+</div>
+
+<h3 id="broadcast">
+    <code>
+      
+        experimental.datPeers.broadcast(message)
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>Broadcasts a message to all connected peers.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">message</code> Any. The message to broadcast.</li>
+  <li>returns <code class="highlighter-rouge">Promise&lt;void&gt;</code></li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">await</span> <span class="nx">experimental</span><span class="p">.</span><span class="nx">datPeers</span><span class="p">.</span><span class="nx">broadcast</span><span class="p">({</span><span class="na">hello</span><span class="p">:</span> <span class="s1">'world!'</span><span class="p">})</span>
+</code></pre>
+</div>
+
+<p><strong>Messages are not private and could be modified by an intermediary on the network.
+See <a href="#security-and-privacy">Security and privacy</a> for more information.</strong></p>
+</div>
+
+<h2 id="events">Events</h2>
+
+<h3 id="event-connect">
+    <code>
+      
+        Event: "connect"
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>A new peer has connected to the current site.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">event.peer</code> <a href="#datpeer">DatPeer</a>. The connecting peer.</li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">experimental</span><span class="p">.</span><span class="nx">datPeers</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'connect'</span><span class="p">,</span> <span class="p">({</span><span class="nx">peer</span><span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">peer</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="s1">'has connected'</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+</div>
+</div>
+
+<h3 id="event-disconnect">
+    <code>
+      
+        Event: "disconnect"
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>A peer has disconnected from the current site.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">event.peer</code> <a href="#datpeer">DatPeer</a>. The disconnecting peer.</li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">experimental</span><span class="p">.</span><span class="nx">datPeers</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'disconnect'</span><span class="p">,</span> <span class="p">({</span><span class="nx">peer</span><span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">peer</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="s1">'has disconnected'</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+</div>
+</div>
+
+<h3 id="event-message">
+    <code>
+      
+        Event: "message"
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>A message has been received from a peer.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">event.peer</code> <a href="#datpeer">DatPeer</a>. The messaging peer.</li>
+  <li><code class="highlighter-rouge">event.message</code> Any. The message.</li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">experimental</span><span class="p">.</span><span class="nx">datPeers</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'message'</span><span class="p">,</span> <span class="p">({</span><span class="nx">peer</span><span class="p">,</span> <span class="nx">message</span><span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">peer</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="s1">'has sent the following message:'</span><span class="p">,</span> <span class="nx">message</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+</div>
+
+<p><strong>Messages are not private and could be modified by an intermediary on the network.
+See <a href="#security-and-privacy">Security and privacy</a> for more information.</strong></p>
+</div>
+
+<h3 id="event-session-data">
+    <code>
+      
+        Event: "session-data"
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>A peer has updated their session data.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">event.peer</code> <a href="#datpeer">DatPeer</a>. The disconnecting peer.</li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">experimental</span><span class="p">.</span><span class="nx">datPeers</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'session-data'</span><span class="p">,</span> <span class="p">({</span><span class="nx">peer</span><span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">peer</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="s1">'has set their session data to'</span><span class="p">,</span> <span class="nx">peer</span><span class="p">.</span><span class="nx">sessionData</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+</div>
+</div>
+
+<h2 id="datpeer">DatPeer</h2>
+
+<h3 id="datpeer-id">
+    <code>
+      
+        id
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>The ID of the peer. This ID is randomly generated and should not be saved.</p>
+</div>
+
+<h3 id="datpeer-sessiondata">
+    <code>
+      
+        sessionData
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>The session data set by the peer.</p>
+</div>
+
+<h3 id="datpeer-send">
+    <code>
+      
+        send(message)
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>Send a message to the peers.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">message</code> Any. The message to send.</li>
+  <li>returns <code class="highlighter-rouge">Promise&lt;void&gt;</code></li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">peer</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">experimental</span><span class="p">.</span><span class="nx">datPeers</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">datPeerId</span><span class="p">)</span>
+<span class="nx">await</span> <span class="nx">peer</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span><span class="na">hello</span><span class="p">:</span> <span class="s1">'friend!'</span><span class="p">})</span>
+</code></pre>
+</div>
+
+<p><strong>Messages are not private and could be modified by an intermediary on the network.
+See <a href="#security-and-privacy">Security and privacy</a> for more information.</strong></p>
+</div>
+
+          </div>
+        
+      </div>
+    </main>
+
+    <script>
+    var $ = document.querySelector.bind(document)
+    var $$ = function (selector) {
+      return Array.prototype.slice.call(document.querySelectorAll(selector))
+    }
+    </script>
+    <script src="/js/adjust-anchor-scroll-positioning.js"></script>
+    <script src="/js/anchor.min.js"></script>
+    <script>
+    anchors.add('h2, h3, h4')
+    </script>
+
+    <script>
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'))
+      img.onload = function() {
+        img.removeAttribute('data-src')
+      }
+    })
+    </script>
+  </body>
+
+  <script src="/js/toggleable.js"></script>
+  <script src="/js/collapseable.js"></script>
+</html>

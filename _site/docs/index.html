@@ -1,0 +1,470 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Documentation - Beaker Browser</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!-- SEO -->
+    <meta name="keywords" content="decentralization,decentralized,Beaker,browser,peer-to-peer,p2p">
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="Documentation - Beaker Browser">
+      <meta name="og:description" content="Learn more about Beaker, dat://, and the peer-to-peer Web"">
+      
+    
+  </head>
+  <body class="layout ">
+    <header class="header light">
+  <div class="container">
+    <a href="/" class="beaker-link">
+      <img src="/img/logo/logo.png" class="logo"/>
+      <div class="wordmark">Beaker</div>
+    </a>
+
+    <nav class="nav">
+  <a class="nav-link" href="/about">About</a>
+  <a class="nav-link" href="/docs">Documentation</a>
+  <a class="nav-link btn white" href="/install">Install Beaker</a>
+</nav>
+  </div>
+  <div class="update-notice">
+  <span class="fa fa-exclamation-circle"></span>
+  A major update to Beaker is coming soon!
+  <a class="link" href="https://twitter.com/BeakerBrowser" title="@BeakerBrowser">Follow us on Twitter</a> to stay updated.
+</div>
+</header>
+
+
+    <div class="container narrow docs-intro">
+      <h1>Documentation</h1>
+
+<div class="docs-hero columns">
+  <div class="cta col col-2-5">
+    <p class="welcome">
+      <i class="fas fa-heart"></i>
+      <strong>Welcome to Beaker!</strong>
+    </p>
+
+    <p>
+      Beaker is an experimental peer-to-peer browser with support for
+      the <a class="link" href="https://datproject.org">dat:// protocol</a>.
+    </p>
+
+    <p>
+      <a href="/docs/tour" class="take-a-tour">
+  <span class="far fa-map"></span>
+  <span class="text">Take a tour</span>
+</a>
+    </p>
+  </div>
+
+  <div class="apis col col-3-5">
+    <div class="example">
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">mySite</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">DatArchive</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="s1">'My site'</span><span class="p">});</span>
+<span class="nx">mySite</span><span class="p">.</span><span class="nx">url</span> <span class="c1">// dat://1277b9...</span>
+<span class="nx">await</span> <span class="nx">mySite</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">'index.html'</span><span class="p">,</span> <span class="s1">'Hello, world!'</span><span class="p">);</span></code></pre></figure>
+
+    </div>
+
+    <div class="links">
+      <a href="/docs/apis">
+        <span class="fa fa-code"></span>
+        API reference
+      </a>
+
+      <a href="/docs/snippets" class="snippets">
+        <span class="fa fa-cut"></span>
+        Code snippets
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="main-info grid grid-3 small-gap">
+  <div class="col-2-3 whats-peer-to-peer-web">
+    <h2>
+      What's the p2p Web?
+    </h2>
+
+    <p>
+      Learn more about how Beaker works, peer-to-peer websites, and building peer-to-peer applications
+      with the Web you know and love.
+    </p>
+
+    <p>
+      <a href="/docs/how-beaker-works" class="btn white">Learn more</a>
+    </p>
+  </div>
+
+  <div class="col-1-3 external-links">
+    <ul>
+      <li class="install">
+        <span class="icon fa fa-arrow-alt-circle-down fa-fw"></span>
+        <a href="/install">
+          Install Beaker
+        </a>
+      </li>
+
+      <li class="view-source">
+        <span class="fas fa-keyboard fa-fw"></span>
+        <a href="https://github.com/beakerbrowser/beaker">
+          Beaker on GitHub
+        </a>
+      </li>
+
+      <li class="support">
+        <span class="fas fa-heart fa-fw"></span>
+        <a href="https://opencollective.com/beaker">
+          Support Beaker
+        </a>
+      </li>
+
+      <li class="chat">
+        <span class="fas fa-comments fa-fw"></span>
+          <a href="https://webchat.freenode.net/?channels=%23beakerbrowser">
+          Talk to us
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="highlights grid grid-3 small-gap">
+   <a href="/docs/how-beaker-works/peer-to-peer-websites#keeping-a-peer-to-peer-website-online" class="highlight seeding">
+    <h2>All about seeding</h2>
+
+    <p>
+      Seeding, hosting, pinning, say what? Learn about keeping
+      files online in the p2p Web.
+    </p>
+
+    <img class="icon" src="/img/icon/seeding.svg" />
+  </a>
+
+  <a href="/docs/tour#view-source" class="highlight view-source">
+    <h2>View (and edit!) Source</h2>
+
+    <p>
+      See how Beaker's View Source can help you learn from and remix projects you like.
+    </p>
+
+    <span class="icon fas fa-font"></span>
+  </a>
+
+  <a href="/docs/faq/#is-the-dat-network-anonymous" class="highlight privacy">
+    <h2>Privacy and anonymity</h2>
+
+    <p>
+      dat:// is a powerful protocol for publishing and sharing, but it's
+      <strong>not anonymous</strong>.
+    </p>
+
+    <span class="icon fas fa-eye"></span>
+  </a>
+</div>
+
+<div class="columns">
+  <div class="quick-links col-1-2">
+    <h2>API Reference</h2>
+    <ul>
+      <li>
+        <a href="/docs/apis/dat"><code>DatArchive</code></a>
+      </li>
+
+      <li>
+        <a href="/docs/apis/manifest"><code>dat.json</code></a>
+      </li>
+
+      <li>
+        <a href="/docs/apis#experimental-api-reference">
+          Experimental APIs
+        </a>
+      </li>
+    </ul>
+
+    <h2>
+      All about Dat
+      <img class="dat-hexagon" src="/img/dat-hexagon.svg" />
+    </h2>
+
+    <ul>
+      <li>
+        <a href="https://datprotocol.com">Dat protocol specs</a>
+      </li>
+
+      <li>
+        <a href="https://datproject.org">Dat Project</a>
+      </li>
+
+      <li>
+        <a href="https://codeforscience.org">Code for Science &amp; Society</a>
+      </li>
+    </ul>
+
+    <h2>
+      <a href="/docs/all">
+        All documentation
+        <span class="fa fa-angle-double-right"></span>
+      </a>
+    </h2>
+
+    <aside class="dns">
+  <div class="icon-container">
+    <code class="icon dot-com teal big">.com</code>
+    <code class="icon dot-com yellow">.org</code>
+    <code class="icon dot-com pink">.net</code>
+    <code class="icon dot-com pink">.com</code>
+    <code class="icon dot-com yellow small">.org</code>
+    <code class="icon dot-com yellow">.net</code>
+    <code class="icon dot-com small teal">.com</code>
+    <code class="icon dot-com pink big under">.org</code>
+  </div>
+
+  <a href="/docs/guides/use-a-domain-name-with-dat" class="aside-content">
+    dat://, DNS, and domain names—everything you need to know
+  </a>
+</aside>
+  </div>
+
+  <div class="col-1-2">
+    <h2 class="underline">
+      Videos
+    </h2>
+
+    <ul class="docs-videos">
+  <li>
+    <a class="docs-video" href="https://www.youtube.com/watch?v=rJ_WvfF3FN8">
+      <img class="thumbnail" src="/img/docs/videos/imagine-this.png" />
+
+      <div class="info">
+        <div class="video-title">
+          Imagine this: A Web without servers
+        </div>
+
+        <div class="video-author">Tara Vancil</div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a class="docs-video" href="https://www.youtube.com/watch?v=1qzDiAg4VGk">
+      <img class="thumbnail" src="/img/docs/videos/internet-of-peers.png" />
+
+      <div class="info">
+        <div class="video-title">
+          Internet of peers
+        </div>
+
+        <div class="video-author">Mathias Buus</div>
+      </div>
+    </a>
+  </li>
+
+  <li>
+    <a class="docs-video" href="https://www.youtube.com/watch?v=x-ffpAkviM0">
+      <img class="thumbnail" src="/img/docs/videos/formalizing-user-rights.png" />
+
+      <div class="info">
+        <div class="video-title">
+          Formalizing user rights on the Web
+        </div>
+
+        <div class="video-author">Paul Frazee</div>
+      </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a class="docs-video" href="https://www.youtube.com/watch?v=4DFalocsoQo">
+      <img class="thumbnail" src="/img/docs/videos/js-la.png" />
+
+      <div class="info">
+        <div class="video-title">
+          The peer-to-peer Web - js.la
+        </div>
+
+        <div class="video-author">Paul Frazee</div>
+      </div>
+    </a>
+  </li>
+</ul>
+  </div>
+</div>
+
+<div class="guides">
+  <h2>Guides</h2>
+  <ul class="guides-grid grid-3">
+  
+    
+      
+        <li>
+  <a class="guide" href="/docs/guides/use-a-domain-name-with-dat">
+    <h3 class="guide-title">
+      Use a domain name with dat://
+    </h3>
+
+    <div class="guide-metadata">
+      <img class="avatar" src="/img/team/taravancil.jpg" />
+      <span class="author-name">Tara Vancil</span>
+    </div>
+  </a>
+</li>
+      
+    
+  
+    
+      
+        <li>
+  <a class="guide" href="/docs/guides/publish-a-peer-to-peer-website">
+    <h3 class="guide-title">
+      Publish a peer-to-peer website
+    </h3>
+
+    <div class="guide-metadata">
+      <img class="avatar" src="/img/team/taravancil.jpg" />
+      <span class="author-name">Tara Vancil</span>
+    </div>
+  </a>
+</li>
+      
+    
+  
+    
+      
+    
+  
+    
+      
+        <li>
+  <a class="guide" href="/docs/guides/using-experimental-apis">
+    <h3 class="guide-title">
+      Using experimental APIs
+    </h3>
+
+    <div class="guide-metadata">
+      <img class="avatar" src="/img/team/pfrazee.jpg" />
+      <span class="author-name">Paul Frazee</span>
+    </div>
+  </a>
+</li>
+      
+    
+  
+    
+      
+        <li>
+  <a class="guide" href="/docs/guides/create-a-markdown-site">
+    <h3 class="guide-title">
+      Build a website with Markdown
+    </h3>
+
+    <div class="guide-metadata">
+      <img class="avatar" src="/img/team/taravancil.jpg" />
+      <span class="author-name">Tara Vancil</span>
+    </div>
+  </a>
+</li>
+      
+    
+  
+    
+      
+        <li>
+  <a class="guide" href="/docs/guides/watch-for-file-changes">
+    <h3 class="guide-title">
+      Watch for file changes
+    </h3>
+
+    <div class="guide-metadata">
+      <img class="avatar" src="/img/team/pfrazee.jpg" />
+      <span class="author-name">Paul Frazee</span>
+    </div>
+  </a>
+</li>
+      
+    
+  
+    
+      
+        <li>
+  <a class="guide" href="/docs/guides/read-site-files">
+    <h3 class="guide-title">
+      Read files from a dat:// website
+    </h3>
+
+    <div class="guide-metadata">
+      <img class="avatar" src="/img/team/pfrazee.jpg" />
+      <span class="author-name">Paul Frazee</span>
+    </div>
+  </a>
+</li>
+      
+    
+  
+    
+      
+    
+  
+</ul>
+
+
+  <p>
+    <a class="link" href="/docs/guides">
+      All guides
+      <span class="fa fa-angle-double-right"></span>
+    </a>
+  </p>
+</div>
+
+<div class="links-grid">
+  <div class="link-icon">
+    <span class="fa fa-link"></span>
+    <span class="text">Links</span>
+  </div>
+
+  <div class="link changelog">
+    <span class="icon changelog-icon body">
+      <span class="fas fa-circle"></span>
+      <span class="fas fa-circle"></span>
+      <span class="fas fa-circle"></span>
+    </span>
+
+    <a href="/changelog" class="text">
+      Changelog - see what's new
+    </a>
+  </div>
+
+  <a class="link" href="/docs/guides/publish-a-peer-to-peer-website">
+    <span class="icon dot-com">.com</span>
+    <span class="text">
+      Publish a p2p website!
+    </span>
+  </a>
+
+  <a class="link" href="https://github.com/beakerbrowser/explore">
+    <span class="icon fa fa-search"></span>
+    <span class="text">
+      Explore what others have built
+    </span>
+  </a>
+</div>
+
+    </div>
+  </body>
+</html>

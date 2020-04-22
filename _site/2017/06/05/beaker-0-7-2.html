@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>0.7.2: Self-mutating websites and Dat picker</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!-- SEO -->
+    <meta name="keywords" content="decentralization,decentralized,Beaker,browser,peer-to-peer,p2p">
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:site" content="@BeakerBrowser" />
+      <meta name="twitter:title" content="0.7.2: Self-mutating websites and Dat picker"/>
+      <meta name="twitter:description" content="The latest release fixes a set of bugs found in 0.7 and adds a new “Swarm debugger” to help users diagnose peer connectivity issues.
+"/>
+      
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://beakerbrowser.com/img/posts/beaker-0-7-2/dat-picker.jpg" />
+      
+    
+  </head>
+  <body class="layout ">
+    <style>
+      body { page--color: #5543ff; }
+    </style>
+
+    
+      <header class="header light">
+  <div class="container">
+    <a href="/" class="beaker-link">
+      <img src="/img/logo/logo.png" class="logo"/>
+      <div class="wordmark">Beaker</div>
+    </a>
+
+    <nav class="nav">
+  <a class="nav-link" href="/about">About</a>
+  <a class="nav-link" href="/docs">Documentation</a>
+  <a class="nav-link btn white" href="/install">Install Beaker</a>
+</nav>
+  </div>
+  <div class="update-notice">
+  <span class="fa fa-exclamation-circle"></span>
+  A major update to Beaker is coming soon!
+  <a class="link" href="https://twitter.com/BeakerBrowser" title="@BeakerBrowser">Follow us on Twitter</a> to stay updated.
+</div>
+</header>
+
+    
+
+    <div class="container columns columns-3">
+      <div class="col-3-5">
+        
+          <h1 class="title">0.7.2: Self-mutating websites and Dat picker</h1>
+        
+
+        
+
+        <div class="container">
+  <main class="post">
+    <h1>0.7.2: Self-mutating websites and Dat picker</h1>
+    <p class="post-meta">
+      <span class="info">
+        <a href="https://twitter.com/pfrazee" class="author">Paul Frazee</a>
+         /
+        <time datetime="2017-06-05 00:00:00 -0500" class="time">
+          Jun 5, 2017
+        </time>
+      </span>
+    </p>
+    <h2 id="self-mutating-websites-">Self-mutating websites 📝</h2>
+
+<p>Beaker now allows applications to modify their own files using the <a href="https://beakerbrowser.com/docs/apis/dat.html">DatArchive API</a>. This enables a model for simple, self-contained web apps such as wikis and todo lists. This decision is part of an <a href="https://github.com/beakerbrowser/beaker/issues/483">ongoing security discussion</a>. We’ll blog about this soon.</p>
+
+<h2 id="dat-garbage-collector-">Dat Garbage Collector 🗑</h2>
+
+<p>This is something you probably thought Beaker already did. Surprise! We just got around to it.</p>
+
+<p>As you browse Dat sites, you collect a cache of files which stay on your disk so that reloads are fast. The “Garbage Collector” clears out those cache files after 5 days of no access. The collector does not delete files of dats that the user has saved to their library.</p>
+
+<h2 id="dat-picker-api-">Dat picker API 👆</h2>
+
+<p>Thanks to <a href="https://twitter.com/taravancil">@taravancil</a> we now have an API for selecting an archive from the user’s library, using a modal dialog. Think of this like the file-picker, for Dat archives. It includes the ability to create a new archive, if the user chooses.</p>
+
+<p>Example usecase: a text editor would use this API to prompt the user for the Dat they want to edit.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">archive</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">DatArchive</span><span class="p">.</span><span class="nx">selectArchive</span><span class="p">({</span>
+  <span class="na">title</span><span class="p">:</span> <span class="s2">"Select an archive"</span><span class="p">,</span>
+  <span class="na">buttonLabel</span><span class="p">:</span> <span class="s2">"Submit"</span><span class="p">,</span>
+  <span class="na">filters</span><span class="p">:</span> <span class="p">{</span><span class="na">isOwner</span><span class="p">:</span> <span class="kc">true</span><span class="p">}</span>
+<span class="p">})</span>
+</code></pre>
+</div>
+
+<figure>
+<img src="/img/posts/beaker-0-7-2/dat-picker.jpg" />
+<figcaption>The Dat picker lets users choose a Dat from their library</figcaption>
+</figure>
+
+<h2 id="fixes-and-smaller-updates-">Fixes and smaller updates ✨</h2>
+
+<ul>
+  <li>Fix the auto updater</li>
+  <li>UI improvements to the Library page</li>
+  <li>Fix: Don’t let the permissions prompt cause Dat API operations to timeout (<a href="https://github.com/beakerbrowser/beaker/pull/496">#496</a>)</li>
+  <li>Add support for HTTP sites in beaker://view-source (<a href="https://github.com/beakerbrowser/beaker/pull/493">#493</a>)</li>
+  <li>Add bulk delete to the library (<a href="https://github.com/beakerbrowser/beaker/pull/479">#479</a>)</li>
+  <li>Fix: Handle publishing large files without UI errors (<a href="https://github.com/beakerbrowser/beaker/issues/476">#476</a>)</li>
+  <li>Slugify folder names in the <code class="highlighter-rouge">~/Sites</code> directory (<a href="https://github.com/beakerbrowser/beaker/issues/477">#477</a>)</li>
+  <li>Track the staging-area size less ignored files (<a href="https://github.com/beakerbrowser/beaker/issues/471">#471</a>)</li>
+  <li>Add support for HTTP Basic Auth (<a href="https://github.com/beakerbrowser/beaker/pull/475">#475</a>)</li>
+</ul>
+
+<h2 id="how-to-install">How to install</h2>
+
+<p>If you already have Beaker installed on OSX, you can use the auto-updater to get the latest version. <strong>However, <a href="https://twitter.com/BeakerBrowser/status/869230831935606785">due to a bug in Beaker 0.7</a>, you will need to use the settings page.</strong></p>
+
+<figure>
+<img src="/img/posts/beaker-0-7-1/settings-page.jpg" />
+<figcaption>Open the settings page from the browser menu to access the auto-updater UI</figcaption>
+</figure>
+
+<p>If you’re running Linux or if you’re new to Beaker, <a href="/install/">download the new version here</a>.</p>
+
+    <a class="back-to-blog" href="/blog">
+      &laquo;
+      All posts
+    </a>
+  </main>
+</div>
+      </div>
+
+      <div class="col-2-5">
+        
+      </div>
+    </div>
+  </body>
+</html>

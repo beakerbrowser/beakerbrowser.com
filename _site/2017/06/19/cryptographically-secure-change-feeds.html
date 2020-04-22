@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Cryptographically-secure change feeds in the Dat protocol, and on the Web</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!-- SEO -->
+    <meta name="keywords" content="decentralization,decentralized,Beaker,browser,peer-to-peer,p2p">
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:site" content="@BeakerBrowser" />
+      <meta name="twitter:title" content="Cryptographically-secure change feeds in the Dat protocol, and on the Web"/>
+      <meta name="twitter:description" content="Dat uses an append-only feed that’s inspired by Certificate Transparency to create auditable change logs in file archives. We use this to deliver Web applications securely in Beaker.
+"/>
+      
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://beakerbrowser.com/img/posts/cryptographically-secure-change-feeds/thumbnail.png" />
+      
+    
+  </head>
+  <body class="layout ">
+    <style>
+      body { page--color: #5543ff; }
+    </style>
+
+    
+      <header class="header light">
+  <div class="container">
+    <a href="/" class="beaker-link">
+      <img src="/img/logo/logo.png" class="logo"/>
+      <div class="wordmark">Beaker</div>
+    </a>
+
+    <nav class="nav">
+  <a class="nav-link" href="/about">About</a>
+  <a class="nav-link" href="/docs">Documentation</a>
+  <a class="nav-link btn white" href="/install">Install Beaker</a>
+</nav>
+  </div>
+  <div class="update-notice">
+  <span class="fa fa-exclamation-circle"></span>
+  A major update to Beaker is coming soon!
+  <a class="link" href="https://twitter.com/BeakerBrowser" title="@BeakerBrowser">Follow us on Twitter</a> to stay updated.
+</div>
+</header>
+
+    
+
+    <div class="container columns columns-3">
+      <div class="col-3-5">
+        
+          <h1 class="title">Cryptographically-secure change feeds in the Dat protocol, and on the Web</h1>
+        
+
+        
+
+        <div class="container">
+  <main class="post">
+    <h1>Cryptographically-secure change feeds in the Dat protocol, and on the Web</h1>
+    <p class="post-meta">
+      <span class="info">
+        <a href="https://twitter.com/pfrazee" class="author">Paul Frazee</a>
+         /
+        <time datetime="2017-06-19 00:00:00 -0500" class="time">
+          Jun 19, 2017
+        </time>
+      </span>
+    </p>
+    <p class="post-summary">
+  <a href="https://datproject.org">Dat</a> uses an append-only feed that’s inspired by Certificate Transparency to create auditable change logs in file archives. We use this to deliver Web applications securely in Beaker.
+</p>
+
+<p>The <a href="https://beakerbrowser.com/docs/inside-beaker/">Decentralized Archive Transport Protocol (Dat)</a> uses append-only feeds to internally represent its file archives. Each time you make a change, a <code class="highlighter-rouge">put</code> or a <code class="highlighter-rouge">del</code> is appended to the feed.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>rev1. put /index.html '&lt;h1&gt;hi!&lt;/h1&gt;'
+rev2. put /styles.css '* { color: red }'
+rev3. put /styles.css '* { color: blue }'
+rev4. put /main.js    'console.log("hi")'
+</code></pre>
+</div>
+
+<p>This is how the archive is versioned. Each change creates a revision, and each revision can be kept for later reading. This enables historic checkouts:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">archive</span><span class="p">.</span><span class="nx">checkout</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="nx">readFile</span><span class="p">(</span><span class="s1">'/styles.css'</span><span class="p">)</span>
+<span class="c1">// =&gt; '* { color: red }'</span>
+</code></pre>
+</div>
+
+<p>Here’s another example:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="c1">// revision 2 doesnt have a main.js yet</span>
+<span class="nx">archive</span><span class="p">.</span><span class="nx">checkout</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="nx">readdir</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">'index.html'</span><span class="p">,</span> <span class="s1">'styles.css'</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<p>In Beaker, you can access historic versions of sites by URL. Here, for instance, is the URL to revision 100 of our website: <a href="dat://beakerbrowser.com+100/">dat://beakerbrowser.com+100/</a>.</p>
+
+<h2 id="dissecting-the-feed">Dissecting the feed</h2>
+
+<p>So now we know there’s an append-only feed inside the files archive. But, what’s inside the append-only feed?</p>
+
+<p>Internally, Dat represents the append-only feed with a signed merkle tree.</p>
+
+<figure>
+<img src="/img/posts/cryptographically-secure-change-feeds/signed-tree.png" />
+<figcaption>The signed merkle-tree</figcaption>
+</figure>
+
+<p>The hashes of the entries in the feed act as the leaves of the tree. Each time an entry is added, a matching leaf is added, and the tree produces a new root.</p>
+
+<figure>
+<img src="/img/posts/cryptographically-secure-change-feeds/growing-tree.gif" />
+<figcaption>Entries added to the append-only feed<br />will grow the tree</figcaption>
+</figure>
+
+<p>Each root hash is signed. Consumers of the feed will already have the public key, because the file archive is addressed by its public key, so they can easily check the signature.</p>
+
+<p>This provides authentication and integrity. Now, what about the append-only constraint?</p>
+
+<h2 id="enforcing-the-append-only-constraint">Enforcing the append-only constraint</h2>
+
+<p>It’s important that the change-feeds <em>really are</em> append-only.</p>
+
+<p>Why? In Beaker, Dat archives contain Web applications. Our goal is to support end-to-end secrecy of user data, so it’s very important that we can trust the software.</p>
+
+<aside class="highlight">
+  One reason that the Web has historically lacked end-to-end secrecy is that all Web applications have to trust a third party — the host. But this deficiency is unique to the services-based Web. In the peer-to-peer Web, the application has no host, and we can use signatures and integrity checks to audit the software.
+</aside>
+
+<p>We want a “uniform distribution” of all applications. If it were possible for a developer to distribute multiple versions of their code, then they could deliver one version of the app to most users, and deliver a compromised version to a single target. We call this a “targeted payload” attack.</p>
+
+<p>In Dat, this would be visible as multiple histories to the archive.</p>
+
+<figure>
+<img src="/img/posts/cryptographically-secure-change-feeds/targeted-payloads.png" />
+<figcaption>The targeted payload creates its own alternate history</figcaption>
+</figure>
+
+<p>To prevent targeted payloads, it’s important that all peers receive the exact same changes feed. That way, it’s not possible to compromise the application for one single user: the attack has to be distributed to all users, where it’s more likely to be noticed.</p>
+
+<p>The signed Merkle tree helps us accomplish that goal. In the Merkle tree, the root hash represents the full history of feed. If you make a change to the history, the root will change.</p>
+
+<p>Therefore, any recipient can query other peers to ask, “Is this the same root hash that you have?”</p>
+
+<figure>
+<img src="/img/posts/cryptographically-secure-change-feeds/checkin.gif" />
+<figcaption>Peers compare their root hashes</figcaption>
+</figure>
+
+<p>If the hashes don’t match, then the consumer knows they have been tricked. And because the hashes are signed, the consumer can prove to the network that the author created a split history.</p>
+
+<figure>
+<img src="/img/posts/cryptographically-secure-change-feeds/snitch.gif" />
+<figcaption>A peer that finds mismatched hashes can alert the network</figcaption>
+</figure>
+
+<p>If any of this sounds familiar, it might be because this is the <a href="https://www.certificate-transparency.org/log-proofs-work">same design used by Certificate Transparency to create its auditable certificate logs</a>. The Dat protocol has generalized the structure, for distributing data feeds and file archives (and, soon, KV databases).</p>
+
+<p>This feature is one of the reasons we chose the Dat protocol: it has paranoia built in!</p>
+
+<h2 id="what-about-a-blockchain">What about a blockchain?</h2>
+
+<p>Some people have noted: if you want to have a high degree of auditability, why not use a blockchain?</p>
+
+<h3 id="the-argument-for-blockchains">The argument for blockchains</h3>
+
+<p>Blockchains enforce global consensus on writes. Therefore, the same goal of auditability could be accomplished by writing the archive histories to the blockchain. In fact, in some ways this would be more secure, because it would <em>force</em> consumers to check in with the global network before accepting an archive.</p>
+
+<h3 id="the-argument-against-blockchains">The argument against blockchains</h3>
+
+<p>It involves more overhead than is necessary. Using a blockchain means that an author needs to be connected to the global network to complete writes. This is slower than Dat’s local writes, and requires a transaction fee. Further, it leads to a bloated history, as all peers running the blockchain will have to synchronize every archive history that’s published. Did we mention it’s slower?</p>
+
+<p>We think the signed Merkle tree provides the right tradeoff of efficiency and security.</p>
+
+<h2 id="wrapping-up">Wrapping up</h2>
+
+<p>To summarize: The Dat protocol uses an append-only feed to internally represent its file archives. The feed represents the changes that have occurred to the archive, and can be used to pull old versions from history.</p>
+
+<p>The append-only feed is constructed as a signed Merkle tree, to verify authorship and data integrity. The protocol uses the root hashes of the tree to enforce the append-only constraint, thereby reducing the potential for targeted payloads.</p>
+
+<p>This is a powerful featureset that radically improves the transparency of data and software, and it’s one of the key reasons we chose Dat over IPFS or BitTorrent.</p>
+
+    <a class="back-to-blog" href="/blog">
+      &laquo;
+      All posts
+    </a>
+  </main>
+</div>
+      </div>
+
+      <div class="col-2-5">
+        
+      </div>
+    </div>
+  </body>
+</html>

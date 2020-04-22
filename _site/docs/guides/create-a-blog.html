@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>Guides - Create a peer-to-peer blog</title>
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="Create a peer-to-peer blog">
+      <meta name="og:description" content="Creating a blog is easy to do with a static site generator. In this tutorial, we'll use...">
+      
+    
+
+    
+        <style>body { --page-color: #8D54F0; }</style>
+      
+  </head>
+
+  <body class="layout doc">
+    
+      <div class="docs-breadcrumbs ">
+  
+
+  <div class="container">
+    <a href="/docs/" class="toplevel-link breadcrumb">Documentation</a>
+
+    
+      <span class="breadcrumb">
+        /
+      </span>
+
+      <div class="breadcrumb active dropdown-container toggleable-container">
+        <span class="toplevel-link">Guides</span>
+        <i class="fa fa-angle-down"></i>
+
+        <div class="dropdown nav-list left toggleable">
+          
+            
+              <a class="nav-item" href="/docs/tour">Tour</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/how-beaker-works">How Beaker works</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/apis/">Web APIs</a>
+            
+          
+            
+              <a class="nav-item active" href="/docs/guides">
+                Guides
+                <i class="fa fa-check"></i>
+              </a>
+            
+          
+            
+              <a class="nav-item" href="/docs/faq">Help & FAQ</a>
+            
+          
+        </div>
+      </div>
+
+      
+        <span class="breadcrumb">
+          /
+        </span>
+
+        <div class="breadcrumb active dropdown-container toggleable-container">
+          <span class="toplevel-link">Create a peer-to-peer blog</span>
+          <i class="fa fa-angle-down"></i>
+
+          <div class="dropdown wide nav-list left toggleable">
+            
+              
+                <a class="nav-item" href="/docs/guides/use-a-domain-name-with-dat">
+                  Use a domain name with dat://
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/publish-a-peer-to-peer-website">
+                  Publish a peer-to-peer website
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/use-a-custom-404-page">
+                  Use a custom 404 page
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/using-experimental-apis">
+                  Using experimental APIs
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/create-a-markdown-site">
+                  Build a website with Markdown
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/watch-for-file-changes">
+                  Watch for file changes
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/read-site-files">
+                  Read files from a dat:// website
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/write-site-files">
+                  Write to a dat:// website
+
+                  
+                </a>
+              
+            
+
+            <div class="dropdown-footer">
+              <a href="/docs/guides">
+                <span class="fa fa-arrow-left"></span>
+                Back to Guides
+              </a>
+            </div>
+          </div>
+      
+      </div>
+    
+  </div>
+</div>
+      <div class="title-bar">
+  <div class="container">
+    
+      <a href="" class="section-title">
+        Guides
+      </a>
+    
+
+    <h1>
+      Create a peer-to-peer blog
+      
+    </h1>
+
+    
+      <div class="guide-metadata">
+        <div class="author">
+          <img class="avatar" src="/img/team/pfrazee.jpg"/>
+          <a href="" class="name">
+            Paul Frazee
+          </a>
+        </div>
+      </div>
+    
+  </div>
+</div>
+    
+
+    <main class="docs ">
+      <div class="container content-container">
+        
+          
+
+
+
+<nav class="docs-sidebar">
+  <!--
+  <ul class="pages">
+    
+      
+        <li>
+      
+        <a href="/docs/guides/use-a-domain-name-with-dat">Use a domain name with dat://</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/publish-a-peer-to-peer-website">Publish a peer-to-peer website</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/use-a-custom-404-page">Use a custom 404 page</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/using-experimental-apis">Using experimental APIs</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/create-a-markdown-site">Build a website with Markdown</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/watch-for-file-changes">Watch for file changes</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/read-site-files">Read files from a dat:// website</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/write-site-files">Write to a dat:// website</a>
+      </li>
+    
+  </ul>
+  -->
+
+  
+</nav>
+
+
+
+          <div class="content">
+            <p>Creating a blog on Beaker is easy to do with a static site generator. In this
+tutorial, we’ll use <a href="https://jekyllrb.com/">Jekyll</a>. Start by following their instructions for creating a new blog:</p>
+
+<figcaption class="code">bash</figcaption>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">~$ </span>gem install jekyll bundler
+<span class="gp">~$ </span>jekyll new my-awesome-p2p-blog
+<span class="gp">~$ </span><span class="nb">cd </span>my-awesome-p2p-blog
+</code></pre>
+</div>
+
+<p>My blog is located at <code class="highlighter-rouge">~/my-awesome-p2p-blog</code>, which means that the site it generates is located at <code class="highlighter-rouge">~/my-awesome-p2p-blog/_site</code>.</p>
+
+<p>Update your <code class="highlighter-rouge">_config.yml</code>:</p>
+
+<figcaption class="code">_config.yml</figcaption>
+<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="c1"># Blog settings</span>
+<span class="s">title</span><span class="pi">:</span> <span class="s">My Awesome P2P Blog</span>
+<span class="s">email</span><span class="pi">:</span> <span class="s2">"</span><span class="s">pfrazee@foo.com"</span>
+<span class="s">description</span><span class="pi">:</span> <span class="s">Software, decentralization, and peer-to-peer systems.</span>
+<span class="s">twitter_username</span><span class="pi">:</span> <span class="s">pfrazee</span>
+<span class="s">github_username</span><span class="pi">:</span>  <span class="s">pfrazee</span>
+
+<span class="c1"># Build settings</span>
+<span class="s">markdown</span><span class="pi">:</span> <span class="s">kramdown</span>
+<span class="s">theme</span><span class="pi">:</span> <span class="s">minima</span>
+<span class="s">gems</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-feed</span>
+<span class="s">exclude</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">Gemfile</span>
+  <span class="pi">-</span> <span class="s">Gemfile.lock</span>
+</code></pre>
+</div>
+
+<p>Run <code class="highlighter-rouge">jekyll build</code> to generate your site’s files:</p>
+
+<figcaption class="code">bash</figcaption>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>~/my-awesome-p2p-blog <span class="nv">$ </span>jekyll build
+
+Configuration file: /Users/paulfrazee/my-awesome-p2p-blog/_config.yml
+            Source: /Users/paulfrazee/my-awesome-p2p-blog
+       Destination: /Users/paulfrazee/my-awesome-p2p-blog/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+                    <span class="k">done in </span>0.854 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+</code></pre>
+</div>
+
+<p>Now, let’s create the site in Beaker. Open the dropdown menu in Beaker, and select “New site”:</p>
+
+<figure>
+<img data-src="/img/docs/tut-create-a-blog/new-site.jpg" />
+<figcaption>Click "New site" in the dropdown menu</figcaption>
+</figure>
+
+<p>Fill in the title and description of your blog:</p>
+
+<figure>
+<img data-src="/img/docs/tut-create-a-blog/site-details.jpg" />
+<figcaption>Set the title and description</figcaption>
+</figure>
+
+<p>Click “Create site” and Beaker will take you to the library page for your site:</p>
+
+<figure>
+<img data-src="/img/docs/tut-create-a-blog/library-page.jpg" />
+<figcaption>Your new site in your Library</figcaption>
+</figure>
+
+<p>By default, Beaker creates a new folder for you under the <code class="highlighter-rouge">~/Sites</code> directory. In this case, we want to pick our own folder, because we want to use the <code class="highlighter-rouge">./_sites</code> folder within our Jekyll blog. To select the <code class="highlighter-rouge">_site</code> directory, click “Change folder” in the Library dropdown menu.</p>
+
+<figure>
+<img data-src="/img/docs/tut-create-a-blog/change-folder.jpg" />
+<figcaption>Select "Change folder" in the library dropdown</figcaption>
+</figure>
+
+<p>For my blog, I set the folder to <code class="highlighter-rouge">~/my-awesome-p2p-blog/_site</code>:</p>
+
+<figure>
+<img data-src="/img/docs/tut-create-a-blog/select-folder.jpg" />
+<figcaption>Choose ~/my-awesome-p2p-blog/_site</figcaption>
+</figure>
+
+<p>You’ll see Beaker’s staging area populate with the new changes immediately.</p>
+
+<figure>
+<img data-src="/img/docs/tut-create-a-blog/staging-area.jpg" />
+<figcaption>The staging area shows unpublished changes</figcaption>
+</figure>
+
+<p>We’ll publish in a moment. First, let’s click “View site” to see how the site looks.</p>
+
+<figure>
+<img data-src="/img/docs/tut-create-a-blog/view-site.png" />
+<figcaption>The unpublished site</figcaption>
+</figure>
+
+<p>OK! It looks pretty good so far. Check out the <a href="https://jekyllrb.com/docs/home/">Jekyll documentation</a> to learn how to author content and change the styles.</p>
+
+<p>Jekyll has a builtin command, <code class="highlighter-rouge">bundle exec jekyll serve</code>, for previewing your site on a local development server. But Beaker serves your site for you at its Dat URL, so you just need Jekyll to do the build process:</p>
+
+<figcaption class="code">bash</figcaption>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">~/my-awesome-p2p-blog$ </span>jekyll build --watch
+</code></pre>
+</div>
+
+<p>There’s one last step before you can share your blog; you need to publish your files. Back in the Library page for your blog, you should see your changes listed:</p>
+
+<figure>
+<img data-src="/img/docs/tut-create-a-blog/staging-area.jpg" />
+<figcaption>The staging area shows unpublished changes</figcaption>
+</figure>
+
+<p>This is the staging area. It shows all the local changes that you’ve made, but haven’t yet published. Until you publish, only you will be able to see the changes.</p>
+
+<p>Click “Publish,” and the changes will be committed to your site.</p>
+
+<figure>
+<img data-src="/img/docs/tut-create-a-blog/published.jpg" />
+<figcaption>Click “Publish” and the site is ready</figcaption>
+</figure>
+
+<p>Now you can share the URL to anybody using Beaker, and keep your computer online, and they’ll be able to download the site.</p>
+
+<p>One last tip: once you have <code class="highlighter-rouge">jekyll build --watch</code> running, Jekyll will automatically generate a new version of your site when you make updates. If you want Beaker to automatically reload the page too, you can turn on Live reloading:</p>
+
+<figure>
+<img data-src="/img/docs/tut-create-a-blog/live-reloading.jpg" />
+<figcaption>Turn on live reloading</figcaption>
+</figure>
+
+<p>Navigate to the site, click the dropdown menu in the top right, then click “Turn on live reloading.” You’ll see a lightning symbol in the URL bar. Now, any time you make a change, the site will auto-refresh.</p>
+
+          </div>
+        
+      </div>
+    </main>
+
+    <script>
+    var $ = document.querySelector.bind(document)
+    var $$ = function (selector) {
+      return Array.prototype.slice.call(document.querySelectorAll(selector))
+    }
+    </script>
+    <script src="/js/adjust-anchor-scroll-positioning.js"></script>
+    <script src="/js/anchor.min.js"></script>
+    <script>
+    anchors.add('h2, h3, h4')
+    </script>
+
+    <script>
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'))
+      img.onload = function() {
+        img.removeAttribute('data-src')
+      }
+    })
+    </script>
+  </body>
+
+  <script src="/js/toggleable.js"></script>
+  <script src="/js/collapseable.js"></script>
+</html>

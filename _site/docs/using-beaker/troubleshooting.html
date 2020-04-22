@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>Using Beaker - Troubleshooting</title>
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="Troubleshooting">
+      <meta name="og:description" content="">
+      
+    
+
+    
+        <style>body { --page-color: #4353ff; }</style>
+    
+  </head>
+
+  <body class="layout doc">
+    
+      <div class="docs-breadcrumbs ">
+  
+
+  <div class="container">
+    <a href="/docs/" class="toplevel-link breadcrumb">Documentation</a>
+
+    
+  </div>
+</div>
+      <div class="title-bar">
+  <div class="container">
+    
+      <a href="" class="section-title">
+        Using Beaker
+      </a>
+    
+
+    <h1>
+      Troubleshooting
+      
+    </h1>
+
+    
+  </div>
+</div>
+    
+
+    <main class="docs ">
+      <div class="container content-container">
+        
+          
+
+
+
+
+
+          <div class="content">
+            <figure>
+<img data-src="/img/docs/trouble-timedout.jpg" />
+<figcaption>Timeouts are a common error for Dat sites</figcaption>
+</figure>
+
+<p>Timeouts can occur because nobody is actively hosting the site’s files. Additionally, there are some system settings that can stop peer-to-peer traffic from reaching your system.</p>
+
+<h2 id="macos-firewall">MacOS firewall</h2>
+
+<p>The MacOS firewall defaults to blocking all incoming traffic. You’ll need to create an exception for Beaker.</p>
+
+<figure>
+<img data-src="/img/docs/trouble-macos-prefs.jpg" />
+<figcaption>Select "Security &amp; Privacy" in MacOS System Preferences</figcaption>
+</figure>
+
+<p>You <em>could</em> disable the firewall entirely, but it’s better to leave it on. Turn on the firewall, then click “Firewall Options.”</p>
+
+<figure>
+<img data-src="/img/docs/trouble-macos-firewall1.jpg" />
+<figcaption>Select "Firewall Options" in MacOS Security &amp; Privacy</figcaption>
+</figure>
+
+<p>Uncheck “Block all incoming connections,” then click “OK”.</p>
+
+<figure>
+<img data-src="/img/docs/trouble-macos-firewall2.png" />
+<figcaption>Uncheck "Block all incoming connections" then click “OK”</figcaption>
+</figure>
+
+<p>Now, restart Beaker. If you are prompted to allow access to the network, click “Allow.” Your firewall is now configured.</p>
+
+<p>Repeat this process on any MacOS computer you want to share a Dat archive with.</p>
+
+          </div>
+        
+      </div>
+    </main>
+
+    <script>
+    var $ = document.querySelector.bind(document)
+    var $$ = function (selector) {
+      return Array.prototype.slice.call(document.querySelectorAll(selector))
+    }
+    </script>
+    <script src="/js/adjust-anchor-scroll-positioning.js"></script>
+    <script src="/js/anchor.min.js"></script>
+    <script>
+    anchors.add('h2, h3, h4')
+    </script>
+
+    <script>
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'))
+      img.onload = function() {
+        img.removeAttribute('data-src')
+      }
+    })
+    </script>
+  </body>
+
+  <script src="/js/toggleable.js"></script>
+  <script src="/js/collapseable.js"></script>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>Guides - Publish a peer-to-peer website</title>
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="Publish a peer-to-peer website">
+      <meta name="og:description" content="Ready to create your first website? Already have a website that you want to publish on the p2p Web? This guide is for you.">
+      
+    
+
+    
+        <style>body { --page-color: #8D54F0; }</style>
+      
+  </head>
+
+  <body class="layout doc">
+    
+      <div class="docs-breadcrumbs ">
+  
+
+  <div class="container">
+    <a href="/docs/" class="toplevel-link breadcrumb">Documentation</a>
+
+    
+      <span class="breadcrumb">
+        /
+      </span>
+
+      <div class="breadcrumb active dropdown-container toggleable-container">
+        <span class="toplevel-link">Guides</span>
+        <i class="fa fa-angle-down"></i>
+
+        <div class="dropdown nav-list left toggleable">
+          
+            
+              <a class="nav-item" href="/docs/tour">Tour</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/how-beaker-works">How Beaker works</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/apis/">Web APIs</a>
+            
+          
+            
+              <a class="nav-item active" href="/docs/guides">
+                Guides
+                <i class="fa fa-check"></i>
+              </a>
+            
+          
+            
+              <a class="nav-item" href="/docs/faq">Help & FAQ</a>
+            
+          
+        </div>
+      </div>
+
+      
+        <span class="breadcrumb">
+          /
+        </span>
+
+        <div class="breadcrumb active dropdown-container toggleable-container">
+          <span class="toplevel-link">Publish a peer-to-peer website</span>
+          <i class="fa fa-angle-down"></i>
+
+          <div class="dropdown wide nav-list left toggleable">
+            
+              
+                <a class="nav-item" href="/docs/guides/use-a-domain-name-with-dat">
+                  Use a domain name with dat://
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item active" href="/docs/guides/publish-a-peer-to-peer-website">
+                  Publish a peer-to-peer website
+
+                  
+
+                  <i class="fa fa-check"></i>
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/use-a-custom-404-page">
+                  Use a custom 404 page
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/using-experimental-apis">
+                  Using experimental APIs
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/create-a-markdown-site">
+                  Build a website with Markdown
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/watch-for-file-changes">
+                  Watch for file changes
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/read-site-files">
+                  Read files from a dat:// website
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/write-site-files">
+                  Write to a dat:// website
+
+                  
+                </a>
+              
+            
+
+            <div class="dropdown-footer">
+              <a href="/docs/guides">
+                <span class="fa fa-arrow-left"></span>
+                Back to Guides
+              </a>
+            </div>
+          </div>
+      
+      </div>
+    
+  </div>
+</div>
+      <div class="title-bar">
+  <div class="container">
+    
+      <a href="/docs/guides" class="section-title">
+        Guides
+      </a>
+    
+
+    <h1>
+      Publish a peer-to-peer website
+      
+    </h1>
+
+    
+      <div class="guide-metadata">
+        <div class="author">
+          <img class="avatar" src="/img/team/taravancil.jpg"/>
+          <a href="https://taravancil.com" class="name">
+            Tara Vancil
+          </a>
+        </div>
+      </div>
+    
+  </div>
+</div>
+    
+
+    <main class="docs ">
+      <div class="container content-container">
+        
+          
+
+
+
+<nav class="docs-sidebar">
+  <!--
+  <ul class="pages">
+    
+      
+        <li>
+      
+        <a href="/docs/guides/use-a-domain-name-with-dat">Use a domain name with dat://</a>
+      </li>
+    
+      
+        
+        <li class="active">
+      
+        <a href="/docs/guides/publish-a-peer-to-peer-website">Publish a peer-to-peer website</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/use-a-custom-404-page">Use a custom 404 page</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/using-experimental-apis">Using experimental APIs</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/create-a-markdown-site">Build a website with Markdown</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/watch-for-file-changes">Watch for file changes</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/read-site-files">Read files from a dat:// website</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/write-site-files">Write to a dat:// website</a>
+      </li>
+    
+  </ul>
+  -->
+
+  
+    <ul class="headings">
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#publish-a-website-with-beaker" title="Publish a website with Beaker">
+              #
+            </a>
+
+            <a href="#publish-a-website-with-beaker" title="Publish a website with Beaker">
+              Publish a website with Beaker
+            </a>
+          </li>
+        
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#publish-a-website-with-the-dat-cli" title="Publish a website with the Dat CLI">
+              #
+            </a>
+
+            <a href="#publish-a-website-with-the-dat-cli" title="Publish a website with the Dat CLI">
+              Publish a website with the Dat CLI
+            </a>
+          </li>
+        
+      
+    </ul>
+  
+</nav>
+
+
+
+          <div class="content">
+            <p class="accent">
+  Ready to create your first website? Already have a website that you want to publish on the p2p Web? This guide is for you.
+</p>
+
+<p>Related links:</p>
+
+<ul>
+  <li><a href="/docs/how-beaker-works/peer-to-peer-websites">What’s a peer-to-peer-website?</a></li>
+  <li><a href="/docs/guides/use-a-domain-name-with-dat">Using a domain name with a dat:// site</a></li>
+</ul>
+
+<aside class="dns">
+  <div class="icon-container">
+    <code class="icon dot-com teal big">.com</code>
+    <code class="icon dot-com yellow">.org</code>
+    <code class="icon dot-com pink">.net</code>
+    <code class="icon dot-com pink">.com</code>
+    <code class="icon dot-com yellow small">.org</code>
+    <code class="icon dot-com yellow">.net</code>
+    <code class="icon dot-com small teal">.com</code>
+    <code class="icon dot-com pink big under">.org</code>
+  </div>
+
+  <a href="/docs/guides/use-a-domain-name-with-dat" class="aside-content">
+    dat://, DNS, and domain names—everything you need to know
+  </a>
+</aside>
+
+<h2 id="publish-a-website-with-beaker">Publish a website with Beaker</h2>
+
+<p>Open Beaker’s main menu and click “Create new”:</p>
+
+<figure>
+  <img src="/img/docs/beaker-menu-create-new.png" />
+</figure>
+
+<p>If you’ve already built your website, click “From folder” to import the folder that contains your website:</p>
+
+<figure>
+  <img src="/img/docs/beaker-menu-create-new2.png" />
+</figure>
+
+<p>Otherwise, click “Website” to use Beaker’s basic website template, or click “Empty project” to start from scratch.</p>
+
+<p>Beaker will automatically create a new <code class="highlighter-rouge">dat://</code> website that you can edit using <a href="/docs/tour/#4-beakers-built-in-editor">Beaker’s built-in editor</a> or <a href="/docs/tour/#using-your-own-editor">your preferred text editor</a>.</p>
+
+<h2 id="publish-a-website-with-the-dat-cli">Publish a website with the Dat CLI</h2>
+
+<p>Install the Dat CLI:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>npm i -g dat
+</code></pre>
+</div>
+
+<p>After installing <code class="highlighter-rouge">dat</code>, navigate to your website’s directory and run the <code class="highlighter-rouge">dat</code> command:</p>
+
+<aside class="tip">
+  <span class="fas fa-lightbulb"></span>
+
+  <p class="tip-content">
+  	If you use a static site generator, be sure to navigate to the output directory before running <code>dat</code> (or set the <a href="/docs/apis/manifest#web-root"><code>web_root</code></a> to the output directory)
+  </p>
+</aside>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">cd</span> ~/src/my-website
+dat .
+
+Created new dat <span class="k">in</span> /Users/alice/my-website/.dat
+dat://c81299cfc139791ccc6db42f0bcac8a9af590c03828e8066478fcfc60ca6e481
+</code></pre>
+</div>
+
+<p>This will create a new <code class="highlighter-rouge">dat://</code> website with your website’s files. Open the <code class="highlighter-rouge">dat://</code>` URL in Beaker and you should see your website!</p>
+
+<h2 id="further-reading">Further reading</h2>
+
+<ul>
+  <li><a href="/docs/guides/use-a-domain-name-with-dat">Using a domain name with <code class="highlighter-rouge">dat://</code></a></li>
+  <li><a href="https://github.com/beakerbrowser/homebase">Manage your website with <code class="highlighter-rouge">homebase</code></a></li>
+</ul>
+
+          </div>
+        
+      </div>
+    </main>
+
+    <script>
+    var $ = document.querySelector.bind(document)
+    var $$ = function (selector) {
+      return Array.prototype.slice.call(document.querySelectorAll(selector))
+    }
+    </script>
+    <script src="/js/adjust-anchor-scroll-positioning.js"></script>
+    <script src="/js/anchor.min.js"></script>
+    <script>
+    anchors.add('h2, h3, h4')
+    </script>
+
+    <script>
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'))
+      img.onload = function() {
+        img.removeAttribute('data-src')
+      }
+    })
+    </script>
+  </body>
+
+  <script src="/js/toggleable.js"></script>
+  <script src="/js/collapseable.js"></script>
+</html>

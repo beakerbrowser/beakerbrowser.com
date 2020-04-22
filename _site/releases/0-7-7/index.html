@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Beaker v0.7.7</title>
+    <link rel="stylesheet" href="/css/release.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    <meta name="twitter:site" content="@BeakerBrowser" />
+    <meta name="twitter:title" content="Beaker v0.7.7 Released"/>
+    <meta name="twitter:description" content="See what's new in v0.7.7."/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://beakerbrowser.com/img/releases/0-7-7" />
+  </head>
+
+  <body>
+    <main class="release">
+      <div id="update-message">
+        <i class="fa fa-check-circle"></i>
+        <p>Beaker is up to date</p>
+      </div>
+
+      <div class="container">
+        <div class="sidebar">
+          <h1 class="mobile">Beaker 0.7.7</h1>
+          <div class="gallery">
+            <img src="/img/releases/0-7-7" class="active">
+            <div class="thumbnails">
+              
+            </div>
+          </div>
+
+          <div class="info">
+            <h2>Information</h2>
+            <ul>
+              <li>Version: 0.7.7</li>
+              <li>Released: October 23, 2017</li>
+              <li>Size: 65 MB</li>
+            </ul>
+            <div class="install-actions visible">
+              <a href="https://github.com/beakerbrowser/beaker">Build from source</a>
+              <a href="https://beakerbrowser.com/docs/install/">Download installer</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="release-notes">
+          <h1 class="desktop">Beaker 0.7.7</h1>
+          <p>Two fixes to the Dat networking stack which should improve performance for everybody.</p>
+
+<h2>Fixes</h2>
+
+<ul>
+  <li><span class="tag updated">fix</span> (<a href="https://github.com/mafintosh/memory-pager/pull/2">memory-pager#2</a>) Substantially reduce the amount of memory allocated and de-allocated for each connection.</li>
+  <li><span class="tag updated">fix</span> (<a href="https://github.com/mafintosh/hyperdrive/commit/89aacb10ebbf66ebdb4adf54a0a5cf31d7f9d0a0">hyperdrive@89aacb</a>) Fixed an edge case that would cause Dat downloads to stall and never finish.</li>
+</ul>
+
+        </div>
+      </div>
+    </main>
+    <div class="image-modal">
+      <img>
+    </div>
+  </body>
+
+  <script>
+    window.onkeydown = function(e) {
+      var key = e.keyCode ? e.keyCode : e.which
+      if (key === 27) closeModal()
+    }
+
+    var q = window.location.search || '';
+    if (q.includes('updated')) {
+      document.querySelector('#update-message').classList.add('visible')
+      document.querySelector('.install-actions').classList.remove('visible')
+    }
+
+    var thumbnails = document.querySelectorAll('.thumbnail')
+    thumbnails.forEach(function (el) {
+      el.addEventListener('click', openModal)
+    })
+
+    function closeModal () {
+      document.querySelector('.image-modal').classList.remove('visible')
+      document.querySelector('.image-modal').removeEventListener('click', closeModal)
+    }
+
+    function openModal (e) {
+      e.preventDefault()
+      var img = e.target
+      document.querySelector('.image-modal img').src = img.src || img.dataset.src
+      document.querySelector('.image-modal').classList.toggle('visible')
+      document.querySelector('.image-modal').addEventListener('click', closeModal)
+    }
+  </script>
+</html>

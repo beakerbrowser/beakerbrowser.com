@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>Guides - Host outside of Beaker</title>
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="Host outside of Beaker">
+      <meta name="og:description" content="">
+      
+    
+
+    
+        <style>body { --page-color: #8D54F0; }</style>
+      
+  </head>
+
+  <body class="layout doc">
+    
+      <div class="docs-breadcrumbs ">
+  
+
+  <div class="container">
+    <a href="/docs/" class="toplevel-link breadcrumb">Documentation</a>
+
+    
+      <span class="breadcrumb">
+        /
+      </span>
+
+      <div class="breadcrumb active dropdown-container toggleable-container">
+        <span class="toplevel-link">Guides</span>
+        <i class="fa fa-angle-down"></i>
+
+        <div class="dropdown nav-list left toggleable">
+          
+            
+              <a class="nav-item" href="/docs/tour">Tour</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/how-beaker-works">How Beaker works</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/apis/">Web APIs</a>
+            
+          
+            
+              <a class="nav-item active" href="/docs/guides">
+                Guides
+                <i class="fa fa-check"></i>
+              </a>
+            
+          
+            
+              <a class="nav-item" href="/docs/faq">Help & FAQ</a>
+            
+          
+        </div>
+      </div>
+
+      
+        <span class="breadcrumb">
+          /
+        </span>
+
+        <div class="breadcrumb active dropdown-container toggleable-container">
+          <span class="toplevel-link">Host outside of Beaker</span>
+          <i class="fa fa-angle-down"></i>
+
+          <div class="dropdown wide nav-list left toggleable">
+            
+              
+                <a class="nav-item" href="/docs/guides/use-a-domain-name-with-dat">
+                  Use a domain name with dat://
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/publish-a-peer-to-peer-website">
+                  Publish a peer-to-peer website
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/use-a-custom-404-page">
+                  Use a custom 404 page
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/using-experimental-apis">
+                  Using experimental APIs
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/create-a-markdown-site">
+                  Build a website with Markdown
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/watch-for-file-changes">
+                  Watch for file changes
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/read-site-files">
+                  Read files from a dat:// website
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/write-site-files">
+                  Write to a dat:// website
+
+                  
+                </a>
+              
+            
+
+            <div class="dropdown-footer">
+              <a href="/docs/guides">
+                <span class="fa fa-arrow-left"></span>
+                Back to Guides
+              </a>
+            </div>
+          </div>
+      
+      </div>
+    
+  </div>
+</div>
+      <div class="title-bar">
+  <div class="container">
+    
+      <a href="" class="section-title">
+        Guides
+      </a>
+    
+
+    <h1>
+      Host outside of Beaker
+      
+    </h1>
+
+    
+      <div class="guide-metadata">
+        <div class="author">
+          <img class="avatar" src=""/>
+          <a href="" class="name">
+            
+          </a>
+        </div>
+      </div>
+    
+  </div>
+</div>
+    
+
+    <main class="docs ">
+      <div class="container content-container">
+        
+          
+
+
+
+<nav class="docs-sidebar">
+  <!--
+  <ul class="pages">
+    
+      
+        <li>
+      
+        <a href="/docs/guides/use-a-domain-name-with-dat">Use a domain name with dat://</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/publish-a-peer-to-peer-website">Publish a peer-to-peer website</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/use-a-custom-404-page">Use a custom 404 page</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/using-experimental-apis">Using experimental APIs</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/create-a-markdown-site">Build a website with Markdown</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/watch-for-file-changes">Watch for file changes</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/read-site-files">Read files from a dat:// website</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/write-site-files">Write to a dat:// website</a>
+      </li>
+    
+  </ul>
+  -->
+
+  
+</nav>
+
+
+
+          <div class="content">
+            <p>Sometimes it’s important to make sure your site is always available. One solution is to setup a server and rehost your site using <a href="https://github.com/beakerbrowser/dathttpd">DatHTTPD</a>.</p>
+
+<p>From the README:</p>
+
+<blockquote>
+  <p>A Web server for Dat and HTTPS:</p>
+  <ul>
+    <li>Serve sites over Dat with DNS shortnames.</li>
+    <li>Rehost those sites over HTTPS.</li>
+    <li>Get TLS certs automatically with Let’s Encrypt.</li>
+    <li>(Optionally) Auto-redirect from https -&gt; dat.</li>
+    <li>Metrics dashboard</li>
+  </ul>
+</blockquote>
+
+<p>Using DatHTTPD should be very simple for an experienced admin. Host your Dats with Beaker, or some other Dat application. Then, on your server, create a config file at <code class="highlighter-rouge">~/.dathttpd.yml</code>.</p>
+
+<figcaption class="code">~/.dathttpd.yml</figcaption>
+<div class="language-yml highlighter-rouge"><pre class="highlight"><code><span class="s">letsencrypt</span><span class="pi">:</span>
+  <span class="s">email</span><span class="pi">:</span> <span class="s1">'</span><span class="s">bob@foo.com'</span> <span class="c1"># replace this value with your email address</span>
+  <span class="s">agreeTos</span><span class="pi">:</span> <span class="s">true</span>
+<span class="s">sites</span><span class="pi">:</span>
+  <span class="s">mydatsite.com</span><span class="pi">:</span> <span class="c1"># replace this key with your server’s hostname</span>
+    <span class="s">url</span><span class="pi">:</span> <span class="s">dat://{your_dat_url_here}/</span> <span class="c1"># replace this value with your dat’s URL</span>
+</code></pre>
+</div>
+
+<p>Then run</p>
+
+<figcaption class="code">bash</figcaption>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="c"># install build dependencies</span>
+sudo apt-get install libtool m4 automake make g++
+
+<span class="c"># install dathttpd (https://docs.npmjs.com/getting-started/fixing-npm-permissions)</span>
+npm install -g dathttpd
+
+<span class="c"># give node perms to use ports 80 and 443</span>
+sudo setcap <span class="nv">cap_net_bind_service</span><span class="o">=</span>+ep <span class="sb">`</span>readlink -f <span class="se">\`</span>which node<span class="se">\`</span><span class="sb">`</span>
+
+<span class="c"># start dathttpd</span>
+dathttpd
+</code></pre>
+</div>
+
+<p>To daemonify the server in Debian-based systems, stop the <code class="highlighter-rouge">dathttpd</code> process and then run:</p>
+
+<figcaption class="code">bash</figcaption>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="c"># install a helper tool</span>
+npm install -g add-to-systemd
+
+<span class="c"># create a systemd entry for dathttpd</span>
+sudo add-to-systemd dathttpd --user <span class="k">$(</span>whoami<span class="k">)</span> <span class="k">$(</span>which dathttpd<span class="k">)</span>
+
+<span class="c"># start the dathttpd service</span>
+sudo systemctl start dathttpd
+</code></pre>
+</div>
+
+<p>See the <a href="https://github.com/beakerbrowser/dathttpd">DatHTTPD README</a> for more information.</p>
+
+          </div>
+        
+      </div>
+    </main>
+
+    <script>
+    var $ = document.querySelector.bind(document)
+    var $$ = function (selector) {
+      return Array.prototype.slice.call(document.querySelectorAll(selector))
+    }
+    </script>
+    <script src="/js/adjust-anchor-scroll-positioning.js"></script>
+    <script src="/js/anchor.min.js"></script>
+    <script>
+    anchors.add('h2, h3, h4')
+    </script>
+
+    <script>
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'))
+      img.onload = function() {
+        img.removeAttribute('data-src')
+      }
+    })
+    </script>
+  </body>
+
+  <script src="/js/toggleable.js"></script>
+  <script src="/js/collapseable.js"></script>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>Guides - Build a website with Markdown</title>
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="Build a website with Markdown">
+      <meta name="og:description" content="We’re big fans of Markdown, so we added support for Markdown rendering in Beaker. Markdown rendering is...">
+      
+    
+
+    
+        <style>body { --page-color: #8D54F0; }</style>
+      
+  </head>
+
+  <body class="layout doc">
+    
+      <div class="docs-breadcrumbs ">
+  
+
+  <div class="container">
+    <a href="/docs/" class="toplevel-link breadcrumb">Documentation</a>
+
+    
+      <span class="breadcrumb">
+        /
+      </span>
+
+      <div class="breadcrumb active dropdown-container toggleable-container">
+        <span class="toplevel-link">Guides</span>
+        <i class="fa fa-angle-down"></i>
+
+        <div class="dropdown nav-list left toggleable">
+          
+            
+              <a class="nav-item" href="/docs/tour">Tour</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/how-beaker-works">How Beaker works</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/apis/">Web APIs</a>
+            
+          
+            
+              <a class="nav-item active" href="/docs/guides">
+                Guides
+                <i class="fa fa-check"></i>
+              </a>
+            
+          
+            
+              <a class="nav-item" href="/docs/faq">Help & FAQ</a>
+            
+          
+        </div>
+      </div>
+
+      
+        <span class="breadcrumb">
+          /
+        </span>
+
+        <div class="breadcrumb active dropdown-container toggleable-container">
+          <span class="toplevel-link">Build a website with Markdown</span>
+          <i class="fa fa-angle-down"></i>
+
+          <div class="dropdown wide nav-list left toggleable">
+            
+              
+                <a class="nav-item" href="/docs/guides/use-a-domain-name-with-dat">
+                  Use a domain name with dat://
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/publish-a-peer-to-peer-website">
+                  Publish a peer-to-peer website
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/use-a-custom-404-page">
+                  Use a custom 404 page
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/using-experimental-apis">
+                  Using experimental APIs
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item active" href="/docs/guides/create-a-markdown-site">
+                  Build a website with Markdown
+
+                  
+
+                  <i class="fa fa-check"></i>
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/watch-for-file-changes">
+                  Watch for file changes
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/read-site-files">
+                  Read files from a dat:// website
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/write-site-files">
+                  Write to a dat:// website
+
+                  
+                </a>
+              
+            
+
+            <div class="dropdown-footer">
+              <a href="/docs/guides">
+                <span class="fa fa-arrow-left"></span>
+                Back to Guides
+              </a>
+            </div>
+          </div>
+      
+      </div>
+    
+  </div>
+</div>
+      <div class="title-bar">
+  <div class="container">
+    
+      <a href="/docs/guides" class="section-title">
+        Guides
+      </a>
+    
+
+    <h1>
+      Build a website with Markdown
+      
+    </h1>
+
+    
+      <div class="guide-metadata">
+        <div class="author">
+          <img class="avatar" src="/img/team/taravancil.jpg"/>
+          <a href="https://taravancil.com" class="name">
+            Tara Vancil
+          </a>
+        </div>
+      </div>
+    
+  </div>
+</div>
+    
+
+    <main class="docs ">
+      <div class="container content-container">
+        
+          
+
+
+
+<nav class="docs-sidebar">
+  <!--
+  <ul class="pages">
+    
+      
+        <li>
+      
+        <a href="/docs/guides/use-a-domain-name-with-dat">Use a domain name with dat://</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/publish-a-peer-to-peer-website">Publish a peer-to-peer website</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/use-a-custom-404-page">Use a custom 404 page</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/using-experimental-apis">Using experimental APIs</a>
+      </li>
+    
+      
+        
+        <li class="active">
+      
+        <a href="/docs/guides/create-a-markdown-site">Build a website with Markdown</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/watch-for-file-changes">Watch for file changes</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/read-site-files">Read files from a dat:// website</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/write-site-files">Write to a dat:// website</a>
+      </li>
+    
+  </ul>
+  -->
+
+  
+    <ul class="headings">
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#getting-started-with-markdown" title="Getting started with Markdown">
+              #
+            </a>
+
+            <a href="#getting-started-with-markdown" title="Getting started with Markdown">
+              Getting started with Markdown
+            </a>
+          </li>
+        
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#navigation" title="Navigation">
+              #
+            </a>
+
+            <a href="#navigation" title="Navigation">
+              Navigation
+            </a>
+          </li>
+        
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#custom-styles" title="Custom styles">
+              #
+            </a>
+
+            <a href="#custom-styles" title="Custom styles">
+              Custom styles
+            </a>
+          </li>
+        
+      
+    </ul>
+  
+</nav>
+
+
+
+          <div class="content">
+            <p>We’re big fans of <a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a>, so we added support for Markdown rendering in Beaker.</p>
+
+<p>Markdown rendering is turned on by default for all <code class="highlighter-rouge">.md</code> files, but you can easily switch between the raw and formatted file content:</p>
+
+<p><img src="/img/docs/guides/markdown-rendering.png" /></p>
+
+<h2 id="getting-started-with-markdown">Getting started with Markdown</h2>
+
+<p>Since Beaker renders <code class="highlighter-rouge">.md</code> files out-of-the-box, we can use Markdown to quickly and easily publish documents like blog posts or documentation without writing any HTML.</p>
+
+<p>To get started, add an an <code class="highlighter-rouge">index.md</code> file to your project:</p>
+
+<figcaption class="code">index.md</figcaption>
+<div class="language-markdown highlighter-rouge"><pre class="highlight"><code><span class="gh"># Hello world!</span>
+
+This is my <span class="gs">**cool**</span> Markdown site published with Beaker.
+</code></pre>
+</div>
+
+<p><img src="/img/docs/guides/markdown-index.png" /></p>
+
+<h2 id="navigation">Navigation</h2>
+
+<p>Beaker also supports a basic Markdown-based navigation menu. To add navigation, add a <code class="highlighter-rouge">nav.md</code> file to your project:</p>
+
+<figcaption class="code">nav.md</figcaption>
+<div class="language-markdown highlighter-rouge"><pre class="highlight"><code><span class="p">[</span><span class="nv">About me</span><span class="p">](</span><span class="sx">about.md</span><span class="p">)</span>
+<span class="p">[</span><span class="nv">My blog</span><span class="p">](</span><span class="sx">blog.md</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Once you’ve added a <code class="highlighter-rouge">nav.md</code> file, Beaker will render the
+navigation menu on all <code class="highlighter-rouge">.md</code> pages in your project:</p>
+
+<p><img src="/img/docs/guides/markdown-nav.png" /></p>
+
+<h2 id="custom-styles">Custom styles</h2>
+
+<p>Beaker’s default Markdown styles are intentionally bare, but it doesn’t have to stay that way! You can add inline styles to any <code class="highlighter-rouge">.md</code> file:</p>
+
+<figcaption class="code">index.md</figcaption>
+<div class="language-markdown highlighter-rouge"><pre class="highlight"><code><span class="gh"># Hello world!</span>
+
+This is my <span class="gs">**cool**</span> Markdown site published with Beaker.
+
+<span class="nt">&lt;style&gt;</span>
+  body {
+    color: red;
+  }
+<span class="nt">&lt;/style&gt;</span>
+</code></pre>
+</div>
+
+<p>You can also add a CSS file to your project and load it as a stylesheet:</p>
+
+<figcaption class="code">index.md</figcaption>
+
+<div class="language-markdown highlighter-rouge"><pre class="highlight"><code><span class="gh"># Hello world!</span>
+
+This is my <span class="gs">**cool**</span> Markdown site published with Beaker.
+
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"style.css"</span><span class="nt">&gt;</span>
+</code></pre>
+</div>
+
+<p>Markdown sites are a convenient way to publish formatted content with Beaker
+without setting up a build process to convert Markdown files to HTML. You can keep it simple or customize the formatting as much as you’d like!</p>
+
+          </div>
+        
+      </div>
+    </main>
+
+    <script>
+    var $ = document.querySelector.bind(document)
+    var $$ = function (selector) {
+      return Array.prototype.slice.call(document.querySelectorAll(selector))
+    }
+    </script>
+    <script src="/js/adjust-anchor-scroll-positioning.js"></script>
+    <script src="/js/anchor.min.js"></script>
+    <script>
+    anchors.add('h2, h3, h4')
+    </script>
+
+    <script>
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'))
+      img.onload = function() {
+        img.removeAttribute('data-src')
+      }
+    })
+    </script>
+  </body>
+
+  <script src="/js/toggleable.js"></script>
+  <script src="/js/collapseable.js"></script>
+</html>

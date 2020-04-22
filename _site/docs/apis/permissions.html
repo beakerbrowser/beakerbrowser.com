@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>Web APIs - Permissions API</title>
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="Permissions API">
+      <meta name="og:description" content="">
+      
+    
+
+    
+        <style>body { --page-color: #0eb370; }</style>
+      
+  </head>
+
+  <body class="layout doc">
+    
+      <div class="docs-breadcrumbs ">
+  
+
+  <div class="container">
+    <a href="/docs/" class="toplevel-link breadcrumb">Documentation</a>
+
+    
+      <span class="breadcrumb">
+        /
+      </span>
+
+      <div class="breadcrumb active dropdown-container toggleable-container">
+        <span class="toplevel-link">Web APIs</span>
+        <i class="fa fa-angle-down"></i>
+
+        <div class="dropdown nav-list left toggleable">
+          
+            
+              <a class="nav-item" href="/docs/tour">Tour</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/how-beaker-works">How Beaker works</a>
+            
+          
+            
+              <a class="nav-item active" href="/docs/apis/">
+                Web APIs
+                <i class="fa fa-check"></i>
+              </a>
+            
+          
+            
+              <a class="nav-item" href="/docs/guides">Guides</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/faq">Help & FAQ</a>
+            
+          
+        </div>
+      </div>
+
+      
+        <span class="breadcrumb">
+          /
+        </span>
+
+        <div class="breadcrumb active dropdown-container toggleable-container">
+          <span class="toplevel-link">Permissions API</span>
+          <i class="fa fa-angle-down"></i>
+
+          <div class="dropdown wide nav-list left toggleable">
+            
+              
+                <a class="nav-item" href="/docs/apis/dat">
+                  DatArchive API
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/manifest">
+                  dat.json site manifest
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/experimental-datpeers">
+                  datPeers API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/experimental-library">
+                  Library API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/experimental-globalfetch">
+                  globalFetch API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/experimental-capturepage">
+                  capturePage API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+                </a>
+              
+            
+
+            <div class="dropdown-footer">
+              <a href="/docs/apis/">
+                <span class="fa fa-arrow-left"></span>
+                Back to Web APIs
+              </a>
+            </div>
+          </div>
+      
+      </div>
+    
+  </div>
+</div>
+      <div class="title-bar">
+  <div class="container">
+    
+      <a href="" class="section-title">
+        Web APIs
+      </a>
+    
+
+    <h1>
+      Permissions API
+      
+    </h1>
+
+    
+  </div>
+</div>
+    
+
+    <main class="docs ">
+      <div class="container content-container">
+        
+          
+
+
+
+<nav class="docs-sidebar">
+  <!--
+  <ul class="pages">
+    
+      
+        <li>
+      
+        <a href="/docs/apis/dat">DatArchive API</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/manifest">dat.json site manifest</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/experimental-datpeers">datPeers API</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/experimental-library">Library API</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/experimental-globalfetch">globalFetch API</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/experimental-capturepage">capturePage API</a>
+      </li>
+    
+  </ul>
+  -->
+
+  
+</nav>
+
+
+
+          <div class="content">
+            <div class="card danger">
+  <div class="card-body">
+    TODO
+    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> This API has been deprecated.
+  </div>
+</div>
+
+<p><br /></p>
+
+<p><strong>Notes:</strong>
+TODO</p>
+
+<ul>
+  <li>Only apps served over <code class="highlighter-rouge">dat://</code> are able to access these APIs.</li>
+  <li><i class="fa fa-flask"></i> Indicates that this API is under development and subject to change.</li>
+</ul>
+
+<hr />
+
+<h2 id="network-access">Network access</h2>
+
+<p>By default, <code class="highlighter-rouge">dat://</code> websites are not allowed to access the network. They can,
+however, request exceptions. This will generate a prompt, which the user can
+choose to accept or deny with a permission prompt.</p>
+
+<p>To request network access, use the <code class="highlighter-rouge">navigator.permissions</code> API. If your
+request is granted, the page will be able to target the granted domain for
+images, media, fonts, AJAQ and WebSockets. It will not enable remotely-served
+styles, scripts, or objects.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="c1">// Request access</span>
+<span class="kd">var</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">permissions</span><span class="p">.</span><span class="nx">request</span><span class="p">({</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s1">'network'</span><span class="p">,</span>
+  <span class="na">hostname</span><span class="p">:</span> <span class="s1">'github.com'</span>
+<span class="p">})</span>
+<span class="nx">res</span><span class="p">.</span><span class="nx">status</span> <span class="c1">// =&gt; 'granted'</span>
+
+<span class="c1">// Query access</span>
+<span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">permissions</span><span class="p">.</span><span class="nx">query</span><span class="p">({</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s1">'network'</span><span class="p">,</span>
+  <span class="na">hostname</span><span class="p">:</span> <span class="s1">'github.com'</span>
+<span class="p">})</span>
+<span class="nx">res</span><span class="p">.</span><span class="nx">status</span> <span class="c1">// =&gt; 'granted'</span>
+
+<span class="c1">// Give up access</span>
+<span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">permissions</span><span class="p">.</span><span class="nx">revoke</span><span class="p">({</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s1">'network'</span><span class="p">,</span>
+  <span class="na">hostname</span><span class="p">:</span> <span class="s1">'github.com'</span>
+<span class="p">})</span>
+<span class="nx">res</span><span class="p">.</span><span class="nx">status</span> <span class="c1">// =&gt; 'prompt'</span>
+</code></pre>
+</div>
+
+<p>After a permission request is granted, the page must be refreshed for the
+policy-change to take effect. Multiple hosts can be requested; subsequent
+requests add hosts, rather than replacing the current allowed hosts.</p>
+
+<p>A wildcard string (‘*’) can be used to request or revoke access to all hosts.</p>
+
+          </div>
+        
+      </div>
+    </main>
+
+    <script>
+    var $ = document.querySelector.bind(document)
+    var $$ = function (selector) {
+      return Array.prototype.slice.call(document.querySelectorAll(selector))
+    }
+    </script>
+    <script src="/js/adjust-anchor-scroll-positioning.js"></script>
+    <script src="/js/anchor.min.js"></script>
+    <script>
+    anchors.add('h2, h3, h4')
+    </script>
+
+    <script>
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'))
+      img.onload = function() {
+        img.removeAttribute('data-src')
+      }
+    })
+    </script>
+  </body>
+
+  <script src="/js/toggleable.js"></script>
+  <script src="/js/collapseable.js"></script>
+</html>

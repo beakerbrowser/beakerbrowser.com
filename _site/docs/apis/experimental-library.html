@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>Web APIs - Library API</title>
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="Library API">
+      <meta name="og:description" content="">
+      
+    
+
+    
+        <style>body { --page-color: #0eb370; }</style>
+      
+  </head>
+
+  <body class="layout doc">
+    
+      <div class="docs-breadcrumbs ">
+  
+
+  <div class="container">
+    <a href="/docs/" class="toplevel-link breadcrumb">Documentation</a>
+
+    
+      <span class="breadcrumb">
+        /
+      </span>
+
+      <div class="breadcrumb active dropdown-container toggleable-container">
+        <span class="toplevel-link">Web APIs</span>
+        <i class="fa fa-angle-down"></i>
+
+        <div class="dropdown nav-list left toggleable">
+          
+            
+              <a class="nav-item" href="/docs/tour">Tour</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/how-beaker-works">How Beaker works</a>
+            
+          
+            
+              <a class="nav-item active" href="/docs/apis/">
+                Web APIs
+                <i class="fa fa-check"></i>
+              </a>
+            
+          
+            
+              <a class="nav-item" href="/docs/guides">Guides</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/faq">Help & FAQ</a>
+            
+          
+        </div>
+      </div>
+
+      
+        <span class="breadcrumb">
+          /
+        </span>
+
+        <div class="breadcrumb active dropdown-container toggleable-container">
+          <span class="toplevel-link">Library API</span>
+          <i class="fa fa-angle-down"></i>
+
+          <div class="dropdown wide nav-list left toggleable">
+            
+              
+                <a class="nav-item" href="/docs/apis/dat">
+                  DatArchive API
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/manifest">
+                  dat.json site manifest
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/experimental-datpeers">
+                  datPeers API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item active" href="/docs/apis/experimental-library">
+                  Library API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+
+                  <i class="fa fa-check"></i>
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/experimental-globalfetch">
+                  globalFetch API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/experimental-capturepage">
+                  capturePage API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+                </a>
+              
+            
+
+            <div class="dropdown-footer">
+              <a href="/docs/apis/">
+                <span class="fa fa-arrow-left"></span>
+                Back to Web APIs
+              </a>
+            </div>
+          </div>
+      
+      </div>
+    
+  </div>
+</div>
+      <div class="title-bar">
+  <div class="container">
+    
+      <a href="/docs/apis" class="section-title">
+        Web APIs
+      </a>
+    
+
+    <h1>
+      Library API
+      
+      <i class="fa fa-flask"></i>
+      
+    </h1>
+
+    
+  </div>
+</div>
+    
+
+    <main class="docs ">
+      <div class="container content-container">
+        
+          
+
+
+
+<nav class="docs-sidebar">
+  <!--
+  <ul class="pages">
+    
+      
+        <li>
+      
+        <a href="/docs/apis/dat">DatArchive API</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/manifest">dat.json site manifest</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/experimental-datpeers">datPeers API</a>
+      </li>
+    
+      
+        
+        <li class="active">
+      
+        <a href="/docs/apis/experimental-library">Library API</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/experimental-globalfetch">globalFetch API</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/experimental-capturepage">capturePage API</a>
+      </li>
+    
+  </ul>
+  -->
+
+  
+    <ul class="headings">
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#permissions" title="Permissions">
+              #
+            </a>
+
+            <a href="#permissions" title="Permissions">
+              Permissions
+            </a>
+          </li>
+        
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#methods" title="Methods">
+              #
+            </a>
+
+            <span class="collapseable-btn">
+              <i class="fa fa-caret-right"></i>
+              Methods
+            </span>
+
+            <ul class="collapseable collapsed">
+              
+                <li>
+                  <a href="#add">
+                    
+                      <code>add()</code>
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#remove">
+                    
+                      <code>remove()</code>
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#requestadd">
+                    
+                      <code>requestAdd()</code>
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#requestremove">
+                    
+                      <code>requestRemove()</code>
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#get">
+                    
+                      <code>get()</code>
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#list">
+                    
+                      <code>list()</code>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#events" title="Events">
+              #
+            </a>
+
+            <span class="collapseable-btn">
+              <i class="fa fa-caret-right"></i>
+              Events
+            </span>
+
+            <ul class="collapseable collapsed">
+              
+                <li>
+                  <a href="#event-added">
+                    
+                      <code>added</code>
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#event-removed">
+                    
+                      <code>removed</code>
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#event-updated">
+                    
+                      <code>updated</code>
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#event-network-changed">
+                    
+                      <code>network-changed</code>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+    </ul>
+  
+</nav>
+
+
+
+          <div class="content">
+            <p>Beaker’s <code class="highlighter-rouge">Library</code> API is an experimental API for managing the user’s collection of Dat archives. <a href="#TODO">Learn more about Beaker’s Library</a></p>
+
+<p>To use this API, include the following in your <a href="/docs/apis/manifest"><code>dat.json</code> manifest file</a>:</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"experimental"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"apis"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"library"</span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<aside class="experimental-api">
+  <div class="aside-header"></div>
+
+  <div class="aside-content">
+	<p>
+	  <span class="fa fa-wrench"></span>
+  	  This is an experimental API. Experimental APIs may be changed or removed without notice.
+	</p>
+  </div>
+</aside>
+
+<h2 id="permissions">Permissions</h2>
+
+<p>The user must grant permission for your app to use this API.</p>
+
+<p>If you only wish to add and remove items to/from the Library, consider using <a href="#requestadd">requestAdd()</a> and <a href="#requestremove">requestRemove()</a> so that the user can review each addition and removal individually.</p>
+
+<h2 id="methods">Methods</h2>
+
+<h3 id="add">
+    <code>
+      
+        experimental.library.add(url, opts?)
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>Add an archive to the user’s Library.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">url</code> String. The URL of the archive to add to the Library.</li>
+  <li><code class="highlighter-rouge">opts.duration</code> Number. How long the archive should stay in the Library, in minutes. Useful for “temporary seeding.”</li>
+  <li>returns <code class="highlighter-rouge">Promise&lt;UserSettings&gt;</code></li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">userSettings</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">experimental</span><span class="p">.</span><span class="nx">library</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">datUrl</span><span class="p">)</span>
+<span class="nx">userSettings</span><span class="p">.</span><span class="nx">isSaved</span> <span class="c1">// true</span>
+<span class="nx">userSettings</span><span class="p">.</span><span class="nx">expiresAt</span> <span class="c1">// a timestamp or undefined</span>
+</code></pre>
+</div>
+</div>
+
+<h3 id="remove">
+    <code>
+      
+        experimental.library.remove(url)
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>Remove an archive from the user’s Library.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">url</code> String. The URL of the archive to remove.</li>
+  <li>returns <code class="highlighter-rouge">Promise&lt;UserSettings&gt;</code></li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">userSettings</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">experimental</span><span class="p">.</span><span class="nx">library</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="nx">datUrl</span><span class="p">)</span>
+<span class="nx">userSettings</span><span class="p">.</span><span class="nx">isSaved</span> <span class="c1">// false</span>
+<span class="nx">userSettings</span><span class="p">.</span><span class="nx">expiresAt</span> <span class="c1">// a timestamp or undefined</span>
+</code></pre>
+</div>
+</div>
+
+<h3 id="requestadd">
+    <code>
+      
+        experimental.library.requestAdd(url, opts?)
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>Request to add an archive to the user’s Library. Will prompt the user for confirmation.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">url</code> String. The URL of the archive to add to the Library.</li>
+  <li><code class="highlighter-rouge">opts.duration</code> Number. How long the archive should stay in the Library, in minutes. Useful for “temporary seeding.”</li>
+  <li>returns <code class="highlighter-rouge">Promise&lt;UserSettings&gt;</code></li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">userSettings</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">experimental</span><span class="p">.</span><span class="nx">library</span><span class="p">.</span><span class="nx">requestAdd</span><span class="p">(</span><span class="nx">datUrl</span><span class="p">)</span>
+<span class="nx">userSettings</span><span class="p">.</span><span class="nx">isSaved</span> <span class="c1">// true</span>
+<span class="nx">userSettings</span><span class="p">.</span><span class="nx">expiresAt</span> <span class="c1">// a timestamp or undefined</span>
+</code></pre>
+</div>
+</div>
+
+<h3 id="requestremove">
+    <code>
+      
+        experimental.library.requestRemove(url)
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>Request to remove an archive from the user’s Library. Will prompt the user for confirmation.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">url</code> String. The URL of the archive to remove.</li>
+  <li>returns <code class="highlighter-rouge">Promise&lt;UserSettings&gt;</code></li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">userSettings</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">experimental</span><span class="p">.</span><span class="nx">library</span><span class="p">.</span><span class="nx">requestRemove</span><span class="p">(</span><span class="nx">datUrl</span><span class="p">)</span>
+<span class="nx">userSettings</span><span class="p">.</span><span class="nx">isSaved</span> <span class="c1">// false</span>
+<span class="nx">userSettings</span><span class="p">.</span><span class="nx">expiresAt</span> <span class="c1">// a timestamp or undefined</span>
+</code></pre>
+</div>
+</div>
+
+<h3 id="get">
+    <code>
+      
+        experimental.library.get(url)
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>Get the settings for the given archive.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">url</code> String. The URL of the archive.</li>
+  <li>returns <code class="highlighter-rouge">Promise&lt;UserSettings&gt;</code></li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">userSettings</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">experimental</span><span class="p">.</span><span class="nx">library</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">datUrl</span><span class="p">)</span>
+<span class="nx">userSettings</span><span class="p">.</span><span class="nx">isSaved</span> <span class="c1">// true/false</span>
+<span class="nx">userSettings</span><span class="p">.</span><span class="nx">expiresAt</span> <span class="c1">// a timestamp or undefined</span>
+</code></pre>
+</div>
+</div>
+
+<h3 id="list">
+    <code>
+      
+        experimental.library.list(query?)
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>List the archives saved to the user’s Library.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">query.inMemory</code> Boolean. Filter by whether the archives are loaded.</li>
+  <li><code class="highlighter-rouge">query.isSaved</code> Boolean. Filter by whether the archives are saved or just in the cache.</li>
+  <li><code class="highlighter-rouge">query.isNetworked</code> Boolean. Filter by whether the archives are being swarmed on the network.</li>
+  <li><code class="highlighter-rouge">query.isOwner</code> Boolean. Filter by whether the archive is owned by the user.</li>
+  <li>returns <code class="highlighter-rouge">Promise&lt;Array&lt;ArchiveInfo&gt;&gt;</code></li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">archives</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">experimental</span><span class="p">.</span><span class="nx">library</span><span class="p">.</span><span class="nx">list</span><span class="p">({</span><span class="na">isSaved</span><span class="p">:</span> <span class="kc">true</span><span class="p">})</span>
+</code></pre>
+</div>
+
+<p>Each object returned in the array will have the following properties:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">{</span>
+  <span class="nl">url</span><span class="p">:</span> <span class="nx">string</span>
+  <span class="nl">title</span><span class="p">:</span> <span class="nx">string</span>
+  <span class="nl">description</span><span class="p">:</span> <span class="nx">string</span>
+  <span class="nl">size</span><span class="p">:</span> <span class="nx">number</span>
+  <span class="nl">mtime</span><span class="p">:</span> <span class="nx">number</span>
+  <span class="nl">isOwner</span><span class="p">:</span> <span class="kr">boolean</span>
+  <span class="nl">userSettings</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nl">isSaved</span><span class="p">:</span> <span class="kr">boolean</span>
+    <span class="nl">expiresAt</span><span class="p">:</span> <span class="nx">number</span>
+  <span class="p">}</span>
+  <span class="nl">peers</span><span class="p">:</span> <span class="nx">number</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+</div>
+
+<h2 id="events">Events</h2>
+
+<h3 id="event-added">
+    <code>
+      
+        Event: "added"
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>An archive has been added to the Library.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">event.url</code> String. The URL of the archive added.</li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">experimental</span><span class="p">.</span><span class="nx">library</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'added'</span><span class="p">,</span> <span class="p">({</span><span class="nx">url</span><span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="s1">'was added to the Library'</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+</div>
+</div>
+
+<h3 id="event-removed">
+    <code>
+      
+        Event: "removed"
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>An archive has been removed from the Library.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">event.url</code> String. The URL of the archive removed.</li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">experimental</span><span class="p">.</span><span class="nx">library</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'removed'</span><span class="p">,</span> <span class="p">({</span><span class="nx">url</span><span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="s1">'was removed from the Library'</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+</div>
+</div>
+
+<h3 id="event-updated">
+    <code>
+      
+        Event: "updated"
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>An archive has recently had its metadata updated.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">event.url</code> String. The URL of the archive updated.</li>
+  <li><code class="highlighter-rouge">event.title</code> String. The archive title.</li>
+  <li><code class="highlighter-rouge">event.description</code> String. The archive description.</li>
+  <li><code class="highlighter-rouge">event.size</code> Number. The archive size, in bytes.</li>
+  <li><code class="highlighter-rouge">event.mtime</code> Number. The timestamp of the most recent modification.</li>
+  <li><code class="highlighter-rouge">event.isOwner</code> Boolean. Does the user own the archive?</li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">experimental</span><span class="p">.</span><span class="nx">library</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'updated'</span><span class="p">,</span> <span class="p">({</span><span class="nx">url</span><span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="s1">'was recently updated'</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+</div>
+</div>
+
+<h3 id="event-network-changed">
+    <code>
+      
+        Event: "network-changed"
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>An archive has recently had its network conditions change.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">event.url</code> String. The URL of the archive updated.</li>
+  <li><code class="highlighter-rouge">event.connections</code> Number. The number of active connections.</li>
+</ul>
+
+<p>Example:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">experimental</span><span class="p">.</span><span class="nx">library</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'updated'</span><span class="p">,</span> <span class="p">({</span><span class="nx">url</span><span class="p">,</span> <span class="nx">connections</span><span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="s1">'has'</span><span class="p">,</span> <span class="nx">connections</span><span class="p">,</span> <span class="s1">'current peers'</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+</div>
+</div>
+
+          </div>
+        
+      </div>
+    </main>
+
+    <script>
+    var $ = document.querySelector.bind(document)
+    var $$ = function (selector) {
+      return Array.prototype.slice.call(document.querySelectorAll(selector))
+    }
+    </script>
+    <script src="/js/adjust-anchor-scroll-positioning.js"></script>
+    <script src="/js/anchor.min.js"></script>
+    <script>
+    anchors.add('h2, h3, h4')
+    </script>
+
+    <script>
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'))
+      img.onload = function() {
+        img.removeAttribute('data-src')
+      }
+    })
+    </script>
+  </body>
+
+  <script src="/js/toggleable.js"></script>
+  <script src="/js/collapseable.js"></script>
+</html>

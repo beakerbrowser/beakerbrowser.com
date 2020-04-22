@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>Guides - Write to a dat:// website</title>
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="Write to a dat:// website">
+      <meta name="og:description" content="Learn how to write files using the DatArchive API by example">
+      
+    
+
+    
+        <style>body { --page-color: #8D54F0; }</style>
+      
+  </head>
+
+  <body class="layout doc">
+    
+      <div class="docs-breadcrumbs ">
+  
+
+  <div class="container">
+    <a href="/docs/" class="toplevel-link breadcrumb">Documentation</a>
+
+    
+      <span class="breadcrumb">
+        /
+      </span>
+
+      <div class="breadcrumb active dropdown-container toggleable-container">
+        <span class="toplevel-link">Guides</span>
+        <i class="fa fa-angle-down"></i>
+
+        <div class="dropdown nav-list left toggleable">
+          
+            
+              <a class="nav-item" href="/docs/tour">Tour</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/how-beaker-works">How Beaker works</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/apis/">Web APIs</a>
+            
+          
+            
+              <a class="nav-item active" href="/docs/guides">
+                Guides
+                <i class="fa fa-check"></i>
+              </a>
+            
+          
+            
+              <a class="nav-item" href="/docs/faq">Help & FAQ</a>
+            
+          
+        </div>
+      </div>
+
+      
+        <span class="breadcrumb">
+          /
+        </span>
+
+        <div class="breadcrumb active dropdown-container toggleable-container">
+          <span class="toplevel-link">Write to a dat:// website</span>
+          <i class="fa fa-angle-down"></i>
+
+          <div class="dropdown wide nav-list left toggleable">
+            
+              
+                <a class="nav-item" href="/docs/guides/use-a-domain-name-with-dat">
+                  Use a domain name with dat://
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/publish-a-peer-to-peer-website">
+                  Publish a peer-to-peer website
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/use-a-custom-404-page">
+                  Use a custom 404 page
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/using-experimental-apis">
+                  Using experimental APIs
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/create-a-markdown-site">
+                  Build a website with Markdown
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/watch-for-file-changes">
+                  Watch for file changes
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/read-site-files">
+                  Read files from a dat:// website
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item active" href="/docs/guides/write-site-files">
+                  Write to a dat:// website
+
+                  
+
+                  <i class="fa fa-check"></i>
+                </a>
+              
+            
+
+            <div class="dropdown-footer">
+              <a href="/docs/guides">
+                <span class="fa fa-arrow-left"></span>
+                Back to Guides
+              </a>
+            </div>
+          </div>
+      
+      </div>
+    
+  </div>
+</div>
+      <div class="title-bar">
+  <div class="container">
+    
+      <a href="/docs/guides" class="section-title">
+        Guides
+      </a>
+    
+
+    <h1>
+      Write to a dat:// website
+      
+    </h1>
+
+    
+      <div class="guide-metadata">
+        <div class="author">
+          <img class="avatar" src="/img/team/pfrazee.jpg"/>
+          <a href="https://pfrazee.hashbase.io" class="name">
+            Paul Frazee
+          </a>
+        </div>
+      </div>
+    
+  </div>
+</div>
+    
+
+    <main class="docs ">
+      <div class="container content-container">
+        
+          
+
+
+
+<nav class="docs-sidebar">
+  <!--
+  <ul class="pages">
+    
+      
+        <li>
+      
+        <a href="/docs/guides/use-a-domain-name-with-dat">Use a domain name with dat://</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/publish-a-peer-to-peer-website">Publish a peer-to-peer website</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/use-a-custom-404-page">Use a custom 404 page</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/using-experimental-apis">Using experimental APIs</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/create-a-markdown-site">Build a website with Markdown</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/watch-for-file-changes">Watch for file changes</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/read-site-files">Read files from a dat:// website</a>
+      </li>
+    
+      
+        
+        <li class="active">
+      
+        <a href="/docs/guides/write-site-files">Write to a dat:// website</a>
+      </li>
+    
+  </ul>
+  -->
+
+  
+    <ul class="headings">
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#writing-files-and-folders" title="Writing files and folders">
+              #
+            </a>
+
+            <span class="collapseable-btn">
+              <i class="fa fa-caret-right"></i>
+              Writing files and folders
+            </span>
+
+            <ul class="collapseable collapsed">
+              
+                <li>
+                  <a href="#mkdir">
+                    
+                      mkdir()
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#writefile">
+                    
+                      writeFile()
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#deleting-files-and-folders" title="Deleting files and folders">
+              #
+            </a>
+
+            <span class="collapseable-btn">
+              <i class="fa fa-caret-right"></i>
+              Deleting files and folders
+            </span>
+
+            <ul class="collapseable collapsed">
+              
+                <li>
+                  <a href="#rmdir">
+                    
+                      rmdir()
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#unlink">
+                    
+                      unlink()
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#recursive-deletes">
+                    
+                      Recursive deletes
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#copying-moving-and-renaming" title="Copying, moving, and renaming">
+              #
+            </a>
+
+            <span class="collapseable-btn">
+              <i class="fa fa-caret-right"></i>
+              Copying, moving, and renaming
+            </span>
+
+            <ul class="collapseable collapsed">
+              
+                <li>
+                  <a href="#copy">
+                    
+                      copy()
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#rename">
+                    
+                      rename()
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+    </ul>
+  
+</nav>
+
+
+
+          <div class="content">
+            <p>The <a href="/docs/apis/dat">DatArchive API</a> provides a simple set of APIs to write files, create directories, and delete data.</p>
+
+<p>To create a writable <code class="highlighter-rouge">dat://</code> website, first create a new <code class="highlighter-rouge">DatArchive</code> instance:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">archive</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">DatArchive</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="s1">'My website'</span><span class="p">})</span>
+</code></pre>
+</div>
+
+<h2 id="writing-files-and-folders">Writing files and folders</h2>
+
+<h3 id="mkdir"><code class="highlighter-rouge">mkdir()</code></h3>
+
+<p>The <a href="/docs/apis/dat#mkdir">mkdir() method</a> creates new folders.
+It will throw an error if a file/folder already exists at the target, or if no parent folder exists.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">mkdir</span><span class="p">(</span><span class="s1">'/stuff'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h3 id="writefile"><code class="highlighter-rouge">writeFile()</code></h3>
+
+<p>The <a href="/docs/apis/dat#writefile">writeFile() method</a> writes files. It accepts an encoding as its third parameter.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">'/hello.txt'</span><span class="p">,</span> <span class="nx">str</span><span class="p">,</span> <span class="s1">'utf8'</span><span class="p">)</span>
+<span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">'/beaker.png'</span><span class="p">,</span> <span class="nx">pngBase64</span><span class="p">,</span> <span class="s1">'base64'</span><span class="p">)</span>
+<span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">'/beaker.png'</span><span class="p">,</span> <span class="nx">pngArrayBuffer</span><span class="p">,</span> <span class="s1">'binary'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>If the encoding is omitted, then ‘utf8’ will be assumed for strings and ‘binary’ will be assumed for ArrayBuffers:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">'/hello.txt'</span><span class="p">,</span> <span class="nx">str</span><span class="p">)</span>
+<span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">'/beaker.png'</span><span class="p">,</span> <span class="nx">pngArrayBuffer</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h2 id="deleting-files-and-folders">Deleting files and folders</h2>
+
+<h3 id="rmdir"><code class="highlighter-rouge">rmdir()</code></h3>
+
+<p>The <a href="/docs/apis/dat#rmdir">rmdir() method</a> deletes folders. It will fail if the folder is not empty.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">rmdir</span><span class="p">(</span><span class="s1">'/stuff'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h3 id="unlink"><code class="highlighter-rouge">unlink()</code></h3>
+
+<p>The <a href="/docs/apis/dat#unlink">unlink() method</a> deletes files.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">unlink</span><span class="p">(</span><span class="s1">'/hello.txt'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h3 id="recursive-deletes">Recursive deletes</h3>
+
+<p>You can delete non-empty folders by specifying the <code class="highlighter-rouge">recursive</code> option.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="c1">// delete /stuff and all of its contents</span>
+<span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">rmdir</span><span class="p">(</span><span class="s1">'/stuff'</span><span class="p">,</span> <span class="p">{</span><span class="na">recursive</span><span class="p">:</span> <span class="kc">true</span><span class="p">})</span>
+</code></pre>
+</div>
+
+<h2 id="copying-moving-and-renaming">Copying, moving, and renaming</h2>
+
+<h3 id="copy"><code class="highlighter-rouge">copy()</code></h3>
+
+<p>The <a href="/docs/apis/dat#copy">copy() method</a> copies files and folders. If the folder is not empty, it will copy all of its contents.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">copy</span><span class="p">(</span><span class="s1">'/stuff'</span><span class="p">,</span> <span class="s1">'/stuff-backup'</span><span class="p">)</span>
+<span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">copy</span><span class="p">(</span><span class="s1">'/hello.txt'</span><span class="p">,</span> <span class="s1">'/goodbye.txt'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h3 id="rename"><code class="highlighter-rouge">rename()</code></h3>
+
+<p>The <a href="/docs/apis/dat#rename">rename() method</a> moves/renames files and folders. If the folder is not empty, it will move all of its contents.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">rename</span><span class="p">(</span><span class="s1">'/stuff'</span><span class="p">,</span> <span class="s1">'/stuff-backup'</span><span class="p">)</span>
+<span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">rename</span><span class="p">(</span><span class="s1">'/hello.txt'</span><span class="p">,</span> <span class="s1">'/goodbye.txt'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h2 id="further-reading">Further reading</h2>
+
+<ul>
+  <li><a href="/docs/apis/dat">DatArchive API reference</a></li>
+</ul>
+
+          </div>
+        
+      </div>
+    </main>
+
+    <script>
+    var $ = document.querySelector.bind(document)
+    var $$ = function (selector) {
+      return Array.prototype.slice.call(document.querySelectorAll(selector))
+    }
+    </script>
+    <script src="/js/adjust-anchor-scroll-positioning.js"></script>
+    <script src="/js/anchor.min.js"></script>
+    <script>
+    anchors.add('h2, h3, h4')
+    </script>
+
+    <script>
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'))
+      img.onload = function() {
+        img.removeAttribute('data-src')
+      }
+    })
+    </script>
+  </body>
+
+  <script src="/js/toggleable.js"></script>
+  <script src="/js/collapseable.js"></script>
+</html>

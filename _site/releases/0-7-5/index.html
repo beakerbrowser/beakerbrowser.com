@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Beaker v0.7.5</title>
+    <link rel="stylesheet" href="/css/release.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    <meta name="twitter:site" content="@BeakerBrowser" />
+    <meta name="twitter:title" content="Beaker v0.7.5 Released"/>
+    <meta name="twitter:description" content="See what's new in v0.7.5."/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://beakerbrowser.com/img/releases/0-7-5" />
+  </head>
+
+  <body>
+    <main class="release">
+      <div id="update-message">
+        <i class="fa fa-check-circle"></i>
+        <p>Beaker is up to date</p>
+      </div>
+
+      <div class="container">
+        <div class="sidebar">
+          <h1 class="mobile">Beaker 0.7.5</h1>
+          <div class="gallery">
+            <img src="/img/releases/0-7-5" class="active">
+            <div class="thumbnails">
+              
+            </div>
+          </div>
+
+          <div class="info">
+            <h2>Information</h2>
+            <ul>
+              <li>Version: 0.7.5</li>
+              <li>Released: August 4, 2017</li>
+              <li>Size: 65 MB</li>
+            </ul>
+            <div class="install-actions visible">
+              <a href="https://github.com/beakerbrowser/beaker">Build from source</a>
+              <a href="https://beakerbrowser.com/docs/install/">Download installer</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="release-notes">
+          <h1 class="desktop">Beaker 0.7.5</h1>
+          <p>This is a small update! Click on the issue numbers to learn more.</p>
+
+<h2>Additions</h2>
+
+<ul>
+  <li><span class="tag new">new</span> (<a href="https://github.com/beakerbrowser/beaker/pull/633">#633</a>) Added the debug-log to help diagnose connectivity issues.</li>
+  <li><span class="tag new">new</span> (<a href="https://github.com/beakerbrowser/beaker/pull/641">#641</a>) The “not found” page for a dat site will now automatically refresh if the site is found on the network.</li>
+  <li><span class="tag new">new</span> (<a href="https://github.com/beakerbrowser/beaker/pull/638">#638</a>) Settings page now gives the versions of node, electron, and chromium which are used internally.</li>
+  <li><span class="tag new">new</span> (<a href="https://github.com/beakerbrowser/beaker/pull/639">#639</a>) Added new default bookmarks.</li>
+</ul>
+
+<h2>Fixes</h2>
+
+<ul>
+  <li><span class="tag updated">fix</span> (<a href="https://github.com/beakerbrowser/beaker/pull/634">#634</a>) Staging area no longer incorrectly marks files as changed.</li>
+  <li><span class="tag updated">fix</span> (<a href="https://github.com/beakerbrowser/beaker/pull/636">#636</a>) New Web APIs now provide useful stack traces.</li>
+  <li><span class="tag updated">fix</span> (<a href="https://github.com/beakerbrowser/beaker/pull/637">#637</a>) Dat sites can now connect to <code class="highlighter-rouge">wss://</code> websocket servers.</li>
+  <li><span class="tag updated">fix</span> (<a href="https://github.com/beakerbrowser/beaker/pull/640">#640</a>) Fixed an issue with the URL bar behaving strangely after the URL was deleted.</li>
+</ul>
+
+        </div>
+      </div>
+    </main>
+    <div class="image-modal">
+      <img>
+    </div>
+  </body>
+
+  <script>
+    window.onkeydown = function(e) {
+      var key = e.keyCode ? e.keyCode : e.which
+      if (key === 27) closeModal()
+    }
+
+    var q = window.location.search || '';
+    if (q.includes('updated')) {
+      document.querySelector('#update-message').classList.add('visible')
+      document.querySelector('.install-actions').classList.remove('visible')
+    }
+
+    var thumbnails = document.querySelectorAll('.thumbnail')
+    thumbnails.forEach(function (el) {
+      el.addEventListener('click', openModal)
+    })
+
+    function closeModal () {
+      document.querySelector('.image-modal').classList.remove('visible')
+      document.querySelector('.image-modal').removeEventListener('click', closeModal)
+    }
+
+    function openModal (e) {
+      e.preventDefault()
+      var img = e.target
+      document.querySelector('.image-modal img').src = img.src || img.dataset.src
+      document.querySelector('.image-modal').classList.toggle('visible')
+      document.querySelector('.image-modal').addEventListener('click', closeModal)
+    }
+  </script>
+</html>

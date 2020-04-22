@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>How Beaker Works - All about seeding</title>
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="All about seeding">
+      <meta name="og:description" content="">
+      
+    
+
+    
+        <style>body { --page-color: #fb136d;}</style>
+      
+  </head>
+
+  <body class="layout doc">
+    
+      <div class="docs-breadcrumbs ">
+  
+
+  <div class="container">
+    <a href="/docs/" class="toplevel-link breadcrumb">Documentation</a>
+
+    
+      <span class="breadcrumb">
+        /
+      </span>
+
+      <div class="breadcrumb active dropdown-container toggleable-container">
+        <span class="toplevel-link">How Beaker works</span>
+        <i class="fa fa-angle-down"></i>
+
+        <div class="dropdown nav-list left toggleable">
+          
+            
+              <a class="nav-item" href="/docs/tour">Tour</a>
+            
+          
+            
+              <a class="nav-item active" href="/docs/how-beaker-works">
+                How Beaker works
+                <i class="fa fa-check"></i>
+              </a>
+            
+          
+            
+              <a class="nav-item" href="/docs/apis/">Web APIs</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/guides">Guides</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/faq">Help & FAQ</a>
+            
+          
+        </div>
+      </div>
+
+      
+        <span class="breadcrumb">
+          /
+        </span>
+
+        <div class="breadcrumb active dropdown-container toggleable-container">
+          <span class="toplevel-link">All about seeding</span>
+          <i class="fa fa-angle-down"></i>
+
+          <div class="dropdown wide nav-list left toggleable">
+            
+              
+                <a class="nav-item" href="/docs/how-beaker-works/">
+                  What's the peer-to-peer Web?
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/how-beaker-works/peer-to-peer-websites">
+                  Peer-to-peer websites
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/how-beaker-works/peer-to-peer-applications">
+                  Peer-to-peer Web applications
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item active" href="/docs/how-beaker-works/all-about-seeding">
+                  All about seeding
+
+                  
+
+                  <i class="fa fa-check"></i>
+                </a>
+              
+            
+
+            <div class="dropdown-footer">
+              <a href="/docs/how-beaker-works">
+                <span class="fa fa-arrow-left"></span>
+                Back to How Beaker works
+              </a>
+            </div>
+          </div>
+      
+      </div>
+    
+  </div>
+</div>
+      <div class="title-bar">
+  <div class="container">
+    
+      <a href="/docs/how-beaker-works" class="section-title">
+        How Beaker Works
+      </a>
+    
+
+    <h1>
+      All about seeding
+      
+    </h1>
+
+    
+  </div>
+</div>
+    
+
+    <main class="docs ">
+      <div class="container content-container">
+        
+          
+
+
+
+<nav class="docs-sidebar">
+  <!--
+  <ul class="pages">
+    
+      
+        <li>
+      
+        <a href="/docs/how-beaker-works/">What's the peer-to-peer Web?</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/how-beaker-works/peer-to-peer-websites">Peer-to-peer websites</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/how-beaker-works/peer-to-peer-applications">Peer-to-peer Web applications</a>
+      </li>
+    
+      
+        
+        <li class="active">
+      
+        <a href="/docs/how-beaker-works/all-about-seeding">All about seeding</a>
+      </li>
+    
+  </ul>
+  -->
+
+  
+    <ul class="headings">
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#seeding-hosting-pinning-say-what" title="Seeding, hosting, pinning, say what?">
+              #
+            </a>
+
+            <a href="#seeding-hosting-pinning-say-what" title="Seeding, hosting, pinning, say what?">
+              Seeding, hosting, pinning, say what?
+            </a>
+          </li>
+        
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#seeding-and-beaker" title="Seeding and Beaker">
+              #
+            </a>
+
+            <a href="#seeding-and-beaker" title="Seeding and Beaker">
+              Seeding and Beaker
+            </a>
+          </li>
+        
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#keeping-your-p2p-website-online" title="Keeping your p2p website online">
+              #
+            </a>
+
+            <a href="#keeping-your-p2p-website-online" title="Keeping your p2p website online">
+              Keeping your p2p website online
+            </a>
+          </li>
+        
+      
+    </ul>
+  
+</nav>
+
+
+
+          <div class="content">
+            <p class="accent">
+    With <a href="https://datproject.org"><code>dat://</code></a> Beaker makes it possible to publish websites and files from your own computer, but how do you make sure those files stay online, and what happens when you turn off your computer?
+</p>
+
+<p>With Beaker you can publish and share a website without needing to set up a server, but when you turn Beaker off, unless some other participant on the network is <em>seeding</em> your website, its files won’t stay online.</p>
+
+<h2 id="seeding-hosting-pinning-say-what">Seeding, hosting, pinning, say what?</h2>
+
+<p><em>Seeding</em> is the process of <em>re-uploading</em> or <em>re-sharing</em> a file on a peer-to-peer network. You might also hear it called pinning, hosting, re-hosting, or re-uploading, but in Beaker, we usually call it seeding.</p>
+
+<p>In a peer-to-peer network, participants connect directly to one another, requesting and sharing files. While a server-like device may be one of the participants on the network, a server has no special permissions or responsibilities—instead, each participant contributes bandwidth and storage resources to help transport files.</p>
+
+<h3 id="etiquette-on-peer-to-peer-networks">Etiquette on peer-to-peer networks</h3>
+
+<p>When you download a file on a peer-to-peer network, it’s important to also re-upload or <em>seed</em> it to make sure that the network stays healthy! The network works best when all participants share the burden of transporting files.</p>
+
+<h2 id="seeding-and-beaker">Seeding and Beaker</h2>
+
+<p>When you visit a <code class="highlighter-rouge">dat://</code> website with Beaker, you temporarily seed the files you’ve downloaded. When you navigate away from the website or close its tab, you will no longer be seeding its files.</p>
+
+<p>You only seed files that you explicitly view or download. For example, if the website has a video file, but you don’t navigate to a page that loads the video, you will not download or seed the video.</p>
+
+<h3 id="manually-controlling-seeding">Manually controlling seeding</h3>
+
+<p>If you want to continue seeding a website after you visit it, you can use the seeding menu in Beaker’s URL bar:</p>
+
+<p><img src="/img/docs/tour/seeding-menu.png" /></p>
+
+<h2 id="keeping-your-p2p-website-online">Keeping your p2p website online</h2>
+
+<p>It’s not  practical to keep your computer on all the time, but don’t worry! There are plenty of other ways to keep your website’s files online:</p>
+
+<ul>
+  <li>Ask a friend to help seed your files with Beaker’s <a href="#manually-controlling-seeding">seeding menu</a></li>
+  <li>Share your website’s URL with a seeding service like <a href="https://hashbase.io">Hashbase</a></li>
+  <li>Or if you’re feeling ambitious, set up your own seeding server with a tool like <a href="https://github.com/beakerbrowser/homebase"><code class="highlighter-rouge">homebase</code></a></li>
+</ul>
+
+          </div>
+        
+      </div>
+    </main>
+
+    <script>
+    var $ = document.querySelector.bind(document)
+    var $$ = function (selector) {
+      return Array.prototype.slice.call(document.querySelectorAll(selector))
+    }
+    </script>
+    <script src="/js/adjust-anchor-scroll-positioning.js"></script>
+    <script src="/js/anchor.min.js"></script>
+    <script>
+    anchors.add('h2, h3, h4')
+    </script>
+
+    <script>
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'))
+      img.onload = function() {
+        img.removeAttribute('data-src')
+      }
+    })
+    </script>
+  </body>
+
+  <script src="/js/toggleable.js"></script>
+  <script src="/js/collapseable.js"></script>
+</html>

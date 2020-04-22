@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Beaker v0.7.4</title>
+    <link rel="stylesheet" href="/css/release.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    <meta name="twitter:site" content="@BeakerBrowser" />
+    <meta name="twitter:title" content="Beaker v0.7.4 Released"/>
+    <meta name="twitter:description" content="See what's new in v0.7.4."/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://beakerbrowser.com/img/releases/0-7-4_1.png" />
+  </head>
+
+  <body>
+    <main class="release">
+      <div id="update-message">
+        <i class="fa fa-check-circle"></i>
+        <p>Beaker is up to date</p>
+      </div>
+
+      <div class="container">
+        <div class="sidebar">
+          <h1 class="mobile">Beaker 0.7.4</h1>
+          <div class="gallery">
+            <img src="/img/releases/0-7-4_1.png" class="active">
+            <div class="thumbnails">
+              
+                <div class="thumbnail-container">
+                  <img class="thumbnail" src="/img/releases/0-7-4_1.png"/>
+                  <i class="fa fa-search"></i>
+                </div>
+              
+                <div class="thumbnail-container">
+                  <img class="thumbnail" src="/img/releases/0-7-4_2.png"/>
+                  <i class="fa fa-search"></i>
+                </div>
+              
+                <div class="thumbnail-container">
+                  <img class="thumbnail" src="/img/releases/0-7-4_4.png"/>
+                  <i class="fa fa-search"></i>
+                </div>
+              
+                <div class="thumbnail-container">
+                  <img class="thumbnail" src="/img/releases/0-7-4_3.png"/>
+                  <i class="fa fa-search"></i>
+                </div>
+              
+            </div>
+          </div>
+
+          <div class="info">
+            <h2>Information</h2>
+            <ul>
+              <li>Version: 0.7.4</li>
+              <li>Released: July 24, 2017</li>
+              <li>Size: 65 MB</li>
+            </ul>
+            <div class="install-actions visible">
+              <a href="https://github.com/beakerbrowser/beaker">Build from source</a>
+              <a href="https://beakerbrowser.com/docs/install/">Download installer</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="release-notes">
+          <h1 class="desktop">Beaker 0.7.4</h1>
+          <h2>Navbar dropdown menu<span class="tag new">new</span></h2>
+
+<p>This release adds a menu to the navbar of dat:// pages for contextual actions. This replaces the dat sidebar with something a bit faster and more convenient to use.</p>
+
+<figure>
+<img src="/img/releases/0-7-4_4.png" />
+<figcaption>The new navbar dropdown menu.</figcaption>
+</figure>
+
+<h2>New dat.json config: fallback_page and web_root<span class="tag new">new</span></h2>
+
+<p>A dat:// site can now specify a path in “fallback_page” in their dat.json to set the 404 page. This is useful for nice 404 pages, and also for creating SPAs. (<a href="/img/docs/demo-fallback-page.gif">view demo gif</a>)</p>
+
+<p>You can also now specify a “web_root” in your dat.json to control which folder the dat:// site serves out of. This is useful for statically-generated sites (eg with Jekyll) where you want to ship the source, and therefore need to point the browser to a subfolder that contains the built output. (<a href="/img/docs/demo-web-root.gif">view demo gif</a>)</p>
+
+<h2>Download site as .zip<span class="tag new">new</span></h2>
+
+<p>You can now download a dat:// site as a .zip file.</p>
+
+<figure>
+<img src="/img/releases/0-7-4_3.png" />
+<figcaption>Download a dat:// site as a .zip.</figcaption>
+</figure>
+
+<h2>UI and UX improvements<span class="tag updated">updated</span></h2>
+
+<p>We made some tweaks to the UI and UX to make Beaker nicer to use.</p>
+
+<ul>
+  <li>(<a href="https://github.com/beakerbrowser/beaker/pull/615">#615</a>) New tabs aesthetic. Tabs UI should also perform better now. <a class="thumbnail" href="#" data-src="/img/releases/0-7-4_1.png">(click to preview)</a></li>
+  <li>(<a href="https://github.com/beakerbrowser/beaker/pull/588">#588</a>) Revamped the “Select Archive” modal. <a class="thumbnail" href="#" data-src="/img/releases/0-7-4_2.png">(click to preview)</a></li>
+  <li>(<a href="https://github.com/beakerbrowser/beaker/pull/599">#599</a>) Dat.json is now exported to the staging area, for you to edit as a site author.</li>
+  <li>(<a href="https://github.com/beakerbrowser/beaker/pull/596">#596</a>) The auto-download behaviors of a saved site are now configurable.</li>
+</ul>
+
+<h2>Security model updates<span class="tag updated">updated</span></h2>
+
+<p>We relaxed certain constraints to make Beaker more accessible to developers. We also removed some metadata from the dat.json manifest</p>
+
+<ul>
+  <li>(<a href="https://github.com/beakerbrowser/beaker/pull/586">#586</a>) The <code class="highlighter-rouge">DatArchive</code> API is now accessible from HTTPS.</li>
+  <li>(<a href="https://github.com/beakerbrowser/beaker/pull/590">#590</a>) The <code class="highlighter-rouge">DatArchive</code> API is now accessible from http://localhost.</li>
+  <li>(<a href="https://github.com/beakerbrowser/beaker/pull/617">#617</a>) Added the ability to embed HTTPS assets in a dat:// site.</li>
+  <li>(<a href="https://github.com/beakerbrowser/beaker/pull/598">#598</a>) Deprecated <code class="highlighter-rouge">createdBy</code> and <code class="highlighter-rouge">forkOf</code> from the dat.json manifest, to avoid accidentally leaking the address of private archives or apps.</li>
+  <li>(<a href="https://github.com/beakerbrowser/beaker/pull/619">#619</a>) Deprecated custom <code class="highlighter-rouge">navigator.permissions</code> perms (no longer relevant).</li>
+</ul>
+
+        </div>
+      </div>
+    </main>
+    <div class="image-modal">
+      <img>
+    </div>
+  </body>
+
+  <script>
+    window.onkeydown = function(e) {
+      var key = e.keyCode ? e.keyCode : e.which
+      if (key === 27) closeModal()
+    }
+
+    var q = window.location.search || '';
+    if (q.includes('updated')) {
+      document.querySelector('#update-message').classList.add('visible')
+      document.querySelector('.install-actions').classList.remove('visible')
+    }
+
+    var thumbnails = document.querySelectorAll('.thumbnail')
+    thumbnails.forEach(function (el) {
+      el.addEventListener('click', openModal)
+    })
+
+    function closeModal () {
+      document.querySelector('.image-modal').classList.remove('visible')
+      document.querySelector('.image-modal').removeEventListener('click', closeModal)
+    }
+
+    function openModal (e) {
+      e.preventDefault()
+      var img = e.target
+      document.querySelector('.image-modal img').src = img.src || img.dataset.src
+      document.querySelector('.image-modal').classList.toggle('visible')
+      document.querySelector('.image-modal').addEventListener('click', closeModal)
+    }
+  </script>
+</html>

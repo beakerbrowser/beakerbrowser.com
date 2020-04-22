@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>Guides - Using experimental APIs</title>
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="Using experimental APIs">
+      <meta name="og:description" content="Learn how to use the Beaker Browser's experimental APIs">
+      
+    
+
+    
+        <style>body { --page-color: #8D54F0; }</style>
+      
+  </head>
+
+  <body class="layout doc">
+    
+      <div class="docs-breadcrumbs ">
+  
+
+  <div class="container">
+    <a href="/docs/" class="toplevel-link breadcrumb">Documentation</a>
+
+    
+      <span class="breadcrumb">
+        /
+      </span>
+
+      <div class="breadcrumb active dropdown-container toggleable-container">
+        <span class="toplevel-link">Guides</span>
+        <i class="fa fa-angle-down"></i>
+
+        <div class="dropdown nav-list left toggleable">
+          
+            
+              <a class="nav-item" href="/docs/tour">Tour</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/how-beaker-works">How Beaker works</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/apis/">Web APIs</a>
+            
+          
+            
+              <a class="nav-item active" href="/docs/guides">
+                Guides
+                <i class="fa fa-check"></i>
+              </a>
+            
+          
+            
+              <a class="nav-item" href="/docs/faq">Help & FAQ</a>
+            
+          
+        </div>
+      </div>
+
+      
+        <span class="breadcrumb">
+          /
+        </span>
+
+        <div class="breadcrumb active dropdown-container toggleable-container">
+          <span class="toplevel-link">Using experimental APIs</span>
+          <i class="fa fa-angle-down"></i>
+
+          <div class="dropdown wide nav-list left toggleable">
+            
+              
+                <a class="nav-item" href="/docs/guides/use-a-domain-name-with-dat">
+                  Use a domain name with dat://
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/publish-a-peer-to-peer-website">
+                  Publish a peer-to-peer website
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/use-a-custom-404-page">
+                  Use a custom 404 page
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item active" href="/docs/guides/using-experimental-apis">
+                  Using experimental APIs
+
+                  
+
+                  <i class="fa fa-check"></i>
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/create-a-markdown-site">
+                  Build a website with Markdown
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/watch-for-file-changes">
+                  Watch for file changes
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/read-site-files">
+                  Read files from a dat:// website
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/write-site-files">
+                  Write to a dat:// website
+
+                  
+                </a>
+              
+            
+
+            <div class="dropdown-footer">
+              <a href="/docs/guides">
+                <span class="fa fa-arrow-left"></span>
+                Back to Guides
+              </a>
+            </div>
+          </div>
+      
+      </div>
+    
+  </div>
+</div>
+      <div class="title-bar">
+  <div class="container">
+    
+      <a href="/docs/guides" class="section-title">
+        Guides
+      </a>
+    
+
+    <h1>
+      Using experimental APIs
+      
+    </h1>
+
+    
+      <div class="guide-metadata">
+        <div class="author">
+          <img class="avatar" src="/img/team/pfrazee.jpg"/>
+          <a href="https://pfrazee.hashbase.io" class="name">
+            Paul Frazee
+          </a>
+        </div>
+      </div>
+    
+  </div>
+</div>
+    
+
+    <main class="docs ">
+      <div class="container content-container">
+        
+          
+
+
+
+<nav class="docs-sidebar">
+  <!--
+  <ul class="pages">
+    
+      
+        <li>
+      
+        <a href="/docs/guides/use-a-domain-name-with-dat">Use a domain name with dat://</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/publish-a-peer-to-peer-website">Publish a peer-to-peer website</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/use-a-custom-404-page">Use a custom 404 page</a>
+      </li>
+    
+      
+        
+        <li class="active">
+      
+        <a href="/docs/guides/using-experimental-apis">Using experimental APIs</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/create-a-markdown-site">Build a website with Markdown</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/watch-for-file-changes">Watch for file changes</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/read-site-files">Read files from a dat:// website</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/write-site-files">Write to a dat:// website</a>
+      </li>
+    
+  </ul>
+  -->
+
+  
+    <ul class="headings">
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#opting-in-with-datjson" title="Opting in with dat.json">
+              #
+            </a>
+
+            <a href="#opting-in-with-datjson" title="Opting in with dat.json">
+              Opting in with dat.json
+            </a>
+          </li>
+        
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#available-apis" title="Available APIs">
+              #
+            </a>
+
+            <a href="#available-apis" title="Available APIs">
+              Available APIs
+            </a>
+          </li>
+        
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#how-stable-are-experimental-apis" title="How stable are experimental APIs?">
+              #
+            </a>
+
+            <a href="#how-stable-are-experimental-apis" title="How stable are experimental APIs?">
+              How stable are experimental APIs?
+            </a>
+          </li>
+        
+      
+    </ul>
+  
+</nav>
+
+
+
+          <div class="content">
+            <p>Beaker provides several experimental APIs for building applications. These APIs are still in development and are <strong>not stable</strong>.</p>
+
+<p>Beaker exposes experimental APIs under <code class="highlighter-rouge">experimental.*</code>:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">experimental</span><span class="p">.</span><span class="nx">datPeers</span><span class="p">.</span><span class="nx">broadcast</span><span class="p">({</span><span class="na">hello</span><span class="p">:</span> <span class="s1">'world'</span><span class="p">})</span>
+<span class="nx">experimental</span><span class="p">.</span><span class="nx">library</span><span class="p">.</span><span class="nx">list</span><span class="p">({</span><span class="na">isSaved</span><span class="p">:</span> <span class="kc">true</span><span class="p">})</span>
+<span class="nx">experimental</span><span class="p">.</span><span class="nx">globalFetch</span><span class="p">(</span><span class="s1">'dat://beakerbrowser.com'</span><span class="p">)</span>
+<span class="nx">experimental</span><span class="p">.</span><span class="nx">capturePage</span><span class="p">(</span><span class="s1">'dat://beakerbrowser.com'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h2 id="opting-in-with-datjson">Opting-in with <code class="highlighter-rouge">dat.json</code></h2>
+
+<p>Because experimental APIs are not stable and can change at any time, Beaker requires you to opt-in explicitly in order to use them in your website or application. To opt-in to using an experimental API, edit your <a href="/docs/apis/manifest.html"><code class="highlighter-rouge">dat.json</code></a> to indicate which APIs you’d like to use:</p>
+
+<figcaption class="code">dat.json</figcaption>
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"experimental"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"apis"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"datPeers"</span><span class="p">,</span><span class="w"> </span><span class="s2">"globalFetch"</span><span class="p">,</span><span class="w"> </span><span class="s2">"capturePage"</span><span class="p">,</span><span class="w"> </span><span class="s2">"library"</span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h2 id="available-apis">Available APIs</h2>
+
+<ul>
+  <li><a href="/docs/apis/experimental-datpeers"><code class="highlighter-rouge">experimental.datPeers</code></a>
+    <ul>
+      <li>Send and receive messages between peers</li>
+    </ul>
+  </li>
+  <li><a href="/docs/apis/experimental-library"><code class="highlighter-rouge">experimental.library</code></a>
+    <ul>
+      <li>Request access to active user’s collection of Dat archives</li>
+    </ul>
+  </li>
+  <li><a href="/docs/apis/experimental-globalfetch.html"><code class="highlighter-rouge">globalFetch</code></a>
+    <ul>
+      <li>Make Ajax calls outside of CORS restrictions</li>
+    </ul>
+  </li>
+  <li><a href="/docs/apis/experimental-capturepage.html"><code class="highlighter-rouge">capturePage</code></a>
+    <ul>
+      <li>Take a screenshot of a page</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="how-stable-are-experimental-apis">How stable are experimental APIs?</h2>
+
+<p>Experimental APIs are <strong>not stable</strong>. You should expect all experimental APIs to change or even be removed. You should expect the following changes:</p>
+
+<ul>
+  <li><strong>Modifications</strong>. Lab APIs will change as we learn more about how they work.</li>
+  <li><strong>Deprecations</strong>. Lab APIs may be removed in favor of alternatives.</li>
+  <li><strong>Stabilizations</strong>. Lab APIs may simply be accepted as stable Web APIs, at which point they will no longer be exposed on the <code class="highlighter-rouge">experimental.*</code> object.</li>
+</ul>
+
+<p>The Beaker team will do its best to minimize the impact of changes and to keep you informed about changes when they occur.</p>
+
+<h2 id="further-reading">Further reading</h2>
+
+<ul>
+  <li><a href="/docs/apis/">API reference</a></li>
+</ul>
+
+          </div>
+        
+      </div>
+    </main>
+
+    <script>
+    var $ = document.querySelector.bind(document)
+    var $$ = function (selector) {
+      return Array.prototype.slice.call(document.querySelectorAll(selector))
+    }
+    </script>
+    <script src="/js/adjust-anchor-scroll-positioning.js"></script>
+    <script src="/js/anchor.min.js"></script>
+    <script>
+    anchors.add('h2, h3, h4')
+    </script>
+
+    <script>
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'))
+      img.onload = function() {
+        img.removeAttribute('data-src')
+      }
+    })
+    </script>
+  </body>
+
+  <script src="/js/toggleable.js"></script>
+  <script src="/js/collapseable.js"></script>
+</html>

@@ -1,4 +1,4 @@
-_site
+_site/.dat
 .sass-cache
 .jekyll-metadata
 node_modules

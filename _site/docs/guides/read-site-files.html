@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>Guides - Read files from a dat:// website</title>
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="Read files from a dat:// website">
+      <meta name="og:description" content="Beaker's DatArchive API provides tools for reading files and directories on the Dat network. Here are some examples.">
+      
+    
+
+    
+        <style>body { --page-color: #8D54F0; }</style>
+      
+  </head>
+
+  <body class="layout doc">
+    
+      <div class="docs-breadcrumbs ">
+  
+
+  <div class="container">
+    <a href="/docs/" class="toplevel-link breadcrumb">Documentation</a>
+
+    
+      <span class="breadcrumb">
+        /
+      </span>
+
+      <div class="breadcrumb active dropdown-container toggleable-container">
+        <span class="toplevel-link">Guides</span>
+        <i class="fa fa-angle-down"></i>
+
+        <div class="dropdown nav-list left toggleable">
+          
+            
+              <a class="nav-item" href="/docs/tour">Tour</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/how-beaker-works">How Beaker works</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/apis/">Web APIs</a>
+            
+          
+            
+              <a class="nav-item active" href="/docs/guides">
+                Guides
+                <i class="fa fa-check"></i>
+              </a>
+            
+          
+            
+              <a class="nav-item" href="/docs/faq">Help & FAQ</a>
+            
+          
+        </div>
+      </div>
+
+      
+        <span class="breadcrumb">
+          /
+        </span>
+
+        <div class="breadcrumb active dropdown-container toggleable-container">
+          <span class="toplevel-link">Read files from a dat:// website</span>
+          <i class="fa fa-angle-down"></i>
+
+          <div class="dropdown wide nav-list left toggleable">
+            
+              
+                <a class="nav-item" href="/docs/guides/use-a-domain-name-with-dat">
+                  Use a domain name with dat://
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/publish-a-peer-to-peer-website">
+                  Publish a peer-to-peer website
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/use-a-custom-404-page">
+                  Use a custom 404 page
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/using-experimental-apis">
+                  Using experimental APIs
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/create-a-markdown-site">
+                  Build a website with Markdown
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/watch-for-file-changes">
+                  Watch for file changes
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item active" href="/docs/guides/read-site-files">
+                  Read files from a dat:// website
+
+                  
+
+                  <i class="fa fa-check"></i>
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/write-site-files">
+                  Write to a dat:// website
+
+                  
+                </a>
+              
+            
+
+            <div class="dropdown-footer">
+              <a href="/docs/guides">
+                <span class="fa fa-arrow-left"></span>
+                Back to Guides
+              </a>
+            </div>
+          </div>
+      
+      </div>
+    
+  </div>
+</div>
+      <div class="title-bar">
+  <div class="container">
+    
+      <a href="/docs/guides" class="section-title">
+        Guides
+      </a>
+    
+
+    <h1>
+      Read files from a dat:// website
+      
+    </h1>
+
+    
+      <div class="guide-metadata">
+        <div class="author">
+          <img class="avatar" src="/img/team/pfrazee.jpg"/>
+          <a href="https://pfrazee.hashbase.io" class="name">
+            Paul Frazee
+          </a>
+        </div>
+      </div>
+    
+  </div>
+</div>
+    
+
+    <main class="docs ">
+      <div class="container content-container">
+        
+          
+
+
+
+<nav class="docs-sidebar">
+  <!--
+  <ul class="pages">
+    
+      
+        <li>
+      
+        <a href="/docs/guides/use-a-domain-name-with-dat">Use a domain name with dat://</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/publish-a-peer-to-peer-website">Publish a peer-to-peer website</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/use-a-custom-404-page">Use a custom 404 page</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/using-experimental-apis">Using experimental APIs</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/create-a-markdown-site">Build a website with Markdown</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/watch-for-file-changes">Watch for file changes</a>
+      </li>
+    
+      
+        
+        <li class="active">
+      
+        <a href="/docs/guides/read-site-files">Read files from a dat:// website</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/write-site-files">Write to a dat:// website</a>
+      </li>
+    
+  </ul>
+  -->
+
+  
+    <ul class="headings">
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#readdir" title="readdir()">
+              #
+            </a>
+
+            <span class="collapseable-btn">
+              <i class="fa fa-caret-right"></i>
+              readdir()
+            </span>
+
+            <ul class="collapseable collapsed">
+              
+                <li>
+                  <a href="#list-the-top-level-files-in-a-folder">
+                    
+                      List top-level files
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#list-all-files">
+                    
+                      List all files
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#list-the-metadata-in-the-top-level-directory">
+                    
+                      List metadata
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#readfile" title="readFile()">
+              #
+            </a>
+
+            <span class="collapseable-btn">
+              <i class="fa fa-caret-right"></i>
+              readFile()
+            </span>
+
+            <ul class="collapseable collapsed">
+              
+                <li>
+                  <a href="#reading-over-the-network">
+                    
+                      Reading over the network
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li class="subheading">
+            <a class="anchor" href="#stat" title="stat()">
+              #
+            </a>
+
+            <span class="collapseable-btn">
+              <i class="fa fa-caret-right"></i>
+              stat()
+            </span>
+
+            <ul class="collapseable collapsed">
+              
+                <li>
+                  <a href="#calculating-file-download-progress-with-stat">
+                    
+                      File download progress
+                    
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#calculating-folder-download-progress-with-stat">
+                    
+                      Folder download progress
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+    </ul>
+  
+</nav>
+
+
+
+          <div class="content">
+            <p>Beaker’s <a href="/docs/apis/dat"><code class="highlighter-rouge">DatArchive</code> API</a> provides tools for reading files and directories on the Dat network. Here are some examples.</p>
+
+<h2 id="readdir"><code class="highlighter-rouge">readdir()</code></h2>
+
+<p>The <a href="/docs/apis/dat#readdir"><code class="highlighter-rouge">readdir()</code> method</a> provides a list of files in a folder.</p>
+
+<h3 id="list-the-top-level-files-in-a-folder">List the top-level files in a folder</h3>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">filenames</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">readdir</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h3 id="list-all-files">List all files</h3>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">filepaths</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">readdir</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="p">{</span><span class="na">recursive</span><span class="p">:</span> <span class="kc">true</span><span class="p">})</span>
+</code></pre>
+</div>
+
+<h3 id="list-the-metadata-in-the-top-level-directory">List the metadata in the top-level directory</h3>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">fileinfos</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">readdir</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="p">{</span><span class="na">stat</span><span class="p">:</span> <span class="kc">true</span><span class="p">})</span>
+</code></pre>
+</div>
+
+<h2 id="readfile"><code class="highlighter-rouge">readFile()</code></h2>
+
+<h3 id="read-a-files-content">Read a file’s content</h3>
+
+<p>The <a href="/docs/apis/dat#readfile"><code class="highlighter-rouge">readFile()</code> method</a> reads the content of a file from the Dat network:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="c1">// read as string</span>
+<span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s1">'/index.html'</span><span class="p">,</span> <span class="s1">'utf8'</span><span class="p">)</span>
+
+<span class="c1">// read as arrayBuffer</span>
+<span class="kd">var</span> <span class="nx">arrayBuffer</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s1">'/img/logo/logo.png'</span><span class="p">,</span> <span class="s1">'binary'</span><span class="p">)</span>
+
+<span class="c1">// read as base64</span>
+<span class="kd">var</span> <span class="nx">base64</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s1">'/img/logo/logo.png'</span><span class="p">,</span> <span class="s1">'base64'</span><span class="p">)</span>
+
+<span class="c1">// read as hex</span>
+<span class="kd">var</span> <span class="nx">hex</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s1">'/img/logo/logo.png'</span><span class="p">,</span> <span class="s1">'hex'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h3 id="reading-a-file-over-the-network">Reading a file over the network</h3>
+
+<p>Files in remote archives will be automatically downloaded when <code class="highlighter-rouge">readFile()</code> is called.</p>
+
+<h4 id="timeouts">Timeouts</h4>
+
+<p>Sometimes the file will not be available, so the <code class="highlighter-rouge">readFile()</code> call will time out.
+You can adjust the timeout of all the methods in this guide using the <code class="highlighter-rouge">timeout</code> option:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">archive</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s1">'/index.html'</span><span class="p">,</span> <span class="p">{</span><span class="na">timeout</span><span class="p">:</span> <span class="mi">15</span><span class="nx">e3</span><span class="p">,</span> <span class="na">encoding</span><span class="p">:</span> <span class="s1">'utf8'</span><span class="p">})</span>
+<span class="nx">archive</span><span class="p">.</span><span class="nx">readdir</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="p">{</span><span class="na">timeout</span><span class="p">:</span> <span class="mi">15</span><span class="nx">e3</span><span class="p">})</span>
+</code></pre>
+</div>
+
+<h2 id="stat"><code class="highlighter-rouge">stat()</code></h2>
+
+<h3 id="calculating-file-download-progress-with-stat">Calculating file download progress with <code class="highlighter-rouge">stat()</code></h3>
+
+<p>The <a href="/docs/apis/dat#stat"><code class="highlighter-rouge">stat()</code> method</a> provides metadata about a file or folder:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">info</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">stat</span><span class="p">(</span><span class="s1">'index.html'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>The returned <code class="highlighter-rouge">Stat</code> object has the following structure:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">Stat</span> <span class="p">{</span>
+  <span class="nx">isDirectory</span><span class="p">()</span> <span class="c1">// boolean</span>
+  <span class="nx">isFile</span><span class="p">()</span> <span class="c1">// boolean</span>
+
+  <span class="c1">// files only:</span>
+  <span class="nx">size</span> <span class="c1">// number (bytes)</span>
+  <span class="nx">blocks</span> <span class="c1">// number (number of data blocks in the metadata)</span>
+  <span class="nx">downloaded</span> <span class="c1">// number (number of blocks downloaded, if a remote archive)</span>
+  <span class="nx">mtime</span> <span class="c1">// Date (last modified time)</span>
+  <span class="nx">ctime</span> <span class="c1">// Date (creation time)</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>You can calculate how much of a file has been downloaded using the data provided in the <code class="highlighter-rouge">Stat</code> object:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">st</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">stat</span><span class="p">(</span><span class="s1">'index.html'</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">percentDownloaded</span> <span class="o">=</span> <span class="nx">st</span><span class="p">.</span><span class="nx">downloaded</span> <span class="o">/</span> <span class="nx">st</span><span class="p">.</span><span class="nx">blocks</span>
+<span class="kd">var</span> <span class="nx">bytesDownloaded</span> <span class="o">=</span> <span class="nx">st</span><span class="p">.</span><span class="nx">size</span> <span class="o">*</span> <span class="nx">percentDownloaded</span>
+</code></pre>
+</div>
+
+<h3 id="calculating-folder-download-progress-with-stat">Calculating folder download progress with <code class="highlighter-rouge">stat()</code></h3>
+
+<p>You can calculate the download progress of a folder using the recursive stat <code class="highlighter-rouge">readdir()</code> call. The process is similar to calculating a single file’s download progress, but it requires some aggregation:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">sts</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">readdir</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="p">{</span><span class="na">recursive</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">stat</span><span class="p">:</span> <span class="kc">true</span><span class="p">})</span>
+<span class="kd">var</span> <span class="nx">blocks</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">downloaded</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">bytes</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">st</span> <span class="nx">of</span> <span class="nx">sts</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">bytes</span> <span class="o">+=</span> <span class="nx">st</span><span class="p">.</span><span class="nx">stat</span><span class="p">.</span><span class="nx">bytes</span>
+  <span class="nx">blocks</span> <span class="o">+=</span> <span class="nx">st</span><span class="p">.</span><span class="nx">stat</span><span class="p">.</span><span class="nx">blocks</span>
+  <span class="nx">downloaded</span> <span class="o">+=</span> <span class="nx">st</span><span class="p">.</span><span class="nx">stat</span><span class="p">.</span><span class="nx">downloaded</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">percentDownloaded</span> <span class="o">=</span> <span class="nx">downloaded</span> <span class="o">/</span> <span class="nx">blocks</span>
+<span class="kd">var</span> <span class="nx">bytesDownloaded</span> <span class="o">=</span> <span class="nx">size</span> <span class="o">*</span> <span class="nx">percentDownloaded</span>
+</code></pre>
+</div>
+
+<h2 id="further-reading">Further reading</h2>
+
+<ul>
+  <li><a href="/docs/apis/dat#readdir"><code class="highlighter-rouge">readdir</code></a></li>
+</ul>
+
+          </div>
+        
+      </div>
+    </main>
+
+    <script>
+    var $ = document.querySelector.bind(document)
+    var $$ = function (selector) {
+      return Array.prototype.slice.call(document.querySelectorAll(selector))
+    }
+    </script>
+    <script src="/js/adjust-anchor-scroll-positioning.js"></script>
+    <script src="/js/anchor.min.js"></script>
+    <script>
+    anchors.add('h2, h3, h4')
+    </script>
+
+    <script>
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'))
+      img.onload = function() {
+        img.removeAttribute('data-src')
+      }
+    })
+    </script>
+  </body>
+
+  <script src="/js/toggleable.js"></script>
+  <script src="/js/collapseable.js"></script>
+</html>

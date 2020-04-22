@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>How Beaker Works - Dat files protocol</title>
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="Dat files protocol">
+      <meta name="og:description" content="">
+      
+    
+
+    
+        <style>body { --page-color: #fb136d;}</style>
+      
+  </head>
+
+  <body class="layout doc">
+    
+      <div class="docs-breadcrumbs ">
+  
+
+  <div class="container">
+    <a href="/docs/" class="toplevel-link breadcrumb">Documentation</a>
+
+    
+      <span class="breadcrumb">
+        /
+      </span>
+
+      <div class="breadcrumb active dropdown-container toggleable-container">
+        <span class="toplevel-link">How Beaker works</span>
+        <i class="fa fa-angle-down"></i>
+
+        <div class="dropdown nav-list left toggleable">
+          
+            
+              <a class="nav-item" href="/docs/tour">Tour</a>
+            
+          
+            
+              <a class="nav-item active" href="/docs/how-beaker-works">
+                How Beaker works
+                <i class="fa fa-check"></i>
+              </a>
+            
+          
+            
+              <a class="nav-item" href="/docs/apis/">Web APIs</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/guides">Guides</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/faq">Help & FAQ</a>
+            
+          
+        </div>
+      </div>
+
+      
+        <span class="breadcrumb">
+          /
+        </span>
+
+        <div class="breadcrumb active dropdown-container toggleable-container">
+          <span class="toplevel-link">Dat files protocol</span>
+          <i class="fa fa-angle-down"></i>
+
+          <div class="dropdown wide nav-list left toggleable">
+            
+              
+                <a class="nav-item" href="/docs/how-beaker-works/">
+                  What's the peer-to-peer Web?
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/how-beaker-works/peer-to-peer-websites">
+                  Peer-to-peer websites
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/how-beaker-works/peer-to-peer-applications">
+                  Peer-to-peer Web applications
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/how-beaker-works/all-about-seeding">
+                  All about seeding
+
+                  
+                </a>
+              
+            
+
+            <div class="dropdown-footer">
+              <a href="/docs/how-beaker-works">
+                <span class="fa fa-arrow-left"></span>
+                Back to How Beaker works
+              </a>
+            </div>
+          </div>
+      
+      </div>
+    
+  </div>
+</div>
+      <div class="title-bar">
+  <div class="container">
+    
+      <a href="" class="section-title">
+        How Beaker Works
+      </a>
+    
+
+    <h1>
+      Dat files protocol
+      
+    </h1>
+
+    
+  </div>
+</div>
+    
+
+    <main class="docs ">
+      <div class="container content-container">
+        
+          
+
+
+
+<nav class="docs-sidebar">
+  <!--
+  <ul class="pages">
+    
+      
+        <li>
+      
+        <a href="/docs/how-beaker-works/">What's the peer-to-peer Web?</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/how-beaker-works/peer-to-peer-websites">Peer-to-peer websites</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/how-beaker-works/peer-to-peer-applications">Peer-to-peer Web applications</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/how-beaker-works/all-about-seeding">All about seeding</a>
+      </li>
+    
+  </ul>
+  -->
+
+  
+</nav>
+
+
+
+          <div class="content">
+            <p>Dat is a peer-to-peer protocol for exchanging archives of files. It is:</p>
+
+<ul>
+  <li><strong>Secure.</strong> Data is encrypted upon transfer and the content is verified on arrival. This prevents third-party access to metadata and content.</li>
+  <li><strong>Transparent.</strong> Changes to data are written in an append-only log, creating a version history that improves transparency and auditability.</li>
+  <li><strong>Distributed.</strong> With the Dat protocol you connect directly to other users or servers sharing or downloading common datasets. Any device can host files to share without the need for centralized servers.</li>
+  <li><strong>Future-proof.</strong> Unique links are generated using a public key and thus can be used instantly and forever to verify the dataset from anywhere.</li>
+  <li><strong>Fast.</strong> Files download from multiple sources. Quickly sync updates by only downloading the new bytes, saving time and bandwidth.</li>
+</ul>
+
+<p>Read the <a href="https://github.com/datproject/docs/tree/master/papers">Dat whitepaper</a>.</p>
+
+<h2 id="public-key-urls">Public key URLs</h2>
+
+<p>In Beaker, a Dat archive acts as a website. The public key serves a similar purpose as an IP address in HTTP/S URLs; it is the domain which identifies the site. Dat URLs are formed as <code class="highlighter-rouge">dat://{publickey}/{path…}</code>, where <code class="highlighter-rouge">publickey</code> is a 64-character, hex-encoded string.</p>
+
+<h2 id="transport-encryption">Transport encryption</h2>
+
+<p>Dat uses the public key both to identify the archive, and as a symmetric key to encrypt the network traffic. In the discovery networks, a hash of the public key is used to advertise the archive’s availability. Therefore, the Dat URL acts as a read-capability. An outside observer must know the public key of an archive to read its network traffic.</p>
+
+<h2 id="uniform-distribution">Uniform distribution</h2>
+
+<p>Internally, Dat uses an append-only log which was inspired by <a href="https://www.certificate-transparency.org/">Certificate Transparency</a> and <a href="https://www.scuttlebutt.nz/">Secure Scuttlebutt</a>. The log is addressed as a flattened <a href="https://en.wikipedia.org/wiki/Merkle_tree">Merkle Tree</a>, which enables efficient exchange of the log history. By comparing the head-hashes of the log’s Merkle tree, peers can detect when the author of an archive has attempted to modify its history log.</p>
+
+<p>Because a divergent history could be used to send targeted malicious payloads, a modified history is considered a corruption event, and peers will reject the updates. This feature, we believe, makes Dat suitable for distributing software and security keys, as it enforces uniform distribution to the network.</p>
+
+<h2 id="versioning">Versioning</h2>
+
+<p>Dat’s internal logs enable history archival and versioned reads. Using the log sequence numbers, it is possible to create versioned URLs such as <code class="highlighter-rouge">dat://{pubkey}+{version}/{path…}</code>. For software modules and Web applications, this can be an extremely valuable feature. Because of the uniform-distribution of Dat histories, a versioned Dat URL is effectively static, similar to a hash-address.</p>
+
+          </div>
+        
+      </div>
+    </main>
+
+    <script>
+    var $ = document.querySelector.bind(document)
+    var $$ = function (selector) {
+      return Array.prototype.slice.call(document.querySelectorAll(selector))
+    }
+    </script>
+    <script src="/js/adjust-anchor-scroll-positioning.js"></script>
+    <script src="/js/anchor.min.js"></script>
+    <script>
+    anchors.add('h2, h3, h4')
+    </script>
+
+    <script>
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'))
+      img.onload = function() {
+        img.removeAttribute('data-src')
+      }
+    })
+    </script>
+  </body>
+
+  <script src="/js/toggleable.js"></script>
+  <script src="/js/collapseable.js"></script>
+</html>

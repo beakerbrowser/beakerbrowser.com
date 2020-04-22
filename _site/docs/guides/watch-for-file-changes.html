@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>Guides - Watching for file changes</title>
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="Watching for file changes">
+      <meta name="og:description" content="Learn how to use the DatArchive.watch() API by example">
+      
+    
+
+    
+        <style>body { --page-color: #8D54F0; }</style>
+      
+  </head>
+
+  <body class="layout doc">
+    
+      <div class="docs-breadcrumbs ">
+  
+
+  <div class="container">
+    <a href="/docs/" class="toplevel-link breadcrumb">Documentation</a>
+
+    
+      <span class="breadcrumb">
+        /
+      </span>
+
+      <div class="breadcrumb active dropdown-container toggleable-container">
+        <span class="toplevel-link">Guides</span>
+        <i class="fa fa-angle-down"></i>
+
+        <div class="dropdown nav-list left toggleable">
+          
+            
+              <a class="nav-item" href="/docs/tour">Tour</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/how-beaker-works">How Beaker works</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/apis/">Web APIs</a>
+            
+          
+            
+              <a class="nav-item active" href="/docs/guides">
+                Guides
+                <i class="fa fa-check"></i>
+              </a>
+            
+          
+            
+              <a class="nav-item" href="/docs/faq">Help & FAQ</a>
+            
+          
+        </div>
+      </div>
+
+      
+        <span class="breadcrumb">
+          /
+        </span>
+
+        <div class="breadcrumb active dropdown-container toggleable-container">
+          <span class="toplevel-link">Watching for file changes</span>
+          <i class="fa fa-angle-down"></i>
+
+          <div class="dropdown wide nav-list left toggleable">
+            
+              
+                <a class="nav-item" href="/docs/guides/use-a-domain-name-with-dat">
+                  Use a domain name with dat://
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/publish-a-peer-to-peer-website">
+                  Publish a peer-to-peer website
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/use-a-custom-404-page">
+                  Use a custom 404 page
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/using-experimental-apis">
+                  Using experimental APIs
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/create-a-markdown-site">
+                  Build a website with Markdown
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/watch-for-file-changes">
+                  Watch for file changes
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/read-site-files">
+                  Read files from a dat:// website
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/guides/write-site-files">
+                  Write to a dat:// website
+
+                  
+                </a>
+              
+            
+
+            <div class="dropdown-footer">
+              <a href="/docs/guides">
+                <span class="fa fa-arrow-left"></span>
+                Back to Guides
+              </a>
+            </div>
+          </div>
+      
+      </div>
+    
+  </div>
+</div>
+      <div class="title-bar">
+  <div class="container">
+    
+      <a href="/docs/guides" class="section-title">
+        Guides
+      </a>
+    
+
+    <h1>
+      Watching for file changes
+      
+    </h1>
+
+    
+      <div class="guide-metadata">
+        <div class="author">
+          <img class="avatar" src="/img/team/pfrazee.jpg"/>
+          <a href="https://pfrazee.hashbase.io" class="name">
+            Paul Frazee
+          </a>
+        </div>
+      </div>
+    
+  </div>
+</div>
+    
+
+    <main class="docs ">
+      <div class="container content-container">
+        
+          
+
+
+
+<nav class="docs-sidebar">
+  <!--
+  <ul class="pages">
+    
+      
+        <li>
+      
+        <a href="/docs/guides/use-a-domain-name-with-dat">Use a domain name with dat://</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/publish-a-peer-to-peer-website">Publish a peer-to-peer website</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/use-a-custom-404-page">Use a custom 404 page</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/using-experimental-apis">Using experimental APIs</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/create-a-markdown-site">Build a website with Markdown</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/watch-for-file-changes">Watch for file changes</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/read-site-files">Read files from a dat:// website</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/guides/write-site-files">Write to a dat:// website</a>
+      </li>
+    
+  </ul>
+  -->
+
+  
+</nav>
+
+
+
+          <div class="content">
+            <p>Beaker’s <a href="/docs/apis/dat"><code class="highlighter-rouge">DatArchive</code> API</a> includes the <a href="/docs/apis/dat.html#watch"><code class="highlighter-rouge">watch()</code></a> method to notify you when a file or folder changes.
+It works for both local and remote files, and accepts a glob pattern for filtering files.</p>
+
+<h2 id="examples">Examples</h2>
+
+<h3 id="watch-all-files">Watch all files</h3>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">archive</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DatArchive</span><span class="p">(</span><span class="s1">'dat://beakerbrowser.com'</span><span class="p">)</span>
+<span class="nx">archive</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="nx">e</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">path</span><span class="p">,</span> <span class="s1">'has changed'</span><span class="p">))</span>
+</code></pre>
+</div>
+
+<h3 id="watch-files-or-folders">Watch files or folders</h3>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">archive</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DatArchive</span><span class="p">(</span><span class="s1">'dat://beakerbrowser.com'</span><span class="p">)</span>
+<span class="nx">archive</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="s1">'/index.html'</span><span class="p">,</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'index.html has changed'</span><span class="p">))</span>
+<span class="nx">archive</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="s1">'/js/'</span><span class="p">,</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'a file in js/ has changed'</span><span class="p">))</span>
+</code></pre>
+</div>
+
+<h3 id="using-a-glob-pattern">Using a glob pattern</h3>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">archive</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DatArchive</span><span class="p">(</span><span class="s1">'dat://beakerbrowser.com'</span><span class="p">)</span>
+<span class="nx">archive</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="s1">'/posts/*.json'</span><span class="p">,</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'a .json file in /posts/ has changed'</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+</div>
+
+<h2 id="watcher-events">Watcher events</h2>
+
+<p>There are two events emitted by the watcher:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">'invalidated'</code> means that a file has been changed but has not been downloaded</li>
+  <li><code class="highlighter-rouge">'changed'</code> means that a file has been changed and the change has been downloaded</li>
+</ul>
+
+<p>Both events are emitted in all cases. If the file archive is locally-owned, they will fire immediately after each other. The default event which <code class="highlighter-rouge">watch()</code> listens to is ‘invalidated’.</p>
+
+<p>To listen to the <code class="highlighter-rouge">'changed'</code> event, you can use the object that’s returned by <code class="highlighter-rouge">watch()</code>:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">archive</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DatArchive</span><span class="p">(</span><span class="s1">'dat://beakerbrowser.com'</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">watcher</span> <span class="o">=</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="s1">'/index.html'</span><span class="p">)</span>
+<span class="nx">watcher</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'invalidated'</span><span class="p">,</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'index.html has invalidated'</span><span class="p">))</span>
+<span class="nx">watcher</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'changed'</span><span class="p">,</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'index.html has changed'</span><span class="p">))</span>
+</code></pre>
+</div>
+
+<p>If you wish to stop listening for changes, you can use the <code class="highlighter-rouge">close()</code> method:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">archive</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DatArchive</span><span class="p">(</span><span class="s1">'dat://beakerbrowser.com'</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">watcher</span> <span class="o">=</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="s1">'/index.html'</span><span class="p">,</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'index.html has changed'</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="c1">// ...</span>
+<span class="nx">watcher</span><span class="p">.</span><span class="nx">close</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<h2 id="further-reading">Further reading</h2>
+
+<ul>
+  <li><a href="/docs/apis/dat.html#watch"><code class="highlighter-rouge">watch()</code> API reference</a></li>
+</ul>
+
+          </div>
+        
+      </div>
+    </main>
+
+    <script>
+    var $ = document.querySelector.bind(document)
+    var $$ = function (selector) {
+      return Array.prototype.slice.call(document.querySelectorAll(selector))
+    }
+    </script>
+    <script src="/js/adjust-anchor-scroll-positioning.js"></script>
+    <script src="/js/anchor.min.js"></script>
+    <script>
+    anchors.add('h2, h3, h4')
+    </script>
+
+    <script>
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'))
+      img.onload = function() {
+        img.removeAttribute('data-src')
+      }
+    })
+    </script>
+  </body>
+
+  <script src="/js/toggleable.js"></script>
+  <script src="/js/collapseable.js"></script>
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>Web APIs - dat.json</title>
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="dat.json">
+      <meta name="og:description" content="">
+      
+    
+
+    
+        <style>body { --page-color: #0eb370; }</style>
+      
+  </head>
+
+  <body class="layout doc">
+    
+      <div class="docs-breadcrumbs ">
+  
+
+  <div class="container">
+    <a href="/docs/" class="toplevel-link breadcrumb">Documentation</a>
+
+    
+      <span class="breadcrumb">
+        /
+      </span>
+
+      <div class="breadcrumb active dropdown-container toggleable-container">
+        <span class="toplevel-link">Web APIs</span>
+        <i class="fa fa-angle-down"></i>
+
+        <div class="dropdown nav-list left toggleable">
+          
+            
+              <a class="nav-item" href="/docs/tour">Tour</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/how-beaker-works">How Beaker works</a>
+            
+          
+            
+              <a class="nav-item active" href="/docs/apis/">
+                Web APIs
+                <i class="fa fa-check"></i>
+              </a>
+            
+          
+            
+              <a class="nav-item" href="/docs/guides">Guides</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/faq">Help & FAQ</a>
+            
+          
+        </div>
+      </div>
+
+      
+        <span class="breadcrumb">
+          /
+        </span>
+
+        <div class="breadcrumb active dropdown-container toggleable-container">
+          <span class="toplevel-link">dat.json</span>
+          <i class="fa fa-angle-down"></i>
+
+          <div class="dropdown wide nav-list left toggleable">
+            
+              
+                <a class="nav-item" href="/docs/apis/dat">
+                  DatArchive API
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/manifest">
+                  dat.json site manifest
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/experimental-datpeers">
+                  datPeers API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/experimental-library">
+                  Library API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/experimental-globalfetch">
+                  globalFetch API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/experimental-capturepage">
+                  capturePage API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+                </a>
+              
+            
+
+            <div class="dropdown-footer">
+              <a href="/docs/apis/">
+                <span class="fa fa-arrow-left"></span>
+                Back to Web APIs
+              </a>
+            </div>
+          </div>
+      
+      </div>
+    
+  </div>
+</div>
+      <div class="title-bar">
+  <div class="container">
+    
+      <a href="/docs/apis" class="section-title">
+        Web APIs
+      </a>
+    
+
+    <h1>
+      dat.json
+      
+    </h1>
+
+    
+  </div>
+</div>
+    
+
+    <main class="docs ">
+      <div class="container content-container">
+        
+          
+
+
+
+<nav class="docs-sidebar">
+  <!--
+  <ul class="pages">
+    
+      
+        <li>
+      
+        <a href="/docs/apis/dat">DatArchive API</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/manifest">dat.json site manifest</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/experimental-datpeers">datPeers API</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/experimental-library">Library API</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/experimental-globalfetch">globalFetch API</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/experimental-capturepage">capturePage API</a>
+      </li>
+    
+  </ul>
+  -->
+
+  
+</nav>
+
+
+
+          <div class="content">
+            <p class="accent">
+  Websites and applications served over <code>dat://</code> can include a manifest file to specify metadata and configure special behaviors. The file must be located at <code>/dat.json</code> in the website or application root.
+</p>
+
+<p>Beaker automatically creates and manages the manifest for Dat archives created
+with the <code class="highlighter-rouge">DatArchive</code> Web API.</p>
+
+<p>Example:</p>
+
+<figcaption class="code">dat.json</figcaption>
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My website"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A simple website built with the Beaker Browser"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"website"</span><span class="p">],</span><span class="w">
+  </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"license"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+      </span><span class="nt">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://creativecommons.org/licenses/by-nc/2.5/"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CC BY-NC 2.5"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"fallback_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/404.html"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"web_root"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/public"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"content_security_policy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default-src 'self'"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"experimental"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"apis"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"datPeers"</span><span class="p">,</span><span class="w"> </span><span class="s2">"globalFetch"</span><span class="p">,</span><span class="w"> </span><span class="s2">"library"</span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h3 id="title">
+    <code>
+      
+        title
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>A short and descriptive human-friendly title. Can be read with <a href="dat.html#getinfo"><code class="highlighter-rouge">getInfo()</code></a> and changed with <a href="dat.html#configure"><code class="highlighter-rouge">configure()</code></a>.</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My cool site"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+</div>
+
+<h3 id="description">
+    <code>
+      
+        description
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>A description of the Dat archive. Can be read with <a href="dat.html#getinfo"><code class="highlighter-rouge">getInfo()</code></a> and changed with <a href="dat.html#configure"><code class="highlighter-rouge">configure()</code></a>.</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The absolute best place to find cat pictures."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+</div>
+
+<h3 id="type">
+    <code>
+      
+        type
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>A list of ‘type’ strings. Can be read with <a href="dat.html#getinfo"><code class="highlighter-rouge">getInfo()</code></a> and changed with <a href="dat.html#configure"><code class="highlighter-rouge">configure()</code></a>.</p>
+
+<p>Type strings are experimental. They were introduced to Beaker as a way to categorize archives, and can be used as a filter in <a href="dat.html#datarchive-selectarchive"><code class="highlighter-rouge">selectArchive()</code></a>. You can list multiple types on an archive.</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"user-profile"</span><span class="p">,</span><span class="w"> </span><span class="s2">"fritter-user-profile"</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h3 id="what-are-types-used-for">What are types used for?</h3>
+
+<p>They are used as a filter in <a href="dat.html#datarchive-selectarchive"><code class="highlighter-rouge">selectArchive()</code></a>, similar to how file-extensions are used in operating system “open file” dialogs.
+They are also a way for apps to identify the kind of data or content in an archive using <a href="dat.html#getinfo"><code class="highlighter-rouge">getInfo()</code></a>.</p>
+
+<h3 id="what-types-can-i-use">What types can I use?</h3>
+
+<p>There are no official types.
+We recommend including a short string which identifies the general kind of data being stored, plus one or more long strings which help identify the schema of the data.
+For example, a social media app called ‘Fritter’ might use <code class="highlighter-rouge">"user-profile"</code> and <code class="highlighter-rouge">"fritter-user-profile"</code>.</p>
+</div>
+
+<h3 id="links">
+    <code>
+      
+        links
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>An object containing a set of Web links from the Dat. Can be read with <a href="dat.html#getinfo"><code class="highlighter-rouge">getInfo()</code></a> and changed with <a href="dat.html#configure"><code class="highlighter-rouge">configure()</code></a>.</p>
+
+<p>The <code class="highlighter-rouge">links</code> object is a mapping of “rel” values to arrays of link objects, as follows:</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"rel-type"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/"</span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>The <code class="highlighter-rouge">links</code> field follows the same schema as the <a href="https://www.w3.org/TR/html5/document-metadata.html#the-link-element">link element</a>, so any attribute which applies to a <code class="highlighter-rouge">&lt;link&gt;</code> will apply to these values. The one difference is how the <code class="highlighter-rouge">rel</code> value is handled: in the links object, the <code class="highlighter-rouge">rel</code> is used as the key. Only one <code class="highlighter-rouge">rel</code> value should be used.</p>
+
+<p>If a link has additional rel values, it can specify them using the <code class="highlighter-rouge">rel</code> field on the link object. For instance, a link with the <code class="highlighter-rouge">rel</code> value of <code class="highlighter-rouge">"foo bar baz"</code> would look like this:</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"foo"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/"</span><span class="p">,</span><span class="w"> </span><span class="nt">"rel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bar baz"</span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>Links can be duplicated, and so it would also be possible to handle this case with 3 different link objects:</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"foo"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/"</span><span class="p">}],</span><span class="w">
+  </span><span class="nt">"bar"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/"</span><span class="p">}],</span><span class="w">
+  </span><span class="nt">"baz"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/"</span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+</div>
+
+<h3 id="fallback-page">
+    <code>
+      
+        fallback_page
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>The path to a fallback page to serve instead of Beaker’s default 404 page.</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"fallback_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/404.html"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+</div>
+
+<h3 id="web-root">
+    <code>
+      
+        web_root
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>The path of the folder from which all requests should be served.</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"web_root"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/public"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+</div>
+
+<h3 id="content-security-policy">
+    <code>
+      
+        content_security_policy
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>The security policy for the website. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Learn more about using Content Security Policy</a>.</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"content_security_policy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default-src 'self'; script-src 'self' https://example.com"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+</div>
+
+<h3 id="experimental-apis">
+    <code>
+      
+        experimental.apis
+      
+    </code>
+
+    
+
+    
+  </h3>
+<div><p>A list of experimental APIs. To use an experimental API, you must list one of the following strings in the <code class="highlighter-rouge">experimental.apis</code> field:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">"datPeers"</code> (<a href="/docs/apis/experimental-datpeers">API reference</a>)</li>
+  <li><code class="highlighter-rouge">"globalFetch"</code> (<a href="/docs/apis/experimental-globalfetch">API reference</a>)</li>
+  <li><code class="highlighter-rouge">"library"</code> (<a href="/docs/apis/experimental-library">API reference</a>)</li>
+  <li><code class="highlighter-rouge">"capturePage"</code> (<a href="/docs/apis/experimental">API reference</a>)</li>
+</ul>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"experimental"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"apis"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"datPeers"</span><span class="p">,</span><span class="w"> </span><span class="s2">"globalFetch"</span><span class="p">,</span><span class="w"> </span><span class="s2">"library"</span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>To learn more, read <a href="/docs/guides/using-experimental-apis">this guide about using experimental APIs</a>.</p>
+
+<p><em>Experimental APIs may change quickly or be removed entirely. You should not depend on an experimental API for stability.</em></p>
+</div>
+
+
+          </div>
+        
+      </div>
+    </main>
+
+    <script>
+    var $ = document.querySelector.bind(document)
+    var $$ = function (selector) {
+      return Array.prototype.slice.call(document.querySelectorAll(selector))
+    }
+    </script>
+    <script src="/js/adjust-anchor-scroll-positioning.js"></script>
+    <script src="/js/anchor.min.js"></script>
+    <script>
+    anchors.add('h2, h3, h4')
+    </script>
+
+    <script>
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'))
+      img.onload = function() {
+        img.removeAttribute('data-src')
+      }
+    })
+    </script>
+  </body>
+
+  <script src="/js/toggleable.js"></script>
+  <script src="/js/collapseable.js"></script>
+</html>

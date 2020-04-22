@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>Web APIs - Web APIs</title>
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="Web APIs">
+      <meta name="og:description" content="">
+      
+    
+
+    
+        <style>body { --page-color: #0eb370; }</style>
+      
+  </head>
+
+  <body class="layout doc">
+    
+      <header class="header light">
+  <div class="container">
+    <a href="/" class="beaker-link">
+      <img src="/img/logo/logo.png" class="logo"/>
+      <div class="wordmark">Beaker</div>
+    </a>
+
+    <nav class="nav">
+  <a class="nav-link" href="/about">About</a>
+  <a class="nav-link" href="/docs">Documentation</a>
+  <a class="nav-link btn white" href="/install">Install Beaker</a>
+</nav>
+  </div>
+  <div class="update-notice">
+  <span class="fa fa-exclamation-circle"></span>
+  A major update to Beaker is coming soon!
+  <a class="link" href="https://twitter.com/BeakerBrowser" title="@BeakerBrowser">Follow us on Twitter</a> to stay updated.
+</div>
+</header>
+
+      <div class="docs-hero ">
+  <div class="container">
+    
+
+    <h1 class="title">
+      Web APIs
+    </h1>
+
+    <h2 class="subtitle">
+      Explore Beaker's APIs for creating peer-to-peer websites and applications
+    </h2>
+  </div>
+</div>
+    
+
+    <main class="docs ">
+      <div class="container content-container">
+        
+          <div class="content left">
+            <style>
+  .content h3.heading { font-size: 24px; margin-top 0 !important; }
+  .content ul { margin-bottom: 20px; font-size: 16px; }
+  .content ul code { font-size: 16px; }
+</style>
+
+<h3 class="heading">API reference</h3>
+<ul>
+  <li>
+    <a href="/docs/apis/dat"><code>DatArchive</code></a>
+  </li>
+
+  <li>
+    <a href="/docs/apis/manifest"><code>dat.json</code></a>
+  </li>
+</ul>
+
+<h3 class="heading">
+  Experimental API reference
+  <span class="fa fa-flask"></span>
+</h3>
+
+<ul>
+  <li>
+    <a href="/docs/apis/experimental-globalfetch"><code>experimental.globalFetch</code></a>
+  </li>
+
+  <li>
+    <a href="/docs/apis/experimental-datpeers"><code>experimental.datPeers</code></a>
+  </li>
+
+  <li>
+    <a href="/docs/apis/experimental-capturepage"><code>experimental.capturePage</code></a>
+  </li>
+
+  <li>
+    <a href="/docs/apis/experimental-library"><code>experimental.library</code></a>
+  </li>
+</ul>
+
+          </div>
+        
+      </div>
+    </main>
+
+    <script>
+    var $ = document.querySelector.bind(document)
+    var $$ = function (selector) {
+      return Array.prototype.slice.call(document.querySelectorAll(selector))
+    }
+    </script>
+    <script src="/js/adjust-anchor-scroll-positioning.js"></script>
+    <script src="/js/anchor.min.js"></script>
+    <script>
+    anchors.add('h2, h3, h4')
+    </script>
+
+    <script>
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'))
+      img.onload = function() {
+        img.removeAttribute('data-src')
+      }
+    })
+    </script>
+  </body>
+
+  <script src="/js/toggleable.js"></script>
+  <script src="/js/collapseable.js"></script>
+</html>

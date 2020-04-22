@@ -1,0 +1,85 @@
+/*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */@font-face{font-family:FontAwesome;src:url(../fonts/fontawesome-webfont.eot?v=4.7.0);src:url(../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0) format('embedded-opentype'),url(../fonts/fontawesome-webfont.woff2?v=4.7.0) format('woff2'),url(../fonts/fontawesome-webfont.woff?v=4.7.0) format('woff'),url(../fonts/fontawesome-webfont.ttf?v=4.7.0) format('truetype'),url(../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format('svg');font-weight:400;font-style:normal}.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-download:before{content:"\f019"}.fa-file-text-o:before{content:"\f0f6"}.fa-code:before{content:"\f121"}.fa-comment:before{content:"\f075"}.fa-pencil-square:before{content:"\f14b"}.fa-feed:before,.fa-rss:before{content:"\f09e"}.fa-file-code-o:before{content:"\f1c9"}.fa-search:before{content:"\f002"}.fa-laptop:before{content:"\f109"}.fa-angle-double-left:before{content:"\f100"}.fa-angle-double-right:before{content:"\f101"}.fa-angle-double-up:before{content:"\f102"}.fa-angle-double-down:before{content:"\f103"}.fa-angle-left:before{content:"\f104"}.fa-angle-right:before{content:"\f105"}.fa-angle-up:before{content:"\f106"}.fa-angle-down:before{content:"\f107"}.fa-cogs:before,.fa-gears:before{content:"\f085"}.fa-terminal:before{content:"\f120"}.fa-chain:before,.fa-link:before{content:"\f0c1"}.fa-flask:before{content:"\f0c3"}.fa-twitter:before{content:"\f099"}.fa-github:before{content:"\f09b"}.fa-apple:before{content:"\f179"}.fa-linux:before{content:"\f17c"}.fa-windows:before{content:"\f17a"}.fa-book:before{content:"\f02d"}.fa-github-alt:before{content:"\f113"}.fa-envelope:before{content:"\f0e0"}.fa-file-archive-o:before{content: "\f1c6"}.fa-exclamation-triangle:before{content: "\f071"}.fa-safari:before{content: "\f267";}.fa-chrome:before{content: "\f268";}.fa-firefox:before{content: "\f269";}.fa-opera:before{content: "\f26a";}.fa-internet-explorer:before{content: "\f26b";}.fa-edge:before{content: "\f282";}.fa-pencil:before{content: "\f040"}.fa-code-fork:before{content: "\f126"}.fa-lock:before{content: "\f023"}.fa-play:before{content: "\f04b"}.fa-flash:before,.fa-bolt:before{content: "\f0e7"}.fa-info-circle:before{content: "\f05a"}.fa-check:before{content:"\f00c"}.fa-check-circle:before{content:"\f058"}
+ .fa-magic:before {
+  content: "\f0d0";
+}
+.fa-cubes:before {
+  content: "\f1b3";
+}
+.fa-play-circle:before {
+  content: "\f144";
+}
+.fa-play-circle-o:before {
+  content: "\f01d";
+}
+.fa-github-square:before {
+  content: "\f092";
+}
+.fa-twitter-square:before {
+  content: "\f081";
+}
+.fa-tasks:before {
+  content: "\f0ae";
+}
+.fa-question:before {
+  content: "\f128";
+}
+.fa-life-ring:before {
+  content: "\f1cd";
+}
+.fa-lightbulb-o:before {
+  content: "\f0eb";
+}
+.fa-angle-down:before {
+  content: "\f107";
+}
+.fa-check:before {
+  content: "\f00c";
+}
+.fa-exclamation:before {
+  content: "\f12a";
+}
+.fa-exclamation-circle:before {
+  content: "\f06a";
+}
+.fa-heart-o:before {
+  content: "\f08a";
+}
+.fa-heart:before {
+  content: "\f004";
+}
+.fa-arrow-right:before {
+  content: "\f061";
+}
+.fa-times:before {
+  content: "\f00d";
+}
+.fa-bolt:before {
+  content: "\f0e7";
+}
+.fa-clone:before {
+  content: "\f24d";
+}
+.fa-wifi:before {
+  content: "\f1eb";
+}
+.fa-undo:before {
+  content: "\f0e2";
+}
+.fa-caret-down:before {
+  content: "\f0d7";
+}
+.fa-thumbs-o-down:before {
+  content: "\f088";
+}
+.fa-asterisk:before {
+  content: "\f069";
+}
+.fa-calendar:before {
+  content: "\f073";
+}
+.fa-window-maximize:before {
+  content: "\f2d0";
+}

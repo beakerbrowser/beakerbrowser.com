@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>Web APIs - Web APIs by example</title>
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@BeakerBrowser">
+      <meta name="twitter:creator" content="@BeakerBrowser">
+      <meta name="og:title" content="Web APIs by example">
+      <meta name="og:description" content="">
+      
+    
+
+    
+        <style>body { --page-color: #0eb370; }</style>
+      
+  </head>
+
+  <body class="layout doc">
+    
+      <div class="docs-breadcrumbs dark">
+  
+
+  <div class="container">
+    <a href="/docs/" class="toplevel-link breadcrumb">Documentation</a>
+
+    
+      <span class="breadcrumb">
+        /
+      </span>
+
+      <div class="breadcrumb active dropdown-container toggleable-container">
+        <span class="toplevel-link">Web APIs</span>
+        <i class="fa fa-angle-down"></i>
+
+        <div class="dropdown nav-list left toggleable">
+          
+            
+              <a class="nav-item" href="/docs/tour">Tour</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/how-beaker-works">How Beaker works</a>
+            
+          
+            
+              <a class="nav-item active" href="/docs/apis/">
+                Web APIs
+                <i class="fa fa-check"></i>
+              </a>
+            
+          
+            
+              <a class="nav-item" href="/docs/guides">Guides</a>
+            
+          
+            
+              <a class="nav-item" href="/docs/faq">Help & FAQ</a>
+            
+          
+        </div>
+      </div>
+
+      
+        <span class="breadcrumb">
+          /
+        </span>
+
+        <div class="breadcrumb active dropdown-container toggleable-container">
+          <span class="toplevel-link">Web APIs by example</span>
+          <i class="fa fa-angle-down"></i>
+
+          <div class="dropdown wide nav-list left toggleable">
+            
+              
+                <a class="nav-item" href="/docs/apis/dat">
+                  DatArchive API
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/manifest">
+                  dat.json site manifest
+
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/experimental-datpeers">
+                  datPeers API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/experimental-library">
+                  Library API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/experimental-globalfetch">
+                  globalFetch API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+                </a>
+              
+            
+              
+                <a class="nav-item" href="/docs/apis/experimental-capturepage">
+                  capturePage API
+
+                  
+                    <i class="fa fa-flask"></i>
+                  
+                </a>
+              
+            
+
+            <div class="dropdown-footer">
+              <a href="/docs/apis/">
+                <span class="fa fa-arrow-left"></span>
+                Back to Web APIs
+              </a>
+            </div>
+          </div>
+      
+      </div>
+    
+  </div>
+</div>
+      <div class="title-bar">
+  <div class="container">
+    
+      <a href="" class="section-title">
+        Web APIs
+      </a>
+    
+
+    <h1>
+      Web APIs by example
+      
+    </h1>
+
+    
+  </div>
+</div>
+    
+
+    <main class="docs dark">
+      <div class="container content-container">
+        
+          
+
+
+
+<nav class="docs-sidebar">
+  <!--
+  <ul class="pages">
+    
+      
+        <li>
+      
+        <a href="/docs/apis/dat">DatArchive API</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/manifest">dat.json site manifest</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/experimental-datpeers">datPeers API</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/experimental-library">Library API</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/experimental-globalfetch">globalFetch API</a>
+      </li>
+    
+      
+        <li>
+      
+        <a href="/docs/apis/experimental-capturepage">capturePage API</a>
+      </li>
+    
+  </ul>
+  -->
+
+  
+</nav>
+
+
+
+          <div class="content">
+            <p>This is a collection of snippets to help you get familiar with Beaker’s APIs.
+You can read more about the APIs here: <a href="./dat.html">DatArchive</a>,
+<a href="./permissions.html">permissions</a>.</p>
+
+<section>
+
+  <h2 id="create-a-site">Create a site</h2>
+
+  <div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">archive</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">DatArchive</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span>
+  <span class="na">title</span><span class="p">:</span> <span class="s1">'My Site'</span><span class="p">,</span>
+  <span class="na">description</span><span class="p">:</span> <span class="s1">'Where I put my files'</span>
+<span class="p">})</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">archive</span><span class="p">.</span><span class="nx">url</span><span class="p">)</span>
+<span class="c1">// =&gt; dat://da2ce4..dc/</span>
+</code></pre>
+  </div>
+
+</section>
+
+<section>
+
+  <h2 id="write-a-file">Write a file</h2>
+
+  <div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">'/hello.txt'</span><span class="p">,</span> <span class="s1">'world'</span><span class="p">)</span>
+<span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">'/image.png'</span><span class="p">,</span> <span class="nx">myArrayBuffer</span><span class="p">)</span>
+<span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">'/image.png'</span><span class="p">,</span> <span class="nx">myBase64</span><span class="p">,</span> <span class="s1">'base64'</span><span class="p">)</span>
+</code></pre>
+  </div>
+
+</section>
+
+<section>
+
+  <h2 id="read-a-file">Read a file</h2>
+
+  <div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">helloTxt</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s1">'/hello.txt'</span><span class="p">)</span>
+<span class="c1">// =&gt; String</span>
+<span class="kd">var</span> <span class="nx">imagePng</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s1">'/image.png'</span><span class="p">,</span> <span class="s1">'binary'</span><span class="p">)</span>
+<span class="c1">// =&gt; ArrayBuffer</span>
+</code></pre>
+  </div>
+
+</section>
+
+<section>
+
+  <h2 id="create-a-directory">Create a directory</h2>
+
+  <div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">mkdir</span><span class="p">(</span><span class="s1">'/subdir'</span><span class="p">))</span>
+</code></pre>
+  </div>
+
+</section>
+
+<section>
+
+  <h2 id="list-files">List files</h2>
+
+  <div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">files</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">readdir</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">files</span><span class="p">)</span> <span class="c1">// =&gt; ['index.html', 'js']</span>
+<span class="kd">var</span> <span class="nx">files</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">readdir</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="p">{</span><span class="na">recursive</span><span class="p">:</span> <span class="kc">true</span><span class="p">})</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">files</span><span class="p">)</span> <span class="c1">// =&gt; ['index.html', 'js', 'js/index.js']</span>
+</code></pre>
+  </div>
+
+</section>
+
+<section>
+
+  <h2 id="check-if-a-file-exists">Check if a file exists</h2>
+
+  <div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="k">try</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">st</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">stat</span><span class="p">(</span><span class="s1">'/foo.txt'</span><span class="p">)</span>
+  <span class="c1">// does exist</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// does not exist</span>
+<span class="p">}</span>
+</code></pre>
+  </div>
+
+</section>
+
+<section>
+
+  <h2 id="get-the-last-modified-time-of-a-file">Get the last-modified time of a file</h2>
+
+  <p>The <code class="highlighter-rouge">ctime</code> is the file creation-time, and <code class="highlighter-rouge">mtime</code> is the last-modified time.
+Note: <code class="highlighter-rouge">ctime</code> and <code class="highlighter-rouge">mtime</code> can be edited by the file’s author and <em>may</em> be incorrect.</p>
+
+  <div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">st</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">stat</span><span class="p">(</span><span class="s1">'/hello.txt'</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">st</span><span class="p">)</span>
+<span class="cm">/* =&gt; {
+  ctime: 1477267871000,
+  mtime: 1477267871000,
+  ...
+} */</span>
+</code></pre>
+  </div>
+
+</section>
+
+<section>
+
+  <h2 id="read-a-binary-file">Read a binary file</h2>
+
+  <div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="c1">// arraybuffer:</span>
+<span class="kd">var</span> <span class="nx">arrayBuf</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s1">'/picture.png'</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">blob</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Blob</span><span class="p">([</span><span class="nx">arrayBuf</span><span class="p">],</span> <span class="p">{</span><span class="na">type</span><span class="p">:</span> <span class="s1">'image/png'</span><span class="p">})</span>
+<span class="kd">var</span> <span class="nx">src</span> <span class="o">=</span> <span class="nx">URL</span><span class="p">.</span><span class="nx">createObjectURL</span><span class="p">(</span><span class="nx">blob</span><span class="p">)</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'img'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">src</span>
+
+<span class="c1">// base64:</span>
+<span class="kd">var</span> <span class="nx">base64</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="nx">picUrl</span><span class="p">,</span> <span class="s1">'base64'</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">src</span> <span class="o">=</span> <span class="s1">'data:image/png;base64,'</span><span class="o">+</span><span class="nx">base64</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'img'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">src</span>
+</code></pre>
+  </div>
+
+</section>
+
+<section>
+
+  <h2 id="write-a-binary-file">Write a binary file</h2>
+
+  <div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">orgUrl</span> <span class="o">=</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">url</span> <span class="o">+</span> <span class="s1">'/picture.png'</span>
+<span class="kd">var</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">orgUrl</span><span class="p">)</span>
+
+<span class="c1">// arraybuffer:</span>
+<span class="kd">var</span> <span class="nx">arrayBuf</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">res</span><span class="p">.</span><span class="nx">arrayBuffer</span><span class="p">()</span>
+<span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">'/picture_copy.png'</span><span class="p">,</span> <span class="nx">arrayBuf</span><span class="p">)</span>
+
+<span class="c1">// base64:</span>
+<span class="kd">var</span> <span class="nx">base64</span> <span class="o">=</span> <span class="nx">convertBufToBase64</span><span class="p">(</span><span class="nx">arrayBuf</span><span class="p">)</span>
+<span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">'/picture_copy.png'</span><span class="p">,</span> <span class="nx">base64</span><span class="p">,</span> <span class="s1">'base64'</span><span class="p">)</span>
+</code></pre>
+  </div>
+
+</section>
+
+<section>
+
+  <h2 id="request-network-access-to-a-host">Request network access to a host</h2>
+
+  <div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">permissions</span><span class="p">.</span><span class="nx">request</span><span class="p">({</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s1">'network'</span><span class="p">,</span>
+  <span class="na">hostname</span><span class="p">:</span> <span class="s1">'github.com'</span>
+<span class="p">})</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">)</span>
+<span class="c1">// =&gt; 'granted'</span>
+</code></pre>
+  </div>
+
+</section>
+
+<section>
+
+  <h2 id="request-network-access-to-all-hosts">Request network access to all hosts</h2>
+
+  <div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">permissions</span><span class="p">.</span><span class="nx">request</span><span class="p">({</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s1">'network'</span><span class="p">,</span>
+  <span class="na">hostname</span><span class="p">:</span> <span class="s1">'*'</span>
+<span class="p">})</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">)</span>
+<span class="c1">// =&gt; 'granted'</span>
+</code></pre>
+  </div>
+
+</section>
+
+          </div>
+        
+      </div>
+    </main>
+
+    <script>
+    var $ = document.querySelector.bind(document)
+    var $$ = function (selector) {
+      return Array.prototype.slice.call(document.querySelectorAll(selector))
+    }
+    </script>
+    <script src="/js/adjust-anchor-scroll-positioning.js"></script>
+    <script src="/js/anchor.min.js"></script>
+    <script>
+    anchors.add('h2, h3, h4')
+    </script>
+
+    <script>
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'))
+      img.onload = function() {
+        img.removeAttribute('data-src')
+      }
+    })
+    </script>
+  </body>
+
+  <script src="/js/toggleable.js"></script>
+  <script src="/js/collapseable.js"></script>
+</html>
