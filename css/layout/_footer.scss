@@ -13,12 +13,17 @@
 
   .container {
     @extend %flex;
+    align-items: flex-start !important;
     flex-direction: column;
   }
 
   .col {
     flex-basis: 33%;
     margin-bottom: 40px;
+
+    &:first-child > div:first-child {
+      margin-bottom: 20px;
+    }
   }
 
   .links {

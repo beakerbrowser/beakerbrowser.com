@@ -1,5 +1,5 @@
 ---
-title: Beaker is a more powerful browser, for a more powerful Web
+title: About - Beaker Browser
 layout: about
 sublayout: about
 class: light
