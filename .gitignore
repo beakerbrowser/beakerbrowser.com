@@ -2,3 +2,4 @@ _site/.dat
 .sass-cache
 .jekyll-metadata
 node_modules
+.DS_Store

@@ -43,8 +43,9 @@
   </div>
   <div class="update-notice">
   <span class="fa fa-exclamation-circle"></span>
-  A major update to Beaker is coming soon!
-  <a class="link" href="https://twitter.com/BeakerBrowser" title="@BeakerBrowser">Follow us on Twitter</a> to stay updated.
+  The public beta for Beaker Next is here!
+  New protocol, new features, and more.
+  <a class="link" href="/install" title="Install Beaker">Try it now!</a>
 </div>
 </header>
 
@@ -60,8 +61,7 @@
       </h1>
 
       <p class="description">
-        Beaker is an experimental browser for exploring and building the
-        peer-to-peer Web.
+        Beaker is a peer-to-peer browser for Web hackers.
       </p>
 
       <p class="cta">
@@ -69,14 +69,14 @@
           Install Beaker
         </a>
 
-        <a href="/docs/tour" class="btn white">
-          Take a tour
+        <a href="https://beaker-browser.gitbook.io/docs/" class="btn white">
+          Read the Docs
         </a>
       </p>
     </div>
 
     <div class="col col-1-2 graphic">
-      <img src="/img/view-source.png"/>
+      <img src="/img/home-hero-screenshot.png"/>
     </div>
   </div>
 
@@ -251,6 +251,115 @@ Inspired: @BeakerBrowser</q>
   <script src="/js/testimonials.js"></script>
 </div>
 
+<div class="section features">
+  <div class="container featuregrid">
+    <div class="featuregrid-col">
+      <div class="img-container">
+        <img src="/img/feature-instant-deploy.png">
+      </div>
+      <h2>Deploy instantly</h2>
+      <p>
+        Create a new Hyperdrive site with one click.
+      </p>
+    </div>
+
+    <div class="featuregrid-col">
+      <div class="img-container">
+        <img src="/img/feature-cohost.png">
+      </div>
+      <h2>Co-host sites</h2>
+      <p>
+        Reduce costs and help keep sites online using peer-to-peer hosting.
+      </p>
+    </div>
+
+    <div class="featuregrid-col">
+      <div class="img-container">
+        <img src="/img/feature-apis.png">
+      </div>
+      <h2>Build p2p apps</h2>
+      <p>
+        New Web APIs make building peer-to-peer apps easier than ever.
+      </p>
+    </div>
+    
+    <div class="featuregrid-col">
+      <div class="img-container">
+        <img src="/img/feature-files-explorer.png">
+      </div>
+      <h2>Explore files</h2>
+      <p>
+        Hyperdrive is a fully-featured filesystem which you can explore.
+      </p>
+    </div>
+
+    <div class="featuregrid-col">
+      <div class="img-container">
+        <img src="/img/feature-webterm.png">
+      </div>
+      <h2>Run commands</h2>
+      <p>
+        Browse the Web and get work done with the integrated terminal.
+      </p>
+    </div>
+
+    <div class="featuregrid-col">
+      <div class="img-container">
+        <img src="/img/feature-editor.png">
+      </div>
+      <h2>Edit the source</h2>
+      <p>
+        The integrated editor lets you work side-by-side with your page.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="section midcta">
+  <p>
+    <a href="/install/" class="btn action">
+      Install Beaker
+    </a>
+
+    <a href="https://beaker-browser.gitbook.io/docs/" class="btn blue">
+      Explore the docs
+    </a>
+  </p>
+</div>
+
+<div class="section how-it-works">
+  <div class="container narrow">
+    <div class="columns">
+      <div class="col col-1-2">
+        <img src="/img/how-it-works/url-bar.svg"/>
+      </div>
+    
+      <div class="col col-1-2">
+        <h3>How it works</h3>
+
+        <p>
+          Beaker uses a peer-to-peer protocol called
+          <strong><a href="https://github.com/mafintosh/hyperdrive">Hyperdrive</a>.</strong>
+          Users connect directly to your computer and <em>co-host</em>
+          your sites.
+        </p>
+      </div>
+    </div>    
+  </div>
+</div>
+
+<div class="section midcta">
+  <p>
+    <a href="/install/" class="btn action">
+      Install Beaker
+    </a>
+
+    <a href="https://beaker-browser.gitbook.io/docs/" class="btn blue">
+      Explore the docs
+    </a>
+  </p>
+</div>
+
 <div class="section what">
   <div class="container columns">
     <div class="col col-1-2">
@@ -268,71 +377,23 @@ Inspired: @BeakerBrowser</q>
 
        <p>
         Beaker brings <em>peer-to-peer publishing</em> to the Web, turning the browser
-        into a supercharged tool for sharing websites, files, apps, and more.
-      </p>
-
-      <p>
-        <a href="/about">Learn more →</a>
+        into a supercharged tool for building websites, files, apps, and more.
       </p>
     </div>
   </div>
 </div>
 
-<div class="section how-it-works">
-  <div class="container narrow">
-    <h2 class="heading">
-  How Beaker works
-</h2>
-
-<div class="columns">
-  <div class="col col-1-2">
-    <img src="/img/how-it-works/url-bar.svg"/>
-  </div>
-
-  <p class="col col-1-2">
-    Beaker adds support for a peer-to-peer protocol called
-    <a href="https://datproject.org">Dat</a>. It's the Web you know and
-    love, but instead of HTTP, <strong>websites and files are transported with
-    Dat.</strong>
-  </p>
-</div>
-
-<div class="columns">
-  <p class="col col-1-2">
-    Deploy a website from your computer — no server required! <strong>Visitors
-    connect directly to each other</strong>, sharing your site's files and
-    helping keep it online.
-  </p>
-
-  <div class="col col-1-2">
-    <img src="/img/how-it-works/p2p-network.svg"/>
-  </div>
-</div>
-
-<div class="columns">
-  <div class="col col-1-2">
-    <img src="/img/how-it-works/customizable-apps.svg"/>
-  </div>
-
-  <p class="col col-1-2">
-    Files are transported with the peer-to-peer network instead of being
-    locked away on a server, so you can <strong>explore all the files that make
-    up a website or app</strong>.
-  </p>
-</div>
-  </div>
-
+<div class="section midcta">
   <p>
-    <a href="/docs/tour" class="btn action">
-      Take a tour
+    <a href="/install/" class="btn action">
+      Install Beaker
     </a>
 
-    <a href="/docs/" class="btn blue">
+    <a href="https://beaker-browser.gitbook.io/docs/" class="btn blue">
       Explore the docs
     </a>
   </p>
 </div>
-
     
     <footer class="footer">
   <div class="container">

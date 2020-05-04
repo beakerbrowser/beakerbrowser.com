@@ -1,7 +1,7 @@
 .hero {
   @extend %antialiased;
   align-items: center;
-  padding: 40px 0;
+  padding: 0 0 40px;
   background: $blue;
   color: #fff;
 
@@ -10,6 +10,7 @@
   }
 
   .col {
+    margin-right: 0;
 
     &.graphic {
       display: none;
@@ -20,10 +21,7 @@
       }
 
       img {
-        max-width: 500px;
-        border-radius: 4px;
-        box-shadow: 0 5px 30px 0 rgba(0,0,0,.15);
-        border: 1px solid rgba(0,0,0,.4);
+        max-width: 580px;
       }
     }
   }
@@ -46,7 +44,8 @@
   }
 }
 
-.section.what {
+.section.what,
+.section.how-it-works {
 
   h3 {
     font-size: 2rem;
@@ -57,6 +56,58 @@
 
   p {
     font-size: 1.15rem;
+  }
+}
+
+.section.features {
+  .featuregrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 80px;
+
+    @media (max-width: 1050px) {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 60px;
+    }
+
+    @media (max-width: 750px) {
+      grid-template-columns: 1fr;
+      grid-gap: 40px;
+    }
+
+    .featuregrid-col {
+      text-align: center;
+
+      h2 {
+        margin-top: 10px;
+      }
+
+      @media (max-width: 1050px) {
+        h2 {
+          margin-top: 20px;
+        }
+      }
+
+      @media (max-width: 750px) {
+        padding: 0 10px;
+      }
+    }
+  }
+
+  .img-container {
+    display: flex;
+    height: 200px;
+
+    @media (max-width: 750px) {
+      height: auto;
+    }
+
+    img {
+      margin: auto;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px #0005;
+      max-height: 180px;
+    }
   }
 }
 
@@ -465,10 +516,26 @@
 }
 
 .section.what {
+  margin-top: 120px;
 
   .heading {
     font-size: 1.7rem;
     font-weight: 400;
+  }
+}
+
+.section.midcta {
+  .btn {
+    font-size: 20px;
+    height: 40px;
+    line-height: 38px;
+    width: 200px;
+
+    @media (max-width: 750px) {
+      width: auto;
+      display: block;
+      margin: 10px;
+    }
   }
 }
 
