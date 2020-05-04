@@ -1,0 +1,13 @@
+{% highlight javascript %}
+var topic = beaker.peersockets.join('chat')
+
+topic.addEventListener('message', e => {
+  var message = new TextDecoder().decode(e.message)
+  console.log(e.peerId, 'says', message)
+})
+
+function sendToPeer (peerId, message) {
+  message = new TextEncoder('utf-8').encode(message)
+  topic.send(peerId, message)
+}
+{% endhighlight %}

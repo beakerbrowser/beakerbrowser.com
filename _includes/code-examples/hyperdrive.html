@@ -1,0 +1,8 @@
+{% highlight javascript %}
+var drive = await beaker.hyperdrive.createDrive()
+await drive.readdir('/')
+await drive.writeFile('/hello.md', '# Hi!')
+await drive.stat('/hello.md')
+await drive.readFile('/hello.md', 'utf8')
+await drive.unlink('/hello.md')
+{% endhighlight %}

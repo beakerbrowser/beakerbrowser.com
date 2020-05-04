@@ -337,13 +337,73 @@ Inspired: @BeakerBrowser</q>
         <h3>How it works</h3>
 
         <p>
-          Beaker uses a peer-to-peer network called the
+          Beaker uses a peer-to-peer filesystem on the
           <strong><a href="https://hypercore-protocol.org">Hypercore Protocol</a>.</strong>
-          Users connect directly to your computer and <em>co-host</em>
-          your sites.
+          Users connect directly to your computer to access your files.
         </p>
       </div>
     </div>    
+  </div>
+</div>
+
+<div class="section code-examples">
+  <div class="container columns">
+    <div class="col col-1-2">
+      <div class="codebox">
+        <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">drive</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">beaker</span><span class="p">.</span><span class="nx">hyperdrive</span><span class="p">.</span><span class="nx">createDrive</span><span class="p">()</span>
+<span class="nx">await</span> <span class="nx">drive</span><span class="p">.</span><span class="nx">readdir</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
+<span class="nx">await</span> <span class="nx">drive</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">'/hello.md'</span><span class="p">,</span> <span class="s1">'# Hi!'</span><span class="p">)</span>
+<span class="nx">await</span> <span class="nx">drive</span><span class="p">.</span><span class="nx">stat</span><span class="p">(</span><span class="s1">'/hello.md'</span><span class="p">)</span>
+<span class="nx">await</span> <span class="nx">drive</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s1">'/hello.md'</span><span class="p">,</span> <span class="s1">'utf8'</span><span class="p">)</span>
+<span class="nx">await</span> <span class="nx">drive</span><span class="p">.</span><span class="nx">unlink</span><span class="p">(</span><span class="s1">'/hello.md'</span><span class="p">)</span></code></pre></figure>
+      </div>
+    </div>
+    <div class="col col-1-2">
+      <h3>Read & write files</h3>
+      <p><a href="#todo">beaker.hyperdrive API <span class="fa fa-arrow-right"></span></a></p>
+    </div>
+  </div>
+  <hr>
+  <div class="container columns">
+    <div class="col col-1-2">
+      <div class="codebox">
+        <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">async</span> <span class="kd">function</span> <span class="nx">readSocialFeed</span> <span class="p">(</span><span class="nx">sites</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">beaker</span><span class="p">.</span><span class="nx">hyperdrive</span><span class="p">.</span><span class="nx">query</span><span class="p">({</span>
+    <span class="na">path</span><span class="p">:</span> <span class="s1">'/microblog/*'</span><span class="p">,</span>
+    <span class="na">drive</span><span class="p">:</span> <span class="nx">sites</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">site</span> <span class="o">=&gt;</span> <span class="nx">site</span><span class="p">.</span><span class="nx">url</span><span class="p">),</span>
+    <span class="na">sort</span><span class="p">:</span> <span class="s1">'ctime'</span><span class="p">,</span>
+    <span class="na">reverse</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">limit</span><span class="p">:</span> <span class="mi">50</span>
+  <span class="p">})</span>
+<span class="p">}</span></code></pre></figure>
+      </div>
+    </div>
+    <div class="col col-1-2">
+      <h3>Query the filesystem</h3>
+      <p><a href="#todo">beaker.hyperdrive API <span class="fa fa-arrow-right"></span></a></p>
+    </div>
+  </div>
+  <hr>
+  <div class="container columns">
+    <div class="col col-1-2">
+      <div class="codebox">
+        <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">topic</span> <span class="o">=</span> <span class="nx">beaker</span><span class="p">.</span><span class="nx">peersockets</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">'chat'</span><span class="p">)</span>
+
+<span class="nx">topic</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'message'</span><span class="p">,</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">TextDecoder</span><span class="p">().</span><span class="nx">decode</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">peerId</span><span class="p">,</span> <span class="s1">'says'</span><span class="p">,</span> <span class="nx">message</span><span class="p">)</span>
+<span class="p">})</span>
+
+<span class="kd">function</span> <span class="nx">sendToPeer</span> <span class="p">(</span><span class="nx">peerId</span><span class="p">,</span> <span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">message</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">TextEncoder</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">).</span><span class="nx">encode</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span>
+  <span class="nx">topic</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">peerId</span><span class="p">,</span> <span class="nx">message</span><span class="p">)</span>
+<span class="p">}</span></code></pre></figure>
+      </div>
+    </div>
+    <div class="col col-1-2">
+      <h3>Send & receive messages</h3>
+      <p><a href="#todo">beaker.peersockets API <span class="fa fa-arrow-right"></span></a></p>
+    </div>
   </div>
 </div>
 
