@@ -1,4 +1,28 @@
-.layout-blog {
+.blog-breadcrumbs {
+  background: #fafafa;
+  padding: 8px 14px;
+  font-size: 15px;
+  margin-bottom: 40px;
+  font-weight: 500;
+
+  .container {
+    max-width: 750px;
+  }
+
+  a {
+    color: $primary !important;
+  }
+
+  &.bottom {
+    margin-bottom: 0;
+
+    & + footer {
+      margin-top: 0;
+    }
+  }
+}
+
+.blog {
 
   main {
     min-height: calc(100vh - 56px - 70px);
@@ -22,15 +46,21 @@
     }
   }
 
-  h1 {
+  h1.title {
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
+    font-size: 3rem;
   }
 
   .post {
     display: block;
     padding: 40px 0;
     border-bottom: 1px dotted $gray;
+
+    &.pageview {
+      max-width: 750px;
+      font-size: 15px;
+    }
 
     &:first-of-type {
       border-top: 1px dotted $gray;
@@ -40,12 +70,16 @@
       max-width: 650px;
     }
 
-    h2 {
+    &.listingview h2 {
       margin-bottom: 0;
 
       &:hover {
         text-decoration: underline;
       }
+    }
+
+    figure img {
+      margin: 0 auto 10px;
     }
   }
 

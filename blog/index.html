@@ -3,10 +3,9 @@ title: Beaker Blog
 layout: blog
 ---
 
-<h1>Blog</h1>
 <div class="post-list">
   {% for post in site.posts %}
-    <div href="{{ post.url }}" class="post">
+    <div href="{{ post.url }}" class="post listingview">
       <div class="container">
         <h2 class="title">
           <a class="post-link" href="{{ post.url }}">{{ post.title | escape }}</a>
