@@ -47,7 +47,7 @@
     border-radius: 8px;
 
     @media (min-width: 1050px) {
-      height: 300px;
+      height: 340px;
       object-fit: cover;
       object-position: top;
     }
@@ -169,20 +169,21 @@
 
 .section.code-examples {
   background: $blue;
-  padding: 80px 0;
+  padding: 60px 0;
 
   .columns {
     align-items: center;
   }
 
   hr {
-    margin: 80px 0;
+    margin: 40px 0;
     border-top: 1px dashed #fff5;
     width: 100%;
   }
 
   h3 {
     color: #fff;
+    font-size: 26px;
   }
 
   a {
@@ -206,11 +207,40 @@
     border-radius: 8px;
     background: #1c183e;
     box-shadow: 0 4px 12px #0005;
+    overflow-x: auto;
 
     figure {
       margin: 0;
       padding: 18px 60px 18px 20px;
       width: 500px;
+    }
+  }
+}
+
+.section.apps {
+  a {
+    display: block;
+    position: relative;
+
+    span {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 1;
+      font-size: 26px;
+      color: $primary;
+      background: white;
+    }
+  }
+
+  img {
+    margin: 0 auto;
+    border-radius: 8px;
+    transition: box-shadow 0.2s;
+    box-shadow: 0 2px 4px #0003;
+
+    &:hover {
+      box-shadow: 0 3px 6px #0004;
     }
   }
 }
