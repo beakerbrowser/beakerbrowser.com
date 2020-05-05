@@ -214,6 +214,7 @@
       margin: 0;
       padding: 18px 60px 18px 20px;
       width: 500px;
+      max-width: 44vw;
     }
   }
 }
@@ -259,16 +260,30 @@
     img {
       display: block;
       width: 120px;
+      min-width: 120px;
       margin: 0 auto 30px;
 
       &.bigger {
         width: 300px;
+        min-width: 300px;
         height: 120px;
       }
     }
 
     p {
       text-align: center;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .columns {
+      display: block;
+      column-width: unset;
+
+      .col {
+        display: block;
+        margin-bottom: 50px;
+      }
     }
   }
 }
