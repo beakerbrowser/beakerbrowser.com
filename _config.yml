@@ -1,11 +1,11 @@
 # Site settings
 title: Beaker Browser
-email: pfrazee@gmail.com
+email: support@beakerbrowser.com
 description:
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://beakerbrowser.com" # the base hostname and protocol for your site
-twitter_username: pfrazee
-github_username:  pfrazee
+twitter_username: beakerbrowser
+github_username: beakerbrowser
 
 # Build settings
 markdown: kramdown
