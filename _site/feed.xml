@@ -5,8 +5,8 @@
     <description></description>
     <link>https://beakerbrowser.com/</link>
     <atom:link href="https://beakerbrowser.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 May 2020 12:07:59 -0500</pubDate>
-    <lastBuildDate>Thu, 14 May 2020 12:07:59 -0500</lastBuildDate>
+    <pubDate>Thu, 14 May 2020 12:44:36 -0500</pubDate>
+    <lastBuildDate>Thu, 14 May 2020 12:44:36 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -129,7 +129,7 @@
   &lt;li&gt;&lt;a href=&quot;https://docs.beakerbrowser.com/apis/beaker.contacts&quot;&gt;beaker.contacts&lt;/a&gt; - read and update the user’s personal address book (with permission).&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://docs.beakerbrowser.com/apis/beaker.markdown&quot;&gt;beaker.markdown&lt;/a&gt; - convert Markdown into HTML.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://docs.beakerbrowser.com/apis/beaker.shell&quot;&gt;beaker.shell&lt;/a&gt; - create prompts to select files and hyperdrives.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.beakerbrowser.com/apis/beaker.terminal&quot;&gt;beaker.terminal&lt;/a&gt; - register “page commands” which can be invoked from &lt;a href=&quot;(https://docs.beakerbrowser.com/advanced/webterm)&quot;&gt;Webterm&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.beakerbrowser.com/apis/beaker.terminal&quot;&gt;beaker.terminal&lt;/a&gt; - register “page commands” which can be invoked from &lt;a href=&quot;https://docs.beakerbrowser.com/advanced/webterm&quot;&gt;Webterm&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
