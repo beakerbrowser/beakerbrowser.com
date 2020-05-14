@@ -4,6 +4,7 @@
   .installers {
     @extend %flex;
     margin-top: 20px;
+    margin-right: 0;
   }
 
   .installer {
@@ -43,6 +44,41 @@
     .platform-icon {
       font-size: 40px;
       margin-bottom: 15px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .installers {
+      display: block;
+    }
+
+    .installer {
+      display: block;
+      border: 2px solid #111 !important;
+      margin: 0;
+
+      & + .installer {
+        border-top: 0 !important;
+      }
+    }
+  }
+
+  .release-notes {
+    border: 2px solid $blue;
+    padding: 40px 50px;
+    margin: 50px;
+    
+    h2 {
+      margin-top: 0;
+    }
+
+    h3 {
+      font-size: 1.3em;
+    }
+
+    @media (max-width: 600px) {
+      padding: 20px;
+      margin: 0;
     }
   }
 }

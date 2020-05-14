@@ -2,7 +2,6 @@
 
   a {
     color: $blue;
-    color: var(--page-color); // TODO
 
     &:hover {
       text-decoration: underline;
@@ -54,7 +53,7 @@
   }
 
   .columns,
-  p:not(:last-child) {
+  p {
     margin-bottom: 20px;
   }
 
@@ -130,6 +129,10 @@
     &:last-child {
       margin-left: 30px;
     }
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -233,9 +236,7 @@
 
   ul,
   p {
-    &:not(:last-child) {
-      margin-bottom: 20px;
-    }
+    margin-bottom: 20px;
   }
 
   .back-to-blog {
@@ -270,5 +271,9 @@
       font-family: inherit;
       padding: 0;
     }
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
   }
 }

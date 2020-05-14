@@ -50,6 +50,10 @@
     text-align: center;
     margin-bottom: 50px;
     font-size: 3rem;
+
+    @media (max-width: 800px) {
+      font-size: 2.3em;
+    }
   }
 
   .post {
@@ -68,6 +72,155 @@
 
     .container {
       max-width: 650px;
+    }
+
+    a {
+      color: $blue !important;
+  
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-bottom: 10px;
+      font-weight: 600;
+      text-transform: initial;
+  
+      code {
+        font-weight: 500;
+      }
+    }
+  
+    h2 {
+      margin-top: 50px;
+    }
+  
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 40px;
+    }
+  
+    h3 {
+      font-size: 1.3rem;
+    }
+  
+    h4:not(code) {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  
+    p,
+    ul,
+    ol,
+    aside {
+      font-size: 13.5px;
+      font-size: 15px;
+      color: #222;
+    }
+  
+    .columns,
+    p {
+      margin-bottom: 20px;
+    }
+  
+    p.accent {
+      font-size: 22px;
+  
+      code {
+        font-size: 18px;
+      }
+    }
+  
+    strong {
+      font-weight: 600;
+    }
+  
+    em {
+      font-style: italic;
+    }
+  
+    ul,
+    ol {
+      margin: 0 0 20px 50px;
+  
+      li:not(:last-of-type) {
+        margin-bottom: 3px;
+      }
+
+      @media (max-width: 800px) {
+        margin-left: 30px;
+      }
+    }
+  
+    blockquote {
+      margin-left: 30px;
+      padding-left: 15px;
+      border-left: 2px solid var(--page-color);
+      color: $text--light-bg-muted;
+      font-style: italic;
+      font-size: 1rem;
+    }
+  
+    figcaption.code {
+      margin-bottom: 3px;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: .25px;
+    }
+  
+    pre {
+      margin-bottom: 20px;
+      padding: 10px;
+      background: #f2f2f2;
+      font-size: 14px;
+      overflow-x: scroll;
+  
+      code {
+        background: none;
+        padding: 0;
+      }
+    }
+  
+    ul code,
+    ol code,
+    aside code,
+    p code {
+      background: #f2f2f2;
+      padding: 0 4px;
+      font-size: 13.5px;
+    }
+
+    hr {
+      border-top: 1px dotted $gray;
+      margin: 60px 0;
+      width: 100%;
+
+      @media (max-width: 500px) {
+        margin: 30px 0;
+      }
+    }
+  
+    figure.col {
+  
+      &:first-child {
+        margin-right: 30px;
+      }
+  
+      &:last-child {
+        margin-left: 30px;
+      }
+    }
+  
+    & > :last-child {
+      margin-bottom: 0;
     }
 
     &.listingview h2 {

@@ -57,7 +57,7 @@
 
 <div class="columns">
   <div class="col col-1-3 installers">
-    <a href="https://github.com/beakerbrowser/beaker/releases/download/0.8.10/beaker-browser-0.8.10.dmg" class="installer macos">
+    <a href="https://github.com/beakerbrowser/beaker/releases/download/1.0.0-prerelease.1/beaker-browser-1.0.0-prerelease.1.dmg" class="installer macos" target="_blank">
       <h2 class="platform">macOS</h2>
       <i class="platform-icon fa fa-apple"></i>
       <p class="pseudolink">
@@ -66,7 +66,7 @@
       </p>
     </a>
 
-    <a href="https://github.com/beakerbrowser/beaker/releases/download/0.8.10/beaker-browser-setup-0.8.10.exe" class="col col-1-3 installer windows">
+    <a href="https://github.com/beakerbrowser/beaker/releases/download/1.0.0-prerelease.1/beaker-browser-setup-1.0.0-prerelease.1.exe" class="col col-1-3 installer windows" target="_blank">
       <h2 class="platform">Windows</h2>
       <i class="platform-icon fa fa-windows"></i>
       <p class="pseudolink">
@@ -75,7 +75,7 @@
       </p>
     </a>
 
-    <a href="https://github.com/beakerbrowser/beaker/releases/download/0.8.10/Beaker.Browser-0.8.10.AppImage" class="col col-1-3 installer linux">
+    <a href="https://github.com/beakerbrowser/beaker/releases/download/1.0.0-prerelease.1/Beaker.Browser-1.0.0-prerelease.1.AppImage" class="col col-1-3 installer linux" target="_blank">
       <h2 class="platform">Linux</h2>
       <i class="platform-icon fa fa-linux"></i>
 
@@ -89,36 +89,67 @@
 
 <h2 id="staying-updated">Staying updated</h2>
 
-<p>Beaker will automatically keep up-to-date on macOS and Windows, but not on Linux. Linux users can subscribe to the <a href="https://github.com/beakerbrowser/beaker/releases.atom">AppCast feed</a> (includes version release notes) to stay updated.</p>
+<p>Beaker will automatically keep up-to-date on macOS and Windows, but not on Linux. Linux users can subscribe to the <a href="https://github.com/beakerbrowser/beaker/releases.atom">AppCast feed</a> (includes version release notes) to stay updated. (We are actively working on Snap and Flatpak distributions.)</p>
 
-<h2 id="build-beaker-from-source">Build Beaker from source</h2>
+<p><a href="https://github.com/beakerbrowser/beaker#building-from-source">Instructions for building from source <span class="fa fa-external-link"></span></a></p>
 
-<p>Building Beaker from source requires Node 6 or higher. If you’re on Linux (and in some cases macOS), you’ll also need libtool, m4, and automake:</p>
+<div class="release-notes">
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get install libtool m4 make g++  <span class="c"># debian/ubuntu</span>
-sudo dnf install libtool m4 make gcc-c++  <span class="c"># fedora</span>
-</code></pre>
+  <h2 id="beaker-10-beta">Beaker 1.0 Beta!</h2>
+
+  <p>The Beaker 1.0 Beta is finally here! Thank you to everyone for your patience and support over the past year as we’ve completed this total rehaul of the browser. You can <a href="/2020/05/14/beaker-1-0-beta.html">find the release blogpost here</a>.</p>
+
+  <h3 id="a-new-protocol">A new protocol</h3>
+
+  <p>Beaker is now using the <a href="https://hypercore-protocol.org">Hypercore Protocol</a>. With this change, <code class="highlighter-rouge">dat://</code> URLs are being phased out in Beaker and replaced with <code class="highlighter-rouge">hyper://</code>.</p>
+
+  <p>This breaking change includes a ton of new improvements. Performance is now <em>vastly</em> superior thanks to new data structures and connection-reliability has improved thanks to a switch to a hole-punching DHT. This update also includes new features such as mounts and peersockets.</p>
+
+  <blockquote>
+    <p><a href="https://blog.hypercore-protocol.org/posts/announcing-hyperdrive-10/">Announcing Hyperdrive v10 <span class="fa fa-external-link"></span></a></p>
+  </blockquote>
+
+  <p>Beaker includes a Dat -&gt; Hyperdrive converter to help you update your library.</p>
+
+  <h3 id="a-new-editing-experience">A new editing experience</h3>
+
+  <p>With Beaker 1.0, we took an entirely new approach to how you build sites in the browser. We wanted to make it as easy as possible to get work done fast.</p>
+
+  <p>The new release includes a set of builtin tools which open side-by-side with your page. These include a source editor, files explorer, and a <a href="https://docs.beakerbrowser.com/advanced/webterm">new Web-based terminal</a>.</p>
+
+  <p>Beaker 1.0 also includes tools for quickly forking, comparing, and merging Hyperdrives. With these tools, you can collaborate on your development without ever leaving the browser.</p>
+
+  <h3 id="a-new-set-of-web-apis">A new set of Web APIs</h3>
+
+  <p>For building peer-to-peer applications, it’s important you have a powerful set of APIs to replace the server. In 1.0, we’ve overhauled Beaker’s Web APIs to provide a ton of useful tools:</p>
+
+  <ul>
+    <li><a href="https://docs.beakerbrowser.com/apis/beaker.hyperdrive">beaker.hyperdrive</a> - query, read, and write files on Hyperdrives.</li>
+    <li><a href="https://docs.beakerbrowser.com/apis/beaker.peersockets">beaker.peersockets</a> - send and receive messages with peers on a Hyperdrive.</li>
+    <li><a href="https://docs.beakerbrowser.com/apis/beaker.contacts">beaker.contacts</a> - read and update the user’s personal address book (with permission).</li>
+    <li><a href="https://docs.beakerbrowser.com/apis/beaker.markdown">beaker.markdown</a> - convert Markdown into HTML.</li>
+    <li><a href="https://docs.beakerbrowser.com/apis/beaker.shell">beaker.shell</a> - create prompts to select files and hyperdrives.</li>
+    <li><a href="https://docs.beakerbrowser.com/apis/beaker.terminal">beaker.terminal</a> - register “page commands” which can be invoked from <a href="(https://docs.beakerbrowser.com/advanced/webterm)">Webterm</a>.</li>
+  </ul>
+
+  <h3 id="let-us-know-what-you-think">Let us know what you think!</h3>
+
+  <p>This is a beta release so you may run into issues. We’re going to be testing a lot of new browser features and finding out how the new protocol scales. If you run into any bumps, <a href="https://github.com/beakerbrowser/beaker/issues">open an issue</a> or ask questions in <a href="https://github.com/beakerbrowser/beaker/discussions">github discussions</a>.</p>
+
 </div>
 
-<p>Clone <a href="https://github.com/beakerbrowser/beaker">Beaker’s source</a> from GitHub, install the dependencies, and run the build:</p>
+<script>
+   document.querySelector('.installer.macos').addEventListener('click', function () {
+     sa_event('click_install_macos')
+   })
+   document.querySelector('.installer.windows').addEventListener('click', function () {
+     sa_event('click_install_windows')
+   })
+   document.querySelector('.installer.linux').addEventListener('click', function () {
+     sa_event('click_install_linux')
+   })
+ </script>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>git clone https://github.com/beakerbrowser/beaker.git
-<span class="nb">cd </span>beaker
-npm install
-npm run rebuild <span class="c">#see https://github.com/electron/electron/issues/5851</span>
-npm start
-</code></pre>
-</div>
-
-<p>If you pull latest from the repo and get weird module errors, run:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>npm run burnthemall
-</code></pre>
-</div>
-
-<p>This invokes <a href="http://nerdist.com/wp-content/uploads/2016/05/the-mad-king-game-of-thrones.jpg">the mad king</a>, who will torch your <code class="highlighter-rouge">node_modules/</code>, and do the full install/rebuild process. <code class="highlighter-rouge">npm start</code> should work afterwards.</p>
-
-<p>If you are on Linux and <code class="highlighter-rouge">npm run burnthemall</code> still fails to get Beaker working, it’s possible the version of Node in your Linux distribution default software package repositories is out of date.  The simplest fix is to download and install the latest stable release of Node from <a href="https://nodejs.org">the official website</a>.</p>
 
     </div>
 
@@ -156,5 +187,8 @@ npm start
   </div>
 </footer>
 
+    <script>window.sa_event=window.sa_event||function(){a=[].slice.call(arguments);sa_event.q?sa_event.q.push(a):sa_event.q=[a]};</script>
+<script async defer src="https://sa.beakerbrowser.com/latest.js"></script>
+<noscript><img src="https://sa.beakerbrowser.com/noscript.gif" alt=""></noscript>
   </body>
 </html>

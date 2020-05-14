@@ -5,9 +5,286 @@
     <description></description>
     <link>https://beakerbrowser.com/</link>
     <atom:link href="https://beakerbrowser.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 08 May 2020 18:57:20 -0500</pubDate>
-    <lastBuildDate>Fri, 08 May 2020 18:57:20 -0500</lastBuildDate>
+    <pubDate>Thu, 14 May 2020 10:09:14 -0500</pubDate>
+    <lastBuildDate>Thu, 14 May 2020 10:09:14 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Announcing the Beaker 1.0 Beta</title>
+        <description>&lt;p&gt;The Beaker 1.0 Beta is finally here! Thank you to everyone for your patience and support over the past year as we’ve completed this total rehaul of the browser.&lt;/p&gt;
+
+&lt;p class=&quot;install-link&quot;&gt;
+  &lt;a href=&quot;/install/&quot;&gt;&lt;img src=&quot;/img/logo/logo-blue.png&quot; /&gt;&lt;/a&gt;
+  &lt;a class=&quot;btn&quot; title=&quot;Download the Beaker 1.0 Beta now&quot; href=&quot;/install/&quot;&gt;Download the Beaker 1.0 Beta now&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;There are a ton of new additions. Let’s get straight to the fun parts – a new protocol, a new editing experience, and a new set of Web APIs.&lt;/p&gt;
+
+&lt;div class=&quot;home-cta&quot;&gt;
+  &lt;h3&gt;Beaker: A peer-to-peer browser for Web hackers&lt;/h3&gt;
+  &lt;div class=&quot;featuregrid&quot;&gt;
+    &lt;div class=&quot;featuregrid-col&quot;&gt;
+      &lt;div class=&quot;img-container&quot;&gt;
+        &lt;img src=&quot;/img/feature-instant-deploy.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;h4&gt;Deploy instantly&lt;/h4&gt;
+      &lt;p&gt;
+        Create a new Hyperdrive site with one click.
+      &lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;featuregrid-col&quot;&gt;
+      &lt;div class=&quot;img-container&quot;&gt;
+        &lt;img src=&quot;/img/feature-cohost.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;h4&gt;Co-host sites&lt;/h4&gt;
+      &lt;p&gt;
+        Reduce costs and help keep sites online using peer-to-peer hosting.
+      &lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;featuregrid-col&quot;&gt;
+      &lt;div class=&quot;img-container&quot;&gt;
+        &lt;img src=&quot;/img/feature-apis.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;h4&gt;Build p2p apps&lt;/h4&gt;
+      &lt;p&gt;
+        New Web APIs make building peer-to-peer apps easier than ever.
+      &lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;featuregrid-col&quot;&gt;
+      &lt;div class=&quot;img-container&quot;&gt;
+        &lt;img src=&quot;/img/feature-files-explorer.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;h4&gt;Explore files&lt;/h4&gt;
+      &lt;p&gt;
+        Hyperdrive is a fully-featured filesystem which you can explore.
+      &lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;featuregrid-col&quot;&gt;
+      &lt;div class=&quot;img-container&quot;&gt;
+        &lt;img src=&quot;/img/feature-webterm.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;h4&gt;Run commands&lt;/h4&gt;
+      &lt;p&gt;
+        Browse the Web and get work done with the integrated terminal.
+      &lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;featuregrid-col&quot;&gt;
+      &lt;div class=&quot;img-container&quot;&gt;
+        &lt;img src=&quot;/img/feature-editor.png&quot; /&gt;
+      &lt;/div&gt;
+      &lt;h4&gt;Edit source&lt;/h4&gt;
+      &lt;p&gt;
+        The integrated editor lets you work side-by-side with your page.
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p&gt;
+    &lt;a class=&quot;btn&quot; title=&quot;Beaker Homepage&quot; href=&quot;/&quot;&gt;Learn more on the Beaker Homepage&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;a-new-protocol&quot;&gt;A new protocol&lt;/h3&gt;
+
+&lt;p&gt;Beaker is now using the &lt;a href=&quot;https://hypercore-protocol.org&quot;&gt;Hypercore Protocol&lt;/a&gt;. This breaking change includes a ton of new improvements:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Performance&lt;/strong&gt; is now &lt;em&gt;vastly&lt;/em&gt; superior thanks to new data structures.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Connection-reliability&lt;/strong&gt; has improved thanks to a switch to a hole-punching DHT.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;A new “mounts” feature&lt;/strong&gt; for composing multiple Hyperdrives into a single hierarchy.&lt;/li&gt;
+  &lt;li&gt;And much more.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can read about the new features in the Hypercore Protocol blog: &lt;a href=&quot;https://blog.hypercore-protocol.org/posts/announcing-hyperdrive-10/&quot;&gt;Announcing Hyperdrive v10&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;With this change, &lt;code class=&quot;highlighter-rouge&quot;&gt;dat://&lt;/code&gt; URLs are being phased out and replaced with &lt;code class=&quot;highlighter-rouge&quot;&gt;hyper://&lt;/code&gt;. The previous term “Dat Archives” has been replaced with a new term, “Hyperdrives.” Beaker includes a Dat -&amp;gt; Hyperdrive converter to help you update your library.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;a-new-editing-experience&quot;&gt;A new editing experience&lt;/h3&gt;
+
+&lt;p&gt;With Beaker 1.0, we took an entirely new approach to how you build sites in the browser. We wanted to make it as easy as possible to get work done fast.&lt;/p&gt;
+
+&lt;video autoplay=&quot;&quot; loop=&quot;&quot; playsinline=&quot;&quot; poster=&quot;/img/beaker-site-demo-poster.png&quot; src=&quot;/beaker-site-demo.mp4&quot;&gt;&lt;/video&gt;
+
+&lt;p&gt;The new release includes a set of builtin tools which open side-by-side with your page. These include a source editor, files explorer, and a &lt;a href=&quot;https://docs.beakerbrowser.com/advanced/webterm&quot;&gt;new Web-based terminal&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Beaker 1.0 also includes tools for quickly forking, comparing, and merging Hyperdrives. With these tools, you can collaborate on your development without ever leaving the browser.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;a-new-set-of-web-apis&quot;&gt;A new set of Web APIs&lt;/h3&gt;
+
+&lt;p&gt;For building peer-to-peer applications, it’s important you have a powerful set of APIs to replace the server. In 1.0, we’ve overhauled Beaker’s Web APIs to provide a ton of useful tools:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.beakerbrowser.com/apis/beaker.hyperdrive&quot;&gt;beaker.hyperdrive&lt;/a&gt; - query, read, and write files on Hyperdrives.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.beakerbrowser.com/apis/beaker.peersockets&quot;&gt;beaker.peersockets&lt;/a&gt; - send and receive messages with peers on a Hyperdrive.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.beakerbrowser.com/apis/beaker.contacts&quot;&gt;beaker.contacts&lt;/a&gt; - read and update the user’s personal address book (with permission).&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.beakerbrowser.com/apis/beaker.markdown&quot;&gt;beaker.markdown&lt;/a&gt; - convert Markdown into HTML.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.beakerbrowser.com/apis/beaker.shell&quot;&gt;beaker.shell&lt;/a&gt; - create prompts to select files and hyperdrives.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.beakerbrowser.com/apis/beaker.terminal&quot;&gt;beaker.terminal&lt;/a&gt; - register “page commands” which can be invoked from &lt;a href=&quot;(https://docs.beakerbrowser.com/advanced/webterm)&quot;&gt;Webterm&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;how-we-got-here&quot;&gt;How we got here&lt;/h3&gt;
+
+&lt;p&gt;The past year has been an intense process!&lt;/p&gt;
+
+&lt;p&gt;At the end of 2018, we raised a modest angel round which enabled us to work full-time on Beaker. We decided to use that money to go heads-down on new versions of the p2p networking protocol and the browser itself. The 1.0 beta is the result of that year of work.&lt;/p&gt;
+
+&lt;p&gt;I’d like to extend a special thanks to my team mates, &lt;a href=&quot;https://twitter.com/mafintosh/&quot;&gt;Mathias Buus&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/andrewosh/&quot;&gt;Andrew Osheroff&lt;/a&gt;, for working so hard to get us here, to &lt;a href=&quot;https://twitter.com/pwang&quot;&gt;Peter Wang&lt;/a&gt; for his continuous help and advice. I’d also like to thank the members of the Dat community for their dedication and hard work.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;let-us-know-what-you-think&quot;&gt;Let us know what you think!&lt;/h3&gt;
+
+&lt;p&gt;This is a beta release so you may run into issues. We’re going to be testing a lot of new browser features and finding out how the new protocol scales. If you run into any bumps, &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues&quot;&gt;open an issue&lt;/a&gt; or ask questions in &lt;a href=&quot;https://github.com/beakerbrowser/beaker/discussions&quot;&gt;github discussions&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p class=&quot;install-link&quot;&gt;
+  &lt;a href=&quot;/install/&quot;&gt;&lt;img src=&quot;/img/logo/logo-blue.png&quot; /&gt;&lt;/a&gt;
+  &lt;a class=&quot;btn&quot; title=&quot;Download the Beaker 1.0 Beta now&quot; href=&quot;/install/&quot;&gt;Download the Beaker 1.0 Beta now&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Additional links:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.beakerbrowser.com/&quot;&gt;Beaker Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://beaker.dev/&quot;&gt;Beaker Developer Portal&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hypercore-protocol.org/&quot;&gt;Hypercore Protocol&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/beakerbrowser/beaker&quot;&gt;GitHub Repo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/beakerbrowser/beaker/discussions&quot;&gt;Beaker GH Discussions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;style&gt;
+  video {
+    display: block;
+    max-width: 100%;
+    width: 600px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #0003;
+  }
+
+  .install-link {
+    text-align: center;
+    margin: 40px 0 !important;
+  }
+
+  .install-link img {
+    display: block;
+    margin: 0 auto 20px;
+    width: 100px;
+  }
+
+  .blog .post .home-cta {
+    background: #fafafd;
+    padding: 30px 30px;
+    margin: 0 -30px;
+    border-radius: 8px;
+  }
+
+  .blog .post .home-cta h3 {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .blog .post .home-cta p {
+    margin: 30px 0 0;
+    text-align: center;
+  }
+
+  .blog .post .home-cta .btn {
+    background: #fff;
+  }
+
+  .blog .post .featuregrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0 40px;
+  }
+
+  @media (max-width: 1050px) {
+    .blog .post .featuregrid {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px 60px;
+    }
+  }
+
+  @media (max-width: 750px) {
+    .blog .post .featuregrid {
+      grid-template-columns: 1fr;
+      grid-gap: 40px;
+      margin-top: 40px;
+    }
+  }
+
+  .blog .post .featuregrid-col {
+    text-align: center;
+  }
+
+  .blog .post .featuregrid-col h4 {
+    margin: 10px 0;
+  }
+
+  .blog .post .featuregrid-col p {
+    margin: 0;
+  }
+
+  @media (max-width: 1050px) {
+    .blog .post .featuregrid-col h4 {
+      margin-top: 20px;
+    }
+  }
+
+  @media (max-width: 750px) {
+    .blog .post .featuregrid-col h4 {
+      padding: 0 10px 0;
+    }
+  }
+
+  .blog .post .featuregrid-col p {
+    margin-bottom: 0;
+  }
+
+  .blog .post .featuregrid .img-container {
+    display: flex;
+    height: 160px;
+  }
+
+  .blog .post .featuregrid .img-container img {
+    margin: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px #0005;
+    width: 260px;
+  }
+
+  @media (max-width: 750px) {
+    .blog .post .featuregrid .img-container {
+      height: auto;
+      margin-bottom: 30px;
+    }
+
+    .blog .post .featuregrid .img-container img {
+      max-width: 260px;
+    }
+  }
+&lt;/style&gt;
+
+</description>
+        <pubDate>Thu, 14 May 2020 00:00:00 -0500</pubDate>
+        <link>https://beakerbrowser.com/2020/05/14/beaker-1-0-beta.html</link>
+        <guid isPermaLink="true">https://beakerbrowser.com/2020/05/14/beaker-1-0-beta.html</guid>
+        
+        
+      </item>
     
   </channel>
 </rss>
