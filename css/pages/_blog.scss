@@ -63,7 +63,7 @@
 
     &.pageview {
       max-width: 750px;
-      font-size: 15px;
+      font-size: 16px;
     }
 
     &:first-of-type {
@@ -119,11 +119,18 @@
   
     p,
     ul,
-    ol,
-    aside {
-      font-size: 13.5px;
-      font-size: 15px;
+    ol {
+      font-size: 16px;
       color: #222;
+    }
+
+    aside {
+      display: block;
+      margin: 0 0 20px;
+      font-size: 15px;
+      color: #555;
+      background: #fafafa;
+      text-align: center;
     }
   
     .columns,
@@ -233,6 +240,21 @@
 
     figure img {
       margin: 0 auto 10px;
+    }
+
+    .tldr {
+      border-radius: 8px;
+      border: 1px solid $primary;
+      margin: 24px 20px;
+      padding: 28px 32px;
+
+      p {
+        color: $gray--very-dark;
+      }
+
+      & > :last-child {
+        margin-bottom: 0;
+      }
     }
   }
 

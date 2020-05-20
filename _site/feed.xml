@@ -5,9 +5,50 @@
     <description></description>
     <link>https://beakerbrowser.com/</link>
     <atom:link href="https://beakerbrowser.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 19 May 2020 15:51:41 -0500</pubDate>
-    <lastBuildDate>Tue, 19 May 2020 15:51:41 -0500</lastBuildDate>
+    <pubDate>Wed, 20 May 2020 15:55:44 -0500</pubDate>
+    <lastBuildDate>Wed, 20 May 2020 15:55:44 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Beaker 1.0 Beta 2</title>
+        <description>&lt;p&gt;Thanks everybody for the support and feedback with the &lt;a href=&quot;/2020/05/14/beaker-1-0-beta.html&quot;&gt;1.0 Beta release&lt;/a&gt;. We’ve been handling issue reports as quickly as we can, and this release is our first batch of improvements based on feedback.&lt;/p&gt;
+
+&lt;p&gt;You can &lt;a href=&quot;/install/&quot;&gt;download the latest here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;improvements&quot;&gt;Improvements&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Beaker now provides a progress-bar during file imports &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1612&quot;&gt;#1612&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The builtin editor now provides much better feedback about loading state &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1589&quot;&gt;#1589&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;You can now configure a default zoom-level on pages via the settings &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1572&quot;&gt;#1572&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Web APIs are now much faster when passing “binary data” and will return a &lt;code class=&quot;highlighter-rouge&quot;&gt;Uint8Array&lt;/code&gt; instead of an &lt;code class=&quot;highlighter-rouge&quot;&gt;ArrayBuffer&lt;/code&gt; &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1616&quot;&gt;#1616&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Added tab animations when a new tab is opened &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1624&quot;&gt;#1624&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Improved the clarity of the perm prompt for reading the address book &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1587&quot;&gt;#1587&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Added an explanation for the “new profile” creation during the setup flow &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1586&quot;&gt;#1586&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Improved initial setup performance&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;bugfixes&quot;&gt;Bugfixes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The Linux .AppImage distribution should now work correctly &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1568&quot;&gt;#1568&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fixed an issue where clicking “host this drive” would fail silently &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1575&quot;&gt;#1575&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fixed an issue in the editor where performance would degrade over multiple saves &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1636&quot;&gt;#1636&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fixed entitlements on macOS to allow camera &amp;amp; mic access &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1571&quot;&gt;#1571&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fixed various shell-window UI failures &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1605&quot;&gt;#1605&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fixed a critical error in the dat -&amp;gt; hyperdrive converter on Windows &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1611&quot;&gt;#1611&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fixed the build tooling for &lt;code class=&quot;highlighter-rouge&quot;&gt;npm run burnthemall&lt;/code&gt; on Windows &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1592&quot;&gt;#1592&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Markdown rendering now respects the original spec’s rules around line-breaks &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1610&quot;&gt;#1610&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fixed scrolling issues in the settings’s log views &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1588&quot;&gt;#1588&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Moved the files-explorer into Beaker (instead of https://hyperdrive.network) improving performance and UX clarity &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1580&quot;&gt;#1580&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 20 May 2020 00:00:00 -0500</pubDate>
+        <link>https://beakerbrowser.com/2020/05/20/beaker-1-0-beta-2.html</link>
+        <guid isPermaLink="true">https://beakerbrowser.com/2020/05/20/beaker-1-0-beta-2.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Announcing the Beaker 1.0 Beta</title>
