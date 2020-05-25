@@ -1,5 +1,5 @@
 .blog-breadcrumbs {
-  background: #fafafa;
+  background: #f4f4fa;
   padding: 8px 14px;
   font-size: 15px;
   margin-bottom: 40px;
@@ -242,19 +242,26 @@
       margin: 0 auto 10px;
     }
 
-    .tldr {
-      border-radius: 8px;
-      border: 1px solid $primary;
-      margin: 24px 20px;
+    .tldr,
+    .highlighted-blurb {
+      margin: 0 -32px 24px;
       padding: 28px 32px;
-
-      p {
-        color: $gray--very-dark;
-      }
 
       & > :last-child {
         margin-bottom: 0;
       }
+    }
+
+    .tldr {
+      background: #f4f4fa;
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .highlighted-blurb {
+      border: 1px dashed $blue;
     }
   }
 
