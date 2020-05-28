@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Beaker 1.0, Beta 2</title>
+    <title>Beaker 1.0, Beta 3</title>
     <meta name="viewport" content="width=device-width">
 
     <!-- RSS feed -->
@@ -22,8 +22,8 @@
 
     
       <meta name="twitter:site" content="@BeakerBrowser" />
-      <meta name="twitter:title" content="Beaker 1.0, Beta 2"/>
-      <meta name="twitter:description" content="Beaker 1.0 Beta 2 (1.0.0-prerelease.2) release notes.
+      <meta name="twitter:title" content="Beaker 1.0, Beta 3"/>
+      <meta name="twitter:description" content="Beaker 1.0 Beta 3 (1.0.0-prerelease.3) release notes.
 "/>
       
         <meta name="twitter:card" content="summary" />
@@ -63,7 +63,7 @@
 
     <div class="container blog">
       
-        <h1 class="title">Beaker 1.0, Beta 2</h1>
+        <h1 class="title">Beaker 1.0, Beta 3</h1>
       
 
       
@@ -74,41 +74,35 @@
             <span class="info">
               <a href="https://twitter.com/pfrazee" class="author">Paul Frazee</a>
                /
-              <time datetime="2020-05-20 00:00:00 -0500" class="time">
-                May 20, 2020
+              <time datetime="2020-05-28 00:00:00 -0500" class="time">
+                May 28, 2020
               </time>
             </span>
           </p>
-          <p>Thanks everybody for the support and feedback with the <a href="/2020/05/14/beaker-1-0-beta.html">1.0 Beta release</a>. We’ve been handling issue reports as quickly as we can, and this release is our first batch of improvements based on feedback.</p>
+          <p>Thanks everybody for the support and feedback with the <a href="/2020/05/14/beaker-1-0-beta.html">1.0 Beta release</a>. We’ve been handling issue reports as quickly as we can, and this release is our second batch of improvements based on feedback.</p>
 
 <p>You can <a href="/install/">download the latest here</a>.</p>
-
-<h2 id="improvements">Improvements</h2>
-
-<ul>
-  <li>Beaker now provides a progress-bar during file imports <a href="https://github.com/beakerbrowser/beaker/issues/1612">#1612</a></li>
-  <li>The builtin editor now provides much better feedback about loading state <a href="https://github.com/beakerbrowser/beaker/issues/1589">#1589</a></li>
-  <li>You can now configure a default zoom-level on pages via the settings <a href="https://github.com/beakerbrowser/beaker/issues/1572">#1572</a></li>
-  <li>Web APIs are now much faster when passing “binary data” and will return a <code class="highlighter-rouge">Uint8Array</code> instead of an <code class="highlighter-rouge">ArrayBuffer</code> <a href="https://github.com/beakerbrowser/beaker/issues/1616">#1616</a></li>
-  <li>Added tab animations when a new tab is opened <a href="https://github.com/beakerbrowser/beaker/issues/1624">#1624</a></li>
-  <li>Improved the clarity of the perm prompt for reading the address book <a href="https://github.com/beakerbrowser/beaker/issues/1587">#1587</a></li>
-  <li>Added an explanation for the “new profile” creation during the setup flow <a href="https://github.com/beakerbrowser/beaker/issues/1586">#1586</a></li>
-  <li>Improved initial setup performance</li>
-</ul>
 
 <h2 id="bugfixes">Bugfixes</h2>
 
 <ul>
-  <li>The Linux .AppImage distribution should now work correctly <a href="https://github.com/beakerbrowser/beaker/issues/1568">#1568</a></li>
-  <li>Fixed an issue where clicking “host this drive” would fail silently <a href="https://github.com/beakerbrowser/beaker/issues/1575">#1575</a></li>
-  <li>Fixed an issue in the editor where performance would degrade over multiple saves <a href="https://github.com/beakerbrowser/beaker/issues/1636">#1636</a></li>
-  <li>Fixed entitlements on macOS to allow camera &amp; mic access <a href="https://github.com/beakerbrowser/beaker/issues/1571">#1571</a></li>
-  <li>Fixed various shell-window UI failures <a href="https://github.com/beakerbrowser/beaker/issues/1605">#1605</a></li>
-  <li>Fixed a critical error in the dat -&gt; hyperdrive converter on Windows <a href="https://github.com/beakerbrowser/beaker/issues/1611">#1611</a></li>
-  <li>Fixed the build tooling for <code class="highlighter-rouge">npm run burnthemall</code> on Windows <a href="https://github.com/beakerbrowser/beaker/issues/1592">#1592</a></li>
-  <li>Markdown rendering now respects the original spec’s rules around line-breaks <a href="https://github.com/beakerbrowser/beaker/issues/1610">#1610</a></li>
-  <li>Fixed scrolling issues in the settings’s log views <a href="https://github.com/beakerbrowser/beaker/issues/1588">#1588</a></li>
-  <li>Moved the files-explorer into Beaker (instead of https://hyperdrive.network) improving performance and UX clarity <a href="https://github.com/beakerbrowser/beaker/issues/1580">#1580</a></li>
+  <li>Fix to the dat:// converter on windows <a href="https://github.com/beakerbrowser/beaker/issues/1611">#1611</a></li>
+  <li>Improvements to the rendering of the peers menu <a href="https://github.com/beakerbrowser/beaker/issues/1670">#1670</a></li>
+  <li>Browsing session (previously open tabs) now correctly restore from tray <a href="https://github.com/beakerbrowser/beaker/issues/1666">#1666</a></li>
+  <li>Fix to the auto updater <a href="https://github.com/beakerbrowser/beaker/issues/1677">#1677</a></li>
+  <li>Fix to the editor’s file export <a href="https://github.com/beakerbrowser/beaker/issues/1676">#1676</a></li>
+  <li>User directory now correctly includes a “add to address book” button <a href="https://github.com/beakerbrowser/beaker/issues/1564">#1564</a></li>
+  <li>The mv command now correctly handles targets with spaces in their name <a href="https://github.com/beakerbrowser/beaker/issues/1651">#1651</a></li>
+  <li>The beforeunload event now workss correcty <a href="https://github.com/beakerbrowser/beaker/issues/1645">#1645</a></li>
+  <li>The Beaker icon on Mac OS dark menu bar now renders correctly <a href="https://github.com/beakerbrowser/beaker/issues/1629">#1629</a></li>
+  <li>“My Drives” and “Hosting” will no longer fail to load if a drive has no title <a href="https://github.com/beakerbrowser/beaker/issues/1644">#1644</a></li>
+  <li>Can no longer cause the editor to accidentally navigate by drag&amp;drop <a href="https://github.com/beakerbrowser/beaker/issues/1647">#1647</a></li>
+  <li>“Pin to start page” in the bookmark dropdown is now clickable <a href="https://github.com/beakerbrowser/beaker/issues/1667">#1667</a></li>
+  <li>Fixed an error which was emitted when doing a “hard reload” <a href="https://github.com/beakerbrowser/beaker/issues/1646">#1646</a></li>
+  <li>WebTerm now has an “exit” command <a href="https://github.com/beakerbrowser/beaker/issues/1596">#1596</a></li>
+  <li>Address bar no longer incorrecty holds the focus when a URL is entered from address bar <a href="https://github.com/beakerbrowser/beaker/issues/1535">#1535</a></li>
+  <li>Command–L now correctly selects the text in the URL bar <a href="https://github.com/beakerbrowser/beaker/issues/1671">#1671</a></li>
+  <li>Hyperdrive asset-loading fixes <a href="https://github.com/beakerbrowser/beaker/issues/1569">#1569</a></li>
 </ul>
 
         </main>

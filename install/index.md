@@ -7,7 +7,7 @@ title: Installing Beaker
 
 <div class="columns">
   <div class="col col-1-3 installers">
-    <a href="https://github.com/beakerbrowser/beaker/releases/download/1.0.0-prerelease.2/beaker-browser-1.0.0-prerelease.2.dmg" class="installer macos" target="_blank">
+    <a href="https://github.com/beakerbrowser/beaker/releases/download/1.0.0-prerelease.3/beaker-browser-1.0.0-prerelease.3.dmg" class="installer macos" target="_blank">
       <h2 class="platform">macOS</h2>
       <i class="platform-icon fa fa-apple"></i>
       <p class="pseudolink">
@@ -16,7 +16,7 @@ title: Installing Beaker
       </p>
     </a>
 
-    <a href="https://github.com/beakerbrowser/beaker/releases/download/1.0.0-prerelease.2/beaker-browser-setup-1.0.0-prerelease.2.exe" class="col col-1-3 installer windows" target="_blank">
+    <a href="https://github.com/beakerbrowser/beaker/releases/download/1.0.0-prerelease.3/beaker-browser-setup-1.0.0-prerelease.3.exe" class="col col-1-3 installer windows" target="_blank">
       <h2 class="platform">Windows</h2>
       <i class="platform-icon fa fa-windows"></i>
       <p class="pseudolink">
@@ -25,7 +25,7 @@ title: Installing Beaker
       </p>
     </a>
 
-    <a href="https://github.com/beakerbrowser/beaker/releases/download/1.0.0-prerelease.2/Beaker.Browser-1.0.0-prerelease.2.AppImage" class="col col-1-3 installer linux" target="_blank">
+    <a href="https://github.com/beakerbrowser/beaker/releases/download/1.0.0-prerelease.3/Beaker.Browser-1.0.0-prerelease.3.AppImage" class="col col-1-3 installer linux" target="_blank">
       <h2 class="platform">Linux</h2>
       <i class="platform-icon fa fa-linux"></i>
 
@@ -43,7 +43,7 @@ Beaker will automatically keep up-to-date on macOS and Windows, but not on Linux
 
 [Instructions for building from source <span class="fa fa-external-link"></span>](https://github.com/beakerbrowser/beaker#building-from-source)
 
-**Changelog**: [1.0 Beta 2](/2020/05/20/beaker-1-0-beta-2.html), [1.0 Beta](/2020/05/14/beaker-1-0-beta.html)
+**Changelog**:  [1.0 Beta 3](/2020/05/28/beaker-1-0-beta-3.html), [1.0 Beta 2](/2020/05/20/beaker-1-0-beta-2.html), [1.0 Beta](/2020/05/14/beaker-1-0-beta.html)
 
 <div class="release-notes" markdown="1">
 

@@ -5,12 +5,47 @@
     <description></description>
     <link>https://beakerbrowser.com/</link>
     <atom:link href="https://beakerbrowser.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 25 May 2020 13:32:21 -0500</pubDate>
-    <lastBuildDate>Mon, 25 May 2020 13:32:21 -0500</lastBuildDate>
+    <pubDate>Thu, 28 May 2020 14:38:50 -0500</pubDate>
+    <lastBuildDate>Thu, 28 May 2020 14:38:50 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
-        <title>Beaker 1.0 Beta 2</title>
+        <title>Beaker 1.0, Beta 3</title>
+        <description>&lt;p&gt;Thanks everybody for the support and feedback with the &lt;a href=&quot;/2020/05/14/beaker-1-0-beta.html&quot;&gt;1.0 Beta release&lt;/a&gt;. We’ve been handling issue reports as quickly as we can, and this release is our second batch of improvements based on feedback.&lt;/p&gt;
+
+&lt;p&gt;You can &lt;a href=&quot;/install/&quot;&gt;download the latest here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;bugfixes&quot;&gt;Bugfixes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fix to the dat:// converter on windows &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1611&quot;&gt;#1611&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Improvements to the rendering of the peers menu &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1670&quot;&gt;#1670&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Browsing session (previously open tabs) now correctly restore from tray &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1666&quot;&gt;#1666&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fix to the auto updater &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1677&quot;&gt;#1677&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fix to the editor’s file export &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1676&quot;&gt;#1676&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;User directory now correctly includes a “add to address book” button &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1564&quot;&gt;#1564&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The mv command now correctly handles targets with spaces in their name &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1651&quot;&gt;#1651&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The beforeunload event now workss correcty &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1645&quot;&gt;#1645&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The Beaker icon on Mac OS dark menu bar now renders correctly &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1629&quot;&gt;#1629&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;“My Drives” and “Hosting” will no longer fail to load if a drive has no title &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1644&quot;&gt;#1644&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Can no longer cause the editor to accidentally navigate by drag&amp;amp;drop &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1647&quot;&gt;#1647&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;“Pin to start page” in the bookmark dropdown is now clickable &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1667&quot;&gt;#1667&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fixed an error which was emitted when doing a “hard reload” &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1646&quot;&gt;#1646&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;WebTerm now has an “exit” command &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1596&quot;&gt;#1596&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Address bar no longer incorrecty holds the focus when a URL is entered from address bar &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1535&quot;&gt;#1535&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Command–L now correctly selects the text in the URL bar &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1671&quot;&gt;#1671&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Hyperdrive asset-loading fixes &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1569&quot;&gt;#1569&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 28 May 2020 00:00:00 -0500</pubDate>
+        <link>https://beakerbrowser.com/2020/05/28/beaker-1-0-beta-3.html</link>
+        <guid isPermaLink="true">https://beakerbrowser.com/2020/05/28/beaker-1-0-beta-3.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Beaker 1.0, Beta 2</title>
         <description>&lt;p&gt;Thanks everybody for the support and feedback with the &lt;a href=&quot;/2020/05/14/beaker-1-0-beta.html&quot;&gt;1.0 Beta release&lt;/a&gt;. We’ve been handling issue reports as quickly as we can, and this release is our first batch of improvements based on feedback.&lt;/p&gt;
 
 &lt;p&gt;You can &lt;a href=&quot;/install/&quot;&gt;download the latest here&lt;/a&gt;.&lt;/p&gt;
