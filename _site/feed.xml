@@ -5,8 +5,8 @@
     <description></description>
     <link>https://beakerbrowser.com/</link>
     <atom:link href="https://beakerbrowser.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 04 Jun 2020 17:05:07 -0500</pubDate>
-    <lastBuildDate>Thu, 04 Jun 2020 17:05:07 -0500</lastBuildDate>
+    <pubDate>Thu, 04 Jun 2020 17:23:10 -0500</pubDate>
+    <lastBuildDate>Thu, 04 Jun 2020 17:23:10 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -64,7 +64,7 @@
   &lt;li&gt;Add &lt;code class=&quot;highlighter-rouge&quot;&gt;commands reload&lt;/code&gt; command to webterm &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1708&quot;&gt;#1708&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Add “recently visited” to start page &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1705&quot;&gt;#1705&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Add ‘json’ encoding to readFile/writeFile &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1703&quot;&gt;#1703&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Better “site identity” information for Beaker’s builtin interfacaes &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1678&quot;&gt;#1678&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Better “site identity” information for Beaker’s builtin interfaces &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1678&quot;&gt;#1678&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;bugfixes&quot;&gt;Bugfixes&lt;/h2&gt;
