@@ -5,9 +5,88 @@
     <description></description>
     <link>https://beakerbrowser.com/</link>
     <atom:link href="https://beakerbrowser.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 28 May 2020 14:42:38 -0500</pubDate>
-    <lastBuildDate>Thu, 28 May 2020 14:42:38 -0500</lastBuildDate>
+    <pubDate>Thu, 04 Jun 2020 13:43:52 -0500</pubDate>
+    <lastBuildDate>Thu, 04 Jun 2020 13:43:52 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Beaker 1.0, Beta 4</title>
+        <description>&lt;p&gt;This week has a couple of new exciting features plus some bugfixes! Let’s dive into the highlights. The full changelog is listed at the bottom.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center; margin: 2em 0&quot;&gt;
+&lt;a class=&quot;btn&quot; title=&quot;Download the Beaker 1.0, Beta 4&quot; href=&quot;/install/&quot;&gt;Download Beaker 1.0, Beta 4&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;dat-readonly-browsing&quot;&gt;dat:// readonly browsing&lt;/h2&gt;
+
+&lt;p&gt;When Beaker updated from the Dat protocol to the new &lt;a href=&quot;https://hypercore-protocol.org&quot;&gt;Hypercore Protocol&lt;/a&gt;, we lost the ability to visit &lt;code class=&quot;highlighter-rouge&quot;&gt;dat://&lt;/code&gt; sites. We got a lot of feedback that this made upgrading to the new protocol difficult, so we implemented a readonly browsing mode for &lt;code class=&quot;highlighter-rouge&quot;&gt;dat://&lt;/code&gt; to make the process easier.&lt;/p&gt;
+
+&lt;h2 id=&quot;folder-sync&quot;&gt;Folder sync&lt;/h2&gt;
+
+&lt;p&gt;Another Beaker feature that was lost with the 1.0 beta was a simple way to auto-sync with a folder outside of Beaker. This release brings back that feature. &lt;a href=&quot;https://docs.beakerbrowser.com/intermediate/syncing-with-folders&quot;&gt;Read more about it here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;json-encoding&quot;&gt;‘json’ encoding&lt;/h2&gt;
+
+&lt;p&gt;Reading and writing JSON is such a common pattern that we decided to make it easier. Now you can specify a &lt;code class=&quot;highlighter-rouge&quot;&gt;'json'&lt;/code&gt; encoding when you read or write a file to have the API accept or emit objects.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myDrive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;writeFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/foo.json'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'world'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'json'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myDrive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;readFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/foo.json'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'json'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;new-forkdrive-params&quot;&gt;New &lt;code class=&quot;highlighter-rouge&quot;&gt;forkDrive&lt;/code&gt; params&lt;/h2&gt;
+
+&lt;p&gt;“Forking” is a way to quickly duplicate a hyperdrive, and it comes in two modes: “attached” (where the new drive is linked to the original as a fork) or “detached” (where the new drive is an independent copy). We decided to update the API so that you can create detached forks. You can also specify a title and description, and skip the “create” modal.&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;beaker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hyperdrive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;forkDrive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'My copy'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'A copy of the original'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;detached&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;prompt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: center; margin: 3em 0&quot;&gt;
+&lt;a class=&quot;btn&quot; title=&quot;Download the Beaker 1.0, Beta 4&quot; href=&quot;/install/&quot;&gt;Download Beaker 1.0, Beta 4&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;improvements&quot;&gt;Improvements&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;New &lt;code class=&quot;highlighter-rouge&quot;&gt;beaker.hyperdrive.forkDrive&lt;/code&gt; API parameters &lt;a href=&quot;https://github.com/beakerbrowser/issues/1694&quot;&gt;#1694&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Add Folder-sync &lt;a href=&quot;https://github.com/beakerbrowser/issues/1600&quot;&gt;#1600&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Add legacy dat:// browsing &lt;a href=&quot;https://github.com/beakerbrowser/issues/1674&quot;&gt;#1674&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Add &lt;code class=&quot;highlighter-rouge&quot;&gt;commands reload&lt;/code&gt; command to webterm &lt;a href=&quot;https://github.com/beakerbrowser/issues/1708&quot;&gt;#1708&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Add “recently visited” to start page &lt;a href=&quot;https://github.com/beakerbrowser/issues/1705&quot;&gt;#1705&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Add ‘json’ encoding to readFile/writeFile &lt;a href=&quot;https://github.com/beakerbrowser/issues/1703&quot;&gt;#1703&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Better “site identity” information for Beaker’s builtin interfacaes &lt;a href=&quot;https://github.com/beakerbrowser/issues/1678&quot;&gt;#1678&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;bugfixes&quot;&gt;Bugfixes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fixed issue where file manager doesn’t import everything on drag and drop &lt;a href=&quot;https://github.com/beakerbrowser/issues/1695&quot;&gt;#1695&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Closing a prompt modal now returns focus to window &lt;a href=&quot;https://github.com/beakerbrowser/issues/1709&quot;&gt;#1709&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fixed issues with dat to hyperdrive conversion &lt;a href=&quot;https://github.com/beakerbrowser/issues/1698&quot;&gt;#1698&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Peers will no longer appear joining unshared drive &lt;a href=&quot;https://github.com/beakerbrowser/issues/1598&quot;&gt;#1598&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Editor now shows “loading” status on folder clicks &lt;a href=&quot;https://github.com/beakerbrowser/issues/1691&quot;&gt;#1691&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Settings “Network Stats” view now provides better loading and error feedback &lt;a href=&quot;https://github.com/beakerbrowser/issues/1655&quot;&gt;#1655&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fixed issues where the query() limit param was incorrectly applied &lt;a href=&quot;https://github.com/beakerbrowser/issues/1702&quot;&gt;#1702&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Javascript in &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;script type=&quot;module&quot;&amp;gt;&lt;/code&gt; now syntax-highlights correctly in the editor &lt;a href=&quot;https://github.com/beakerbrowser/issues/1637&quot;&gt;#1637&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Modals now support the context menu &lt;a href=&quot;https://github.com/beakerbrowser/issues/1561&quot;&gt;#1561&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&quot;text-align: center; margin: 3em 0&quot;&gt;
+&lt;a class=&quot;btn&quot; title=&quot;Download the Beaker 1.0, Beta 4&quot; href=&quot;/install/&quot;&gt;Download Beaker 1.0, Beta 4&lt;/a&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 04 Jun 2020 00:00:00 -0500</pubDate>
+        <link>https://beakerbrowser.com/2020/06/04/beaker-1-0-beta-4.html</link>
+        <guid isPermaLink="true">https://beakerbrowser.com/2020/06/04/beaker-1-0-beta-4.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Beaker 1.0, Beta 3</title>
