@@ -5,8 +5,8 @@
     <description></description>
     <link>https://beakerbrowser.com/</link>
     <atom:link href="https://beakerbrowser.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 04 Jun 2020 13:43:52 -0500</pubDate>
-    <lastBuildDate>Thu, 04 Jun 2020 13:43:52 -0500</lastBuildDate>
+    <pubDate>Thu, 04 Jun 2020 13:50:32 -0500</pubDate>
+    <lastBuildDate>Thu, 04 Jun 2020 13:50:32 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -19,9 +19,13 @@
 
 &lt;h2 id=&quot;dat-readonly-browsing&quot;&gt;dat:// readonly browsing&lt;/h2&gt;
 
+&lt;p&gt;&lt;img src=&quot;/img/posts/beaker-1-0-beta-4/dat-browsing.png&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;When Beaker updated from the Dat protocol to the new &lt;a href=&quot;https://hypercore-protocol.org&quot;&gt;Hypercore Protocol&lt;/a&gt;, we lost the ability to visit &lt;code class=&quot;highlighter-rouge&quot;&gt;dat://&lt;/code&gt; sites. We got a lot of feedback that this made upgrading to the new protocol difficult, so we implemented a readonly browsing mode for &lt;code class=&quot;highlighter-rouge&quot;&gt;dat://&lt;/code&gt; to make the process easier.&lt;/p&gt;
 
 &lt;h2 id=&quot;folder-sync&quot;&gt;Folder sync&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/beaker-1-0-beta-4/folder-sync-controls.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Another Beaker feature that was lost with the 1.0 beta was a simple way to auto-sync with a folder outside of Beaker. This release brings back that feature. &lt;a href=&quot;https://docs.beakerbrowser.com/intermediate/syncing-with-folders&quot;&gt;Read more about it here&lt;/a&gt;.&lt;/p&gt;
 
@@ -80,6 +84,15 @@
 &lt;div style=&quot;text-align: center; margin: 3em 0&quot;&gt;
 &lt;a class=&quot;btn&quot; title=&quot;Download the Beaker 1.0, Beta 4&quot; href=&quot;/install/&quot;&gt;Download Beaker 1.0, Beta 4&lt;/a&gt;
 &lt;/div&gt;
+
+&lt;style&gt;
+  img {
+    display: block;
+    margin: 1.5em auto;
+    border: 1px solid #ccd;
+  }
+&lt;/style&gt;
+
 </description>
         <pubDate>Thu, 04 Jun 2020 00:00:00 -0500</pubDate>
         <link>https://beakerbrowser.com/2020/06/04/beaker-1-0-beta-4.html</link>
