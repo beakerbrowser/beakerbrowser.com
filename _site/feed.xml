@@ -5,8 +5,8 @@
     <description></description>
     <link>https://beakerbrowser.com/</link>
     <atom:link href="https://beakerbrowser.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 04 Jun 2020 13:50:32 -0500</pubDate>
-    <lastBuildDate>Thu, 04 Jun 2020 13:50:32 -0500</lastBuildDate>
+    <pubDate>Thu, 04 Jun 2020 16:20:48 -0500</pubDate>
+    <lastBuildDate>Thu, 04 Jun 2020 16:20:48 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -86,7 +86,7 @@
 &lt;/div&gt;
 
 &lt;style&gt;
-  img {
+  .post img {
     display: block;
     margin: 1.5em auto;
     border: 1px solid #ccd;
