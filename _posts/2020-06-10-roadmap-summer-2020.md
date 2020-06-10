@@ -131,7 +131,7 @@ Thank you everybody for your support and feedback! We're looking forward to gett
 If you missed them, we had two videos go online recently:
 
  - ["Massively Multiplayer Open Computing" (talk)](https://youtu.be/x3ShGXYCPWQ)
- - ["Intro to Beaker" (demo/workshop/q&a)](https://youtu.be/x3ShGXYCPWQ)
+ - ["Intro to Beaker" (demo/workshop/q&a)](https://www.youtube.com/watch?v=zwR6YyConQI&t=3222s)
 
 <div style="text-align: center; margin: 3em 0 0">
 <a class="btn" title="Try out the Beaker Browser Today" href="/install/">Try out the Beaker Browser Today</a>
