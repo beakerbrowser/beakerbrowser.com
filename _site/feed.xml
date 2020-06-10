@@ -5,9 +5,153 @@
     <description></description>
     <link>https://beakerbrowser.com/</link>
     <atom:link href="https://beakerbrowser.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 04 Jun 2020 17:23:10 -0500</pubDate>
-    <lastBuildDate>Thu, 04 Jun 2020 17:23:10 -0500</lastBuildDate>
+    <pubDate>Wed, 10 Jun 2020 12:31:37 -0500</pubDate>
+    <lastBuildDate>Wed, 10 Jun 2020 12:31:37 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Beaker Roadmap: Summer 2020</title>
+        <description>&lt;div class=&quot;tldr&quot;&gt;
+  &lt;p&gt;&lt;a href=&quot;/&quot;&gt;Beaker Browser&lt;/a&gt; is a peer-to-peer browser and computing platform. In this post, we’ll outline our development roadmap for Summer 2020. &lt;a href=&quot;/&quot;&gt;Learn more here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This spring, we released the 1.0 beta of Beaker Browser which included the Hypercore Protocol for peer-to-peer sites and applications. Since then, users have created wikis, WinAmp players, an improved fork of the microblogging app, a 2d “walk and chat” game, and over 300 personal sites.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/roadmap-summer-2020/user-projects.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We’re really excited about what we’ve seen and we’re happy with the feedback we’ve received. The feedback has given us a lot of insight into where the Beaker APIs hold up and where they don’t. Before we dig into the updates we plan to make, let’s talk a little bit about the vision for Beaker.&lt;/p&gt;
+
+&lt;h2 id=&quot;mass-open-computing&quot;&gt;Mass open computing&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://youtu.be/x3ShGXYCPWQ&quot;&gt;As we discussed in our recent talk&lt;/a&gt;, our vision for Beaker is “mass open computing.” We want to hack in a highly connected environment. We want forking to be trivial. We want the browser to run large-scale networked programs. We don’t want servers to be a barrier to building on the Web.&lt;/p&gt;
+
+&lt;p&gt;If hacking is going to be fun – and useful – then we need powerful APIs. Devs should be able to create services that work on huge datasets. We should be building search engines, knowledge databases, and large-scale aggregators. Fun hacking also means convenient APIs. It shouldn’t be hard to connect to a specific person, or to encrypt a file, or to keep data online. These are the basic building blocks of applications, and they ought to feel intuitive.&lt;/p&gt;
+
+&lt;p&gt;With this vision in mind, we discussed how to focus the roadmap and decided that adding more APIs and capabilities is the right focus for our summer. We outlined four priorities:&lt;/p&gt;
+
+&lt;div class=&quot;highlighted-blurb&quot; style=&quot;font-weight: bold&quot;&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Network-services API&lt;/li&gt;
+    &lt;li&gt;Background processes and Beaker Node&lt;/li&gt;
+    &lt;li&gt;Hypercore APIs&lt;/li&gt;
+    &lt;li&gt;Sodium (crypto) APIs&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We’ve already started on each of these updates and we think most of them will be released over the summer. Let’s tell the story of each one.&lt;/p&gt;
+
+&lt;h2 id=&quot;network-services-api&quot;&gt;Network-services API&lt;/h2&gt;
+
+&lt;p&gt;With time running short, we initially considered shipping the 1.0 Beta without a realtime networking API – but we decided to include &lt;a href=&quot;https://docs.beakerbrowser.com/apis/beaker.peersockets&quot;&gt;PeerSockets&lt;/a&gt; to gauge interest. It turns out that was a good idea because PeerSockets was the main API that people wanted to use! So let’s talk about how it works currently and what’s missing.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;centered&quot; src=&quot;/img/posts/roadmap-summer-2020/tods-chat-room.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.beakerbrowser.com/apis/beaker.peersockets&quot;&gt;PeerSockets&lt;/a&gt; piggyback on a hyperdrive’s connections to send messages. This was easy for us to implement in the 11th hour, but it doesn’t guarantee that every visiting user is reachable because the protocol only establishes enough connections to receive the hyperdrive data. This makes it feel like messages aren’t getting delivered.&lt;/p&gt;
+
+&lt;p&gt;There’s also a second issue to consider: PeerSockets don’t have any mechanism to connect to a specific peer. Since devs frequently want to connect to a specific user or drive-owner, we decided the best solution would be to create a separate API geared toward networked services.&lt;/p&gt;
+
+&lt;p&gt;A few examples of how this could be used:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Social Apps&lt;/strong&gt;, eg a “social aggregator” that can connect you to others and display up-to-date presence information.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;API Services&lt;/strong&gt;, eg a video transcoder service which converts MP4s to &lt;code class=&quot;highlighter-rouge&quot;&gt;.gif&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;.avi&lt;/code&gt; on request.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Data Indexers&lt;/strong&gt;, eg a background indexer that can accept submissions to generate a personalized search engine.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The networked services API will make it possible to request connections to a specific peer using either a hyperdrive or a user-minted keypair as the identifier. With this model, we’ll be able to use the DHT to efficiently discover, connect, and authenticate with the intended peer. If the connection fails, you’ll get a clear error message explaining the failure. These tools will make realtime communication much clearer and easier to use.&lt;/p&gt;
+
+&lt;p&gt;These APIs will likely change, but here is the “low-level” design we’re considering:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// by keypair&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;kp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;services&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createKeypair&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;services&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;listenKeyPair&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;kp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onRequest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;conn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;services&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;connectPublicKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;kp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;publicKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;services&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'ping'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// by hyperdrive&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;services&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;listenAsOwner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'hyper://1234..ef/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onRequest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;conn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;services&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;connectToOwner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'hyper://1234..ef/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'ping'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// the request handler&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onRequest&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cmd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cmd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'ping'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'pong'&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Invalid command'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The API will also include a way for connectors to prove ownership of Hyperdrives, enabling you to authenticate as your personal drive (for example). With these tools, realtime communication should get much easier to do, and a bunch of usecases will become much more obvious to solve.&lt;/p&gt;
+
+&lt;h3 id=&quot;background-processes-and-beaker-node&quot;&gt;Background processes and Beaker Node&lt;/h3&gt;
+
+&lt;p&gt;One frequent suggestion we receive is, wouldn’t it be nice if applications could run in the background? Applications frequently require long-running processes to run services and indexing. It’s not reasonable to keep a tab open for every application (whoops, closed a tab and missed our five 9s target!).&lt;/p&gt;
+
+&lt;p&gt;We gave a lot of consideration to a “background scripts” execution model, but realized this is much easier to solve in the UI. Instead of a special script, we’ll make it possible to minimize tabs into a “Tray.” The Background Tray will continue to run the tab as if it were open, but keep it out of sight. It will even run if Beaker is closed to the background. This will easily solve the long-running process model.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;centered&quot; src=&quot;/img/posts/roadmap-summer-2020/minimize-to-bg-tray.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The Background Tray is great for processes on your laptop, but what if you wanted to move the process to another computer? Perhaps into a cloud VMS? To solve that, we’re going to start work on a headless runtime which we call “Beaker Node.”&lt;/p&gt;
+
+&lt;p&gt;Beaker Node will mirror the environment of Beaker Browser but for the CLI. It will include the Hypercore Protocol stack and many of the Beaker APIs. With Beaker Node, it will be possible to run Beaker applications in a linuxbox or winbox sitting in the closet or in the cloud.&lt;/p&gt;
+
+&lt;p&gt;Beaker Node will fulfill a long-time dream of ours: to have total portability of services between the user device and “servers.” By replicating the Beaker APIs in both environments, it will be possible to write code which runs anywhere. Our ideal future is that you could start a service on your device and then ship it to another device without interrupting the execution! You really shouldn’t have to think that much about which device you deploy with; it should all be part of your personal mesh.&lt;/p&gt;
+
+&lt;p&gt;A neat minimal usecase for Beaker Node is a remote hosting service. It will be trivial to write a script that hosts Hyperdrives on request, effectively mimicking the utility of our old &lt;a href=&quot;https://hashbase.io&quot;&gt;Hashbase&lt;/a&gt; service. Given the right APIs, it could effectively become a full remote-computing toolset. Imagine Hashbase running your background indexers for you.&lt;/p&gt;
+
+&lt;h3 id=&quot;hypercore-api&quot;&gt;Hypercore API&lt;/h3&gt;
+
+&lt;p&gt;This one has been a long time coming!&lt;/p&gt;
+
+&lt;p&gt;Hyperdrive is a peer-to-peer filesystem built on the &lt;a href=&quot;https://hypercore-protocol.org&quot;&gt;Hypercore Protocol&lt;/a&gt; – so one might ask, why isn’t it called the &lt;em&gt;Hyperdrive Protocol&lt;/em&gt;? It’s because the network actually exchanges signed append-only logs called “hypercores.” Hyperdrives are built on top of those cores.&lt;/p&gt;
+
+&lt;p&gt;Logs are a very flexible datastructure. They can be used to represent many kinds of data – such as a filesystem – and are frequently used in distributed systems. In fact, there are multiple projects (including &lt;a href=&quot;https://cabal.chat/&quot;&gt;Cabal&lt;/a&gt; and &lt;a href=&quot;https://github.com/kappa-db/kappa-core&quot;&gt;Kappa-core&lt;/a&gt;) which already use hypercores to create their data network.&lt;/p&gt;
+
+&lt;p&gt;The way we chose to design the 1.0 beta was to start with only hyperdrives, which helped keep things simpler. Hyperdrives are what powers websites and applications, and they can be used for certain kinds of data storage.&lt;/p&gt;
+
+&lt;p&gt;As an example, in Beaker every user has a personal hyperdrive. This drive acts as their identity and as a kind of datastore. The microblogging app, Blahbity-blog, works by reading and writing files in the &lt;code class=&quot;highlighter-rouge&quot;&gt;/microblog/&lt;/code&gt; folder of personal drives. You could think of this like a social database – or perhaps as similar to RSS – because the feed is assembled by merging the microblog folders of each user in your address book.&lt;/p&gt;
+
+&lt;p&gt;While hyperdrives are perfect for the kinds of media that microblogging uses, they’re not the first thing developers reach for when storing datasets or secondary indexes, or for handling &lt;a href=&quot;https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type&quot;&gt;CRDTs&lt;/a&gt;. We need something powerful enough to handle real database use-cases. We think hypercore is the answer to that.&lt;/p&gt;
+
+&lt;p&gt;By exposing a Hypercore API, userland will be able to build more sophisticated databases. Userland modules should be able to accept hypercores and produce APIs that feel like &lt;a href=&quot;https://github.com/google/leveldb&quot;&gt;leveldb&lt;/a&gt; or &lt;a href=&quot;https://github.com/kappa-db/kappa-core&quot;&gt;kappa-core&lt;/a&gt;. This should enable a variety of interesting use-cases, from basic data storage, to video streaming, to multi-user editors, to distributed aggregation and search.&lt;/p&gt;
+
+&lt;p&gt;The really compelling thing about hypercores is that, like hyperdrives, hypercores are networked. You can efficiently access any entry in the log over the network – there’s no need to replay the entire log to access one entry. Like hyperdrives, hypercores will have a &lt;code class=&quot;highlighter-rouge&quot;&gt;hyper://&lt;/code&gt; URL. Also like hyperdrives, it will be possible to mount hypercores into a hyperdrive. These mounted cores will look like “files” from the outside, but will be accessable with the hypercore API to operate on the individual log entries.&lt;/p&gt;
+
+&lt;p&gt;We’re really excited to finally hit this API, because we think it will unlock a ton of potential in userland.&lt;/p&gt;
+
+&lt;h2 id=&quot;sodium-crypto-apis&quot;&gt;Sodium (crypto) APIs&lt;/h2&gt;
+
+&lt;p&gt;Finally, we have the crypto. Not that crypto. The other crypto. Specifically, &lt;a href=&quot;https://libsodium.gitbook.io/doc/&quot;&gt;LibSodium&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The obvious reason to want a crypto API is to encrypt files, and an ideal future would provide multiple builtin encryption modes in Hyperdrive. For now, we’re going to implement an API for encrypting blobs which can then be written to files. It’s a start – and it should open up some pretty fun use-cases, like adding private messages to our crummy “PaulMail” app.&lt;/p&gt;
+
+&lt;p&gt;But the big reason to add the Sodium API is Hypercore. Hashing is a key requirement for building custom datastructures on Hypercore. With the Sodium API, that will become much more convenient.&lt;/p&gt;
+
+&lt;h2 id=&quot;beaker-2020&quot;&gt;Beaker 2020&lt;/h2&gt;
+
+&lt;p&gt;We’re really excited to launch into these updates and we hope you are too. We don’t have concrete timelines for these features (“when they’re ready”) but we’re going to start immediately, and we plan to deliver them over summer 2020. At the same time, we’ll continue to fix bugs and improve the UX of Beaker.&lt;/p&gt;
+
+&lt;p&gt;Thank you everybody for your support and feedback! We’re looking forward to getting these APIs out and seeing what you all can do with them.&lt;/p&gt;
+
+&lt;p&gt;If you missed them, we had two videos go online recently:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://youtu.be/x3ShGXYCPWQ&quot;&gt;“Massively Multiplayer Open Computing” (talk)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://youtu.be/x3ShGXYCPWQ&quot;&gt;“Intro to Beaker” (demo/workshop/q&amp;amp;a)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&quot;text-align: center; margin: 3em 0 0&quot;&gt;
+&lt;a class=&quot;btn&quot; title=&quot;Try out the Beaker Browser Today&quot; href=&quot;/install/&quot;&gt;Try out the Beaker Browser Today&lt;/a&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Wed, 10 Jun 2020 00:00:00 -0500</pubDate>
+        <link>https://beakerbrowser.com/2020/06/10/roadmap-summer-2020.html</link>
+        <guid isPermaLink="true">https://beakerbrowser.com/2020/06/10/roadmap-summer-2020.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Beaker 1.0, Beta 4</title>
