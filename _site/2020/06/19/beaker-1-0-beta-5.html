@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Beaker 1.0, Beta 5</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!-- RSS feed -->
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="Blog">
+
+    <!-- SEO -->
+    <meta name="keywords" content="decentralization,decentralized,Beaker,browser,peer-to-peer,p2p">
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:site" content="@BeakerBrowser" />
+      <meta name="twitter:title" content="Beaker 1.0, Beta 5"/>
+      <meta name="twitter:description" content="
+"/>
+      
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:image" content="https://beakerbrowser.com/img/logo/logo-blue.png" />
+      
+    
+  </head>
+  <body class="layout ">
+    <style>
+      body { page--color: #5543ff; }
+    </style>
+
+    
+      <header class="header light">
+  <div class="container">
+    <a href="/" class="beaker-link">
+      <img src="/img/logo/logo.png" class="logo"/>
+      <div class="wordmark">Beaker</div>
+    </a>
+
+    <nav class="nav">
+  <a class="nav-link" href="/blog">Blog</a>
+  <a class="nav-link" href="https://docs.beakerbrowser.com/">Documentation</a>
+  <a class="nav-link btn white" href="/install">Install Beaker</a>
+</nav>
+  </div>
+  
+</header>
+
+    
+
+    <div class="blog-breadcrumbs">
+      <div class="container">
+        &lt; <a href="/blog/">Blog</a>
+      </div>
+    </div>
+
+    <div class="container blog">
+      
+        <h1 class="title">Beaker 1.0, Beta 5</h1>
+      
+
+      
+
+      <div class="container">
+        <main class="post pageview">
+          <p class="post-meta">
+            <span class="info">
+              <a href="https://twitter.com/pfrazee" class="author">Paul Frazee</a>
+               /
+              <time datetime="2020-06-19 00:00:00 -0500" class="time">
+                Jun 19, 2020
+              </time>
+            </span>
+          </p>
+          <div style="text-align: center; margin: 2em 0">
+<a class="btn" title="Download the Beaker 1.0, Beta 5" href="/install/" style="font-size: 18px; padding: 8px 22px; height: auto;">Download Beaker 1.0, Beta 5</a>
+</div>
+
+<p>New Beaker release! With 1.0 Beta 5, we added “Minimizing” to tabs, expanded on the folder-sync tools, improved <code class="highlighter-rouge">query()</code> output, and more.</p>
+
+<h2 id="minimizing-tabs">Minimizing tabs</h2>
+
+<p><img class="centered" src="/img/posts/beaker-1-0-beta-5/minimize-tab.gif" style="max-width: 500px" /></p>
+
+<p><a href="/2020/06/10/roadmap-summer-2020.html">As we discussed in our roadmap</a>, a very common need with peer-to-peer computing is to run Web apps in the background. This makes it convenient to run indexers and network-services.</p>
+
+<p>Rather than create a complex “background scripts” model, we decided to make it possible to minimize tabs to a background tray. A minimized tab will continue to run as before and will be restored after quitting and restarting Beaker.</p>
+
+<p>Minimized tabs are very useful for your long-running processes, but they’re also nice for “putting away” tabs that you want to read later.</p>
+
+<h2 id="folder-sync-part-deux">Folder sync, part deux</h2>
+
+<p><img src="/img/posts/beaker-1-0-beta-5/folder-sync.png" /></p>
+
+<p><a href="/2020/06/04/beaker-1-0-beta-4.html">In 1.0 Beta 4</a>, we introduced a tool to sync Hyperdrives with folders on your device. We got some quick feedback and decided to make some tweaks. Folder sync now uses a modal with tools to explore the changes, a “restore back to folder” button, and a <code class="highlighter-rouge">.gitignore</code> style ruleset for choosing which files to skip.</p>
+
+<p>You should find folder sync much easier to work with now! <a href="https://docs.beakerbrowser.com/intermediate/syncing-with-folders">Read more about it here</a>.</p>
+
+<h2 id="better-query-output">Better <code class="highlighter-rouge">query()</code> output</h2>
+
+<p>The <a href="https://docs.beakerbrowser.com/apis/beaker.hyperdrive#beakerhyperdrivequeryquery">hyperdrive <code class="highlighter-rouge">query()</code></a> function is a powerful tool for reading data in the Hyper network. It’s like a <code class="highlighter-rouge">SELECT</code> for files.</p>
+
+<p>With this release, we added an <code class="highlighter-rouge">origin</code> object to the results which gives detailed information about a file’s owning drive. This is especially useful when dealing with mounts.</p>
+
+<p>For example, imagine a folder structure which looks like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>hyper://foo/
+hyper://foo/mount-folder -&gt; hyper://bar/
+hyper://foo/mount-folder/index.html
+</code></pre>
+</div>
+
+<p>The file <code class="highlighter-rouge">hyper://foo/mount-folder/index.html</code> is originally from <code class="highlighter-rouge">hyper://bar/index.html</code>. The query results will now help you discover this:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">await</span> <span class="nx">beaker</span><span class="p">.</span><span class="nx">hyperdrive</span><span class="p">.</span><span class="nx">query</span><span class="p">({</span>
+  <span class="na">drive</span><span class="p">:</span> <span class="s1">'hyper://foo/'</span><span class="p">,</span>
+  <span class="na">path</span><span class="p">:</span> <span class="s1">'/mount-folder/*'</span>
+<span class="p">})</span>
+</code></pre>
+</div>
+
+<p>Result:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="p">[{</span>
+  <span class="na">drive</span><span class="p">:</span> <span class="s1">'hyper://foo/'</span><span class="p">,</span>
+  <span class="na">path</span><span class="p">:</span> <span class="s1">'/mount-folder/index.html'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s1">'hyper://foo/mount-folder/index.html'</span><span class="p">,</span>
+  <span class="na">origin</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">drive</span><span class="p">:</span> <span class="s1">'hyper://bar/'</span><span class="p">,</span>
+    <span class="na">path</span><span class="p">:</span> <span class="s1">'/index.html'</span><span class="p">,</span>
+    <span class="na">url</span><span class="p">:</span> <span class="s1">'hyper://bar/index.html'</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="c1">// ...</span>
+<span class="p">}]</span>
+</code></pre>
+</div>
+
+<p><a href="https://docs.beakerbrowser.com/apis/beaker.hyperdrive#beakerhyperdrivequeryquery">Learn more in the <code class="highlighter-rouge">query()</code> docs.</a></p>
+
+<h2 id="changelog">Changelog</h2>
+
+<ul>
+  <li>Added tab minimization</li>
+  <li>Updated folder-sync tools</li>
+  <li>Less page-flicker when switching tabs</li>
+  <li>Less flickering in the “favicon” and loading spinners of tabs</li>
+  <li>A “tab close” animation</li>
+  <li><code class="highlighter-rouge">hyper://</code> responses now stream, improving page-load speed</li>
+  <li>Added “Add to dictionary” to context menu on spellchecked words (thanks <a href="https://github.com/matthewauld">Matthew Auld</a>!) <a href="https://github.com/beakerbrowser/beaker/issues/1745">#1745</a></li>
+  <li>Added settings to set the default search engine (thanks <a href="https://github.com/matthewauld">Matthew Auld</a>!) <a href="https://github.com/beakerbrowser/beaker/issues/1722">#1722</a></li>
+  <li>Beaker now indicates that shutdown is on-going <a href="https://github.com/beakerbrowser/beaker/issues/1712">#1712</a></li>
+  <li>The Webterm font no longer has the purple text-effect as it was hurting accessibility <a href="https://github.com/beakerbrowser/beaker/issues/1570">#1570</a></li>
+  <li>Added the ability to cmd/ctrl+click or middle-click on menubar items to open them in a new tab <a href="https://github.com/beakerbrowser/beaker/issues/1626">#1626</a></li>
+  <li>Added more detail to query() output <a href="https://github.com/beakerbrowser/beaker/issues/1699">#1699</a></li>
+  <li>Added configuration for whether new tabs take focus or not <a href="https://github.com/beakerbrowser/beaker/issues/1634">#1634</a></li>
+  <li>The Network Stats page now gives better descriptions of the drives <a href="https://github.com/beakerbrowser/beaker/issues/1628">#1628</a></li>
+  <li>The tab-close button is now hidden if not the active taab <a href="https://github.com/beakerbrowser/beaker/issues/1720">#1720</a></li>
+  <li>Relative imports now work in custom webterm commands <a href="https://github.com/beakerbrowser/beaker/issues/1680">#1680</a></li>
+  <li>The <code class="highlighter-rouge">window.beaker</code> object will not be set if the APIs are not supported in the protocol (such as file:///) <a href="https://github.com/beakerbrowser/beaker/issues/1713">#1713</a></li>
+  <li>Saving from file editor no longer overwrites the file <code class="highlighter-rouge">ctime</code> <a href="https://github.com/beakerbrowser/beaker/issues/1659">#1659</a></li>
+  <li>Writing to file using <code class="highlighter-rouge">writeFile</code> no longer erases metadata. <a href="https://github.com/beakerbrowser/beaker/issues/1714">#1714</a></li>
+</ul>
+
+<div style="text-align: center; margin: 2em 0">
+<a class="btn" title="Download the Beaker 1.0, Beta 5" href="/install/" style="font-size: 18px; padding: 8px 22px; height: auto;">Download Beaker 1.0, Beta 5</a>
+</div>
+
+<style>
+  .post img {
+    display: block;
+    margin: 1.5em auto;
+    border: 1px solid #ccd;
+  }
+</style>
+
+
+        </main>
+      </div>
+    </div>
+
+    <div class="blog-breadcrumbs bottom">
+      <div class="container">
+        &lt; <a href="/blog/">Blog</a>
+      </div>
+    </div>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="col">
+      <div>
+        <a href="/" class="beaker-link">
+          <img src="/img/logo/logo.png" class="logo"/>
+          <div class="wordmark">Beaker</div>
+        </a>
+      </div>
+      <div>
+        <a href="/install/" class="btn outline white">Install Beaker</a>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="links">
+        <a href="/blog">Blog</a>
+        <a href="https://docs.beakerbrowser.com/">Documentation</a>
+        <a href="/install/">Install Beaker</a>
+        <br>
+        <a href="/vuln-disclosure/">Vulnerability Disclosure Policy</a>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="links">
+        <a href="https://twitter.com/beakerbrowser">Twitter</a>
+        <a href="https://github.com/beakerbrowser/beaker">GitHub</a>
+        <a href="https://webchat.freenode.net">#beakerbrowser on freenode</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script>window.sa_event=window.sa_event||function(){a=[].slice.call(arguments);sa_event.q?sa_event.q.push(a):sa_event.q=[a]};</script>
+<script async defer src="https://sa.beakerbrowser.com/latest.js"></script>
+<noscript><img src="https://sa.beakerbrowser.com/noscript.gif" alt=""></noscript>
+  </body>
+</html>
