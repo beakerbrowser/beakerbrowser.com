@@ -5,9 +5,73 @@
     <description></description>
     <link>https://beakerbrowser.com/</link>
     <atom:link href="https://beakerbrowser.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 19 Jun 2020 10:28:45 -0500</pubDate>
-    <lastBuildDate>Fri, 19 Jun 2020 10:28:45 -0500</lastBuildDate>
+    <pubDate>Fri, 10 Jul 2020 11:33:06 -0500</pubDate>
+    <lastBuildDate>Fri, 10 Jul 2020 11:33:06 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Beaker 1.0, Beta 6</title>
+        <description>&lt;p&gt;Dark mode, a tiling window manager, and a bookmarks bar. It’s time for Beaker Beta 6! Watch the video explainer here:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube-nocookie.com/embed/AhVRQvFwetw&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p style=&quot;text-align: center; color: gray&quot;&gt;Music by &lt;a href=&quot;https://soundcloud.com/kickupdust&quot; title=&quot;Kick Up Dust&quot;&gt;Kick Up Dust&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We’re really excited to land these updates and keep moving Beaker towards becoming a powerful runtime for browsing and peer-to-peer computing.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center; margin: 2em 0&quot;&gt;
+&lt;a class=&quot;btn&quot; title=&quot;Download the Beaker 1.0, Beta 6&quot; href=&quot;/install/&quot; style=&quot;font-size: 18px; padding: 8px 22px; height: auto; width: 100%;&quot;&gt;Download Beaker 1.0, Beta 6&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;dark-mode&quot;&gt;Dark Mode&lt;/h2&gt;
+
+&lt;p&gt;&lt;img class=&quot;centered&quot; src=&quot;/img/posts/beaker-1-0-beta-6/darkmode.png&quot; style=&quot;border-radius: 4px; box-shadow: 0 8px 24px #0007; max-width: 700px; margin: 3em auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sometimes you just need to give your eyes a break! Dark mode will follow your system setting by default, but you can also enable it in the Beaker settings.&lt;/p&gt;
+
+&lt;h2 id=&quot;tiling-window-manager&quot;&gt;Tiling Window Manager&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/beaker-1-0-beta-6/tiling-wm.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In previous versions of Beaker, we had a builtin sidebar with a hard-coded editor, files explorer, and terminal. Wouldn’t it be nice if users could replace our builtin apps or add new ones?&lt;/p&gt;
+
+&lt;p&gt;To solve this, we decided to replace the sidebar with a tiling window-manager. This makes it possible to open multiple web “panes” within a single tab and navigate them independently. Not only does this replace the sidebar – it makes for a fun new way to browse the Web. Be sure to watch the &lt;a href=&quot;https://www.youtube.com/watch?v=AhVRQvFwetw&quot; title=&quot;Beaker 1.0 Beta 6 Overview&quot;&gt;Beta 6 Overview Video&lt;/a&gt; to get a feel for how this works.&lt;/p&gt;
+
+&lt;p&gt;As a result of this change, Beaker’s editor, files-explorer, and terminal now act like typical apps. We’re going to keep working toward “userlanding” these builtins so that it becomes easier to replace or augment them with your own tools.&lt;/p&gt;
+
+&lt;h2 id=&quot;bookmarks-bar&quot;&gt;Bookmarks Bar&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/beaker-1-0-beta-6/bookmarks-bar.png&quot; style=&quot;border: 1px solid #ccd; border-radius: 4px; box-shadow: 0 8px 24px #0007; margin: 3em auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Like the sidebar, the toolbar was hardcoded to only the editor, files explorer, and terminal. With this release, we integrated the toolbar with bookmarks so that you can add any link you want.&lt;/p&gt;
+
+&lt;h2 id=&quot;changelog&quot;&gt;Changelog&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Added dark mode&lt;/li&gt;
+  &lt;li&gt;Added the tiling window manager&lt;/li&gt;
+  &lt;li&gt;Added the bookmarks bar&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&quot;text-align: center; margin: 2em 0&quot;&gt;
+&lt;a class=&quot;btn&quot; title=&quot;Download the Beaker 1.0, Beta 6&quot; href=&quot;/install/&quot; style=&quot;font-size: 18px; padding: 8px 22px; height: auto; width: 100%;&quot;&gt;Download Beaker 1.0, Beta 6&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  .post img,
+  .post iframe {
+    display: block;
+    margin: 1.5em auto;
+  }
+&lt;/style&gt;
+
+</description>
+        <pubDate>Fri, 10 Jul 2020 00:00:00 -0500</pubDate>
+        <link>https://beakerbrowser.com/2020/07/10/beaker-1-0-beta-6.html</link>
+        <guid isPermaLink="true">https://beakerbrowser.com/2020/07/10/beaker-1-0-beta-6.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Beaker 1.0, Beta 5</title>
