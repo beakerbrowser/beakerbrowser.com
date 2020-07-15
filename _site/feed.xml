@@ -5,9 +5,88 @@
     <description></description>
     <link>https://beakerbrowser.com/</link>
     <atom:link href="https://beakerbrowser.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 10 Jul 2020 11:33:06 -0500</pubDate>
-    <lastBuildDate>Fri, 10 Jul 2020 11:33:06 -0500</lastBuildDate>
+    <pubDate>Wed, 15 Jul 2020 12:20:12 -0500</pubDate>
+    <lastBuildDate>Wed, 15 Jul 2020 12:20:12 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Beaker 1.0, Beta 7</title>
+        <description>&lt;p&gt;In &lt;a href=&quot;/2020/07/10/beaker-1-0-beta-6.html&quot;&gt;Beta 6&lt;/a&gt; we introduced tiling panes. With Beta 7, we take panes even further with “attached mode” and new Web APIs. Watch the video explainer here:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube-nocookie.com/embed/pARRyQqgdEU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p style=&quot;text-align: center; color: gray&quot;&gt;Music by &lt;a href=&quot;https://soundcloud.com/kickupdust&quot; title=&quot;Kick Up Dust&quot;&gt;Kick Up Dust&lt;/a&gt;&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center; margin: 2em 0&quot;&gt;
+&lt;a class=&quot;btn&quot; title=&quot;Download the Beaker 1.0, Beta 7&quot; href=&quot;/install/&quot; style=&quot;font-size: 18px; padding: 8px 22px; height: auto; width: 100%;&quot;&gt;Download Beaker 1.0, Beta 7&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;attached-panes&quot;&gt;Attached Panes&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/beaker-1-0-beta-7/attached-pane.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;With &lt;a href=&quot;/2020/07/10/beaker-1-0-beta-6.html&quot;&gt;Beta 6&lt;/a&gt; it became possible to split the page into multiple panes which can navigate independently.&lt;/p&gt;
+
+&lt;p&gt;In this release, we’ve extended Beaker with the power to “attach” panes to one another. This makes it possible for panes to browse in concert with each other as if they were part of the same application.&lt;/p&gt;
+
+&lt;p&gt;Attached mode is used by Beaker’s builtin tools to give a more integrated experience; for instance, the editor will show the file that you’re viewing and live-reload it as you make changes, while the terminal will navigate the attached pane along with your &lt;code class=&quot;highlighter-rouge&quot;&gt;$CWD&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;This “attached mode” can be toggled on and off to drive panes independently when needed.&lt;/p&gt;
+
+&lt;h2 id=&quot;beakerpanes-api&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;beaker.panes&lt;/code&gt; API&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/beaker-1-0-beta-7/panes-api.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Web applications can leverage the panes API to build tools which interact with other pages (with permission from the user). The API can be used to build attachable comment sections, annotations, content-scrapers, content editors, and much more. &lt;a href=&quot;https://docs.beakerbrowser.com/apis/beaker.panes&quot;&gt;See the API documentation here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;beaker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;panes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setAttachable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;beaker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;panes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getAttachedPane&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;beaker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;panes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attachToLastActivePane&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;beaker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;panes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;attach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;boolean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;beaker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;panes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;navigate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;paneId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;beaker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;panes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;focus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;paneId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;beaker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;panes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;executeJavaScript&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;paneId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;beaker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;panes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;injectCss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;paneId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;css&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;beaker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;panes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;uninjectCss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;paneId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cssId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;beaker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;panes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;pane-attached&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;beaker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;panes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;pane-detached&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;beaker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;panes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;pane-navigated&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Beaker’s philosophy is that applications should be so powerful that Browser Extensions become an outdated concept. This API and toolset is a major step in that direction.&lt;/p&gt;
+
+&lt;h2 id=&quot;changelog&quot;&gt;Changelog&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Added attachable panes&lt;/li&gt;
+  &lt;li&gt;Added status bar UI to panes&lt;/li&gt;
+  &lt;li&gt;Added the &lt;code class=&quot;highlighter-rouge&quot;&gt;beaker.panes&lt;/code&gt; Web API&lt;/li&gt;
+  &lt;li&gt;Fix to tab “mute” controls&lt;/li&gt;
+  &lt;li&gt;Fixed an edge-case which caused browsing-session restore to fail&lt;/li&gt;
+  &lt;li&gt;Fixed a visual bug with the History view on narrow viewports (Thanks Jonathan Lindroth!)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&quot;text-align: center; margin: 2em 0&quot;&gt;
+&lt;a class=&quot;btn&quot; title=&quot;Download the Beaker 1.0, Beta 7&quot; href=&quot;/install/&quot; style=&quot;font-size: 18px; padding: 8px 22px; height: auto; width: 100%;&quot;&gt;Download Beaker 1.0, Beta 7&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  .post img,
+  .post iframe {
+    display: block;
+    margin: 1.5em auto;
+  }
+&lt;/style&gt;
+
+</description>
+        <pubDate>Wed, 15 Jul 2020 00:00:00 -0500</pubDate>
+        <link>https://beakerbrowser.com/2020/07/15/beaker-1-0-beta-7.html</link>
+        <guid isPermaLink="true">https://beakerbrowser.com/2020/07/15/beaker-1-0-beta-7.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Beaker 1.0, Beta 6</title>
