@@ -5,15 +5,15 @@
     <description></description>
     <link>https://beakerbrowser.com/</link>
     <atom:link href="https://beakerbrowser.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 15 Jul 2020 12:20:12 -0500</pubDate>
-    <lastBuildDate>Wed, 15 Jul 2020 12:20:12 -0500</lastBuildDate>
+    <pubDate>Wed, 15 Jul 2020 12:38:26 -0500</pubDate>
+    <lastBuildDate>Wed, 15 Jul 2020 12:38:26 -0500</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
         <title>Beaker 1.0, Beta 7</title>
         <description>&lt;p&gt;In &lt;a href=&quot;/2020/07/10/beaker-1-0-beta-6.html&quot;&gt;Beta 6&lt;/a&gt; we introduced tiling panes. With Beta 7, we take panes even further with “attached mode” and new Web APIs. Watch the video explainer here:&lt;/p&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube-nocookie.com/embed/pARRyQqgdEU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube-nocookie.com/embed/MVwzemEoXKg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
 &lt;p style=&quot;text-align: center; color: gray&quot;&gt;Music by &lt;a href=&quot;https://soundcloud.com/kickupdust&quot; title=&quot;Kick Up Dust&quot;&gt;Kick Up Dust&lt;/a&gt;&lt;/p&gt;
 
