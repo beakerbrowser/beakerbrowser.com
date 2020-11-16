@@ -56,7 +56,7 @@
       </h1>
 
       <p class="description">
-        A peer-to-peer browser for Web hackers.
+        An experimental peer-to-peer Web browser.
       </p>
 
       <p class="cta">
@@ -168,7 +168,7 @@ It's not a blockchain protocol, it's just a way of serving your stuff off your l
       <div class="img-container">
         <img src="/img/feature-instant-deploy.png">
       </div>
-      <h2>Deploy instantly</h2>
+      <h2>Create a P2P site</h2>
       <p>
         Create a new Hyperdrive site with one click.
       </p>
@@ -176,51 +176,21 @@ It's not a blockchain protocol, it's just a way of serving your stuff off your l
 
     <div class="featuregrid-col">
       <div class="img-container">
-        <img src="/img/feature-cohost.png">
-      </div>
-      <h2>Co-host sites</h2>
-      <p>
-        Reduce costs and help keep sites online using peer-to-peer hosting.
-      </p>
-    </div>
-
-    <div class="featuregrid-col">
-      <div class="img-container">
-        <img src="/img/feature-apis.png">
-      </div>
-      <h2>Build p2p apps</h2>
-      <p>
-        New Web APIs make building peer-to-peer apps easier than ever.
-      </p>
-    </div>
-    
-    <div class="featuregrid-col">
-      <div class="img-container">
-        <img src="/img/feature-files-explorer.png">
-      </div>
-      <h2>Explore files</h2>
-      <p>
-        Hyperdrive is a fully-featured filesystem which you can explore.
-      </p>
-    </div>
-
-    <div class="featuregrid-col">
-      <div class="img-container">
-        <img src="/img/feature-webterm.png">
-      </div>
-      <h2>Run commands</h2>
-      <p>
-        Browse the Web and get work done with the integrated terminal.
-      </p>
-    </div>
-
-    <div class="featuregrid-col">
-      <div class="img-container">
         <img src="/img/feature-editor.png">
       </div>
-      <h2>Edit source</h2>
+      <h2>Edit the source</h2>
       <p>
         The integrated editor lets you work side-by-side with your page.
+      </p>
+    </div>
+
+    <div class="featuregrid-col">
+      <div class="img-container">
+        <img src="/img/feature-cohost.png">
+      </div>
+      <h2>And share!</h2>
+      <p>
+        Other Beaker users can visit your site directly from your computer.
       </p>
     </div>
   </div>
@@ -248,9 +218,9 @@ It's not a blockchain protocol, it's just a way of serving your stuff off your l
         <h3>How it works</h3>
 
         <p>
-          Beaker uses a peer-to-peer filesystem on the
+          Beaker uses a new peer-to-peer network called
           <strong><a href="https://hypercore-protocol.org">Hypercore Protocol</a>.</strong>
-          Users connect directly to your computer to access your files.
+          Other Beaker users can visit these Websites with no servers required.
         </p>
       </div>
     </div>    
@@ -274,91 +244,6 @@ It's not a blockchain protocol, it's just a way of serving your stuff off your l
       <p><a href="https://docs.beakerbrowser.com/apis/beaker.hyperdrive" target="_blank">beaker.hyperdrive API <span class="fa fa-arrow-right"></span></a></p>
     </div>
   </div>
-  <hr>
-  <div class="container columns">
-    <div class="col col-1-2">
-      <div class="codebox">
-        <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">async</span> <span class="kd">function</span> <span class="nx">readSocialFeed</span> <span class="p">(</span><span class="nx">sites</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">beaker</span><span class="p">.</span><span class="nx">hyperdrive</span><span class="p">.</span><span class="nx">query</span><span class="p">({</span>
-    <span class="na">path</span><span class="p">:</span> <span class="s1">'/microblog/*'</span><span class="p">,</span>
-    <span class="na">drive</span><span class="p">:</span> <span class="nx">sites</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">site</span> <span class="o">=&gt;</span> <span class="nx">site</span><span class="p">.</span><span class="nx">url</span><span class="p">),</span>
-    <span class="na">sort</span><span class="p">:</span> <span class="s1">'ctime'</span>
-  <span class="p">})</span>
-<span class="p">}</span></code></pre></figure>
-      </div>
-    </div>
-    <div class="col col-1-2">
-      <h3>Query the filesystem</h3>
-      <p><a href="https://docs.beakerbrowser.com/apis/beaker.hyperdrive" target="_blank">beaker.hyperdrive API <span class="fa fa-arrow-right"></span></a></p>
-    </div>
-  </div>
-  <hr>
-  <div class="container columns">
-    <div class="col col-1-2">
-      <div class="codebox">
-        <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">topic</span> <span class="o">=</span> <span class="nx">beaker</span><span class="p">.</span><span class="nx">peersockets</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">'chat'</span><span class="p">)</span>
-
-<span class="nx">topic</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'message'</span><span class="p">,</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">TextDecoder</span><span class="p">().</span><span class="nx">decode</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">peerId</span><span class="p">,</span> <span class="s1">'says'</span><span class="p">,</span> <span class="nx">message</span><span class="p">)</span>
-<span class="p">})</span>
-
-<span class="kd">function</span> <span class="nx">sendToPeer</span> <span class="p">(</span><span class="nx">peerId</span><span class="p">,</span> <span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">message</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">TextEncoder</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">).</span><span class="nx">encode</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span>
-  <span class="nx">topic</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">peerId</span><span class="p">,</span> <span class="nx">message</span><span class="p">)</span>
-<span class="p">}</span></code></pre></figure>
-      </div>
-    </div>
-    <div class="col col-1-2">
-      <h3>Send & receive messages</h3>
-      <p><a href="https://docs.beakerbrowser.com/apis/beaker.peersockets" target="_blank">beaker.peersockets API <span class="fa fa-arrow-right"></span></a></p>
-    </div>
-  </div>
-</div>
-
-<div class="section social-network">
-  <h3>A new social Web</h3>
-  <div class="container columns">
-    <div class="col col-1-3">
-      <img src="/img/customizable-apps.svg">
-      <p>Customize your profile site.</p>
-    </div>
-    
-    <div class="col col-1-3">
-      <img class="bigger" src="/img/how-it-works/customizable-apps.svg">
-      <p>Add your friends' profile sites to your address book.</p>
-    </div>
-    
-    <div class="col col-1-3">
-      <img src="/img/pseudo-ui/peer-to-peer.svg">
-      <p>Build applications using your personal network.</p>
-    </div>
-  </div>
-</div>
-
-<div class="section apps">
-  <div class="container columns">
-    <div class="col col-1-3">
-      <a href="https://beaker.dev/docs/templates/chat-room/" target="_blank">
-        <img src="/img/app-chat-room.png">
-        <span class="fa fa-external-link-square"></span>
-      </a>
-    </div>
-
-    <div class="col col-1-3">
-      <a href="https://beaker.dev/docs/templates/microblog-feed/" target="_blank">
-        <img src="/img/app-microblog-feed.png">
-        <span class="fa fa-external-link-square"></span>
-      </a>
-    </div>
-
-    <div class="col col-1-3">
-      <a href="https://beaker.dev/docs/templates/video-chat/" target="_blank">
-        <img src="/img/app-video-chat.png">
-        <span class="fa fa-external-link-square"></span>
-      </a>
-    </div>
-  </div>
 </div>
 
 <div class="section what">
@@ -368,17 +253,13 @@ It's not a blockchain protocol, it's just a way of serving your stuff off your l
     </div>
 
     <div class="col col-1-2">
-      <h2 class="extra-title">
-        Built for building
-      </h2>
-
       <h3>
-        The Web should be a creative tool for everyone
+        Make Websites from inside the browser
       </h3>
 
        <p>
-        Beaker brings <em>peer-to-peer publishing</em> to the Web, turning the browser
-        into a supercharged tool for building websites, files, apps, and more.
+        Beaker is great for classrooms and offices where you need an easy way to share Websites
+        without setting up servers or touching the command-line.
       </p>
     </div>
   </div>
