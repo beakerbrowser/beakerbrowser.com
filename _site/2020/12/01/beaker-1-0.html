@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Beaker Browser 1.0</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!-- RSS feed -->
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="Blog">
+
+    <!-- SEO -->
+    <meta name="keywords" content="decentralization,decentralized,Beaker,browser,peer-to-peer,p2p">
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:site" content="@BeakerBrowser" />
+      <meta name="twitter:title" content="Beaker Browser 1.0"/>
+      <meta name="twitter:description" content="The experimental browser is finally 1.0!
+"/>
+      
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:image" content="https://beakerbrowser.com/img/logo/logo-blue.png" />
+      
+    
+  </head>
+  <body class="layout ">
+    <style>
+      body { page--color: #5543ff; }
+    </style>
+
+    
+      <header class="header light">
+  <div class="container">
+    <a href="/" class="beaker-link">
+      <img src="/img/logo/logo.png" class="logo"/>
+      <div class="wordmark">Beaker</div>
+    </a>
+
+    <nav class="nav">
+  <a class="nav-link" href="/blog">Blog</a>
+  <a class="nav-link" href="https://docs.beakerbrowser.com/">Documentation</a>
+  <a class="nav-link btn white" href="/install">Install Beaker</a>
+</nav>
+  </div>
+  
+</header>
+
+    
+
+    <div class="blog-breadcrumbs">
+      <div class="container">
+        &lt; <a href="/blog/">Blog</a>
+      </div>
+    </div>
+
+    <div class="container blog">
+      
+        <h1 class="title">Beaker Browser 1.0</h1>
+      
+
+      
+
+      <div class="container">
+        <main class="post pageview">
+          <p class="post-meta">
+            <span class="info">
+              <a href="https://twitter.com/pfrazee" class="author">Paul Frazee</a>
+               /
+              <time datetime="2020-12-01 00:00:00 -0600" class="time">
+                Dec 1, 2020
+              </time>
+            </span>
+          </p>
+          <p>The experimental browser is finally 1.0!</p>
+
+<div style="text-align: center; margin: 2em 0">
+<a class="btn" title="Download Beaker Browser 1.0" href="/install/" style="font-size: 18px; padding: 8px 22px; height: auto; width: 100%;">Download Beaker Browser 1.0</a>
+</div>
+
+<p>Beaker hosts websites <em>from your device</em> using <a href="https://hypercore-protocol.org">peer-to-peer technology</a>. It is a great tool for webdev without touching the command-line or setting up a server.</p>
+
+<p>Use-cases include:</p>
+
+<ul>
+  <li><strong>Educators</strong>. A Web dev classroom can skip teaching the command-line, git, or server setup. Students create their sites in-browser (or copy a template from the teacher) and do their development with the builtin tools.</li>
+  <li><strong>Dev Teams</strong>. If you’re looking for a fast way to share site prototypes in the office, Beaker is a great fit. You can quickly fork a site to make changes, then share the new URL with the team.</li>
+  <li><strong>Decentralizers</strong>. We may not have an out-of-the-box replacement for the big platforms <em>yet</em>, but if you’re the kind of person that’s into blockchains or greater access to open-source, you should check this out.</li>
+</ul>
+
+<p>Beaker uses a replacement for HTTP called the <a href="https://hypercore-protocol.org">Hypercore Protocol</a> which has its own <code class="highlighter-rouge">hyper://</code> URL. That means you can’t load the sites on any browser (which is why Beaker still earns its title as an “experimental” browser). That makes Beaker a bit niche for now, but we’re pretty excited to expand that niche moving forward.</p>
+
+<p>With this release, <a href="https://patreon.com/andrew_maf_and_paul">we’re also launching a Patreon for our team</a> to begin working on our next tool in the Hypercore ecosystem, <strong>Uplink</strong>.</p>
+
+<h2 id="hypercore-protocol">Hypercore Protocol</h2>
+
+<p>The <a href="https://hypercore-protocol.org">Hypercore Protocol</a> (formerly the “Dat protocol”) works a bit like BitTorrent: visitors to a site will download its files and rehost them to share bandwidth. Unlike BitTorrent, Hypercore is able to change the files without creating a new URL! It’s also quite good at <a href="https://www.npmjs.com/package/hyperbee">other kinds of data than files</a>, though Beaker hasn’t tapped into that yet.</p>
+
+<p>If you’re interested in building on the Hypercore Protocol, check out the <a href="https://github.com/hypercore-protocol/hyperspace">Hyperspace Daemon</a>. It provides a batteries-included toolset for peer-to-peer files and databases.</p>
+
+<h2 id="a-tour-creating-p2p-sites">A Tour: Creating P2P Sites</h2>
+
+<p>Beaker’s peer-to-peer sites are called “Hyperdrives.” You can create them from the browser menu.</p>
+
+<p><img class="bordered" src="/img/posts/beaker-1-0/new-hyperdrive.png" title="New Hyperdrive" /></p>
+
+<p>You can start from scratch, sync a local folder, or clone a git repo.</p>
+
+<p><img class="bordered" src="/img/posts/beaker-1-0/new-hyperdrive-prompt.png" title="New Hyperdrive Prompt" /></p>
+
+<p>From here, Beaker will open the new site with the editor open and ready for you to build.</p>
+
+<p><img src="/img/posts/beaker-1-0/fresh-hyperdrive.png" title="Fresh Hyperdrive" /></p>
+
+<p>Once your site is ready, you can share the <code class="highlighter-rouge">hyper://</code> URL with people and they’ll connect to your computer to see the site. You can see the peer-count in the URL bar:</p>
+
+<p><img class="bordered" src="/img/posts/beaker-1-0/peer-count.png" title="Peer Count" /></p>
+
+<p>Here’s a (slightly sped-up) video of the total experience:</p>
+
+<video autoplay="" loop="" playsinline="" poster="/img/beaker-site-demo-poster.png" src="/beaker-site-demo.mp4" style="border-radius: 4px"></video>
+
+<p><a href="https://docs.beakerbrowser.com">We have lots of documentation</a> if you want to get more familiar with the tools.</p>
+
+<h2 id="p2p-site-templates--demos">P2P Site Templates / Demos</h2>
+
+<p>If you want to get your hands on some example code, check out a couple of these pre-made templates which you can easily create in Beaker:</p>
+
+<div class="site-templates">
+  <a href="https://beaker.dev/docs/templates/photo-album/" title="Photo Album Site" target="_blank">
+    <img src="https://beaker.dev/templates/photo-album.png" />
+    <span>Photo Album Site</span>
+  </a>
+  <a href="https://beaker.dev/docs/templates/microblog-feed/" title="Microblog Feed App" target="_blank">
+    <img src="https://beaker.dev/templates/microblog-feed.png" />
+    <span>Microblog Feed App</span>
+  </a>
+  <a href="https://beaker.dev/docs/templates/codesnip/" title="Code Snippet Site" target="_blank">
+    <img src="https://beaker.dev/templates/codesnip.png" />
+    <span>Code Snippet Site</span>
+  </a>
+</div>
+
+<h2 id="thank-you-to-our-supporters">Thank you to our supporters</h2>
+
+<p>We wanted to be sure to thank our <a href="https://opencollective.com/beaker">Open Collective Contributors</a> for helping us build Beaker. In particular, we want to thank <a href="https://twitter.com/pwang">Peter Wang</a>, <a href="https://twitter.com/webdesserts">Michael Mullins</a>, <a href="https://twitter.com/rjsteinert">R.J. Steinert</a>, <a href="https://twitter.com/rho_">Ryan O</a>, <a href="https://twitter.com/chartgerink">Chris Hartgerink</a>, Andrew Lee, <a href="https://twitter.com/jimpick">Jim Pick</a>, <a href="https://twitter.com/rosszurowski">Ross Zurowski</a>, and <a href="https://twitter.com/lindner">Paul Lindner</a> for their generous contributions!</p>
+
+<div style="text-align: center; margin: 2em 0">
+<a class="btn" title="Download Beaker Browser 1.0" href="/install/" style="font-size: 18px; padding: 8px 22px; height: auto; width: 100%;">Download Beaker Browser 1.0</a>
+</div>
+
+<h2 id="whats-next">What’s next?</h2>
+
+<p>Based on everything we’ve learned building Beaker, we’re starting our new tool for the Hypercore Protocol called <strong>Uplink</strong>. If you’re curious to find out what it is and what we’re doing, <a href="https://patreon.com/andrew_maf_and_paul">we’re launching a Patreon for our team</a> where we’ll share project updates and early access to builds.</p>
+
+<p>So, from here:</p>
+
+<ul>
+  <li><a href="/install/">Download Beaker Browser 1.0</a>,</li>
+  <li><a href="https://patreon.com/andrew_maf_and_paul">Join our Patreon</a>, and</li>
+  <li><a href="https://twitter.com/beakerbrowser">Follow us on Twitter</a></li>
+</ul>
+
+<p>Thanks for reading!</p>
+
+<p>— <a href="https://twitter.com/andrewosh">Andrew</a>, <a href="https://twitter.com/mafintosh">Maf</a>, and <a href="https://twitter.com/pfrazee">Paul</a></p>
+
+<style>
+  .post img,
+  .post iframe,
+  .post video {
+    display: block;
+    margin: 1.5em auto;
+    max-width: 100%;
+  }
+  .site-templates {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+  }
+  .site-templates img {
+    width: 100%;
+  }
+  @media (max-width: 800px) {
+    .site-templates {
+      display: block;
+    }
+  }
+</style>
+
+
+        </main>
+      </div>
+    </div>
+
+    <div class="blog-breadcrumbs bottom">
+      <div class="container">
+        &lt; <a href="/blog/">Blog</a>
+      </div>
+    </div>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="col">
+      <div>
+        <a href="/" class="beaker-link">
+          <img src="/img/logo/logo.png" class="logo"/>
+          <div class="wordmark">Beaker</div>
+        </a>
+      </div>
+      <div>
+        <a href="/install/" class="btn outline white">Install Beaker</a>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="links">
+        <a href="/blog">Blog</a>
+        <a href="https://docs.beakerbrowser.com/">Documentation</a>
+        <a href="/install/">Install Beaker</a>
+        <br>
+        <a href="/vuln-disclosure/">Vulnerability Disclosure Policy</a>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="links">
+        <a href="https://twitter.com/beakerbrowser">Twitter</a>
+        <a href="https://github.com/beakerbrowser/beaker">GitHub</a>
+        <a href="https://webchat.freenode.net">#beakerbrowser on freenode</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script>window.sa_event=window.sa_event||function(){a=[].slice.call(arguments);sa_event.q?sa_event.q.push(a):sa_event.q=[a]};</script>
+<script async defer src="https://sa.beakerbrowser.com/latest.js"></script>
+<noscript><img src="https://sa.beakerbrowser.com/noscript.gif" alt=""></noscript>
+  </body>
+</html>
