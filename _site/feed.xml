@@ -5,9 +5,74 @@
     <description></description>
     <link>https://beakerbrowser.com/</link>
     <atom:link href="https://beakerbrowser.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 02 Dec 2020 12:55:34 -0600</pubDate>
-    <lastBuildDate>Wed, 02 Dec 2020 12:55:34 -0600</lastBuildDate>
+    <pubDate>Tue, 08 Dec 2020 15:51:44 -0600</pubDate>
+    <lastBuildDate>Tue, 08 Dec 2020 15:51:44 -0600</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Beaker Browser 1.1</title>
+        <description>&lt;p&gt;A few API updates and bugfixes to follow up the 1.0 release.&lt;/p&gt;
+
+&lt;div class=&quot;highlighted&quot;&gt;
+  &lt;h2 id=&quot;what-is-beaker&quot;&gt;What is Beaker?&lt;/h2&gt;
+
+  &lt;p&gt;Beaker is an experimental peer-to-peer Web browser which lets you share websites directly from your device. &lt;a href=&quot;/2020/12/02/beaker-1-0.html&quot;&gt;Read the 1.0 release post to learn more&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;new-features&quot;&gt;New features&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add &lt;code class=&quot;highlighter-rouge&quot;&gt;beaker.shell.tagDrive()&lt;/code&gt;. See the &lt;a href=&quot;https://docs.beakerbrowser.com/apis/beaker.shell#beakershelltagdriveurl-tags&quot;&gt;API docs&lt;/a&gt;. (close &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1864&quot;&gt;#1864&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add the ability to set tags in create/forkDrive when prompt=false (&lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1864&quot;&gt;#1864&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Add the ability to create drives from the select/save file dialogs (close &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1866&quot;&gt;#1866&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Automatically update the drives listings in modal dialogs (close &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1867&quot;&gt;#1867&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;bugfixes&quot;&gt;Bugfixes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fix issue with screenshot captures (close &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1872&quot;&gt;#1872&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Destroy all tabs when a window is closed (fix &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1871&quot;&gt;#1871&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Dont unsnap windows from the edge on ctrl+tab (close &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1868&quot;&gt;#1868&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Maintain focus in the active pane when window blurs then refocuses (close &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1869&quot;&gt;#1869&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fix the license-viewer mouse events (close &lt;a href=&quot;https://github.com/beakerbrowser/beaker/issues/1862&quot;&gt;#1862&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Fixes to the shutdown process&lt;/li&gt;
+  &lt;li&gt;Remove old contacts UI in select-file modal&lt;/li&gt;
+  &lt;li&gt;Fix reference error in webterm&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&quot;text-align: center; margin: 2em 0&quot;&gt;
+&lt;a class=&quot;btn&quot; title=&quot;Download Beaker Browser&quot; href=&quot;/install/&quot; style=&quot;font-size: 18px; padding: 8px 22px; height: auto; width: 100%;&quot;&gt;Download Beaker Browser&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://patreon.com/paul_maf_and_andrew&quot;&gt;Support us via Patreon&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;style&gt;
+  .post img,
+  .post iframe,
+  .post video {
+    display: block;
+    margin: 1.5em auto;
+    max-width: 100%;
+  }
+  .highlighted {
+    padding: 22px 25px 26px;
+    margin: 40px 0 0;
+    border: 1px dashed #5543ff;
+  }
+  .highlighted h2 { margin-top: 0 !important; }
+  .highlighted &gt; :last-child { margin-bottom: 0 !important; }
+&lt;/style&gt;
+
+</description>
+        <pubDate>Tue, 08 Dec 2020 00:00:00 -0600</pubDate>
+        <link>https://beakerbrowser.com/2020/12/08/beaker-1.1.html</link>
+        <guid isPermaLink="true">https://beakerbrowser.com/2020/12/08/beaker-1.1.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Beaker Browser 1.0</title>

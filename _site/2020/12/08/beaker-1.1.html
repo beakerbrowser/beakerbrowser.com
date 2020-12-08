@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Beaker Browser 1.1</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!-- RSS feed -->
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="Blog">
+
+    <!-- SEO -->
+    <meta name="keywords" content="decentralization,decentralized,Beaker,browser,peer-to-peer,p2p">
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="icon" href="/img/favicon.png">
+
+    <!-- social woo woo -->
+
+    
+      <meta name="twitter:site" content="@BeakerBrowser" />
+      <meta name="twitter:title" content="Beaker Browser 1.1"/>
+      <meta name="twitter:description" content="A few API updates and bugfixes to follow up the 1.0 release.
+"/>
+      
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:image" content="https://beakerbrowser.com/img/logo/logo-blue.png" />
+      
+    
+  </head>
+  <body class="layout ">
+    <style>
+      body { page--color: #5543ff; }
+    </style>
+
+    
+      <header class="header light">
+  <div class="container">
+    <a href="/" class="beaker-link">
+      <img src="/img/logo/logo.png" class="logo"/>
+      <div class="wordmark">Beaker</div>
+    </a>
+
+    <nav class="nav">
+  <a class="nav-link" href="/blog">Blog</a>
+  <a class="nav-link" href="https://docs.beakerbrowser.com/">Documentation</a>
+  <a class="nav-link btn white" href="/install">Install Beaker</a>
+</nav>
+  </div>
+  
+</header>
+
+    
+
+    <div class="blog-breadcrumbs">
+      <div class="container">
+        &lt; <a href="/blog/">Blog</a>
+      </div>
+    </div>
+
+    <div class="container blog">
+      
+        <h1 class="title">Beaker Browser 1.1</h1>
+      
+
+      
+
+      <div class="container">
+        <main class="post pageview">
+          <p class="post-meta">
+            <span class="info">
+              <a href="https://twitter.com/pfrazee" class="author">Paul Frazee</a>
+               /
+              <time datetime="2020-12-08 00:00:00 -0600" class="time">
+                Dec 8, 2020
+              </time>
+            </span>
+          </p>
+          <p>A few API updates and bugfixes to follow up the 1.0 release.</p>
+
+<div class="highlighted">
+  <h2 id="what-is-beaker">What is Beaker?</h2>
+
+  <p>Beaker is an experimental peer-to-peer Web browser which lets you share websites directly from your device. <a href="/2020/12/02/beaker-1-0.html">Read the 1.0 release post to learn more</a>.</p>
+</div>
+
+<h2 id="new-features">New features</h2>
+
+<ul>
+  <li>Add <code class="highlighter-rouge">beaker.shell.tagDrive()</code>. See the <a href="https://docs.beakerbrowser.com/apis/beaker.shell#beakershelltagdriveurl-tags">API docs</a>. (close <a href="https://github.com/beakerbrowser/beaker/issues/1864">#1864</a>)</li>
+  <li>Add the ability to set tags in create/forkDrive when prompt=false (<a href="https://github.com/beakerbrowser/beaker/issues/1864">#1864</a>)</li>
+  <li>Add the ability to create drives from the select/save file dialogs (close <a href="https://github.com/beakerbrowser/beaker/issues/1866">#1866</a>)</li>
+  <li>Automatically update the drives listings in modal dialogs (close <a href="https://github.com/beakerbrowser/beaker/issues/1867">#1867</a>)</li>
+</ul>
+
+<h2 id="bugfixes">Bugfixes</h2>
+
+<ul>
+  <li>Fix issue with screenshot captures (close <a href="https://github.com/beakerbrowser/beaker/issues/1872">#1872</a>)</li>
+  <li>Destroy all tabs when a window is closed (fix <a href="https://github.com/beakerbrowser/beaker/issues/1871">#1871</a>)</li>
+  <li>Dont unsnap windows from the edge on ctrl+tab (close <a href="https://github.com/beakerbrowser/beaker/issues/1868">#1868</a>)</li>
+  <li>Maintain focus in the active pane when window blurs then refocuses (close <a href="https://github.com/beakerbrowser/beaker/issues/1869">#1869</a>)</li>
+  <li>Fix the license-viewer mouse events (close <a href="https://github.com/beakerbrowser/beaker/issues/1862">#1862</a>)</li>
+  <li>Fixes to the shutdown process</li>
+  <li>Remove old contacts UI in select-file modal</li>
+  <li>Fix reference error in webterm</li>
+</ul>
+
+<div style="text-align: center; margin: 2em 0">
+<a class="btn" title="Download Beaker Browser" href="/install/" style="font-size: 18px; padding: 8px 22px; height: auto; width: 100%;">Download Beaker Browser</a>
+</div>
+
+<blockquote>
+  <p><a href="https://patreon.com/paul_maf_and_andrew">Support us via Patreon</a>.</p>
+</blockquote>
+
+<style>
+  .post img,
+  .post iframe,
+  .post video {
+    display: block;
+    margin: 1.5em auto;
+    max-width: 100%;
+  }
+  .highlighted {
+    padding: 22px 25px 26px;
+    margin: 40px 0 0;
+    border: 1px dashed #5543ff;
+  }
+  .highlighted h2 { margin-top: 0 !important; }
+  .highlighted > :last-child { margin-bottom: 0 !important; }
+</style>
+
+
+        </main>
+      </div>
+    </div>
+
+    <div class="blog-breadcrumbs bottom">
+      <div class="container">
+        &lt; <a href="/blog/">Blog</a>
+      </div>
+    </div>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="col">
+      <div>
+        <a href="/" class="beaker-link">
+          <img src="/img/logo/logo.png" class="logo"/>
+          <div class="wordmark">Beaker</div>
+        </a>
+      </div>
+      <div>
+        <a href="/install/" class="btn outline white">Install Beaker</a>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="links">
+        <a href="/blog">Blog</a>
+        <a href="https://docs.beakerbrowser.com/">Documentation</a>
+        <a href="/install/">Install Beaker</a>
+        <br>
+        <a href="/vuln-disclosure/">Vulnerability Disclosure Policy</a>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="links">
+        <a href="https://twitter.com/beakerbrowser">Twitter</a>
+        <a href="https://github.com/beakerbrowser/beaker">GitHub</a>
+        <a href="https://webchat.freenode.net">#beakerbrowser on freenode</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script>window.sa_event=window.sa_event||function(){a=[].slice.call(arguments);sa_event.q?sa_event.q.push(a):sa_event.q=[a]};</script>
+<script async defer src="https://sa.beakerbrowser.com/latest.js"></script>
+<noscript><img src="https://sa.beakerbrowser.com/noscript.gif" alt=""></noscript>
+  </body>
+</html>
