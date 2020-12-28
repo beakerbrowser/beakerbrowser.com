@@ -6,4 +6,4 @@ order: 2
 ---
 
 Redirecting...
-<meta http-equiv="refresh" content="0;URL='/docs/using-beaker/index.html#publishing-files-and-changes'" />
+<meta http-equiv="refresh" content="0;url=https://docs.beakerbrowser.com" />

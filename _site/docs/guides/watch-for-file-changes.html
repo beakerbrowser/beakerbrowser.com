@@ -256,71 +256,9 @@
 
 
           <div class="content">
-            <p>Beaker’s <a href="/docs/apis/dat"><code class="highlighter-rouge">DatArchive</code> API</a> includes the <a href="/docs/apis/dat.html#watch"><code class="highlighter-rouge">watch()</code></a> method to notify you when a file or folder changes.
-It works for both local and remote files, and accepts a glob pattern for filtering files.</p>
+            <p>Redirecting…</p>
+<meta http-equiv="refresh" content="0;url=https://docs.beakerbrowser.com" />
 
-<h2 id="examples">Examples</h2>
-
-<h3 id="watch-all-files">Watch all files</h3>
-
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">archive</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DatArchive</span><span class="p">(</span><span class="s1">'dat://beakerbrowser.com'</span><span class="p">)</span>
-<span class="nx">archive</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="nx">e</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">path</span><span class="p">,</span> <span class="s1">'has changed'</span><span class="p">))</span>
-</code></pre>
-</div>
-
-<h3 id="watch-files-or-folders">Watch files or folders</h3>
-
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">archive</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DatArchive</span><span class="p">(</span><span class="s1">'dat://beakerbrowser.com'</span><span class="p">)</span>
-<span class="nx">archive</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="s1">'/index.html'</span><span class="p">,</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'index.html has changed'</span><span class="p">))</span>
-<span class="nx">archive</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="s1">'/js/'</span><span class="p">,</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'a file in js/ has changed'</span><span class="p">))</span>
-</code></pre>
-</div>
-
-<h3 id="using-a-glob-pattern">Using a glob pattern</h3>
-
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">archive</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DatArchive</span><span class="p">(</span><span class="s1">'dat://beakerbrowser.com'</span><span class="p">)</span>
-<span class="nx">archive</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="s1">'/posts/*.json'</span><span class="p">,</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'a .json file in /posts/ has changed'</span><span class="p">)</span>
-<span class="p">})</span>
-</code></pre>
-</div>
-
-<h2 id="watcher-events">Watcher events</h2>
-
-<p>There are two events emitted by the watcher:</p>
-
-<ul>
-  <li><code class="highlighter-rouge">'invalidated'</code> means that a file has been changed but has not been downloaded</li>
-  <li><code class="highlighter-rouge">'changed'</code> means that a file has been changed and the change has been downloaded</li>
-</ul>
-
-<p>Both events are emitted in all cases. If the file archive is locally-owned, they will fire immediately after each other. The default event which <code class="highlighter-rouge">watch()</code> listens to is ‘invalidated’.</p>
-
-<p>To listen to the <code class="highlighter-rouge">'changed'</code> event, you can use the object that’s returned by <code class="highlighter-rouge">watch()</code>:</p>
-
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">archive</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DatArchive</span><span class="p">(</span><span class="s1">'dat://beakerbrowser.com'</span><span class="p">)</span>
-<span class="kd">var</span> <span class="nx">watcher</span> <span class="o">=</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="s1">'/index.html'</span><span class="p">)</span>
-<span class="nx">watcher</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'invalidated'</span><span class="p">,</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'index.html has invalidated'</span><span class="p">))</span>
-<span class="nx">watcher</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'changed'</span><span class="p">,</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'index.html has changed'</span><span class="p">))</span>
-</code></pre>
-</div>
-
-<p>If you wish to stop listening for changes, you can use the <code class="highlighter-rouge">close()</code> method:</p>
-
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">archive</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DatArchive</span><span class="p">(</span><span class="s1">'dat://beakerbrowser.com'</span><span class="p">)</span>
-<span class="kd">var</span> <span class="nx">watcher</span> <span class="o">=</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="s1">'/index.html'</span><span class="p">,</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'index.html has changed'</span><span class="p">)</span>
-<span class="p">})</span>
-<span class="c1">// ...</span>
-<span class="nx">watcher</span><span class="p">.</span><span class="nx">close</span><span class="p">()</span>
-</code></pre>
-</div>
-
-<h2 id="further-reading">Further reading</h2>
-
-<ul>
-  <li><a href="/docs/apis/dat.html#watch"><code class="highlighter-rouge">watch()</code> API reference</a></li>
-</ul>
 
           </div>
         

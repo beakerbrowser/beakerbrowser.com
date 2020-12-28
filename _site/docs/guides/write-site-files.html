@@ -370,94 +370,9 @@
 
 
           <div class="content">
-            <p>The <a href="/docs/apis/dat">DatArchive API</a> provides a simple set of APIs to write files, create directories, and delete data.</p>
+            <p>Redirecting…</p>
+<meta http-equiv="refresh" content="0;url=https://docs.beakerbrowser.com" />
 
-<p>To create a writable <code class="highlighter-rouge">dat://</code> website, first create a new <code class="highlighter-rouge">DatArchive</code> instance:</p>
-
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">archive</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">DatArchive</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="s1">'My website'</span><span class="p">})</span>
-</code></pre>
-</div>
-
-<h2 id="writing-files-and-folders">Writing files and folders</h2>
-
-<h3 id="mkdir"><code class="highlighter-rouge">mkdir()</code></h3>
-
-<p>The <a href="/docs/apis/dat#mkdir">mkdir() method</a> creates new folders.
-It will throw an error if a file/folder already exists at the target, or if no parent folder exists.</p>
-
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">mkdir</span><span class="p">(</span><span class="s1">'/stuff'</span><span class="p">)</span>
-</code></pre>
-</div>
-
-<h3 id="writefile"><code class="highlighter-rouge">writeFile()</code></h3>
-
-<p>The <a href="/docs/apis/dat#writefile">writeFile() method</a> writes files. It accepts an encoding as its third parameter.</p>
-
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">'/hello.txt'</span><span class="p">,</span> <span class="nx">str</span><span class="p">,</span> <span class="s1">'utf8'</span><span class="p">)</span>
-<span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">'/beaker.png'</span><span class="p">,</span> <span class="nx">pngBase64</span><span class="p">,</span> <span class="s1">'base64'</span><span class="p">)</span>
-<span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">'/beaker.png'</span><span class="p">,</span> <span class="nx">pngArrayBuffer</span><span class="p">,</span> <span class="s1">'binary'</span><span class="p">)</span>
-</code></pre>
-</div>
-
-<p>If the encoding is omitted, then ‘utf8’ will be assumed for strings and ‘binary’ will be assumed for ArrayBuffers:</p>
-
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">'/hello.txt'</span><span class="p">,</span> <span class="nx">str</span><span class="p">)</span>
-<span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">'/beaker.png'</span><span class="p">,</span> <span class="nx">pngArrayBuffer</span><span class="p">)</span>
-</code></pre>
-</div>
-
-<h2 id="deleting-files-and-folders">Deleting files and folders</h2>
-
-<h3 id="rmdir"><code class="highlighter-rouge">rmdir()</code></h3>
-
-<p>The <a href="/docs/apis/dat#rmdir">rmdir() method</a> deletes folders. It will fail if the folder is not empty.</p>
-
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">rmdir</span><span class="p">(</span><span class="s1">'/stuff'</span><span class="p">)</span>
-</code></pre>
-</div>
-
-<h3 id="unlink"><code class="highlighter-rouge">unlink()</code></h3>
-
-<p>The <a href="/docs/apis/dat#unlink">unlink() method</a> deletes files.</p>
-
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">unlink</span><span class="p">(</span><span class="s1">'/hello.txt'</span><span class="p">)</span>
-</code></pre>
-</div>
-
-<h3 id="recursive-deletes">Recursive deletes</h3>
-
-<p>You can delete non-empty folders by specifying the <code class="highlighter-rouge">recursive</code> option.</p>
-
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="c1">// delete /stuff and all of its contents</span>
-<span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">rmdir</span><span class="p">(</span><span class="s1">'/stuff'</span><span class="p">,</span> <span class="p">{</span><span class="na">recursive</span><span class="p">:</span> <span class="kc">true</span><span class="p">})</span>
-</code></pre>
-</div>
-
-<h2 id="copying-moving-and-renaming">Copying, moving, and renaming</h2>
-
-<h3 id="copy"><code class="highlighter-rouge">copy()</code></h3>
-
-<p>The <a href="/docs/apis/dat#copy">copy() method</a> copies files and folders. If the folder is not empty, it will copy all of its contents.</p>
-
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">copy</span><span class="p">(</span><span class="s1">'/stuff'</span><span class="p">,</span> <span class="s1">'/stuff-backup'</span><span class="p">)</span>
-<span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">copy</span><span class="p">(</span><span class="s1">'/hello.txt'</span><span class="p">,</span> <span class="s1">'/goodbye.txt'</span><span class="p">)</span>
-</code></pre>
-</div>
-
-<h3 id="rename"><code class="highlighter-rouge">rename()</code></h3>
-
-<p>The <a href="/docs/apis/dat#rename">rename() method</a> moves/renames files and folders. If the folder is not empty, it will move all of its contents.</p>
-
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">rename</span><span class="p">(</span><span class="s1">'/stuff'</span><span class="p">,</span> <span class="s1">'/stuff-backup'</span><span class="p">)</span>
-<span class="nx">await</span> <span class="nx">archive</span><span class="p">.</span><span class="nx">rename</span><span class="p">(</span><span class="s1">'/hello.txt'</span><span class="p">,</span> <span class="s1">'/goodbye.txt'</span><span class="p">)</span>
-</code></pre>
-</div>
-
-<h2 id="further-reading">Further reading</h2>
-
-<ul>
-  <li><a href="/docs/apis/dat">DatArchive API reference</a></li>
-</ul>
 
           </div>
         

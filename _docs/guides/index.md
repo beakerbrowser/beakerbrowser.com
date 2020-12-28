@@ -4,4 +4,5 @@ sectionTitle: Guides
 section: guides
 ---
 
-{% include guides-grid.html items=site.data.docs.guides.children %}
+Redirecting...
+<meta http-equiv="refresh" content="0;url=https://docs.beakerbrowser.com" />

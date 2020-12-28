@@ -227,64 +227,9 @@
 
 
           <div class="content">
-            <div class="card danger">
-  <div class="card-body">
-    TODO
-    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> This API has been deprecated.
-  </div>
-</div>
+            <p>Redirecting…</p>
+<meta http-equiv="refresh" content="0;url=https://docs.beakerbrowser.com" />
 
-<p><br /></p>
-
-<p><strong>Notes:</strong>
-TODO</p>
-
-<ul>
-  <li>Only apps served over <code class="highlighter-rouge">dat://</code> are able to access these APIs.</li>
-  <li><i class="fa fa-flask"></i> Indicates that this API is under development and subject to change.</li>
-</ul>
-
-<hr />
-
-<h2 id="network-access">Network access</h2>
-
-<p>By default, <code class="highlighter-rouge">dat://</code> websites are not allowed to access the network. They can,
-however, request exceptions. This will generate a prompt, which the user can
-choose to accept or deny with a permission prompt.</p>
-
-<p>To request network access, use the <code class="highlighter-rouge">navigator.permissions</code> API. If your
-request is granted, the page will be able to target the granted domain for
-images, media, fonts, AJAQ and WebSockets. It will not enable remotely-served
-styles, scripts, or objects.</p>
-
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="c1">// Request access</span>
-<span class="kd">var</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">permissions</span><span class="p">.</span><span class="nx">request</span><span class="p">({</span>
-  <span class="na">name</span><span class="p">:</span> <span class="s1">'network'</span><span class="p">,</span>
-  <span class="na">hostname</span><span class="p">:</span> <span class="s1">'github.com'</span>
-<span class="p">})</span>
-<span class="nx">res</span><span class="p">.</span><span class="nx">status</span> <span class="c1">// =&gt; 'granted'</span>
-
-<span class="c1">// Query access</span>
-<span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">permissions</span><span class="p">.</span><span class="nx">query</span><span class="p">({</span>
-  <span class="na">name</span><span class="p">:</span> <span class="s1">'network'</span><span class="p">,</span>
-  <span class="na">hostname</span><span class="p">:</span> <span class="s1">'github.com'</span>
-<span class="p">})</span>
-<span class="nx">res</span><span class="p">.</span><span class="nx">status</span> <span class="c1">// =&gt; 'granted'</span>
-
-<span class="c1">// Give up access</span>
-<span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">permissions</span><span class="p">.</span><span class="nx">revoke</span><span class="p">({</span>
-  <span class="na">name</span><span class="p">:</span> <span class="s1">'network'</span><span class="p">,</span>
-  <span class="na">hostname</span><span class="p">:</span> <span class="s1">'github.com'</span>
-<span class="p">})</span>
-<span class="nx">res</span><span class="p">.</span><span class="nx">status</span> <span class="c1">// =&gt; 'prompt'</span>
-</code></pre>
-</div>
-
-<p>After a permission request is granted, the page must be refreshed for the
-policy-change to take effect. Multiple hosts can be requested; subsequent
-requests add hosts, rather than replacing the current allowed hosts.</p>
-
-<p>A wildcard string (‘*’) can be used to request or revoke access to all hosts.</p>
 
           </div>
         

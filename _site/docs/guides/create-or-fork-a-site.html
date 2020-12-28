@@ -256,49 +256,9 @@
 
 
           <div class="content">
-            <p>The <a href="/docs/apis/dat.html">DatArchive API</a> provides three ways to get an archive instance:</p>
+            <p>Redirecting…</p>
+<meta http-equiv="refresh" content="0;url=https://docs.beakerbrowser.com" />
 
-<ol>
-  <li>Open an existing archive with <a href="/docs/apis/dat.html#datarchive">the <code class="highlighter-rouge">DatArchive</code> constructor</a>.</li>
-  <li>Create a new site with <a href="/docs/apis/dat.html#datarchive-create"><code class="highlighter-rouge">DatArchive.create()</code></a>.</li>
-  <li>Fork an existing site with <a href="/docs/apis/dat.html#datarchive-fork"><code class="highlighter-rouge">DatArchive.fork()</code></a>.</li>
-</ol>
-
-<h2 id="datarchive"><code class="highlighter-rouge">DatArchive</code></h2>
-
-<p>To open an existing archive, use the <a href="/docs/apis/dat.html#datarchive"><code class="highlighter-rouge">DatArchive</code> constructor</a> as follows:</p>
-
-<figcaption class="code">snippet</figcaption>
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">archive</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DatArchive</span><span class="p">(</span><span class="s1">'dat://…'</span><span class="p">)</span>
-</code></pre>
-</div>
-
-<h2 id="datarchivecreate"><code class="highlighter-rouge">DatArchive.create()</code></h2>
-
-<p>To create a new site, use <a href="/docs/apis/dat.html#datarchive-create"><code class="highlighter-rouge">DatArchive.create()</code></a> as follows:</p>
-
-<figcaption class="code">snippet</figcaption>
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">archive</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">DatArchive</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span><span class="na">title</span><span class="p">:</span> <span class="s1">'…'</span><span class="p">,</span> <span class="na">description</span><span class="p">:</span> <span class="s1">'…'</span><span class="p">})</span>
-</code></pre>
-</div>
-
-<p>This will result in a modal window which the user will either confirm or deny.</p>
-
-<h2 id="datarchivefork"><code class="highlighter-rouge">DatArchive.fork()</code></h2>
-
-<p>To fork an existing site, use <a href="/docs/apis/dat.html#datarchive-fork"><code class="highlighter-rouge">DatArchive.fork()</code></a> as follows:</p>
-
-<figcaption class="code">snippet</figcaption>
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">archive</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">DatArchive</span><span class="p">.</span><span class="nx">fork</span><span class="p">(</span><span class="s1">'dat://…'</span><span class="p">,</span> <span class="p">{</span>
-  <span class="na">title</span><span class="p">:</span> <span class="s1">'…'</span><span class="p">,</span>
-  <span class="na">description</span><span class="p">:</span> <span class="s1">'…'</span>
-<span class="p">})</span>
-</code></pre>
-</div>
-
-<p>This will result in a modal window which the user will either confirm or deny.</p>
-
-<p>A fork will be made of the currently downloaded state. That means, if you want to be sure a full fork is made, you should call <a href="/docs/apis/dat.html#download"><code class="highlighter-rouge">download()</code></a> first.</p>
 
           </div>
         

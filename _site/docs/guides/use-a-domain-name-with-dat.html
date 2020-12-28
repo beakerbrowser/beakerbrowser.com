@@ -299,72 +299,9 @@
 
 
           <div class="content">
-            <p>By default, <code class="highlighter-rouge">dat://</code> websites are addressed with a 64 character URL. For example, here’s the raw <code class="highlighter-rouge">dat://</code> URL for <a href="dat://beakerbrowser.com">dat://beakerbrowser.com</a>:</p>
+            <p>Redirecting…</p>
+<meta http-equiv="refresh" content="0;url=https://docs.beakerbrowser.com" />
 
-<div class="highlighter-rouge"><pre class="highlight"><code>dat://87ed2e3b160f261a032af03921a3bd09227d0a4cde73466c17114816cae43336
-</code></pre>
-</div>
-
-<p>A raw <code class="highlighter-rouge">dat://</code> URL is similar in some ways to an <a href="https://en.wikipedia.org/wiki/IP_address">IP address</a>:</p>
-
-<ul>
-  <li>Used as an identifier that points to a website</li>
-  <li>Difficult to remember</li>
-  <li>Most of the time it’s preferable to reference it with a <a href="https://en.wikipedia.org/wiki/Domain_name">domain name</a></li>
-</ul>
-
-<p><a href="https://docs.datproject.org/concepts#dat-links">Learn more about <code class="highlighter-rouge">dat://</code> URLs</a></p>
-
-<h2 id="domain-names-and-dat">Domain names and <code class="highlighter-rouge">dat://</code></h2>
-
-<p>There are a couple of ways to use your domain name with a <code class="highlighter-rouge">dat://</code> website.</p>
-
-<p>If you want to use your domain name with <code class="highlighter-rouge">dat://</code>, but don’t care about republishing your website on <code class="highlighter-rouge">https://</code>, <a href="#dat-dns-txt-records">jump to Dat DNS TXT records</a>.</p>
-
-<p>If you want to use your domain name with <code class="highlighter-rouge">dat://</code>, and also want to mirror the same content on <code class="highlighter-rouge">https://</code>, <a href="/docs/guides/use-a-domain-name-with-dat#well-knowndat">jump to <code class="highlighter-rouge">.well-known/dat</code></a>.</p>
-
-<h2 id="dat-dns-txt-records">Dat DNS TXT records</h2>
-
-<p>To point your domain name to a <code class="highlighter-rouge">dat://</code> website, you can use a <a href="https://www.datprotocol.com/deps/0005-dns/#dns-txt-record">DNS TXT record</a>.</p>
-
-<p>First, open your domain name registrar’s DNS settings page. Then add a <code class="highlighter-rouge">TXT</code> record with the value <code class="highlighter-rouge">datkey=&lt;yourdatkey&gt;</code>, where <code class="highlighter-rouge">&lt;yourdatkey&gt;</code> is the 64 characters after <code class="highlighter-rouge">dat://</code> in your website’s URL.</p>
-
-<p>In this example, the first <code class="highlighter-rouge">TXT</code>record will apply to the top-level domain, and the second will apply to the <code class="highlighter-rouge">www</code> subdomain:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>NAME | TYPE | DATA
------|------|------
-@    | TXT  | datkey=327bf0...
-www  | TXT  | datkey=123456...
-</code></pre>
-</div>
-
-<p><a href="https://www.datprotocol.com/deps/0005-dns/#dns-txt-record">Dat DNS TXT record specification</a></p>
-
-<h2 id="well-knowndat"><code class="highlighter-rouge">.well-known/dat</code></h2>
-
-<p>If you want to publish your website under your domain name with both <code class="highlighter-rouge">dat://</code> and <code class="highlighter-rouge">https://</code>, consider using the <a href="https://www.datprotocol.com/deps/0005-dns/#-well-known-dat"><code class="highlighter-rouge">.well-known/dat</code> technique</a>.</p>
-
-<p>This approach requires publishing a file at <code class="highlighter-rouge">https://&lt;yourdomain&gt;/.well-known/dat</code> with the following structure:</p>
-
-<figcaption class="code">.well-known/dat</figcaption>
-<div class="highlighter-rouge"><pre class="highlight"><code>dat://&lt;yourdatkey&gt;
-TTL=3600
-</code></pre>
-</div>
-
-<p>With this technique, Beaker uses the <code class="highlighter-rouge">.well-known/dat</code> file to identify which <code class="highlighter-rouge">dat://</code> URL it should display when someone visits your website.</p>
-
-<p>If you use this technique, we recommend using a tool like <a href="https://github.com/beakerbrowser/homebase"><code class="highlighter-rouge">homebase</code></a> to manage your website. <code class="highlighter-rouge">homebase</code> will seed your <code class="highlighter-rouge">dat://</code> website and make sure it stays online, mirror your website to <code class="highlighter-rouge">https://</code>, and automatically publish the <code class="highlighter-rouge">.well-known/dat</code> file.</p>
-
-<p><a href="https://www.datprotocol.com/deps/0005-dns/#-well-known-dat"><code class="highlighter-rouge">.well-known/dat</code> specification</a></p>
-
-<h2 id="further-reading">Further reading</h2>
-
-<ul>
-  <li><a href="https://github.com/beakerbrowser/homebase">Manage your website with <code class="highlighter-rouge">homebase</code></a></li>
-  <li><a href="https://www.datprotocol.com/deps/0005-dns/#dns-txt-record">Dat DNS TXT record specification</a></li>
-  <li><a href="https://www.datprotocol.com/deps/0005-dns/#-well-known-dat"><code class="highlighter-rouge">.well-known/dat</code> specification</a></li>
-</ul>
 
           </div>
         

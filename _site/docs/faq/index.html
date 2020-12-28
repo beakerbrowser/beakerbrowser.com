@@ -260,83 +260,9 @@
 
 
           <div class="content">
-            <p>Have a question that isn’t answered here? <a href="https://github.com/beakerbrowser/beakerbrowser.com">Open an issue on GitHub</a> or tweet at <a href="https://twitter.com/beakerbrowser">@BeakerBrowser</a>.</p>
+            <p>Redirecting…</p>
+<meta http-equiv="refresh" content="0;url=https://docs.beakerbrowser.com" />
 
-<h2 id="when-i-visit-a-dat-url-in-beaker-does-beaker-download-the-entire-website">When I visit a <code class="highlighter-rouge">dat://</code> URL in Beaker, does Beaker download the entire website?</h2>
-
-<p>No. Beaker downloads files on-demand.</p>
-
-<p>For example, if a website has a file at <code class="highlighter-rouge">/images/cat.jpg</code>, you won’t download that file until you navigate to <code class="highlighter-rouge">/images/cat.jpg</code>, the file is loaded in an <code class="highlighter-rouge">&lt;img&gt;</code> tag, or in another request, i.e., with the <a href="/docs/apis/dat"><code class="highlighter-rouge">DatArchive</code> APIs</a>.</p>
-
-<h2 id="do-visitors-to-peer-to-peer-websites-seed-its-files">Do visitors to peer-to-peer websites seed its files?</h2>
-
-<p>Yes, temporarily. When you visit a <code class="highlighter-rouge">dat://</code> URL in Beaker, you temporarily
-re-upload or <em>seed</em> whichever files you’ve downloaded from the website. This
-help the website’s author keeps the website online.</p>
-
-<p>You can also explicitly choose to seed a website’s files for a longer period:</p>
-
-<p><img src="/img/docs/tour/seeding-menu.png" /></p>
-
-<p>If you accidentally visit a website with content that you don’t want to seed,
-you can purge the files from your computer in
-<a href="beaker://settings#dat-network-activity">Beaker’s network settings</a>.</p>
-
-<aside class="seeding">
-  <div>
-    <h3 class="title">Seeding, hosting, pinning, say what?</h3>
-
-    <p>
-      On a p2p network, peers can re-upload content to help keep it online.
-      In Beaker, we call this <em>seeding</em>, but you might also hear it called <em>hosting</em> or <em>pinning</em>.
-      <a class="learn-more-link" href="/docs/how-beaker-works/all-about-seeding">
-        Learn more
-        <span class="fa fa-arrow-right"></span>
-      </a>
-    </p>
-  </div>
-</aside>
-
-<h2 id="is-the-dat-network-anonymous">Is the Dat network anonymous?</h2>
-
-<p><strong>No! Dat is not anonymous or private.</strong></p>
-
-<p>When you visit or seed a <code class="highlighter-rouge">dat://</code> website, other visitors can see your IP address. You should not visit a <code class="highlighter-rouge">dat://</code> website with the expectation that you can share or view its files with anonymity.</p>
-
-<!-- TODO add a bit about Tor or i2p here? -->
-
-<h2 id="are-dat-files-encrypted">Are <code class="highlighter-rouge">dat://</code> files encrypted?</h2>
-
-<p>Yes. Like in HTTPS, the connection is encrypted. Only people who know the URL for a given <code class="highlighter-rouge">dat://</code> website can decrypt and view its files.</p>
-
-<h2 id="who-can-access-dat-websites">Who can access <code class="highlighter-rouge">dat://</code> websites?</h2>
-
-<p>When you create a <code class="highlighter-rouge">dat://</code> website with Beaker, no one will be able to see your website until you share the URL. Only people who know the site’s URL will be able to visit it.</p>
-
-<h2 id="will-my-website-stay-online-when-i-turn-beaker-off">Will my website stay online when I turn Beaker off?</h2>
-
-<p>It depends. When you close Beaker, <em>you</em> are no longer hosting your website’s
-files, but previous visitors may still be. To guarantee that your files stay
-online, there are a few options:</p>
-
-<ul>
-  <li>Ask your friends to help seed your website’s files</li>
-  <li>Share your website’s URL with a seeding service like <a href="https://hashbase.io">Hashbase</a></li>
-  <li>Or if you’re feeling ambitious, run a your own seeding server using <a href="https://github.com/beakerbrowser/homebase"><code class="highlighter-rouge">homebase</code></a></li>
-</ul>
-
-<h2 id="is-there-an-ios-or-android-beaker-client">Is there an iOS or Android Beaker client?</h2>
-
-<p>Not yet!</p>
-
-<h2 id="will-peer-to-peer-protocols-like-dat-ever-be-adopted-by-other-browsers">Will peer-to-peer protocols like Dat ever be adopted by other browsers?</h2>
-
-<p>We hope so!</p>
-
-<h2 id="how-is-beaker-built">How is Beaker built?</h2>
-
-<p>Beaker is built with <a href="https://electronjs.org">Electron</a>, which is built on
-top of Chromium.</p>
 
           </div>
         

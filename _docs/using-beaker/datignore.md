@@ -7,4 +7,4 @@ order: 3
 
 
 Redirecting...
-<meta http-equiv="refresh" content="0;URL='/docs/using-beaker/index.html#ignoring-files-with-datignore'" />
+<meta http-equiv="refresh" content="0;url=https://docs.beakerbrowser.com" />
